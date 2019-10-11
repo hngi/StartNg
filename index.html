@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nunito&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="learning">
+        <div class="welcome-section">
+            <p class="welcome-text">Welcome to the Start.ng application!</p>
+            <p class="welcome-info">Please fill all inforamtion accurately to start learning</p>
+        </div>
+        <div class="welcome-image">
+            <div class="purple-image">
+                <div class="blue-image"></div>
+                <img src="images/2749256.png" class="hi">
+                <div class="welcome-color">
+                    <img src="images/Welcome.png">
+                </div>
+                <img src="images/Rectangle 16.png" class="triangle">
+                <img src="images/Group 22.png" class="check">
+            </div>
+
+        </div>
+    </section>
+    <section class="learning-form">
+        <form>
+            <div class="form-details">
+                <label>First Name</label>
+                <input type="text" placeholder="Jane" class="label-info margin">
+            </div>
+            <div class="form-details">
+                <label>Second Name</label>
+                <input type="text" class="label-info margin">
+            </div>
+            <div class="form-details">
+                <label>Email Address</label>
+                <input type="email" class="label-info mobile">
+            </div>
+            <div class="form-details">
+                <label>Mobile Number</label>
+                <input type="text" class="label-info">
+                <p>e.g +2348101234567</p>
+            </div>
+            <div class="form-details">
+                <label class="top">Course Interested in</label>
+                <select class="label-info margin">
+                    <option>Full Stack Development</option>
+                </select>
+            </div>
+            <div class="form-details">
+                <label class="top bot">Experience</label>
+                <select class="label-info margin">
+                    <option>0 - 1 Years Experience</option>
+                </select>
+            </div>
+            <div class="form-details">
+                <label>Country of Residence</label>
+                <input type="text" placeholder="Jane" class="label-info">
+                <p>e.g Nigeria</p>
+            </div>
+            <div class="form-details">
+                <label class="mob">State of Residence</label>
+                <select class="label-info">
+                    <option></option>
+                </select>
+                <p>e.g Lagos</p>
+            </div>
+        </form>
+        <div class="learning-button">
+            <button>Continue</button>
+        </div>
+    </section>
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0
+    }
+
+    .learning {
+        background: #E5EBFF;
+        height: 643px;
+        width: 100%;
+        padding-left: 146px;
+        padding-right: 136.24px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .welcome-section {
+        width: 389px;
+        height: 110px;
+        padding-top: 287px;
+        padding-bottom: 174px;
+    }
+
+    .welcome-text {
+        font-family: 'Nunito', sans-serif;
+        font-style: noraml;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 55px;
+        letter-spacing: 0.655606px;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .welcome-info {
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: black;
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+
+    .purple-image {
+        width: 490.33px;
+        height: 490.33px;
+        background-color: #242F4E;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        margin-top: 80px;
+    }
+
+    .blue-image {
+        position: absolute;
+        left: 5.03%;
+        bottom: 0;
+        background-color: #6777AC;
+        width: 89.95%;
+        height: 89.95%;
+        border-radius: 50%;
+    }
+
+    .hi {
+        position: absolute;
+        left: -52.57px;
+        bottom: -18.5px;
+        /* width: 100%; 
+        height: 100%; */
+    }
+
+    .welcome-color {
+        width: 39.54%;
+        height: 16%;
+        background-color: #2B006C;
+        text-align: center;
+        position: absolute;
+        left: 57.48%;
+        top: 75.44%;
+    }
+
+    .welcome-color p {
+        width: 29.33%;
+        height: 8.42%;
+        font-family: Lucida ;
+        font-size: 31.8519px;
+        line-height: 38px;
+        color: white;
+    }
+
+    .triangle {
+        width: 7.19%;
+        position: absolute;
+        top: 90.64%;
+        left: 57.48%
+    }
+
+
+    .check {
+        position: absolute;
+        left: 104.41%;
+        top: 52.12%;
+    }
+
+    .welcome-color img {
+        position: absolute;
+        top: 25.63%;
+        left: 4.5%;
+        width: 90%;
+    }
+
+
+
+
+
+
+
+
+
+
+    .learning-form {
+        height: 947px;
+        width: 100%;
+        background-color: white;
+        padding-left: 165px;
+        padding-right: 165px;
+        padding-top: 95px;
+    }
+
+    .learning-form form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .form-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-details label {
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 9px;
+        color: black;
+    }
+
+    .label-info {
+        width: 470px;
+        height: 60px;
+        padding-left: 33px;
+        padding-right: 33px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.5)
+    }
+
+    .form-details p {
+        margin-top: 9px;
+        margin-bottom: 0;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .margin {
+        margin-bottom: 35px;
+    }
+
+    .top {
+        margin-top: 35px;
+    }
+
+    .learning-button {
+        text-align: center;
+        margin-top: 67px;
+    }
+
+    .learning-button button {
+        background-color: #44CF6C;
+        width: 247px;
+        height: 48px;
+        border-radius: 10px;
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.655606px;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    @media screen and (max-width: 1350px) {
+        .learning-form {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        .label-info {
+            width: 460px;
+        }
+
+        .purple-image {
+            width: 480.33px;
+            height: 480.33px;
+
+        }
+
+        .hi {
+            /* bottom: -21px; */
+            height: 97.9%
+        }
+
+    }
+
+    @media screen and (max-width: 1300px) {
+        .label-info {
+            width: 430px;
+        }
+
+        .purple-image {
+            width: 470.33px;
+            height: 470.33px;
+        }
+
+
+        .hi {
+            bottom: -16.5px;
+            height: 97.2%
+        }
+
+        @media screen and (max-width: 1250px) {
+            .label-info {
+                width: 400px;
+            }
+
+            .learning {
+                padding-left: 130px;
+                padding-right: 130.24px;
+                height: 600px;
+            }
+
+            .purple-image {
+                width: 450.33px;
+                height: 450.33px;
+                margin-top: 80px;
+
+            }
+
+            .welcome-section {
+                padding-top: 247px;
+                padding-bottom: 174px;
+            }
+
+
+            .hi {
+                left: -49.57px;
+                bottom: -14.5px;
+                height: 96.2%
+            }
+
+        }
+
+        @media screen and (max-width: 1180px) {
+            .learning-form {
+                padding-left: 120px;
+                padding-right: 120px;
+            }
+
+            .label-info {
+                width: 400px;
+            }
+
+            .learning {
+                padding-left: 100px;
+                padding-right: 100.24px;
+                height: 550px;
+
+            }
+
+            .purple-image {
+                width: 400.33px;
+                height: 400.33px;
+                margin-top: 65px;
+
+            }
+
+            .welcome-section {
+                padding-top: 220px;
+                padding-bottom: 174px;
+            }
+
+
+
+            .hi {
+                left: -40.57px;
+                bottom: -15.5px;
+            }
+        }
+
+        @media screen and (max-width: 1120px) {
+            .learning-form {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+
+            .label-info {
+                width: 370px;
+            }
+
+            .learning {
+                padding-left: 80px;
+                padding-right: 80.24px;
+                height: 500px;
+
+            }
+
+            .welcome-section {
+                padding-top: 200px;
+                padding-bottom: 174px;
+            }
+
+            .purple-image {
+                width: 370.33px;
+                height: 370.33px;
+                margin-top: 65px;
+                left: 53%
+            }
+
+            .hi {
+                left: -38.57px;
+                bottom: -13.5px;
+                /* height: 96.2% */
+            }
+        }
+
+        @media screen and (max-width: 1020px) {
+            .label-info {
+                width: 320px;
+            }
+
+            .learning {
+                height: 470px;
+
+            }
+
+            .welcome-section {
+                padding-top: 170px;
+                padding-bottom: 174px;
+            }
+
+            .purple-image {
+                width: 340.33px;
+                height: 340.33px;
+                margin-top: 65px;
+            }
+
+            .hi {
+                left: -34.57px;
+                bottom: -13.5px;
+                /* height: 96.2% */
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            .learning {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                padding-bottom: 80px;
+            }
+
+            .welcome-section {
+                width: 90%;
+                height: 110px;
+                padding-top: 80px;
+                padding-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center
+            }
+
+
+            .purple-image {
+                position: relative;
+                left: 0;
+                right: 0
+            }
+
+        }
+
+        @media screen and (max-width: 915px) {
+            .label-info {
+                width: 280px;
+                height: 50px;
+            }
+
+            .learning {
+                padding-left: 50px;
+                padding-right: 50px;
+
+            }
+
+        }
+
+        @media screen and (max-width: 850px) {
+            .welcome-text {
+                font-size: 35px;
+                line-height: 45px;
+                
+            }
+
+            .welcome-info {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .learning {
+                padding-left: 40px;
+                padding-right: 40px;
+
+            }
+            .welcome-text {
+                font-size: 32px;
+                line-height: 40px;
+                
+            }
+
+            .welcome-info {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+
+        @media screen and (max-width: 830px) {
+            .label-info {
+                width: 250px;
+                height: 45px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 18px;
+            }
+
+        }
+
+        @media screen and (max-width: 760px) {
+            .learning-form {
+                padding-left: 70px;
+                padding-right: 70px;
+            }
+
+            .label-info {
+                width: 250px;
+                height: 45px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .learning-form {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            .label-info {
+                width: 230px;
+                height: 40px;
+                padding-left: 18px;
+                padding-right: 18px;
+                font-size: 16px;
+            }
+
+            .learning {
+                padding-left: 30px;
+                padding-right: 30px;
+                flex-wrap: wrap;
+            }
+
+            .welcome-text {
+                font-size: 30px;
+                line-height: 35px;
+                
+            }
+
+            .welcome-info {
+                font-size: 17px;
+                line-height: 24px;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .learning-form {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .label-info {
+                width: 220px;
+                height: 40px;
+                padding-left: 18px;
+                padding-right: 18px;
+                font-size: 16px;
+            }
+
+            .welcome-text {
+                font-size: 25px;
+                line-height: 30px;
+                
+            }
+
+            .welcome-info {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .learning-form {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .label-info {
+                width: 200px;
+                height: 40px;
+                padding-left: 12px;
+                padding-right: 12px;
+                font-size: 15px;
+            }
+
+            .purple-image {
+                width: 300.33px;
+                height:300.33px;
+                
+            }
+
+            .learning {
+                padding-left: 30px;
+                padding-right: 30px;
+
+            }
+
+            .welcome-text {
+                font-size: 23px;
+                line-height: 30px;
+                
+            }
+
+            .hi {
+                left: -30.57px;
+                bottom: -11.5px;
+            }
+
+        }
+
+        @media screen and (max-width: 560px) {
+            .learning-form {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .label-info {
+                width: 190px;
+                height: 40px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 14px;
+            }
+
+            .learning {
+                padding-left: 12px;
+                padding-right: 12px;
+
+            }
+        }
+
+        @media screen and (max-width: 530px) {
+            .learning-form {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .label-info {
+                width: 180px;
+                height: 35px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 14px;
+            }
+
+            .learning-button button {
+                width: 220px;
+                height: 40px;
+
+            }
+
+            .learning {
+                padding-left: 32px;
+                padding-right: 32px;
+
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .learning-form {
+                padding-left: 40px;
+                padding-right: 40px;
+                height: 1120px;
+            }
+
+            .label-info {
+                width: 200px;
+                height: 38px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 14px;
+            }
+
+            .learning-button button {
+                width: 200px;
+                height: 35px;
+
+            }
+
+            .learning-form form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mobile {
+                margin-bottom: 35px;
+            }
+
+            .bot {
+                margin-top: 0px;
+            }
+
+            .mob {
+                margin-top: 35px;
+            }
+
+            .purple-image {
+                width: 270.33px;
+                height:270.33px;
+                
+            }
+
+            .hi {
+                left: -28.57px;
+                bottom: -10.5px;
+            }
+        }
+
+        @media screen and (max-width: 370px) {
+            .purple-image {
+                width: 250.33px;
+                height:250.33px;
+                
+            }
+
+            .hi {
+                left: -22.57px;
+                bottom: -11.5px;
+            }
+        }
+
+        @media screen and (max-width: 340px) {
+            .purple-image {
+                width: 220.33px;
+                height:220.33px;
+                
+            }
+
+            .hi {
+                left: -23.57px;
+                bottom: -7.5px;
+            }
+        }
+</style>
+
+
+</html>
