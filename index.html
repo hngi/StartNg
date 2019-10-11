@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Startng - Blog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        footer {
+            background: #3A0842;
+        }
+
+        .start-footer a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .start-footer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            color: #fff;
+            background: #3A0842;
+            padding: 4%;
+            justify-content: space-around;
+        }
+
+        .batch-ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex: 2;
+            flex-wrap: wrap;
+        }
+
+        .footer-ul {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-content: space-around;
+
+        }
+
+        .batch-ul li {
+            list-style: none;
+            margin: 6px;
+            color: #fff;
+        }
+
+        .start-btn {
+            padding: 15px 80px 15px 80px;
+            background: #44CF6C;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .bigger-li {
+            margin: 10%;
+        }
+
+        .cta {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            align-content: space-around;
+            align-items: flex-start;
+
+        }
+
+        .batch-ul h3,
+        a,
+        img {
+            margin: 30px;
+        }
+
+        .footer-social {
+            background: #2E0435;
+            display: flex;
+            justify-content: flex-end;
+            padding: 40px;
+        }
+
+        .footer-social img {
+            margin: 10px;
+        }
+
+        /* responsive styles */
+        @media only screen and (max-width: 932px) {
+            .leap-div {
+                margin-bottom: 50px;
+            }
+        } 
+
+        /* team style */
+
+* {
+    outline: none;
+    transition: all 0.5s;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+*, ::after, ::before, html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x:hidden;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+::root {
+    --Nunito:'Nunito', sans-serif;
+    --white: #fff;
+    --dark: #000000;
+}
+.wrapper {
+    padding: 15px 30px;
+}
+ /* BODY SECTION*/
+.text-center {
+    text-align:center;
+    margin-bottom: 1.75rem;
+}
+form {
+    margin: 0 auto;
+    max-width: 700px;
+}
+form.search_input input[type="text"] {
+   padding: 10px;
+   font-size: 17px;
+   border: 1px solid grey;
+   float: left;
+   width: 90%;
+   background: #fff;
+   margin-bottom: 1.75rem;
+}
+/* Style the submit button */
+form.search_input button {
+float: left;
+width: 10%;
+padding: 10px;
+background: #2DCE89;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none; /* Prevent double borders */
+cursor: pointer;
+}
+form.search_input button:hover {
+ background: #15c478;
+}
+/* Clear floats */
+form.search_input::after {
+content: "";
+clear: both;
+display: table;
+}
+hr {
+border: 0;
+height: 0;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+width: 100%;
+margin: 0 auto;
+}
+.date {
+    position: relative;
+    top: 30px;
+    font-family: var(--Nunito);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.info .container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 2.75rem 0;
+}
+.info .container .info_description{
+   width: 60%;
+   margin: 2.5rem 1.75rem;
+   text-align:justify;
+}
+.info .container .info_description .info_description_text {
+font-family: var(--Nunito);
+font-style: normal;
+font-weight: bold;
+font-size: 25px !important;
+line-height: 34px !important;
+/* identical to box height */
+letter-spacing: 0.655606px;
+color: #000000;
+   margin-bottom: 1rem;
+}
+@media (max-width: 800px){
+.info .container .info_description{
+    margin:0 1.75rem 0 0;
+}  
+}
+@media (max-width: 670px){
+   .info {
+       font-size: 17px;
+   }
+   
+  .info .container .info_image {
+       display:none;
+   }
+.info .container .info_description{
+   width: 100%;
+   text-align:justify;
+ }
+ 
+}
+@media (max-width: 500px){
+   .info {
+       font-size: 18px;
+   }
+}
+/* END */
+.d-flex {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+}
+.d-flex.justify-content-between {
+    justify-content: space-between;
+}
+.d-flex.align-items-center {
+    align-items: center;
+}
+.margin-auto {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar {
+    position: relative;
+    width: 100%;
+    height: 94px;
+    background: #fff;
+    padding: 10px 80px;
+    /* overflow: hidden; */
+}
+
+.link > a,
+.favicon,
+.heading {
+    font-family: var(--Nunito);
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.655606px;
+}
+.favicon {
+    font-size: 23px;
+    line-height: 49px;
+    color: #3A0842;
+}
+.icon {
+    font-size: 26px !important;
+    margin-right: 5px;
+}
+.link {
+    margin-right: 40px;
+}
+.link > a {
+    font-size: 16px;
+    line-height: 22px;
+    display: block;
+}
+.link > a:not(.primary-btn) {
+    color: #2A2B2A;
+}
+.primary-btn {
+    background: #2DCE89;
+    color: #fff;
+    padding: 13px 45px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.primary-btn:hover {
+    box-shadow: 2px 3px 4px #a0a0a0;
+}
+.toggle-icon {
+    display: none;
+}
+.carousel--box {
+    position: relative;
+    width: 100%;
+    /* width: 1440px; */
+    height: 458px;
+    background-color: rgba(58, 8, 66, 1);
+    background-image: url('https://res.cloudinary.com/dx5lp5drd/image/upload/v1570789179/rectangle42_hohmaz.png');
+    background-size: cover;
+}
+.carousel--content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-content {
+    word-wrap: break-word;
+    word-break: keep-all;
+    writing-mode: horizontal-tb;
+    text-align: left;
+    text-overflow: ellipsis;
+    color: var(--white);
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.circles {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    text-align: center;
+    /* background: #2DCE89; */
+}
+.circle {
+   width: 10px;
+   height: 10px;
+   display: inline-block;
+   border-radius: 50%;
+   margin-right: 5px;
+   background: #fff;
+   cursor: pointer;
+}
+.circle.active {
+   background:#000;
+}
+.heading {
+    font-size: 3em;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 40px;
+}
+.page-wrapper {
+    position: relative;
+    width: 85%;
+    margin: 50px auto;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 80px;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 7px 15px;
+    text-decoration: none;
+    /* border: 0.1px solid #2B2D42; */
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    box-sizing: border-box;
+}
+.pagination a > .fas {
+    color: #3A0842;
+    font-size: 14px;
+}
+.pagination a.active {
+    background: #3A0842;
+    color: #fff;
+}
+.pagination a:first-child {
+    border-left: 0.1px solid #c9c7c7;
+    border-bottom: 0.1px solid #c9c7c7;
+}
+.pagination a:nth-child(2) {
+    border-left: 0.1px solid #c9c7c7;
+    border-top: 0.1px solid #c9c7c7;
+}
+.pagination a:nth-child(3) {
+    border-bottom: 0.1px solid #c9c7c7;
+}
+.pagination a:nth-child(5),
+.pagination a:last-child {
+    border-right: 0.1px solid #c9c7c7;
+    border-top: 0.1px solid #c9c7c7;
+}
+@media (max-width: 991.98px) {
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+    .navbar.d-flex.align-items-center {
+        align-items: flex-start;
+    }
+    .toggle-icon {
+        display: inline-flex;
+        cursor: pointer;
+        padding: 15px 20px;
+        border-radius: 50%;
+    }
+    .toggle-icon:active {
+        background: #a0a0a0;
+        
+    }
+    
+    .nav-links.d-flex {
+        flex-direction: column;
+    }
+    .nav-links {
+        padding-top: 20px;
+    }
+    .link--container {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 94px;
+        width: 100%;
+        z-index: 3;
+        background: #fff;
+        text-align: center;
+        border-top: 1px solid #a0a0a0;
+    }
+    .link--container.active {
+        display: block;
+    }
+    .link, .favicon {
+        margin: 0 0 25px 0;
+    }
+    .heading {
+    font-size: 2em;
+    }
+}
+    </style>
+</head>
+
+<body>
+        <header>
+                <nav class="wrapper navbar d-flex justify-content-between align-items-center">
+                    <a href="#" class="favicon">
+                        <i class="fas fa-power-off icon"></i> <span>Start.ng</span>
+                    </a>
+                    <ul class="link--container">
+                        <div class="nav-links d-flex align-items-center">
+                            <li class="link">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="link">
+                                <a href="#">Courses</a>
+                            </li>
+                            <li class="link">
+                                <a href="#">Hire a Grad</a>
+                            </li>
+                            <li class="link">
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li class="link">
+                                <a href="#" class="primary-btn">Start Learning</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <i class="fa fa-bars icon toggle-icon"></i>
+                </nav>
+                <div class="carousel--box">
+                    <div class="carousel--content">
+                        <h2 class="heading">How much will I earn as a UI/UX Designer?</h2>
+                        <div class="margin-auto">
+                            <!-- <div> -->
+                                <a href="#" class="primary-btn padding-bottom">Read</a>
+                            <!-- </div> -->
+                            <div class="circles">
+                                <div class="circle active"></div> 
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                    </div>
+                </div>
+            </header>
+            
+            <main>
+                <div class="page-wrapper">
+                    <section class="blog-posts">
+                           <h2 class="text-center">StartNG BLOG</h2>
+                           <form class="search_input" action="#">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                          </form>
+                          <br>
+                          <hr>
+                          <div class="info">
+                              <p class="date">October 5, 2019</p>
+                             <div class="container">
+                                    <div class="info_image">
+                                        <img src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1570810054/image_xobbzg.png" alt="image of students">
+                                    </div>
+                                       <div class="info_description">
+                                           <h3 class="info_description_text">What you need to know about StartNG</h3>
+                                           <p class="text-content">Lorem ipsum is simply a dummy text of the printing and typing industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                                printer took a gallery of type and scrambled it to make a type specimen book. It has survived not 
+                                                only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                                It was popularised in the 1960s with the release of Letraset sheets containing. 
+                                            </p>
+                                      </div>
+                             </div>         
+                          </div>
+                          <br>
+                          <hr>
+                          <div class="info">
+                            <p class="date">October 5, 2019</p>
+                            <div class="container">
+                                    <div class="info_image">
+                                            <img src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1570810054/image_xobbzg.png" alt="image of students">
+                                    </div>
+                                        <div class="info_description">
+                                            <h3 class="info_description_text">What you need to know about StartNG</h3>
+                                            <p class="text-content">Lorem ipsum is simply a dummy text of the printing and typing industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                            printer took a gallery of type and scrambled it to make a type specimen book. It has survived not 
+                                            only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                            It was popularised in the 1960s with the release of Letraset sheets containing. 
+                                        </p>
+                                    </div>
+                            </div>         
+                            </div>
+                            <br>
+                            <hr>
+                            <div class="info">
+                                <p class="date">October 5, 2019</p>
+                                <div class="container">
+                                    <div class="info_image">
+                                            <img src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1570810054/image_xobbzg.png" alt="image of students">
+                                    </div>
+                                        <div class="info_description">
+                                            <h3 class="info_description_text">What you need to know about StartNG</h3>
+                                            <p class="text-content">Lorem ipsum is simply a dummy text of the printing and typing industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                            printer took a gallery of type and scrambled it to make a type specimen book. It has survived not 
+                                            only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                            It was popularised in the 1960s with the release of Letraset sheets containing. 
+                                        </p>
+                                    </div>
+                                </div>         
+                            </div>
+                            <br>
+                            <hr>
+                            <div class="info">
+                                    <p class="date">October 5, 2019</p>
+                                    <div class="container">
+                                            <div class="info_image">
+                                                    <img src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1570810054/image_xobbzg.png" alt="image of students">
+                                            </div>
+                                            <div class="info_description">
+                                                <h3 class="info_description_text">What you need to know about StartNG</h3>
+                                                <p class="text-content">Lorem ipsum is simply a dummy text of the printing and typing industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                                printer took a gallery of type and scrambled it to make a type specimen book. It has survived not 
+                                                only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                                It was popularised in the 1960s with the release of Letraset sheets containing. 
+                                            </p>
+                                        </div>
+                                    </div>         
+                                </div>
+                                <br>
+                                <hr>
+                                <div class="info">
+                                    <p class="date">October 5, 2019</p>
+                                    <div class="container">
+                                            <div class="info_image">
+                                                <img src="https://res.cloudinary.com/dx5lp5drd/image/upload/v1570810054/image_xobbzg.png" alt="image of students">
+                                            </div>
+                                            <div class="info_description">
+                                                <h3 class="info_description_text">What you need to know about StartNG</h3>
+                                                <p class="text-content">Lorem ipsum is simply a dummy text of the printing and typing industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                                printer took a gallery of type and scrambled it to make a type specimen book. It has survived not 
+                                                only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                                It was popularised in the 1960s with the release of Letraset sheets containing. 
+                                            </p>
+                                        </div>
+                                    </div>         
+                                </div>
+                    </section>
+            
+                    <div class="pagination">
+                        <a href="#">
+                            <i class="fas fa-less-than"></i>
+                        </a>
+                        <a href="#">1</a>
+                        <a href="#">...</a>
+                        <a href="#" class="active">10</a>
+                        <a href="#">11</a>
+                        <a href="#">
+                            <i class="fas fa-greater-than"></i>
+                        </a>
+                    </div>
+                </div>
+            </main>
+    <footer>
+        <div class="start-footer">
+            <div class="cta">
+                <img src="https://res.cloudinary.com/cortehz/image/upload/v1570812433/Vector_u9kjja.png"
+                    style="margin-right: 10px;" />
+                <img src="https://res.cloudinary.com/cortehz/image/upload/v1570812432/Start.ng_qaqh1u.png"
+                    style="margin-left: 0px;" />
+            </div>
+            <div class="batch-ul">
+                <div class="leap-div">
+                    <h3>Ready to take the leap?</h3>
+                    <a href="#" class="start-btn">Start!</a>
+                </div>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">About us</a></li>
+                    <li class="footer-li"><a href="#">Our Course</a></li>
+                    <li class="footer-li"><a href="#">Hire a Grad</a></li>
+                </ul>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">Curriculum</a></li>
+                    <li class="footer-li"><a href="#">Blog</a></li>
+                    <li class="footer-li"><a href="#">Student Stories</a></li>
+                </ul>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">Find a course</a></li>
+                    <li class="footer-li"><a href="#">Our Partners
+                        </a></li>
+                    <li class="footer-li"><a href="#">Contact us</a></li>
+                </ul>
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">FAQS</a></li>
+                    <li class="footer-li"><a href="#">Terms of Service</a></li>
+                    <li class="footer-li"><a href="#">Privacy policy
+                        </a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-social">
+            <img src="https://res.cloudinary.com/cortehz/image/upload/v1570812432/twi_ds1one.png"
+                style="margin-right: 10px;" />
+            <img src="https://res.cloudinary.com/cortehz/image/upload/v1570812432/ig_t9cuey.png"
+                style="margin-left: 0px;" />
+            <img src="https://res.cloudinary.com/cortehz/image/upload/v1570812435/fb_bppzhh.png"
+                style="margin-right: 10px;" />
+        </div>
+    </footer><script type="text/javascript">
+        const toggleNav = (nav)=> {
+            (nav.classList.contains('active')) ? (
+                nav.classList.remove('active')
+            ) : (nav.classList.add('active'))
+        }
+        const toggleIcon = document.querySelector('.toggle-icon');
+        const nav = document.querySelector('.link--container');
+        toggleIcon.addEventListener('click', ()=> toggleNav(nav));
+    </script>
+    <script src="" async defer></script>
+</body>
+
+</html>
