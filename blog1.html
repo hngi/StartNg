@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="style/faq.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        body{
+             box-sizing: border-box;
+            font-size: small;
+            font-family: "Nunito"
+   
+}
+
+ul.navbar-nav li{
+    margin: auto 13px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.655606px;
+    color: #2A2B2A;
+}
+ul.navbar-nav button{
+    background-color: #2DCE89;
+    border-radius: 7px;
+    padding: 7px 30px;
+    color: #fff;
+}
+
+.navbar{
+    padding: 0;
+}
+
+section.main{
+    background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1568810442/office-620822_1920_qpez8f.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 100vh;
+}
+#content{
+    font-weight: bold;
+    padding-top: 25vh;
+    z-index: 1; 
+}
+
+#content h1{
+    color: #fff;
+    font-size: 40px;
+}
+section.main a button{
+    background: #44CF6C;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    padding: 5px 50px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.col-md-4 a button{
+    background-color: #44CF6C;
+    border-radius: 7px;
+    padding: 4px 50px;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+
+#search {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.655606px;
+    color: #000000;
+    margin: 50px auto;
+}
+
+#search input[type="search"]{
+    height: 38px;
+    background-image:url("https://res.cloudinary.com/charlene04/image/upload/v1570765901/download_j8bwxv.png");
+    border: 1px solid #999999;
+    box-sizing: border-box;
+    width: 60%;
+    padding: 0 30px;
+    margin: 0 auto; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 28px;
+}
+
+[blog]{
+    padding-top: 40px;
+    border-top: 1px solid #D3D5D4;
+    margin: 0 70px 40px 70px;
+}
+
+.wrapper {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.title_text{
+    padding: 0 20px;
+    width: 75%;
+    margin-top: 50px;
+}
+.title_text h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.title_text p, input[type="search"]{
+    font-family: "Open Sans";
+    font-size: 16px;
+}
+.date_image{
+    padding: 0 20px;
+    width: 25%;
+}
+.date_image img{
+    width: 100%;
+}
+@media screen and (max-width: 1000px) {
+    ul.navbar-nav li{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    body{
+        width: 100%;
+    }
+    .wrapper {
+        display: table;
+    }
+    .title_text {
+        width: 100%;
+        text-align: justify;
+        padding: auto 20px;
+    }
+    .date_image{
+        width: 100%;
+    }
+    [blog] {
+        margin: 0 10px;
+    }
+    
+}
+
+.page-footer{
+    margin-top: 80px;
+    background-color: #3A0842;
+}
+.row{
+    padding: 30px 50px;
+    color: #fff;
+}
+
+.col-md-2{
+    margin-top: 30px;
+}
+.col-md-2 ul li a{
+    color: #fff;
+}
+
+.footer-copyright{
+    background-color: #2E0435;
+    padding-right: 50px;
+}
+.footer-copyright a img{
+    margin-right: 15px;
+}
+
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light ">
+        <a class="navbar-brand" href="#">
+            <img src="https://res.cloudinary.com/charlene04/image/upload/v1570756471/logo_1_ekral5.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse  navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Hire a Grad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="faq.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><button>Start Learning</button></a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <section class="main text-center">
+        <div id="content">
+            <h1>How much will I earn as a UI/UX Designer?</h1>
+            <a href="#"><button>Read</button></a>
+        </div>
+    </section>
+  <div id="search">
+      <p>StartNG BLOG</p>
+          <input type="search" placeholder="Search" class="form-control">
+      </div>
+      
+  </div>
+  <section blog>
+      <div class="wrapper">
+          <div class="date_image">
+              <p>October 5, 2019</p>
+              <img src="https://res.cloudinary.com/charlene04/image/upload/v1568810583/larm-rmah-AEaTUnvneik-unsplash_hcodrr.jpg" alt="the image">
+
+          </div>
+          <div class="title_text">
+            <h4>What you need to know about StartNG</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                 ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                 Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                 ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                 Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                 ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                 Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+          </div>
+      </div>
+
+  </section>
+  <section blog>
+        <div class="wrapper">
+            <div class="date_image">
+                <p>October 5, 2019</p>
+                <img src="https://res.cloudinary.com/charlene04/image/upload/v1568810583/larm-rmah-AEaTUnvneik-unsplash_hcodrr.jpg" alt="the image">
+  
+            </div>
+            <div class="title_text">
+              <h4>What you need to know about StartNG</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                   ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                   Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                   ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                   Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                   ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                   Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+            </div>
+        </div>
+  
+    </section>
+    <section blog>
+            <div class="wrapper">
+                <div class="date_image">
+                    <p>October 5, 2019</p>
+                    <img src="https://res.cloudinary.com/charlene04/image/upload/v1568810583/larm-rmah-AEaTUnvneik-unsplash_hcodrr.jpg" alt="the image">
+      
+                </div>
+                <div class="title_text">
+                  <h4>What you need to know about StartNG</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                       Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                       Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                       Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                </div>
+            </div>
+      
+        </section>
+  <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+    
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+                <div class="container">
+          <div class="row">
+            <div class="col-md-4 mt-md-0 mt-3">
+              <h5>Start.ng</h5>
+              <p>Ready to take the leap?</p>
+              <a href="#"><button>Start!</button></a>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-2 mb-md-0 mb-3">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">About us</a>
+                </li>
+                <li>
+                  <a href="#!">Our course</a>
+                </li>
+                <li>
+                  <a href="#!">Hire a Grad</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 mb-md-0 mb-3">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Curriculum</a>
+                </li>
+                <li>
+                  <a href="#!">Blog</a>
+                </li>
+                <li>
+                  <a href="#!">Student stories</a>
+                </li>
+            </ul>
+            </div>
+            <div class="col-md-2 mb-md-0 mb-3">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#!">Find a course</a>
+                      </li>
+                      <li>
+                        <a href="#!">Our partners</a>
+                      </li>
+                      <li>
+                        <a href="#!">Contact us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-2 mb-md-0 mb-3">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a href="#!">FAQ</a>
+                          </li>
+                          <li>
+                            <a href="#!">Terms of service</a>
+                          </li>
+                          <li>
+                            <a href="#!">Privacy policy</a>
+                          </li>
+                        </ul>
+                
+                    </div>
+          </div>
+        </div>  
+        </div>
+        <div class="footer-copyright py-3">© 2018 Copyright:
+        <div class="float-right">
+          <a href="#"><img src="https://res.cloudinary.com/charlene04/image/upload/v1570759238/vector__1__aqokbp.png" alt="twitterIcon"></a>  
+           <a href="#"><img src="https://res.cloudinary.com/charlene04/image/upload/v1570759238/vector__2_-1_bvgl5w.png" alt="instagramIcon"></a> 
+           <a href="#"><img src="https://res.cloudinary.com/charlene04/image/upload/v1570759238/vector__3__l0hqeq.png" alt="facebookIcon"></a> 
+        </div>
+        </div>
+  
+      
+      </footer>
+      <!-- Footer -->
+
+
+</body>
+</html>
