@@ -4,7 +4,6 @@
     <title>Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <link rel="stylesheet" href="style/faq.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -53,20 +52,23 @@ section.main{
     z-index: 1; 
 }
 
-#content h1{
+#content p{
     color: #fff;
     font-size: 40px;
+    font-weight: bold;
 }
 section.main a button{
     background: #44CF6C;
     border-radius: 7px;
     border: none;
     outline: none;
-    padding: 5px 50px;
+    padding: 7px 55px;
     color: #fff;
     margin-top: 15px;
 }
-
+.col-md-4{
+    overflow: hidden;
+}
 .col-md-4 a button{
     background-color: #44CF6C;
     border-radius: 7px;
@@ -87,19 +89,16 @@ section.main a button{
     letter-spacing: 0.655606px;
     color: #000000;
     margin: 50px auto;
+    overflow: hidden;
 }
 
 #search input[type="search"]{
     height: 38px;
-    background-image:url("https://res.cloudinary.com/charlene04/image/upload/v1570765901/download_j8bwxv.png");
     border: 1px solid #999999;
     box-sizing: border-box;
-    width: 60%;
-    padding: 0 30px;
-    margin: 0 auto; 
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 28px;
+  
+   
+   
 }
 
 [blog]{
@@ -121,8 +120,8 @@ section.main a button{
 }
 .title_text{
     padding: 0 20px;
-    width: 75%;
-    margin-top: 50px;
+    width: 70%;
+    margin-top: 70px;
 }
 .title_text h4{
     font-size: 20px;
@@ -135,7 +134,7 @@ section.main a button{
 }
 .date_image{
     padding: 0 20px;
-    width: 25%;
+    width: 30%;
 }
 .date_image img{
     width: 100%;
@@ -145,7 +144,7 @@ section.main a button{
         font-size: 12px;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     body{
         width: 100%;
     }
@@ -189,7 +188,65 @@ section.main a button{
 .footer-copyright a img{
     margin-right: 15px;
 }
+a.previous, a.next {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+ margin: 0 auto;
+}
 
+div.nav{
+    margin-bottom: 170px;
+}
+
+a.previous:hover, a.next:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+
+.previous, .next {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+}
+.col-md-4 p[title]{
+    font-family: "Nunito";
+    font-weight: bold;
+    font-size: 22px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.col-md-4 img{
+    display: inline-block;
+    width: 25px;
+    padding-right: 5px;
+}
+
+#search input, #search-icon{
+    display: inline-block;
+}
+#search-icon{
+    width:38px ;
+    height: 38px;
+    background-color: #44CF6C;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+#search-icon img{
+    width: 100%;
+    display: flex;
+}
+#input-search{
+    display: flex;
+    width: 60%;
+    padding: 0 30px;
+    margin: 0 auto; 
+}
 
 </style>
 </head>
@@ -226,13 +283,20 @@ section.main a button{
     </nav>
     <section class="main text-center">
         <div id="content">
-            <h1>How much will I earn as a UI/UX Designer?</h1>
+            <p>How much will I earn as a UI/UX Designer?</p>
             <a href="#"><button>Read</button></a>
         </div>
     </section>
   <div id="search">
       <p>StartNG BLOG</p>
-          <input type="search" placeholder="Search" class="form-control">
+      <div id="input-search">
+            <input type="search" placeholder="Search" class="form-control">
+            <div id="search-icon">
+                  <img src="https://res.cloudinary.com/charlene04/image/upload/v1570789888/Vector_1_ukvxke.png" alt="search-icon">
+            </div>
+      </div>
+          
+          
       </div>
       
   </div>
@@ -240,7 +304,7 @@ section.main a button{
       <div class="wrapper">
           <div class="date_image">
               <p>October 5, 2019</p>
-              <img src="https://res.cloudinary.com/charlene04/image/upload/v1568810583/larm-rmah-AEaTUnvneik-unsplash_hcodrr.jpg" alt="the image">
+              <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
 
           </div>
           <div class="title_text">
@@ -260,7 +324,7 @@ section.main a button{
         <div class="wrapper">
             <div class="date_image">
                 <p>October 5, 2019</p>
-                <img src="https://res.cloudinary.com/charlene04/image/upload/v1568810583/larm-rmah-AEaTUnvneik-unsplash_hcodrr.jpg" alt="the image">
+                <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
   
             </div>
             <div class="title_text">
@@ -280,7 +344,7 @@ section.main a button{
             <div class="wrapper">
                 <div class="date_image">
                     <p>October 5, 2019</p>
-                    <img src="https://res.cloudinary.com/charlene04/image/upload/v1568810583/larm-rmah-AEaTUnvneik-unsplash_hcodrr.jpg" alt="the image">
+                    <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
       
                 </div>
                 <div class="title_text">
@@ -296,6 +360,152 @@ section.main a button{
             </div>
       
         </section>
+        <section blog>
+                <div class="wrapper">
+                    <div class="date_image">
+                        <p>October 5, 2019</p>
+                        <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+          
+                    </div>
+                    <div class="title_text">
+                      <h4>What you need to know about StartNG</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                           ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                           Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                           ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                           Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                           ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                           Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                    </div>
+                </div>
+          
+            </section>
+            <section blog>
+                    <div class="wrapper">
+                        <div class="date_image">
+                            <p>October 5, 2019</p>
+                            <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+              
+                        </div>
+                        <div class="title_text">
+                          <h4>What you need to know about StartNG</h4>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                               ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                               Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                               ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                               Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                               ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                               Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                        </div>
+                    </div>
+              
+                </section>
+                <section blog>
+                        <div class="wrapper">
+                        <div class="date_image">
+                            <p>October 5, 2019</p>
+                            <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+                  
+                            </div>
+                            <div class="title_text">
+                              <h4>What you need to know about StartNG</h4>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                                   ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                   Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                   ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                   Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                   ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                   Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                            </div>
+                        </div>
+                  
+                    </section>
+                    <section blog>
+                        <div class="wrapper">
+                            <div class="date_image">
+                                <p>October 5, 2019</p>
+                                <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+                      
+                                </div>
+                                <div class="title_text">
+                                  <h4>What you need to know about StartNG</h4>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                       Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                       Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                       Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                                </div>
+                            </div>
+                      
+                        </section>
+                        <section blog>
+                                <div class="wrapper">
+                                    <div class="date_image">
+                                        <p>October 5, 2019</p>
+                                        <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+                          
+                                    </div>
+                                    <div class="title_text">
+                                      <h4>What you need to know about StartNG</h4>
+                                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                                           ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                           Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                           ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                           Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                           ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                           Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                                    </div>
+                                </div>
+                          
+                            </section>
+                            <section blog>
+                                    <div class="wrapper">
+                                        <div class="date_image">
+                                            <p>October 5, 2019</p>
+                                            <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+                              
+                                        </div>
+                                        <div class="title_text">
+                                          <h4>What you need to know about StartNG</h4>
+                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                                               ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                               Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                               ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                               Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                                               ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                                               Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                                        </div>
+                                    </div>
+                              
+                                </section>
+    <section blog>
+            <div class="wrapper">
+                <div class="date_image">
+                    <p>October 5, 2019</p>
+                    <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786932/Rectangle_86_uue3at.png" alt="the image">
+      
+                </div>
+                <div class="title_text">
+                  <h4>What you need to know about StartNG</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsum
+                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                       Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                       Non eveniet sit mollitia! Aliquam quas ab quos molestias.
+                       ipsa. Consequuntur doloribus ratione nemo quo assumenda, corrupti nobis ex. 
+                       Non eveniet sit mollitia! Aliquam quas ab quos molestias. </p>
+                </div>
+            </div>
+      
+        </section>
+
+<div class="nav">
+        <a href="#" class="previous">&laquo</a>
+        <a href="#" class="next"> &raquo</a>
+</div>
+        
   <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
     
@@ -305,7 +515,8 @@ section.main a button{
                 <div class="container">
           <div class="row">
             <div class="col-md-4 mt-md-0 mt-3">
-              <h5>Start.ng</h5>
+            <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786931/Vector_xfo3mi.png" alt="logo">
+              <p title>Start.ng</p>
               <p>Ready to take the leap?</p>
               <a href="#"><button>Start!</button></a>
             </div>
@@ -366,7 +577,7 @@ section.main a button{
           </div>
         </div>  
         </div>
-        <div class="footer-copyright py-3">© 2018 Copyright:
+        <div class="footer-copyright py-3">
         <div class="float-right">
           <a href="#"><img src="https://res.cloudinary.com/charlene04/image/upload/v1570759238/vector__1__aqokbp.png" alt="twitterIcon"></a>  
            <a href="#"><img src="https://res.cloudinary.com/charlene04/image/upload/v1570759238/vector__2_-1_bvgl5w.png" alt="instagramIcon"></a> 
