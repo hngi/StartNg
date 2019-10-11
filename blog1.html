@@ -13,6 +13,8 @@
         body{
              box-sizing: border-box;
             font-size: small;
+            margin: 0;
+            padding: 0;
             font-family: "Nunito"
    
 }
@@ -61,8 +63,7 @@ section.main{
 section.main a button{
     background: #44CF6C;
     border-radius: 7px;
-    border: none;
-    outline: none;
+   
     padding: 7px 55px;
     color: #fff;
     margin-top: 15px;
@@ -97,8 +98,8 @@ section.main a button{
     height: 38px;
     border: 1px solid #999999;
     box-sizing: border-box;
-  
-   
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;   
    
 }
 
@@ -163,6 +164,9 @@ section.main a button{
     [blog] {
         margin: 0 10px;
     }
+    #input-search{
+        width: 90%;
+    }
     
 }
 
@@ -185,6 +189,7 @@ section.main a button{
 .footer-copyright{
     background-color: #2E0435;
     padding-right: 50px;
+    overflow: hidden;
 }
 .footer-copyright a img{
     margin-right: 15px;
@@ -211,9 +216,7 @@ a.previous:hover, a.next:hover {
   color: black;
 }
 
-.round {
-  border-radius: 50%;
-}
+
 .col-md-4 p[title]{
     font-family: "Nunito";
     font-weight: bold;
@@ -231,14 +234,14 @@ a.previous:hover, a.next:hover {
 #search input, #search-icon{
     display: inline-block;
 }
-#search-icon{
+#search-icon button{
     width:38px ;
     height: 38px;
     background-color: #44CF6C;
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
 }
-#search-icon img{
+#search-icon button img{
     width: 100%;
     display: flex;
 }
@@ -293,7 +296,7 @@ a.previous:hover, a.next:hover {
       <div id="input-search">
             <input type="search" placeholder="Search" class="form-control">
             <div id="search-icon">
-                  <img src="https://res.cloudinary.com/charlene04/image/upload/v1570789888/Vector_1_ukvxke.png" alt="search-icon">
+                  <button><img src="https://res.cloudinary.com/charlene04/image/upload/v1570789888/Vector_1_ukvxke.png" alt="search-icon"></button>
             </div>
       </div>
           
@@ -514,15 +517,15 @@ a.previous:hover, a.next:hover {
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
                 <div class="container">
-          <div class="row">
-            <div class="col-md-4 mt-md-0 mt-3">
+          <div row class="row">
+            <div class="col-md-4 col-sm-8 mt-md-0 mt-3">
             <img src="https://res.cloudinary.com/charlene04/image/upload/v1570786931/Vector_xfo3mi.png" alt="logo">
               <p title>Start.ng</p>
               <p>Ready to take the leap?</p>
               <a href="#"><button>Start!</button></a>
             </div>
             <hr class="clearfix w-100 d-md-none pb-3">
-            <div class="col-md-2 mb-md-0 mb-3">
+            <div class="col-md-2 col-sm-4 mb-md-0 mb-3">
               <ul class="list-unstyled">
                 <li>
                   <a href="#!">About us</a>
@@ -535,7 +538,7 @@ a.previous:hover, a.next:hover {
                 </li>
               </ul>
             </div>
-            <div class="col-md-2 mb-md-0 mb-3">
+            <div class="col-md-2 col-sm-4 mb-md-0 mb-3">
               <ul class="list-unstyled">
                 <li>
                   <a href="#!">Curriculum</a>
@@ -548,7 +551,7 @@ a.previous:hover, a.next:hover {
                 </li>
             </ul>
             </div>
-            <div class="col-md-2 mb-md-0 mb-3">
+            <div class="col-md-2 col-sm-4 mb-md-0 mb-3">
                     <ul class="list-unstyled">
                       <li>
                         <a href="#!">Find a course</a>
@@ -561,7 +564,7 @@ a.previous:hover, a.next:hover {
                       </li>
                     </ul>
                   </div>
-                  <div class="col-md-2 mb-md-0 mb-3">
+                  <div class="col-md-2 col-sm-4 mb-md-0 mb-3">
                         <ul class="list-unstyled">
                           <li>
                             <a href="#!">FAQ</a>
