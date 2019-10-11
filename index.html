@@ -18,6 +18,10 @@
       rel="stylesheet"
     />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <style>
       .display-4 {
         font-weight: bold;
@@ -57,7 +61,7 @@
         letter-spacing: 0.655606px;
         color: #2a2b2a !important;
       }
-      .second p {
+      .secondheader {
         font-family: "Nunito", sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -65,6 +69,18 @@
         line-height: 27px;
         letter-spacing: 0.655606px;
         color: #44cf6c;
+      }
+      h5 {
+        font-family: "Nunito", sans-serif;
+      }
+      p {
+        font-family: "Nunito", sans-serif;
+        font-size: .7em;
+      }
+      .paragraph {
+        font-family: "Nunito", sans-serif;
+        font-size: .85em;
+        color:black;
       }
       .first {
         background: #2a2b2a;
@@ -103,6 +119,9 @@
       .fifth {
         background: #2e0435;
         text-align: end;
+      }
+      .center {
+        text-align: center;
       }
       .card {
         border: none;
@@ -172,7 +191,7 @@
         letter-spacing: 0.655606px;
         color: #ffffff;
         border: none;
-        margin: 0 0 0 50px;
+        margin: 3 0 0 50px;
         width: 225.6px;
         height: 50px;
       }
@@ -196,11 +215,14 @@
         text-align: center;
         margin-bottom: 50px;
       }
+      #buttons button {
+        margin-bottom: 10px;
+      }
       span svg {
         margin: 0 20px;
       }
       .footer {
-        display: flex;
+        /* display: flex; */
         color: white;
         justify-content: space-between;
       }
@@ -208,6 +230,43 @@
         list-style: none;
         color: white;
       }
+      @media only screen and (max-width: 480px) {
+        .footer ul {
+          padding-left: 10px;
+        }
+        .display-4 {
+          font-size: 35px;
+        }
+        h3 {
+          margin-bottom: 1rem;
+        }
+        .my-5 {
+          margin-top: 1rem !important;
+        }
+      }
+
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #44cf6c;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #44cf6c; 
+      }
+
     </style>
   </head>
 
@@ -248,7 +307,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">About us</a>
             </li>
@@ -272,6 +331,9 @@
           </form>
         </div>
       </nav>
+
+    </div>
+    </div>
     </div>
 
     <div class="jumbotron jumbotron-fluid first">
@@ -280,22 +342,24 @@
       </div>
     </div>
 
-    <div class="container my-5 second">
+    <div class="container my-5" style="overflow-y: scroll; height: 400px;">
+        
       <h3>Terms and Conditions</h3>
-      <p>Last Revised: December 16, 2013</p>
-      <div class="card mb-5">
-        <div class="card-body">
+      <div class="col-sm-12 col-md-12 col-xs-12" ></div>
+      <h5 class="secondheader">Last Revised: December 16, 2013<h5>
+      
+        <p>
           Welcome to www.lorem-ipsum.info. This site is provided as a service to
           our visitors and may be used for informational purposes only. Because
           the Terms and Conditions contain legal obligations, please read them
-          carefully. <br />
+          carefully. </p>
           <br />
-          <strong>1. YOUR AGREEMENT</strong> <br />
-          By using this Site, you agree to be bound by, and to comply with,
+          <h5><strong>1. YOUR AGREEMENT</strong> </h5>
+          <p class="paragraph">By using this site, you agree to be bound by, and to comply with,
           these Terms and Conditions. If you do not agree to these Terms and
-          Conditions, please do not use this site. <br />
-          <br />
-          <strong>PLEASE NOTE:</strong> We reserve the right, at our sole
+          Conditions, please do not use this site. </p>
+  
+          <h5><strong>PLEASE NOTE:</strong></h5><p class="paragraph"> We reserve the right, at our sole
           discretion, to change, modify or otherwise alter these Terms and
           Conditions at any time. Unless otherwise indicated, amendments will
           become effective immediately. Please review these Terms and Conditions
@@ -304,30 +368,29 @@
           revised Terms and Conditions and the reasonableness of these standards
           for notice of changes. For your information, this page was last
           updated as of the date at the top of these terms and conditions.
-          <br />
-          <br />
-          <strong>2. PRIVACY</strong> <br />Please review our Privacy Policy,
+        </p>
+        <h5><strong>2. PRIVACY</strong></h5> <p class="paragraph">Please review our Privacy Policy,
           which also governs your visit to this Site, to understand our
-          practices. <br />
-          <br />
-          <strong>3. LINKED SITES</strong> <br />This Site may contain links to
+          practices. </p>
+      
+          <h5><strong>3. LINKED SITES</strong></h5> <p class="paragraph">This Site may contain links to
           other independent third-party Web sites ("Linked Sites”). These Linked
           Sites are provided solely as a convenience to our visitors. Such
           Linked Sites are not under our control, and we are not responsible for
           and does not endorse the content of such Linked Sites, including any
           information or materials contained on such Linked Sites. You will need
           to make your own independent judgment regarding your interaction with
-          these Linked Sites. <br />
-          <br />
-          <strong>4. FORWARD LOOKING STATEMENTS</strong> <br />All materials
+          these Linked Sites. </p>
+          
+          <h5> <strong>4. FORWARD LOOKING STATEMENTS</strong></h5> <p class="paragraph">All materials
           reproduced on this site speak as of the original date of publication
           or filing. The fact that a document is available on this site does not
           mean that the information contained in such document has not been
           modified or superseded by events or by a subsequent document or
           filing. We have no duty or policy to update any information or
           statements contained on this site and, therefore, such information or
-          statements
-        </div>
+          statements </p>
+      </div>
       </div>
       <div id="buttons">
         <button type="button" class="btn btn-lg btn-outline-primary">
@@ -374,39 +437,45 @@
         <br />
         <br />
         <div class="footer">
-          <div>
-            <p>Ready to take the leap?</p>
-            <button type="button" class="btn btn-lg btn-primary start-btn">
-              Start!
-            </button>
-          </div>
-          <div>
-            <ul>
-              <li>About us</li>
-              <li>Our Course</li>
-              <li>Hire a Grad</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>Curriculum</li>
-              <li>Blog</li>
-              <li>Student Stories</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>Find a Course</li>
-              <li>Our Partners</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>FAQ</li>
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
-            </ul>
+          <div class="row">
+            <div class="col-12 col-sm-3 mb-3">
+              <p>Ready to take the leap?</p>
+              <button type="button" class="btn btn-lg btn-primary start-btn">
+                Start!
+              </button>
+            </div>
+            <div class="col-12 col-sm-9">
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-3 xs-col-6">
+                  <ul>
+                    <li>About us</li>
+                    <li>Our Course</li>
+                    <li>Hire a Grad</li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 xs-col-6">
+                  <ul>
+                    <li>Curriculum</li>
+                    <li>Blog</li>
+                    <li>Student Stories</li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 xs-col-6">
+                  <ul>
+                    <li>Find a Course</li>
+                    <li>Our Partners</li>
+                    <li>Contact us</li>
+                  </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 xs-col-6">
+                  <ul>
+                    <li>FAQ</li>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -457,6 +526,8 @@
           </svg>
         </span>
       </div>
+
+     
     </div>
   </body>
 </html>
