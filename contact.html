@@ -24,17 +24,21 @@
 }
 .header_logo {
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-left:0px;
+    float:left;
+    position:relative;
 }
-.header_logo h3 {
-    
+ h3 {
+    display:flex;
     font-size: 32px;
     margin-top: 10px;
     font-weight: bold;
 }
 .header_image {
     width: 100%;
+    
+    
 }
 .nav_list {
     list-style: none;
@@ -61,23 +65,25 @@
     .contact{
         
         width:50%;
-        display: inline-block;
+        display:flex;
+        height:50%;
+        align-content: center;
+        
+        position:relative;
         
         
     }
     .contact-us {
-        font-size:40px;
+        font-size:4vw;
         text-align:left;
         margin-left:15%;
         position: relative;
-        bottom:120px;
+        
         
     }
-    .svg{
-        display:inline-block;
-        text-align: center;
+    
         
-    }
+    
     .answer{
         background: #44CF6C;
     }
@@ -87,18 +93,20 @@
         margin-right: auto;
         padding: 50px 0px 50px 0px;
         text-align:center;
+        display: flex;
     }
     .row1 {
-        padding:20px;
+        padding:2vw;
     }
     #search {
-        height:45px;
+        height:4vw;
         display:inline-block;
         width: 70%;
         padding-left:20px;
+        margin-left:5%
     }
     #search-but {
-        height:45px;
+        height:4vw;
         display:inline-block;
         width:20%;
         padding-left:0px;
@@ -120,19 +128,19 @@
         margin-top:50px;
     }
     .col {
-        display: inline-block;
+        display:inline-block;
         width:50%;
     }
     .col1 {
-        display: inline-block;
+        display:inline-block;
         width:45%;
     }
     input {
-        width:95%;
-        height: 35px;
+        width:90%;
+        height: 3vw;
     }
     .label {
-        margin-bottom: 20px; ;
+        margin-bottom: 3%; ;
     }
     textarea {
         width:100%;
@@ -141,9 +149,9 @@
         width: 25%;
         margin-right:auto;
         margin-left: auto;
-        line-height: 0.5rem;
+        line-height: 0.5em;
         text-align:center;
-        margin-bottom: 30px;
+        margin-bottom: 2%;
     }
     .privacy{
         color:#44CF6C;
@@ -227,6 +235,67 @@
         padding-left:20px;
         
     }
+    @media only screen and (max-width: 840px) {
+    .header {
+        display: flex;
+        
+
+    }
+    .bar {
+        display: block;
+    }
+    .header_container {
+        flex-direction: column;
+    }
+    .nav_list {
+        flex-direction: column;
+    }
+    .nav_item {
+        padding: 10px 15px 15px 10px;
+    }
+    p{
+        font-size:2vw;
+    }
+}
+    @media only screen and (max-width: 694px){
+        .inner-answer {
+            display:flex;
+            
+            width: 100%;
+
+
+        }
+        .col,.col1{
+            display:flex;
+            
+            font-size: 4%;
+            width:100%;
+            margin-top:2%;
+            padding-left: 2%;
+           align-content: center;
+            margin-bottom: 3%;
+            align-content: flex-end;
+            
+        }
+        .row1{
+            padding: 1%;
+        }
+        .label{
+            width:13%;
+            text-align:left;
+            font-size:2vw;
+        }
+        #search-but{
+            font-size:2vw;
+        }
+    
+}
+
+    .footer-list {
+        display: grid;
+        grid-template-rows: repeat(auto);
+        grid-template-columns: repeat(auto);
+    }
 
     </style>
 </head>
@@ -235,15 +304,15 @@
                 <div class="header_container">
 
                     <div class="header_logo">
-                        <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570739670/Logo_1_xziwdq.png" alt="logo" class="header_image">
+                        <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570739670/Logo_1_xziwdq.png" alt="logo" class="header_image"style="max-width:100%;height:auto;">
                     </div>
                     <div class="nav">
                         <ul class="nav_list">
                             <li class="nav_item"><a href="#" class="nav_link">About Us</a></li>
                             <li class="nav_item"><a href="#" class="nav_link">Courses</a></li>
                             <li class="nav_item"><a href="#" class="nav_link">Hire a grad</a></li>
-                            <li class="nav_item"><a href="#" class="nav_link">Contact Us</a></li>
-                            <li class="nav_item"><a href="#" class="nav_btn">Start Learning</a></li>
+                            <li class="nav_item"><a href="#" class="nav_btn">Contact Us</a></li>
+                            <li class="nav_item"><a href="#" class="nav_link">Start Learning</a></li>
                         </ul>
                     </div>
                 </div>
@@ -255,9 +324,7 @@
             <div class="contact">
                 <h1 class="contact-us">CONTACT US</h1>
             </div>
-            <div class="svg">
-                <img src="https://res.cloudinary.com/josh4324/image/upload/v1570752075/contact_R3_1_hda72i.svg" alt="">
-            </div>
+            
             </section>
     
     
