@@ -18,10 +18,6 @@
       rel="stylesheet"
     />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <style>
       .display-4 {
@@ -48,50 +44,25 @@
         margin-bottom: 3rem;
         margin-top: 35px;
       }
-      .para {
-        font-size: 26px;
+      h5 {
+        font-family: "Nunito", sans-serif;
       }
-
-
-      /*.search-box{
-        position:absolute;
-        transform: translate(-50%,-50%);
-        background: white;
-        height: 60px;
-        border-radius: 40px;
-        padding: 10px;
+      strong {
+        font-size: 1.15rem;
       }
-      .search-box:hover > .search-txt{
-        width: 100px;
-        padding: 0 6px;
+      p {
+        font-family: "Nunito", sans-serif;
+        font-size: .7em;
       }
-      .search-box:hover > .search-btn{
-        background: white;
-      }
-      .search-btn{
-        color: green ;
-        float: right;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .search-txt{
-        border:none;
-        background: none;
-        outline:none;
-        float: left;
-        padding : 0;
-        color:white ;
+      .paragraph {
+        font-family: "Open Sans", sans-serif;
         font-size: 16px;
-        transition: 0.4s;
-        line-height: 40px;
-        width:0px;
+        line-height: 22px;
+        color:black;
       }
-      */
+      .navbar {
+        padding: .9rem 1rem;
+      }
       .navbar-nav {
         margin-left: 18rem;
       }
@@ -107,6 +78,16 @@
         letter-spacing: 0.655606px;
         color: #2a2b2a !important;
       }
+      .para {
+        font-size: 26px;
+      }
+      .footer-links {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+      }
       .secondheader {
         font-family: "Nunito", sans-serif;
         font-style: normal;
@@ -115,19 +96,7 @@
         line-height: 27px;
         letter-spacing: 0.655606px;
         color: #44cf6c;
-      }
-      h5 {
-        font-family: "Nunito", sans-serif;
-      }
-      p {
-        font-family: "Nunito", sans-serif;
-        font-size: .7em;
-      }
-      .paragraph {
-        font-family: "Nunito", sans-serif;
-        font-size: .85em;
-        color:black;
-      }
+      }   
       .first {
         background: #2a2b2a;
       }
@@ -158,6 +127,7 @@
       }
       .fourth {
         background: #3a0842;
+        padding: 2.2em;
       }
       .fourth a {
         color: white;
@@ -168,19 +138,6 @@
       }
       .center {
         text-align: center;
-      }
-      .card {
-        border: none;
-        width: 825px;
-      }
-      .card-body {
-        padding: 1.25rem 0;
-        font-family: "Open Sans", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 22px;
-        color: #333333;
       }
       .lead {
         font-family: "Nunito", sans-serif;
@@ -241,6 +198,10 @@
         width: 225.6px;
         height: 50px;
       }
+      .contact-btn {
+        width: 225.6px;
+        height: 50px; 
+      }
       .start-btn {
         background: #44cf6c;
         border-radius: 10px;
@@ -253,17 +214,30 @@
         letter-spacing: 0.655606px;
         color: #ffffff;
         border: none;
-        width: 150px;
+        width: 180px;
+        height: 40px;
       }
       .jumbotron {
         margin-bottom: 0;
+      }
+      .btn:hover {
+        background: #2dce89;
+        border: none;
+      }
+      .contact-btn:hover {
+        background: #2e0435;
+      }
+      .decline-btn:hover {
+        background: #e64c4cb4;
+        color: white;
+        border: none;
       }
       #buttons {
         text-align: center;
         margin-bottom: 50px;
       }
       #buttons button {
-        margin-bottom: 10px;
+        margin-right: 60px;
       }
       span svg {
         margin: 0 20px;
@@ -298,8 +272,7 @@
       ::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px grey;
         border-radius: 10px;
-      }
-      
+      }      
       /* Handle */
       ::-webkit-scrollbar-thumb {
         background: #44cf6c;
@@ -383,35 +356,25 @@
     </div>
 
     <div class="container my-5 second">
-      <!--<div class="search-box">
-        <input class="search-txt" name="" placeholder="Type to search">
-          <a class="search-btn" href="#">
-             <i class="fas fa-search"></i>
-          </a>
-      </div>-->
     <h3>Terms and Conditions</h3>
-    <div class="container my-5" style="overflow-y: scroll; height: 400px;">
-        
-      
-      <div class="col-sm-12 col-md-12 col-xs-12" ></div>
-      <h5 class="secondheader">Last Revised: December 16, 2013<h5>
+      <div style="display: flex; justify-content: space-between;" class="col-sm-12 col-md-12 col-xs-12" >
+          <h5 class="secondheader">Last Revised: December 16, 2013<h5>
           <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.3596 0C20.7213 0 26.7189 5.99765 26.7189 13.3594C26.7189 16.5234 25.5799 19.4161 23.7307 21.7097L36.1689 34.1437L34.1439 36.1687L21.7085 23.7305C19.4177 25.5797 16.5236 26.7187 13.3596 26.7187C5.99785 26.7187 0.000198364 20.7211 0.000198364 13.3594C0.000198364 5.99765 5.99785 0 13.3596 0ZM13.3596 2.8125C7.51801 2.8125 2.8127 7.51781 2.8127 13.3594C2.8127 19.2009 7.51801 23.9062 13.3596 23.9062C19.2011 23.9062 23.9064 19.2009 23.9064 13.3594C23.9064 7.51781 19.2011 2.8125 13.3596 2.8125Z" fill="#44CF6C"/>
           </svg>
-            
-      
-        <p>
+      </div> 
+      <div class="container mb-5" style="overflow-y: scroll; height: 650px; width: 91%; margin-left: 0;">
+        <p class="paragraph">
           Welcome to www.lorem-ipsum.info. This site is provided as a service to
           our visitors and may be used for informational purposes only. Because
           the Terms and Conditions contain legal obligations, please read them
           carefully. </p>
-          <br />
-          <h5><strong>1. YOUR AGREEMENT</strong> </h5>
+          <strong>1. YOUR AGREEMENT</strong>
           <p class="paragraph">By using this site, you agree to be bound by, and to comply with,
           these Terms and Conditions. If you do not agree to these Terms and
           Conditions, please do not use this site. </p>
   
-          <h5><strong>PLEASE NOTE:</strong></h5><p class="paragraph"> We reserve the right, at our sole
+          <p class="paragraph"><strong>PLEASE NOTE:</strong>We reserve the right, at our sole
           discretion, to change, modify or otherwise alter these Terms and
           Conditions at any time. Unless otherwise indicated, amendments will
           become effective immediately. Please review these Terms and Conditions
@@ -420,12 +383,12 @@
           revised Terms and Conditions and the reasonableness of these standards
           for notice of changes. For your information, this page was last
           updated as of the date at the top of these terms and conditions.
-        </p>
-        <h5><strong>2. PRIVACY</strong></h5> <p class="paragraph">Please review our Privacy Policy,
+          </p>
+          <strong>2. PRIVACY</strong> <p class="paragraph">Please review our Privacy Policy,
           which also governs your visit to this Site, to understand our
           practices. </p>
       
-          <h5><strong>3. LINKED SITES</strong></h5> <p class="paragraph">This Site may contain links to
+          <strong>3. LINKED SITES</strong> <p class="paragraph">This Site may contain links to
           other independent third-party Web sites ("Linked Sites”). These Linked
           Sites are provided solely as a convenience to our visitors. Such
           Linked Sites are not under our control, and we are not responsible for
@@ -434,7 +397,7 @@
           to make your own independent judgment regarding your interaction with
           these Linked Sites. </p>
           
-          <h5> <strong>4. FORWARD LOOKING STATEMENTS</strong></h5> <p class="paragraph">All materials
+          <strong>4. FORWARD LOOKING STATEMENTS</strong> <p class="paragraph">All materials
           reproduced on this site speak as of the original date of publication
           or filing. The fact that a document is available on this site does not
           mean that the information contained in such document has not been
@@ -444,10 +407,10 @@
           statements </p>
       </div>
       <div id="buttons">
-        <button type="button" class="btn btn-lg btn-outline-primary">
+        <button type="button" class="btn btn-lg btn-outline-primary decline-btn">
           DECLINE
         </button>
-        <button type="button" class="btn btn-lg btn-primary accept-btn">
+        <button class="btn btn-lg btn-primary accept-btn">
           ACCEPT THE TERMS
         </button>
       </div>
@@ -497,7 +460,7 @@
                 Start!
               </button>
             </div>
-            <div class="col-12 col-sm-9">
+            <div class="col-12 col-sm-9 footer-links">
               <div class="row">
                 <div class="col-6 col-sm-6 col-md-3 xs-col-6">
                   <ul>
@@ -534,7 +497,7 @@
       </div>
     </div>
 
-    <div class="jumbotron jumbotron-fluid fifth">
+    <div style="padding: 2em;" class="jumbotron jumbotron-fluid fifth">
       <div class="container">
         <span
           ><svg
@@ -578,9 +541,12 @@
             />
           </svg>
         </span>
-      </div>
-
-     
+      </div>     
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </body>
 </html>
