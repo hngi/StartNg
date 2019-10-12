@@ -11,50 +11,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <script>
-        function menu() {
-            const h = document.getElementById('head')
-            let disp = h.style.display
-            if (disp === '') {
-                h.style.display = 'block'
-            }
-            else if (disp === 'none') {
-                h.style.display = 'block'
-            }
-            else {
-                h.style.display = 'none'
-            }
-            // document.getElementById('head').style.display = 'none' ? 'block' : 'none'
-
-        }
-
-    </script>
-    <header class="header" id="head">
-        <div class="header_container">
-
-            <div class="header_logo">
-                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570739670/Logo_1_xziwdq.png" alt="logo"
-                    class="header_image">
-            </div>
-            <div class="nav">
-                <ul class="nav_list">
-                    <li class="nav_item"><a href="#" class="nav_link">About Us</a></li>
-                    <li class="nav_item"><a href="#" class="nav_link">Courses</a></li>
-                    <li class="nav_item"><a href="#" class="nav_link">Hire a grad</a></li>
-                    <li class="nav_item"><a href="#" class="nav_link">Contact Us</a></li>
-                    <li class="nav_item"><a href="#" class="nav_btn">Start Learning</a></li>
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+        <div class="container">
+            <a href="/" class="navbar-brand"><img
+                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
+                    class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
+                data-target="#navbar9" style="color: #000;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar9">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="//codeply.com">Courses</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Hire A Grad</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="btn btn-success nav-link pl-5 pr-5" href="#" style="color: #fff;">Start Learning</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </header>
-    <div class="hamburg">
-        <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570788702/menu_hecex5.svg" alt="" class="bar"
-            onclick="menu()">
-    </div>
+    </nav>
+
     <section class="learning">
         <div class="welcome-section">
             <p class="welcome-text">Welcome to the Start.ng application!</p>
@@ -188,81 +182,33 @@
         margin: 0
     }
 
-    .header {
-        background: #fff;
-        font-size: 15px;
-        font-family: 'Nunito', sans-serif;
-        font-weight: bold;
-        color: #2A2B2A;
+    /* Style for Navbar Starts */
+
+    .navbar-custom li a {
+        color: #000;
     }
 
-    .header_container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .header_logo {
-        display: flex;
-        align-items: center;
-    }
-
-    .header_logo>h3 {
-        margin-left: 10px;
-        font-size: 32px;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-
-    .header_image {
-        width: 160px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav_list {
-        list-style: none;
-        display: flex;
-    }
-
-    .nav_item {
-        padding: 30px 15px 25px 15px;
-    }
-
-    .nav_link {
-        text-decoration: none;
-        font-weight: bold;
-        color: #2A2B2A;
-    }
-
-    .nav_btn {
-        text-decoration: none;
-        font-weight: bold;
-        border: 1px solid #2DCE89;
-        background: #2DCE89;
-        padding: 8px 42px;
-        border-radius: 10px;
+    .btn-success {
+        background-color: #2DCE89;
         color: #fff;
+        border: thin solid #2dce89;
     }
 
-
-
-    .bar {
-        width: 35px;
-        display: none;
-        position: absolute;
-        top: 5%;
-        left: 85%;
-        z-index: 1500;
-        background: #2DCE89;
-        border-radius: 50%;
-
+    .btn-success:hover {
+        background-color: #2DCE89;
+        color: #fff;
+        border: thin solid #2dce89;
     }
 
-    /* .hamburg {
-        display: none;
-        height: 80px;
-    } */
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    .custom-toggler.navbar-toggler {
+        border-color: #000;
+    }
+
+    /* Style for Navbar Ends */
 
     .learning {
         background: #E5EBFF;
@@ -558,535 +504,473 @@
             bottom: -16.5px;
             height: 97.2%
         }
+    }
 
-        @media screen and (max-width: 1250px) {
-            .label-info {
-                width: 400px;
-            }
+    @media screen and (max-width: 1250px) {
+        .label-info {
+            width: 400px;
+        }
 
-            .learning {
-                padding-left: 130px;
-                padding-right: 130.24px;
-                height: 600px;
-            }
+        .learning {
+            padding-left: 130px;
+            padding-right: 130.24px;
+            height: 600px;
+        }
 
-            .purple-image {
-                width: 450.33px;
-                height: 450.33px;
-                margin-top: 80px;
-
-            }
-
-            .welcome-section {
-                padding-top: 247px;
-                padding-bottom: 174px;
-            }
-
-
-            .hi {
-                left: -49.57px;
-                bottom: -14.5px;
-                height: 96.2%
-            }
+        .purple-image {
+            width: 450.33px;
+            height: 450.33px;
+            margin-top: 80px;
 
         }
 
-        @media screen and (max-width: 1180px) {
-            .learning-form {
-                padding-left: 120px;
-                padding-right: 120px;
-            }
-
-            .label-info {
-                width: 400px;
-            }
-
-            .learning {
-                padding-left: 100px;
-                padding-right: 100.24px;
-                height: 550px;
-
-            }
-
-            .purple-image {
-                width: 400.33px;
-                height: 400.33px;
-                margin-top: 65px;
-
-            }
-
-            .welcome-section {
-                padding-top: 220px;
-                padding-bottom: 174px;
-            }
-
-
-
-            .hi {
-                left: -40.57px;
-                bottom: -15.5px;
-            }
-        }
-
-        @media screen and (max-width: 1120px) {
-            .learning-form {
-                padding-left: 100px;
-                padding-right: 100px;
-            }
-
-            .label-info {
-                width: 370px;
-            }
-
-            .learning {
-                padding-left: 80px;
-                padding-right: 80.24px;
-                height: 500px;
-
-            }
-
-            .welcome-section {
-                padding-top: 200px;
-                padding-bottom: 174px;
-            }
-
-            .purple-image {
-                width: 370.33px;
-                height: 370.33px;
-                margin-top: 65px;
-                left: 53%
-            }
-
-            .hi {
-                left: -38.57px;
-                bottom: -13.5px;
-                /* height: 96.2% */
-            }
-        }
-
-        @media screen and (max-width: 1020px) {
-            .label-info {
-                width: 320px;
-            }
-
-            .learning {
-                height: 470px;
-
-            }
-
-            .welcome-section {
-                padding-top: 170px;
-                padding-bottom: 174px;
-            }
-
-            .purple-image {
-                width: 340.33px;
-                height: 340.33px;
-                margin-top: 65px;
-            }
-
-            .hi {
-                left: -34.57px;
-                bottom: -13.5px;
-                /* height: 96.2% */
-            }
-        }
-
-        @media screen and (max-width: 980px) {
-            .learning {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: auto;
-                padding-bottom: 80px;
-            }
-
-            .welcome-section {
-                width: 90%;
-                height: 110px;
-                padding-top: 80px;
-                padding-bottom: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center
-            }
-
-
-            .purple-image {
-                position: relative;
-                left: 0;
-                right: 0
-            }
-
-        }
-
-        @media screen and (max-width: 915px) {
-            .label-info {
-                width: 280px;
-                height: 50px;
-            }
-
-            .learning {
-                padding-left: 50px;
-                padding-right: 50px;
-
-            }
-
-        }
-
-        @media screen and (max-width: 870px) {
-            .header {
-                font-size: 12px;
-
-            }
-
-            @media screen and (max-width: 820px) {
-                .header_image {
-                    width: 100px;
-                }
-            }
-        }
-
-        @media screen and (max-width: 850px) {
-            .welcome-text {
-                font-size: 35px;
-                line-height: 45px;
-
-            }
-
-            .welcome-info {
-                font-size: 18px;
-                line-height: 24px;
-            }
-        }
-
-        @media screen and (max-width: 750px) {
-
-            .learning {
-                padding-left: 40px;
-                padding-right: 40px;
-
-            }
-
-            .welcome-text {
-                font-size: 32px;
-                line-height: 40px;
-
-            }
-
-            .welcome-info {
-                font-size: 18px;
-                line-height: 24px;
-            }
+        .welcome-section {
+            padding-top: 247px;
+            padding-bottom: 174px;
         }
 
 
-        @media screen and (max-width: 830px) {
+        .hi {
+            left: -49.57px;
+            bottom: -14.5px;
+            height: 96.2%
+        }
 
-            .bar {
-                position: absolute;
-                top: 5%;
-                left: 92%;
+    }
 
+    @media screen and (max-width: 1180px) {
+        .learning-form {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
 
-            }
+        .label-info {
+            width: 400px;
+        }
 
-            .label-info {
-                width: 250px;
-                height: 45px;
-                padding-left: 20px;
-                padding-right: 20px;
-                font-size: 18px;
-            }
+        .learning {
+            padding-left: 100px;
+            padding-right: 100.24px;
+            height: 550px;
 
         }
 
-        @media screen and (max-width: 760px) {
-            .learning-form {
-                padding-left: 70px;
-                padding-right: 70px;
-            }
-
-            .label-info {
-                width: 250px;
-                height: 45px;
-                padding-left: 20px;
-                padding-right: 20px;
-                font-size: 18px;
-            }
-        }
-
-        @media screen and (max-width: 700px) {
-            .learning-form {
-                padding-left: 60px;
-                padding-right: 60px;
-            }
-
-            .bar {
-                position: absolute;
-                top: 5%;
-                left: 92%;
-
-
-            }
-
-            .label-info {
-                width: 230px;
-                height: 40px;
-                padding-left: 18px;
-                padding-right: 18px;
-                font-size: 16px;
-            }
-
-            .learning {
-                padding-left: 30px;
-                padding-right: 30px;
-                flex-wrap: wrap;
-            }
-
-            .welcome-text {
-                font-size: 30px;
-                line-height: 35px;
-
-            }
-
-            .welcome-info {
-                font-size: 17px;
-                line-height: 24px;
-            }
-        }
-
-        @media screen and (max-width: 640px) {
-            .learning-form {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-
-            .label-info {
-                width: 220px;
-                height: 40px;
-                padding-left: 18px;
-                padding-right: 18px;
-                font-size: 16px;
-            }
-
-            .welcome-text {
-                font-size: 25px;
-                line-height: 30px;
-
-            }
-
-            .welcome-info {
-                font-size: 16px;
-                line-height: 24px;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .learning-form {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-
-            .label-info {
-                width: 200px;
-                height: 40px;
-                padding-left: 12px;
-                padding-right: 12px;
-                font-size: 15px;
-            }
-
-            .purple-image {
-                width: 300.33px;
-                height: 300.33px;
-
-            }
-
-            .learning {
-                padding-left: 30px;
-                padding-right: 30px;
-
-            }
-
-            .welcome-text {
-                font-size: 23px;
-                line-height: 30px;
-
-            }
-
-            .hi {
-                left: -30.57px;
-                bottom: -11.5px;
-            }
+        .purple-image {
+            width: 400.33px;
+            height: 400.33px;
+            margin-top: 65px;
 
         }
 
-        @media screen and (max-width: 560px) {
-            .learning-form {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-
-            .label-info {
-                width: 190px;
-                height: 40px;
-                padding-left: 10px;
-                padding-right: 10px;
-                font-size: 14px;
-            }
-
-            .learning {
-                padding-left: 12px;
-                padding-right: 12px;
-
-            }
-        }
-
-        @media screen and (max-width: 530px) {
-            .learning-form {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
-
-            .label-info {
-                width: 180px;
-                height: 35px;
-                padding-left: 10px;
-                padding-right: 10px;
-                font-size: 14px;
-            }
-
-            .learning-button button {
-                width: 220px;
-                height: 40px;
-
-            }
-
-            .learning {
-                padding-left: 32px;
-                padding-right: 32px;
-
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            .learning-form {
-                padding-left: 40px;
-                padding-right: 40px;
-                height: 1120px;
-            }
-
-            .bar {
-                position: absolute;
-                top: 5%;
-                left: 85%;
-
-
-            }
-
-            .label-info {
-                width: 200px;
-                height: 38px;
-                padding-left: 10px;
-                padding-right: 10px;
-                font-size: 14px;
-            }
-
-            .learning-button button {
-                width: 200px;
-                height: 35px;
-
-            }
-
-            .learning-form form {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .mobile {
-                margin-bottom: 35px;
-            }
-
-            .bot {
-                margin-top: 0px;
-            }
-
-            .mob {
-                margin-top: 35px;
-            }
-
-            .purple-image {
-                width: 270.33px;
-                height: 270.33px;
-
-            }
-
-            .hi {
-                left: -28.57px;
-                bottom: -10.5px;
-            }
-        }
-
-        @media screen and (max-width: 370px) {
-            .purple-image {
-                width: 250.33px;
-                height: 250.33px;
-
-            }
-
-            .hi {
-                left: -22.57px;
-                bottom: -11.5px;
-            }
-        }
-
-        @media screen and (max-width: 340px) {
-            .purple-image {
-                width: 220.33px;
-                height: 220.33px;
-
-            }
-
-            .hi {
-                left: -23.57px;
-                bottom: -7.5px;
-            }
+        .welcome-section {
+            padding-top: 220px;
+            padding-bottom: 174px;
         }
 
 
-        @media only screen and (max-width: 835px) {
-            .header {
-                display: none;
-            }
 
-            .bar {
-                display: block;
-                position: absolute;
-                top: 5%;
-                left: 92%;
-            }
-
-            /* .hamburg {
-                    display: block;
-                } */
-
-            .header_container {
-                flex-direction: column;
-            }
-
-            .nav_list {
-                flex-direction: column;
-            }
-
-            .nav_item {
-                padding: 10px 15px 15px 15px;
-            }
+        .hi {
+            left: -40.57px;
+            bottom: -15.5px;
         }
     }
+
+    @media screen and (max-width: 1120px) {
+        .learning-form {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .label-info {
+            width: 370px;
+        }
+
+        .learning {
+            padding-left: 80px;
+            padding-right: 80.24px;
+            height: 500px;
+
+        }
+
+        .welcome-section {
+            padding-top: 200px;
+            padding-bottom: 174px;
+        }
+
+        .purple-image {
+            width: 370.33px;
+            height: 370.33px;
+            margin-top: 65px;
+            left: 53%
+        }
+
+        .hi {
+            left: -38.57px;
+            bottom: -13.5px;
+            /* height: 96.2% */
+        }
+    }
+
+    @media screen and (max-width: 1020px) {
+        .label-info {
+            width: 320px;
+        }
+
+        .learning {
+            height: 470px;
+
+        }
+
+        .welcome-section {
+            padding-top: 170px;
+            padding-bottom: 174px;
+        }
+
+        .purple-image {
+            width: 340.33px;
+            height: 340.33px;
+            margin-top: 65px;
+        }
+
+        .hi {
+            left: -34.57px;
+            bottom: -13.5px;
+            /* height: 96.2% */
+        }
+    }
+
+    @media screen and (max-width: 980px) {
+        .learning {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            padding-bottom: 80px;
+        }
+
+        .welcome-section {
+            width: 90%;
+            height: 110px;
+            padding-top: 80px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+
+        .purple-image {
+            position: relative;
+            left: 0;
+            right: 0
+        }
+
+    }
+
+    @media screen and (max-width: 915px) {
+        .label-info {
+            width: 280px;
+            height: 50px;
+        }
+
+        .learning {
+            padding-left: 50px;
+            padding-right: 50px;
+
+        }
+
+    }
+
+
+    @media screen and (max-width: 850px) {
+        .welcome-text {
+            font-size: 35px;
+            line-height: 45px;
+
+        }
+
+        .welcome-info {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+
+        .learning {
+            padding-left: 40px;
+            padding-right: 40px;
+
+        }
+
+        .welcome-text {
+            font-size: 32px;
+            line-height: 40px;
+
+        }
+
+        .welcome-info {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+
+    @media screen and (max-width: 830px) {
+
+        .label-info {
+            width: 250px;
+            height: 45px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 18px;
+        }
+
+    }
+
+    @media screen and (max-width: 760px) {
+        .learning-form {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        .label-info {
+            width: 250px;
+            height: 45px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .learning-form {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .label-info {
+            width: 230px;
+            height: 40px;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-size: 16px;
+        }
+
+        .learning {
+            padding-left: 30px;
+            padding-right: 30px;
+            flex-wrap: wrap;
+        }
+
+        .welcome-text {
+            font-size: 30px;
+            line-height: 35px;
+
+        }
+
+        .welcome-info {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .learning-form {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .label-info {
+            width: 220px;
+            height: 40px;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-size: 16px;
+        }
+
+        .welcome-text {
+            font-size: 25px;
+            line-height: 30px;
+
+        }
+
+        .welcome-info {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .learning-form {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .label-info {
+            width: 200px;
+            height: 40px;
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 15px;
+        }
+
+        .purple-image {
+            width: 300.33px;
+            height: 300.33px;
+
+        }
+
+        .learning {
+            padding-left: 30px;
+            padding-right: 30px;
+
+        }
+
+        .welcome-text {
+            font-size: 23px;
+            line-height: 30px;
+
+        }
+
+        .hi {
+            left: -30.57px;
+            bottom: -11.5px;
+        }
+
+    }
+
+    @media screen and (max-width: 560px) {
+        .learning-form {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .label-info {
+            width: 190px;
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+        }
+
+        .learning {
+            padding-left: 12px;
+            padding-right: 12px;
+
+        }
+    }
+
+    @media screen and (max-width: 530px) {
+        .learning-form {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .label-info {
+            width: 180px;
+            height: 35px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+        }
+
+        .learning-button button {
+            width: 220px;
+            height: 40px;
+
+        }
+
+        .learning {
+            padding-left: 32px;
+            padding-right: 32px;
+
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .learning-form {
+            padding-left: 40px;
+            padding-right: 40px;
+            height: 1120px;
+        }
+
+        .label-info {
+            width: 200px;
+            height: 38px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+        }
+
+        .learning-button button {
+            width: 200px;
+            height: 35px;
+
+        }
+
+        .learning-form form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile {
+            margin-bottom: 35px;
+        }
+
+        .bot {
+            margin-top: 0px;
+        }
+
+        .mob {
+            margin-top: 35px;
+        }
+
+        .purple-image {
+            width: 270.33px;
+            height: 270.33px;
+
+        }
+
+        .hi {
+            left: -28.57px;
+            bottom: -10.5px;
+        }
+    }
+
+    @media screen and (max-width: 370px) {
+        .purple-image {
+            width: 250.33px;
+            height: 250.33px;
+
+        }
+
+        .hi {
+            left: -22.57px;
+            bottom: -11.5px;
+        }
+    }
+
+    @media screen and (max-width: 340px) {
+        .purple-image {
+            width: 220.33px;
+            height: 220.33px;
+
+        }
+
+        .hi {
+            left: -23.57px;
+            bottom: -7.5px;
+        }
+    }
+
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </html>
