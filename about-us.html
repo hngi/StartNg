@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Footer for StartNg</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(180deg, #FFFFFF 28.46%, rgba(255, 255, 255, 0) 100%), url('./images/hero.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 70vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h2 {
+            font-size: 1em;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .courses {
+            display: flex;
+            height: 70vh;
+
+            margin: 120px 0;
+        }
+
+        .courses > * {
+            flex-grow: 1;
+            max-width: 50%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .courses {
+                margin: 0;
+            }
+
+            .courses > * {
+                max-width: 100%;
+            }
+
+            .image {
+                display: none;
+            }
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 32px;
+        }
+
+        @media only screen and (min-width: 980px) {
+            .text {
+                padding: 128px;
+            }
+        }
+
+        .text .heading {
+            font-size: 20px;
+        }
+
+        .benefits {
+            padding: 0 18px;
+            color: #44CF6C;
+        }
+
+        a.button {
+            background: #44CF6C;
+            display: inline-block;
+            border-radius: 10px;
+            width: 180px;
+            color: white;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .codingcomp {
+            background: linear-gradient(0deg, rgba(0, 19, 1, 0.69), rgba(0, 19, 1, 0.69)), url('./images/codingcomp.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 70vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 32px;
+        }
+
+        .codingcomp h2 {
+            font-size: 1em;
+            text-align: center;
+            max-width: 400px;
+
+            color: white;
+        }
+
+        .codingcomp .buttons {
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .onstart {
+            background: #FCFCFC;
+            padding: 128px;
+        }
+
+        @media only screen and (max-width: 980px) {
+            .onstart {
+                padding: 32px;
+            }
+        }
+
+        .onstart .heading {
+            font-size: 20px;
+            text-align: center;
+            color: #3A0842;
+            font-weight: bold;
+            margin-bottom: 48px;
+        }
+
+        .priviledge-cont {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .priviledge {
+            display: flex;
+            max-width: 400px;
+            margin-bottom: 32px;
+        }
+
+        .priviledge * {
+            font-family: 'Open Sans';
+        }
+
+        .priviledge .icon {
+            display: inline-block;
+            min-width: 82px;
+            height: 82px;
+            background: #44CF6C;
+            border-radius: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .priviledge .text-cont {
+            display: block;
+            margin-left: 23px;
+        }
+
+        .priviledge .text-cont .title {
+            color: #3A0842;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .priviledge .text-cont p {
+            color: #2B2D42;
+        }
+
+        .didyou {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 128px;
+        }
+
+        @media only screen and (max-width: 980px) {
+            .didyou {
+                padding: 32px;
+            }
+        }
+
+        .didyou h2 {
+            font-size: 1em;
+            font-family: 'Open Sans';
+            text-align: center;
+            max-width: 550px;
+            line-height: 176.9%;
+
+            color:#2E0435;
+        }
+
+        .didyou h2 span {
+            font-weight: bold;
+        }
+
+        .didyou .button {
+            margin: auto;
+            margin-top: 30px;
+        }
+
+
+        .howit {
+            display: flex;
+            height: 70vh;
+
+            margin: 120px 0;
+        }
+
+        .howit > * {
+            flex-grow: 1;
+            max-width: 50%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .howit {
+                margin: 0;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .howit > * {
+                max-width: 100%;
+            }
+        }
+
+        .howit-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 32px;
+        }
+
+        @media only screen and (min-width: 980px) {
+            .howit-text {
+                padding: 128px;
+            }
+        }
+
+        .howit-text .heading {
+            font-size: 20px;
+            text-align: center;
+            color: #7F5A83;
+            font-weight: bold;
+        }
+
+        .howit-text .body {
+            text-align: center;
+        }
+
+        .howit-image {
+            position: relative;
+        }
+
+        .howit-image img {
+            height: 100%;
+            width: 100%;
+            max-height: 70vh;
+            object-fit: cover;
+        }
+        
+        .howit-image svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -75px;
+            margin-left: -75px;
+        }
+
+        .global {
+            background: linear-gradient(0deg, rgba(68, 207, 108, 0.86), rgba(68, 207, 108, 0.86)), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), url('./images/global.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 128px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 980px) {
+            .global {
+                padding: 32px;
+            }
+        }
+
+        .global h2 {
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+            max-width: 550px;
+            line-height: 176.9%;
+
+            color:#3A0842;
+        }
+
+        .global .bold {
+            font-weight: bold;
+        }
+
+        .global .button {
+            margin: auto;
+            margin-top: 30px;
+            background: #3A0842;
+        }
+
+        .mt-5 {
+            margin-top: 0 !important;
+        }
+
+        /* Stlye for Footer starts */
+
+        .deep {
+            background: #3A0842;
+            color: #fff;
+        }
+
+        .deep #slink {
+            background: #44CF6C;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 70px;
+
+        }
+
+        .deep li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .deep li {
+            list-style: none;
+        }
+
+        .deep li a:hover {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .icons i {
+            font-size: 26px;
+            height: 50px;
+            width: 50px;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .icons i.fa.fa-twitter:hover {
+            color: #00aced;
+        }
+
+        .icons i.fa.fa-facebook:hover {
+            color: #3b5598;
+        }
+
+        .icons i.fa.fa-instagram:hover {
+            color: #ed3833;
+        }
+
+        /* Style for Footer Ends */
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <h2>A platform for learning programming where anyone, anywhere in the world can join and become a better programmer</h2>
+    </section>
+
+    <section class="courses">
+        <div class="text">
+            <div class="text-cont">
+                <h2 class="heading">Courses</h2>
+                <p class="body">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss wesa dsea wxli sde zdxd asw fdesd fdvdfvddscd sdd.</p>
+                <ul class="benefits">
+                    <li class="item">100% Online</li>
+                    <li class="item">Flexible Online Learning</li>
+                    <li class="item">Earn a Course Certificate</li>
+                </ul>
+                <a href="#" class="button">Start Learning</a>
+            </div>
+        </div>
+        <figure class="image">
+            <img src="./images/courses.jpeg" alt="Our Courses">
+        </figure>
+    </section>
+
+    <div class="codingcomp">
+        <h2>Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea wxli sde zdxd asw df sds dcdsc dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede ws a as ff g  ss ddcdd fr es waa dde saw asz cde ers ffggt sdawd dfdv ddv dssdsx xsccdvdvf ss</h2>
+        <div class="buttons">
+            <a href="#" class="button">Free Course</a><a href="#" class="button">Paid Course</a>
+        </div>
+    </div>
+
+    <div class="onstart">
+        <h2 class="heading">On Start.ng, you are priviledged to</h2>
+        <div class="priviledge-cont">
+            <div class="priviledge">
+                <div class="icon"><img src="./images/Group.png" alt="idk"></div>
+                <div class="text-cont">
+                    <h3 class="title">Learn from the Best Teachers</h3>
+                    <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.</p>
+                </div>
+            </div>
+            <div class="priviledge">
+                <div class="icon"><img src="./images/Group 268.png" alt="idk"></div>
+                <div class="text-cont">
+                    <h3 class="title">Join our Online Developer Community</h3>
+                    <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.</p>
+                </div>
+            </div>
+            <div class="priviledge">
+                <div class="icon"><img src="./images/Group 269.png" alt="idk"></div>
+                <div class="text-cont">
+                    <h3 class="title">Get Academic and Technical Support</h3>
+                    <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.</p>
+                </div>
+            </div>
+            <div class="priviledge">
+                <div class="icon"><img src="./images/Group-1.png" alt="idk"></div>
+                <div class="text-cont">
+                    <h3 class="title">Earn a Certifcate</h3>
+                    <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="didyou">
+        <h2>Hi,<br> Do you know you can Enrol for <br><span>FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</span></h2>
+            <a href="#" class="button">Free Course</a>
+    </div>
+
+    <section class="howit">
+        <figure class="howit-image">
+            <img src="./images/howit.jpeg" alt="Our Courses">
+            <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="75" cy="75" r="73.5" stroke="white" stroke-width="3"/>
+                <path d="M59.5 48.1532L106 75L59.5 101.847L59.5 48.1532Z" fill="white" stroke="white"/>
+                </svg>                
+        </figure>
+        <div class="howit-text">
+            <div class="text-cont">
+                <h2 class="heading">How it all Started</h2>
+                <p class="body">Start.ng was going to church and she forgot to ferdsdscsd sdsdnd dffdss wesa dsea wxli sde zdxd asw fdesd fdvdfvddscd sdd fvvdfvdf sds dcdsc dfvdfvdf vscscsd dscsdc dvsdvsdvsdsvsdvsdsd sdvsdv vfv vfv sdcd fvfv dede ws a as ff g  ss ddcdd fr es waa dde saw asz cde ers ffggt sdawd dfdv ddv dssdsx xsccdvdvf ss day that a woman goes to church to meet with Mick Jagger</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="global">
+        <h2>Our Global Reach</h2>
+        <p>Start.ng is the leading online learning platform for programming courses nationwide and across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each students with knowledge and character needed to excel anywhere in the world.</p>
+        <p class="bold">Most Sought after Programming Skills </p>
+        <p class="bold">Experienced Qualified Teachers</p>
+        <p class="bold">Access to the Largest Online Developer Community</p>
+        <a href="#" class="button">Explore Start.ng</a>
+    </div>
+
+    <!-- Footer Starts -->
+
+    <div class="container-fluid text-white deep mt-5">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-3 mb-4">
+                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-lg-4 col-md-12 mb-3">
+                        <h4 class='mb-4'>Ready to take the Leap?</h4>
+                        <a href="#" class='mb-5' id='slink'>Start!</a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Course</a></li>
+                        <li><a href="#">Hire a Grad</a></li>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Student Stories</a></li>
+
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">Find a Course</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+        <div class="container text-right">
+            <div class="row icons">
+                <div class="col-md-12 ">
+                    <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
+                    <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div>
+        </footer>
+    </div>
+
+    <!-- End of Footer -->
+
+</body>
+
+</html>
