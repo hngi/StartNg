@@ -396,12 +396,6 @@
             display: flex;
         }
 
-        @media only screen and (max-width: 980px) {
-            .cell {
-                padding: 32px;
-            }
-        }
-        
         .control {
             padding: 32px;
             display: flex;
@@ -417,7 +411,7 @@
         }
 
         .cardy {
-            width: 300px;
+            max-width: 300px;
             overflow: hidden;
             text-align: center;
             padding-bottom: 28px;
@@ -474,6 +468,18 @@
         .cardy.active {
             z-index: 1;
             transform: scale(1.15);
+        }
+
+        @media only screen and (max-width: 980px) {
+            .cell {
+                padding: 32px;
+            }
+            .control {
+                padding: 16px;
+            }
+            .cardy.active {
+                transform: scale(1.1);
+            }
         }
 
         /* Stlye for Footer starts */
