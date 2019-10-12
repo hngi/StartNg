@@ -4,9 +4,10 @@
     <title>FAQ </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito&display=swap">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
@@ -17,30 +18,33 @@
             padding: 0;
             font-family: "Nunito", sans-serif;
    	    }
-        /*... NavBar..*/
-        ul.navbar-nav li{
-            margin: auto 13px;
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 22px;
-            letter-spacing: 0.655606px;
-            color: #2A2B2A;
+        /* Style for Navbar Starts */
+        
+        .navbar-custom li a {
+            color: #000;
         }
-        ul.navbar-nav button{
+        
+        .btn-success {
             background-color: #2DCE89;
-            border-radius: 7px;
-            padding: 10px 45px;
             color: #fff;
+            border: thin solid #2dce89;
         }
-        ul.navbar-nav button:hover {
+        
+        .btn-success:hover {
+            background-color: #2DCE89;
             color: #fff;
-            background: #000;
+            border: thin solid #2dce89;
         }
-        .navbar{
-            padding: 12px;
+        
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
+        
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
+        /* Style for Navbar Ends */
+	    
         .text-center {
             text-align:center;
             margin-bottom: 1.75rem;
@@ -252,34 +256,33 @@
 <body>
 
     <!-- NavBar -->
-    <div class="container">
-        <nav class="navbar navbar-expand-md navbar-light ">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://res.cloudinary.com/charlene04/image/upload/v1570756471/logo_1_ekral5.png" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+        <div class="container">
+            <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse  navbar-collapse" id="collapsibleNavbar">
+            <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">About us</a>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="search.html">Courses</a>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="//codeply.com">Courses</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="hireGrad.html">Hire a Grad</a>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Hire A Grad</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Contact us</a>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"><button>Start Learning</button></a>
+                    <li class="nav-item mr-5">
+                        <a class="btn btn-success nav-link pl-5 pr-5" href="#" style="color: #fff;">Start Learning</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
     </div>
 
     <div class="container-fluid heading">
@@ -312,7 +315,7 @@
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="collapsebtn">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="collapsebtn">
                                 Do you offer student discounts? 
                             </button>
                         </h2>
@@ -326,7 +329,7 @@
                 <div class="card">
                     <div class="card-header" id="headingThree">
                         <h2 class="mb-0">                
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="collapsebtn">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" id="collapsebtn">
                                 Are there free courses? 
                             </button>
                         </h2>
@@ -345,7 +348,7 @@
     <div class="container-fluid bottombody">
         <h5 class="text-center">Didn't find an answer to your question?</h5>
         <p class="text-center">Write us a message and describe your problem!</p>
-        <button class="btn contactbtn" >
+        <button class="btn contactbtn" type="button" >
             Contact
         </button>
     </div>
@@ -367,23 +370,23 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="search.html">Our Course</a></li>
-                        <li><a href="hireGrad.html">Hire a Grad</a></li>
+                        <li><a href="#">Our Course</a></li>
+                        <li><a href="#">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="curriculum.html">Curriculum</a></li>
-                        <li><a href="blog1.html">Blog</a></li>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Student Stories</a></li>
 
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="search.html">Find a Course</a></li>
+                        <li><a href="#">Find a Course</a></li>
                         <li><a href="#">Our Partners</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="termsOfService.html">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </div>
                 </div>
