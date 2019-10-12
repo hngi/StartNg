@@ -24,7 +24,7 @@
     	font-family: Nunito;
     	font-style: normal;
     	font-weight: bold;
-    	font-size: 16px;
+    	font-size: 15px;
     	line-height: 22px;
     	letter-spacing: 0.655606px;
     	color: #2A2B2A;
@@ -84,6 +84,7 @@
     	padding: 8px 70px;
     	color: #fff;
     	margin-top: 12px;
+    	margin-bottom: 5px;
 	}
 	section.main a button:hover{
 		color: #fff;
@@ -271,38 +272,61 @@
 	}
 
 	@media only screen and (max-width: 576px) {
-		.online-link {
-			margin-right: 2px;
-			padding: 1px 5px 1px 5px;
-		}
-		.free-link {
-			padding: 1px 6px 1px 6px;
-		}
-		.content {
-			width: 80%;
-		}
-	}
-	@media only screen and (min-width: 576px) {
-		.content {
-			width: 80%;
-		}	
-	}
-	@media only screen and (min-width: 768px) {
-			.content {
-			width: 60%;
-		}
+      .online-link {
+        margin-right: 2px;
+        padding: 1px 5px 1px 5px;
+      }
+      .free-link {
+        padding: 1px 6px 1px 6px;
+      }
+      .content {
+        width: 80%;
+      }
+      .find i {
+      	left: 20%;
+      }
+    }
+    @media only screen and (min-width: 576px) {
+      .content {
+        width: 80%;
+      }
+      .find i {
+      	left: 20%;
+      }
+    }
+    @media only screen and (min-width: 798px) {
+      .content {
+        width: 60%;
+      }
+      .find i {
+      	left: 25%;
+      }
+      .navbar-toggler-icon {
+      	display: block;
+      }
 
-	}
-	@media only screen and (min-width: 992px) {
-			
-			
-	}
-	@media only screen and (min-width: 1200px) {
-			.content{
-				width: 35%;
-			}
-			
-	}
+    }
+    /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
+    @media only screen and (max-width: 802px) {
+      .find input[type="text"] {
+        width: 65%;
+      }
+      .results {
+        width: 65%;
+        margin: 0 auto;
+      }
+      .result1 {
+        padding: 4px;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+    }
+    @media only screen and (min-width: 1200px) {
+      .content {
+        width: 35%;
+      }
+    }
+		
 		
 </style>
 
