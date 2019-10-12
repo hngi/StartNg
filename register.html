@@ -7,10 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <title>Register</title>
 
     <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
         /* Style for Navbar Starts */
         
         .navbar-custom li a {
@@ -102,12 +105,17 @@
             color: #ed3833;
         }
         /* Style for Footer Ends */
+        /* Body Style */
+        
+        .banner {
+            background-color: #E5EBFF;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container">
+        <div class="container pb-2 pt-2">
             <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
             <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
                 <span class="navbar-toggler-icon"></span>
@@ -134,6 +142,98 @@
         </div>
     </nav>
 
+    <div class="container-fluid banner">
+        <div class="container">
+            <div class="row align-items-center pt-5">
+                <div class="col-md-6 pb-5">
+                    <h4 class="" style="font-style: normal; font-weight: bold; font-size: 40px; letter-spacing: 0.655606px;">
+                        Welcome to the <br>Start.ng application!</h4>
+                    <p style="font-style: normal; font-weight: normal; font-size: 20px; line-height: 24px;">Please fill all information accurately <br> to start learning</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570906539/startng/Group_410_uqg7d0.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-4 pb-5">
+        <div class="row pt-5">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr" style="font-weight: bold;">First Name:</label>
+                    <input type="text" class="form-control" id="usr" placeholder="Jane">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr" style="font-weight: bold;">Second Name:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr" style="font-weight: bold;">Email Address:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr" style="font-weight: bold;">Mobile Number:</label>
+                    <input type="text" class="form-control" id="usr">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        e.g. +2348101234567
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label style="font-weight: bold;">Course interested in:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Full Stack Development</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label style="font-weight: bold;">Name:</label>
+                    <select class="form-control" id="sel1">
+                        <option>0 - 1 Years Experience</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr" style="font-weight: bold;">Country of Residence:</label>
+                    <input type="text" class="form-control" id="usr">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        e.g. Nigeria
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="usr" style="font-weight: bold;">State of Residence:</label>
+                    <input type="text" class="form-control" id="usr">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        e.g. Lagos
+                    </small>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success d-block mx-auto pl-5 pr-5 mb-4">Continue</button>
+    </div>
 
     <!-- Footer -->
     <div class="container-fluid text-white deep mt-5">
@@ -179,9 +279,9 @@
         <div class="container text-right">
             <div class="row icons">
                 <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
+                    <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </div>
             </div>
 
