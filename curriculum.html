@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Curriculum</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -38,40 +38,32 @@
     text-decoration: none;
   }
 
-  .nav-item a {
-    text-decoration: none;
-    margin-right: 2em;
-    font-size: 17px;
-    color: #2A2B2A;
-    /* padding: 16px; */
-    text-decoration: none;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.655606px;
-    /* top: 38.3%;
-    bottom: 38.3%; */
-  }
-
-  #back {
-    background: #44CF6C;
-    border-radius: 10px;
-    color: white;
-    /* padding: 10px 50px; */
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 10px 20px;
-    letter-spacing: 0.655606px;
-    box-sizing: border-box;
-    display: inline-block;
-    top: 38.3%;
-    bottom: 38.3%;
-  }
+          /* Style for Navbar Starts */
+        
+          .navbar-custom li a {
+            color: #000;
+        }
+        
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        
+        .btn-success:hover {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
+        /* Style for Navbar Ends */
 
   .skill {
     font-family: 'Nunito', sans-serif;
@@ -174,15 +166,15 @@
     color: white;
   }
 
-  .icons i.fa.fa-twitter:hover {
+  .icons i.fab.fa-twitter:hover {
     color: #00aced;
   }
 
-  .icons i.fa.fa-facebook:hover {
+  .icons i.fab.fa-facebook-f:hover {
     color: #3b5598;
   }
 
-  .icons i.fa.fa-instagram:hover {
+  .icons i.fab.fa-instagram:hover {
     color: #ed3833;
   }
 
@@ -413,34 +405,33 @@
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-md text-white navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
     <div class="container">
-      <a class="navbar-brand" href="#"><img
-          src="https://res.cloudinary.com/asnas/image/upload/v1570762931/Logo.png"" id='logo' alt=" Brand"></a>
-      <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon text-white"></span>
-      </button>
-      <div class="collapse navbar-collapse text-white" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Courses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Hire a Grad</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id='back' href="#">Start Learning</a>
-          </li>
-        </ul>
-      </div>
+        <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+        <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar9">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="//codeply.com">Courses</a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="#">Hire A Grad</a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="btn btn-success nav-link pl-5 pr-5" href="#" style="color: #fff;">Start Learning</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <!-- Navigation -->
 
@@ -776,62 +767,61 @@
     <!-- End of BEgin Your Journey -->
 
 
-    <!-- Footer Starts -->
-
-    <div class="container-fluid text-white deep mt-5">
-      <footer>
-        <div class="container">
+ <!-- Footer -->
+ <div class="container-fluid text-white deep mt-5">
+  <footer>
+      <div class="container">
           <div class="row">
-            <div class="col-md-12 mt-3 mb-4">
-              <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
-            </div>
+              <div class="col-md-12 mt-3 mb-4">
+                  <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
+              </div>
           </div>
 
           <div class="row pb-4">
-            <div class="col-lg-4 col-md-12 mb-3">
-              <h4 class='mb-4'>Ready to take the Leap?</h4>
-              <a href="#" class='mb-5' id='slink'>Start!</a>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Course</a></li>
-              <li><a href="#">Hire a Grad</a></li>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-              <li><a href="#">Curriculum</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Student Stories</a></li>
+              <div class="col-lg-4 col-md-12 mb-3">
+                  <h4 class='mb-4'>Ready to take the Leap?</h4>
+                  <a href="#" class='mb-5' id='slink'>Start!</a>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Our Course</a></li>
+                  <li><a href="#">Hire a Grad</a></li>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                  <li><a href="#">Curriculum</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Student Stories</a></li>
 
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-              <li><a href="#">Find a Course</a></li>
-              <li><a href="#">Our Partners</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                  <li><a href="#">Find a Course</a></li>
+                  <li><a href="#">Our Partners</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+              </div>
           </div>
-
-        </div>
-    </div>
-    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-      <div class="container text-right">
-        <div class="row icons">
-          <div class="col-md-12 ">
-            <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
-            <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          </div>
-        </div>
 
       </div>
-      </footer>
-    </div>
+</div>
+<div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+  <div class="container text-right">
+      <div class="row icons">
+          <div class="col-md-12 ">
+              <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+              <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+              <a href=""><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          </div>
+      </div>
 
-    <!-- End of Footer -->
+  </div>
+  </footer>
+</div>
+
+<!-- End of Footer -->
 
 
 
