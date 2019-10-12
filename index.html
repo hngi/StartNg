@@ -11,6 +11,47 @@
 </head>
 
 <body>
+
+    <script>
+        function menu() {
+            const h = document.getElementById('head')
+            let disp = h.style.display
+            if (disp === '') {
+                h.style.display = 'block'
+            }
+            else if (disp === 'none') {
+                h.style.display = 'block'
+            }
+            else {
+                h.style.display = 'none'
+            }
+            // document.getElementById('head').style.display = 'none' ? 'block' : 'none'
+
+        }
+
+    </script>
+    <header class="header" id="head">
+        <div class="header_container">
+
+            <div class="header_logo">
+                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570739670/Logo_1_xziwdq.png" alt="logo"
+                    class="header_image">
+            </div>
+            <div class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#" class="nav_link">About Us</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Courses</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Hire a grad</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Contact Us</a></li>
+                    <li class="nav_item"><a href="#" class="nav_btn">Start Learning</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="hamburg">
+        <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570788702/menu_hecex5.svg" alt="" class="bar"
+            onclick="menu()">
+    </div>
     <section class="learning">
         <div class="welcome-section">
             <p class="welcome-text">Welcome to the Start.ng application!</p>
@@ -77,6 +118,40 @@
             <button>Continue</button>
         </div>
     </section>
+
+    <footer class="footer_one">
+        <div class="footer_container">
+            <div class="footer_logo">
+                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570744298/Logo_1_eoxpi6.png" alt=""
+                    class="footer_photo">
+                <p class="leap">Ready to take the leap?</p>
+                <div>
+                    <a href="#" class="hire_btn">Start!</a>
+                </div>
+
+            </div>
+            <ul class="footer_list">
+                <li class="footer_item"><a href="#" class="footer_link">About Us</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Our Course</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Hire a Grad</a></li>
+            </ul>
+            <ul class="footer_list">
+                <li class="footer_item"><a href="#" class="footer_link">Curricullum</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Blogs</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Student Stories</a></li>
+            </ul>
+            <ul class="footer_list">
+                <li class="footer_item"><a href="#" class="footer_link">Find a Course</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Our Partners</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Contact Us</a></li>
+            </ul>
+            <ul class="footer_list">
+                <li class="footer_item"><a href="#" class="footer_link">FAQ</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Terms of Service</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 <style>
@@ -87,6 +162,82 @@
     body {
         margin: 0
     }
+
+    .header {
+        background: #fff;
+        font-size: 14px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: #2A2B2A;
+    }
+
+    .header_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header_logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .header_logo>h3 {
+        margin-left: 10px;
+        font-size: 32px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .header_image {
+        width: 160px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav_list {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav_item {
+        padding: 30px 15px 25px 15px;
+    }
+
+    .nav_link {
+        text-decoration: none;
+        font-weight: bold;
+        color: #2A2B2A;
+    }
+
+    .nav_btn {
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid #2DCE89;
+        background: #2DCE89;
+        padding: 8px 42px;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    
+
+    .bar {
+        width: 35px;
+        display: none;
+        position: absolute;
+        top: 5%;
+        left: 85%;
+        z-index: 1500;
+        background: #2DCE89;
+        border-radius: 50%;
+
+    }
+
+    /* .hamburg {
+        display: none;
+        height: 80px;
+    } */
 
     .learning {
         background: #E5EBFF;
@@ -169,7 +320,7 @@
     .welcome-color p {
         width: 29.33%;
         height: 8.42%;
-        font-family: Lucida ;
+        font-family: Lucida;
         font-size: 31.8519px;
         line-height: 38px;
         color: white;
@@ -289,6 +440,65 @@
         margin-right: auto;
     }
 
+
+
+    .footer_photo {
+        width: 55%;
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .footer_one {
+        background: #3A0842;
+    }
+
+    .start {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .leap {
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .hire_btn {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #2DCE89;
+        padding: 8px 42px;
+        border-radius: 10px;
+        background: #2DCE89;
+    }
+
+    .footer_logo {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+    }
+
+    .footer_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 5%;
+    }
+
+    .footer_list {
+        list-style: none;
+        padding-top: 73px;
+    }
+
+    .footer_item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .footer_link {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
 
     @media screen and (max-width: 1350px) {
         .learning-form {
@@ -505,11 +715,24 @@
 
         }
 
+        @media screen and (max-width: 870px) {
+            .header {
+        font-size: 12px;
+        
+    }
+
+    @media screen and (max-width: 820px) {
+        .header_image {
+            width: 100px;
+        }
+    }
+        }
+
         @media screen and (max-width: 850px) {
             .welcome-text {
                 font-size: 35px;
                 line-height: 45px;
-                
+
             }
 
             .welcome-info {
@@ -525,10 +748,11 @@
                 padding-right: 40px;
 
             }
+
             .welcome-text {
                 font-size: 32px;
                 line-height: 40px;
-                
+
             }
 
             .welcome-info {
@@ -539,6 +763,14 @@
 
 
         @media screen and (max-width: 830px) {
+
+            .bar {
+        position: absolute;
+        top: 5%;
+        left: 92%;
+        
+
+    }
             .label-info {
                 width: 250px;
                 height: 45px;
@@ -570,6 +802,14 @@
                 padding-right: 60px;
             }
 
+            .bar {
+        position: absolute;
+        top: 5%;
+        left: 92%;
+        
+
+    }
+
             .label-info {
                 width: 230px;
                 height: 40px;
@@ -587,7 +827,7 @@
             .welcome-text {
                 font-size: 30px;
                 line-height: 35px;
-                
+
             }
 
             .welcome-info {
@@ -613,7 +853,7 @@
             .welcome-text {
                 font-size: 25px;
                 line-height: 30px;
-                
+
             }
 
             .welcome-info {
@@ -638,8 +878,8 @@
 
             .purple-image {
                 width: 300.33px;
-                height:300.33px;
-                
+                height: 300.33px;
+
             }
 
             .learning {
@@ -651,7 +891,7 @@
             .welcome-text {
                 font-size: 23px;
                 line-height: 30px;
-                
+
             }
 
             .hi {
@@ -715,6 +955,13 @@
                 padding-right: 40px;
                 height: 1120px;
             }
+            .bar {
+        position: absolute;
+        top: 5%;
+        left: 85%;
+        
+
+    }
 
             .label-info {
                 width: 200px;
@@ -751,8 +998,8 @@
 
             .purple-image {
                 width: 270.33px;
-                height:270.33px;
-                
+                height: 270.33px;
+
             }
 
             .hi {
@@ -764,8 +1011,8 @@
         @media screen and (max-width: 370px) {
             .purple-image {
                 width: 250.33px;
-                height:250.33px;
-                
+                height: 250.33px;
+
             }
 
             .hi {
@@ -777,13 +1024,55 @@
         @media screen and (max-width: 340px) {
             .purple-image {
                 width: 220.33px;
-                height:220.33px;
-                
+                height: 220.33px;
+
             }
 
             .hi {
                 left: -23.57px;
                 bottom: -7.5px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .footer_container {
+                display: grid;
+                grid-template-rows: repeat(3, 150px);
+                grid-template-columns: repeat(2, 150px);
+            }
+        }
+
+        @media only screen and (max-width: 725px) {
+            .footer_container {
+                display: grid;
+                grid-template-rows: repeat(3, 150px);
+                grid-template-columns: repeat(2, 200px);
+            }
+
+            @media only screen and (max-width: 828px) {
+                .header {
+                    display: none;
+                }
+
+                .bar {
+                    display: block;
+                }
+
+                /* .hamburg {
+                    display: block;
+                } */
+
+                .header_container {
+                    flex-direction: column;
+                }
+
+                .nav_list {
+                    flex-direction: column;
+                }
+
+                .nav_item {
+                    padding: 10px 15px 15px 15px;
+                }
             }
         }
 </style>
