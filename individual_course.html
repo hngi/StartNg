@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/ico.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css/?family=Nunito&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <title>Software Development</title>
+    <style>
+
+        body{
+            background-color: #ffffff;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        header ul {
+            padding-left: 25px;
+        }
+
+        header ul a {
+            color: #454749;
+        }
+
+        header ul a:hover, footer a:hover{
+            color: black;
+        }
+        .btn {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-radius: 5px;
+        }
+
+        .btns .btn{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-radius: 10px;
+        }
+
+        .btn-success{
+            background-color: #44CF6C;
+            border-color: #44CF6C;
+        }
+        .container {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        .container .bg-grey {
+            background: url("https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/firstsection_mfutau.png");
+            background-position: right;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            height: 81vh;
+
+        }
+
+        .container .second{
+             display: flex;
+            justify-content: center;
+            flex-direction: column;   
+        }
+
+        .container .bg-grey .textarea, .third .textarea, .newsletter .textarea {
+            margin-left: 10%;
+        }
+
+        .container .bg-grey .textarea{
+            width: 70%;
+            margin-top: 10%;
+          
+        }
+
+        .dates .date{
+            flex-direction: column ;
+        }
+
+        .date a:hover{
+            text-decoration: underline;
+        }
+
+        .date h6{
+            font-size: 0.9rem;
+           font-weight: 400;
+        }
+
+        .second h4{
+            margin-top: 4%;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .second ul{
+            margin: 3% 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        }
+
+        .second ul li{
+            border-bottom:  1px solid rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            width: 90%;
+        }
+
+        .third{
+            background-image: url("https://res.cloudinary.com/xera01/image/upload/v1570827688/images4individualcourses/images/thirdsection_tfygwt.png");
+            background-position: right;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .third h2{
+            font-weight: bolder;
+        }
+
+        .third .textarea, .newsletter .textarea{
+            width: 35%;
+            padding: 10px;
+            margin-top: 5%;
+        }
+
+        .third .btn{
+            background-color: #2E0435;
+            border-color: #2E0435;
+            color: #ffffff;
+        }
+
+        .fourth{
+            background: rgba(129, 22, 124, 0.05);
+        }
+
+        .fourth ul > div{
+            margin: 2%;
+        }
+        .fourth .head h5{
+            display: inline;
+            font-weight: bolder;
+        }
+
+        .fourth .head{
+            background-color: #DBCCD9;
+            padding: 10px;
+
+        }
+
+        .fourth button{
+           float: right;
+        }
+
+        .fourth div > ul{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0px;
+        }
+
+        .fifth{
+            background-color: #F9F9F9;
+        }
+
+        .fifth ul > div{
+            margin-top: 3%;
+        }
+
+        .fifth div h4{
+            text-align: left;
+        }
+
+        .fifth h5, .fifth div h4{
+            font-size: 1rem;
+        }
+
+        .fifth h5{
+            font-weight: 350;
+        }
+
+        .sixth{
+            align-items: center;
+        }
+
+        .newsletter{
+            background-color: rgba(42, 43, 42, 0.05);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .newsletter .btn{
+            width: 50%;
+        }
+
+        .newsletter .form-group{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .bgpurple{
+            background-color: #2E0435;
+            width: 100%;
+            display: flex;
+            padding: 10px;
+        }
+
+    
+        footer .navbar-brand h5{
+            color: #ffffff;
+            margin-top: 10%;
+        }
+
+        footer a{
+            color: #ffffff;
+        }
+
+        footer .navbar-brand .btn{
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+        footer .nav-link{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer .nav-link > *{
+            padding: 5px;
+        }
+
+        .bgpurple ul{
+            margin-top: 2%;
+            padding-left: 0px;
+        }
+
+        .bg2{
+            background-color: #2E0435;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .socials{
+            margin-right: 5%;
+        }
+
+        .socials > *{
+            margin: 10px;
+        }
+
+
+
+        @media (min-width: 576px) {
+            
+            .container {
+                max-width: 100%;
+            }
+
+           
+
+        }
+
+        @media (min-width:768px) {
+
+            header .navbar-brand, footer .navbar-brand {
+                margin-left: 5%;
+            }
+
+            header ul {
+                margin-left: 20%;
+            }
+
+            header ul a {
+                font-size: 0.6rem;
+            }
+
+            .container {
+                width: 100%;
+            }
+            
+            .third{
+                background-size: 900px;
+            }
+           
+        }
+
+        @media (min-width:992px) {
+
+            header .navbar-brand, footer .navbar-brand {
+                margin-left: 10%;
+            }
+            
+            header ul a {
+
+            font-size:  1rem;
+        }
+
+            .container {
+                width: 100%;
+            }
+            .third{
+                background-size: 1400px;
+            }
+        }
+
+        @media (max-width: 325px) {
+
+            .btn, .btns .btn{
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
+           
+            
+            
+        }
+
+        @media (max-width:767px) {
+
+            header .btn {
+                width: 30%;
+            }
+
+            .btn, .btns .btn{
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .bg-grey .status {}
+
+            .container .bg-grey{
+                background-position: unset;
+            }
+
+            .container .bg-grey .textarea, .third .textarea  .second ul {
+                width: 90%;
+                margin-left: 2%;
+            }
+            .bg-grey h2, .second h4, .third h2{
+                font-size: 1rem;
+            }
+
+            .bg-grey h5, .second h5, .third h5{
+                font-size: 0.8rem;
+            }
+
+            .second ul{
+                padding-left: 0px;
+            }
+
+           
+            .fourth .head{
+                padding: 3px;
+            }
+
+
+           
+        } 
+        @media (max-width: 992px){
+           
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-md navbar-light d-flex p-1">
+        <img src="https://res.cloudinary.com/xera01/image/upload/v1570827686/images4individualcourses/images/Header-Logo_vawxyj.png" width="120" class="navbar-brand" alt="logo">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar"> <span
+                class="navbar-toggler-icon"> </span> </button>
+        <ul class="collapse navbar-collapse" id="navbar" style="margin-top: 13px">
+            <li class="nav-link"> <a href="#">About us</a></li>
+            <li class="nav-link"> <a href="#" target="_blank">Courses</a></li>
+            <li class="nav-link"> <a href="#" target="_blank">Hire a Grad</a></li>
+            <li class="nav-link"> <a href="#" target="_blank">Contact us</a></li>
+            <li class=" nav-link btn btn-success"> Start Learning</li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <section class="bg-grey">
+
+            <div class="textarea">
+                <h2> Complete Beginner</h2>
+                <h2>Software Development Training</h2>
+                <h5 style="font-weight: 400">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, sint. Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Corrupti, sint. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Corrupti, sint.
+                </h5>
+                <div class="status d-flex mt-5">
+                    <button class="btn btn-success"> Start Learning</button>
+
+                    <div class="btns ml-5 mt-1">
+                            <button class="btn" >Beginner</button>
+                            <button class="btn btn-secondary ml-3">ONLINE</button>
+                            <button class="btn s btn-warning disabled  ml-3">FREE</button>
+                    </div>
+                    
+                </div>
+
+                <div class="dates d-flex mt-5">
+                    <div class="date d-flex">
+                        <h6>Duration</h6>
+                        <h5>8 weeks</h5>
+                    </div>
+                    <div class="date d-flex" style="margin-left: 7%">
+                        <h6>Course Starts</h6>
+                        <h5>5th October, 2019</h5>
+                    </div>
+                    <div class="date d-flex"  style="margin-left: 7%">
+                        <h6>Average ratings</h6>
+                        <div class="d-flex">
+                            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/star_riuwt7.png" width="15" height="15" alt="rating">
+                            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/star_riuwt7.png" width="15" height="15" alt="rating">
+                            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/star_riuwt7.png"width="15" height="15"  alt="rating">
+                            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/star_riuwt7.png" width="15" height="15" alt="rating">
+                            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/star_riuwt7.png"  width="15" height="15" alt="rating">
+                            <h6  style="margin-left: 6px">  <a href="#" target="_blank" >  See all reviews</a>
+                          </h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="second">
+                <h4>What you will learn </h4>
+                <ul>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"> <h5> How you will setup a software development process and model</h5>  </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"> <h5>  How to organize a software development project </h5> </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"><h5> How to write user stories for your software requirements</h5>  </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"> <h5>  How to manage and deploy software releases</h5> </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"> <h5> How to manage and deploy software releases</h5>  </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"><h5> How to verify a software solution</h5>  </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"><h5> How to validate a software solution</h5> </li>
+                    <li class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/check_bba9i7.png" class="navbar-brand" width="22" height="28"> <h5> How to use Git and Github for your versioning management</h5> </li>
+                </ul>
+        </section>
+
+        <section class="third">
+
+            <div class="textarea">
+                    <h2>Build Real time Project</h2>
+                    <h5>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet cum aspernatur voluptates, sunt vitae nisi corporis, magnam, sapiente quasi modi dolores eos placeat. Delectus reprehenderit deserunt reiciendis veritatis expedita voluptatibus
+                    </h5>
+                    <button class="btn btn-default" role="button"> Start Learning </button> 
+            </div>
+               
+
+        </section>
+
+        <section class="second fourth ">
+            <h5 class="mt-5" style="font-weight: 300; text-align: center" > No Experience Required. Knowledge on how to use computer. Use windows or MAC OSX</h5>
+            <h4>Course Curriculum </h4>
+            <ul>
+                <div> 
+                    <div class="head"> <h5>Introduction</h5>  <button class="navbar-toggler collapsed" type="button" style="display: inline" data-toggle="collapse" data-target="#intro"> <h5
+                        class="fa fa-plus"> </h5> </button> </div>
+                    <ul class="collapse navbar-collapse" id="intro">
+                        <li> <h5> The software Development Process = overview </h5></li>
+                        <li> <h5> Design Pattern- definition</h5></li>
+                        <li> <h5> The scenerio in asoftware project</h5></li>
+                        <li> <h5> The problem:understand the customer requirement </h5></li> 
+                    
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro1">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro1">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro2">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro2">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro3">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro3">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro4">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro4">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro5">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro5">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro6">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro6">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro7">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro7">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro8">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro8">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+                <div>
+                    <div class="head">
+                        <h5>Introduction</h5> <button class="navbar-toggler collapsed" type="button" style="display: inline"
+                            data-toggle="collapse" data-target="#intro9">
+                            <h5 class="fa fa-plus"> </h5>
+                        </button>
+                    </div>
+                    <ul class="collapse navbar-collapse" id="intro9">
+                        <li>
+                            <h5> The software Development Process = overview </h5>
+                        </li>
+                        <li>
+                            <h5> Design Pattern- definition</h5>
+                        </li>
+                        <li>
+                            <h5> The scenerio in asoftware project</h5>
+                        </li>
+                        <li>
+                            <h5> The problem:understand the customer requirement </h5>
+                        </li>
+                
+                    </ul>
+                
+                </div>
+            </ul>
+           
+        </section>
+
+        <div class="second fifth">
+            <h4>On start.ng, you are privileged to</h4>
+            <ul>
+                <div class="d-flex"> 
+                     <img src="https://res.cloudinary.com/xera01/image/upload/v1570827686/images4individualcourses/images/sec5_1_1_s83yae.png" class="navbar-brand" width="50" height="50"> <div class="div">
+                        <h4>Learn from the best teachers</h4>
+                        <h5>Lorem ipsum was going to church and <br> she forgot to ferdsdscsd sdscsd <br>dffdss gg ffgg.</h5>
+                    </div> 
+                </div>  
+                <div class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827686/images4individualcourses/images/sec5_2_ebceap.png" class="navbar-brand" width="50" height="50" > 
+                    <div class="div">
+                        <h4>Supports from Mentors</h4>
+                        <h5>Lorem ipsum was going to church and <br> she forgot to ferdsdscsd sdscsd <br>dffdss gg ffgg.</h5>
+                    </div>  
+                </div>  
+                <div  class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/sec5_3_snr53z.png" class="navbar-brand" width="50" height="50" > 
+                    <div class="div">
+                            <h4>Join our Online Developer Community </h4> 
+                            <h5>Lorem ipsum was going to church and <br> she forgot to ferdsdscsd sdscsd <br>dffdss gg ffgg.</h5>
+                    </div>  
+                </div >  
+                <div  class="d-flex">  <img src="https://res.cloudinary.com/xera01/image/upload/v1570827687/images4individualcourses/images/sec5_4_cupw3t.png" class="navbar-brand" width="50" height="50">
+                    <div class="div">
+                            <h4>Earn a Certificate</h4>
+                            <h5>Lorem ipsum was going to church and <br> she forgot to ferdsdscsd sdscsd <br>dffdss gg ffgg.</h5>
+                    </div>  
+                </div >  
+            </ul>
+        </div>
+
+        <div class="second sixth">
+            <h4>What students have to say about us</h4>
+            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827688/images4individualcourses/images/Testimonial_krzfoj.png" alt="Testimonial" width="350">
+            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827688/images4individualcourses/images/Testimonial_2_lthfxs.png" alt="Testimonial" width="350">
+            <button class="btn btn-success"> See More Reviews</button>
+        </div>
+
+        <div class=" newsletter mt-5">
+            <div class="textarea">
+                <h4>Subscribe to our Newsletter</h4>
+
+                <h5>Stay Updated with our latest news, discounts and promotions</h5>
+
+                <form >
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <input type="submit" class="form-control btn btn-success" value="Subscribe">
+                    
+                    </div>
+                </form>
+                
+                 
+            </div>
+            <img src="https://res.cloudinary.com/xera01/image/upload/v1570827686/images4individualcourses/images/newsletter_gny08l.png" width="200" class="navbar-brand" alt="logo">
+        </div>
+
+    </div>
+
+    <footer class="navbar navbar-expand-md navbar-dark p-1" style="flex-direction: column">
+        <div class="bgpurple">
+                <div class="navbar-brand">
+                    <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/Footer-Logo_tyozml.png" width="120" alt="logo">
+                    <h5>Ready to take the leap?</h5>
+                    <button class="btn btn-success"> Start!</button>
+                </div>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar2" style="color: #ffffff"> <span
+                        class="fa fa-chevron-right"> </span> </button>
+                <ul class="collapse navbar-collapse" id="navbar2" >
+                    <li class="nav-link"> <a href="#">About us</a> <a href="#" target="_blank">Courses</a> <a href="#" target="_blank">Hire a Grad</a> </li>
+                    <li class="nav-link"> <a href="#" target="_blank">Curriculum</a> <a href="#" target="_blank">Blog</a> <a href="#" target="_blank">Student Stories</a></li>
+                    <li class="nav-link"> <a href="#" target="_blank">Find  a Course</a> <a href="#" target="_blank">Our Partners</a> <a href="#" target="_blank">Contact us</a> </li>
+                    <li class="nav-link"> <a href="#" target="_blank"> FAQ</a> <a href="#" target="_blank">Terms of Service</a> <a href="#" target="_blank">Privacy Policy</a></li>
+                </ul>
+        </div>
+
+        <div class="bg2 d-flex">
+            <div class="socials">
+               <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/Footer-twitter_ektcrs.png" alt="">
+               <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/Footer-insta_yxslt8.png" alt="">
+               <img src="https://res.cloudinary.com/xera01/image/upload/v1570827685/images4individualcourses/images/Footer-fb_rpfuh0.png" alt="">
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

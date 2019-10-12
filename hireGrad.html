@@ -1,0 +1,638 @@
+<html>
+    <head>
+        <title>Hire a Grad</title>
+        <link rel="stylesheet" href="./hireGrad.css">
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+.header {
+    background: #fff;
+}
+.header_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+.header_logo>h3 {
+    margin-left: 10px;
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.header_image {
+    width: 29.5%;
+}
+.nav_list {
+    list-style: none;
+    display: flex;
+}
+.nav_item {
+    padding: 30px 15px 25px 15px;
+}
+.nav_link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2A2B2A;
+}
+.nav_btn {
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #2DCE89;
+    background: #2DCE89;
+    padding: 8px 42px;
+    border-radius: 10px;
+    color: #fff;
+}
+.hire_container {
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 10%;
+}
+.hire {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(58, 8, 66, 0.5))), url("https://res.cloudinary.com/yvehogan/image/upload/v1570781830/Rectangle_11_1_zqdrep.png");
+    background-size: 100% 100%;
+    mix-blend-mode: darken;
+}
+.header_image {
+    width: 180px;
+}
+.hire_header {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 36px;
+}
+.hire_qoute {
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffff;
+}
+.hire_text{
+    padding: 0 30%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.hire_btn {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #2DCE89;
+    padding: 8px 42px;
+    border-radius: 10px;
+    background: #2DCE89;
+}
+.about_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 7%;
+    flex-wrap: wrap;
+}
+.about_text {
+    width: 34%;
+}
+.about_header {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+.about_qoute {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+.about_image {
+    width: 35%;
+}
+.about_photo {
+    width: 100%;
+}
+.skills_photo {
+    width: 100%;
+    text-align: center;
+}
+.skills_image {
+    width: 19%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #2DCE89;
+    border-radius: 50%;
+    background: #2DCE89;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.skills_cartegory {
+    display: grid;
+    grid-template-rows: repeat(2,200px);
+    grid-template-columns: repeat(3,200px);
+    grid-column-gap: 50px;
+    grid-row-gap: 35px;
+    margin:auto; 
+    
+}
+.skills_figure {
+    text-align: center;
+}
+.skills_container {
+    text-align: center;
+    padding-top: 10%;
+}
+.skills_main {
+    display: flex;
+}
+.skills_header {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 7%;
+}
+.fig_header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.companies {
+}
+.companies_container {
+    padding-top: 6.5%;
+}
+.companies_header {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.logo_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.logo_item:not(:last-child) {
+    margin-right: 7%;
+}
+.subscribe {
+    background: #44CF6C;
+    margin-top: 60px;
+}
+.subscribe_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+.subscribe_header {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.subscribe_subhead {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.subscribe_form {
+    display: grid;
+    grid-template-rows: repeat(2,48px);
+    grid-template-columns: repeat(2,500px);
+    text-align: center;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+    margin-bottom: 30px;
+}
+.subscribe_input {
+    font-family: 'Lato', sans-serif;
+    padding-left: 20px;
+}
+.subscribe_btn {
+    text-align: center;
+    border: 1px solid #3A0842;
+    background: #3A0842;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.footer_photo {
+    width: 55%;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.footer_one {
+    background: #3A0842;
+}
+.start {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.leap {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.footer_logo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+}
+.footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+.footer_list {
+    list-style: none;
+    padding-top: 73px;
+}
+.footer_item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer_link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.copyright {
+    background:#2E0435;
+}
+.copyright_container {
+    padding: 15px 0;
+}
+.copyright_social {
+    text-align: right;
+}
+.twitter,.insta,.facebook {
+    margin-right: 10px;
+}
+.bar {
+    width: 50px;
+}
+.bar {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1500;
+    background: #2DCE89;
+    border-radius: 50%;
+    
+}
+@media only screen and (max-width: 1026px) {
+    .subscribe_form {
+        grid-template-columns: repeat(2,400px);
+    }
+    .hire_qoute {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 795px) {
+    .hire_qoute {
+        font-size: 18px;
+    }
+    .footer_container {
+        
+    }
+}
+@media only screen and (max-width: 800px) {
+    .skills_cartegory {
+    display: grid;
+    grid-template-rows: repeat(2,250px);
+    grid-template-columns: repeat(3,200px);
+    }
+}
+@media only screen and (max-width: 956px) {
+    .logo_list {
+    display: grid;
+    grid-template-rows: repeat(2,100px);
+    grid-template-columns: repeat(2,313px);
+    }
+}
+@media only screen and (max-width: 832px) {
+    .subscribe_form {
+        grid-template-columns: repeat(2,300px);
+    }
+    .hire_qoute {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 828px) {
+    .header {
+        display: none;
+    }
+    .bar {
+        display: block;
+    }
+    .header_container {
+        flex-direction: column;
+    }
+    .nav_list {
+        flex-direction: column;
+    }
+    .nav_item {
+        padding: 10px 15px 15px 15px;
+    }
+}
+@media only screen and (max-width: 699px) {
+    .skills_cartegory {
+        display: grid;
+        grid-template-rows: repeat(3,250px);
+        grid-template-columns: repeat(2,200px);
+        }
+}
+@media only screen and (max-width: 725px) {
+    .footer_container {
+        display: grid;
+        grid-template-rows: repeat(3,150px);
+        grid-template-columns: repeat(2,200px);
+    }
+}
+@media only screen and (max-width: 622px) {
+    .subscribe_form {
+        grid-template-columns: repeat(1,400px);
+        grid-template-rows: repeat(4,48px);
+    }
+}
+@media only screen and (max-width: 614px) {
+    .logo_list {
+        display: grid;
+        grid-template-rows: repeat(4,100px);
+        grid-template-columns: repeat(1,305px);
+     }
+}
+@media only screen and (max-width: 632px) {
+    .about_container {
+        flex-direction: column;
+    }
+    .about_text {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 464px) {
+    .skills_cartegory {
+        display: grid;
+        grid-template-rows: repeat(6,200px);
+        grid-template-columns: repeat(1,200px);
+    }
+}
+@media only screen and (max-width: 424px) {
+    .hire_qoute {
+        font-size: 16px;
+        
+    }
+}
+@media only screen and (max-width: 400px) {
+    .footer_container {
+        display: grid;
+        grid-template-rows: repeat(3,150px);
+        grid-template-columns: repeat(2,150px);
+    }
+    .subscribe_form {
+        grid-template-columns: repeat(1,300px);
+        grid-template-rows: repeat(4,48px);
+        grid-row-gap: 50px;
+    }
+}
+        
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,500,600|Open+Sans|Lato&display=swap" rel="stylesheet">
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <script>
+            function menu() {
+                document.getElementById('head').style.display='none' ? 'block' : 'none'
+                
+            }
+        
+        </script>
+        <div class="page">
+            <div class="page_container">
+
+                <div class="header" id="head">
+                    <div class="header_container">
+
+                        <div class="header_logo">
+                            <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570739670/Logo_1_xziwdq.png" alt="logo" class="header_image">
+                        </div>
+                        <div class="nav">
+                            <ul class="nav_list">
+                                <li class="nav_item"><a href="#" class="nav_link">About Us</a></li>
+                                <li class="nav_item"><a href="#" class="nav_link">Courses</a></li>
+                                <li class="nav_item"><a href="#" class="nav_link">Hire a grad</a></li>
+                                <li class="nav_item"><a href="#" class="nav_link">Contact Us</a></li>
+                                <li class="nav_item"><a href="#" class="nav_btn">Start Learning</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hire">
+
+                            <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570788702/menu_hecex5.svg" alt="" class="bar" onclick="menu()">
+
+                    <div class="hire_container">
+                        <h3 class="hire_header">Hire a Grad</h3>
+                        <div class="hire_text">
+                                <p class="hire_qoute">
+                                        After 3 months of training and projects, 
+                                        our graduates are ready to take on full-time or remote jobs at your company.
+                                </p>
+                        </div>
+
+                        <a href="#" class="hire_btn">Hire a Graduate</a>
+                    </div>
+                </div>
+                <div class="about">
+
+                    <div class="about_container">
+                        <div class="about_text">
+                            <h3 class="about_header">Versatile</h3>
+                            <p class="about_qoute">
+                                    Our graduates are versatile, dedicated,Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    Non diam phasellus vestibulum lorem sed.
+                            </p>
+                        </div>
+                        <div class="about_image">
+                            <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570781981/Rectangle_26_hdboef.png" alt="" class="about_photo">
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="skills_container">
+                        <h3 class="skills_header">Our graduates have acquired the latest skills</h3>
+                        <div class="skills_main">
+                            <div class="skills_cartegory">
+                                <figure class="skills_figure">
+                                    <div class="skills_image">
+                                        <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570789953/web-programming_uh5m62.svg" alt="" class="skills_photo">
+                                    </div>
+
+                                    <figcaption class="skills_figcaption">
+                                        <h4 class="fig_header">Frontend Development</h4>
+                                        <span class="fig_skills">HTML, CSS, JavaScript, Boostrap, JQuery</span>
+                                    </figcaption>
+                                </figure>
+                                <figure class="skills_figure">
+                                        <div class="skills_image">
+                                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570789953/web-programming_uh5m62.svg" alt="" class="skills_photo">
+                                            </div>
+                                        <figcaption class="skills_figcaption">
+                                            <h4 class="fig_header">Backend Development</h4>
+                                            <span class="fig_skills">PHP, Python, Java,</span>
+                                        </figcaption>
+                                </figure>
+                                <figure class="skills_figure">
+                                        <div class="skills_image">
+                                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570784512/Group_2_zjkqke.png" alt="" class="skills_photo">
+                                            </div>
+                                        <figcaption class="skills_figcaption">
+                                            <h4 class="fig_header">UI/UX Design</h4>
+                                            <span class="fig_skills">User research, Protoyping, Wireframing </span>
+                                        </figcaption>
+                                </figure>
+                                <figure class="skills_figure">
+                                        <div class="skills_image">
+                                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570788895/Vector_7_n1nbtr.svg" alt="" class="skills_photo">
+                                            </div>
+                                        <figcaption class="skills_figcaption">
+                                            <h4 class="fig_header">Machine Learning</h4>
+                                            <span class="fig_skills">Programming Languages, Algorithms, Statistics</span>
+                                        </figcaption>
+                                 </figure>
+                                <figure class="skills_figure">
+                                        <div class="skills_image">
+                                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570790592/smartphone_xobb78.svg" alt="" class="skills_photo">
+                                            </div>
+                                        <figcaption class="skills_figcaption">
+                                            <h4 class="fig_header">Mobile Development</h4>
+                                            <span class="fig_skills">JAVA, UI, Python, APIs, Networking</span>
+                                         </figcaption>
+                                </figure>
+                                <figure class="skills_figure">
+                                        <div class="skills_image">
+                                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570788843/Vector_2_xcpaug.svg" alt="" class="skills_photo">
+                                            </div>
+                                        <figcaption class="skills_figcaption">
+                                            <h4 class="fig_header">Digital Marketing</h4>
+                                            <span class="fig_skills">SEO, Content writing, Email Marketing</span>
+                                        </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about">
+                        <div class="about_container">
+
+                            <div class="about_image">
+                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570782027/Rectangle_27_tvmxwx.png" alt="" class="about_photo">
+                            </div>
+                            <div class="about_text">
+                                    <h3 class="about_header">Remote Flexibility</h3>
+                                    <p class="about_qoute">
+                                            Our graduates are taught how to be effective remote employees. 
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                            Non diam phasellus vestibulum lorem sed.
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="companies">
+                        <div class="companies_container">
+                            <h3 class="companies_header">Big companies are hiring our graduates</h3>
+                            <ul class="logo_list">
+                                <li class="logo_item"><img src="https://res.cloudinary.com/yvehogan/image/upload/v1570782790/Vector_3_m44dok.png" alt="" class="logo photo"></li>
+                                <li class="logo_item"><img src="https://res.cloudinary.com/yvehogan/image/upload/v1570782831/Rectangle_yqzfuw.png" alt="" class="logo photo"></li>
+                                <li class="logo_item"><img src="https://res.cloudinary.com/yvehogan/image/upload/v1570782987/Vector_3_es35to.png" alt="" class="logo photo"></li>
+                                <li class="logo_item"><img src="https://res.cloudinary.com/yvehogan/image/upload/v1570782890/flutterwave_wsrtnm.png" alt="" class="logo photo"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about">
+                            <div class="about_container">
+                                <div class="about_text">
+                                    <h3 class="about_header">Zero Hiring Fees</h3>
+                                    <p class="about_qoute">
+                                            Let us know what you're looking for. 
+                                            We’ll help you source the ideal candidates for your next full-time hire, without any placement fees.
+                                    </p>
+                                </div>
+                                <div class="about_image">
+                                    <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570781981/Rectangle_26_hdboef.png" alt="" class="about_photo">
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="subscribe">
+                        <div class="subscribe_container">
+                            <h3 class="subscribe_header"> Learn more about hiring our grads</h3>
+                            <h4 class="subscribe_subhead"> Fill out the form and we will get in touch.</h4>
+                            <form class="subscribe_form">
+                                <input type="text" placeholder="Full Name" required class="subscribe_input">
+                                <input type="email" placeholder="E-mail Address" required class="subscribe_input">
+                                <input type="text" placeholder="Company Name" required class="subscribe_input">
+                                <input type="text" placeholder="Job Title" required class="subscribe_input">
+                            </form>
+                            <a href='#' class="subscribe_btn">Subscribe</a>
+                        </div>
+                    </div>
+
+                    <div class="footer_one">
+                        <div class="footer_container">
+                            <div class="footer_logo">
+                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1570744298/Logo_1_eoxpi6.png" alt="" class="footer_photo">
+                                <p class="leap">Ready to take the leap?</p>
+                                <div>
+                                    <a href="#" class="hire_btn">Start!</a>
+                                </div>
+
+                            </div>
+                            <ul class="footer_list">
+                                <li class="footer_item"><a href="#" class="footer_link">About Us</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Our Course</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Hire a Grad</a></li>
+                            </ul>
+                            <ul class="footer_list">
+                                <li class="footer_item"><a href="#" class="footer_link">Curricullum</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Blogs</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Student Stories</a></li>
+                            </ul>
+                            <ul class="footer_list">
+                                <li class="footer_item"><a href="#" class="footer_link">Find a Course</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Our Partners</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Contact Us</a></li>
+                            </ul>
+                            <ul class="footer_list">
+                                <li class="footer_item"><a href="#" class="footer_link">FAQ</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Terms of Service</a></li>
+                                <li class="footer_item"><a href="#" class="footer_link">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <div class="copyright_container">
+                            <div class="copyright_social">
+                                <img src="./Vector (8).svg" alt="" class="twitter" class="twit">
+                                <img src="./Vector (9).svg" alt="" class="insta" class="insta">
+                                <img src="./Vector (10).svg" alt="" class="facebook" class="fb">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html> 
