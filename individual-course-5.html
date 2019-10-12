@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:'Nunito', sans-serif;;
+    }
+
+    .navigation {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 90%;
+    }
+
+    #hero {
+      height: 600px;
+    }
+
+    /* #logo {
+      margin-left: 90px; 
+    } */
+
+    .nav li a {
+      color: #000000;
+    }
+
+    .content-1{
+      margin-top: 200px;
+      margin-left: 100px;
+    }
+
+    #button {
+      margin-left: 90px;
+    }
+
+    #info {
+      margin-left: 90px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #44CF6C;
+      color: #ffffff;
+    }
+
+    #btn-1 {
+      background-color:#3A0842;
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    #btn-2 {
+      background-color: rgb(245, 236, 108);
+      width: 80px;
+      border-radius: 10px;
+    }
+
+    #link p a {
+      color:  #00D26D !important;
+      text-decoration: underline;
+    }
+
+    /* What you will learn styling */
+    .text-center{
+      font-size: 25px;
+      color: #000;
+      font-weight: bold;
+      letter-spacing: 0.655606px;
+    }
+    
+    .learn li{
+      list-style-type: none;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      font-size: 16px;
+    }
+
+    svg{
+      margin-right: 10px;
+    }
+
+    #learn {
+      padding-top: 50px;
+      padding-bottom: 100px;
+      margin-left: 100px;
+    }
+
+    /* Build real__time__projects styling */
+    h3 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .build p {
+      font-size: 20px;
+    }
+
+    .parent-row{
+      background-image: url("https://res.cloudinary.com/jonahmary17/image/upload/v1570876256/startNG/Group_227_efir1u.png");
+      background-position: center right;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #2DCE89;
+      padding: 30px 0;
+    }
+
+    #parent {
+      margin-left: 100px;
+    }
+
+    a{
+      border-radius: 10px;
+      color: #fff;
+      padding: 0 30px;
+    }
+
+    .btn-success{
+      background-color: #3F113D;
+    }
+
+    .btn-success:hover{
+      background-color: #3F113D;
+    }
+
+    /* course corriculum styling */
+    #world-class {
+      text-align: center;
+      padding: 20;
+      font-size: 20px;
+      letter-spacing: 0.65;
+      color: #2A2B2A;
+      font-weight: 500;
+      margin: 20px;
+      text-align: center;
+    }
+    #HNG-inter {
+      text-align: center;
+      color: #333333;
+      font-size: 25px;
+      margin-bottom: 30px;  
+  }
+  .curriculum-accordio {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+  }
+  .startng-curriculum {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  auto;
+    grid-gap: 20px 20px;
+  }
+  @media screen and (max-width: 876px) {
+    .startng-curriculum {
+      display: block;
+    }
+  }
+
+  .Curriculum {
+    max-width: 70rem;
+    margin: 40px auto;
+    padding: 0 120px;
+  }
+  .accordion-item {
+    margin-bottom: 20px;
+    padding: 1px; 
+  }
+  .accordion-item2 {
+    margin-bottom: 20px;
+    padding: 1px; 
+  }
+  .accordion-link {
+    font-size: 25px; 
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    background-color: #DBCCD9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-left: 10px;
+  }
+  .accordion-link2 {
+    font-size: 25px; 
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    background-color: #DBCCD9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-left: 10px;
+  }
+  .accordion-link i {
+    color: #000000;
+    padding: 5px 3px;
+  }
+  .accordion-link2 i {
+    color: #000000;
+    padding: 5px 3px;
+  }
+  .accordion-link .ion-md-remove {
+    display: none; 
+  }
+  .accordion-link2 .ion-md-remove {
+    display: none; 
+  }
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+  }
+  .answer2 {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+  }
+
+  .answer ul li {
+    font-size: 20px;
+    color: #000000;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+     
+  }
+  .answer2 ul li {
+    font-size: 20px;
+    color: #000000;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25)
+  }
+  .accordion-item:target .answer {
+    max-height: 290px;
+  }
+  .accordion-item:target .accordion-link .ion-md-add {
+    display: none;
+  }
+  .accordion-item:target .accordion-link .ion-md-remove {
+    display: block;
+  }
+  .accordion-item2:target .answer2 {
+    max-height: 290px;
+  }
+  .accordion-item2:target .accordion-link2 .ion-md-add {
+    display: none;
+  }
+  .accordion-item2:target .accordion-link2 .ion-md-remove {
+    display: block;
+  }
+  .icon {
+    background-color: #DBCCD9;
+  }
+
+  .question a  {
+    padding: 25px;
+  }
+
+  .question a i  {
+    margin-right: 30px;
+  }
+
+  /* footer styling */
+ 
+.section{
+    padding: 5rem 0;
+}
+
+.section__small{
+    padding: 3rem 0;
+}
+
+.section__smaller{
+    padding: 2rem 0;
+}
+
+
+/* Testimonanies */
+.section__heading{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(65, 65, 65);
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.card__tes{
+    padding: 2rem;
+    max-width: 45rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+}
+
+.card__tes:nth-child(2){
+    margin-top: 3rem;
+}
+
+.card__text{
+    font-size: 1rem;
+    color: rgb(83, 83, 83);
+    line-height: 28px;
+}
+
+.card-row{
+    margin-top: 1.5rem;
+}
+
+.card__avatar{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    align-self: center;
+}
+
+.card__ratings{
+    margin-bottom: 0.5rem;
+}
+
+.card__ratings img{
+    width: 15px;
+    height: 14px;
+}
+
+.card__ratings img:not(:first-child){
+    margin: 0 0.2rem;
+}
+
+.card--name{
+    font-size: .9rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card--details{
+    font-size: .8rem;
+    font-weight: 200;
+    margin: 0;
+}
+
+.btn__primary{
+    background-color: #00D26D;
+    text-align: center;
+    margin-top: 1.3rem;
+    color: #fff;
+    margin: 2rem auto;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+}
+
+.btn__primary:hover{
+    box-shadow: 0 0 1rem rgba(0, 210, 109, 0.37);
+    color: #fff;
+}
+
+/* Subscribe */
+#subscribe{
+    background-color: #F4F4F4;
+}
+
+.subscribe__heading{
+    font-size: 1.5rem;
+}
+
+.subscribe__subheading{
+    font-size: 1rem;
+    color: rgb(83, 83, 83);
+}
+.subscribe__image{
+    display: none;
+}
+.form-control{
+    display: unset;
+    width: unset;
+    border-radius: 0;
+    width: 70%
+}
+.form-control:focus,
+.form-control:active{
+    outline: none !important;
+    border: none !important;
+}
+#subscribe button[type=submit]{
+    margin: 0 .1rem;
+}
+
+
+/* Footer */
+#footer{
+    background: #420944;
+}
+
+.footer__question{
+    color: white;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.inner_div{
+    align-items: center;
+    width: 100%;
+    margin: 1rem;
+}
+
+.inner_div .quick-links{
+    padding: 1rem 0;
+}
+
+.quick-links a{
+    color: white;
+    display: block;
+    font-size: .9rem;
+    
+}
+
+#footer a.btn{
+    margin: 0;
+}
+
+.footer__sub{
+    background-color: #360338;
+}
+
+.footer__sub i{
+    color: white;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Overwrite bootstrat Styles for container widht */
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+    .card__info{
+        margin-left: 1.5rem;
+    }
+
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 620px;
+    }
+    .card__tes{
+        padding: 2rem 3rem;
+    }
+    .card__text{
+        font-size: 1.2rem;
+    }
+    .card__info{
+        margin-left: 1.5rem;
+    }
+    .card__ratings img{
+        width: 23px;
+        height: 21px;
+    }
+    .subscribe__heading{
+        font-size: 2rem;
+    }
+    
+    .subscribe__subheading{
+        font-size: 1.5rem;
+        color: rgb(83, 83, 83);
+    }
+    .inner_div{
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+    .footer__sub i{
+        color: white;
+        margin: 0.5rem;
+        font-size: 1.8rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 760px;
+    }
+    .subscribe__image img{
+        width: 250px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1040px;
+    }
+  }
+
+    @media (max-width: 1200px) {
+    #btn-1, #btn-2 {
+      margin-top: 20px;
+    }
+
+    .content-1{
+      margin-top: 80px;
+      margin-left: 0;
+    }
+
+    #info {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    #button {
+      margin-left: 0;
+    }
+
+    .navigation {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    #learn {
+      padding-top: 150px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="container-fluid navigation">
+      <nav class="navbar navbar-expand-lg">
+        <a href="#" class="navbar navbar-expand-lg">
+          <img src="https://res.cloudinary.com/jameschima/image/upload/v1570909512/Logo_1_zshmqp.png" alt="startNG logo" id="logo">
+        </a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link " href="#"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><strong>Courses</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><strong>Hire a Grad</strong></a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><strong>Contact us</strong></a>
+              </li>
+            <button type="button" class="btn btn-lg">Start Learning</button>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="container-fluid bg-light" id="hero">
+        <div class="row">
+          <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="content-1">
+              <h5><strong>N50,000 for 3months Full Training</strong></h5>
+              <h1><strong>Laravel PHP from Scratch</strong></h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe pariatur culpa <br> recusandae aliquid quasi distinctio quod! Porro repellendus, <br> perspiciatis aperiam deserunt cum modi harum fugit hic officiis labore perferendis minima.</p>
+            </div>
+          </div><br>
+        </div>
+      
+        <div class="row" id="button">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+             <div class="content-2">
+                <button type="button" class="btn btn-lg">Start Learning</button>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="content-3">
+              <span>Beginner</span>
+              <button type="button" class="btn btn-sm" id="btn-1">ONLINE</button>
+              <button type="button" class="btn btn-sm" id="btn-2">PAID</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row" id="info">
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <p>Duration<br>
+            <strong>12 Weeks</strong></p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <p>Course Starts<br>
+            <strong>5th of October, 2019</strong></p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-6">
+            <p>Average Ratings <br>
+            <strong><i class="fa fa-star"></i></strong><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" ></i><i class="fa fa-star" ></i><i class="fa fa-star"></i></p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6" id="link">
+            <p><br>
+            <a href="#" class="text-dark">Select reviews</a></p>
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="container-fluid navigation" id="learn">
+        <p class="text-center">What you will learn</p>
+        <div class="row">
+          <div class="col-sm-5">
+            <ul class="learn">
+              <li>
+                <span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>UserFlow, User Journey using  FlowMapp</li>
+                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>User Research, Ideation</li>
+                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>Interactive Design</li>
+                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>Prototyping using Figma </li>
+            </ul>
+  
+            </div><!--end of first .5 column-->
+
+            <div class="col-sm-1"></div><!--spacing between sections-->
+
+          <div class="col-sm-5">
+            <ul class="learn">
+              <li>
+                <span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>Wireframes (Low-Fidelity & High Fidelioty)</li>
+                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>Mobile Interface (IOS, Android)</li>
+                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>IOS Design Guidelines</li>
+                <li><span><svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10.0857V11.0057C20.9988 13.1621 20.3005 15.2604 19.0093 16.9875C17.7182 18.7147 15.9033 19.9782 13.8354 20.5896C11.7674 21.201 9.55726 21.1276 7.53447 20.3803C5.51168 19.633 3.78465 18.2518 2.61096 16.4428C1.43727 14.6338 0.879791 12.4938 1.02168 10.342C1.16356 8.19029 1.99721 6.14205 3.39828 4.5028C4.79935 2.86354 6.69279 1.72111 8.79619 1.24587C10.8996 0.770634 13.1003 0.988061 15.07 1.86572" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 3.00574L11 13.0157L8 10.0157" stroke="#091429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span>Material Design Guidelines  </li>
+              </ul>
+            </div><!--end of second .5 column-->
+          </div><!--end of .row-->
+      </div><!-- end of .contaner-->
+
+      <div class="parent-row">
+        <div class="container-fluid navigation" id="parent">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 build">
+              <h3>Build Real time Project</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue mollis a molestie sit. 
+                Odio lobortis justo sit at eget semper amet adipiscing. 
+                Netus sit imperdiet tincidunt ut. 
+                Habitasse amet sagittis egestas quis ipsum.</p>
+            <div class="row">
+              <div class="col-md-5">
+                <a href="#" class="btn btn-success btn-lg btn-block btn-huge">Start Learning</a>
+              </div><!--inner row for button--> 
+            </div>        
+          </div><!--.col-sm-7-->
+        </div><!--.row-->
+      </div><!--.container-->
+    </div><!--.parent-row-->
+
+    <div class="container-fluid navigation">
+      <section class="curriculum-accordio">
+        <h4 id="world-class">No Experience Required, Knowledge on how to use the computer. Use windows or MAC OSX</h4>
+        <h2 id="HNG-inter"><strong>Course Curriculum</strong></h2>
+        <div class= "Curriculum">
+          <div class="accordion">
+            <div class="startng-curriculum">
+              <div class="accordion-item question" id="question1">
+                <a class="accordion-link" href="#question1">
+                  Introduction
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>
+                </a>
+                <div class="answer">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item2 question" id="question2">
+                <a class="accordion-link2" href="#question2">
+                  User Research
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>
+                </a>
+                <div class="answer2">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item question" id="question3">
+                <a class="accordion-link" href="#question3">
+                  Lorem Ipsum
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>
+                </a>
+                <div class="answer">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>   
+                </div>
+              </div>
+              <div class="accordion-item2 question" id="question4">
+                <a class="accordion-link2" href="#question4">
+                    Idealization
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>
+                </a>
+                <div class="answer2">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="startng-curriculum">
+              <div class="accordion-item question" id="question5">
+                <a class="accordion-link" href="#question5">
+                    Lorem Ipsum
+                  <i class="icon ion-md-add"></i>
+                    <i class="icon ion-md-remove"></i>
+                </a>
+                <div class="answer">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item2 question" id="question6">
+                <a class="accordion-link2" href="#question6">
+                  WireFrames
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>
+                </a>
+                <div class="answer2">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item question" id="question7">
+                <a class="accordion-link" href="#question7">
+                          Lorem Ipsum
+                  <i class="icon ion-md-add"></i>
+                  <i class="icon ion-md-remove"></i>
+                </a>
+              <div class="answer">
+                <ul>
+                  <li>The software Development Process-overview</li>
+                  <li>Design pattern-definition</li>
+                  <li>The scenario in a software project</li>
+                  <li>The problem:understandingthe customer requirement</li>
+                </ul>
+              </div>
+            </div>
+                  
+            <div class="accordion-item2 question" id="question8">
+              <a class="accordion-link2" href="#question8">
+                Lorem Ipsum
+                <i class="icon ion-md-add"></i>
+                <i class="icon ion-md-remove"></i>
+              </a>
+                <div class="answer2">
+                  <ul>
+                    <li>The software Development Process-overview</li>
+                    <li>Design pattern-definition</li>
+                    <li>The scenario in a software project</li>
+                    <li>The problem:understandingthe customer requirement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+    </div>
+
+    <div class="container-fluid">
+      <div id="testimonanies" class="section">
+        <div class="container">
+          <h2 class="section__heading">
+            <strong>What students have to say about us</strong>
+          </h2>
+          <div class="d-block">
+          <div class="card__tes">
+            <p class="card__text">The HNG internship is a 3-month remote internship designed to find and develop
+            the most talented software developers. Everyone is welcome to participate (there is no extrance
+            exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
+          <div class="card-row row">
+            <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/male_knbmt9.png" alt="Dennis Lagbaja" class="card__avatar">
+            <div class="card__info">
+              <div class="card__ratings">
+                <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+                <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+                <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+                <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+                <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+              </div>
+              <p class="card--name">
+                Dennis Lagbaja
+              </p>
+              <p class="card--details font-italic">
+                Completed the Front End Developer class
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="card__tes">
+          <p class="card__text">The HNG internship is a 3-month remote internship designed to find and develop
+          the most talented software developers. Everyone is welcome to participate (there is no extrance
+          exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
+            <div class="card-row row">
+            <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/female_o8j1th.png" alt="Khadirat Uche Jumbo" class="card__avatar">
+            <div class="card__info">
+              <div class="card__ratings">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/star__big_g2xdit.png" alt="star">
+            </div>
+            <p class="card--name">
+              Khadirat Uche Jumbo
+            </p>
+            <p class="card--details font-italic">
+              Completed the Laravel PHP Class
+            </p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn__primary d-block">
+          See More Reviews
+        </button>
+        </div>
+      </div>
+  </div>
+
+      <div id="subscribe" class="section__small">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-8 col-sm-12">
+              <h2 class="subscribe__heading">
+                Subscribe to our Newsleter
+              </h2>
+              <p class="subscribe__subheading">
+                Stay update with our latest news, discount and promotions
+              </p>
+              <form action="">
+                <input type="text" data-validate="Valid email is required: ex@abc.xyz"
+              class="form-control validate-input" placeholder="E-mail Address">
+                <button type="submit" class="btn btn__primary">
+                Subscribe
+              </button>
+              </form>
+            </div>
+            <div class="subscribe__image d-none d-lg-block">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/subscribe_jarksc.png" alt="subscribe">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="footer" class="section__small">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://res.cloudinary.com/chux/image/upload/v1570902932/logo_white_dxxdgj.png" alt="startNG">
+                <p class="footer__question">
+                  Ready to take a leap?
+                </p>
+                <a class="btn btn__primary">
+                  Start
+                </a>
+            </div>
+            <div class="col-md-8 row inner_div">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="quick-links">
+                      <a href="">About Us</a>
+                      <a href="">Our Course</a>
+                      <a href="">Hire a Guad</a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="quick-links">
+                    <a href="">Curriculum</a>
+                    <a href="">Blog</a>
+                    <a href="">Students Stories</a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="quick-links">
+                    <a href="">Find a Course</a>
+                    <a href="">Our Pathers</a>
+                    <a href="">Contact Us</a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="quick-links">
+                    <a href="">FAQ</a>
+                    <a href="">Teams of Service</a>
+                    <a href="">Privacy Policy</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__sub py-3">
+        <div class="container">
+          <div class="text-right">
+            <i class="fa fa-twitter-square fa-lg"></i>
+            <i class="fa fa-instagram fa-lg"></i>
+            <i class="fa fa-facebook-square fa-lg"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
