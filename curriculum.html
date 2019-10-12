@@ -13,6 +13,7 @@
 
 
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <style>
   * {
@@ -27,6 +28,10 @@
     padding: 0;
     font-family: 'Nunito', sans-serif;
 
+  }
+
+  p{
+    font-family: 'Open Sans', sans-serif;
   }
 
   a {
@@ -85,8 +90,6 @@
   }
 
   .skill h1 {
-    /* display: flex; */
-    font-family: Nunito;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -101,13 +104,12 @@
   }
 
   .skill p {
-    font-family: Open Sans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 151.2%;
     color: #ffffff;
-    position: absolute; 
+    position: absolute;
     /* display: flex;
     width: 449px; */
     box-sizing: border-box;
@@ -123,7 +125,7 @@
     /* /* width: 195px; */
     /* height: 48px; */
     /* left: 169px; */
-    top: 470px; 
+    top: 470px;
     background: #44CF6C;
     border-radius: 10px;
     cursor: pointer;
@@ -194,7 +196,6 @@
   }
 
   .text p {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -243,33 +244,6 @@
     border-left: 2px solid green; */
   }
 
-  .panel-title>a:before {
-    float: right !important;
-    font-family: FontAwesome;
-    content: "\f068";
-    padding-right: 30px;
-  }
-
-  .panel-title a {
-    color: black;
-  }
-
-  .panel-title {
-    padding-left: 20px;
-  }
-
-
-  .panel-title>a.collapsed:before {
-    float: right !important;
-    content: "\f067";
-  }
-
-  .panel-title>a:hover,
-  .panel-title>a:active,
-  .panel-title>a:focus {
-    text-decoration: none;
-  }
-
   #world-class {
     text-align: center;
     padding: 20;
@@ -297,12 +271,13 @@
 
   .stack-link {
     text-align: center;
+    margin : auto;
     -webkit-text-fill-color: rgba(51, 51, 51, 0.9);
   }
 
-  /* .stack-link a{
-    color: black;
-  } */
+  .stack-link a{
+   margin: auto;
+  }
 
   .Stack-develop {
     border: 1px solid;
@@ -326,7 +301,7 @@
     margin-bottom: 40px;
   }
 
-  @media screen and (max-width: 787px) {
+  @media screen and (max-width: 768px) {
     .Full-stack {
       display: block;
     }
@@ -342,11 +317,12 @@
 
     .skill p {
       font-size: 18px;
-      
+      margin-bottom: 30px;
+
     }
 
     .skill a {
-      top : 450px;
+      top: 450px;
     }
 
     .stack p {
@@ -354,7 +330,7 @@
     }
 
     .stack .learning {
-      margin-top: 10px;
+      margin-top: 30px;
     }
   }
 
@@ -363,7 +339,7 @@
     color: #44CF6C;
     border-radius: 10px;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px 30px;
     line-height: 1.5rem;
     margin-bottom: 15px;
   }
@@ -386,6 +362,51 @@
       font-size: 14.12px;
     }
 
+  }
+
+
+  .accordion {
+    background-color: #DBCCD9;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 40px;
+    width: 100%;
+    border: none;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    outline: none;
+    transition: 0.4s ease-in;
+    margin-bottom: 10px;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: #DBCCD9;
+  }
+
+
+  .accordion:after {
+    font-family: FontAwesome;
+    content: "\f067";
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    float: right !important;
+    content: "\f068";
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
 </style>
 
@@ -464,9 +485,9 @@
     <p id="HNG-inter">The HNG internship is a 3-month remote internship designed to find and develop the most talented
       software developers.</p>
     <div class="stack-link">
-      <span id="fullstack"><a href="#" class='active'>Full Stack Development</a></span><span id="mobiledevlop"><a href="#">Mobile
+      <span id="fullstack"><a href="#">Full Stack Development</a></span><span id="mobiledevlop"><a href="#">Mobile
           App Development</a></span><span id="artifcial"><a href="#">Artificial
-          Intelligent</a></span>
+          Intelligence</a></span>
       <span id="digital"><a href="#">Digital Marketing</a></span><span id="brand"><a href="#">Brand...</a><i
           class="fa fa-arrow-right"></i></span>
     </div>
@@ -493,20 +514,11 @@
 
 
   <div class="container-fluid">
-    <div class="container bg-gray py-3">
+    <div class="container bg-gray py-4">
       <div class="row">
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingOne'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseOne" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Introduction
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseOne' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingOne">
+            <div class="col-md-6">
+              <button class="accordion">Introduction</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -514,24 +526,12 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
 
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingTwo'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseTwo" aria-expanded="false"
-                    aria-controls="collapseTwo">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseTwo' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingTwo">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -539,24 +539,11 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingThree'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseThree" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseThree' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingThree">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -564,24 +551,12 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
 
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingOne'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseFour" aria-expanded="false"
-                    aria-controls="collapseFour">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseFour' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingFour">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -589,25 +564,11 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
-
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingFive'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseFive" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseFive' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingFive">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -615,25 +576,12 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
 
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingSix'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseSix" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseSix' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingSix">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -641,24 +589,11 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingSeven'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseSeven" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseSeven' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingSeven">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -666,24 +601,12 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
 
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingEight'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseEight" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseEight' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingEight">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -691,24 +614,11 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingNine'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseNine" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseNine' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingNine">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -716,24 +626,12 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
 
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingTen'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseTen" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseTen' class='panel-collapse collapse in' role='tabpanel' aria-labelledby="headingTen">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -741,25 +639,36 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingEleven'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseEleven" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
+            <div class="col-md-6">
+                <button class="accordion">Lorem Ipsum</button>
+                <div class="panel">
+                  <div class="panel-body">
+                    <p>The software Development Process-overview</p>
+                    <p>Design pattern-definition</p>
+                    <p>The scenario in a software project</p>
+                    <p>The problem:understandingthe customer requirement</p>
+                  </div>
+                </div>
               </div>
-              <div id='collapseEleven' class='panel-collapse collapse in' role='tabpanel'
-                aria-labelledby="headingEleven">
+  
+  
+              <div class="col-md-6">
+                <button class="accordion">Lorem Ipsum</button>
+                <div class="panel">
+                  <div class="panel-body">
+                    <p>The software Development Process-overview</p>
+                    <p>Design pattern-definition</p>
+                    <p>The scenario in a software project</p>
+                    <p>The problem:understandingthe customer requirement</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -767,25 +676,12 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
 
-          </div>
-        </div>
 
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingTwelve'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseTwelve" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseTwelve' class='panel-collapse collapse in' role='tabpanel'
-                aria-labelledby="headingTwelve">
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
                 <div class="panel-body">
                   <p>The software Development Process-overview</p>
                   <p>Design pattern-definition</p>
@@ -793,220 +689,183 @@
                   <p>The problem:understandingthe customer requirement</p>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingThirteen'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseThirteen" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseThirteen' class='panel-collapse collapse in' role='tabpanel'
-                aria-labelledby="headingThirteen">
-                <div class="panel-body">
-                  <p>The software Development Process-overview</p>
-                  <p>Design pattern-definition</p>
-                  <p>The scenario in a software project</p>
-                  <p>The problem:understandingthe customer requirement</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-6 my-3">
-          <div class="panel-group" id="accordion" role='tablist' aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role='tab' id='headingFourteen'>
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent='#accordion' href="#collapseFourteen" aria-expanded="false"
-                    aria-controls="collapseOne">
-                    Lorem Ipsum
-                  </a>
-                </h4>
-              </div>
-              <div id='collapseFourteen' class='panel-collapse collapse in' role='tabpanel'
-                aria-labelledby="headingFourteen">
-                <div class="panel-body">
-                  <p>The software Development Process-overview</p>
-                  <p>Design pattern-definition</p>
-                  <p>The scenario in a software project</p>
-                  <p>The problem:understandingthe customer requirement</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
       </div>
     </div>
-  </div>
 
-  <!-- End of Curriculum -->
+    <!-- End of Curriculum -->
 
 
-  <!-- Table for Schedule Onsite Training -->
-  <div class="container mt-5">
-    <div class="row"></div>
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <h3 class='text-center mb-4'>Schedule for Onsite Training</h3>
-        <p class='text-center mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, exercitationem.</p>
+    <!-- Table for Schedule Onsite Training -->
+    <div class="container mt-5">
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h3 class='text-center mb-4'>Schedule for Onsite Training</h3>
+          <p class='text-center mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, exercitationem.
+          </p>
 
-        <div class="table-responsive">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr>
-                <th scope="col" colspan='2'
-                  style="background: #44CF6c; color:white; border-top-right-radius: 8px; border-top-left-radius: 8px">
-                  Monday - Friday <br> Current
-                  timezone
-                  available : UTC +1</th>
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" colspan='2'
+                    style="background: #44CF6c; color:white; border-top-right-radius: 8px; border-top-left-radius: 8px">
+                    Monday - Friday <br> Current
+                    timezone
+                    available : UTC +1</th>
 
-              </tr>
-            </thead>
-            <tbody>
+                </tr>
+              </thead>
+              <tbody>
 
-              <tr>
-                <td>8 am - 9 am</td>
-                <td>Coding Challenges</td>
-              </tr>
+                <tr>
+                  <td>8 am - 9 am</td>
+                  <td>Coding Challenges</td>
+                </tr>
 
-              <tr>
-                <td>9 am - 12 pm</td>
-                <td>Collaborative Learning</td>
-              </tr>
-              <tr>
-                <td>12 pm - 1 pm</td>
-                <td>Lunch Break</td>
-              </tr>
-              <tr>
-                <td>1 pm - 5 pm</td>
-                <td>Collaborative Learning</td>
-              </tr>
-              <tr>
-                <td>5 pm - 5:15 pm</td>
-                <td>Daily Stand-up Meeting</td>
-              </tr>
-            </tbody>
-          </table>
+                <tr>
+                  <td>9 am - 12 pm</td>
+                  <td>Collaborative Learning</td>
+                </tr>
+                <tr>
+                  <td>12 pm - 1 pm</td>
+                  <td>Lunch Break</td>
+                </tr>
+                <tr>
+                  <td>1 pm - 5 pm</td>
+                  <td>Collaborative Learning</td>
+                </tr>
+                <tr>
+                  <td>5 pm - 5:15 pm</td>
+                  <td>Daily Stand-up Meeting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
-  </div>
-
-  <!-- End of table for Onsite Training -->
-
-
-  <!-- Begin Your Journey to Being Certified in Your Field -->
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 mb-5 text">
-        <h3>Begin Your Journey to Being <br> Certified in Your Field</h3>
-        <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented
-          software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log
-          into the internship using their laptop. Each week, we give tasks. </p>
-        <a href="#" class='mb-5'>Start Learning</a>
-
-      </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
-        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818443/image_4_kpzyt2.png" class='img-fluid'
-          alt="">
+        <div class="col-md-2"></div>
       </div>
     </div>
-  </div>
 
-  <!-- End of BEgin Your Journey -->
+    <!-- End of table for Onsite Training -->
 
 
-  <!-- Footer Starts -->
+    <!-- Begin Your Journey to Being Certified in Your Field -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 mb-5 text">
+          <h3>Begin Your Journey to Being <br> Certified in Your Field</h3>
+          <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented
+            software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log
+            into the internship using their laptop. Each week, we give tasks. </p>
+          <a href="#" class='mb-5'>Start Learning</a>
 
-  <div class="container-fluid text-white deep mt-5">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mt-3 mb-4">
-            <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
-          </div>
         </div>
-
-        <div class="row pb-4">
-          <div class="col-lg-4 col-md-12 mb-3">
-            <h4 class='mb-4'>Ready to take the Leap?</h4>
-            <a href="#" class='mb-5' id='slink'>Start!</a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Course</a></li>
-            <li><a href="#">Hire a Grad</a></li>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">Curriculum</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Student Stories</a></li>
-
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">Find a Course</a></li>
-            <li><a href="#">Our Partners</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </div>
-        </div>
-
-      </div>
-  </div>
-  <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-    <div class="container text-right">
-      <div class="row icons">
-        <div class="col-md-12 ">
-          <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
-          <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
-          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818443/image_4_kpzyt2.png" class='img-fluid'
+            alt="">
         </div>
       </div>
-
     </div>
-    </footer>
-  </div>
 
-  <!-- End of Footer -->
+    <!-- End of BEgin Your Journey -->
 
 
+    <!-- Footer Starts -->
+
+    <div class="container-fluid text-white deep mt-5">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mt-3 mb-4">
+              <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
+            </div>
+          </div>
+
+          <div class="row pb-4">
+            <div class="col-lg-4 col-md-12 mb-3">
+              <h4 class='mb-4'>Ready to take the Leap?</h4>
+              <a href="#" class='mb-5' id='slink'>Start!</a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Course</a></li>
+              <li><a href="#">Hire a Grad</a></li>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+              <li><a href="#">Curriculum</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Student Stories</a></li>
+
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+              <li><a href="#">Find a Course</a></li>
+              <li><a href="#">Our Partners</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </div>
+          </div>
+
+        </div>
+    </div>
+    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+      <div class="container text-right">
+        <div class="row icons">
+          <div class="col-md-12 ">
+            <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
+            <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+      </footer>
+    </div>
+
+    <!-- End of Footer -->
 
 
-  <!-- External Javascript Files -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
 
-  <!-- End of External Javascript Files -->
+
+    <!-- External Javascript Files -->
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <!-- End of External Javascript Files -->
 </body>
 
 </html>
