@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Curriculum</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
 
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <style>
   * {
@@ -29,48 +30,47 @@
 
   }
 
+  p{
+    font-family: 'Open Sans', sans-serif;
+  }
+
   a {
     text-decoration: none;
   }
 
-  .nav-item a {
-    text-decoration: none;
-    margin-right: 2em;
-    font-size: 17px;
-    color: #2A2B2A;
-    padding: 16px;
-    text-decoration: none;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.655606px;
-    top: 38.3%;
-    bottom: 38.3%;
-  }
-
-  #back {
-    background: #44CF6C;
-    border-radius: 10px;
-    color: white;
-    padding: 10px 50px;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.655606px;
-    top: 38.3%;
-    bottom: 38.3%;
-  }
+          /* Style for Navbar Starts */
+        
+          .navbar-custom li a {
+            color: #000;
+        }
+        
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        
+        .btn-success:hover {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
+        /* Style for Navbar Ends */
 
   .skill {
     font-family: 'Nunito', sans-serif;
     /* display: flex;
     position: absolute; */
     width: auto;
-    height: 643px;
+    height: 650px;
     left: 0px;
     /* top: 94px; */
     background: linear-gradient(rgba(37, 108, 57, 0.39), rgba(37, 108, 57, 0.39)),
@@ -82,8 +82,6 @@
   }
 
   .skill h1 {
-    display: flex;
-    font-family: Nunito;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -91,36 +89,39 @@
     letter-spacing: 0.655606px;
     color: #ffffff;
     position: absolute;
-    width: 482px;
-    height: 110px;
-    left: 165px;
-    top: 200px
+    /* width: 482px; */
+    /* height: 110px;
+    left: 165px; */
+    top: 160px
   }
 
   .skill p {
-    font-family: Open Sans;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     line-height: 151.2%;
     color: #ffffff;
     position: absolute;
-    width: 449px;
+    /* display: flex;
+    width: 449px; */
+    box-sizing: border-box;
     height: 124px;
-    left: 165px;
-    top: 380px;
+    /* left: 165px; */
+    top: 290px;
+    margin-top: 50px;
   }
 
-  .skill button {
+  .skill a {
     color: #ffffff;
     position: absolute;
-    width: 195px;
-    height: 48px;
-    left: 169px;
-    top: 555px;
+    /* /* width: 195px; */
+    /* height: 48px; */
+    /* left: 169px; */
+    top: 470px;
     background: #44CF6C;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px 30px;
   }
 
 
@@ -165,15 +166,15 @@
     color: white;
   }
 
-  .icons i.fa.fa-twitter:hover {
+  .icons i.fab.fa-twitter:hover {
     color: #00aced;
   }
 
-  .icons i.fa.fa-facebook:hover {
+  .icons i.fab.fa-facebook-f:hover {
     color: #3b5598;
   }
 
-  .icons i.fa.fa-instagram:hover {
+  .icons i.fab.fa-instagram:hover {
     color: #ed3833;
   }
 
@@ -187,10 +188,9 @@
   }
 
   .text p {
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 17.4px;
     line-height: 151.2%;
     color: #333333;
     margin-bottom: 30px;
@@ -205,170 +205,145 @@
   }
 
   .learn {
-    margin-top: 100px;
-    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-bottom: 50px;
   }
 
   .learn a {
     color: #44CF6C;
   }
 
+  .bg-gray {
+    background: #fafcfe;
+    border-radius: 10px;
+  }
+
+  .panel {
+    background-color: #DBCCD9;
+  }
+
+  .panel-heading {
+    padding: 10px 10px;
+  }
+
+  .panel-body {
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #fafcfe;
+    /* border-bottom: 2px solid green;
+    border-right: 2px solid green;
+    border-left: 2px solid green; */
+  }
+
   #world-class {
-        text-align: center;
-        padding: 20;
-        font-size: 25px;
-        letter-spacing: 0.65;
-        color: #2A2B2A;
-        font-weight: 500;
-        margin: 20px;
-    }
+    text-align: center;
+    padding: 20;
+    font-size: 25px;
+    letter-spacing: 0.65;
+    color: #2A2B2A;
+    font-weight: 500;
+    margin: 20px;
+  }
 
-    #HNG-inter {
-        text-align: center;
-        color: #333333;
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
+  #HNG-inter {
+    text-align: center;
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
 
-    #internship {
-        margin: 20px 0;
-    }
+  #internship {
+    margin: 40px 0;
+  }
 
-    .click {
-        background: #FFFFFF;
-    }
+  .click {
+    background: #FFFFFF;
+  }
 
-    .stack-link {
-        text-align: center;
-        -webkit-text-fill-color: rgba(51, 51, 51, 0.4);
-    }
+  .stack-link {
+    text-align: center;
+    margin : auto;
+    -webkit-text-fill-color: rgba(51, 51, 51, 0.9);
+  }
 
-    .Stack-develop {
-        border: 1px solid;
-        max-width: 1000px;
-        margin: 15px auto;
+  .stack-link a{
+   margin: auto;
+  }
+
+  .Stack-develop {
+    border: 1px solid;
+    max-width: 1000px;
+    margin: 15px auto;
+  }
 
 
-    }
+  .stack {
+    background: url("https://res.cloudinary.com/brendandevelops/image/upload/v1570808985/green_b5e97p.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 40px; */
+    color: white;
+    height: 230px;
+  }
 
+  .stack h4 {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
     .Full-stack {
-        display: grid;
-        grid-template-columns: 700px 100px;
-        grid-template-rows: auto;
-        background: url("https://res.cloudinary.com/brendandevelops/image/upload/v1570808985/green_b5e97p.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
+      display: block;
+    }
+
+    .stack {
+      height: 280px;
+    }
+
+    .stack h4 {
+      margin-bottom: 20px;
 
     }
 
-    @media screen and (max-width: 787px) {
-        .Full-stack {
-            display: block;
-        }
+    .skill p {
+      font-size: 18px;
+      margin-bottom: 30px;
+
     }
 
-    .full-stack-develop {
-        padding: 40px;
+    .skill a {
+      top: 450px;
     }
 
-    .click {
-        margin: 60px;
-        width: 120px;
-        height: 40px;
-        color: #44CF6C;
-        border-radius: 10px;
-        border: 1px;
-        cursor:pointer;
+    .stack p {
+      margin-bottom: 20px;
     }
 
-    .curriculum-accordio {
-        width: 100%;
-        height: 100vh;
+    .stack .learning {
+      margin-top: 30px;
     }
+  }
 
-    .startng-curriculum {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-    }
+  .stack .learning {
+    background: white;
+    color: #44CF6C;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 30px;
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+  }
 
-    @media screen and (max-width: 787px) {
-        .startng-curriculum {
-            display: block;
-        }
-    }
+  /* .icon {
+    background: #DBCCD9;
+  } */
 
-    .Curriculum {
-        max-width: 70rem;
-        margin: 40px auto;
-        padding: 0 120px;
-    }
-
-    .accordion-item {
-        margin-bottom: 20px;
-        border: 1px solid;
-        background-color: #DBCCD9;
-        padding: 1px;
-    }
-
-    .accordion-link {
-        font-size: 25px;
-        font-weight: 600;
-        color: #000000;
-        text-decoration: none;
-        background-color: #DBCCD9;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0;
-    }
-
-    .accordion-link i {
-        color: #000000;
-        padding: 5px;
-    }
-
-    .accordion-link .ion-md-remove {
-        display: none;
-    }
-
-    .answer {
-        max-height: 0;
-        overflow: hidden;
-        position: relative;
-        background-color: #E5E5E5;
-        transition: max-height 650ms;
-    }
-
-    .answer p {
-        font-size: 20px;
-        color: #000000;
-        line-height: 30px;
-        font-family: lato;
-        padding: 5px 10px;
-    }
-
-    .accordion-item:target .answer {
-        max-height: 290px;
-    }
-
-    .accordion-item:target .accordion-link .ion-md-add {
-        display: none;
-    }
-
-    .accordion-item:target .accordion-link .ion-md-remove {
-        display: block;
-    }
-
-    .icon {
-        background: #DBCCD9;
-    }
-
-    #mobiledevlop,
-    #digital {
-        margin: 0 20px
-    }
+  #mobiledevlop,
+  #digital {
+    margin: 0 20px
+  }
 
   @media screen and (max-width:880px) {
     .icons {
@@ -380,34 +355,82 @@
     }
 
   }
+
+
+  .accordion {
+    background-color: #DBCCD9;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 40px;
+    width: 100%;
+    border: none;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    outline: none;
+    transition: 0.4s ease-in;
+    margin-bottom: 10px;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: #DBCCD9;
+  }
+
+
+  .accordion:after {
+    font-family: Font Awesome 5 free;
+    content: "+";
+    color: #777;
+    font-weight: bold !important;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    float: right !important;
+    content: "-";
+    font-weight: bold !important;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 </style>
 
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-md text-white navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
     <div class="container">
-      <a class="navbar-brand" href="#"><img
-          src="https://res.cloudinary.com/asnas/image/upload/v1570762931/Logo.png"" id='logo' alt=" Brand"></a>
-      <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon text-white"></span>
+      <a href="/" class="navbar-brand"><img
+          src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
+          class="img-fluid" alt="logo" width="150px"></a>
+      <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar9" style="color: #000;">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-white" id="navbarResponsive">
+      <div class="navbar-collapse collapse" id="navbar9">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+          <li class="nav-item mr-5">
+            <a class="nav-link" href="about.html">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Courses</a>
+          <li class="nav-item mr-5">
+            <a class="nav-link" href="individual_course.html">Courses</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Hire a Grad</a>
+          <li class="nav-item mr-5">
+            <a class="nav-link" href="hireGrad.html">Hire A Grad</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+          <li class="nav-item mr-5">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id='back' href="#">Start Learning</a>
+          <li class="nav-item mr-5">
+            <a class="btn btn-success nav-link pl-5 pr-5" href="register.html" style="color: #fff;">Start Learning</a>
           </li>
         </ul>
       </div>
@@ -420,13 +443,20 @@
   <!--- Image Slider -->
   <div class="skill">
     <div class="upgrade">
-      <h1>Upgrade Your Skills with Our Curriculum</h1>
-      <p>The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software
-        developers.</p>
-      <a href="#"><button type="button" class="btn-left">Start Learning </button></a>
-
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1>Upgrade Your Skills with Our Curriculum</h1>
+            <p>The HNG internship is a 3-month remote internship designed ---to find and develop the most talented
+              software developers.</p>
+            <a href="register.html">Start Learning</a>
+          </div>
+          <div class="col-md-5"></div>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- End Image Slider -->
 
   <div class="container learn">
     <div class="row">
@@ -441,369 +471,393 @@
           software
           developers. Everyone is welcome to participate (there is no entrance exam). </p>
         <a href="#" class='mb-5'>Start Learning &gt;&gt;</a>
-
       </div>
-
     </div>
   </div>
 
-  <div>>
-
-  <h3 id="world-class">World Class Curriculums Just For You</h3>
+  <div>
+    <h3 id="world-class">World Class Curriculums Just For You</h3>
     <p id="HNG-inter">The HNG internship is a 3-month remote internship designed to find and develop the most talented
-        software developers.</p>
+      software developers.</p>
     <div class="stack-link">
-        <span id="fullstack"><a href="#" actve>Full Stack Development</a></span><span id="mobiledevlop"><a
-                href="#">Mobile App Development</a></span><span id="artifcial"><a href="#">Artificial
-                Intelligent</a></span>
-        <span id="digital"><a href="#">Digital Marketing</a></span><span id="brand"><a href="#">Brand...</a><i
-                class="icon ion-md-remove"></i></span>
-    </div>
-    <div class="Stack-develop">
-        <div class="Full-stack">
-            <div class="full-stack-develop">
-                <h4>Full Stack Development Curriculum</h4>
-                <P id="internship">The HNG internship is a 3-month remote internship designed to find and develop the
-                    most talented software developers.</P>
-            </div>
-            <div class="intern">
-                <button class="click" type="button">Start Learning</button>
-            </div>
-        </div>
-    </div>
-    </div
-
-<section class="curriculum-accordio">
-    <div class="Curriculum">
-        <div class="accordion">
-            <div class="startng-curriculum">
-                <div class="accordion-item" id="question1">
-                    <a class="accordion-link" href="#question1">
-                        Introduction
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question2">
-                    <a class="accordion-link" href="#question2">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question3">
-                    <a class="accordion-link" href="#question3">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>tThe scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question4">
-                    <a class="accordion-link" href="#question4">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question5">
-                    <a class="accordion-link" href="#question5">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question6">
-                    <a class="accordion-link" href="#question6">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-            </div>
-            <div class="startng-curriculum">
-                <div class="accordion-item" id="question7">
-                    <a class="accordion-link" href="#question7">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item" id="question8">
-                    <a class="accordion-link" href="#question8">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question9">
-                    <a class="accordion-link" href="#question9">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question10">
-                    <a class="accordion-link" href="#question10">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question11">
-                    <a class="accordion-link" href="#question11">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question12">
-                    <a class="accordion-link" href="#question12">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question13">
-                    <a class="accordion-link" href="#question13">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-                <div class="accordion-item" id="question14">
-                    <a class="accordion-link" href="#question14">
-                        Lorem Ipsum
-                        <i class="icon ion-md-add"></i>
-                        <i class="icon ion-md-remove"></i>
-                    </a>
-                    <div class="answer">
-                        <p>The software Development Process-overview</p>
-                        <p>Design pattern-definition</p>
-                        <p>The scenario in a software project</p>
-                        <p>The problem:understandingthe customer requirement</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-  <div class="container mt-5">
-    <div class="row"></div>
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <h3 class='text-center mb-4'>Schedule for Onsite Training</h3>
-        <p class='text-center mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, exercitationem.</p>
-
-        <div class="table-responsive">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr>
-                <th scope="col" colspan='2' style="background: #44CF6c; color:white; border-top-right-radius: 8px; border-top-left-radius: 8px">Monday - Friday <br> Current
-                  timezone
-                  available : UTC +1</th>
-
-              </tr>
-            </thead>
-            <tbody>
-
-              <tr>
-                <td>8 am - 9 am</td>
-                <td>Coding Challenges</td>
-              </tr>
-
-              <tr>
-                <td>9 am - 12 pm</td>
-                <td>Collaborative Learning</td>
-              </tr>
-              <tr>
-                <td>12 pm - 1 pm</td>
-                <td>Lunch Break</td>
-              </tr>
-              <tr>
-                <td>1 pm - 5 pm</td>
-                <td>Collaborative Learning</td>
-              </tr>
-              <tr>
-                <td>5 pm - 5:15 pm</td>
-                <td>Daily Stand-up Meeting</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-
-
-      </div>
-      <div class="col-md-2"></div>
+      <span id="fullstack"><a href="#">Full Stack Development</a></span><span id="mobiledevlop"><a href="#">Mobile
+          App Development</a></span><span id="artifcial"><a href="#">Artificial
+          Intelligence</a></span>
+      <span id="digital"><a href="#">Digital Marketing</a></span><span id="brand"><a href="#">Brand...</a><i
+          class="fa fa-arrow-right"></i></span>
     </div>
   </div>
 
-
-
-  <div class="container mt-5">
+  <div class="container mt-2 p-5 stack ">
     <div class="row">
-      <div class="col-md-6 mb-5 text">
-        <h3>Begin Your Journey to Being <br> Certified in Your Field</h3>
-        <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented
-          software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log
-          into the internship using their laptop. Each week, we give tasks. </p>
-        <a href="#" class='mb-5'>Start Learning</a>
-
-      </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
-        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818443/image_4_kpzyt2.png" class='img-fluid'
-          alt="">
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid text-white deep mt-5">
-    <footer>
-      <div class="container">
+      <div class="col-md-12">
+        <h4>Full Stack Development Curriculum</h4>
         <div class="row">
-          <div class="col-md-12 mt-3 mb-4">
-            <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
+          <div class="col-md-7">
+            <p>The HNG internship is a 3-month remote internship designed to find and develop the
+              most talented software developers.</p>
           </div>
-        </div>
-
-        <div class="row pb-4">
-          <div class="col-lg-4 col-md-12 mb-3">
-            <h4 class='mb-4'>Ready to take the Leap?</h4>
-            <a href="#" class='mb-5' id='slink'>Start!</a>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Course</a></li>
-            <li><a href="#">Hire a Grad</a></li>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">Curriculum</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Student Stories</a></li>
-
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">Find a Course</a></li>
-            <li><a href="#">Our Partners</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <a href="register.html" class='learning'>Start Learning</a>
           </div>
         </div>
 
       </div>
+    </div>
   </div>
-  <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-    <div class="container text-right">
-      <div class="row icons">
-        <div class="col-md-12 ">
-          <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
-          <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
-          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+
+
+  <div class="container-fluid">
+    <div class="container bg-gray py-4">
+      <div class="row">
+            <div class="col-md-6">
+              <button class="accordion">Introduction</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+                <button class="accordion">Lorem Ipsum</button>
+                <div class="panel">
+                  <div class="panel-body">
+                    <p>The software Development Process-overview</p>
+                    <p>Design pattern-definition</p>
+                    <p>The scenario in a software project</p>
+                    <p>The problem:understandingthe customer requirement</p>
+                  </div>
+                </div>
+              </div>
+  
+  
+              <div class="col-md-6">
+                <button class="accordion">Lorem Ipsum</button>
+                <div class="panel">
+                  <div class="panel-body">
+                    <p>The software Development Process-overview</p>
+                    <p>Design pattern-definition</p>
+                    <p>The scenario in a software project</p>
+                    <p>The problem:understandingthe customer requirement</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <button class="accordion">Lorem Ipsum</button>
+              <div class="panel">
+                <div class="panel-body">
+                  <p>The software Development Process-overview</p>
+                  <p>Design pattern-definition</p>
+                  <p>The scenario in a software project</p>
+                  <p>The problem:understandingthe customer requirement</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of Curriculum -->
+
+
+    <!-- Table for Schedule Onsite Training -->
+    <div class="container mt-5">
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h3 class='text-center mb-4'>Schedule for Onsite Training</h3>
+          <p class='text-center mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, exercitationem.
+          </p>
+
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" colspan='2'
+                    style="background: #44CF6c; color:white; border-top-right-radius: 8px; border-top-left-radius: 8px">
+                    Monday - Friday <br> Current
+                    timezone
+                    available : UTC +1</th>
+
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td>8 am - 9 am</td>
+                  <td>Coding Challenges</td>
+                </tr>
+
+                <tr>
+                  <td>9 am - 12 pm</td>
+                  <td>Collaborative Learning</td>
+                </tr>
+                <tr>
+                  <td>12 pm - 1 pm</td>
+                  <td>Lunch Break</td>
+                </tr>
+                <tr>
+                  <td>1 pm - 5 pm</td>
+                  <td>Collaborative Learning</td>
+                </tr>
+                <tr>
+                  <td>5 pm - 5:15 pm</td>
+                  <td>Daily Stand-up Meeting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <!-- End of table for Onsite Training -->
+
+
+    <!-- Begin Your Journey to Being Certified in Your Field -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 mb-5 text">
+          <h3>Begin Your Journey to Being <br> Certified in Your Field</h3>
+          <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented
+            software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log
+            into the internship using their laptop. Each week, we give tasks. </p>
+          <a href="register.html" class='mb-5'>Start Learning</a>
+
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818443/image_4_kpzyt2.png" class='img-fluid'
+            alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- End of BEgin Your Journey -->
+
+<!-- Footer -->
+<div class="container-fluid text-white deep">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-3 mb-4">
+          <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
+        </div>
+      </div>
+
+      <div class="row pb-4">
+        <div class="col-lg-4 col-md-12 mb-3">
+          <h4 class='mb-4'>Ready to take the Leap?</h4>
+          <a href="#" class='mb-5' id='slink'>Start!</a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="individual_course.html">Our Course</a></li>
+          <li><a href="hireGrad.html">Hire a Grad</a></li>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="blog1.html">Blog</a></li>
+          <li><a href="blog2.html">Student Stories</a></li>
+
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+          <li><a href="individual_course.html">Find a Course</a></li>
+          <li><a href="#">Our Partners</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="termsOfService.html">Terms of Service</a></li>
+          <li><a href="termsOfService.html">Privacy Policy</a></li>
         </div>
       </div>
 
     </div>
-    </footer>
+</div>
+<div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+  <div class="container text-right">
+    <div class="row icons">
+      <div class="col-md-12 ">
+        <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+        <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+        <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
+      </div>
+    </div>
   </div>
+  </footer>
+</div>
+
+<!-- End of Footer -->
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+
+
+    <!-- External Javascript Files -->
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <!-- End of External Javascript Files -->
 </body>
 
 </html>
