@@ -122,6 +122,12 @@
 </head>
 
 <body>
+    <script>
+        function onSubmitHandler(e) {
+            e.preventDefault()
+        }
+    
+    </script>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container pt-2 pr-2">
             <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
@@ -155,7 +161,7 @@
     </div>
     <div class="container-fluid search pt-5 pb-5">
         <div class="input-group col-md-10 offset-md-1 pt-3 pb-3">
-            <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;">
+            <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;" required>
             <div class="input-group-append">
                 <button class="btn btn-secondary pl-4 pr-4" type="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">
                     Search our FAQ Page
@@ -164,19 +170,19 @@
         </div>
     </div>
     <div class="container-fluid mt-5">
-        <form>
+        <form onsubmit="onSubmitHandler()">
             <div class="col-md-10 offset-md-1 pt-5 pb-5">
                 <div class="row mb-2">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">First Name</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Last Name</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" required>
                         </div>
                     </div>
                 </div>
@@ -184,13 +190,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Email Address</label>
-                            <input type="email" class="form-control" id="usr">
+                            <input type="email" class="form-control" id="usr" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Phone Number</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" required>
                         </div>
                     </div>
                 </div>
@@ -198,14 +204,14 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="comment" class="pb-2">Write Your Message</label>
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" required></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6 offset-md-3 text-center mb-5">
                     <p class="pb-3">By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
-                    <button class="btn btn-success pl-5 pr-5">Submit</button>
+                    <button class="btn btn-success pl-5 pr-5" type="submit" onclick="onSubmitHandler()">Submit</button>
                 </div>
             </div>
         </form>
