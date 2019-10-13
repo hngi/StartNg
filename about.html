@@ -11,7 +11,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap');
             /* Style for Navbar Starts */
-
+            html, *, body {
+                position: relative;
+            }
             .navbar-custom li a {
                 color: #000;
             }
@@ -129,6 +131,73 @@
                 height: 80vh;
                 margin-top: 7%;
             }
+
+            .btn-started{
+                background: #3A0842;
+                border-radius: 5px;
+                border: none;
+               
+            }
+
+            .btn-started:hover{
+                background: #3A0842;
+                opacity: .8;
+            }
+            .text-description{
+                font-family: Nunito;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000
+            }
+
+            .about-startng{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 176.4%;
+            }
+            h6{
+                font-family: 'Nunito', sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+                letter-spacing: 0.655606px;
+            }
+
+           @media (max-width: 900px){
+               .desc{
+                   position: relative;
+                   top: -1rem;
+                   padding-top:0;
+               }
+               .btn-started{
+                   position: relative;
+                   top: -2.5rem;
+               }
+               .global-reacher{
+                  position: relative;
+                  top: -2rem  ;
+               }
+           }
+
+           @media (max-width: 375px){
+                .global-reacher{
+                   position: relative;
+                   top: -3rem;
+               }
+               .desc{
+                   position: relative;
+                   margin-bottom: -1rem;
+               }
+               .btn-started{
+                   margin-top: 1rem;
+               }
+           }
         </style>
 
 </head>
@@ -219,13 +288,13 @@
     <section class="global-reach">
         <div class="bg-img">
             <div class="container d-flex justify-content-center">
-                <div class="column">
-                    <header class="text-center">
-                        <h3> Our Global Reach</h3>
+                <div class="column global-reacher">
+                    <header class="text-center  mt-5 pt-3">
+                        <h6> Our Global Reach</h6>
                     </header>
 
-                    <article class="text-center">
-                        <p class="lead text-wrap">
+                    <article class="text-center d-flex justify-content-center about-startng mt-3">
+                        <p class=" text-wrap col-md-8 col-sm-12 ">
                             Start.ng is the leading online learning platform for programming courses nationwide and across Africa and  the world. 
                             Our goal is to eradicate illetracy across Africa, equipping each students with knowledge and character needed to excel anywhere 
                             in the world.
@@ -234,12 +303,16 @@
 
                     <div class="description">
 
-                        <article class=" text-center">
-                            <h6> Most Sought after Programming skills</h6>
-                            <h6> Experienced Qualified Teachers</h6> 
-                            <h6> Access to the Largest Online Developer Community</h6>
+                        <article class=" text-center mt-3 text-description ">
+                            <p class="desc mt-4"><strong> Most Sought after Programming skills</p>
+                            <p class="desc mt-4"> <strong> Experienced Qualified Teachers</p> 
+                            <p class="desc mt-4"><strong>Access to the Largest Online Developer Community</p>
                         </article>
 
+                    </div>
+
+                    <div class=" d-flex justify-content-center mt-5">
+                        <button class="btn btn-primary btn-started "> Explore Start.ng</button>
                     </div>
 
                 </div>
@@ -247,17 +320,8 @@
         </div>
     </section>
 
-
-
-
-    <section>
-        <div class="container d-flex justify-content-center" style="height: 10rem; margin-top: 10rem">
-           <p class="lead text-default"> .... Delete this section when you start </p>
-        </div>
-    </section>
-
     <section class="footer">
-        <div class="container-fluid text-white deep mt-5">
+        <div class="container-fluid text-white deep  ">
                 <footer>
                     <div class="container">
                         <div class="row">
