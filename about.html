@@ -207,8 +207,14 @@
                    margin-bottom: -1rem;
                }
                .btn-started{
-                   margin-top: 1rem;
+                   margin-top: 0rem;
                }    
+           }
+
+           @media (max-width: 320px){
+               .btn-started{
+                   margin-top:-0.5rem;
+               }
            }
            /* End of Global Reach Section */
 
@@ -252,6 +258,11 @@
                 border-radius: 5px;
                 border: none;
            }
+          
+
+            /* End  cover area */
+
+            /* Courses  */
            header.courses{  
                 float: left;
                 clear: both;
@@ -277,6 +288,12 @@
                 font-size: 1rem;
                 line-height: 176.4%;
                 color: #44CF6C;
+           }
+           @media (max-width: 425px){
+               .list-description{
+                   position: relative;
+                   left: 1.1rem;
+               }
            }
 
            .course-img{
@@ -345,6 +362,20 @@
                 border: none;
                 width: 15rem;
             }
+            @media (max-width: 768px) and (min-height: 567px){
+                .call-to-action{
+                    position: relative;
+                    top: -2rem;
+                    
+                } 
+
+                .btn-paid{
+                    position: relative;
+                    top: -5rem;
+                    width: 8rem;
+                    margin-left: 1rem;
+                }  
+            }
            /* END OF CALL TO ACTION SECTION */
         </style>
 
@@ -385,7 +416,7 @@
             <div class="container mt-5 mb-5">
                 <div class="column header-text ">
                     <div class="d-flex justify-content-center ">
-                        <p class="text-center text-wrap header-lead col-5 mt-5 pt-5 "> 
+                        <p class="text-center text-wrap header-lead col-md-5 mt-5 pt-5 "> 
                             A platform for learning programming where anyone, anywhere in the world can join
                             and become a better programmer
                         </p>
@@ -426,9 +457,9 @@
         </div>
     </section>
 
-    <section class="call-to-action-wrapper mb-5">
+    <section class=" mb-5">
         <div class="call-to-action-img">
-            <div class="container col-5">
+            <div class="container call-to-action-wrapper col-md-6 col-sm-12">
                 <div class="column mb-5  text-center">
                     <p class="call-to-action text-wrap pt-5 "   >
                         Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea wxli
@@ -471,7 +502,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe> -->
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
                       </div>
                 </div>
 
