@@ -13,6 +13,7 @@
             /* Style for Navbar Starts */
             html, *, body {
                 position: relative;
+              
             }
             .navbar-custom li a {
                 color: #000;
@@ -202,6 +203,10 @@
            /* End of Global Reach Section */
 
            /* Mini-Call-to-Action-Section */
+
+           .mini-call-to-action{
+                background: #FFFFFF;
+           }
            .mini-action{
                 font-family: Open Sans;
                 font-style: normal;
@@ -222,6 +227,60 @@
            .btn-mini:hover{
                 background: #44CF6C;
                 opacity: 0.8;
+           }
+           /* END OF MINI-CALL-TO-ACTION SECTION */
+
+           /* HEADER COVER AREA */
+           .bg-headerimg{
+                background: linear-gradient(180deg, #FFFFFF 28.46%, rgba(255, 255, 255, 0) 100%), url('https://res.cloudinary.com/samtech/image/upload/v1570789712/aboutus.png');
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                height: 100vh;
+                background-attachment: fixed;
+           }
+           .btn-cover{
+                background: #44CF6C;
+                border-radius: 5px;
+                border: none;
+           }
+           header.courses{  
+                float: left;
+                clear: both;
+           }
+           .lead-courses{
+                font-family: 'Nunito', sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.2rem;
+                line-height: 27px;
+           }
+           .courses-description{
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1rem;
+                line-height: 176.4%;
+           }
+           .list-description{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 176.4%;
+                color: #44CF6C;
+           }
+
+           .course-img{
+               position: relative;
+               left: 22%;
+               margin-bottom: 5rem;
+           }
+
+           @media (max-width: 900px){
+               .course-img{
+                    position: relative;
+                    left: 0;
+                    margin-top: 2rem;
+               }
            }
         </style>
 
@@ -257,12 +316,48 @@
             </nav>
     </section>
 
-    <section class="header">
+    <section class="header mb-5">
+        <div class="bg-headerimg">
+            <div class="container mt-5 mb-5">
+                <div class="column d-flex justify-content-center header-text ">
+                    <p class="text-center text-wrap col-5 mt-5 pt-5 "> 
+                        A platform for learning programming where anyone, anywhere in the world can join
+                        and become a better programmer
+                    </p>
+                </div>
+            </div>
+        </div>
 
     </section>
 
     <section class="courses">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+    
+                    <div>
+                        <p class="lead lead-courses"><strong> Courses </strong> </p> 
+                        <p class="text-wrap courses-description">
+                            Lorem ipsum was going to church 
+                            and she forgot to ferdsdscsd sdsdnd dffdss wesa dsea
+                                wxli sde zdxd asw fdesd fdvdfvddscd sdd.
+                        </p>
+                    </div>
+                    <section class="list">
+                        <ul class="list-description">
+                            <li> 100% Online</li>
+                            <li> Flexible Online Learning</li>
+                            <li> Earn a Course Certificate</li>
+                        </ul>
+                    </section>
+                    <button class="btn btn-primary btn-cover">Start Learning</button>
+                </div>
 
+                <div class="col-md-6">
+                    <img src="https://res.cloudinary.com/samtech/image/upload/v1570972360/aboutus_img.png" alt="woman sitting on a chair" class="img-fluid course-img" >
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="call-to-action">
