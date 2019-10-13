@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>COURSES PAGE</title>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+        .first-section {
+            width: 80%;
+        }
+        
+        .benefits {
+            background-color: #2A2B2A;
+            color: #ffffff;
+            height: 23em;
+            margin-top: 100px;
+            
+        }
+        .benefit-text {
+            margin-left: 150px;
+        }
+        h2.benefit-text {
+            padding-top: 40px;
+
+        }
+        .main-text, .sub-text, #head-btn {
+            margin-left: 175px;
+        }
+        li.benefit-list {
+            list-style: none;
+            list-style-position: outside;
+            text-align: left;
+        
+        }
+        li.benefit-list::before{
+            content: '';
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            background-image: url(https://res.cloudinary.com/praiseey/image/upload/v1570778411/list-style-img_jgqs8l.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-left: 12px;
+        }
+        
+        ul li {
+            margin-left: -20px;
+            padding: 5px;
+        }
+        .btn {
+            background-color: #44CF6C;
+            border-radius: 10px;
+            height: 28px;
+            width: 150px;
+            color: #ffffff;
+            border: 1px solid;
+            letter-spacing: 0.655606px; 
+
+        }
+        .get-start-btn {
+            border: 1px solid #2A2B2A;
+            margin-bottom: 15px;
+        }
+        .img {
+            width: 390px;
+            height: 550px;
+            position: absolute;
+            left: 56%;
+            top: 2%;
+        }
+        .benefits, .newsletter {
+            
+            padding-left: 25px;
+            padding-right: 3px;
+            width: 100%;
+        }
+        .benefits, .newsletter, .page-footer {
+            margin-left: -8px;
+
+        }
+        .newsletter {
+            background-color: rgba(42, 43, 42, 0.05);
+            height: 12em;
+            margin-top: 0;
+            padding-top: 15px;
+        }
+        .main-text {
+            font-size: 27px;
+            font-weight: bold;
+
+        }
+        .sub-text {
+            font-size: 13px;
+            margin-top: -13px;
+            
+        }
+        .email {
+            margin-top: 10px;
+            height: 22px;
+            width: 26.5em;
+            padding-left: 20px;
+            margin-left: 25px;
+        }
+        .sub-btn {
+            border: 1px solid rgba(42, 43, 42, 0.05);
+        }
+        .page-footer {
+            margin-right: -21px;
+        }
+        
+        .footer {
+            background-color: #3A0842;
+            height: 12em;
+        }
+        .page-logo {
+            padding-top: 30px;
+            color: #ffffff;
+            margin-left: 200px;
+        }
+        .logo {
+            width: 110px;
+
+        }
+        .start {
+            border: 1px solid #3A0842;
+            margin-bottom: 25px;
+        }
+        .page-links {
+            display: flex;
+            flex-direction: row;
+            margin-left: 550px;
+            margin-top: -110px;
+            
+            
+           
+        }
+        .link-grp {
+            margin-left: 50px;
+        }
+        ul li.links {
+            list-style: none;
+            padding: 3px;
+            color: #ffffff;
+            font-size: 10px;
+        }
+        .sm-icons {
+            background-color: #2E0435;
+            height: 50px;
+            color: #ffffff;
+            text-align: right;
+            
+            
+        }
+        i {
+            padding: 15px;
+            
+        }
+        .fa-facebook {
+            margin-right: 15em;
+        }
+        
+        @media screen and (max-width: 480px;) {
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="benefits">
+            <h2 class="benefit-text" id="head-btn">Benefits</h2>
+            <ul class="benefit-text">
+                <li class="benefit-list">Full time Mentorship</li>
+                <li class="benefit-list">Expert Instructors</li>
+                <li class="benefit-list">Real time Collaboration</li>
+                <li class="benefit-list">Build Real Time Products</li>
+                <li class="benefit-list">Learn up-to-date remote tools</li>
+                <li class="benefit-list">Offline Meet-ups</li>
+            </ul>
+            <button type="button" class="btn benefit-text get-start-btn" id="head-btn">Start Learning</button>
+        </div>
+        <div>
+            <img class="img" src="https://res.cloudinary.com/praiseey/image/upload/v1570754289/benefit-imgs_iv6bxc.png">
+        </div>
+</section>
+
+        <div>
+            <img class="img" src="https://res.cloudinary.com/praiseey/image/upload/v1570754289/benefit-imgs_iv6bxc.png">
+        </div>
+    
+        <div class="newsletter">
+            <p class="main-text">Subscribe to our Newsletter</p>
+            <p class="sub-text">Stay Updated with our latest news, discounts and promotions</p>
+            <label for="" class="benefit-text"></label>
+            <input type="text" class="email" id="email" placeholder="E-mail Address">
+            <span>
+                <button type="submit" class="btn sub-btn">Subscribe</button>
+            </span>
+        </div>
+
+        <footer class="page-footer">
+            <div class="footer">
+                <div class="page-logo">
+                    <img class="logo" src="https://res.cloudinary.com/praiseey/image/upload/v1570784698/Startng-logo_q8cnd9.png">
+                    <p>Ready to take the leap?</p>
+                    <button type="button" class="btn start">Start!</button>
+                </div>
+                <section class="page-links">
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links" style="list-style: none;">About Us</li>
+                            <li class="links">Our Courses</li>
+                            <li class="links">Hire a Grad</li>
+                        </ul>
+                    </div>
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links">Curriculum</li>
+                            <li class="links">Blog</li>
+                            <li class="links">Students' Stories</li>
+                        </ul>
+                    </div>
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links">Find a Course</li>
+                            <li class="links">Our Partners</li>
+                            <li class="links">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links">FAQ</li>
+                            <li class="links">Terms of Service</li>
+                            <li class="links">Privacy Policy</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="sm-icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+        </footer>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>COURSES PAGE</title>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+        .first-section {
+            width: 80%;
+        }
+        
+        .benefits {
+            background-color: #2A2B2A;
+            color: #ffffff;
+            height: 23em;
+            margin-top: 100px;
+            
+        }
+        .benefit-text {
+            margin-left: 150px;
+        }
+        h2.benefit-text {
+            padding-top: 40px;
+
+        }
+        .main-text, .sub-text, #head-btn {
+            margin-left: 175px;
+        }
+        li.benefit-list {
+            list-style: none;
+            list-style-position: outside;
+            text-align: left;
+        
+        }
+        li.benefit-list::before{
+            content: '';
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            background-image: url(https://res.cloudinary.com/praiseey/image/upload/v1570778411/list-style-img_jgqs8l.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-left: 12px;
+        }
+        
+        ul li {
+            margin-left: -20px;
+            padding: 5px;
+        }
+        .btn {
+            background-color: #44CF6C;
+            border-radius: 10px;
+            height: 28px;
+            width: 150px;
+            color: #ffffff;
+            border: 1px solid;
+            letter-spacing: 0.655606px; 
+
+        }
+        .get-start-btn {
+            border: 1px solid #2A2B2A;
+            margin-bottom: 15px;
+        }
+        .img {
+            width: 390px;
+            height: 550px;
+            position: absolute;
+            left: 56%;
+            top: 2%;
+        }
+        .benefits, .newsletter {
+            
+            padding-left: 25px;
+            padding-right: 3px;
+            width: 100%;
+        }
+        .benefits, .newsletter, .page-footer {
+            margin-left: -8px;
+
+        }
+        .newsletter {
+            background-color: rgba(42, 43, 42, 0.05);
+            height: 12em;
+            margin-top: 0;
+            padding-top: 15px;
+        }
+        .main-text {
+            font-size: 27px;
+            font-weight: bold;
+
+        }
+        .sub-text {
+            font-size: 13px;
+            margin-top: -13px;
+            
+        }
+        .email {
+            margin-top: 10px;
+            height: 22px;
+            width: 26.5em;
+            padding-left: 20px;
+            margin-left: 25px;
+        }
+        .sub-btn {
+            border: 1px solid rgba(42, 43, 42, 0.05);
+        }
+        .page-footer {
+            margin-right: -21px;
+        }
+        
+        .footer {
+            background-color: #3A0842;
+            height: 12em;
+        }
+        .page-logo {
+            padding-top: 30px;
+            color: #ffffff;
+            margin-left: 200px;
+        }
+        .logo {
+            width: 110px;
+
+        }
+        .start {
+            border: 1px solid #3A0842;
+            margin-bottom: 25px;
+        }
+        .page-links {
+            display: flex;
+            flex-direction: row;
+            margin-left: 550px;
+            margin-top: -110px;
+            
+            
+           
+        }
+        .link-grp {
+            margin-left: 50px;
+        }
+        ul li.links {
+            list-style: none;
+            padding: 3px;
+            color: #ffffff;
+            font-size: 10px;
+        }
+        .sm-icons {
+            background-color: #2E0435;
+            height: 50px;
+            color: #ffffff;
+            text-align: right;
+            
+            
+        }
+        i {
+            padding: 15px;
+            
+        }
+        .fa-facebook {
+            margin-right: 15em;
+        }
+        
+        @media screen and (max-width: 480px;) {
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="benefits">
+            <h2 class="benefit-text" id="head-btn">Benefits</h2>
+            <ul class="benefit-text">
+                <li class="benefit-list">Full time Mentorship</li>
+                <li class="benefit-list">Expert Instructors</li>
+                <li class="benefit-list">Real time Collaboration</li>
+                <li class="benefit-list">Build Real Time Products</li>
+                <li class="benefit-list">Learn up-to-date remote tools</li>
+                <li class="benefit-list">Offline Meet-ups</li>
+            </ul>
+            <button type="button" class="btn benefit-text get-start-btn" id="head-btn">Start Learning</button>
+        </div>
+        <div>
+            <img class="img" src="https://res.cloudinary.com/praiseey/image/upload/v1570754289/benefit-imgs_iv6bxc.png">
+        </div>
+</section>
+
+        <div>
+            <img class="img" src="https://res.cloudinary.com/praiseey/image/upload/v1570754289/benefit-imgs_iv6bxc.png">
+        </div>
+    
+        <div class="newsletter">
+            <p class="main-text">Subscribe to our Newsletter</p>
+            <p class="sub-text">Stay Updated with our latest news, discounts and promotions</p>
+            <label for="" class="benefit-text"></label>
+            <input type="text" class="email" id="email" placeholder="E-mail Address">
+            <span>
+                <button type="submit" class="btn sub-btn">Subscribe</button>
+            </span>
+        </div>
+
+        <footer class="page-footer">
+            <div class="footer">
+                <div class="page-logo">
+                    <img class="logo" src="https://res.cloudinary.com/praiseey/image/upload/v1570784698/Startng-logo_q8cnd9.png">
+                    <p>Ready to take the leap?</p>
+                    <button type="button" class="btn start">Start!</button>
+                </div>
+                <section class="page-links">
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links" style="list-style: none;">About Us</li>
+                            <li class="links">Our Courses</li>
+                            <li class="links">Hire a Grad</li>
+                        </ul>
+                    </div>
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links">Curriculum</li>
+                            <li class="links">Blog</li>
+                            <li class="links">Students' Stories</li>
+                        </ul>
+                    </div>
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links">Find a Course</li>
+                            <li class="links">Our Partners</li>
+                            <li class="links">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="link-grp">
+                        <ul>
+                            <li class="links">FAQ</li>
+                            <li class="links">Terms of Service</li>
+                            <li class="links">Privacy Policy</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="sm-icons">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+        </footer>
+    
+</body>
+</html>
