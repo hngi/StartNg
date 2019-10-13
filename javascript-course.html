@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <title>Title</title>
+
+    <style>
+        body {
+            font-family: Nunito;
+        }
+        /* Style for Navbar Starts */
+        
+        .navbar-custom li a {
+            color: #000;
+        }
+        
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        
+        .btn-success:hover {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
+        /* Style for Navbar Ends */
+        /* Style for Footer Starts */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .deep {
+            background: #3A0842;
+            color: #fff;
+        }
+        
+        .deep #slink {
+            background: #44CF6C;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 70px;
+        }
+        
+        .deep li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        
+        .deep li {
+            list-style: none;
+        }
+        
+        .deep li a:hover {
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .icons i {
+            font-size: 26px;
+            height: 50px;
+            width: 50px;
+            padding: 10px 20px;
+            color: white;
+        }
+        
+        .icons i.fa.fa-twitter:hover {
+            color: #00aced;
+        }
+        
+        .icons i.fa.fa-facebook:hover {
+            color: #3b5598;
+        }
+        
+        .icons i.fa.fa-instagram:hover {
+            color: #ed3833;
+        }
+        /* Style for Footer Ends */
+        
+        .accordion .card-header:after {
+            font-family: 'FontAwesome';
+            content: "\f068";
+            float: right;
+        }
+        
+        .accordion .card-header.collapsed:after {
+            /* symbol for "collapsed" panels */
+            content: "\f067";
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+        <div class="container pt-2 pb-2">
+            <a href="/" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar9">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="//codeply.com">Courses</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Hire A Grad</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="btn btn-success nav-link pl-5 pr-5" href="#" style="color: #fff;">Start Learning</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="font-weight-bold">N50,000 for 3 months full training </p>
+                    <h4 class="font-weight-bold pb-3">Modern Javascript from Scratch</h4>
+                    <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+                    <div class="clearfix">
+                        <div class="float-left">
+                            <a class="btn btn-success pt-1 pb-1" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+                                Learning</a>
+                        </div>
+                        <div class="float-right">
+                            <a href="" style="color: #000;">Beginner</a>
+                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                        </div>
+                    </div>
+                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964974/startng/Group_369_ubc2ec.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5 pt-5">
+        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
+    </div>
+    <div class="contaner-fluid">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+    </div>
+
+    <div class="container">
+        <p class="text-center mt-5 pt-5">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
+        </p>
+        <h4 class="text-center font-weight-bold">Course Curriculum </h4>
+        <div class="row pt-5 pb-5 mt-5 mb-5">
+            <div class="col-md-6">
+                <div id="accordion" class="accordion">
+                    <div class="card mb-0">
+                        <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                            <a class="card-title">
+                                Introduction
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <a class="card-title">
+                                Lorem Ipsum
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            <a class="card-title">
+                                Lorem Ipsum
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                            </div>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+                            <a class="card-title">
+                                Lorem Ipsum
+                            </a>
+                        </div>
+                        <div id="collapseNine" class="collapse" data-parent="#accordion">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="accordion" class="accordion">
+                    <div class="card mb-0">
+                        <div class="card-header collapsed" data-toggle="collapse" href="#collapseFour">
+                            <a class="card-title">
+                                User Research
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="card-body collapse" data-parent="#accordion">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                            <a class="card-title">
+                                Ideation
+                            </a>
+                        </div>
+                        <div id="collapseFive" class="card-body collapse" data-parent="#accordion">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                            <a class="card-title">
+                                Wireframes
+                            </a>
+                        </div>
+                        <div id="collapseSix" class="collapse" data-parent="#accordion">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                            </div>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                            <a class="card-title">
+                                Lorem Ipsum
+                            </a>
+                        </div>
+                        <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                            </div>
+                        </div>
+                        <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                            <a class="card-title">
+                                Lorem Ipsum
+                            </a>
+                        </div>
+                        <div id="collapseEight" class="collapse" data-parent="#accordion">
+                            <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                                tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. samus labore sustainable VHS.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-10 offset-md-1 pb-5 pt-5">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
+    </div>
+    <div class="col-md-10 offset-md-1 pt-5 pb-5">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
+    </div>
+
+    <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
+        <div class="container pt-5 pb-5">
+            <div class="row align-items-center">
+                <div class="col-md-8 pb-5">
+                    <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
+                    <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
+                    </p>
+                    <form class="form-inline">
+                        <input type="text" class="form-control col-md-8" id="email">
+                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <div class="container-fluid text-white deep">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-3 mb-4">
+                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-lg-4 col-md-12 mb-3">
+                        <h4 class='mb-4'>Ready to take the Leap?</h4>
+                        <a href="#" class='mb-5' id='slink'>Start!</a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Course</a></li>
+                        <li><a href="#">Hire a Grad</a></li>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Student Stories</a></li>
+
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">Find a Course</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+        <div class="container text-right">
+            <div class="row icons">
+                <div class="col-md-12 ">
+                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+
+    <!-- End of Footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
