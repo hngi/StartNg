@@ -130,6 +130,7 @@
                 background: url('https://res.cloudinary.com/samtech/image/upload/v1570949378/about_us_57.png');
                 height: 80vh;
                 margin-top: 7%;
+                background-attachment: fixed;
             }
 
             .btn-started{
@@ -196,7 +197,31 @@
                }
                .btn-started{
                    margin-top: 1rem;
-               }
+               }    
+           }
+           /* End of Global Reach Section */
+
+           /* Mini-Call-to-Action-Section */
+           .mini-action{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1rem;
+                color: #000000;
+                /* or 28px */
+
+                text-align: center;
+                letter-spacing: 0.655606px;
+           }
+
+           .btn-mini{
+                background: #44CF6C;
+                border-radius: 5px;
+                border: none;
+           }
+           .btn-mini:hover{
+                background: #44CF6C;
+                opacity: 0.8;
            }
         </style>
 
@@ -253,7 +278,14 @@
     </section>
 
     <section class="mini-call-to-action">
-
+        <div class="container ">
+            <div class="column text-center mini-action">
+                <p class="">Hi,</p>
+                <p> Do you know you can Enroll for</p>
+                <p class="lead text-uppercase " style="font-weight: 700;"><strong> Free Complete Beginner Software Development Traning </strong></p>
+                <button class="btn btn-primary btn-mini"> Start Learning </button>
+            </div>
+        </div>
     </section>
 
     <section class="how-it-all-started mt-4 pt-4">
@@ -330,7 +362,7 @@
                             </div>
                         </div>
         
-                        <div class="row pb-4">
+                        <div class="row pb-4 footer-end">
                             <div class="col-lg-4 col-md-12 mb-3">
                                 <h4 class='mb-4'>Ready to take the Leap?</h4>
                                 <a href="#" class='mb-5' id='slink'>Start!</a>
