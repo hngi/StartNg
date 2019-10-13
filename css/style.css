@@ -1,0 +1,254 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+header#hd1{
+width: 100%;
+height: 264px;
+left: 0px;
+margin-top: 94px;
+background: #2A2B2A;
+}
+
+
+header#hd1 h2{
+font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+letter-spacing: 0.655606px;
+color: #FFFFFF;
+text-align: center;
+
+
+}
+
+
+header#hd1 input[type =search]{
+width: 751px;
+padding: 10px;
+background: #FFFFFF;
+height: 50px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+border: none;
+font-size: 16px;
+letter-spacing: 0.205541px;
+color: #8898AA;
+float: left;
+}
+
+
+header#hd1 button{
+width: 60px;
+height: 50px;
+border: none;
+background: #D3D5D4;
+float: left;
+}
+
+header#hd1 form{
+    width: 820px;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+#topForm{
+  width: 400px;
+  margin: auto;
+  line-height: 50px;
+  padding-top: 70px;
+  
+}
+
+section article#ac1 {
+    margin-top: 200px;
+}
+
+section article#ac1 h1{
+height: 34px;
+font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 34px;
+text-align: center;
+margin-bottom: 10px;
+
+/* identical to box height */
+
+letter-spacing: 0.655606px;
+
+color: #000000;
+
+}
+
+section article#ac2{
+    width: 847px;
+    margin: auto;
+}
+
+/* Here are some of the most frequently asked questions on StartNG */
+
+section article#ac1 {
+margin-top: 100px;
+margin-bottom: 50px;
+
+}
+
+section article#ac1 p{
+height: 22px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+text-align: center;
+color: #2B2D42;
+}
+
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+/* identical to box height */
+color: #000000;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.accordion:after {
+  content: '\02C5';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+   font-size: 25px; 
+}
+
+.active:after {
+  content: "\02C4";
+   font-size: 25px; 
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 15px;
+  padding-right: 20px;
+}
+
+.accordion p{
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: #2B2D42;
+}
+
+.accordion button{
+  width: 100%;
+}
+
+hr{
+  width: 100%;
+  color:#D3D5D4;
+}
+
+#contact{
+width: 100%;
+height: 324px;
+background: #44CF6C;
+}
+
+#content1 h2{
+ text-align: center;
+ font-family: Nunito;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 34px;
+/* identical to box height */
+color: #000000;
+padding-top: 20px;
+}
+
+#content1 h3{
+  text-align: center;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 22px;
+padding-top: 20px;
+/* identical to box height */
+
+color: #000000;
+}
+#content1 button{
+  text-align: center;
+  color: white;
+  background: #3A0842;
+  border-radius: 10px;
+  margin: auto;
+  border: none;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+#content1{
+  padding-top: 100px;
+}
+
+@media  only screen and (max-width: 847px) {
+
+   header#hd1 form{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+    header#hd1 input[type =search]{
+      width: 400px;
+ 
+    }
+    header#hd1 button{
+        width: 80px;
+   
+    }
+section article#ac2{
+    width: 100%;
+    margin: auto;
+}
+
+}
