@@ -1,148 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<style>
-
- body{
-      background-color:white;
-  </style>
-  </head>
-<body>
-    <p><br>
-    <div class="footer content">
-    <ul>
-   <p style="float: right;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570778519/Group_184_ptjdsg.png""height="300px" width="300px" border="0px"></p>
-   <p><h5> UI/UX Design</h5></p>
-    <p>Put your UI/UX Design skills to test and shapen it as you design exciting User interface for great Year Experience.</p>
-<div class="module form-module">
-    <div class="flex-container">
-      <article class="article">
-        <table>
-          <tr>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color:green; border: -9pt ridge lightgrey" value=" More Details">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: black; background-color: white; border: -9pt ridge lightgrey" value=" Beginner">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color: purple; border: -9pt ridge lightgrey" value=" Remote">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color: orange; border: -9pt ridge lightgrey" value=" Paid">
-            </td>
-            
-          </tr>
-        </table>
-      </article>
+    <title>Individual Course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+    
+    [Course-Curriculum]{
+    background-color:  rgba(129, 22, 124, 0.05);
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    }
+    #header1{
+    font-family: "Open Sans";
+    }
+    .wrapper{
+    display: flex;
+    box-sizing: border-box;
+    }
+    .wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .view, .view2{
+    width: 50%;
+    padding: 0 20px 0 20px;
+    }
+    
+    
+    div.topic{
+    margin-bottom: 25px; 
+    }
+    
+    
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+    background: #DBCCD9;
+    color: #000;
+    cursor: pointer;
+    padding: 2px 30px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 34px;
+    overflow: hidden;
+    letter-spacing: 0.655606px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto 0;
+    }
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .accordion:hover {
+    background-color: rgba(219, 204, 217, 0.815);
+    }
+    
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+    padding: 0 25px;
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    }
+    .panel p{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: underline;
+    font-family: "Lato";
+    }
+    
+    .active1, .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.829);
+    float: right;
+    margin-left: 5px;
+    }
+    
+    .active1:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    
+    @media only screen and (max-width:800px) {
+    .nested{
+    width: 80%;
+    padding-left: 40px;
+    }
+    div.float-left{
+    margin-left: 20px;
+    }
+    .view2 >div{
+    width:70%;
+    }
+    }
+    
+    @media only screen and (max-width:615px) {
+    div.float-left{
+    margin-left: 10px;
+    }  
+    .view2 >div{
+    width:90%;
+    }
+    .wrapper{
+    width: 100%;
+    display: table;
+    }
+    .view, .view2{
+    width: 100%;
+    }
+    .nested{
+    width: 90%;
+    padding-left: 20px;
+    }
+    }
+    </style>
+    </head>
+    <body>
+    
+                     <p style="float: left;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570778519/Group_184_ptjdsg.png""height="300px" width="300px" border="0px"></p>   
+                    <p>Software Development Training</p>
+                    <p>loremLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas architecto minima,
+                    alias inventore quis in est eos iste veritatis optio asperiores earum excepturi cum
+                    quibusdam veniam rem laudantium quae. Recusandae?</p>
+                    <button id="btn-1" class="btn btn-lg">Start Learning</button>
+                    <a href="#">Beginner</a>
+                    <button id="btn-2" class="btn btn-lg">Online</button>
+                    <button id="btn-3" class="btn btn-lg">Paid</button>
+                    <div class="par">
+                        <table>
+                            <tr>
+                                <td><p><span class="tiny">Duration</span> <br>
+                                    <span class="tiny2">12 Weeks</span> </p></td>
+                                <td>  <p><span class="tiny">Course Starts</span><br>
+                                    <span class="tiny2">5, Dec 2019</span></p></td>
+                                <td> <p><span class="tiny">Average Rating</span><br>
+                                    <span style="font-size:20px;color:yellow;">&starf; &starf;&starf;&starf;&starf; </span>
+                                </p></td>
+                                 
+                            </tr>
+                        </table>
+                        <a href="#">See all reviews</a>
+    
+                     </div>
+    
+             </div>
+        
     </div>
-</div>
-</ul>
-</p></br>
-
-<p><br>
-<div class="footer content">
-<ul>
-    <p style="float: left;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570778485/Group_185_qjvqsd.png"" height="300px" width="300px" border="0px"></p>
-    
-    
-    <p><h5>Modern JavaScript From Scratch</h5></p>
-    <p>Put your JavaScript skills to test and shapen it as you design and build a logic driven web page.</p>
-<div class="module form-module">
-    <div class="flex-container">
-      <article class="article">
-        <table>
-          <tr>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color:green; border: -9pt ridge lightgrey" value=" More Details!">
-            </td>
-            <td>
-             <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: black; background-color:white; border: -9pt ridge lightgrey" value=" Beginner">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color:purple; border: -9pt ridge lightgrey" value=" Remote">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color:orange; border: -9pt ridge lightgrey" value=" Paid">
-            </td>
+            <p style="float: right;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570778519/Group_184_ptjdsg.png""height="300px" width="300px" border="0px"></p>
+            <p>UI/UX Design</p>
+            <p>loremLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas architecto minima,
+            alias inventore quis in est eos iste veritatis optio asperiores earum excepturi cum
+            quibusdam veniam rem laudantium quae. Recusandae?</p>
+            <button id="btn-1" class="btn btn-lg">Start Learning</button>
+            <a href="#">Beginner</a>
+            <button id="btn-2" class="btn btn-lg">Online</button>
+            <button id="btn-3" class="btn btn-lg">Paid</button>
+            <div class="par">
+                <table>
+                    <tr>
+                        <td><p><span class="tiny">Duration</span> <br>
+                            <span class="tiny2">12 Weeks</span> </p></td>
+                        <td>  <p><span class="tiny">Course Starts</span><br>
+                            <span class="tiny2">5, Dec 2019</span></p></td>
+                        <td> <p><span class="tiny">Average Rating</span><br>
+                            <span style="font-size:20px;color:yellow;">&starf; &starf;&starf;&starf;&starf; </span>
+                        </p></td>
+                         
+                    </tr>
+                </table>
+                <a href="#">See all reviews</a>
+        
+             </div>
+        
+     </div>
             
-          </tr>
-        </table>
-      </article>
-    </div>
-</ul>
-</p></br>
-
-<p><br>
-</div>
-<div class="footer content">
-<ul>
-    <p style="float: right;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570794668/Group_189_jnprnr.png "height="300px" width="300px" border="0px"></p>
-    
-    
-    <p><h5>Laravel PHP From Scratch</h5></p>
-    <p>Put your PHP skills to test and shapens it further as you turn exciting design into stunning design.</p>
-<div class="module form-module">
-    <div class="flex-container">
-      <article class="article">
-        <table>
-          <tr>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color:green; border: -9pt ridge lightgrey" value=" More Details">
-            </td>
-            <td>
-             <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: black; background-color: white; border: -9pt ridge lightgrey" value="Beginner ">
-            </td>
-            <td>
-             <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color: purple; border: -9pt ridge lightgrey" value=" Remote">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color: orange; border: -9pt ridge lightgrey" value=" Paid">
-            </td>
+        </div>
+                <p style="float: left;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570778485/Group_185_qjvqsd.png"" height="300px" width="300px" border="0px"></p>
+                <p>Modern JavaScript From Scratch</p>
+                <p>loremLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas architecto minima,
+                alias inventore quis in est eos iste veritatis optio asperiores earum excepturi cum
+                quibusdam veniam rem laudantium quae. Recusandae?</p>
+                <button id="btn-1" class="btn btn-lg">Start Learning</button>
+                <a href="#">Beginner</a>
+                <button id="btn-2" class="btn btn-lg">Online</button>
+                <button id="btn-3" class="btn btn-lg">Paid</button>
+                <div class="par">
+                    <table>
+                        <tr>
+                            <td><p><span class="tiny">Duration</span> <br>
+                                <span class="tiny2">12 Weeks</span> </p></td>
+                            <td>  <p><span class="tiny">Course Starts</span><br>
+                                <span class="tiny2">5, Dec 2019</span></p></td>
+                            <td> <p><span class="tiny">Average Rating</span><br>
+                                <span style="font-size:20px;color:yellow;">&starf; &starf;&starf;&starf;&starf; </span>
+                            </p></td>
+                             
+                        </tr>
+                    </table>
+                    <a href="#">See all reviews</a>
             
-          </tr>
-        </table>
-      </article>
-    </div>
-</div>
-</ul>
-</p></br>
-
-<p><br>
-<div class="footer content">
-<ul>
-    <p style="float: left;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570794691/Group_188_nreoqj.png" height="300px" width="300px" border="0px"></p>
-    
-    
-    <p><h5>Full Stack Developer</h5></p>
-    <p>Become a full stack Developer, with ideas and build up the world of technology with your skills.</p>
-<div class="module form-module">
-    <div class="flex-container">
-      <article class="article">
-        <table>
-          <tr>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color:green; border: -9pt ridge lightgrey" value=" More Details">
-            </td>
-            <td>
-              <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: black; background-color:white; border: -9pt ridge lightgrey" value=" Beginner">
-            </td>
-            <td>
-             <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color: purple; border: -9pt ridge lightgrey" value=" Remote">
-            </td>
-            <td>
-             <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: White; background-color: orange; border: -9pt ridge lightgrey" value=" Paid">
-            </td>
+                 </div>
             
-          </tr>
-        </table>
-      </article>
-    </div>
-    </ul>
-    </p></br>
-
-
-</div>
-
-</body>
-</html>
+         </div>
+                
+            </div>
+                    <p style="float: right;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570794668/Group_189_jnprnr.png "height="300px" width="300px" border="0px"></p>
+                    <p>Laravel PHP From Scratch</p>
+                    <p>loremLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas architecto minima,
+                    alias inventore quis in est eos iste veritatis optio asperiores earum excepturi cum
+                    quibusdam veniam rem laudantium quae. Recusandae?</p>
+                    <button id="btn-1" class="btn btn-lg">Start Learning</button>
+                    <a href="#">Beginner</a>
+                    <button id="btn-2" class="btn btn-lg">Online</button>
+                    <button id="btn-3" class="btn btn-lg">Paid</button>
+                    <div class="par">
+                        <table>
+                            <tr>
+                                <td><p><span class="tiny">Duration</span> <br>
+                                    <span class="tiny2">12 Weeks</span> </p></td>
+                                <td>  <p><span class="tiny">Course Starts</span><br>
+                                    <span class="tiny2">5, Dec 2019</span></p></td>
+                                <td> <p><span class="tiny">Average Rating</span><br>
+                                    <span style="font-size:20px;color:yellow;">&starf; &starf;&starf;&starf;&starf; </span>
+                                </p></td>
+                                 
+                            </tr>
+                        </table>
+                        <a href="#">See all reviews</a>
+                
+                     </div>
+                
+             </div>
+                    
+                </div>
+                <p style="float: left;"><img src="https://res.cloudinary.com/maphorbs/image/upload/v1570794691/Group_188_nreoqj.png" height="300px" width="300px" border="0px"></p>
+                <p>Full Stack Development</p>
+                <p>loremLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas architecto minima,
+                alias inventore quis in est eos iste veritatis optio asperiores earum excepturi cum
+                quibusdam veniam rem laudantium quae. Recusandae?</p>
+                <button id="btn-1" class="btn btn-lg">Start Learning</button>
+                         <a href="#">Beginner</a>
+                         <button id="btn-2" class="btn btn-lg">Online</button>
+                         <button id="btn-3" class="btn btn-lg">Paid</button>
+                         <div class="par">
+                             <table>
+                                  <tr>
+                       <td><p><span class="tiny">Duration</span> <br>
+                        <span class="tiny2">12 Weeks</span> </p></td>
+                          <td>  <p><span class="tiny">Course Starts</span><br>
+                       <span class="tiny2">5, Dec 2019</span></p></td>
+                         <td> <p><span class="tiny">Average Rating</span><br>
+                        <span style="font-size:20px;color:yellow;">&starf; &starf;&starf;&starf;&starf; </span>
+                </p></td>
+                
+                </tr>
+                </table>
+                           <a href="#">See all reviews</a>
+                
+                </div>
+                
+                </div>
+                
+                </div>
+    
+    </body>
