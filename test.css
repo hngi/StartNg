@@ -40,11 +40,10 @@
 .testimony{
     box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    margin: 2em;
 }
 
 .testimony p{
-    font-size: 20px;
+    font-size: 20px; //make it 15 on mobile
     line-height: 151.2%;
     color: #333333;
     display: inline-block;
