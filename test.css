@@ -51,3 +51,11 @@
 .testimony-sign{
     display: flex;
 }
+
+.testimony-sign p{
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 124.8%;
+    letter-spacing: 0.655606px;
+    color: #474747;
+}
