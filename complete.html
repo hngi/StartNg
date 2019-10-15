@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <title>Complete Beginner</title>
 
@@ -152,10 +152,7 @@
             color: #fff;
         }
         
-        .panel-default>.panel-heading+.panel-collapse>.panel-body {
-            /* border: solid 1px #EEEEEE; */
-            /* background: rgba(129, 22, 124, 0.05); */
-        }
+        
         
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
@@ -199,6 +196,154 @@
         .course-drop {
             padding-bottom: 40px;
         }
+
+        /*Edit Start*/
+
+
+
+        .paint-text {
+            color: var(--color2);
+        }
+
+        .font-xlg {
+            font-size: 2em;
+        }
+        .font-lg {
+            font-size: 1.7em;
+        }
+
+        .font-md {
+            font-size: 1.2em;
+        }
+
+        .font-sm {
+            font-size: 1.1em;
+        }
+        .padding-lg {
+            padding: 20px 40px;
+        }
+
+        .padding-md {
+            padding: 15px 10px;
+        }
+
+        .padding-sm {
+            padding: 4px 5px;
+        }
+
+        .padding-bottom-sm {
+            padding-bottom: 15px;
+        }
+
+        .padding-bottom-lg {
+            padding-bottom: 50px;
+        }
+
+        .text-align-center {
+            text-align: center;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+
+        .overflow--h {
+            overflow: hidden;
+        }
+
+        .color-dark {
+            color: #000;
+        }
+
+
+        .padding-bottom-sm {
+            padding-bottom: 25px;
+        }
+
+        a.color-green {
+            color: rgb(12, 207, 61);
+            text-decoration: underline;
+        }
+
+        .title {
+            font-size: 1em;
+        }
+
+        .content {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            color: #464346;
+
+        }
+        .fa-star {
+            color: #FFCE31;
+        }
+
+        .action--link {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.655606px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #404040;
+            margin-right: 10px;
+        }
+
+        .padding-lg {
+            padding: 20px 40px;
+        }
+
+        /* .course--details {
+            padding-left: 35px;
+        } */
+
+        .action--link.success-btn {
+            padding: 15px 20px;
+            font-size: 16px;
+        }
+
+        .heading {
+            font-size: 2em;
+            line-height: 55px;
+            font-weight: 600;
+            text-align: center;
+            color: #000;
+            padding-bottom: 40px;
+        }
+
+        .course-outline {
+            width: 45%;
+            padding: 10px 10px 20px 5px;
+        }
+
+        
+
+        @media (max-width: 991.98px) {
+            .duration {
+                margin-right: 15px;
+                display: inline-block !important
+            }
+
+            .course-outline {
+                width: 100%;
+            }
+
+            .outline {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            /* .mobile--img {
+            order: 1 !important;
+        } */
+        }
     </style>
 </head>
 
@@ -240,20 +385,43 @@
                     <h4 class="font-weight-bold pb-3">Complete Beginner <br> Software Development Training</h4>
                     <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
-                    <div class="clearfix">
+                    <div class="clearfix padding-bottom-sm">
                         <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+                            <a class=" action--link success-btn" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
                                 Learning</a>
                         </div>
-                        <div class="float-right">
-                            <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                        <div class="float-right ">
+                            <a href="#" class="action--link" style="color: #000;">Beginner</a>
+                            <a href="#" class="action--link" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                            <a href="#" class="action--link" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <div class="course-details row align-tems-center justify-content-between">
+                        <div class="duration padding-bottom-sm">
+                            <h4 class="title">duration</h4>
+                            <span class="content">8 Weeks</span>
+                        </div>
+                        <div class="duration padding-bottom-sm">
+                            <h4 class="title">Course Starts</h4>
+                            <span class="content">5th of October, 2019</span>
+                        </div>
+                        <div class="duration padding-bottom-sm">
+                            <h4 class="title">Average Ratings</h4>
+                            <div class="">
+                                <div class="d-inline">
+                                    <i class="fas fa-star icon"></i>
+                                    <i class="fas fa-star icon"></i>
+                                    <i class="fas fa-star icon"></i>
+                                    <i class="fas fa-star icon"></i>
+                                    <i class="fas fa-star icon"></i>
+                                </div>
+                                <a href="#" class="color-green">See all reviews</a>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mobile--img">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964975/startng/premium-mobile-phone-screen-mockup-template_53876-76515_1_ri1dx4.png">
                 </div>
             </div>
@@ -261,7 +429,37 @@
     </div>
 
     <div class="container pb-5 pt-5">
-        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
+        <h3 class="heading padding-bottom-sm text-align-center ">What you will learn</h3>
+        <div class="row justify-content-between">
+            <div class="course-outline">
+                <div class="outline">
+                    <i class="far fa-check-circle"></i>
+                    <span class="">UserFlow, User journey using FlowMap</span>
+                </div>
+                <div class="outline">
+                    <i class="fas fa-markdown icon "></i>
+                    <span class="">UserFlow, User journey using FlowMap</span>
+                </div>
+                <div class="outline">
+                    <i class="far fa-check-circle"></i>
+                    <span class="">UserFlow, User journey using FlowMap</span>
+                </div>
+            </div>
+            <div class="course-outline">
+                <div class="outline">
+                    <i class="far fa-check-circle"></i>
+                    <span class="">UserFlow, User journey using FlowMap</span>
+                </div>
+                <div class="outline">
+                    <i class="far fa-check-circle"></i>
+                    <span class="">UserFlow, User journey using FlowMap</span>
+                </div>
+                <div class="outline">
+                    <i class="far fa-check-circle"></i>
+                    <span class="">UserFlow, User journey using FlowMap</span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="contaner-fluid">
         <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
