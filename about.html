@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <title>About</title>
 
     <style>
@@ -111,28 +115,122 @@
             background-size: cover;
         }
         
-        .loren-ipsum {
-            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570916337/startng/Rectangle_10_pwiqsf.png');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
+
         .priviledge {
             background-color: #FCFCFC;
+            padding: 40px;
         }
         
         .started {
             background-color: #FCFCFC;
         }
         
-        .global-reach {
-            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570920182/startng/Rectangle_57_xdcvbs.png');
+        .global_reach {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570916337/startng/Rectangle_10_pwiqsf.png');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .global_reach-button a {
+            margin-right: 40px;
+            border-radius: 10px;
+            background-color: #44CF6C;
+        }
+
+        .rHeader {
+            color: #3A0842;
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+
+        .rText {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 176.4%;
+            letter-spacing: 0.655606px;
+        }
+
+        .strong {
+            font-weight: bold;
+            color: #000;
         }
         /* Body Style Ends */
+
+        /*carousel styling starts here*/
+
+        .carousel {
+            margin: 50px auto;
+            height: 500px;
+            margin-bottom: 150px;
+        }
+
+        .carousel ol {
+            bottom: -40px;
+        }
+        .carousel ol li {
+            border: 1px solid black;
+            background-color: black;
+        }
+
+        .carousel .left, .carousel .right {
+            background: transparent;
+            color: black;
+            margin-left: -20px;
+        }
+
+        .privP {
+            font-weight: bolder;
+        }
+            @media screen and (min-width: 750px){
+
+
+                .global_reach-content {
+                    width: 70%;
+                    margin: 20px auto;
+                }
+                .carousel {
+                    width: 600px;
+                    margin: 50px auto;
+                    margin-bottom: 150px;
+                }
+                
+                .carousel ol {
+                    bottom: -50px;
+                }
+
+                .carousel .left{
+                    margin-left: -100px;
+                    background: transparent;
+                    color: black;
+                }
+
+                .carousel .right {
+                    margin-right: -100px;
+                    background: transparent;
+                    color: black;
+                }
+            }
+
+
+            @media screen and (min-width: 1000px){
+
+                .global_reach-content {
+                width: 50%;
+                }
+                .carousel .left {
+                    margin-left: -200px;
+                }
+
+                .carousel .right {
+                    margin-right: -200px;
+                }
+            }
+        /*carousel styling ends here*/
     </style>
 </head>
 
@@ -192,28 +290,55 @@
         </div>
     </div>
 
-    <div class="container-fluid loren-ipsum pt-5 pb-5">
-        <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> Lorem ipsum was going to church and she forgot to ferd <br> nd dffdss wesa dsea wxli sde zdxd asw df sds dcdsc <br> dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede <br> ws a as ff g ss ddcdd fr es waa dde saw asz cde ers ffggt <br>                sdawd dfdv ddv dssdsx xsccdvdvf ss </p>
+    <div class="global_reach">
+        <div class="global_reach-content">
+            <p style="color: #fff;"> Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea wxli sde zdxd asw df sds dcdsc dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede ws a as ff g ss ddcdd fr es waa dde saw asz cde ers ffggt                sdawd dfdv ddv dssdsx xsccdvdvf ss </p>
+        <div class="global_reach-button">
+                <a href="courses.html" class="btn btn-success pr-5 pl-5">Free Courses</a>
+                <a href="courses.html" class="btn btn-success pr-5 pl-5">Paid Courses</a>
         </div>
-        <div class="col-md-4 offset-md-4">
-            <div class="row">
-                <div class="col-6">
-                    <a href="courses.html" class="btn btn-success pr-5 pl-5">Free Courses</a>
-                </div>
-                <div class="col-6">
-                    <a href="courses.html" class="btn btn-success pr-5 pl-5">Paid Courses</a>
-                </div>
+ 
+    </div>
+    </div>
+
+    <section id="carousel" >
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            
+        </ol>
+                      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" >
+                    <img src="https://res.cloudinary.com/phiileo/image/upload/v1571153528/carousel_image1_s7r1st.png" alt="carosuel image">
+            </div>
+            <div class="item">
+                    <img src="https://res.cloudinary.com/phiileo/image/upload/v1571154284/carousel_image2_hjxvfd.png" alt="carosuel image">            
+            </div>
+            <div class="item">
+                    <img src="https://res.cloudinary.com/phiileo/image/upload/v1571153528/carousel_image1_s7r1st.png" alt="carosuel image">
             </div>
         </div>
-    </div>
+                      
+        <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+    
+        </section>
 
-    <div class="container-fluid">
-        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570921068/startng/Group_257_kibawi.png" class="img-fluid">
-    </div>
-
-    <div class="container-fluid priviledge pt-5 pb-5">
-        <div class="col-md-6 offset-md-3 text-center">
+    <div class="container priviledge pt-5 pb-5">
+        <div class="col-md-6 offset-md-3 text-center privP">
             <p style="color: #3A0842;">On Start.ng, you are privileged to</p>
         </div>
         <div class="row mt-5 pt-3">
@@ -297,15 +422,18 @@
         </div>
     </div>
 
-    <div class="container-fluid global-reach pt-5 pb-5">
+   <div class="container-fluid global-reach pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center pt-5">
-            <h4 class="pb-3">Our Global Reach</h4>
-            <p class="pb-5">Start.ng is the leading online learning platform for programming courses nationwide and across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each students with knowledge and character needed to excel anywhere
+            <h4 class="pb-3 rHeader">Our Global Reach</h4>
+            <p class="pb-4 rText">Start.ng is the leading online learning platform for programming courses nationwide
+                and across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each
+                students with knowledge and character needed to excel anywhere
                 in the world.</p>
-            <p class="pb-3">Most Sought after Programming Skills </p>
-            <p class="pb-3">Experienced Qualified Teachers</p>
-            <p class="pb-3">Access to the Largest Online Developer Community</p>
-            <a href="curriculum.html" class="btn btn-secondary pl-5 pr-5 mb-3" style="background-color: #3A0842; border: thin solid #3A0842;">Explore Start.ng</a>
+            <p class="pb-3 strong">Most Sought after Programming Skills </p>
+            <p class="pb-3 strong">Experienced Qualified Teachers</p>
+            <p class="pb-5 strong">Access to the Largest Online Developer Community</p>
+            <a href="curriculum.html" class="btn btn-secondary pl-5 pr-5 mb-3"
+                style="background-color: #3A0842; border: thin solid #3A0842;">Explore Start.ng</a>
         </div>
     </div>
 
