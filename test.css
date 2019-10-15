@@ -40,12 +40,14 @@
 .testimony{
     box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
+    margin: 2em;
 }
 
 .testimony p{
     font-size: 20px;
     line-height: 151.2%;
     color: #333333;
+    display: inline-block;
 }
 
 .testimony-sign{
@@ -58,4 +60,12 @@
     line-height: 124.8%;
     letter-spacing: 0.655606px;
     color: #474747;
+}
+
+.testimony-sign p span{
+    font-family: Open Sans;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 151.2%;
+    color: #737373;
 }
