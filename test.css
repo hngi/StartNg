@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .options-header h4{
+=======
+h4{
+>>>>>>> bb8c26e622af112a64668de29285e6034b59e573
     font-size: 20px;
     text-align: center;
     color: #3A0842;
@@ -18,6 +22,11 @@
     margin: 3em;
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bb8c26e622af112a64668de29285e6034b59e573
 .options li p span{
     font-size: 16px;
     font-weight: bold;
