@@ -1,0 +1,35 @@
+.options-header h4{
+    font-size: 20px;
+    text-align: center;
+    color: #3A0842;
+    font-weight: bold;
+    line-height: 34px;
+    margin-bottom: 25px;
+}
+
+.options{
+    justify-content: center;
+}
+
+.options li{
+    list-style-type: none;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    margin: 3em;
+}
+
+.options li p span{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 176.4%;
+    letter-spacing: 0.655606px;
+    color: #3A0842;
+}
+
+.options li p{
+    font-size: 14px;
+    line-height: 176.4%;
+    letter-spacing: 0.655606px;
+    color: #2B2D42;
+    display: inline-block;
+}
