@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-.options-header h4{
-=======
-h4{
->>>>>>> bb8c26e622af112a64668de29285e6034b59e573
+.options-header,
+.testimonial-header{
     font-size: 20px;
     text-align: center;
     color: #3A0842;
-    font-weight: bold;
     line-height: 34px;
     margin-bottom: 25px;
 }
 
-.options{
+.options,
+.testimonial{
     justify-content: center;
 }
 
@@ -22,11 +19,6 @@ h4{
     margin: 3em;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> bb8c26e622af112a64668de29285e6034b59e573
 .options li p span{
     font-size: 16px;
     font-weight: bold;
@@ -41,4 +33,21 @@ h4{
     letter-spacing: 0.655606px;
     color: #2B2D42;
     display: inline-block;
+}
+
+
+
+.testimony{
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.testimony p{
+    font-size: 20px;
+    line-height: 151.2%;
+    color: #333333;
+}
+
+.testimony-sign{
+    display: flex;
 }
