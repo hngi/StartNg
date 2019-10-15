@@ -216,6 +216,170 @@
 
         }
 
+<<<<<<< HEAD
+         /*Edit Start*/
+
+
+                
+         .d-flex {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: row wrap;
+        }
+
+        .d-flex.justify-content-between {
+            justify-content: space-between;
+        }
+
+        .d-flex.align-items-center {
+            align-items: center;
+        }
+
+        .margin-auto {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .paint-text {
+            color: var(--color2);
+        }
+
+        .font-xlg {
+            font-size: 2em;
+        }
+        .font-lg {
+            font-size: 1.7em;
+        }
+
+        .font-md {
+            font-size: 1.2em;
+        }
+
+        .font-sm {
+            font-size: 1.1em;
+        }
+        .padding-lg {
+            padding: 20px 40px;
+        }
+
+        .padding-md {
+            padding: 15px 10px;
+        }
+
+        .padding-sm {
+            padding: 4px 5px;
+        }
+
+        .padding-bottom-sm {
+            padding-bottom: 15px;
+        }
+
+        .padding-bottom-lg {
+            padding-bottom: 50px;
+        }
+
+        .text-align-center {
+            text-align: center;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+
+        .overflow--h {
+            overflow: hidden;
+        }
+
+        .color-dark {
+            color: #000;
+        }
+
+
+        .padding-bottom-sm {
+            padding-bottom: 25px;
+        }
+
+        a.color-green {
+            color: rgb(12, 207, 61);
+            text-decoration: underline;
+        }
+
+        .title {
+            font-size: 1em;
+        }
+
+        .content {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            color: #464346;
+
+        }
+        .fa-star {
+            color: #FFCE31;
+        }
+
+        .action--link {
+            display: inline-block;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.655606px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #404040;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .padding-lg {
+            padding: 20px 40px;
+        }
+
+        
+
+        .action--link.success-btn {
+            padding: 15px 20px;
+            font-size: 16px;
+        }
+
+        .heading {
+            font-size: 2em;
+            line-height: 55px;
+            font-weight: 600;
+            text-align: center;
+            color: #000;
+            padding-bottom: 40px;
+        }
+
+        .course-outline {
+            width: 45%;
+            padding: 10px 10px 20px 5px;
+        }
+
+        .duration:first-child {
+            padding-left: 15px;
+        }
+
+        .duration:not(:first-child) {
+            padding-left: 10px;
+        }
+
+        
+
+        @media (max-width: 991.98px) {
+            .duration {
+                margin-right: 15px;
+                display: inline-block !important
+            }
+
+        }
+=======
         /*===========After Accordion Options=======*/
         .options-header{
             font-size: 20px;
@@ -255,6 +419,7 @@
 
         /*===========Testimonial=======*/
 
+>>>>>>> 3a7b9fde592b3bd09b90f98bf060e40fd55837d7
 
     </style>
 </head>
@@ -299,17 +464,36 @@
                     <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
                     <div class="clearfix">
-                        <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
-                                Learning</a>
-                        </div>
-                        <div class="float-right">
-                            <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                        <div class="action--link-container">
+                        <a class=" action--link success-btn" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                        <a href="#" class="action--link" style="color: #000; background: rgba(128, 128, 128, 0.178)">Beginner</a>
+                        <a href="#" class="action--link" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                        <a href="#" class="action--link" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                    </div>
+                </div>
+                <div class="course-details row align-tems-center justify-content-between">
+                    <div class="duration padding-bottom-sm">
+                        <h4 class="title">Duration</h4>
+                        <span class="content">8 Weeks</span>
+                    </div>
+                    <div class="duration padding-bottom-sm">
+                        <h4 class="title">Course Starts</h4>
+                        <span class="content">5th of October, 2019</span>
+                    </div>
+                    <div class="duration padding-bottom-sm">
+                        <h4 class="title">Average Ratings</h4>
+                        <div class="d-inline">
+                            <div class="">
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                            </div>
+                            <a href="#" class="color-green">See all reviews</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                </div>
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964975/startng/premium-mobile-phone-screen-mockup-template_53876-76515_1_ri1dx4.png">
