@@ -202,7 +202,7 @@
         }
 
 
-        /*what you will learn*/
+        /*=================what you will learn==========================*/
 
         .lessons{
             display: flex;
@@ -213,12 +213,9 @@
             margin-bottom: 15px;
             line-height: 45px;
             list-style-type: none;
-
         }
 
-         /*Edit Start*/
-
-
+        /*=================Edit Start==========================*/
                 
          .d-flex {
             display: inline-flex;
@@ -249,6 +246,7 @@
         .font-xlg {
             font-size: 2em;
         }
+
         .font-lg {
             font-size: 1.7em;
         }
@@ -260,6 +258,7 @@
         .font-sm {
             font-size: 1.1em;
         }
+
         .padding-lg {
             padding: 20px 40px;
         }
@@ -341,7 +340,6 @@
             padding: 20px 40px;
         }
 
-        
 
         .action--link.success-btn {
             padding: 15px 20px;
@@ -377,21 +375,82 @@
             height: 350px;
             justify-content: center;
         }
+
         .build h2{
             font-weight: bold;
         }
+
         .build-text{
-            width: 500px;
-            margin-left:100px;
-            padding-top:80px;
+            padding: 2em;
         }
-        
-        .build-img1{
-            margin-left :700px;
-            z-index: -10px;
-            width: 700px;
-            height:535px;
-            margin-top: -315.3px;
+
+
+        /*==============Options==========================*/
+        .options-header,
+        .testimonial-header{
+            font-size: 20px;
+            text-align: center;
+            color: #3A0842;
+            line-height: 34px;
+            margin-bottom: 25px;
+        }
+
+        .options,
+        .testimonial{
+            justify-content: center;
+        }
+
+        .options li{
+            list-style-type: none;
+            display: flex;
+            font-family: 'Open Sans', sans-serif;
+            margin: 3em;
+        }
+
+        .options li p span{
+            font-size: 16px;
+            font-weight: bold;
+            color: #3A0842;
+        }
+
+        .options li p{
+            font-size: 14px;
+            line-height: 176.4%;
+            letter-spacing: 0.655606px;
+            color: #2B2D42;
+            display: inline-block;
+        }
+
+        /*==============Testimonials==========================*/
+        .testimony{
+            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+        }
+
+        .testimony p{
+            font-size: 15px;
+            line-height: 151.2%;
+            color: #333333;
+            display: inline-block;
+        }
+
+        .testimony-sign{
+            display: flex;
+        }
+
+        .testimony-sign p{
+            font-size: 16px;
+            line-height: 124.8%;
+            letter-spacing: 0.655606px;
+            color: #474747;
+        }
+
+        .testimony-sign p span{
+            font-family: Open Sans;
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 151.2%;
+            color: #737373;
         }
 
 
@@ -400,6 +459,28 @@
             .duration {
                 margin-right: 15px;
                 display: inline-block !important
+            }
+
+        }
+
+        @media only screen and (min-width: 768px){
+
+                .build-text{
+                width: 500px;
+                margin-left:100px;
+                padding-top:80px;
+            }
+            
+            .build-img1{
+                margin-left :700px;
+                z-index: -10px;
+                width: 700px;
+                height:535px;
+                margin-top: -315.3px;
+            }
+
+            .testimony p{
+                font-size: 20px;
             }
 
         }
@@ -546,12 +627,14 @@
         <div class="row">
             <div class="container build-text col col-lg-6 col-sm-12">
                 <h2>Build Real Time Project</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim.</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim.
+                </p>
                 <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#3F113D; color: #fff; border-color: #3F113D; font-size: 16px;">Start Learning</a>
             </div>
 
-            <div class="col col-lg-6 build-img">
-                <img  class="build-img1 .d-none .d-lg-block .d-xl-none"src="https://res.cloudinary.com/eloagbawe/image/upload/v1571165842/lxkz63t0tc0ns0qhblju.png">
+            <div class="col col-lg-6 build-img d-none d-sm-block">
+                <img  class="build-img1"src="https://res.cloudinary.com/eloagbawe/image/upload/v1571165842/lxkz63t0tc0ns0qhblju.png">
             </div>
 
         </div>
@@ -936,7 +1019,7 @@
                 </div>
             </div>
 
-            <!-- Options -->
+            <!--------------------- Options ---------------->
             <div class="container pb-5 pt-5">
                 <h4 class="text-center font-weight-bold options-header"> On Start.ng, you are priviledged to</h4>
                 <div class="row options">
