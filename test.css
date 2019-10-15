@@ -1,34 +1,10 @@
-.options-header,
-.testimonial-header{
-    font-size: 20px;
-    text-align: center;
-    color: #3A0842;
-    line-height: 34px;
-    margin-bottom: 25px;
-}
-
-.options,
-.testimonial{
-    justify-content: center;
-}
-
-.options li{
-    list-style-type: none;
-    display: flex;
-    font-family: 'Open Sans', sans-serif;
-    margin: 3em;
-}
-
-.options li p span{
-    font-size: 16px;
-    font-weight: bold;
-    color: #3A0842;
-}
-
-.options li p{
-    font-size: 14px;
-    line-height: 176.4%;
-    letter-spacing: 0.655606px;
-    color: #2B2D42;
-    display: inline-block;
+.options li img{
+    background-color: #44CF6C;
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    margin-left: -2em;
+    margin-right: 2em;
+    z-index: 2;
+    padding: 20px;
 }
