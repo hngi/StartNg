@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
     <title>Complete Beginner</title>
 
     <style>
@@ -199,10 +201,346 @@
         .course-drop {
             padding-bottom: 40px;
         }
+
+
+        /*=================what you will learn==========================*/
+
+        .lessons{
+            display: flex;
+        }
+
+        .lessons ul li{
+            border-bottom: 1px solid grey;
+            margin-bottom: 15px;
+            line-height: 45px;
+            list-style-type: none;
+        }
+
+        /*=================Edit Start==========================*/
+                
+         .d-flex {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: row wrap;
+        }
+
+        .d-flex.justify-content-between {
+            justify-content: space-between;
+        }
+
+        .d-flex.align-items-center {
+            align-items: center;
+        }
+
+        .margin-auto {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .paint-text {
+            color: var(--color2);
+        }
+
+        .font-xlg {
+            font-size: 2em;
+        }
+
+        .font-lg {
+            font-size: 1.7em;
+        }
+
+        .font-md {
+            font-size: 1.2em;
+        }
+
+        .font-sm {
+            font-size: 1.1em;
+        }
+
+        .padding-lg {
+            padding: 20px 40px;
+        }
+
+        .padding-md {
+            padding: 15px 10px;
+        }
+
+        .padding-sm {
+            padding: 4px 5px;
+        }
+
+        .padding-bottom-sm {
+            padding-bottom: 15px;
+        }
+
+        .padding-bottom-lg {
+            padding-bottom: 50px;
+        }
+
+        .text-align-center {
+            text-align: center;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+
+        .overflow--h {
+            overflow: hidden;
+        }
+
+        .color-dark {
+            color: #000;
+        }
+
+
+        .padding-bottom-sm {
+            padding-bottom: 25px;
+        }
+
+        a.color-green {
+            color: rgb(12, 207, 61);
+            text-decoration: underline;
+        }
+
+
+        .title {
+            font-size: 1em;
+        }
+
+        .content {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            color: #464346;
+
+        }
+        .fa-star {
+            color: #FFCE31;
+        }
+
+        .action--link {
+            display: inline-block;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.655606px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #404040;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .padding-lg {
+            padding: 20px 40px;
+        }
+
+
+        .action--link.success-btn {
+            padding: 15px 20px;
+            font-size: 16px;
+        }
+
+        .heading {
+            font-size: 2em;
+            line-height: 55px;
+            font-weight: 600;
+            text-align: center;
+            color: #000;
+            padding-bottom: 40px;
+        }
+
+        .course-outline {
+            width: 45%;
+            padding: 10px 10px 20px 5px;
+        }
+
+        .duration:first-child {
+            padding-left: 15px;
+        }
+
+        .duration:not(:first-child) {
+            padding-left: 10px;
+        }
+
+       /*==============Call to Action==========================*/
+
+        .build{
+            background-color: #2dce89;
+            height: auto;
+        }
+
+        .build h2{
+            font-weight: bold;
+        }
+
+        .build-text{
+            width: 550px;
+            padding: 80px 20px 30px 80px;
+            margin-left: 0;
+        }
+
+        .build-text > p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #000000;
+        }
+
+        .build-img {
+            width: 40%;
+            height: auto;
+        }
+        
+        .build-img1{
+            width: 100%;
+            height: auto;
+            transform: scale(1.61);   
+        }
+
+
+        /*==============Options==========================*/
+        .options-header,
+        .testimonial-header{
+            font-size: 20px;
+            text-align: center;
+            color: #3A0842;
+            line-height: 34px;
+            margin-bottom: 25px;
+        }
+
+        .options,
+        .testimonial{
+            justify-content: center;
+        }
+
+        .options li{
+            list-style-type: none;
+            display: flex;
+            font-family: 'Open Sans', sans-serif;
+            margin: 3em;
+        }
+
+        .options li img{
+            background-color: #44CF6C;
+            border-radius: 50%;
+            width: 4em;
+            height: 4em;
+            margin-left: -2em;
+            margin-right: 2em;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .options li p span{
+            font-size: 16px;
+            font-weight: bold;
+            color: #3A0842;
+        }
+
+        .options li p{
+            font-size: 14px;
+            line-height: 176.4%;
+            letter-spacing: 0.655606px;
+            color: #2B2D42;
+            display: inline-block;
+        }
+
+        /*==============Testimonials==========================*/
+        .testimony{
+            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+        }
+
+        .testimony p{
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 151.2%;
+            color: #333333;
+        }
+
+        .testimony-sign{
+            display: flex;
+        }
+
+        .testimony-sign p{
+            font-size: 16px;
+            line-height: 124.8%;
+            letter-spacing: 0.655606px;
+            color: #474747;
+        }
+
+        .testimony-sign p span{
+            font-family: Open Sans;
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 151.2%;
+            color: #737373;
+        }
+
+
+        /*==============Media Queries==========================*/
+        @media (max-width: 991.98px) {
+            .duration {
+                margin-right: 15px;
+                display: inline-block !important
+            }
+
+            .build-img {
+                width: 100%;
+                order: 1 !important;
+            }
+
+            .build-text{
+                padding: 80px 20px 30px;
+                margin-left: 0;
+                width: 100%;
+            }
+
+
+        }
+
+        /* @media only screen and (min-width: 768px){
+
+            .build{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .build-text{
+                width: 500px;
+                margin-left:100px;
+                padding-top:80px;
+            } */
+            
+            /* .build-img{
+                width: 47.5em;
+                margin-top: -5.8em;
+                z-index: -2;
+            } */
+
+            /* .testimony p{
+                font-size: 20px;
+            }
+
+        } */
+
     </style>
 </head>
 
 <body>
+    <!------------------------Navigation--------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container pt-2 pb-2">
             <a href="index.html" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
@@ -232,6 +570,7 @@
         </div>
     </nav>
 
+     <!--------------------------------------- Hero-------------------------------------->
     <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
         <div class="container">
             <div class="row align-items-center">
@@ -241,17 +580,36 @@
                     <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
                     <div class="clearfix">
-                        <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
-                                Learning</a>
-                        </div>
-                        <div class="float-right">
-                            <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                        <div class="action--link-container">
+                        <a class=" action--link success-btn" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                        <a href="#" class="action--link" style="color: #000; background: rgba(128, 128, 128, 0.178)">Beginner</a>
+                        <a href="#" class="action--link" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                        <a href="#" class="action--link" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                    </div>
+                </div>
+                <div class="course-details row align-tems-center justify-content-between">
+                    <div class="duration padding-bottom-sm">
+                        <h4 class="title">Duration</h4>
+                        <span class="content">8 Weeks</span>
+                    </div>
+                    <div class="duration padding-bottom-sm">
+                        <h4 class="title">Course Starts</h4>
+                        <span class="content">5th of October, 2019</span>
+                    </div>
+                    <div class="duration padding-bottom-sm">
+                        <h4 class="title">Average Ratings</h4>
+                        <div class="d-inline">
+                            <div class="">
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                                <i class="fas fa-star icon"></i>
+                            </div>
+                            <a href="#" class="color-green">See all reviews</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                </div>
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964975/startng/premium-mobile-phone-screen-mockup-template_53876-76515_1_ri1dx4.png">
@@ -260,16 +618,83 @@
         </div>
     </div>
 
+    <!----------------------------- Hero Sub------------------------------>
     <div class="container pb-5 pt-5">
-        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
-    </div>
-    <div class="contaner-fluid">
-        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+        <h4 class="text-center font-weight-bold">What you will learn</h4>
+        <div class="row lessons">
+            <div class="col col-12 col-lg-6 col-sm-12 p-5">
+                <ul>
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to setup a software development process and model</span>
+                    </li>
+                
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to organize a software development project</span></li>
+                
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to write user stories for your software requirements</span>
+                    </li>
+                
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to manage and deploy software releases</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col col-12 col-lg-6 col-sm-12 p-5">
+                <ul>
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to manage and deploy software releases</span>
+                    </li>
+                
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to verify a software solution</span>
+                    </li>
+                
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to validate a software solution</span>
+                    </li>
+            
+                    <li>
+                        <i class="far fa-check-circle icon font-md"></i>
+                        <span>How to use Git and Github for your versioning management</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
-    <div class="container">
 
-        <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
+    <!------------------------ Call to Action------------------------------>
+    <div class="container-fluid build">
+        <div class="row overflow--h build">
+            <div class="container build-text">
+                <h2>Build Real Time Project</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Augue mollis a molestie sit. Odio lobortis justo sit at eget semper amet adipiscing. 
+                    Netus sit imperdiet tincidunt ut. Habitasse amet sagittis egestas quis ipsum.
+                </p>
+                <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#3F113D; color: #fff; border-color: #3F113D; font-size: 16px;">Start
+                        Learning</a>
+            </div>
+            <div class="build-img d-none d-lg-block">
+                <img class="build-img1"src="https://res.cloudinary.com/eloagbawe/image/upload/v1571165842/lxkz63t0tc0ns0qhblju.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background:rgba(129, 22, 124, 0.05);">
+        <div class="row">
+
+            <!------------------------- Accordion------------------------------------>
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
@@ -644,15 +1069,106 @@
                 </div>
             </div>
 
+            <!--------------------- Options ---------------->
+            <div class="container pb-5 pt-5">
+                <h4 class="text-center font-weight-bold options-header"> On Start.ng, you are priviledged to</h4>
+                <div class="row options">
+                    <div class="col col-lg-6 col-md-6 col-sm-12">
+                        <ul>
+                            <li>
+                                <img src="https://res.cloudinary.com/dulniapvg/image/upload/v1571144891/icons%20-hng/learn_tkcclk.png" alt="learn-icon">
+                                <p>
+                                    <span>Learn from the Best Teachers</span> <br>
+                                    Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                                </p>
+                            </li>
 
+                            <li>
+                                <img src="https://res.cloudinary.com/dulniapvg/image/upload/v1571144891/icons%20-hng/support_cbws74.png" alt="support-icon">
 
-            <div class="col-md-10 offset-md-1 pb-5 pt-5">
-                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
+                                <p>
+                                    <span>Supports from Mentors</span> <br>
+                                    Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg. 
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col col-lg-6 col-md-6 col-sm-12">
+                        <ul>
+                            <li>
+                                <img src="https://res.cloudinary.com/dulniapvg/image/upload/v1571144891/icons%20-hng/join_hktys5.png" alt="join-icon" class="img-fluid">
+
+                                <p>
+                                    <span>Join our Online Developer Community</span> <br>
+                                    Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                                </p>
+                            </li>
+
+                            <li>
+                                <img src="https://res.cloudinary.com/dulniapvg/image/upload/v1571144891/icons%20-hng/earn_yhhd5c.png" alt="earn-certificate-icon">
+                                <p>
+                                    <span>Earn a Certifcate</span> <br>
+                                    Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-10 offset-md-1 pt-5 pb-5">
-                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
+
+            <!---------------------- Testimonials ---------------------------->
+
+            <div class="container pb-5 pt-5 testimonial">
+                <h4 class="text-center font-weight-bold testimonial-header">What students have to say about us</h4>
+                <div class="row">
+                    <div class="col col-12 col-lg-12 col-md-12 col-sm-12 bg-white p-5 mb-5 testimony">
+                        <p class="mb-5">
+                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.
+                        </p>
+                        <div class="testimony-sign">
+                            <img src="https://res.cloudinary.com/dulniapvg/image/upload/v1571161150/icons%20-hng/Ellipse_tmqmp5.png" alt="user-image" style="width: 4em; height: 5em;">
+                            <div class="ml-4">
+                                <div class="mb-2">
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                </div>
+                                <p> <strong>Dennis Lagbaja</strong> 
+                                   <br>
+                                   <span><em> Completed the Front End Developer Class</em></span> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-12 col-lg-12 col-md-12 col-sm-12 bg-white p-5 mb-5 testimony">
+                        <p class="mb-5">
+                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.
+                        </p>
+                        <div class="testimony-sign">
+                            <img src="https://res.cloudinary.com/dulniapvg/image/upload/v1571161150/icons%20-hng/Ellipse_1_dt1vtw.png" alt="user2-image" style="width: 4em; height: 5em;">
+                            <div class="ml-4">
+                                <div class="mb-2">
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                    <i class="fas fa-star icon fa-lg"></i>
+                                </div>
+                                <p> <strong>Khadirat Uche Jumbo</strong> 
+                                    <br>
+                                    <span><em>Completed the Laravel PHP Class</em></span> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!------------------------- Subscription Section ------------------------------------>
             <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
                 <div class="container pt-5 pb-5">
                     <div class="row align-items-center">
@@ -675,7 +1191,7 @@
     </div>
 
 
-    <!-- Footer -->
+    <!--------------------------Footer ----------------------------------->
     <div class="container-fluid text-white deep">
         <footer>
             <div class="container">
@@ -715,6 +1231,8 @@
 
             </div>
     </div>
+
+
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
         <div class="container text-right">
             <div class="row icons">
@@ -728,7 +1246,7 @@
         </footer>
     </div>
 
-    <!-- End of Footer -->
+    <!--------------------------- End of Footer ------------------------------------------>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>

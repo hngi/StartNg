@@ -38,71 +38,7 @@
         border-color: #000;
     }
     /* Style for Navbar Ends */
-    /* Style for Footer Starts */
     
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Nunito', sans-serif;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    .deep {
-        background: #3A0842;
-        color: #fff;
-    }
-    
-    .deep #slink {
-        background: #44CF6C;
-        border-radius: 10px;
-        color: white;
-        padding: 10px 70px;
-    }
-    
-    .deep li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 16px;
-        line-height: 30px;
-    }
-    
-    .deep li {
-        list-style: none;
-    }
-    
-    .deep li a:hover {
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: none;
-    }
-    
-    .icons i {
-        font-size: 26px;
-        height: 50px;
-        width: 50px;
-        padding: 10px 20px;
-        color: white;
-    }
-    
-    .icons i.fa.fa-twitter:hover {
-        color: #00aced;
-    }
-    
-    .icons i.fa.fa-facebook:hover {
-        color: #3b5598;
-    }
-    
-    .icons i.fa.fa-instagram:hover {
-        color: #ed3833;
-    }
-    /* Style for Footer Ends */
     
     body {
         box-sizing: border-box;
@@ -234,7 +170,7 @@
     
     .find i {
         position: absolute;
-        top: 52%;
+        top: 55%;
         left: 26%;
         padding: 9px 8px;
         color: #000000;
@@ -333,7 +269,7 @@
     }
     /*... Footer...*/
     
-    .page-footer {
+    /*.page-footer {
         margin-top: 80px;
         background-color: #3A0842;
     }
@@ -359,7 +295,7 @@
     
     .footer-copyright a img {
         margin-right: 15px;
-    }
+    } */
     
     .col-md-4 {
         overflow: hidden;
@@ -402,6 +338,72 @@
     .float-right a:hover {
         color: #44CF6C;
     }
+
+    /* Style for Footer Starts */
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .deep {
+        background: #3A0842;
+        color: #fff;
+    }
+    
+    .deep #slink {
+        background: #44CF6C;
+        border-radius: 10px;
+        color: white;
+        padding: 10px 70px;
+    }
+    
+    .deep li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    
+    .deep li {
+        list-style: none;
+    }
+    
+    .deep li a:hover {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    .icons i {
+        font-size: 26px;
+        height: 50px;
+        width: 50px;
+        padding: 10px 20px;
+        color: white;
+    }
+    
+    .icons i.fa.fa-twitter:hover {
+        color: #00aced;
+    }
+    
+    .icons i.fa.fa-facebook:hover {
+        color: #3b5598;
+    }
+    
+    .icons i.fa.fa-instagram:hover {
+        color: #ed3833;
+    }
+    /* Style for Footer Ends */
     
     @media only screen and (max-width: 576px) {
         .online-link {
@@ -439,11 +441,16 @@
     /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
     
     @media only screen and (max-width: 802px) {
+
+        .find i {
+        left: 16%;
+        }
+        
         .find input[type="text"] {
-            width: 65%;
+            width: 80%;
         }
         .results {
-            width: 65%;
+            width: 80%;
             margin: 0 auto;
         }
         .result1 {
