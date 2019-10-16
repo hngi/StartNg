@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
     <title>Complete Beginner</title>
 
     <style>
@@ -371,8 +373,7 @@
 
         .build{
             background-color: #2dce89;
-            height: 350px;
-            justify-content: center;
+            height: auto;
         }
 
         .build h2{
@@ -380,7 +381,30 @@
         }
 
         .build-text{
-            padding: 2em;
+            width: 550px;
+            padding: 80px 20px 30px 80px;
+            margin-left: 0;
+        }
+
+        .build-text > p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #000000;
+        }
+
+        .build-img {
+            width: 40%;
+            height: auto;
+        }
+        
+        .build-img1{
+            width: 100%;
+            height: auto;
+            transform: scale(1.61);   
         }
 
 
@@ -471,29 +495,44 @@
                 display: inline-block !important
             }
 
+            .build-img {
+                width: 100%;
+                order: 1 !important;
+            }
+
+            .build-text{
+                padding: 80px 20px 30px;
+                margin-left: 0;
+                width: 100%;
+            }
+
+
         }
 
-        @media only screen and (min-width: 768px){
+        /* @media only screen and (min-width: 768px){
 
-                .build-text{
+            .build{
+                display: flex;
+                flex-direction: row;
+            }
+
+            .build-text{
                 width: 500px;
                 margin-left:100px;
                 padding-top:80px;
-            }
+            } */
             
-            .build-img1{
-                margin-left :850px;
-                z-index: -1px;
-                width: 700px;
-                height:537px;
-                margin-top: -23.3em;
-            }
+            /* .build-img{
+                width: 47.5em;
+                margin-top: -5.8em;
+                z-index: -2;
+            } */
 
-            .testimony p{
+            /* .testimony p{
                 font-size: 20px;
             }
 
-        }
+        } */
 
     </style>
 </head>
@@ -634,22 +673,21 @@
 
     <!------------------------ Call to Action------------------------------>
     <div class="container-fluid build">
-        <div class="row">
-            <div class="container build-text col col-lg-4 col-sm-12">
+        <div class="row overflow--h build">
+            <div class="container build-text">
                 <h2>Build Real Time Project</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim.
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Augue mollis a molestie sit. Odio lobortis justo sit at eget semper amet adipiscing. 
+                    Netus sit imperdiet tincidunt ut. Habitasse amet sagittis egestas quis ipsum.
                 </p>
-                <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#3F113D; color: #fff; border-color: #3F113D; font-size: 16px;">Start Learning</a>
+                <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#3F113D; color: #fff; border-color: #3F113D; font-size: 16px;">Start
+                        Learning</a>
             </div>
-
-            <div class="col col-lg-8 build-img d-none d-sm-block">
-                <img  class="build-img1"src="https://res.cloudinary.com/eloagbawe/image/upload/v1571165842/lxkz63t0tc0ns0qhblju.png">
+            <div class="build-img d-none d-lg-block">
+                <img class="build-img1"src="https://res.cloudinary.com/eloagbawe/image/upload/v1571165842/lxkz63t0tc0ns0qhblju.png">
             </div>
-
         </div>
     </div>
-
 
     <div class="container-fluid" style="background:rgba(129, 22, 124, 0.05);">
         <div class="row">
