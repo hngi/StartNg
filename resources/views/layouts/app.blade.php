@@ -12,7 +12,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--<title>{{ config('app.name', 'Start NG') }}</title>-->
-    <title>Start NG - {{ $title }}</title>
+    <!--<title>@if ($title ?? '') Start NG - {{ $title ?? '' }} @else Start NG @endif</title>-->
+    
+    <title>Start NG - {{ $title ?? '' }}</title> 
+
 
     <style>
         body {
@@ -157,9 +160,9 @@
                         <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="courses.html">Our Course</a></li>
-                        <li><a href="hireGrad.html">Hire a Grad</a></li>
+                        <li><a href="/hireGrad">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="curriculum.html">Curriculum</a></li>
@@ -170,11 +173,11 @@
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="search.html">Find a Course</a></li>
                         <li><a href="#">Our Partners</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="/contactus">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="help.html">FAQ</a></li>
-                        <li><a href="termsOfService.html">Terms of Service</a></li>
+                        <li><a href="/help">FAQ</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </div>
                 </div>

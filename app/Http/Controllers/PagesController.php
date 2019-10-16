@@ -20,4 +20,19 @@ class PagesController extends Controller
         $title = 'Hire A Graduate';
         return view('pages.hireGrad')->with('title', $title);
     }
+
+    public function contactus(){
+        $title = 'Contact Us';
+        return view('pages.contactus')->with('title', $title);
+    }
+
+    public function help(){
+        $title = 'Help';
+        return view('pages.help')->with('title', $title);
+    }
+
+    public function terms(){
+        $title = 'Terms of Service';
+        return view('pages.terms')->with('title', $title);
+    }
 }
