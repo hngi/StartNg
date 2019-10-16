@@ -84,7 +84,9 @@
         a:hover {
             text-decoration: none;
         }
-        
+        .form-spacer {
+            margin: 5px
+        }
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -104,6 +106,15 @@
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
+        #error_message{
+            margin-bottom: 20px;
+            padding: 0px;
+            background: #fe8b8e;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            transition:all 0.2s ease;
+        }
         /* Style for Footer Ends */
         
         .body-banner {
@@ -113,6 +124,49 @@
             background-position: center center;
         }
     </style>
+
+    <!-- javascript validation -->
+    <script type="text/javascript">
+        function validation() {
+            var fname = document.getElementById("fname").value;
+            var email = document.getElementById("email").value;
+            var companyname = document.getElementById("companyname").value;
+            var jobtitle = document.getElementById("jobtitle").value;
+            var error_message = document.getElementById("error_message");
+            var text;
+
+            if (fname == ""){
+                text = "Please fill in your fullname ";
+                error_message.innerHTML = text;
+                return false; 
+            }
+
+            if (email.indexOf("@") == -1 || email.length < 6){
+                    text ="Please enter a valid email";
+                    error_message.innerHTML = text;
+                    return false;
+            }
+
+            if (companyname == "" ){
+                    text ="Company Name is required";
+                    error_message.innerHTML = text;
+                    return false;
+
+            }
+
+            if (jobtitle == "" ){
+                    text ="Job Title is required";
+                    error_message.innerHTML = text;
+                    return false;
+            }else{
+                 error_message.innerHTML = "";
+            }
+
+            alert("Subscribed Successfully")
+            return true;
+        }
+    </script>
+    <!-- end of javascript validation -->
 </head>
 
 <body>
@@ -264,23 +318,34 @@
         <div class="col-md-10 offset-md-1 pt-5 pb-5">
             <h4 class="text-center font-weight-bold pb-3">Learn more about hiring our grads</h4>
             <p class="text-center font-weight-bold pb-5">Fill out the form and we will get in touch.</p>
-            <div class="row pb-4">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Full Name">
+            <form >
+                <div id="error_message"></div>
+                <div class="row pb-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" id="fname">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" id="email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company Name" id="companyname">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Job Title" id="jobtitle">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <input type="email" class="form-control" placeholder="Email Address">
+                <div class="text-center">
+                    <button class="btn btn-secondary" style="background-color: #3A0842; border-color: #3A0842; color: #fff;" onclick="return validation()">Subscribe</button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Company Name">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Job Title">
-                </div>
-            </div>
-            <a class="btn btn-secondary col-md-2 offset-md-5 mt-5" style="background-color: #3A0842; border-color: #3A0842; color: #fff;">Subscribe</a>
+            </form>
         </div>
     </div>
 
@@ -342,6 +407,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

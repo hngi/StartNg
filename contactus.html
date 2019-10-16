@@ -84,6 +84,18 @@
         a:hover {
             text-decoration: none;
         }
+        #error_message {
+            margin-bottom: 20px;
+            padding: 0px;
+            background: #44CF6C;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            transition: all 0.5s ease;
+            width: 350px;
+            margin: 0 auto;
+            font-weight: 700;
+        }
         
         .icons i {
             font-size: 26px;
@@ -153,6 +165,60 @@
 
         /* Body Style Ends*/
     </style>
+
+    
+<script type="text/javascript">
+            /* Validation for form begins */
+         function validation()  {
+            var Fname = document.getElementById("Fname");
+            var Lname = document.getElementById("Lname");
+            var Eaddr = document.getElementById("Eaddr");
+            var Pnum = document.getElementById("Pnum");
+            var comment = document.getElementById("comment");
+            var error_message = document.getElementById("error_message");
+            var text;
+
+            error_message.style.padding = "7px"; 
+  
+            if(Fname.value.trim()=="")
+            {
+                text = "Input First name";
+                Fname.style.border = "solid 1px red";
+                error_message.innerHTML = text;
+                return false;
+            } else if(Lname.value.trim()=="")
+            {
+                text = "Input Last name";
+                Lname.style.border = "solid 1px red";
+                error_message.innerHTML = text;
+                return false;
+            } else if(Eaddr.value.trim()=="")
+            {
+                text = "Input valid email";
+                Eaddr.style.border = "solid 1px red";
+                error_message.innerHTML = text;
+                return false;
+            } else if(Pnum.value.trim()=="")
+            {
+                text = "Input valid Phone number";
+                Pnum.style.border = "solid 1px red";
+                error_message.innerHTML = text;
+                return false;
+            } else if(comment.value.trim().length<20)
+            {
+                text = "Message is too short not upto 20 words";
+                comment.style.border = "solid 1px red";
+                error_message.innerHTML = text;
+                return false;
+            } else{
+                alert("Submitted Successfully")
+                return true;
+            }
+            
+        }
+        /* Validation for form ends */
+      </script>
+
 </head>
 
 <body>
@@ -199,19 +265,21 @@
         </div>
     </div>
     <div class="container-fluid mt-5">
-        <form>
+            <div id="error_message"></div>
+        <form id="myform" onsubmit="return validation()">
             <div class="col-md-10 offset-md-1 pt-5 pb-5">
                 <div class="row mb-2">
                     <div class="col-md-6">
+                       
                         <div class="form-group">
                             <label for="usr" class="pb-2">First Name</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="Fname">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Last Name</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="Lname">
                         </div>
                     </div>
                 </div>
@@ -219,13 +287,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Email Address</label>
-                            <input type="email" class="form-control" id="usr">
+                            <input type="email" class="form-control" id="Eaddr">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Phone Number</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="Pnum">
                         </div>
                     </div>
                 </div>
@@ -240,7 +308,7 @@
 
                 <div class="col-md-6 offset-md-3 text-center mb-5">
                     <p class="pb-3">By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
-                    <button class="btn btn-success pl-5 pr-5">Submit</button>
+                    <button class="btn btn-success pl-5 pr-5"  type="submit">Submit</button>
                 </div>
             </div>
         </form>
@@ -309,10 +377,15 @@
     </div>
 
     <!-- End of Footer -->
+    <script>
+        fuction validation() {
+          alert ("wlorking");
+      </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
