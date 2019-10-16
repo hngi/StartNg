@@ -87,7 +87,7 @@
         #error_message {
             margin-bottom: 20px;
             padding: 0px;
-            background: #44CF6C;
+            background: red;
             color: #fff;
             text-align: center;
             font-size: 20px;
@@ -239,13 +239,13 @@
                        
                         <div class="form-group">
                             <label for="usr" class="pb-2">First Name</label>
-                            <input type="text" class="form-control" id="Fname">
+                            <input type="text" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Last Name</label>
-                            <input type="text" class="form-control" id="Lname">
+                            <input type="text" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname">
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Phone Number</label>
-                            <input type="text" class="form-control" id="Pnum">
+                            <input type="text" pattern = "^[0-9\)\(+-]+$" title = "Please input a correct phone number" class="form-control" id="Pnum">
                         </div>
                     </div>
                 </div>
