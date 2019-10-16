@@ -17,10 +17,10 @@ class CreateCourseTable extends Migration
             $table->bigIncrements('id');
             $table->string('title', 255);
             $table->string('price', 255);
-            $table->string('duration', 55)->nullable();
-            $table->text('description')->nullable();
-            $table->string('curriulum', 255)->nullable();
-            $table->string('image', 255)->nullable();
+            $table->string('duration', 55);
+            $table->text('description');
+            $table->string('curriulum', 255);
+            $table->string('image', 255);
             // $table->engine = 'InnoDB'->charset('utf8') ;
             $table->timestamps();
         });
