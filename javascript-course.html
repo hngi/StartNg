@@ -13,38 +13,35 @@
     <style>
         body {
             font-family: Nunito;
-            overflow-x: hidden;
         }
-
         /* Style for Navbar Starts */
-
+        
         .navbar-custom li a {
             color: #000;
         }
-
+        
         .btn-success {
             background-color: #2DCE89;
             color: #fff;
             border: thin solid #2dce89;
         }
-
+        
         .btn-success:hover {
-            background-color: #2DCE89;
+            background-color: rgb(2, 20, 12);
             color: #fff;
-            border: thin solid #2dce89;
+            border: thin solid rgb(2, 20, 12);
         }
-
+        
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
-
+        
         .custom-toggler.navbar-toggler {
             border-color: #000;
         }
-
         /* Style for Navbar Ends */
         /* Style for Footer Starts */
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -52,46 +49,42 @@
             box-sizing: border-box;
             font-family: 'Nunito', sans-serif;
         }
-
+        
         a {
             text-decoration: none;
         }
-
-        .more a {
-            overflow-y: hidden;
-        }
-
+        
         .deep {
             background: #3A0842;
             color: #fff;
         }
-
+        
         .deep #slink {
             background: #44CF6C;
             border-radius: 10px;
             color: white;
             padding: 10px 70px;
         }
-
+        
         .deep li a {
             text-decoration: none;
             color: #fff;
             font-size: 16px;
             line-height: 30px;
         }
-
+        
         .deep li {
             list-style: none;
         }
-
+        
         .deep li a:hover {
             text-decoration: none;
         }
-
+        
         a:hover {
             text-decoration: none;
         }
-
+        
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -99,345 +92,112 @@
             padding: 10px 20px;
             color: white;
         }
-
+        
         .icons i.fa.fa-twitter:hover {
             color: #00aced;
         }
-
+        
         .icons i.fa.fa-facebook:hover {
             color: #3b5598;
         }
-
+        
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
-
         /* Style for Footer Ends */
-
+        
         .accordion .card-header:after {
             font-family: 'FontAwesome';
             content: "\f068";
             float: right;
         }
-
+        
         .accordion .card-header.collapsed:after {
+            /* symbol for "collapsed" panels */
             content: "\f067";
         }
-
+        
         .panel-group .panel {
+            /* border-radius: 5px; */
+            /* border-color: #DBCCD9; */
             padding: 0;
         }
-
+        
         .panel-default>.panel-heading {
             color: #000;
             font-size: 25px;
             font-weight: bold;
             background-color: #DBCCD9;
+            /* border-color: #DBCCD9; */
         }
-
+        
         .panel-default {
             margin-bottom: 30px;
         }
-
+        
         .panel-title {
             font-size: 25px;
             background: #DBCCD9;
         }
-
+        
         .panel-title>a {
             display: block;
             padding: 15px;
             text-decoration: none;
             color: #000;
         }
-
+        
         .short-full {
             float: right;
             color: #fff;
         }
-
+        /*.panel-default>.panel-heading+.panel-collapse>.panel-body {
+            /* border: solid 1px #EEEEEE; */
+        /* background: rgba(129, 22, 124, 0.05); 
+        }
+        */
+        
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
-
+        
         .panel-group .panel {
             border: none;
             -webkit-box-shadow: none;
         }
-
+        
         .exp-tt {
             font-size: 16px;
             padding-top: 60px;
             padding-bottom: 30px;
         }
-
+        
         h3 .text-center {
             font-size: 25px;
         }
-
+        
         .panel-tt {
             margin: 20px 0 40px 0;
             font-weight: bold;
         }
-
+        
         .panel-title {
             font-weight: bold;
         }
-
+        
         .panel-body ul {
             padding-inline-start: 10px;
         }
-
+        
         .panel-body li {
             list-style-type: none;
             padding: 7px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             font-size: 16px;
         }
-
+        
         .course-drop {
             padding-bottom: 40px;
-        }
-
-        /* What you will learn */
-        .build img {
-            height: 100%;
-            width: 100%;
-        }
-
-        .learn ul li {
-            list-style-type: none;
-            font-style: normal;
-            font-weight: normal;
-            margin: 30px 0;
-            padding-bottom: 10px;
-            font-size: 20px;
-            line-height: 22px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        }
-
-        .learn img{
-            margin-right: 10px;
-        }
-
-        .head-2 h2 {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 25px;
-            line-height: 34px;
-            text-align: center;
-            letter-spacing: 0.655606px;
-            color: #000000;
-        }
-
-        .head-3 h2 {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 40px;
-            line-height: 55px;
-            letter-spacing: 0.655606px;
-            color: #000000;
-        }
-
-        .head-3 p {
-            font-family: Lato;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 24px;
-            color: #000000;
-        }
-
-        .head-3 button {
-            background: #3F113D;
-            border-radius: 10px;
-            border: none;
-            padding: 10px 20px;
-            color: white;
-        }
-
-        .head-3 {
-            /* padding: 10px 0 10px 100px; */
-            margin: 10px;
-        }
-
-        /* testimonial */
-
-        .testimonials-container {
-            margin: 20px auto;
-            max-width: 768px;
-            padding: 20px 60px;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            background: #FFFFFF;
-            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-            border-radius: 20px;
-        }
-
-        .testimonial {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 30px;
-            color: #333333;
-        }
-
-        .subtop {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 25px;
-            line-height: 31px;
-            text-align: center;
-            letter-spacing: 0.655606px;
-            color: #2A2B2A;
-        }
-
-        .itemposition {
-            display: flex;
-        }
-
-        .stuimg {
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .user-details {
-            margin-left: 10px;
-            ;
-        }
-
-        .username {
-            margin: 0;
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 124.8%;
-            letter-spacing: 0.655606px;
-            padding: 0 9px;
-            color: #474747;
-        }
-
-        .checked {
-            padding: 8px;
-            font-size: 20px;
-            color: #FAF35E;
-        }
-
-        .action {
-            margin: 0;
-            font-family: Open Sans;
-            font-style: italic;
-            font-weight: normal;
-            font-size: 14px;
-            padding: 0 7px;
-            line-height: 151.2%;
-            color: #737373;
-        }
-
-        .more {
-            text-align: center;
-        }
-
-        .more a {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 12px;
-            padding: 14px 51.49px;
-            text-align: center;
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-
-        .more a.xbutton {
-            padding: 12px;
-            background: #44CF6C;
-            color: #fff;
-            border-radius: 10px;
-            border: none;
-        }
-
-        /*  */
-        .projects-horizontal {
-            color:#313437;
-            background-color:#fcfcfc;
-        }
-        .projects-horizontal p {
-            color:#2b2d42;
-            font-size:15px;
-            font-family:'Open Sans', sans-serif;
-        }
-        .projects-horizontal h2 {
-            font-weight:bold;
-            margin-bottom:40px;
-            padding-top:40px;
-            color:#3a0842;
-            font-size:25px;
-            font-family:Nunito, sans-serif;
-        }
-        .icon-div{
-            width:82px;
-            height:82px;
-            background-color:#44cf6c;
-            border-radius:50%;
-        }
-        .icon-div img{
-            padding:20px;
-        }
-
-        @media (max-width:767px) {
-            .projects-horizontal h2 {
-                margin-bottom:25px;
-                padding-top:25px;
-                font-size:25px;
-                font-family:Nunito, sans-serif;
-                color:#3a0842;
-            }
-        }
-        .projects-horizontal .intro {
-            font-size:16px;
-            max-width:500px;
-            margin:0 auto 10px;
-        }
-        .projects-horizontal .projects {
-            padding-bottom:40px;
-        }
-        .projects-horizontal .item {
-            padding-top:60px;
-            min-height:160px;
-        }
-        @media (max-width:767px) {
-            .projects-horizontal .item {
-                padding-top:40px;
-                min-height:160px;
-            }
-            
-        }
-        .projects-horizontal .item .name {
-            font-size:16px;
-            font-weight:bold;
-            margin-top:10px;
-            margin-bottom:15px;
-            color:#3a0842;
-            font-family:'Open Sans', sans-serif;
-        }
-        @media (max-width:991px) {
-            .projects-horizontal .item .name {
-                margin-top:22px;
-                color:#3a0842;
-                font-family:'Open Sans', sans-serif;
-            }
-        }
-        .projects-horizontal .item .description {
-            font-size:16px;
-            margin-bottom:0;
-            color:#2b2d42;
         }
     </style>
 </head>
@@ -445,11 +205,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container pt-2 pb-2">
-            <a href="index.html" class="navbar-brand"><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                    class="img-fluid" alt="logo" width="150px"></a>
-            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbar9" style="color: #000;">
+            <a href="index.html" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbar9">
@@ -481,102 +238,40 @@
                 <div class="col-md-6">
                     <p class="font-weight-bold">N50,000 for 3 months full training </p>
                     <h4 class="font-weight-bold pb-3">Modern Javascript from Scratch</h4>
-                    <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra
-                        dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
                     <div class="clearfix">
                         <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html"
-                                style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+                            <a class="btn btn-success pt-1 pb-1" href="register.html">Start
                                 Learning</a>
                         </div>
                         <div class="float-right">
-                            <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1"
-                                style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1"
-                                style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                            <a href="javascript-course.html" style="color: #000;">Beginner</a>
+                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
                 </div>
                 <div class="col-md-6">
-                    <img class="img-fluid"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964974/startng/Group_369_ubc2ec.png">
+                    <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964974/startng/Group_369_ubc2ec.png">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container pb-5 pt-5">
-        <div class="head-2 text-center ">
-            <h2 class="text-center">What you will learn</h2>
-        </div>
-        <div class="row">
-
-            <div class="col-md-6 col-sm-12  learn">
-                <ul>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        UserFlow, User journey using FlowMapp</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        User Research, ideation</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        Interactive Design</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        Prototyping using Figma</li>
-                </ul>
-
-            </div>
-            <div class="col-md-6 col-sm-12  learn">
-                <ul class="">
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        Wireframes(Low-Fidelity & High Fidelity)</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        Mobile Interface(IOS, Android)</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        IOS Design Guidelines</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
-                            alt="">
-                        Material Design Guidelines</li>
-                </ul>
-            </div>
-        </div>
-
+        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
     </div>
-    <div class="contaner-fluid bg-success ">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 head-3 p-5">
-                <h2>Build Real time Project</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Facere vel deleniti repellat dolorum odit recusandae id
-                    a quos harum dicta? Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Eligendi aut pariatur quae optio est velit
-                    modi tenetur facere id blanditiis!
-                </p>
-                <a href="register.html"><button>Start Learning</button></a>
-            </div>
-            <div class=" col d-none d-sm-none d-md-block build ">
-                <img class="img-fluid "
-                    src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169865/Group_227_c71pat.png" alt="">
-            </div>
-        </div>
+    <div class="contaner-fluid">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
     </div>
 
     <div class="container">
 
         <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
             <div class="container course-drop">
-                <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows
-                    or MAC OSX
+                <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
                 <h3 class="text-center panel-tt">Course Curriculum </h3>
 
@@ -587,18 +282,15 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Introduction
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Introduction
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                         </a>
 
 
                                     </h4>
                                 </div>
-                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingOne">
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -621,18 +313,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingTwo">
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -655,18 +343,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -689,21 +373,16 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseFour" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        Here you go with the content of accordion's heading 3. You may place textual
-                                        information, images etc. here.
+                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
                                     </div>
                                 </div>
                             </div>
@@ -711,18 +390,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseFive" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -745,18 +420,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseSix" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -787,17 +458,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion1"
-                                            href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> User
-                                            Research
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> User Research
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingOne">
+                                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -820,18 +488,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion1" href="#collapseEight" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Ideation
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Ideation
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseEight" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingTwo">
+                                <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -854,18 +518,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion1" href="#collapseNine" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Wireframes
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Wireframes
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseNine" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -888,18 +548,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion1" href="#collapseTen" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -922,18 +578,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion1" href="#collapseEleven" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -956,18 +608,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
-                                            Lorem Ipsum
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel"
-                                    aria-labelledby="headingThree">
+                                <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
@@ -998,124 +646,13 @@
 
 
 
-            <!-- <div class=" "> -->
-                
-    <div class="projects-horizontal">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">On Start.ng, you are privileged to</h2>
+            <div class="col-md-10 offset-md-1 pb-5 pt-5">
+                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
             </div>
-            <div class="row projects">
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
-                            <div class="icon-div">
-                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210454/icon1_sehqtm.png">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <h3 class="name">Learn from the Best teachers</h3>
-                            <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
-                            <div class="icon-div">
-                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210456/icon2_cxog3h.png">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <h3 class="name">Join our Online Developer Community</h3>
-                            <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
-                            <div class="icon-div">
-                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210458/icon3_xd7ce2.png">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <h3 class="name">Supports from Mentors</h3>
-                            <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
-                            <div class="icon-div">
-                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210461/icon4_gix6ni.png">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <h3 class="name">Earn a Certificate</h3>
-                            <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-10 offset-md-1 pt-5 pb-5">
+                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
             </div>
-        </div>
-   
-                <!-- <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png"> -->
-            <!-- </div> -->
-            <p class="subtop">What Students have to say about us</p>
-            <div class="testimonials-container">
-                <p class="testimonial">
-                    The HNG internship is a 3-month remote internship designed to find and develop the most talented
-                    software developers.
-                    Everyone is welcome to participate (there is no entrance exam).
-                    Anyone can log into the internship using their laptop. Each week, we give tasks.
-                </p>
-                <br />
-                <div class="itemposition">
-                    <img class="stuimg"
-                        src="https://res.cloudinary.com/cre8tcodes/image/upload/v1571178595/Ellipse1_kufvgh.png"
-                        alt="student" />
-                    <div class="user-details">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <p class="username">Dennis Lagbaja</p>
-                        <p class="action">Completed the Front End Developer Class</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonials-container">
-                <p class="testimonial">
-                    The HNG internship is a 3-month remote internship designed to find and develop the most talented
-                    software developers.
-                    Everyone is welcome to participate (there is no entrance exam).
-                    Anyone can log into the internship using their laptop. Each week, we give tasks.
-                </p>
-                <br />
-                <div class="itemposition">
-                    <img class="stuimg"
-                        src="https://res.cloudinary.com/cre8tcodes/image/upload/v1571178595/Ellipse2_we7s7n.png"
-                        alt="student" />
-                    <div class="user-details">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <p class="username">Khadirat Uche Jumbo</p>
-                        <p class="action">Completed the Laravel PHP Class</p>
-                    </div>
-                </div>
-            </div>
-            <br />
-            <div class="more">
-                <a class="xbutton" href="#">See More Reviews</a>
-            </div>
-            </div>
+
             <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
                 <div class="container pt-5 pb-5">
                     <div class="row align-items-center">
@@ -1125,13 +662,11 @@
                             </p>
                             <form class="form-inline">
                                 <input type="text" class="form-control col-md-8" id="email">
-                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5"
-                                    style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
+                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                             </form>
                         </div>
                         <div class="col-md-4">
-                            <img class="img-fluid"
-                                src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
+                            <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
                         </div>
                     </div>
                 </div>
@@ -1147,15 +682,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                            alt="">
+                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
                     </div>
                 </div>
 
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="about.html">About Us</a></li>
@@ -1176,7 +710,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="help.html">FAQ</a></li>
                         <li><a href="termsOfService.html">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </div>
                 </div>
 
