@@ -259,8 +259,8 @@
         }
 
         .head-3 {
-            /* padding: 10px 0 10px 100px; */
-            margin: 10px;
+            padding: 10px 0 10px 100px;
+            margin: 0;
         }
 
         /* testimonial */
@@ -285,6 +285,13 @@
             line-height: 30px;
             color: #333333;
         }
+        
+        .secbox {
+            background-color: #fff
+            max-width: 100%;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
 
         .subtop {
             font-family: Nunito;
@@ -302,13 +309,14 @@
         }
 
         .stuimg {
+            position: static;
             border-radius: 50%;
             object-fit: cover;
         }
 
         .user-details {
+            position: static;
             margin-left: 10px;
-            ;
         }
 
         .username {
@@ -324,8 +332,8 @@
         }
 
         .checked {
-            padding: 8px;
-            font-size: 20px;
+            padding: 5px;
+            font-size: 15px;
             color: #FAF35E;
         }
 
@@ -356,7 +364,7 @@
         }
 
         .more a.xbutton {
-            padding: 12px;
+            padding: 12px 28px;
             background: #44CF6C;
             color: #fff;
             border-radius: 10px;
@@ -417,7 +425,6 @@
                 padding-top:40px;
                 min-height:160px;
             }
-            
         }
         .projects-horizontal .item .name {
             font-size:16px;
@@ -553,7 +560,7 @@
     </div>
     <div class="contaner-fluid bg-success ">
         <div class="row">
-            <div class="col-md-6 col-sm-12 head-3 p-5">
+            <div class="col-md-6 col-sm-12 head-3">
                 <h2>Build Real time Project</h2>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -1060,10 +1067,9 @@
                 </div>
             </div>
         </div>
-   
-                <!-- <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png"> -->
-            <!-- </div> -->
+   </div>
+        </div>
+            <section class="secbox">
             <p class="subtop">What Students have to say about us</p>
             <div class="testimonials-container">
                 <p class="testimonial">
@@ -1115,7 +1121,7 @@
             <div class="more">
                 <a class="xbutton" href="#">See More Reviews</a>
             </div>
-            </div>
+            </section>
             <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
                 <div class="container pt-5 pb-5">
                     <div class="row align-items-center">
@@ -1124,7 +1130,7 @@
                             <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                             </p>
                             <form class="form-inline">
-                                <input type="text" class="form-control col-md-8" id="email">
+                                <input type="text" placeholder="E-mail Address"class="form-control col-md-8" id="email">
                                 <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5"
                                     style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                             </form>
