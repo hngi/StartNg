@@ -16,7 +16,6 @@
 
     <style>
         /* Style for Navbar Starts */
-        
         .navbar-custom li a {
             color: #000;
         }
@@ -37,7 +36,7 @@
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
         
-        .custom-toggler.navbar-toggler {
+        .custom-toggler .navbar-toggler {
             border-color: #000;
         }
         /* Style for Navbar Ends */
@@ -127,6 +126,7 @@
         
         .global_reach {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570916337/startng/Rectangle_10_pwiqsf.png');
+            background-color: #2dce89;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -218,7 +218,7 @@
 
 
             @media screen and (min-width: 1000px){
-
+                
                 .global_reach-content {
                 width: 50%;
                 }
@@ -231,6 +231,45 @@
                 }
             }
         /*carousel styling ends here*/
+
+        @media screen and (max-width: 1000px){
+            nav .container {
+                font-size: 1.3em;
+            }
+
+            .navbar-brand {
+                width: 85%;
+
+            }
+
+            .navbar-toggler {
+                border: 1px solid grey;
+                float: right;
+                font-size: 1.1em;
+            }
+
+            .collapse {
+                margin-left: 20px;
+                padding-left: 40px;
+            }
+
+            .collapse .nav-item:last-child a {
+                width: 90%;
+                height: 40px;
+            }
+        }
+
+        @media screen and (min-width: 1000px){
+            .collapse ul {
+                text-align: left;
+                float: right;
+                font-size: 1.2em;
+            }
+
+            .collapse ul li {
+                margin-left: 20px;;
+            }
+        }
     </style>
 </head>
 
@@ -335,10 +374,10 @@
             </a>
         </div>
     
-        </section>
+    </section>
 
-    <div class="container priviledge pt-5 pb-5">
-        <div class="col-md-6 offset-md-3 text-center privP">
+    <div class="container-fluid priviledge pt-5 pb-5">
+        <div class="col-md-6 offset-md-3 text-center">
             <p style="color: #3A0842;">On Start.ng, you are privileged to</p>
         </div>
         <div class="row mt-5 pt-3">
@@ -422,7 +461,7 @@
         </div>
     </div>
 
-   <div class="container-fluid global-reach pt-5 pb-5">
+    <div class="container-fluid global-reach2 pt-5 pb-5" style="background-color: #2dce89;">
         <div class="col-md-6 offset-md-3 text-center pt-5">
             <h4 class="pb-3 rHeader">Our Global Reach</h4>
             <p class="pb-4 rText">Start.ng is the leading online learning platform for programming courses nationwide
