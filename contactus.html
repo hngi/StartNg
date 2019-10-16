@@ -87,7 +87,20 @@
 
         a:hover {
             text-decoration: none;
+       
+        #error_message {
+            margin-bottom: 20px;
+            padding: 0px;
+            background: red;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            transition: all 0.5s ease;
+            width: 350px;
+            margin: 0 auto;
+            font-weight: 700;
         }
+        
 
         .icons i {
             font-size: 26px;
@@ -122,6 +135,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
 
         .contact {
             width: 1200px;
@@ -213,13 +227,15 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">First Name</label>
-                            <input type="text" class="form-control" id="usr">
+
+                            <input type="text" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Last Name</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname">
+
                         </div>
                     </div>
                 </div>
@@ -233,7 +249,9 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Phone Number</label>
+                            <input type="text" pattern = "^[0-9\)\(+-]+$" title = "Please input a correct phone number" class="form-control" id="Pnum">
                             <input type="text" class="form-control" id="usr">
+
                         </div>
                     </div>
                 </div>
@@ -256,10 +274,10 @@
     </div>
 
     <div class="container-fluid support pt-5 pb-5 mb-0" style="padding-left: 15px;">
-
         <h1 class="pt-5 mt-5 pl-3 pl-sm-5 pr-5 ml-md-5" style="font-family: Nunito; font-style: normal; font-weight: bold; font-size: 50px; ">
             CUSTOMER SUPPORT</h1>
         <p class="pt-3 pb-3 pl-3 pl-sm-5 pr-5 ml-md-5" style="font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 15px; letter-spacing: 0.655606px;">
+
             Call +23480500000 or send a mail to support@start.ng</p>
 
     </div>
