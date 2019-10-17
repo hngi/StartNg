@@ -257,10 +257,10 @@
             color: white;
         }
 
-        /* .head-3 {
+        .head-3 {
             padding: 10px 0 10px 100px;
             margin: 0;
-        } */
+        }
 
         /* testimonial */
 
@@ -369,6 +369,8 @@
             border-radius: 10px;
             border: none;
         }
+
+        /*  */
         .projects-horizontal {
             color:#313437;
             background-color:#fcfcfc;
@@ -396,34 +398,6 @@
             padding:20px;
         }
 
-        .projects-horizontal .intro {
-            font-size:16px;
-            max-width:500px;
-            margin:0 auto;
-        }
-        .projects-horizontal .projects {
-            padding-bottom:40px;
-        }
-        .projects-horizontal .item {
-            padding-top:60px;
-            min-height:160px;
-        }
-        
-        .projects-horizontal .item .name {
-            font-size:16px;
-            font-weight:bold;
-            margin-top:10px;
-            margin-bottom:15px;
-            color:#3a0842;
-            font-family:'Open Sans', sans-serif;
-        }
-        
-        .projects-horizontal .item .description {
-            font-size:16px;
-            margin-bottom:0;
-            color:#2b2d42;
-        }
-
         @media (max-width:767px) {
             .projects-horizontal h2 {
                 margin-bottom:25px;
@@ -432,19 +406,33 @@
                 font-family:Nunito, sans-serif;
                 color:#3a0842;
             }
-
-            /* .projects-horizontal .item {
+        }
+        .projects-horizontal .intro {
+            font-size:16px;
+            max-width:500px;
+            margin:0 auto 10px;
+        }
+        .projects-horizontal .projects {
+            padding-bottom:40px;
+        }
+        .projects-horizontal .item {
+            padding-top:60px;
+            min-height:160px;
+        }
+        @media (max-width:767px) {
+            .projects-horizontal .item {
                 padding-top:40px;
                 min-height:160px;
-            } */
-
-            .sec .item1 .icon-div {
-                margin: 0 auto;
             }
-
-
         }
-
+        .projects-horizontal .item .name {
+            font-size:16px;
+            font-weight:bold;
+            margin-top:10px;
+            margin-bottom:15px;
+            color:#3a0842;
+            font-family:'Open Sans', sans-serif;
+        }
         @media (max-width:991px) {
             .projects-horizontal .item .name {
                 margin-top:22px;
@@ -452,23 +440,11 @@
                 font-family:'Open Sans', sans-serif;
             }
         }
-        
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-          footer { text-align: center; }
+        .projects-horizontal .item .description {
+            font-size:16px;
+            margin-bottom:0;
+            color:#2b2d42;
         }
-        
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-            .float-right { margin-top: 25px; }
-        }
-        
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-            .col-md-12 { text-align: center; }
-        }
-
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-            .subbtn { margin-top: 10px; }
-        }
-        
     </style>
 </head>
 
@@ -583,7 +559,7 @@
     </div>
     <div class="contaner-fluid bg-success ">
         <div class="row">
-            <div class="col-md-6 col-sm-12 head-3 p-5">
+            <div class="col-md-6 col-sm-12 head-3">
                 <h2>Build Real time Project</h2>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -1024,53 +1000,52 @@
             </div>
             <div class="row projects">
                 <div class="col-sm-6 item">
-                    <div class="row sec">
-                        <div class="col-md-12 col-lg-3 item1">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-3">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210454/icon1_sehqtm.png">
                             </div>
                         </div>
-                        <div class="col text-md-left text-center">
-                            <h3 class="name ">Learn from the Best teachers</h3>
+                        <div class="col">
+                            <h3 class="name">Learn from the Best teachers</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 item">
-                    <div class="row sec">
-                        <div class="col-md-12 col-lg-3 item1">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-3">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210456/icon2_cxog3h.png">
                             </div>
                         </div>
-                        <div class="col text-md-left text-center">
+                        <div class="col">
                             <h3 class="name">Join our Online Developer Community</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 item">
-                    <div class="row sec">
-                        <div class="col-md-12 col-lg-3 item1">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-3">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210458/icon3_xd7ce2.png">
                             </div>
                         </div>
-                        <div class="col text-md-left text-center">
+                        <div class="col">
                             <h3 class="name">Supports from Mentors</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
                         </div>
                     </div>
                 </div>
-                <!--  -->
                 <div class="col-sm-6 item">
-                    <div class="row sec">
-                        <div class="col-md-12 col-lg-3 item1">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-3">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210461/icon4_gix6ni.png">
                             </div>
                         </div>
-                        <div class="col text-md-left text-center">
+                        <div class="col">
                             <h3 class="name">Earn a Certificate</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
                         </div>
@@ -1142,7 +1117,7 @@
                             </p>
                             <form class="form-inline">
                                 <input type="text" placeholder="E-mail Address"class="form-control col-md-8" id="email">
-                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5, subbtn"
+                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5"
                                     style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                             </form>
                         </div>
