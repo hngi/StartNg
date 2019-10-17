@@ -11,7 +11,7 @@
                         <a class="nav-link" href="/about">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="courses.html">Courses</a>
+                        <a class="nav-link" href="/courses">Courses</a>
                     </li>
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="/hireGrad">Hire A Grad</a>
