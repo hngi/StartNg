@@ -11,12 +11,6 @@
     <title>Javascript</title>
 
     <style>
-        html {
-            width: 100%;
-            padding: 0px;
-            margin: 0px;
-            overflow-x: hidden;
-        }
         body {
             font-family: Nunito;   
         }
@@ -167,7 +161,7 @@
 
         .panel-group .panel {
             border: none;
-            box-shadow: none;
+            -webkit-box-shadow: none;
         }
 
         .exp-tt {
@@ -214,7 +208,7 @@
             list-style-type: none;
             font-style: normal;
             font-weight: normal;
-            margin: 30px 0;
+            margin: 20px 0;
             padding-bottom: 10px;
             font-size: 20px;
             line-height: 22px;
@@ -450,6 +444,17 @@
         }
         @media screen and (min-width: 320px) and (max-width: 480px) {
           footer { text-align: center; }
+
+          .learn p {
+            list-style-type: none;
+            font-style: normal;
+            font-weight: bold;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
         }
         
         @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -464,12 +469,6 @@
         @media screen and (min-width: 320px) and (max-width: 480px) {
             .subbtn { margin-top: 15px; }
         }
-        
-        @media screen and (min-width: 320px) and (max-width: 480px) {
-            .stuimg { width: auto;
-            max-width: 100%;
-            height: auto;
-            }
         /* Responsiveness End Here */
     </style>
 </head>
@@ -548,6 +547,7 @@
         <div class="row">
 
             <div class="col-md-6 col-sm-12  learn">
+            
                     <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
                         UserFlow, User journey using FlowMapp</p>
@@ -560,9 +560,11 @@
                     <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
                         Prototyping using Figma</p>
+        
 
             </div>
             <div class="col-md-6 col-sm-12  learn">
+                
                     <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
                         Wireframes(Low-Fidelity & High Fidelity)</p>
@@ -575,6 +577,7 @@
                     <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
                         Material Design Guidelines</p>
+            
             </div>
         </div>
 
@@ -1150,8 +1153,8 @@
                     </div>
                 </div>
             </div>
-        
-    
+        </div>
+    </div>
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
