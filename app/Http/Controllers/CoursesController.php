@@ -14,10 +14,6 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        /*$data = array(
-            'title' => 'Courses',
-            'courses' => Course::all()
-        );*/
         $courses = Course::all();
         return view('courses.index')->with('courses', $courses);
     }
