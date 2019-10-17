@@ -56,6 +56,10 @@
         #wrapper.toggled #sidebar-wrapper {
             margin-left: 0;
         }
+        .admin-personal-info{
+            border-bottom: 0.5px solid #EAEAF2;
+        }
+       
         
         @media (min-width: 768px) {
             #sidebar-wrapper {
@@ -76,7 +80,6 @@
 <body>
 
     <div class="d-flex" id="wrapper">
-
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper" style="background-color: #3A0842;">
             <div class="sidebar-heading"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
@@ -92,7 +95,6 @@
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
         <div id="page-content-wrapper">
 
@@ -112,15 +114,61 @@
                     </ul>
                 </div>
             </nav>
-
-            <div class="container" style="min-height:80vH;">
+            <div class ="row">
+                <div class="col-12 text-center">
+                    <div class="container">
+                        <br>
+                        <img src="https://res.cloudinary.com/angelae/image/upload/v1571266137/Start-ng-Pre-internship/cdpm6f5a5kyefzxlulbr.png" style=" height: 150px; width: 150px;">
+                        <h4> John Doe - Admin</h4>
+                    </div>
+                </div>
             </div>
-
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a href="https://start.ng" target="_blank" style="text-decoration:none; color:#000;"> Start.ng</a>
-            </div>
-
-
+            <section style="padding: 2% 5% 2% 5%;">
+                <div class="card" style="padding: 2% 5% 2% 5%; border-radius: 10px;">
+                   <h6>Personal Information:</h6> 
+                    <table>
+                        <tr class="admin-personal-info">
+                            <td>Name</td>
+                            <td>John Doe</td>
+                            <td><button class="btn-primary btn">Edit</button></td>
+                        </tr>
+                        <tr class="admin-personal-info">
+                            <td>Date of Birth</td>
+                            <td>January 1, 1990</td>
+                            <td><button class="btn-primary btn">Edit</button></td>
+                        </tr>
+                        <tr class="admin-personal-info">
+                            <td>Gender</td>
+                            <td>Male</td>
+                            <td><button class="btn btn-primary">Edit</button></td>
+                        </tr>
+                        <tr class="admin-personal-info">
+                            <td>Password</td>
+                            <td>***********</td>
+                            <td><button class="btn btn-primary">Edit</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+              <section style="padding: 2% 5% 2% 5%;">
+                <div class="card" style="padding: 2% 5% 2% 5%; border-radius: 10px;">
+                   <h6>Contact Information:</h6> 
+                    <table>
+                        <tr class="admin-personal-info">
+                            <td>Email</td>
+                            <td>John.Doe@startdotng.com</td>
+                            <td><button class="btn-primary btn">Add</button></td>
+                            <td><button class="btn-danger btn">Delete</button></td>
+                        </tr>
+                        <tr class="admin-personal-info">
+                            <td>Phone</td>
+                            <td>0701234567</td>
+                            <td><button class="btn-primary btn">Add</button></td>
+                            <td><button class="btn-danger btn">Delete</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
         </div>
         <!-- /#page-content-wrapper -->
 
