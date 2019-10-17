@@ -211,7 +211,7 @@
 
     <div class="container pt-4 pb-5">
 
-        <form id="formSubmit" method="POST" action="register.php">
+        <form class="needs-validation" novalidate method="POST" action="register.php">
 
             <div class="row pt-5">
 
@@ -219,14 +219,20 @@
 
                     <div class="form-group">
 
-                        <label for="usr" style="font-weight: bold;">First Name:</label>
+                        <label for="firstname" style="font-weight: bold;">First Name:</label>
 
-                        <input type="text" class="form-control" id="firstName" pattern="^[a-zA-Z ]*$" placeholder="Jane" name="firstname">
+                        <input type="text" class="form-control" id="firstname" pattern="^[a-zA-Z ]*$" placeholder="Jane" name="firstname">
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
                                Input only text characters...
     
                             </small>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                         <div class="invalid-feedback">
+                         Doesn't look good!
+                         </div>
 
                     </div>
 
@@ -523,7 +529,26 @@
 
 
     <!-- End of Footer -->
-
+    <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
     <script>
         const mainContainer = document.querySelector('#main-container');
         const formSubmit = document.querySelector('#formSubmit');
@@ -538,9 +563,7 @@
             const experience = document.querySelector('#experience').value;
             const state = document.querySelector('#state').value;
             const country = document.querySelector('#country').value;
-            if (!firstName || firstName.length < 5) {
-                error.push('First name cannot be less than 5 characters')
-            }
+           
             if (!secondName || secondName.length < 5) {
                 error.push('Last name cannot be less than 5 characters')
             }
