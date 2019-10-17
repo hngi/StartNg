@@ -35,4 +35,14 @@ class PagesController extends Controller
         $title = 'Terms of Service';
         return view('pages.terms')->with('title', $title);
     }
+
+    public function blog1(){
+        $title = 'Student Stories';
+        return view('pages.blog1')->with('title', $title);
+    }
+
+    public function blog2(){
+        $title = 'Blog';
+        return view('pages.blog2')->with('title', $title);
+    }
 }

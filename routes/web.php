@@ -17,6 +17,8 @@ Route::get('/hireGrad', 'PagesController@hireGrad');
 Route::get('/contactus', 'PagesController@contactus');
 Route::get('/help', 'PagesController@help');
 Route::get('/terms', 'PagesController@terms');
+Route::get('/blog1', 'PagesController@blog1');
+Route::get('/blog2', 'PagesController@blog2');
 
 Route::resource('courses', 'CoursesController');
 Auth::routes();

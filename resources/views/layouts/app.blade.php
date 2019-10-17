@@ -161,13 +161,13 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="/about">About Us</a></li>
-                        <li><a href="courses.html">Our Course</a></li>
+                        <li><a href="/courses">Our Course</a></li>
                         <li><a href="/hireGrad">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="curriculum.html">Curriculum</a></li>
-                        <li><a href="blog2.html">Blog</a></li>
-                        <li><a href="blog1.html">Student Stories</a></li>
+                        <li><a href="/blog2">Blog</a></li>
+                        <li><a href="/blog1">Student Stories</a></li>
 
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
