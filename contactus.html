@@ -114,7 +114,12 @@
         .search {
             background-color: #44CF6C;
         }
-
+        #faq-link{
+            transition: transform 1.5s;
+        }
+        #faq-link:hover{
+            transform: scale(1.07);
+        }
         .support {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570910454/startng/Rectangle_66_iauqka.png');
             background-position: center center;
@@ -192,10 +197,8 @@
     <div class="container-fluid search pt-5 pb-5">
         <div class="input-group col-12 col-md-10 mx-auto pt-3 pb-3">
             <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;">
-            <div class="input-group-append">
-                <button class="btn btn-secondary w-100 px-md-5" type="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">
-                    Search FAQ
-                </button>
+            <div class="input-group-append" id = "faq-link">
+                <a class="btn btn-secondary w-100 h-100 px-md-5 input-group-text" href = "help.html" role="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">Search FAQ</a>
             </div>
         </div>
     </div>
@@ -216,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-5 mb-2">
+                <div class="row mt-1 mt-md-5 mb-2">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Email Address</label>
