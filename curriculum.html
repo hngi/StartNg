@@ -883,7 +883,7 @@
         <div class="container text-right">
             <div class="row icons">
                 <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com"><i class='fab fa-twitter' aria-hidden="true"></i></a>
                     <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
                     <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
                 </div>
@@ -915,16 +915,16 @@
       });
     </script>
     <script>
-  // Add active class to the current button (highlight it)
-  var header = document.getElementById("row-div");
-  var btns = header.getElementsByClassName("btn btn-outline-success");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    });
-  }
+// Add active class to the current button (highlight it)
+var header = document.getElementById("row-div");
+var btns = header.getElementsByClassName("btn btn-outline-success");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
 </script>
 
 </body>
