@@ -12,14 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--<title>{{ config('app.name', 'Start NG') }}</title>-->
-<<<<<<< HEAD
     <title>Start NG - {{ $title ?? '' }}</title>
-=======
-    <!--<title>@if ($title ?? '') Start NG - {{ $title ?? '' }} @else Start NG @endif</title>-->
-    
-    <title>Start NG - {{ $title ?? '' }}</title> 
-
->>>>>>> ec110db14190d1f69f2685a577df4b29846d2cc6
 
     <style>
         body {

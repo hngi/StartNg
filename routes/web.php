@@ -21,6 +21,7 @@ Route::get('/blog1', 'PagesController@blog1');
 Route::get('/blog2', 'PagesController@blog2');
 
 Route::resource('courses', 'CoursesController');
+Route::post('courses/create', 'CoursesController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

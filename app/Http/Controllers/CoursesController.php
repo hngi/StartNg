@@ -25,7 +25,7 @@ class CoursesController extends Controller
      */
     public function create()
     {
-        //
+        return view('courses.create');
     }
 
     /**
@@ -36,7 +36,23 @@ class CoursesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'duration' => 'required',
+            'price' => 'required',
+            'description' => 'required'
+        ]);
+
+        $course = new Course;
+        $course->title = $request->input('title');
+        $course->duration = $request->input('duration');
+        $course->price = $request->input('price');
+        $course->description = $request->input('description');
+        $course->curriculum = "Empty";
+        $course->image = "https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_415_m3n0cq.png";
+        $course->save();
+
+        return redirect('/courses')->with('success', 'Course Created');
     }
 
     /**
@@ -58,7 +74,20 @@ class CoursesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::find($id);
+        
+        if (!isset($course)){
+            return redirect('/courses')->with('error', 'No Post Found');
+        }
+        else{
+            $course->title = $course->title;
+            $course->duration = $course->title;
+            $course->price = $course->title;
+            $course->description = $course->title;
+        }
+        
+
+        return view('courses.edit')->with('course', $course);
     }
 
     /**
@@ -70,7 +99,23 @@ class CoursesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'duration' => 'required',
+            'price' => 'required',
+            'description' => 'required'
+        ]);
+
+        $course = Course::find($id);
+        $course->title = $request->input('title');
+        $course->duration = $request->input('duration');
+        $course->price = $request->input('price');
+        $course->description = $request->input('description');
+        $course->curriculum = "Empty";
+        $course->image = "https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_415_m3n0cq.png";
+        $course->save();
+
+        return redirect('/courses')->with('success', 'Course Updated');
     }
 
     /**
