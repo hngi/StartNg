@@ -13,9 +13,6 @@
     <style>
         body {
             font-family: Nunito;
-            margin: 0;
-            padding:0;
-            box-sizing: border-box;
         }
         /* Style for Navbar Starts */
         
@@ -47,6 +44,7 @@
         /* Style for Footer Starts */
         
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -202,215 +200,6 @@
         .course-drop {
             padding-bottom: 40px;
         }
-        /*Evelyn*/
-
-        .checked {
-            color: yellow;
-        }
-        .container-box-1 {
-            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-            border-radius: 20px;
-            padding: 30px;
-            
-        }
-        .container-box-2 {
-            margin: 20px auto;
-           
-        }
-        .col-xs-4 {
-            padding: 10px;
-        }
-        .students {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-top: 80px;
-        }
-        .start{
-            text-align: center;
-        }
-        .icon-green > img{
-            border-radius: 50px;
-        }
-        .wrp{
-            display:flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-        .icon-green{
-           flex-basis: 8%;
-        }
-        .wrap-text{
-            flex-basis:70%;
-        }
-        .wrap-text > h6{
-            font-weight: bold;
-        }
-        
-        /*Joshua styles starts here*/
-        .build {
-            padding: 40px;
-        }
-        .build > h1{
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .build p{
-            font-size: 17px;
-        }
-        .right-image{
-            margin-left: -40px;
-        }
-        .start-learning{
-            border-radius: 8px;
-        }
-        
-        @media (min-width: 800px){
-            .build-wrapper{
-                display:flex;
-                justify-content: space-between;
-            }
-            .build{
-                width:50%;
-            }
-            .right-image{
-                flex: 1;
-            }
-            .right-image img{
-                height: 400px;
-            }
-            .large-wrp{
-                display:flex;
-            }
-            .icon-green{
-                flex-basis: 8%;
-            }
-            .container-box-1{
-                width: 80%;
-                margin: 0 auto;
-            }
-
-        }
-        @media (min-width: 1000px){
-            .build{
-                padding-left: 90px;
-                padding-right: 90px;
-            }
-            .container-box-1{
-                width: 60%;
-                margin: 0 auto;
-            }
-            .large-wrp{
-                justify-content: flex-end;
-            }
-            .icon-green{
-                flex-basis: 8%;
-                padding-left: 100px;
-            }
-            .wrap-text{
-                width:50%;
-                padding-right: 15%;
-            }
-
-        }
-
-         .inline-element__container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: .7rem;
-           
-        }
-
-        
-        .inline-element__top {
-            display: block;
-        }
-
-        .inline-element__bottom {
-            display: block;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-       .checked {
-            color: orange;
-        }
-
-       span.inline-element--button a {
-          color: #44CF6C;
-          text-decoration: underline #44CF6C;
-       }
-
-       span.inline-element--button a:hover {
-         color: #228B22;
-       }
-       
-       
-       .what-you-learn__heading {
-           text-align: center;
-            padding-top: 4rem;
-          font-weight: bold;
-          font-size: 28px;
-          line-height: 34px;
-          letter-spacing: 0.655606px;
-         color: #000000;
-      
-
-       }
-
-       .what-you-learn__items p {
-           font-size: 20px;
-           font-family: 'Open Sans', sans-serif;
-          line-height: 22px;
-          color: #000000;
-          padding: 1rem;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-     }
-
-     .float-right--button{
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-    
-     }
-
-  @media only screen and (max-width: 444px) {
-      .float-right--button {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          width: 350px;
-          padding-left: 78px;
-          margin: 2rem ;
-          
-      }
-
-     .float-right__items {
-       margin: .1rem; 
-     } 
-
-    .container-items {
-        padding-right: 1rem;
-      }
-      
-      
- }
-
- @media only screen and (max-width: 300px) {
-    .float-right--button {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 300px;
-          margin: 1rem ;
-          
-      }
-
-      #subscribe{
-          margin-top: 35px;
-      }
- }
- /*Ends here*/
     </style>
 </head>
 
@@ -457,42 +246,13 @@
                             <a class="btn btn-success pt-1 pb-1" href="register.html">Start
                                 Learning</a>
                         </div>
-                        <!--Nkechi's Edits-->
-                        <div class="float-right float-right--button">
-                            <div class="mr-3 float-right__items"  style="color: #000;">Beginner</div>
-                            <div class="float-right__items"><button class="btn btn-success mr-2" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</button></div>
-                           <div class="float-right__items"><button class="btn btn-success ml-2" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797; width: 100px;">FREE</button></div>
-                            
+                        <div class="float-right">
+                            <a href="" style="color: #000;">Beginner</a>
+                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
                         </div>
                     </div>
-                    <div class="inline-element__container">
-                        <div class="container-items mr-2">
-                            <p>
-                            <span class="inline-element__top">Duration</span>
-                            <span class="inline-element__bottom">12 Weeks</span>
-                            </p>
-                        </div>
-                        <div class="container-items mr-2">
-                            <p>
-                             <span class="inline-element__top">Courses starts</span>
-                            <span class="inline-element__bottom">5th of October, 2019</span>
-                        </p>
-                        </div>
-                        <div class="container-items mr-2">
-                               
-                               <span class="inline-element__top">Average ratings</span>
-                            
-                        <p>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="inline-element--button"><a href="./ui-ux.html#reviews">See all reviews</a></span>
-                        </p>
-                    
-                        </div>
-                    </div>
+                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570973825/startng/creative-web-designer-planning-application-developing-template-layout_1418-2436_pca4kd.png">
@@ -500,74 +260,18 @@
             </div>
         </div>
     </div>
-          
+
+    <div class="container pb-5 pt-5">
+        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
+    </div>
+    <div class="contaner-fluid">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+    </div>
+
     <div class="container">
-            <h2 class="what-you-learn__heading mt-5 mb-5">What you will learn</h2>
-        <div class="row what-you-learn__container mt-5 ml-3 mb-5">
-         <div class="col-sm 6 what-you-learn__items pr-5">
-            
-            <p>
-            <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-            UserFlow, User Journey using FlowMapp
-            </p>
-            <p>
-            <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-            User Research, Ideation
-          </p>
-          <p>
-             <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-              Interactive Design
-          </p>
-          <p>
-         <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-          Prototyping using Figma
-         </p> 
-    </div>
-    <div class="col-sm-6 what-you-learn__items">
-        <p>
-         <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-         Wireframes (Low-Fidelity & High Fidelity)
-          </p>
-        <p>
-        <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-        Mobile Interface (IOS, Android)
-          </p>
-        <p>
-        <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-        IOS Design Guidlines
-          </p>
-        <p>
-        <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1571160580/ykotdhdf6mymsimbjmuw.png" alt="check-circle">
-        Material Design Guidlines
-          </p>
-        
-    </div>
-        </div>
-    </div>
-</div>
-<!----->
 
-    <div class="build-wrapper" style="background-color:#2DCE89;">
-            <div class="build">
-                <h1>Build Real Time Project</h1>
-                <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nostrum autem sint, ut esse odit expedita quae 
-                    ratione accusamus saepe assumenda, sunt sequi 
-                    commodi ullam eum veniam facilis. Nostrum rem 
-                    cupiditate, molestias, quia suscipit facere 
-                    quasi dicta nihil consequatur velit expedita!
-                </p>
-                <a class="start-learning btn" style="background-color:#3F113D; color:#fff;" href="register.html">Start Learning</a>
-            </div>
-            <div class="right-image">
-                <img class="img-fluid" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1571220152/work.png" alt="man showing hand">
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
         <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
-            <div class="container-fluid course-drop">
+            <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
                 <h3 class="text-center panel-tt">Course Curriculum </h3>
@@ -942,104 +646,16 @@
             </div>
 
 
-            <h3 class="start mb-4">On Start.ng you are priviledged to</h3>
-            <div class="container-fluid">
-                <div class="large-wrp">
 
-                    <div class="wrapper-1 wrp">
-                        <div class="icon-green">
-                            <img src="https://res.cloudinary.com/yvehogan/image/upload/v1571212999/Group_305_1_jj1fam.png" alt="" class="skills_photo">
-                        </div>
-                        <div class="wrap-text">
-                            <h6>Learn from the Best Teachers</h6>
-                            <p>Lorem ipsum was going to chucrh and she forgot
-                                to fedscdfdf aldkfalsdf haldf jldffa.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="wrapper-2 wrp">
-                        <div class="icon-green">
-                            <img src="https://res.cloudinary.com/yvehogan/image/upload/v1571213055/Group_309_ajyxcw.png" alt="" class="skills_photo">
-                        </div>
-                        <div class="wrap-text">
-                            <h6>Join our Online Developer Community</h6>
-                            <p>Lorem ipsum was going to chucrh and she forgot
-                                to fedscdfdf aldkfalsdf haldf jldffa.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                   <div class="large-wrp">  
-                    <div class="wrapper-3 wrp">
-                            <div class="icon-green">
-                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1571213105/Group_300_dhwzvr.png" alt="" class="skills_photo">
-                            </div>
-                            <div class="wrap-text">
-                                <h6>Supports from Mentors</h6>
-                                <p>Lorem ipsum was going to chucrh and she forgot
-                                    to fedscdfdf aldkfalsdf haldf jldffa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="wrapper-4 wrp">
-                            <div class="icon-green">
-                                <img src="https://res.cloudinary.com/yvehogan/image/upload/v1571213149/Group_306_jalmkl.png" alt="" class="skills_photo">
-                            </div>
-                            <div class="wrap-text">
-                                <h6>Earn a Certificate</h6>
-                                <p>Lorem ipsum was going to chucrh and she forgot
-                                    to fedscdfdf aldkfalsdf haldf jldffa.
-                                </p>
-                            </div>
-                        </div>
-                </div>
+            <div class="col-md-10 offset-md-1 pb-5 pt-5">
+                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
             </div>
-            <section class="">
-                <div class="container py-5">
-                        <div class="text-center mb-5">
-                            <h4 class="font-weight-bold">What people have to say about us</h4>
-                        </div>
-                        <div class="mb-5 card border-0 rounded rounded-lg shadow bg-white">
-                            <div class="card-body mx-md-5 my-2">
-                                <p class="lead text-muted">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
-                                <div class="d-flex justify-content-start align-items-left mt-5">
-                                    <img src="https://lancer-app.000webhostapp.com/startng/images/landing/dennis.png" class="img img-responsive rounded-circle" width="100" height="100">
-                                    <div class="ml-4">
-                                        <p class="text-warning pb-2 my-0" >
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </p>
-                                        <h6>Dennis Lagbaja</h6>
-                                        <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card border-0 rounded rounded-lg shadow bg-white">
-                            <div class="card-body mx-md-5 my-2">
-                                <p class="lead text-muted">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
-                                <div class="d-flex justify-content-start align-items-left mt-5">
-                                    <img src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" class="img img-responsive rounded-circle" width="100" height="100">
-                                    <div class="ml-4">
-                                        <p class="text-warning pb-2 my-0" >
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </p>
-                                        <h6>Akunna Message</h6>
-                                        <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
+            <div class="col-md-10 offset-md-1 pt-5 pb-5">
+                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
+            </div>
 
             <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
-                <div class="container-fluid pt-5 pb-5">
+                <div class="container pt-5 pb-5">
                     <div class="row align-items-center">
                         <div class="col-md-8 pb-5">
                             <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
@@ -1047,7 +663,7 @@
                             </p>
                             <form class="form-inline">
                                 <input type="text" class="form-control col-md-8" id="email">
-                                <button type="submit"  id="subscribe" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C; cursor: pointer;">Subscribe</button>
+                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C; cursor: pointer;">Subscribe</button>
                             </form>
                         </div>
                         <div class="col-md-4">
@@ -1065,7 +681,7 @@
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
                         <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
@@ -1096,11 +712,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="help.html">FAQ</a></li>
                         <li><a href="termsOfService.html">Terms of Service</a></li>
-<<<<<<< HEAD
-                        <li><a href="">Privacy Policy</a></li>
-=======
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
->>>>>>> 4863169a11e8302376116b622b796bc01276d38d
                     </div>
                 </div>
 
@@ -1110,9 +722,9 @@
         <div class="container text-right">
             <div class="row icons">
                 <div class="col-md-12 ">
-                    <a href="www.twitter.com/startdotng"><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href="www.instagram.com"><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                    <a href="www.facebook.com"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

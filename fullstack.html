@@ -11,10 +11,6 @@
     <title>FullStack</title>
 
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
         body {
             font-family: Nunito;
         }
@@ -38,7 +34,6 @@
         
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-            background-position: center;
         }
         
         .custom-toggler.navbar-toggler {
@@ -157,6 +152,11 @@
             color: #fff;
         }
         
+        .panel-default>.panel-heading+.panel-collapse>.panel-body {
+            /* border: solid 1px #EEEEEE; */
+            /* background: rgba(129, 22, 124, 0.05); */
+        }
+        
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
@@ -199,159 +199,6 @@
         .course-drop {
             padding-bottom: 40px;
         }
-        .student{
-            margin: auto;
-            font-family: 'Nunito', sans-serif;
-            font-size: 25px;
-            font-weight: bold;
-            line-height: 124.8%;
-            color: #2A2B2A;
-        }
-        .box{
-        background-color: #fff;
-        border-radius:10px;
-        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-        height: 420px;
-        width: 919px;
-        margin: auto;
-        }
-        .content{
-            font-family: 'Nunito', sans-serif;
-            font-size: 20px;
-            line-height: 151.2%;
-            font-weight: normal;
-            color: #333333;
-            text-align: justify;
-        }
-        .rate {
-            float: left;
-            height: 46px;
-            padding: 0 10px;
-            margin-left: 20px;
-        }
-        .rate:not(:checked) > input {
-            position:absolute;
-            top:-9999px;
-        }
-        .rate:not(:checked) > label {
-            float:right;
-            width:1em;
-            overflow:hidden;
-            white-space:nowrap;
-            cursor:pointer;
-            font-size:30px;
-            color:#ccc;
-        }
-        .rate:not(:checked) > label:before {
-            content: '★ ';
-        }
-        .rate > input:checked ~ label {
-            color: #FAF35E;    
-        }
-        .rate:not(:checked) > label:hover,
-        .rate:not(:checked) > label:hover ~ label {
-            color: #FAF35E; 
-        }
-        .rate > input:checked + label:hover,
-        .rate > input:checked + label:hover ~ label,
-        .rate > input:checked ~ label:hover,
-        .rate > input:checked ~ label:hover ~ label,
-        .rate > label:hover ~ input:checked ~ label {
-            color: #FAF35E;
-        }
-
-        .pix{
-            float: left;
-        }
-        .name {
-            font-weight: 600px;
-            font-size: 16px;
-            margin-left: 105px;
-            letter-spacing: 0.655606px;
-        }
-        .task{
-            font-weight: 600px;
-            font-style: italic;
-            font-size: 14px;
-            margin-left: 105px;
-            letter-spacing: 0.655606px;
-
-        }
-        #see{
-            border-radius: 10px;
-            margin-left: 40%;
-            padding: 10px 30px 10px 30px;
-
-        }
-        .media-body p {
-            font-size: 18px;
-            text-align: left;
-        }
-
-        .mt-0 {
-            font-size: 20px;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        .text1 {
-            padding-top: 40px;
-            text-align: center;
-        }
-
-        .text1 h3 {
-            font-weight: bolder;
-            font-size: 22px;
-        }
-
-        img.align-self-start.mr-3 {
-            margin-right: 8% !important;
-            background-color: #44CF6C;
-            border-radius: 50%;
-            padding: 8px;
-        }
-
-        .media {
-            padding: 30px;
-        }
-
-        .section1 {
-            background-color: rgba(129, 22, 124, 0.05)
-        }
-        
-        .section2 {
-            background: #fcfcfc;
-        }
-        
-        .my-3{
-            font-weight: bolder;
-            padding-bottom: 40px;
-        }
-        #side{
-            margin: auto;
-        }
-        .green{
-            margin-top: 30px;
-            width: 100%;
-        }
-        .im-ban .col-md-6 img {
-            display: inline;
-            position: relative;
-        }
-        .two{
-            background-color: #2DCE89;
-        }
-        .cs4 h3 {
-            font-weight: bold;
-            font-size: 30px;
-            padding: 10px 0px 10px 0px;
-        }
-        .cs4 p {
-            font-size: 24px;
-            padding-top: 5px;
-            padding-bottom: 10px;
-        }
-
     </style>
 </head>
 
@@ -404,7 +251,7 @@
                             <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/gimage/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570973959/startng/creative-web-designer-planning-application-developing-template-layout_1418-2436_zq3paj.png">
@@ -413,72 +260,15 @@
         </div>
     </div>
 
+    <div class="container pb-5 pt-5">
+        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
+    </div>
+    <div class="contaner-fluid">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+    </div>
 
-    <section class="section3">
-        <div class="contaner-fluid">
-            <h3 class="text-center my-3">What You Will Learn</h3>
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; UserFlow, User Journey using Flow Map</p>
-                        <hr style="width: 90%" />
-                    </div>
-                <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Wire-frames (Low-Fidelity & High Fidelity)</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; User Research, Ideation</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Mobile Interface (IOS, Android)</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Interactive Design</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; IOS Design Guidelines</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Prototyping using Figma</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Material Design Guidelines</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                </div>        
-            </div>
-        </div>       
-    </section>
+    <div class="container">
 
-    <section class="section4">
-        <div class="im-ban">
-            <div class="two"
-                style="background-image: url(https://res.cloudinary.com/oluchii/image/upload/v1571222324/2226806_1.png);background-repeat: no-repeat;background-position: right;">
-                <div class="container">
-                    <div class="col-md-6 py-4 pl-3">
-                        <div class="cs4">
-                            <h3>Build Real Time Project</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ut. Voluptates explicabo
-                                inventore laudantium magnam aperiam alias, vitae dolor cumque dolorem praesentium cum,
-                                asperiores consequuntur commodi hic aliquid unde eos!
-                            </p>
-                            <button class="btn btn-primary" style="background: #3F113D;">Start Learning</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- <div class="contaner-fluid" id="side">
-        <img class="green" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
-    </div> -->
-
-
-    <section class="sessionforcollapse">
         <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
@@ -496,6 +286,8 @@
                                             <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Introduction
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                         </a>
+
+
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -852,126 +644,15 @@
                 </div>
             </div>
         </div>
-</section>
-
-    <section class="section2">
-        <div class="text1">
-            <h3>On Start.ng, you are privileged to </h3>
-        </div>
-        <div class="col-md-10 offset-md-1 pb-5 pt-5">
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3"
-                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230671/Group_305_w3t3ik.png"
-                                alt="Learn from the Best teachers">
-                            <div class="media-body">
-                                <h4 class="mt-0">Learn from the Best Teachers</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230760/Group_309_yrwwlu.png"
-                                alt="Online community">
-                            <div class="media-body">
-                                <h4 class="mt-0">Join our Online Developer Community</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3"
-                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230791/Group_300_guwfwc.png" alt="Support">
-                            <div class="media-body">
-                                <h4 class="mt-0">Support from Mentors</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230828/Group_306_cjdqqu.png"
-                                alt="Certificate">
-                            <div class="media-body">
-                                <h4 class="mt-0">Earn a Certificate</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-   <!-- @miz_kas start from here -->
-
-    <div class="container col-md-8 my-5">
-    <div class="row aligh-items-center">
-        <h1 class="student my-5"> What students have to say about us </h1>
-        <div class="box">
-            <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
-            <div class="box-2 px-5">
-                <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218974/Ellipse_bw76jr.png" alt="picture">
-
-                    <div class="rate">
-                            <input type="radio" id="star5" name="rate" value="5" />
-                            <label for="star5">5 stars</label>
-                            <input type="radio" id="star4" name="rate" value="4" />
-                            <label for="star4">4 stars</label>
-                            <input type="radio" id="star3" name="rate" value="3" />
-                            <label for="star3">3 stars</label>
-                            <input type="radio" id="star2" name="rate" value="2" />
-                            <label for="star2">2 stars</label>
-                            <input type="radio" id="star1" name="rate" value="1" />
-                            <label for="star1">1 star</label>  
-                    </div> 
-                    <br>
-                    <br>
-                          <p class="name"> Dennis Lagbaja </p>
-                          <span class="task">Completed the Front End Developer Class</span>
-            </div>
-        </div>
-
-        <div class="box mt-5">
-                <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
-                <div class="box-2 px-5">
-                    <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218964/Ellipse_1_acflsk.png" alt="picture">
-    
-                        <div class="rate">
-                                <input type="radio" id="star5" name="rate" value="5" />
-                                <label for="star5">5 stars</label>
-                                <input type="radio" id="star4" name="rate" value="4" />
-                                <label for="star4">4 stars</label>
-                                <input type="radio" id="star3" name="rate" value="3" />
-                                <label for="star3">3 stars</label>
-                                <input type="radio" id="star2" name="rate" value="2" />
-                                <label for="star2">2 stars</label>
-                                <input type="radio" id="star1" name="rate" value="1" />
-                                <label for="star1">1 star</label>  
-                        </div> 
-                        <br>
-                        <br>
-                              <p class="name"> Khadirat Uche Jumbo </p>
-                              <span class="task">Completed the Laravel PHP Class</span>
-                </div>
-            </div>
     </div>
 
-    <button type="submit" class="btn btn-primary my-5 " id="see" style="background-color: #44CF6C; border-color: #44CF6C;">See More Reviews</button>
-    </div>
 
+    <div class="col-md-10 offset-md-1 pb-5 pt-5">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
+    </div>
+    <div class="col-md-10 offset-md-1 pt-5 pb-5">
+        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
+    </div>
 
     <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
         <div class="container pt-5 pb-5">
@@ -981,13 +662,8 @@
                     <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                     </p>
                     <form class="form-inline">
-
-                        <input type="text" class="form-control col-md-8 col-xm-4" id="email">
-                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
-
                         <input type="text" class="form-control col-md-8" id="email">
                         <button type="submit" class="btn btn-success ml-1 pl-5 pr-5">Subscribe</button>
-
                     </form>
                 </div>
                 <div class="col-md-4">
@@ -996,6 +672,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid text-white deep">
