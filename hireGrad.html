@@ -318,25 +318,34 @@
         <div class="col-md-10 offset-md-1 pt-5 pb-5">
             <h4 class="text-center font-weight-bold pb-3">Learn more about hiring our grads</h4>
             <p class="text-center font-weight-bold pb-5">Fill out the form and we will get in touch.</p>
-            <div id="error_message"></div>
-            <div class="row pb-4">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Full Name" id="fname">
+            <form >
+                <div id="error_message"></div>
+                <div class="row pb-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" id="fname">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" id="email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company Name" id="companyname">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Job Title" id="jobtitle">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <input type="email" class="form-control" placeholder="Email Address" id="email">
+                <div class="text-center">
+                    <button class="btn btn-secondary" style="background-color: #3A0842; border-color: #3A0842; color: #fff;" onclick="return validation()" type="submit">Subscribe</button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Company Name" id="companyname">
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Job Title" id="jobtitle">
-                </div>
-            </div>
-             <a href="#" class="btn btn-secondary col-md-2 offset-md-5 mt-5" style="background-color: #3A0842; border-color: #3A0842; color: #fff;" onclick="return validation()">Subscribe</a>
-      
+            </form>
         </div>
     </div>
 
