@@ -18,6 +18,7 @@ Route::get('/contactus', 'PagesController@contactus');
 Route::get('/help', 'PagesController@help');
 Route::get('/terms', 'PagesController@terms');
 
+Route::resource('courses', 'CoursesController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
