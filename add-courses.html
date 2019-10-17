@@ -113,8 +113,8 @@
                 </div>
             </nav>
 
-            <div class="container"style="min-height:80vH;">
-                <h2 class="text-center">ADD NEW COURSES</h2>
+            <div class="container">
+                <h2 class="text-center mt-5 mb-5">ADD NEW COURSES</h2>
                 <form>
                     <div class="col-md-10 offset-md-1">
                         <div class="row">
@@ -127,31 +127,58 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="coursecode">Course Duration</label>
-                                    <input id="coursecode" class="form-control" type="number" name="">
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="" placeholder="" aria-label="Recipient's " aria-describedby="new-addon">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="new-addon">MONTHS</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Course Price</label>
+                                    <div class="input-group">
 
+                                        <input class="form-control" type="number" name="" placeholder="" aria-label="Recipient's " aria-describedby="my-addon">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="my-addon">NGN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Course Image</label>
+                                    <div class="input-group">
+
+                                        <input class="form-control" type="text" name="" placeholder="" aria-label="Recipient's " aria-describedby="my-addon">
+                                        <div class="input-group-append">
+                                            <a href="" style="text-decoration: none;"> <span class="input-group-text" id="my-addon">SELECT</span></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="coursedesc">Course Description</label>
-                                    <textarea id="coursedesc" class="form-control" name="" rows="3"></textarea>
+                                    <textarea id="coursedesc" class="form-control" name="" rows="4"></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-success d-block mx-auto pr-5 pl-5" style="background-color: #3A0842; border-color: #3A0842;">ADD</button>
                 </form>
             </div>
 
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a href="https://start.ng" target="_blank" style="text-decoration:none; color:#000;"> Start.ng</a>
-            </div>
-             
+
+
 
         </div>
         <!-- /#page-content-wrapper -->

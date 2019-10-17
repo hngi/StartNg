@@ -69,106 +69,6 @@
                 margin-left: -15rem;
             }
         }
-
-        
-        .container
-        {
-            position: relative;
-            
-        }
-    
-        ::placeholder
-       {
-        color: #212529;
-        position: relative;
-        left: 16px;
-        top: 4px;
-        right: 181.53%;
-        font-family: sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 19px;
-        padding-left: 8px; 
-       }
-
-      .user
-       {
-        position: absolute;
-        width: 1000px;
-        height: 50px;
-        /* left: 50px; */
-        top: 100px;
-        background: #FFFFFF; 
-        border: 1px solid #ced4da;
-        box-sizing: border-box;
-        padding-left: 16px;
-       } 
-
-       .full
-       {
-        position: absolute;
-        width: 1000px;
-        height: 50px;
-        /* left: 50px; */
-        top: 200px;
-        background: #FFFFFF;
-        border: 1px solid #ced4da;
-        box-sizing: border-box;
-        padding-left: 16px;
-       } 
-
-       .email
-       {
-        position: absolute;
-        width: 1000px;
-        height: 50px;
-        /* left: 50px; */
-        top: 300px;
-        background: #FFFFFF;
-        border: 1px solid #ced4da;
-        box-sizing: border-box;
-        padding-left: 16px;
-       } 
-
-       .password
-       {
-        position: absolute;
-        width: 1000px;
-        height: 50px;
-        /* left: 50px; */
-        top: 400px;
-        background: #FFFFFF;
-        border: 1px solid #ced4da;
-        box-sizing: border-box;
-        padding-left: 16px;
-       } 
-
-       .verify
-       {
-        position: absolute;
-        width: 1000px;
-        height: 50px;
-        /* left: 50px; */
-        top: 500px;
-        background: #FFFFFF;
-        border: 1px solid #ced4da;
-        box-sizing: border-box;
-        padding-left: 16px;
-       } 
-
-       .login
-       {
-        position: absolute;
-        width: 100px;
-        height: 38px;
-        left: 450px;
-        top: 600px;
-        background: #FFFFFF;
-        border: 1px solid #ced4da;
-        font-size: 18px;
-        
-       } 
     </style>
 
 </head>
@@ -188,7 +88,7 @@
                     Courses</a>
                 <a href="view-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
                 <a href="create-admin.html" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Create Admin</a>
-                <a href="logout.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Logout</a>
+
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -216,30 +116,63 @@
                 </div>
             </nav>
 
+            <h2 class="text-center pt-5 pb-5">CREATE NEW ADMIN</h2>
+            <form>
+                <div class="col-md-10 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstname">First Name</label>
+                                <input id="firstname" class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input id="lastname" class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input id="username" class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" class="form-control" type="email" name="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" class="form-control" type="tel" name="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input id="password" class="form-control" type="password" name="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="confirmpassword">Confirm Password</label>
+                                <input id="confirmpassword" class="form-control" type="password" name="">
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="container">
-                <center><h1>Admin Login</h1></center>
-                <form action="">
-                <input class="user" type="text" placeholder="Admin Username">
-        
-                <input class="full" type="text" placeholder="Admin Full Name">
-        
-                <input class="email" type="text" placeholder="Admin Email">
-        
-                <input class="password" type="password" placeholder="Password">
-        
-                <input class="verify" type="password" placeholder="Verify Password">
-        
-                <button class="login">Login</button>
-
-            <div class="container" style="min-height:80vH;">
-            </div>
-
-            <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                <a href="https://start.ng" target="_blank" style="text-decoration:none; color:#000;"> Start.ng</a>
-
-            </div>
-
+                </div>
+                <button type="submit" class="btn btn-success d-block mx-auto mt-4 pr-5 pl-5" style="background-color: #3A0842; border-color: #3A0842;">CREATE</button>
+            </form>
 
         </div>
         <!-- /#page-content-wrapper -->

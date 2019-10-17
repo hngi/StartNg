@@ -56,10 +56,10 @@
         #wrapper.toggled #sidebar-wrapper {
             margin-left: 0;
         }
-        .admin-personal-info{
+        
+        .admin-personal-info {
             border-bottom: 0.5px solid #EAEAF2;
         }
-       
         
         @media (min-width: 768px) {
             #sidebar-wrapper {
@@ -91,7 +91,7 @@
                     Courses</a>
                 <a href="view-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View
                     Courses</a>
-                <a href="create-admin.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Create Admin</a>
+                <a href="create-admin.html" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff; border-color: #3A0842;">Create Admin</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -114,7 +114,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class ="row">
+            <div class="row">
                 <div class="col-12 text-center">
                     <div class="container">
                         <br>
@@ -125,48 +125,66 @@
             </div>
             <section style="padding: 2% 5% 2% 5%;">
                 <div class="card" style="padding: 2% 5% 2% 5%; border-radius: 10px;">
-                   <h6>Personal Information:</h6> 
-                    <table>
-                        <tr class="admin-personal-info">
-                            <td>Name</td>
-                            <td>John Doe</td>
-                            <td><button class="btn-primary btn">Edit</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Date of Birth</td>
-                            <td>January 1, 1990</td>
-                            <td><button class="btn-primary btn">Edit</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Gender</td>
-                            <td>Male</td>
-                            <td><button class="btn btn-primary">Edit</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Password</td>
-                            <td>***********</td>
-                            <td><button class="btn btn-primary">Edit</button></td>
-                        </tr>
-                    </table>
+                    <h6>Personal Information:</h6>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="font-weight-bold">Name</p>
+                            </div>
+                            <div class="col-md-5">
+                                <p>John Doe</p>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="" class="btn btn-primary pr-5 pl-5">Edit</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="font-weight-bold">Username</p>
+                            </div>
+                            <div class="col-md-5">
+                                <p>J.Doe</p>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="" class="btn btn-primary pr-5 pl-5">Edit</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="font-weight-bold">Password</p>
+                            </div>
+                            <div class="col-md-5">
+                                <p>*********</p>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="" class="btn btn-primary pr-5 pl-5">Edit</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-              <section style="padding: 2% 5% 2% 5%;">
+            <section style="padding: 2% 5% 2% 5%;">
                 <div class="card" style="padding: 2% 5% 2% 5%; border-radius: 10px;">
-                   <h6>Contact Information:</h6> 
-                    <table>
-                        <tr class="admin-personal-info">
-                            <td>Email</td>
-                            <td>John.Doe@startdotng.com</td>
-                            <td><button class="btn-primary btn">Add</button></td>
-                            <td><button class="btn-danger btn">Delete</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Phone</td>
-                            <td>0701234567</td>
-                            <td><button class="btn-primary btn">Add</button></td>
-                            <td><button class="btn-danger btn">Delete</button></td>
-                        </tr>
-                    </table>
+                    <h6>Contact Information:</h6>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="font-weight-bold">Email</p>
+                            </div>
+                            <div class="col-md-5">
+                                <p>johndoe@gmail.com</p>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="font-weight-bold">Phone Number</p>
+                            </div>
+                            <div class="col-md-5">
+                                <p>09099887766</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
