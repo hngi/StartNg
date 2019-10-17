@@ -110,6 +110,25 @@
         /* Style for Footer Ends */
         /* Body Starts */
 
+        
+        .pagination li a {
+            color: #3A0842;
+        }
+        .header_btn {
+            color: #fff;
+            border: 1px solid #44CF6C;
+            padding: 5px 70px;
+            background: #44CF6C;
+            border-radius: 10px;
+        }
+        .header_btn:hover {
+            color: #44CF6C;
+            background: transparent;
+            transition: all .5s;
+        }
+        
+
+
         .banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570922862/startng/Group_413_dy6fmr.png');
             background-position: center center;
@@ -162,6 +181,64 @@
         </div>
     </nav>
 
+
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-2" data-slide-to="1"></li>
+            <li data-target="#carousel-example-2" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="view">
+                    <img class="d-block w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571144019/mystart/Group_427_ry58n0.png" alt="First slide">
+                    <div class="mask rgba-black-light"></div>
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="h3-responsive">How much will I earn as a UI/UX Designer?</h3>
+                    <p style="margin-top: 20px">
+                        <a href="" class="header_btn">
+                            Read
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                    <img class="d-block w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571144020/mystart/Group_429_leath8.png" alt="Second slide">
+                    <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="h3-responsive">How much will I earn as a Web Developer?</h3>
+                    <p style="margin-top: 20px">
+                        <a href="" class="header_btn">
+                            Read
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                    <img class="d-block w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571144020/mystart/Group_428_fqdqgg.png" alt="Third slide">
+                    <div class="mask rgba-black-slight"></div>
+                </div>
+                <div class="carousel-caption">
+                    <h3 class="h3-responsive">How much will I earn as a Machine Learning Engineer?</h3>
+                    <p style="margin-top: 20px">
+                        <a href="" class="header_btn">
+                            Read
+                        </a>
+                    </p>
+                    
+                </div>
+            </div>
+
     <div class="container-fluid banner pt-5 pb-5">
         <div class="col-md-8 offset-md-2 text-center pt-5 mt-3">
             <h4 class="mb-5"
@@ -171,8 +248,21 @@
             <a href=""><img
                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923285/startng/Group_303_dr7xs0.png"
                     class="img-fluid"></a>
+
         </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
     </div>
+    <!--/.Carousel Wrapper-->
 
     <div class="container-fluid">
         <h2 class="text-center pt-5 mt-5 pb-4">StartNG BLOG</h2>
