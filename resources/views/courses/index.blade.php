@@ -18,7 +18,7 @@
                 <img src="{{$course->image}}" class="img-fluid">
             </div>
             <div class="col-md-6">
-                <h4 class="font-weight-bold pb-3">{{$course->title}}</h4>
+                <h4 class="font-weight-bold pb-3"><a href="/courses/{{$course->id}}">{{$course->title}}</a></h4>
                 <p class="pb-2">{{$course->description}}</p>
                 <div class="clearfix">
                     <div class="float-left">
