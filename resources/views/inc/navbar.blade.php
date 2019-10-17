@@ -17,7 +17,7 @@
                         <a class="nav-link" href="/hireGrad">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                        <a class="nav-link" href="/contactus">Contact Us</a>
                     </li>
                      <!-- Authentication Links -->
                      @if (Auth::guest())
