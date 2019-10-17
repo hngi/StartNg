@@ -220,7 +220,7 @@
                         <input type="text" class="form-control" id="firstName" pattern="^[a-zA-Z ]*$" placeholder="Jane" name="firstname">
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
-                               Input only text characters...
+                               Text characters should not be less than 5...
     
                             </small>
 
@@ -238,7 +238,7 @@
 
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
-                                Input only text characters...
+                               Text characters should not be less than 5...
     
                             </small>
                     </div>
@@ -536,11 +536,11 @@
             const experience = document.querySelector('#experience').value;
             const state = document.querySelector('#state').value;
             const country = document.querySelector('#country').value;
-            if (!firstName || firstName.length < 5) {
-                error.push('First name cannot be less than 5 characters')
+            if (!firstName || firstName.length < 5 || typeof(firstName) === 'number' ) {
+                error.push('Invalid input value')
             }
-            if (!secondName || secondName.length < 5) {
-                error.push('Last name cannot be less than 5 characters')
+            if (!secondName || secondName.length < 5 || tyepof(secondName) === 'number') {
+                error.push('Invalid Input value')
             }
             if (!email || email.length < 5) {
                 error.push('Email field cannot be empty')
