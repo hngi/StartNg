@@ -12,7 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--<title>{{ config('app.name', 'Start NG') }}</title>-->
-    <title>Start NG - {{ $title }}</title>
+    <title>Start NG - {{ $title ?? '' }}</title>
 
     <style>
         body {
@@ -136,7 +136,7 @@
 <body>
     <div id="app">
         @include('inc.navbar')
-        <div class="container">
+        <div class="containeyr">
             @include('inc.messages')
             @yield('content')
         </div>

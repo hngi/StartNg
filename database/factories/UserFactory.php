@@ -25,3 +25,14 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+// $factory->define(Course::class, function (Faker $faker){
+//     return [
+//         'title' => $faker->sentence(3),
+//         'price' => $faker->randomDigit(5),
+//         'duration' => $faker->randomDigit(2),
+//         'description' => $faker->sentence(20),
+//         'curriculum' => $faker->word,
+//         'image' => $faker->imageUrl(640, 480)
+//     ];
+// });
