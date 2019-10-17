@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <title>FullStack</title>
 
@@ -240,6 +242,26 @@
         p img {
             padding-right: 15px;
         }
+
+        .checked {
+        color: orange;
+        }
+
+        .duration {
+            display:inline-block;
+            padding: 10px;
+        }
+
+        .courseStarts {
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .rating 
+        {
+            display: inline-block;
+            padding: 10px;
+        }
         
     </style>
 </head>
@@ -289,15 +311,34 @@
                         </div>
                         <div class="float-right">
                             <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                            <button class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">ONLINE</button>
+                            <button class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">PAID</button>
                         </div>
+                                    
+
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <div class="duration">
+                        <p>Duration<br>
+                        <b>12 weeks</b></p>
+                    </div>
+                    <div class="courseStarts">
+                        <p>Course starts<br>
+                        <b>5th of October, 2019</b></p>
+                    </div>
+                    <div class="rating">
+                        <p>Average ratings<br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span> <a>See all reviews</a></p>
+    
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid w-100" src="https://res.cloudinary.com/ladydondammy/image/upload/v1571313271/creative_web_design_1_wi6ncc.png">
                 </div>
+                
             </div>
         </div>
     </div>
