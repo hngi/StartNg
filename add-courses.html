@@ -82,10 +82,9 @@
             <div class="sidebar-heading"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
             </div>
             <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
-                <a href="#" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Profile</a>
+                <a href="profile.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Profile</a>
                 <a href="users.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
-                <a href="add-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
-                    Courses</a>
+                <a href="add-courses.html" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Add Courses</a>
                 <a href="view-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View
                     Courses</a>
                 <a href="create-admin.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Create Admin</a>
@@ -100,6 +99,7 @@
                 <button class="btn" id="menu-toggle"><img class="img-fluid"
                         src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571236013/iconfinder_Menu_2290865-2_rtadbn.png"></button>
 
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -113,6 +113,55 @@
                 </div>
             </nav>
 
+            <div class="container">
+                <h2 class="text-center mt-5 mb-5">ADD NEW COURSES</h2>
+                <form>
+                    <div class="col-md-10 offset-md-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="coursename">Course Title</label>
+                                    <input id="coursename" class="form-control" type="text" name="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="coursecode">Course Duration</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="" placeholder="" aria-label="Recipient's " aria-describedby="new-addon">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="new-addon">MONTHS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="">Course Price</label>
+                                    <div class="input-group">
+
+                                        <input class="form-control" type="number" name="" placeholder="" aria-label="Recipient's " aria-describedby="my-addon">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="my-addon">NGN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="coursedesc">Course Description</label>
+                                    <textarea id="coursedesc" class="form-control" name="" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success d-block mx-auto pr-5 pl-5" style="background-color: #3A0842; border-color: #3A0842;">ADD</button>
+                </form>
+            </div>
 
         </div>
         <!-- /#page-content-wrapper -->
