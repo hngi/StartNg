@@ -55,16 +55,16 @@ class CoursesController extends Controller
         return redirect('/courses')->with('success', 'Course Created');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+//     /**
+//      * Display the specified resource.
+//      *
+//      * @param  int  $id
+//      * @return \Illuminate\Http\Response
+//      */
+//     public function show($id)
+//     {
+//         //
+//     }
 
     /**
      * Show the form for editing the specified resource.
