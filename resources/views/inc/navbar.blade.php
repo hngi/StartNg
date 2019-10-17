@@ -19,17 +19,15 @@
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="/contactus">Contact Us</a>
                     </li>
+                     <!-- Authentication Links -->
+                     @if (Auth::guest())
                     <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
+                        <a class="btn btn-success nav-link px-5" href="{{ route('register') }}" style="color: #fff;">Start
                             Learning</a>
                     </li>
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
