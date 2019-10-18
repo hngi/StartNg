@@ -85,4 +85,28 @@ class BaseController extends Controller
     {
         return view('frontend.frontend.courses');
     }
+    public function help()
+    {
+        return view('frontend.frontend.help');
+    }
+    public function terms()
+    {
+        return view('frontend.frontend.terms');
+    }
+    public function blog1()
+    {
+        return view('frontend.frontend.blog1');
+    }
+    public function blog2()
+    {
+        return view('frontend.frontend.blog2');
+    }
+    public function privacy()
+    {
+        return view('frontend.frontend.privacy');
+    }
+    public function curriculum()
+    {
+        return view('frontend.frontend.curriculum');
+    }
 }

@@ -44,6 +44,12 @@ Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
 Route::get('/contact', 'BaseController@contact')->name('contact');
 Route::get('/courses/index', 'BaseController@courses')->name('courses.index');
+Route::get('/help', 'BaseController@courses')->name('help');
+Route::get('/terms', 'BaseController@courses')->name('terms');
+Route::get('/blog1', 'BaseController@courses')->name('blog1');
+Route::get('/blog2', 'BaseController@courses')->name('blog2');
+Route::get('/privacy', 'BaseController@courses')->name('privacy');
+Route::get('/curriculum', 'BaseController@courses')->name('curriculum');
 
 Route::get('/register-course/{id}', 'BaseController@registerCourses')->name('register.courses');
 Route::get('/course-details/{id}', 'BaseController@details')->name('details');
