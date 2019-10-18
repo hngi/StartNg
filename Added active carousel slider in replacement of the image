@@ -401,8 +401,8 @@
 
     <div class="container-fluid pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #3A0842;">Hi,</p>
-            <p style="color: #3A0842;">Do you know you can Enroll for</p>
+                <p><h4><font face="Garamond" color="#3A0842">Hi,</font></h4></p>
+            <p style="color: #3A0842;"><h3>Do you know you can Enrol for</h3></p>
             <p style="color: #3A0842; font-weight: bold;">FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</p>
             <a href="register.html" class="btn btn-success pl-5 pr-5">Start Learning</a>
         </div>
