@@ -209,7 +209,14 @@
             text-align: left;
             background-image: url("https://res.cloudinary.com/ladydondammy/image/upload/v1571313862/real_time_background_x9alew.png");
             padding: 100px;
+            width:100%
             
+        }
+
+        @media screen and (max-width: 500px) {
+            .projectText {
+                padding: 20px;
+            }
         }
 
         hr {
@@ -218,7 +225,7 @@
 
         .subhead {
             text-align: center;
-            padding-top: 80px;
+            padding-top: 20px;
             padding-bottom: 20px;
             font-weight: bold;
         
@@ -233,11 +240,22 @@
             padding: 10px 100px 40px 100px;
         }
 
-        .points2 {
+          .points2 {
             display: inline-block;
             padding: 10px 100px 40px 100px;
         
         }
+
+        @media screen and (max-width: 500px){
+            .points1 {
+                padding-left:10px;
+            }
+            .points2 {
+                padding-left:10px;
+            }
+        }
+
+      
 
         p img {
             padding-right: 15px;
@@ -291,59 +309,103 @@
             display: inline-block;
             text-align: left;
             
+            
         }
 
         .textreview {
             display: inline-block;
             padding-left: 10px;
             text-align: left;
+            
         }
 
         .review {
             border: 1px solid white;
-            width: 60%;
-            text-align: justify;
+            width: 70%;
             box-shadow: 5px 5px 5px 5px lightgrey;
             border-radius: 10px;
             padding: 30px 100px;
             margin: auto;
             margin-bottom: 30px;
             margin-top: 40px;
-
-
         }
+
+        .review p {
+            margin:0px;
+            padding:0px;
+            width: 100%;
+        }
+
+        .review-foot{
+            display:flex;
+            width:100%;
+            margin-top:30px;
+        }
+
+        @media screen and (max-width: 800px){
+            .review {
+                padding: 20px 20px;
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 400px){
+            .review {
+                padding: 10px 10px;
+                width: 90%;
+            }
+        }
+
+
 
         .seeMore {
             text-align: center;
+            margin:30px;
 
+        }
+
+        .full-contain {
+            display: flex;
+            flex-wrap:wrap;
+            width:100%;
+            align-content: space-between;
         }
         
         
-        .box-1 {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            box-sizing: border-box;
-            text-align: center;
+        .box {
+            width:40%;
+            margin:30px;
+            display:flex; 
         }
 
-        .box-2 {
-            float: left;
-            width: auto;
-            padding: 5px;
-            box-sizing: border-box;
-            text-align: left;
+
+        .inner-box {
+           margin-right: 20px;
+        }
+
+        @media screen and (max-width:947px) {
+            .box {
+                width:100%;
+            }
 
         }
-        
-        .box-3 {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            box-sizing: border-box;
-            text-align: left;
-            margin-bottom: 10px;
+
+        @media screen and (max-width: 400px){
+            .box {
+                display:block;
+            }
+
+            .inner-box {
+                width: 100%;
+                text-align:center;
+                margin-bottom: 30px;
+            }
+
+            .inner-box h6 {
+                text-align: center;
+            }
         }
+
 
         h5{
             font-weight: bold;
@@ -353,6 +415,52 @@
         h6{
             font-weight: bold;
             text-align: left; 
+        }
+
+        .btn-but {
+            padding : 10px  30px 10px 30px;
+        }
+
+        .medium {
+            font-size: 14px;
+        }
+
+        .big {
+            font-size: 20px;
+        }
+
+        .startsec {
+            margin-bottom: 50px;
+            background-color: #FCFCFC;
+        }
+
+        @media screen and (max-width: 997px){
+           
+            .coll-1 {
+              width:100%;
+              margin-bottom: 20px;;
+            }
+
+            .coll-2 {
+                width:100%;
+                
+            }
+
+        }
+
+        @media screen and (max-width: 360px){
+            .points2 {
+                font-size: 14px;
+            }
+            .points1 {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width:574px) {
+            .sub {
+                margin-top:10px;
+            }
         }
         
     </style>
@@ -388,19 +496,19 @@
         </div>
     </nav>
 
-    <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
+    <div class="container-fluid contain pt-5 pb-5" style="background-color: #F0F2F6;">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 margin1">
+                <div class="col-md-6 margin1 col-content">
                     <p class="font-weight-bold">N50,000 for 3 months full training </p>
                     <h4 class="font-weight-bold pb-3">Full Stack Development</h4>
                     <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <a class="btn btn-success pt-2 pb-2" href="register.html" >Start Learning</a>
+                    <div class="clearfix contain">
+                        <div class="float-left coll-1 ">
+                            <a class="btn btn-success btn-but pt-2 pb-2" href="register.html" >Start Learning</a>
                         </div>
-                        <div class="float-right">
+                        <div class="float-right coll-2">
                             <a class="pt-1 pb-1 mx-2" href="#" style="background-color: none; color: #000; outline: none;" >Beginner</a>
                             <button class="btn btn-success but px-3 my-2" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0; border-radius:10px">ONLINE</button>
                             <button class="btn btn-success but px-3 mx-2 my-2" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797; border-radius:10px">PAID</button>
@@ -409,25 +517,25 @@
 
                     </div>
                     <div class="duration">
-                        <p>Duration<br>
-                        <b>12 weeks</b></p>
+                        <p class="small">Duration<br>
+                        <b class="medium">12 weeks</b></p>
                     </div>
                     <div class="courseStarts">
-                        <p>Course starts<br>
-                        <b>5th of October, 2019</b></p>
+                        <p class="small">Course starts<br>
+                        <b class="medium">5th of October, 2019</b></p>
                     </div>
                     <div class="rating">
-                        <p>Average ratings<br>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
+                        <p class="small">Average ratings<br>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
                         <a class="reviews" href="#">See all reviews</a>
     
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-img">
                     <img class="img-fluid w-100" src="https://res.cloudinary.com/ladydondammy/image/upload/v1571313271/creative_web_design_1_wi6ncc.png">
                 </div>
                 
@@ -458,9 +566,9 @@
         </div>
      </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid"  style="background:rgba(129, 22, 124, 0.05); padding: 0px;">
 
-        <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
+        <div class="course-acc">
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
@@ -837,93 +945,105 @@
         </div>
     </div>
 
-
+    <div class="startsec">
     <div class="col-md-10 offset-md-1 pb-5 pt-5">
          <h5>On Start.ng, you are privileged to</h5>
-                <div class="box-1">
-                    <div class="box-2">
+            <div class="full-contain">
+                <div class="box">
+                    <div class="inner-box">
                         <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img1_rnyatt.png">
                     </div>
-                    <div class="box-2">
+                    <div class="inner-text">
                         <h6>Learn From the Best Teachers</h6></span>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
                     </div>
                 </div>
-                <div class="box-1">
-                    <div class="box-2">
+                <div class="box">
+                    <div class="inner-box">
                         <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img2_a35wyh.png">
                     </div>
-                    <div class="box-2">
+                    <div class="inner-text">
                         <h6>Join our Online Developer Community</h6>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
                     </div>
                 </div>
-                    <div class="box-3">
-                        <div class="box-2">
+                <div class="box">
+                        <div class="inner-box">
                             <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img3_qfn4gm.png">
                         </div>
-                        <div class="box-2">
+                        <div class="inner-text">
                             <h6>Support from Mentors</h6>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
                         </div>
-                    </div>
-                    <div class="box-3">
-                        <div class="box-2">
+                </div>
+                <div class="box">
+                        <div class="inner-box">
                             <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img4_wixjig.png">
                         </div>
-                        <div class="box-2">
+                        <div class="inner-text">
                             <h6>Earn a Certificate</h6>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
                         </div>
-                    </div>    
+                </div>
+                </div>    
+    </div>
     </div>
     
         <h3 class="subhead">What students have to say about us</h3>
 
     <section class="review">
         <div>
-            <p>The HNG internship is a 3-month remote internship designed to find and develop the<br> 
-            most talented software developers. Everyone is welcome to participate (there is no <br>
-            entrance exam). Anyone can log into the internship using their laptop. Each week, we<br>
+            <p>The HNG internship is a 3-month remote internship designed to find and develop the
+            most talented software developers. Everyone is welcome to participate (there is no
+            entrance exam). Anyone can log into the internship using their laptop. Each week, we
             give tasks.</p>
+
+        <div class="review-foot">
+
         <div class="review-img">
             <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571329788/review_image_1_lz73bl.png">
-
         </div>
 
         <div class="textreview">
-                <p><span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span><br>
-                    Dennis Lagbaja<br>
+                <p><span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <p> Dennis Lagbaja</p>
                     <i>Completed the Front End Developer Class</i> </p>
     
+        </div>
+
+        </div>
         </div>
             
     </section>
 
     <section class="review">
-            <div>
-                <p>The HNG internship is a 3-month remote internship designed to find and develop the<br> 
-                most talented software developers. Everyone is welcome to participate (there is no <br>
-                entrance exam). Anyone can log into the internship using their laptop. Each week, we<br>
+            <div >
+                <p>The HNG internship is a 3-month remote internship designed to find and develop the
+                most talented software developers. Everyone is welcome to participate (there is no 
+                entrance exam). Anyone can log into the internship using their laptop. Each week, we
                 give tasks.</p>
+
+            <div class="review-foot">
             <div class="review-img">
                 <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571335861/review_image_2_dljw5c.png">
     
             </div>
     
             <div class="textreview">
-                    <p><span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span><br>
+                    <p><span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span><br>
                         Khadirat Uche Jumbo<br>
                         <i>Completed the Laravel PHP Class</i> </p>
         
+            </div>
+            </div>
             </div>
                 
         </section>
@@ -942,7 +1062,7 @@
                     </p>
                     <form class="form-inline">
                         <input type="text" class="form-control col-md-8" id="email">
-                        <button type="submit" class="btn btn-success ml-1 pl-5 pr-5">Subscribe</button>
+                        <button type="submit" class="btn btn-success ml-1 pl-5 pr-5 sub">Subscribe</button>
                     </form>
                 </div>
                 <div class="col-md-4">
