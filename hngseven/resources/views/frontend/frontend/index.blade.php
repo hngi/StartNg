@@ -196,7 +196,7 @@
                 The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
                 software developers
             </p>
-            <a href="register.blade.php" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+            <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
         </div>
     </div>
 
@@ -209,7 +209,7 @@
                     can log into the internship using
                     their laptop. Each week, we give tasks. </p>
                 <input type="text" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
-                <a href="" class="btn btn-success pl-5 pr-5 mb-3">Find A Course</a>
+                <a href="{{route('courses.index')}}" class="btn btn-success pl-5 pr-5 mb-3">Find A Course</a>
             </div>
             <div class="col-md-6 mb-3">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png"
@@ -328,7 +328,7 @@
                 <p class="pl-5" style="font-weight:bold;">- Intensive learning sessions</p>
                 <p class="pl-5">The HNG internship is a 3-month remote <br> internship designed ---to find and <br>
                     develop the most talented software developers. </p>
-                <a href="" class="pl-5" style="color: #fff; font-weight: bold;">Learn more >></a>
+                <a href="{{route('about')}}" class="pl-5" style="color: #fff; font-weight: bold;">Learn more >></a>
             </div>
             <div class="col-md-6">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570929621/startng/Group_417_rx40it.png"
@@ -348,7 +348,7 @@
                 <p class="pb-4">The HNG internship is a 3-month remote internship <br> designed to find and develop the
                     most talented
                     <br> software developers. Everyone is welcome to participate <br> (there is no entrance exam). </p>
-                <a href="register.blade.php" class="btn btn-success pl-5 pr-5">Start Learning</a>
+                <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
             </div>
         </div>
     </div>
@@ -359,7 +359,7 @@
             <p class="pb-4">After 3 months of training and projects, our graduates <br> are ready to take on full-time
                 or remote jobs at your <br> company.
             </p>
-            <a href="hire.blade.php" class="btn btn-success pl-5 pr-5">Hire
+            <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5">Hire
                 a Graduate
             </a>
         </div>
@@ -375,7 +375,7 @@
             <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software
                 developers.
             </p>
-            <a href="register.blade.php" class="btn btn-success pl-5 pr-5">Start
+            <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5">Start
                 Learning</a>
         </div>
     </div>

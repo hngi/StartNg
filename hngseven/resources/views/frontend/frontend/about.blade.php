@@ -212,7 +212,7 @@
                     <li>Flexible Online Learning</li>
                     <li>Earn a Course Certificate</li>
                 </ul>
-                <a class="btn btn-success ml-5 pl-5 pr-5" href="register.blade.php">Start Learning</a>
+                <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
             </div>
             <div class="col-md-6">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915745/startng/Rectangle_9_w0iucz.png"
