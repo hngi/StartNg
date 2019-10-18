@@ -11,11 +11,15 @@
     <title>Javascript</title>
 
     <style>
-        body {
-            font-family: Nunito;
+        html {
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
             overflow-x: hidden;
         }
-
+        body {
+            font-family: Nunito;   
+        }
         /* Style for Navbar Starts */
 
         .navbar-custom li a {
@@ -164,7 +168,6 @@
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
-
         .panel-group .panel {
             border: none;
             -webkit-box-shadow: none;
@@ -210,11 +213,11 @@
             width: 100%;
         }
 
-        .learn ul li {
+        .learn p {
             list-style-type: none;
             font-style: normal;
             font-weight: normal;
-            margin: 30px 0;
+            margin: 20px 0;
             padding-bottom: 10px;
             font-size: 20px;
             line-height: 22px;
@@ -263,13 +266,12 @@
             color: white;
         }
 
-        .head-3 {
-            /* padding: 10px 0 10px 100px; */
-            margin: 10px;
-        }
+        /* .head-3 {
+            padding: 10px 60px 10px 60px;
+            margin: 0;
+        } */
 
-        /* testimonial */
-
+        /* testimonials Start Here */
         .testimonials-container {
             margin: 20px auto;
             max-width: 768px;
@@ -290,6 +292,13 @@
             line-height: 30px;
             color: #333333;
         }
+        
+        .secbox {
+            background-color: #fff;
+            max-width: 100%;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
 
         .subtop {
             font-family: Nunito;
@@ -307,13 +316,14 @@
         }
 
         .stuimg {
+            position: static;
             border-radius: 50%;
             object-fit: cover;
         }
 
         .user-details {
+            position: static;
             margin-left: 10px;
-            ;
         }
 
         .username {
@@ -329,8 +339,8 @@
         }
 
         .checked {
-            padding: 8px;
-            font-size: 20px;
+            padding: 5px;
+            font-size: 15px;
             color: #FAF35E;
         }
 
@@ -361,14 +371,15 @@
         }
 
         .more a.xbutton {
-            padding: 12px;
+            padding: 12px 28px;
             background: #44CF6C;
             color: #fff;
             border-radius: 10px;
             border: none;
         }
+         /* Testimonial End Here */
 
-        /*  */
+        /* Start.ng form here */
         .projects-horizontal {
             color:#313437;
             background-color:#fcfcfc;
@@ -395,16 +406,7 @@
         .icon-div img{
             padding:20px;
         }
-
-        @media (max-width:767px) {
-            .projects-horizontal h2 {
-                margin-bottom:25px;
-                padding-top:25px;
-                font-size:25px;
-                font-family:Nunito, sans-serif;
-                color:#3a0842;
-            }
-        }
+       
         .projects-horizontal .intro {
             font-size:16px;
             max-width:500px;
@@ -417,13 +419,6 @@
             padding-top:60px;
             min-height:160px;
         }
-        @media (max-width:767px) {
-            .projects-horizontal .item {
-                padding-top:40px;
-                min-height:160px;
-            }
-            
-        }
         .projects-horizontal .item .name {
             font-size:16px;
             font-weight:bold;
@@ -432,6 +427,9 @@
             color:#3a0842;
             font-family:'Open Sans', sans-serif;
         }
+        /* Start.ng end here */
+
+        /* Responsiveness */
         @media (max-width:991px) {
             .projects-horizontal .item .name {
                 margin-top:22px;
@@ -439,11 +437,62 @@
                 font-family:'Open Sans', sans-serif;
             }
         }
-        .projects-horizontal .item .description {
-            font-size:16px;
-            margin-bottom:0;
-            color:#2b2d42;
+
+        @media (max-width:767px) {
+            .projects-horizontal h2 {
+                margin-bottom:25px;
+                padding-top:25px;
+                font-size:25px;
+                font-family:Nunito, sans-serif;
+                color:#3a0842;
+            }
+
+            .sec .item1 .icon-div {
+                margin: 0 auto;
+            }
         }
+        
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+        .learn p {
+            list-style-type: none;
+            font-style: normal;
+            font-weight: bold;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+        }
+        
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            .float-right { margin-top: 6px;
+                           margin-bottom: 2px; }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            .subbtn { margin-top: 15px; }
+        }
+        
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+            .stuimg { position: absolute;
+                display:block;
+                max-width: 100%;
+                max-height: 100%;
+                /* left: 0
+                right: 0
+                    top: 0
+                    bottom: 0;
+                margin: auto; */
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+            .user-details { padding-left: 75px;
+                             padding-bottom: 20px;
+                             margin-top: -10px;}  
+                
+            }
+      }
+        /* Responsiveness End Here */
     </style>
 </head>
 
@@ -479,7 +528,7 @@
             </div>
         </div>
     </nav>
-
+<!--  -->
     <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
         <div class="container">
             <div class="row align-items-center">
@@ -498,6 +547,16 @@
                             <a href="javascript-course.html" style="color: #000;">Beginner</a>
                             <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
                             <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                            <!-- <a class="btn btn-success pt-1 pb-1" href="register.html"
+                                style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+                                Learning</a>
+                        </div>
+                        <div class="float-right">
+                            <a href="" style="color: #000;">Beginner</a>
+                            <a class="btn btn-success pt-1 pb-1"
+                                style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
+                            <a class="btn btn-success pt-1 pb-1"
+                                style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a> -->
                         </div>
                     </div>
                     <img class="img-fluid mt-2"
@@ -512,43 +571,43 @@
     </div>
 
     <div class="container pb-5 pt-5">
-        <div class="head-2 text-center ">
+        <div class="head-2 text-center">
             <h2 class="text-center">What you will learn</h2>
         </div>
         <div class="row">
 
             <div class="col-md-6 col-sm-12  learn">
-                <ul>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+            
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        UserFlow, User journey using FlowMapp</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                        UserFlow, User journey using FlowMapp</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        User Research, ideation</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                        User Research, ideation</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        Interactive Design</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                        Interactive Design</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        Prototyping using Figma</li>
-                </ul>
+                        Prototyping using Figma</p>
+        
 
             </div>
             <div class="col-md-6 col-sm-12  learn">
-                <ul class="">
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        Wireframes(Low-Fidelity & High Fidelity)</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                        Wireframes(Low-Fidelity & High Fidelity)</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        Mobile Interface(IOS, Android)</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                        Mobile Interface(IOS, Android)</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        IOS Design Guidelines</li>
-                    <li><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                        IOS Design Guidelines</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
                             alt="">
-                        Material Design Guidelines</li>
-                </ul>
+                        Material Design Guidelines</p>
+            
             </div>
         </div>
 
@@ -572,9 +631,6 @@
             </div>
         </div>
     </div>
-
-    <div class="container">
-
         <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows
@@ -591,12 +647,10 @@
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion"
                                             href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;align-content:center;"></i>
                                             Introduction
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                         </a>
-
-
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
@@ -663,7 +717,6 @@
                                             <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
                                             Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
                                         </a>
                                     </h4>
                                 </div>
@@ -719,7 +772,6 @@
                                             <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>
                                             Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
                                         </a>
                                     </h4>
                                 </div>
@@ -743,7 +795,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
@@ -996,12 +1047,7 @@
                     </div>
 
                 </div>
-            </div>
-
-
-
-            <!-- <div class=" "> -->
-                
+            </div>        
     <div class="projects-horizontal">
         <div class="container">
             <div class="intro">
@@ -1009,52 +1055,52 @@
             </div>
             <div class="row projects">
                 <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210454/icon1_sehqtm.png">
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col text-md-left text-center">
                             <h3 class="name">Learn from the Best teachers</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210456/icon2_cxog3h.png">
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col text-md-left text-center">
                             <h3 class="name">Join our Online Developer Community</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210458/icon3_xd7ce2.png">
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col text-md-left text-center">
                             <h3 class="name">Supports from Mentors</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 item">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-3">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
                             <div class="icon-div">
                                 <img src="https://res.cloudinary.com/stephy/image/upload/v1571210461/icon4_gix6ni.png">
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col text-md-left text-center">
                             <h3 class="name">Earn a Certificate</h3>
                             <p class="description">Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd diffdss dzxf fgg.<br></p>
                         </div>
@@ -1062,10 +1108,9 @@
                 </div>
             </div>
         </div>
-   
-                <!-- <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png"> -->
-            <!-- </div> -->
+   </div>
+        </div>
+            <section class="secbox">
             <p class="subtop">What Students have to say about us</p>
             <div class="testimonials-container">
                 <p class="testimonial">
@@ -1117,7 +1162,7 @@
             <div class="more">
                 <a class="xbutton" href="#">See More Reviews</a>
             </div>
-            </div>
+            </section>
             <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
                 <div class="container pt-5 pb-5">
                     <div class="row align-items-center">
@@ -1126,8 +1171,8 @@
                             <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                             </p>
                             <form class="form-inline">
-                                <input type="text" class="form-control col-md-8" id="email">
-                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5"
+                                <input type="text" placeholder="E-mail Address"class="form-control col-md-8" id="email">
+                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5 subbtn"
                                     style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                             </form>
                         </div>
@@ -1140,9 +1185,6 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- Footer -->
     <div class="container-fluid text-white deep">
         <footer>
@@ -1178,7 +1220,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="help.html">FAQ</a></li>
                         <li><a href="termsOfService.html">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </div>
                 </div>
 

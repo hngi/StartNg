@@ -7,14 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <title>FullStack</title>
 
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
         body {
             font-family: Nunito;
         }
@@ -29,16 +27,20 @@
             color: #fff;
             border: thin solid #2dce89;
         }
+
+        .btn-success2 {
+            background-color: #3F113D;
+            color: #fff;
+            border: thin solid #3F113D;
+        }
         
         .btn-success:hover {
-            background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
         }
         
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-            background-position: center;
         }
         
         .custom-toggler.navbar-toggler {
@@ -156,14 +158,16 @@
             float: right;
             color: #fff;
         }
-        
+       
+         
+    
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
         
         .panel-group .panel {
             border: none;
-            -webkit-box-shadow: none;
+        
         }
         
         .exp-tt {
@@ -199,159 +203,265 @@
         .course-drop {
             padding-bottom: 40px;
         }
-        .student{
-            margin: auto;
-            font-family: 'Nunito', sans-serif;
-            font-size: 25px;
+
+        .projectText {
+            text-align: left;
+            background-image: url("https://res.cloudinary.com/ladydondammy/image/upload/v1571313862/real_time_background_x9alew.png");
+            padding: 100px;
+            width:100%
+            
+        }
+
+        @media screen and (max-width: 500px) {
+            .projectText {
+                padding: 20px;
+            }
+        }
+
+        hr {
+            width:400px;
+            }
+
+        .subhead {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
             font-weight: bold;
-            line-height: 124.8%;
-            color: #2A2B2A;
-        }
-        .box{
-        background-color: #fff;
-        border-radius:10px;
-        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-        height: 420px;
-        width: 919px;
-        margin: auto;
-        }
-        .content{
-            font-family: 'Nunito', sans-serif;
-            font-size: 20px;
-            line-height: 151.2%;
-            font-weight: normal;
-            color: #333333;
-            text-align: justify;
-        }
-        .rate {
-            float: left;
-            height: 46px;
-            padding: 0 10px;
-            margin-left: 20px;
-        }
-        .rate:not(:checked) > input {
-            position:absolute;
-            top:-9999px;
-        }
-        .rate:not(:checked) > label {
-            float:right;
-            width:1em;
-            overflow:hidden;
-            white-space:nowrap;
-            cursor:pointer;
-            font-size:30px;
-            color:#ccc;
-        }
-        .rate:not(:checked) > label:before {
-            content: '★ ';
-        }
-        .rate > input:checked ~ label {
-            color: #FAF35E;    
-        }
-        .rate:not(:checked) > label:hover,
-        .rate:not(:checked) > label:hover ~ label {
-            color: #FAF35E; 
-        }
-        .rate > input:checked + label:hover,
-        .rate > input:checked + label:hover ~ label,
-        .rate > input:checked ~ label:hover,
-        .rate > input:checked ~ label:hover ~ label,
-        .rate > label:hover ~ input:checked ~ label {
-            color: #FAF35E;
+        
         }
 
-        .pix{
-            float: left;
+        .subhead2 {
+            font-weight: bold;
         }
-        .name {
-            font-weight: 600px;
-            font-size: 16px;
-            margin-left: 105px;
-            letter-spacing: 0.655606px;
+
+        .points1 {
+            display: inline-block;
+            padding: 10px 100px 40px 100px;
         }
-        .task{
-            font-weight: 600px;
-            font-style: italic;
-            font-size: 14px;
-            margin-left: 105px;
-            letter-spacing: 0.655606px;
+
+          .points2 {
+            display: inline-block;
+            padding: 10px 100px 40px 100px;
+        
+        }
+
+        @media screen and (max-width: 500px){
+            .points1 {
+                padding-left:10px;
+            }
+            .points2 {
+                padding-left:10px;
+            }
+        }
+
+      
+
+        p img {
+            padding-right: 15px;
+        }
+
+        .checked {
+        color: yellow;
+        }
+
+        .duration {
+            display:inline-block;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+
+        .courseStarts {
+            display: inline-block;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+
+        .rating 
+        {
+            display: inline-block;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+
+        @media screen and (min-width: 1080px){
+            .margin1 {
+            margin-top:150px;
+        }
 
         }
-        #see{
+        
+        .but {
+            font-size: 12px;
+        }
+
+        .reviews {
+            font-size:10px;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+
+        .but-suc:hover{
+            color: white;
+        }
+
+        .review-img {
+            display: inline-block;
+            text-align: left;
+            
+            
+        }
+
+        .textreview {
+            display: inline-block;
+            padding-left: 10px;
+            text-align: left;
+            
+        }
+
+        .review {
+            border: 1px solid white;
+            width: 70%;
+            box-shadow: 5px 5px 5px 5px lightgrey;
             border-radius: 10px;
-            margin-left: 40%;
-            padding: 10px 30px 10px 30px;
-
-        }
-        .media-body p {
-            font-size: 18px;
-            text-align: left;
+            padding: 30px 100px;
+            margin: auto;
+            margin-bottom: 30px;
+            margin-top: 40px;
         }
 
-        .mt-0 {
-            font-size: 20px;
-            text-align: left;
+        .review p {
+            margin:0px;
+            padding:0px;
+            width: 100%;
+        }
+
+        .review-foot{
+            display:flex;
+            width:100%;
+            margin-top:30px;
+        }
+
+        @media screen and (max-width: 800px){
+            .review {
+                padding: 20px 20px;
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 400px){
+            .review {
+                padding: 10px 10px;
+                width: 90%;
+            }
+        }
+
+
+
+        .seeMore {
+            text-align: center;
+            margin:30px;
+
+        }
+
+        .full-contain {
+            display: flex;
+            flex-wrap:wrap;
+            width:100%;
+            align-content: space-between;
+        }
+        
+        
+        .box {
+            width:40%;
+            margin:30px;
+            display:flex; 
+        }
+
+
+        .inner-box {
+           margin-right: 20px;
+        }
+
+        @media screen and (max-width:947px) {
+            .box {
+                width:100%;
+            }
+
+        }
+
+        @media screen and (max-width: 400px){
+            .box {
+                display:block;
+            }
+
+            .inner-box {
+                width: 100%;
+                text-align:center;
+                margin-bottom: 30px;
+            }
+
+            .inner-box h6 {
+                text-align: center;
+            }
+        }
+
+
+        h5{
             font-weight: bold;
-        }
-
-        .text1 {
-            padding-top: 40px;
             text-align: center;
         }
 
-        .text1 h3 {
-            font-weight: bolder;
-            font-size: 22px;
-        }
-
-        img.align-self-start.mr-3 {
-            margin-right: 8% !important;
-            background-color: #44CF6C;
-            border-radius: 50%;
-            padding: 8px;
-        }
-
-        .media {
-            padding: 30px;
-        }
-
-        .section1 {
-            background-color: rgba(129, 22, 124, 0.05)
-        }
-        
-        .section2 {
-            background: #fcfcfc;
-        }
-        
-        .my-3{
-            font-weight: bolder;
-            padding-bottom: 40px;
-        }
-        #side{
-            margin: auto;
-        }
-        .green{
-            margin-top: 30px;
-            width: 100%;
-        }
-        .im-ban .col-md-6 img {
-            display: inline;
-            position: relative;
-        }
-        .two{
-            background-color: #2DCE89;
-        }
-        .cs4 h3 {
+        h6{
             font-weight: bold;
-            font-size: 30px;
-            padding: 10px 0px 10px 0px;
-        }
-        .cs4 p {
-            font-size: 24px;
-            padding-top: 5px;
-            padding-bottom: 10px;
+            text-align: left; 
         }
 
+        .btn-but {
+            padding : 10px  30px 10px 30px;
+        }
+
+        .medium {
+            font-size: 14px;
+        }
+
+        .big {
+            font-size: 20px;
+        }
+
+        .startsec {
+            margin-bottom: 50px;
+            background-color: #FCFCFC;
+        }
+
+        @media screen and (max-width: 997px){
+           
+            .coll-1 {
+              width:100%;
+              margin-bottom: 20px;;
+            }
+
+            .coll-2 {
+                width:100%;
+                
+            }
+
+        }
+
+        @media screen and (max-width: 360px){
+            .points2 {
+                font-size: 14px;
+            }
+            .points1 {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width:574px) {
+            .sub {
+                margin-top:10px;
+            }
+        }
+        
     </style>
 </head>
 
@@ -385,101 +495,79 @@
         </div>
     </nav>
 
-    <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
+    <div class="container-fluid contain pt-5 pb-5" style="background-color: #F0F2F6;">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 margin1 col-content">
                     <p class="font-weight-bold">N50,000 for 3 months full training </p>
                     <h4 class="font-weight-bold pb-3">Full Stack Development</h4>
                     <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html" >Start
-                                Learning</a>
+                    <div class="clearfix contain">
+                        <div class="float-left coll-1 ">
+                            <a class="btn btn-success btn-but pt-2 pb-2" href="register.html" >Start Learning</a>
                         </div>
-                        <div class="float-right">
-                            <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                        <div class="float-right coll-2">
+                            <a class="pt-1 pb-1 mx-2" href="#" style="background-color: none; color: #000; outline: none;" >Beginner</a>
+                            <button class="btn btn-success but px-3 my-2" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0; border-radius:10px">ONLINE</button>
+                            <button class="btn btn-success but px-3 mx-2 my-2" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797; border-radius:10px">PAID</button>
                         </div>
+                                    
+
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/gimage/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <div class="duration">
+                        <p class="small">Duration<br>
+                        <b class="medium">12 weeks</b></p>
+                    </div>
+                    <div class="courseStarts">
+                        <p class="small">Course starts<br>
+                        <b class="medium">5th of October, 2019</b></p>
+                    </div>
+                    <div class="rating">
+                        <p class="small">Average ratings<br>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <a class="reviews" href="#">See all reviews</a>
+    
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img class="img-fluid w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570973959/startng/creative-web-designer-planning-application-developing-template-layout_1418-2436_zq3paj.png">
+                <div class="col-md-6 col-img">
+                    <img class="img-fluid w-100" src="https://res.cloudinary.com/ladydondammy/image/upload/v1571313271/creative_web_design_1_wi6ncc.png">
                 </div>
+                
             </div>
         </div>
     </div>
-
-
-    <section class="section3">
-        <div class="contaner-fluid">
-            <h3 class="text-center my-3">What You Will Learn</h3>
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; UserFlow, User Journey using Flow Map</p>
-                        <hr style="width: 90%" />
-                    </div>
-                <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Wire-frames (Low-Fidelity & High Fidelity)</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; User Research, Ideation</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Mobile Interface (IOS, Android)</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Interactive Design</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; IOS Design Guidelines</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Prototyping using Figma</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Material Design Guidelines</p>
-                        <hr style="width: 90%" />
-                    </div> 
-                </div>        
-            </div>
-        </div>       
-    </section>
-
-    <section class="section4">
-        <div class="im-ban">
-            <div class="two"
-                style="background-image: url(https://res.cloudinary.com/oluchii/image/upload/v1571222324/2226806_1.png);background-repeat: no-repeat;background-position: right;">
-                <div class="container">
-                    <div class="col-md-6 py-4 pl-3">
-                        <div class="cs4">
-                            <h3>Build Real Time Project</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ut. Voluptates explicabo
-                                inventore laudantium magnam aperiam alias, vitae dolor cumque dolorem praesentium cum,
-                                asperiores consequuntur commodi hic aliquid unde eos!
-                            </p>
-                            <button class="btn btn-primary" style="background: #3F113D;">Start Learning</button>
-                        </div>
-                    </div>
+    <div>
+        <h3 class="subhead">What you will learn</h3>
+        <div class="points1">
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">UserFlow, User Journey using FlowMapp</p><hr>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">User Research, Ideation</p><hr>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Interactive Design</p><hr>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Prototyping using Figma</p><hr>
+        </div>
+        <div class="points2">
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Wireframes (Low-Fidelity & High Fidelity)</p><hr>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Mobile interface (IOS, Android)</p><hr>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">IOS Design Guidelines</p><hr>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Material Design Guidelines</p><hr>
                 </div>
-            </div>
-    <!-- <div class="contaner-fluid" id="side">
-        <img class="green" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
-    </div> -->
+    </div>
 
+    <div class="contaner-fluid">
+        <div class="projectText">
+        <h2 class="subhead2">Build Real time Projects</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Augue <br>Mollis a molestie sit. Odio lobortis justo sit at eget semper amet<br>adipiscing. Netus sit imperdiet tincidunt ut. Habitasse amet<br>sagittis egestas quis ipsum.</p>
+        <button class="btn btn-success2 pt-1 pb-1 but-suc" href="register.html" >Start Learning</button>
+        </div>
+     </div>
 
-    <section class="sessionforcollapse">
-        <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
+    <div class="container-fluid"  style="background:rgba(129, 22, 124, 0.05); padding: 0px;">
+
+        <div class="course-acc">
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
@@ -496,6 +584,8 @@
                                             <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Introduction
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                         </a>
+
+
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -852,126 +942,115 @@
                 </div>
             </div>
         </div>
-</section>
+    </div>
 
-    <section class="section2">
-        <div class="text1">
-            <h3>On Start.ng, you are privileged to </h3>
-        </div>
-        <div class="col-md-10 offset-md-1 pb-5 pt-5">
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3"
-                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230671/Group_305_w3t3ik.png"
-                                alt="Learn from the Best teachers">
-                            <div class="media-body">
-                                <h4 class="mt-0">Learn from the Best Teachers</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
+    <div class="startsec">
+    <div class="col-md-10 offset-md-1 pb-5 pt-5">
+         <h5>On Start.ng, you are privileged to</h5>
+            <div class="full-contain">
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img1_rnyatt.png">
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230760/Group_309_yrwwlu.png"
-                                alt="Online community">
-                            <div class="media-body">
-                                <h4 class="mt-0">Join our Online Developer Community</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3"
-                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230791/Group_300_guwfwc.png" alt="Support">
-                            <div class="media-body">
-                                <h4 class="mt-0">Support from Mentors</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230828/Group_306_cjdqqu.png"
-                                alt="Certificate">
-                            <div class="media-body">
-                                <h4 class="mt-0">Earn a Certificate</h4>
-                                <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf
-                                    fgg.</p>
-                            </div>
-                        </div>
+                    <div class="inner-text">
+                        <h6>Learn From the Best Teachers</h6></span>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
                     </div>
                 </div>
-            </div>
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img2_a35wyh.png">
+                    </div>
+                    <div class="inner-text">
+                        <h6>Join our Online Developer Community</h6>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
+                    </div>
+                </div>
+                <div class="box">
+                        <div class="inner-box">
+                            <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img3_qfn4gm.png">
+                        </div>
+                        <div class="inner-text">
+                            <h6>Support from Mentors</h6>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
+                        </div>
+                </div>
+                <div class="box">
+                        <div class="inner-box">
+                            <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img4_wixjig.png">
+                        </div>
+                        <div class="inner-text">
+                            <h6>Earn a Certificate</h6>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vitae cupiditate cumque quidem.</p>
+                        </div>
+                </div>
+                </div>    
+    </div>
+    </div>
+    
+        <h3 class="subhead">What students have to say about us</h3>
+
+    <section class="review">
+        <div>
+            <p>The HNG internship is a 3-month remote internship designed to find and develop the
+            most talented software developers. Everyone is welcome to participate (there is no
+            entrance exam). Anyone can log into the internship using their laptop. Each week, we
+            give tasks.</p>
+
+        <div class="review-foot">
+
+        <div class="review-img">
+            <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571329788/review_image_1_lz73bl.png">
         </div>
+
+        <div class="textreview">
+                <p><span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <p> Dennis Lagbaja</p>
+                    <i>Completed the Front End Developer Class</i> </p>
+    
+        </div>
+
+        </div>
+        </div>
+            
     </section>
 
-   
-   <!-- @miz_kas start from here -->
+    <section class="review">
+            <div >
+                <p>The HNG internship is a 3-month remote internship designed to find and develop the
+                most talented software developers. Everyone is welcome to participate (there is no 
+                entrance exam). Anyone can log into the internship using their laptop. Each week, we
+                give tasks.</p>
 
-    <div class="container col-md-8 my-5">
-    <div class="row aligh-items-center">
-        <h1 class="student my-5"> What students have to say about us </h1>
-        <div class="box">
-            <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
-            <div class="box-2 px-5">
-                <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218974/Ellipse_bw76jr.png" alt="picture">
-
-                    <div class="rate">
-                            <input type="radio" id="star5" name="rate" value="5" />
-                            <label for="star5">5 stars</label>
-                            <input type="radio" id="star4" name="rate" value="4" />
-                            <label for="star4">4 stars</label>
-                            <input type="radio" id="star3" name="rate" value="3" />
-                            <label for="star3">3 stars</label>
-                            <input type="radio" id="star2" name="rate" value="2" />
-                            <label for="star2">2 stars</label>
-                            <input type="radio" id="star1" name="rate" value="1" />
-                            <label for="star1">1 star</label>  
-                    </div> 
-                    <br>
-                    <br>
-                          <p class="name"> Dennis Lagbaja </p>
-                          <span class="task">Completed the Front End Developer Class</span>
-            </div>
-        </div>
-
-        <div class="box mt-5">
-                <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
-                <div class="box-2 px-5">
-                    <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218964/Ellipse_1_acflsk.png" alt="picture">
+            <div class="review-foot">
+            <div class="review-img">
+                <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571335861/review_image_2_dljw5c.png">
     
-                        <div class="rate">
-                                <input type="radio" id="star5" name="rate" value="5" />
-                                <label for="star5">5 stars</label>
-                                <input type="radio" id="star4" name="rate" value="4" />
-                                <label for="star4">4 stars</label>
-                                <input type="radio" id="star3" name="rate" value="3" />
-                                <label for="star3">3 stars</label>
-                                <input type="radio" id="star2" name="rate" value="2" />
-                                <label for="star2">2 stars</label>
-                                <input type="radio" id="star1" name="rate" value="1" />
-                                <label for="star1">1 star</label>  
-                        </div> 
-                        <br>
-                        <br>
-                              <p class="name"> Khadirat Uche Jumbo </p>
-                              <span class="task">Completed the Laravel PHP Class</span>
-                </div>
             </div>
-    </div>
+    
+            <div class="textreview">
+                    <p><span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span><br>
+                        Khadirat Uche Jumbo<br>
+                        <i>Completed the Laravel PHP Class</i> </p>
+        
+            </div>
+            </div>
+            </div>
+                
+        </section>
+        <div class=" seeMore">
+                <button class="btn btn-success" >See More Reviews</button>
 
-    <button type="submit" class="btn btn-primary my-5 " id="see" style="background-color: #44CF6C; border-color: #44CF6C;">See More Reviews</button>
-    </div>
-
+        </div>
+    
 
     <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
         <div class="container pt-5 pb-5">
@@ -981,13 +1060,8 @@
                     <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                     </p>
                     <form class="form-inline">
-
-                        <input type="text" class="form-control col-md-8 col-xm-4" id="email">
-                        <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
-
                         <input type="text" class="form-control col-md-8" id="email">
-                        <button type="submit" class="btn btn-success ml-1 pl-5 pr-5">Subscribe</button>
-
+                        <button type="submit" class="btn btn-success ml-1 pl-5 pr-5 sub">Subscribe</button>
                     </form>
                 </div>
                 <div class="col-md-4">
@@ -996,6 +1070,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid text-white deep">

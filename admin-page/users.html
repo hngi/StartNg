@@ -56,10 +56,6 @@
         #wrapper.toggled #sidebar-wrapper {
             margin-left: 0;
         }
-        .admin-personal-info{
-            border-bottom: 0.5px solid #EAEAF2;
-        }
-       
         
         @media (min-width: 768px) {
             #sidebar-wrapper {
@@ -80,27 +76,31 @@
 <body>
 
     <div class="d-flex" id="wrapper">
+
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper" style="background-color: #3A0842;">
             <div class="sidebar-heading"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
             </div>
             <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
-                <a href="#" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Profile</a>
-                <a href="users.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+                <a href="profile.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Profile</a>
+                <a href="#" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Users</a>
                 <a href="add-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
                     Courses</a>
                 <a href="view-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View
                     Courses</a>
                 <a href="create-admin.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Create Admin</a>
+                <a href="logout.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Logout</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
+
         <!-- Page Content -->
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <button class="btn" id="menu-toggle"><img class="img-fluid"
                         src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571236013/iconfinder_Menu_2290865-2_rtadbn.png"></button>
+
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -114,61 +114,60 @@
                     </ul>
                 </div>
             </nav>
-            <div class ="row">
-                <div class="col-12 text-center">
-                    <div class="container">
-                        <br>
-                        <img src="https://res.cloudinary.com/angelae/image/upload/v1571266137/Start-ng-Pre-internship/cdpm6f5a5kyefzxlulbr.png" style=" height: 150px; width: 150px;">
-                        <h4> John Doe - Admin</h4>
-                    </div>
-                </div>
+
+            <div class="table-responsive col-md-10 offset-md-1 mt-5">
+                <h2 class="text-center mb-5">USER DETAILS</h2>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Course Registered</th>
+                            <th>Account Creation Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                            <td>
+                                <ul>
+                                    <li>Laravel</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </td>
+                            <td>2019-08-08</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                            <td>
+                                <ul>
+                                    <li>Laravel</li>
+                                </ul>
+                            </td>
+                            <td>2019-09-09</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                            <td>
+                                <ul>
+                                    <li>Laravel</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </td>
+                            <td>2019-10-10</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <section style="padding: 2% 5% 2% 5%;">
-                <div class="card" style="padding: 2% 5% 2% 5%; border-radius: 10px;">
-                   <h6>Personal Information:</h6> 
-                    <table>
-                        <tr class="admin-personal-info">
-                            <td>Name</td>
-                            <td>John Doe</td>
-                            <td><button class="btn-primary btn">Edit</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Date of Birth</td>
-                            <td>January 1, 1990</td>
-                            <td><button class="btn-primary btn">Edit</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Gender</td>
-                            <td>Male</td>
-                            <td><button class="btn btn-primary">Edit</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Password</td>
-                            <td>***********</td>
-                            <td><button class="btn btn-primary">Edit</button></td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-              <section style="padding: 2% 5% 2% 5%;">
-                <div class="card" style="padding: 2% 5% 2% 5%; border-radius: 10px;">
-                   <h6>Contact Information:</h6> 
-                    <table>
-                        <tr class="admin-personal-info">
-                            <td>Email</td>
-                            <td>John.Doe@startdotng.com</td>
-                            <td><button class="btn-primary btn">Add</button></td>
-                            <td><button class="btn-danger btn">Delete</button></td>
-                        </tr>
-                        <tr class="admin-personal-info">
-                            <td>Phone</td>
-                            <td>0701234567</td>
-                            <td><button class="btn-primary btn">Add</button></td>
-                            <td><button class="btn-danger btn">Delete</button></td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
+
         </div>
         <!-- /#page-content-wrapper -->
 
