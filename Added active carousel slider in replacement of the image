@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <title>About</title>
+
+    <style>
+        /* Style for Navbar Starts */
+        .navbar-custom li a {
+            color: #000;
+        }
+
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+
+        .btn-success:hover {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        .custom-toggler .navbar-toggler {
+            border-color: #000;
+        }
+
+        /* Style for Navbar Ends */
+        /* Style for Footer Starts */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .deep {
+            background: #3A0842;
+            color: #fff;
+        }
+
+        .deep #slink {
+            background: #44CF6C;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 70px;
+        }
+
+        .deep li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .deep li {
+            list-style: none;
+        }
+
+        .deep li a:hover {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .icons i {
+            font-size: 26px;
+            height: 50px;
+            width: 50px;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .icons i.fa.fa-twitter:hover {
+            color: #00aced;
+        }
+
+        .icons i.fa.fa-facebook:hover {
+            color: #3b5598;
+        }
+
+        .icons i.fa.fa-instagram:hover {
+            color: #ed3833;
+        }
+
+        /* Style for Footer Ends */
+        /* Body Style */
+
+        .banner {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915217/startng/Rectangle_7_ak5zc2.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .priviledge {
+            background-color: #FCFCFC;
+            padding: 40px;
+        }
+
+        .started {
+            background-color: #FCFCFC;
+        }
+
+        .global_reach {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570916337/startng/Rectangle_10_pwiqsf.png');
+            background-color: #2dce89;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .global_reach-button a {
+            margin-right: 40px;
+            border-radius: 10px;
+            background-color: #44CF6C;
+        }
+
+        .rHeader {
+            color: #3A0842;
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+
+        .rText {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 176.4%;
+            letter-spacing: 0.655606px;
+        }
+
+        .strong {
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* Body Style Ends */
+
+        /*carousel styling starts here*/
+        .carousel-item {
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+            width: 23%;
+            justify-content: center;
+        }
+
+        .carousel-wrapper {
+            background-color: #FFFFFF;
+            overflow: visible;
+        }
+
+        .carousel-wrapper .carousel {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-wrapper .carousel .carousel-item {
+            background-color: #FFFFFF;
+            width: 20%;
+            height: auto;
+            min-width: 120px;
+            margin: 0 20px;
+            transition: transform 500ms ease;
+        }
+
+        .carousel-item.active {
+            transform: scale(1.3);
+            margin-right: 1.3em;
+            z-index: 1;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            background: #7F5A83;
+            color: white;
+            top: 5em;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: green;
+        }
+
+        @media (max-width: 767.98px) {
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                background: #7F5A83;
+                color: white;
+                top: 1.5em;
+
+            }
+
+            .carousel-control-prev {
+                margin-right: 1.3em;
+            }
+        }
+
+        /*carousel styling ends here*/
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"><img
+                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
+                    class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
+                data-target="#navbar9" style="color: #000;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar9">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="hireGrad.html">Hire A Grad</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
+                            Learning</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid banner pt-5 pb-5">
+        <div class="col-md-6 offset-md-3 text-center pt-5 pb-5 mb-5">
+            <p class="pb-5 mb-5" style="color: #3A0842;">A platform for learning programming <br> where anyone, anywhere
+                in the world <br> can join and become
+                <br> a better programmer
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 pb-5">
+                <h4 class="pl-5" style="color: #7F5A83;">Courses</h4>
+                <p class="pl-5">Lorem ipsum was going to church and she forgot to <br> ferdsdscsd sdsdnd dffdss wesa
+                    dsea wxli sde zdxd asw <br> fdesd fdvdfvddscd sdd.</p>
+                <ul class="pl-5 ml-3" style="color: #44CF6C;">
+                    <li>100% Online</li>
+                    <li>Flexible Online Learning</li>
+                    <li>Earn a Course Certificate</li>
+                </ul>
+                <a class="btn btn-success ml-5 pl-5 pr-5" href="register.html">Start Learning</a>
+            </div>
+            <div class="col-md-6">
+                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915745/startng/Rectangle_9_w0iucz.png"
+                    class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="global_reach">
+        <div class="global_reach-content">
+            <p style="color: #fff;"> Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea wxli sde
+                zdxd asw df sds dcdsc dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede ws a as ff g ss ddcdd fr
+                es waa dde saw asz cde ers ffggt sdawd dfdv ddv dssdsx xsccdvdvf ss </p>
+            <div class="global_reach-button">
+                <a href="courses.html" class="btn btn-success pr-5 pl-5">Free Courses</a>
+                <a href="courses.html" class="btn btn-success pr-5 pl-5">Paid Courses</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+            <div class="row justify-content-center">
+                <div class="carousel-item">
+                    <img src="https://res.cloudinary.com/phiileo/image/upload/v1571154284/carousel_image2_hjxvfd.png"
+                        class="img-fluid" />
+                </div>
+                <div class="carousel-item active">
+                    <img src="https://res.cloudinary.com/phiileo/image/upload/v1571154284/carousel_image2_hjxvfd.png"
+                        class="img-fluid" />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://res.cloudinary.com/phiileo/image/upload/v1571153528/carousel_image1_s7r1st.png"
+                        class="img-fluid" />
+                </div>
+                <a class="carousel-control-prev btn" href="#carousel-example" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next btn" href="#carousel-example" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid priviledge pt-5 pb-5">
+        <div class="col-md-6 offset-md-3 text-center">
+            <p style="color: #3A0842;">On Start.ng, you are privileged to</p>
+        </div>
+        <div class="row mt-5 pt-3">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
+                            class="img-fluid ml-4 pl-5">
+                    </div>
+                    <div class="col-md-8">
+                        <p style="color: #3A0842">Learn from the Best Teachers</p>
+                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
+                            class="img-fluid ml-4 pl-5">
+                    </div>
+                    <div class="col-md-8">
+                        <p style="color: #3A0842">Join Online Developer Community</p>
+                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 pt-3">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
+                            class="img-fluid ml-4 pl-5">
+                    </div>
+                    <div class="col-md-8">
+                        <p style="color: #3A0842">Get Academic and Technical Support</p>
+                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
+                            class="img-fluid ml-4 pl-5">
+                    </div>
+                    <div class="col-md-8">
+                        <p style="color: #3A0842">Earn a Certifcate</p>
+                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-5">
+        <div class="col-md-6 offset-md-3 text-center">
+            <p style="color: #3A0842;">Hi,</p>
+            <p style="color: #3A0842;">Do you know you can Enroll for</p>
+            <p style="color: #3A0842; font-weight: bold;">FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</p>
+            <a href="register.html" class="btn btn-success pl-5 pr-5">Start Learning</a>
+        </div>
+    </div>
+
+    <div class="container-fluid started">
+        <div class="row align-items-center">
+            <div class="col-md-6 pb-2">
+                <img class="img-fluid"
+                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570919824/startng/Group_360_s7w45n.png">
+            </div>
+            <div class="col-md-6 text-center pb-2">
+                <h4 style="color: #7F5A83; font-weight: bold;">How It All Started</h4>
+                <p>Start.ng was going to church and she forgot to ferdsdscsd <br> sdsdnd dffdss wesa dsea wxli sde zdxd
+                    asw fdesd <br> fdvdfvddscd sdd fvvdfvdf sds dcdsc dfvdfvdf vscscsd <br> dscsdc dvsdvsdvsdsvsdvsdsd
+                    sdvsdv vfv vfv sdcd fvfv dede <br> ws a as ff g ss ddcdd fr es waa dde saw asz cde ers ffggt <br>
+                    sdawd dfdv ddv dssdsx xsccdvdvf ss day that a woman <br> goes to church to meet with Mick Jagger</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid global-reach2 pt-5 pb-5" style="background-color: #2dce89;">
+        <div class="col-md-6 offset-md-3 text-center pt-5">
+            <h4 class="pb-3 rHeader">Our Global Reach</h4>
+            <p class="pb-4 rText">Start.ng is the leading online learning platform for programming courses nationwide
+                and across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each
+                students with knowledge and character needed to excel anywhere
+                in the world.</p>
+            <p class="pb-3 strong">Most Sought after Programming Skills </p>
+            <p class="pb-3 strong">Experienced Qualified Teachers</p>
+            <p class="pb-5 strong">Access to the Largest Online Developer Community</p>
+            <a href="curriculum.html" class="btn btn-secondary pl-5 pr-5 mb-3"
+                style="background-color: #3A0842; border: thin solid #3A0842;">Explore Start.ng</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid text-white deep">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-3 mb-4">
+                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-lg-4 col-md-12 mb-3">
+                        <h4 class='mb-4'>Ready to take the Leap?</h4>
+                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Our Course</a></li>
+                        <li><a href="hireGrad.html">Hire a Grad</a></li>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="curriculum.html">Curriculum</a></li>
+                        <li><a href="blog2.html">Blog</a></li>
+                        <li><a href="blog1.html">Student Stories</a></li>
+
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="search.html">Find a Course</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
+                        <li><a href="help.html">FAQ</a></li>
+                        <li><a href="termsOfService.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+        <div class="container text-right">
+            <div class="row icons">
+                <div class="col-md-12 ">
+                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+    <!-- End of Footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
