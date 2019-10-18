@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <title>StartNg</title>
 
     <style>
@@ -228,6 +227,20 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+        }
+        /* Vidoe style */
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -487,14 +500,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 video-overlay">
-                    <div class="container">
+                <div class="col-md-6 mt-0 pt-0">
+                    <div class="videoWrapper">
+                        <iframe 
+                            width="100%" 
+                            height="380"
+                            src="https://www.youtube.com/embed/DYaq2sWTWAA" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <!-- <div class="container">
                         <div class="text-center">
                             <button class="btn btn-light btn-lg rounded-circle text-secondary pt-3">
                                 <i class="fas fa-play fa-2x"></i>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>            
         </section>
@@ -680,6 +703,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        // Find all YouTube videos
+        var $allVideos = $("iframe[src^='//www.youtube.com']");
+        // The element that is fluid width
+        $fluidEl = $("body");
+        // Figure out and save aspect ratio for each video
+        $allVideos.each(function() {
+            $(this)
+            .data('aspectRatio', this.height / this.width)
+            // and remove the hard coded width/height
+            .removeAttr('height')
+            .removeAttr('width');
+        });
+
+        // When the window is resized
+        $(window).resize(function() {
+
+            var newWidth = $fluidEl.width();
+
+            // Resize all videos according to their own aspect ratio
+            $allVideos.each(function() {
+
+            var $el = $(this);
+                $el
+                .width(newWidth)
+                .height(newWidth * $el.data('aspectRatio'));
+            });
+            // Kick off one resize to fix all videos on page load
+        }).resize();
+    </script>
 </body>
 
 </html>

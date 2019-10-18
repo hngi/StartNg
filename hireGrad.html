@@ -141,54 +141,6 @@
             background-position: center center;
         }
     </style>
-
-    <!-- javascript validation -->
-    <script type="text/javascript">
-        function validation() {
-            var fname = document.getElementById("fname").value;
-            var email = document.getElementById("email").value;
-            var companyname = document.getElementById("companyname").value;
-            var jobtitle = document.getElementById("jobtitle").value;
-            var error_message = document.getElementById("error_message");
-            var text;
-
-            if (fname == ""){
-                text = "Please fill in your fullname ";
-                error_message.innerHTML = text;
-                error_message.classList.remove("d-none");
-                return false; 
-            }
-
-            if (email.indexOf("@") == -1 || email.length < 6){
-                    text ="Please enter a valid email";
-                    error_message.innerHTML = text;
-                    error_message.classList.remove("d-none");
-                    return false;
-            }
-
-            if (companyname == "" ){
-                    text ="Company Name is required";
-                    error_message.innerHTML = text;
-                    error_message.classList.remove("d-none");
-                    return false;
-
-            }
-
-            if (jobtitle == "" ){
-                    text ="Job Title is required";
-                    error_message.innerHTML = text;
-                    error_message.classList.remove("d-none");
-                    return false;
-            }else{
-                 error_message.innerHTML = "";
-                 error_message.classList.add("d-none");
-            }
-            error_message.classList.add("d-none");
-            alert("Subscribed Successfully")
-            return true;
-        }
-    </script>
-    <!-- end of javascript validation -->
 </head>
 
 <body>
@@ -365,27 +317,27 @@
                     <div class="row pb-4">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Full Name" id="fname">
+                                <input type="text" class="form-control" placeholder="Full Name" name="fname" id="fname" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email Address" id="email">
+                                <input type="email" class="form-control" placeholder="Email Address" name="email" id="email" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Company Name" id="companyname">
+                                <input type="text" class="form-control" placeholder="Company Name" name="companyname" id="companyname" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Job Title" id="jobtitle">
+                                <input type="text" class="form-control" placeholder="Job Title" name="companyname" id="jobtitle" required>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-secondary" style="background-color: #3A0842; border-color: #3A0842; color: #fff;" onclick="return validation()" type="submit">Subscribe</button>
+                        <button class="btn btn-secondary" style="background-color: #3A0842; border-color: #3A0842; color: #fff;" id="submitForm" type="submit">Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -451,7 +403,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#submitForm').on('click', function(e){
+                // e.preventDefault();
+                var fname = document.getElementById("fname").value;
+                var email = document.getElementById("email").value;
+                var companyname = document.getElementById("companyname").value;
+                var jobtitle = document.getElementById("jobtitle").value;
+                var error_message = document.getElementById("error_message");
+                var text;
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                //var matches = val.match(/\d+/g);
+                if (fname == ""){
+                    text = "Please fill in your fullname ";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                    return false; 
+                } if(!fname.match(/^[A-Za-z]+$/g)){
+                    // console.log(fname);
+                    text = "Please your name should contain valid characters only ";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                } if (fname.length < 4){
+                    text = "Your name must be 4 or more character long ";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                    return false; 
+                }if (email == ""){
+                    text ="Please fill in your email";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                    return false;
+                } if (!email.match(mailformat) || email == ""){
+                    text ="Please enter a valid email";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                    return false;
+                } if (companyname == "" ){
+                    text ="Company Name is required";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                    return false;
+                } if (jobtitle == "" ){
+                    text ="Job Title is required";
+                    error_message.innerHTML = text;
+                    error_message.classList.remove("d-none");
+                    return false;
+                }else{
+                    error_message.classList.add("d-none");
+                }
+                error_message.classList.add("d-none");
+                // your ajax code should go here
+                // alert("Subscribed Successfully")
+                return true;
+            });
+        });
+    </script>
     
 </body>
 
