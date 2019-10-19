@@ -82,14 +82,22 @@
             <div class="sidebar-heading"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
             </div>
             <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
-                <a href="profile.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Profile</a>
-                <a href="#" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Users</a>
-                <a href="add-courses.blade.php" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
+
+                <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+                <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
                     Courses</a>
-                <a href="view-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View
-                    Courses</a>
-                <a href="admin.blade.php" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Create Admin</a>
-                <a href="logout.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Logout</a>
+                <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
+
+                <a class="list-group-item list-group-item-action pt-3 pb-3" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -136,12 +144,12 @@
                             <td>{{$user->email}}</td>
 
                             <td>
-                                <a href="{{route('user.details',$user->id)}}"> View</a>
+                                <a href="{{route('user.details',$user->id)}}"> <button class="btn btn-success" > View </button> </a>
                                 @if($user->active)
-                                    <a href="{{route('user.disable',$user->id)}}"> Disable</a>
+                                    <a href="{{route('user.disable',$user->id)}}"> <button class="btn btn-danger" >Disable</button> </a>
                                 @endif
                                 @if(!$user->active)
-                                    <a href="{{route('user.disable',$user->id)}}"> Enable</a>
+                                    <a href="{{route('user.disable',$user->id)}}"> <button class="btn btn-info">Enable </button> </a>
                                 @endif
                             </td>
                         </tr>

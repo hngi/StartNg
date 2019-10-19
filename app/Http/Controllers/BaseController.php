@@ -1,8 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use foo\bar;
 use Illuminate\Support\Facades\DB;
 use App\RegisteredCourse;
+use Symfony\Component\HttpFoundation\Session\Flash;
+use App\Contact;
+use Illuminate\Support\Facades\Session;
+use App\Course;
 
 use Illuminate\Http\Request;
 
@@ -26,18 +31,25 @@ class BaseController extends Controller
 
             if($post){
                 $message='You Have Previously Registered for the Course';
+                Flash::error($message);
+                return back();
             }
             else{
                 $result=auth()->user()->registercourse()->create([
                    "course_id"=>$id
                 ]);
                 $message='Registration was Succesfull';
+                Flash::success($message);
+                return back();
             }
         }
         else{
             $message='Course Does Not Exist';
+            Flash::error($message);
+            return back();
         }
-        return back();
+
+
     }
 
     public function details($id){
@@ -57,6 +69,21 @@ class BaseController extends Controller
     public function login()
     {
         return view('frontend.frontend.login');
+    }
+
+    public function search(){
+        $data= request()->validate([
+            'course'=>'required'
+        ]);
+
+        $query= Course::Where('name', 'like', '%' . $data['course'] . '%')->exists();
+        if($query){
+            $courses= Course::Where('name', 'like', '%' . $data['course'] . '%')->get();
+            return view('frontend.frontend.search',compact('courses'));
+        }
+        return redirect('find-course')->with('error','Course Not Found');
+        return view('frontend.frontend.findcourse')->with('error','Course not Found');
+
     }
 
     public function register()
@@ -85,28 +112,80 @@ class BaseController extends Controller
     {
         return view('frontend.frontend.courses');
     }
-    public function help()
-    {
-        return view('frontend.frontend.help');
-    }
-    public function terms()
-    {
-        return view('frontend.frontend.terms');
-    }
-    public function blog1()
-    {
-        return view('frontend.frontend.blog1');
-    }
-    public function blog2()
-    {
-        return view('frontend.frontend.blog2');
-    }
-    public function privacy()
-    {
+
+    public function privacy(){
         return view('frontend.frontend.privacy');
     }
-    public function curriculum()
-    {
+
+    public function faq(){
+        return view('frontend.frontend.faq');
+    }
+
+    public function partners(){
+        return view('frontend.frontend.partners');
+    }
+
+    public function findcourse(){
+        return view('frontend.frontend.findcourse');
+    }
+
+    public function blog(){
+        return view('frontend.frontend.blog');
+    }
+
+    public function curriculum(){
         return view('frontend.frontend.curriculum');
+    }
+
+    public function terms(){
+        return view('frontend.frontend.terms');
+    }
+
+
+
+    public function mycourse($id){
+        $check=DB::table('users')->where('id',$id)->exists();
+
+        if($check) {
+            $check = DB::table('registered_courses')->where('user_id', $id)->exists();
+            if($check) {
+                $check = DB::table('registered_courses')->where('user_id', $id)->get();
+                $courses = [];
+                foreach ($check as $item) {
+
+                    $output = DB::table('courses')->where('id', $item->course_id)->get()[0];
+
+                    array_push($courses, (array)$output);
+                }
+
+                return view('frontend.frontend.mycourses',compact('courses'));
+            }
+
+            else{
+              $message="no registered course";
+            }
+            $user=DB::table('users')->where('id',$id)->get()[0];
+        }
+        else{
+            $message='user does not exist';
+        }
+
+    }
+
+    public function storecontact(){
+        $data=request()->validate([
+            'fname'=>'required',
+            'lname'=>'required',
+            'email'=>'required',
+            'phone'=>'required',
+            'message'=>'required'
+        ]);
+
+        $product = Contact::create($data);
+        if($product){
+            Session::flash('message', 'your transaction was  succesfull');
+            return back()->with('success','Message Sent');
+        }
+
     }
 }

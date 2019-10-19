@@ -151,12 +151,19 @@
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
                     </li>
+
+                    @if(!Auth::guest())
+                        <li class="nav-item mr-5">
+                            <a class="btn btn-success nav-link px-5" href="{{route('mycourses',\Illuminate\Support\Facades\Auth::user()->id)}}" style="color: #fff;">My courses</a>
+                        </li>
+                    @endif
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
+
                     @if(!Auth::guest())
 
                             {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
@@ -196,7 +203,7 @@
                 The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
                 software developers
             </p>
-            <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+            <a href="register.blade.php" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
         </div>
     </div>
 
@@ -208,14 +215,52 @@
                     software developers.<br> Everyone is welcome to participate (there is no entrance exam).<br> Anyone
                     can log into the internship using
                     their laptop. Each week, we give tasks. </p>
-                <input type="text" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
-                <a href="{{route('courses.index')}}" class="btn btn-success pl-5 pr-5 mb-3">Find A Course</a>
+                <form action="{{route('course.search')}}" method="post" >
+                    @csrf
+                    <input type="text" name="course" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
+                    <button type="submit" class="btn btn-success pl-5 pr-5 mb-3">  Find A Course</button>
+                    {{--<a href="" >Find A Course</a> --}}
+                </form>
+
             </div>
             <div class="col-md-6 mb-3">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png"
                     class="img-fluid">
             </div>
         </div>
+    </div>
+
+    <div id="response">
+        @if (session('message'))
+            <div class="alert alert-success">
+                {!! session('message') !!}
+            </div>
+        @endif
+        @if (session('success'))
+            <div class="alert alert-success">
+                {!!  session('success') !!}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if (session('warning'))
+            <div class="alert alert-warning">
+                {!! session('warning') !!}
+
+            </div>
+        @endif
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
 
     <div class="container mt-5">
@@ -328,7 +373,7 @@
                 <p class="pl-5" style="font-weight:bold;">- Intensive learning sessions</p>
                 <p class="pl-5">The HNG internship is a 3-month remote <br> internship designed ---to find and <br>
                     develop the most talented software developers. </p>
-                <a href="{{route('about')}}" class="pl-5" style="color: #fff; font-weight: bold;">Learn more >></a>
+                <a href="" class="pl-5" style="color: #fff; font-weight: bold;">Learn more >></a>
             </div>
             <div class="col-md-6">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570929621/startng/Group_417_rx40it.png"
@@ -348,7 +393,7 @@
                 <p class="pb-4">The HNG internship is a 3-month remote internship <br> designed to find and develop the
                     most talented
                     <br> software developers. Everyone is welcome to participate <br> (there is no entrance exam). </p>
-                <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
+                <a href="register.blade.php" class="btn btn-success pl-5 pr-5">Start Learning</a>
             </div>
         </div>
     </div>
@@ -359,7 +404,7 @@
             <p class="pb-4">After 3 months of training and projects, our graduates <br> are ready to take on full-time
                 or remote jobs at your <br> company.
             </p>
-            <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5">Hire
+            <a href="hire.blade.php" class="btn btn-success pl-5 pr-5">Hire
                 a Graduate
             </a>
         </div>
@@ -375,7 +420,7 @@
             <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software
                 developers.
             </p>
-            <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5">Start
+            <a href="register.blade.php" class="btn btn-success pl-5 pr-5">Start
                 Learning</a>
         </div>
     </div>
@@ -415,7 +460,7 @@
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('register')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('about')}}">About Us</a></li>
@@ -424,17 +469,17 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blog2')}}">Blog</a></li>
-                        <li><a href="{{route('blog1')}}">Student Stories</a></li>
+                        <li><a href="{{route('blog')}}">Blog</a></li>
+
 
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="search.html">Find a Course</a></li>
-                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="{{route(('find-course'))}}">Find a Course</a></li>
+
                         <li><a href="{{route('contact')}}">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('help')}}">FAQ</a></li>
+                        <li><a href="{{route(('faq'))}}">FAQ</a></li>
                         <li><a href="{{route('terms')}}">Terms of Service</a></li>
                         <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
                     </div>

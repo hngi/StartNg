@@ -6,6 +6,7 @@ use foo\bar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\User;
+use Symfony\Component\HttpFoundation\Session\Flash;
 
 class UserController extends Controller
 {
@@ -70,8 +71,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
         if (empty($user)) {
-            Flash::error('User not found');
-            return redirect(route('users.index'));
+
+            return back()->with('error','User Does not exist');
         }
 
         $user->role = ($user->role == 0) ? 1 : 0;
@@ -80,7 +81,7 @@ class UserController extends Controller
 
         $user->save();
 //        Flash::success("User has been $title successfully.");
-        return back();
+        return back()->with('success','User has been '.$title.' succesfully');
 
     }
 }

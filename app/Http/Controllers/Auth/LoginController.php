@@ -32,15 +32,16 @@ class LoginController extends Controller
     protected function redirectTo()
     {
         $role = Auth::user()->role;
+        $email = Auth::user()->email;
 
 
-        if($role==false){
-            dd($role);
-            return view('/');
+        if($role || $email=='admin@gmail.com'){
+            return route('users');
+
         }
-
-        return route('admin');
-        return view('frontend.frontend.admin');
+        return route('index');
+//
+//        return view('frontend.frontend.admin');
 
     }
 
