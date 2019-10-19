@@ -121,24 +121,6 @@
 
             <div class="table-responsive col-md-10 offset-md-1 mt-5">
                 <h2 class="text-center mb-5">User</h2>
-
-                <div>
-                    @if(session('failed'))
-                        <div class="text-center alert alert-danger">
-                            {{session('failed')}}
-                        </div>
-
-                    @endif
-                </div>
-                <div>
-                    @if(session('success'))
-                        <div class="text-center alert alert-success">
-                            {{session('success')}}
-                        </div>
-
-                    @endif
-                </div>
-
                 @if($user->role)
                     <div>
                         <a class=" btn btn-info" href="{{route('user.disableAdmin',$user->id)}}" >Disable Admin Features</a>

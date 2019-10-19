@@ -35,11 +35,11 @@ class LoginController extends Controller
 
 
         if($role==false){
-
-            return route('index');
+            dd($role);
+            return view('/');
         }
 
-        return route('users');
+        return route('admin');
         return view('frontend.frontend.admin');
 
     }
