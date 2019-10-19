@@ -82,12 +82,22 @@
             <div class="sidebar-heading"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
             </div>
             <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
-                <a href="profile.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Profile</a>
-                <a href="users.blade.php" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
-                <a href="add-courses.blade.php" class="list-group-item active list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842; border-color: #fff;">Add Courses</a>
-                <a href="view-courses.html" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View
+
+                <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+                <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
                     Courses</a>
-                <a href="admin.blade.php" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Create Admin</a>
+                <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
+
+                <a class="list-group-item list-group-item-action pt-3 pb-3" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -105,16 +115,28 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-danger" href="#" style="color: #fff;">LOGOUT</a>
-                        </li>
-                    </ul>
+
                 </div>
             </nav>
 
             <div class="container">
                 <h2 class="text-center mt-5 mb-5">ADD NEW COURSES</h2>
+                <div>
+                    @if(session('failed'))
+                        <div class="text-center alert alert-danger">
+                            {{session('failed')}}
+                        </div>
+
+                    @endif
+                </div>
+                <div>
+                    @if(session('success'))
+                        <div class="text-center alert alert-success">
+                            {{session('success')}}
+                        </div>
+
+                    @endif
+                </div>
                 <form action="{{route('course.store')}}" method="post">
                     @csrf
                     <div class="col-md-10 offset-md-1">
@@ -122,14 +144,14 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="coursename">Course Title</label>
-                                    <input id="coursename" class="form-control" type="text" name="name">
+                                    <input id="coursename" class="form-control" required type="text" name="name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="coursecode">Course Duration</label>
                                     <div class="input-group">
-                                        <input class="form-control" name="duration" type="number"  placeholder="" aria-label="Recipient's " aria-describedby="new-addon">
+                                        <input class="form-control" name="duration" type="number" required placeholder="" aria-label="Recipient's " aria-describedby="new-addon">
                                         <div class="input-group-append">
                                             <span class="input-group-text" id="new-addon">MONTHS</span>
                                         </div>
@@ -143,7 +165,7 @@
                                     <label for="">Course Price</label>
                                     <div class="input-group">
 
-                                        <input class="form-control" name="price" type="number"  placeholder="" aria-label="Recipient's " aria-describedby="my-addon">
+                                        <input class="form-control" name="price" type="number" required  placeholder="" aria-label="Recipient's " aria-describedby="my-addon">
                                         <div class="input-group-append">
                                             <span class="input-group-text" id="my-addon">NGN</span>
                                         </div>
@@ -155,7 +177,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="coursedesc">Course Description</label>
-                                    <textarea id="coursedesc" class="form-control" name="description" rows="4"></textarea>
+                                    <textarea id="coursedesc" class="form-control" required name="description" rows="4"></textarea>
                                 </div>
                             </div>
                         </div>

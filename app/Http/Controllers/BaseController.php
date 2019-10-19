@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\RegisteredCourse;
+use Symfony\Component\HttpFoundation\Session\Flash;
+use App\Contact;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 
@@ -26,18 +29,25 @@ class BaseController extends Controller
 
             if($post){
                 $message='You Have Previously Registered for the Course';
+                Flash::error($message);
+                return back();
             }
             else{
                 $result=auth()->user()->registercourse()->create([
                    "course_id"=>$id
                 ]);
                 $message='Registration was Succesfull';
+                Flash::success($message);
+                return back();
             }
         }
         else{
             $message='Course Does Not Exist';
+            Flash::error($message);
+            return back();
         }
-        return back();
+
+
     }
 
     public function details($id){
@@ -85,28 +95,52 @@ class BaseController extends Controller
     {
         return view('frontend.frontend.courses');
     }
-    public function help()
-    {
-        return view('frontend.frontend.help');
+
+
+
+    public function mycourse($id){
+        $check=DB::table('users')->where('id',$id)->exists();
+
+        if($check) {
+            $check = DB::table('registered_courses')->where('user_id', $id)->exists();
+            if($check) {
+                $check = DB::table('registered_courses')->where('user_id', $id)->get();
+                $courses = [];
+                foreach ($check as $item) {
+
+                    $output = DB::table('courses')->where('id', $item->course_id)->get()[0];
+
+                    array_push($courses, (array)$output);
+                }
+
+                return view('frontend.frontend.mycourses',compact('courses'));
+            }
+
+            else{
+              $message="no registered course";
+            }
+            $user=DB::table('users')->where('id',$id)->get()[0];
+        }
+        else{
+            $message='user does not exist';
+        }
+
     }
-    public function terms()
-    {
-        return view('frontend.frontend.terms');
-    }
-    public function blog1()
-    {
-        return view('frontend.frontend.blog1');
-    }
-    public function blog2()
-    {
-        return view('frontend.frontend.blog2');
-    }
-    public function privacy()
-    {
-        return view('frontend.frontend.privacy');
-    }
-    public function curriculum()
-    {
-        return view('frontend.frontend.curriculum');
+
+    public function storecontact(){
+        $data=request()->validate([
+            'fname'=>'required',
+            'lname'=>'required',
+            'email'=>'required',
+            'phone'=>'required',
+            'message'=>'required'
+        ]);
+
+        $product = Contact::create($data);
+        if($product){
+            Session::flash('message', 'your transaction was  succesfull');
+            return back()->with('success','Message Sent');
+        }
+
     }
 }

@@ -117,9 +117,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-danger" href="#" style="color: #fff;">LOGOUT</a>
-                        </li>
+
 
                     </ul>
                 </div>

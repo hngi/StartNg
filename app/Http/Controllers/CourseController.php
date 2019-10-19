@@ -32,6 +32,8 @@ class CourseController extends Controller
 
         $result=auth()->user()->course()->create($data);
 
+        return back()->with('success','Course Successfully Created');
+
     }
 
     public function course($id){
@@ -64,4 +66,6 @@ class CourseController extends Controller
 //        Flash::success("User has been $title successfully.");
         return redirect(route('courses'));
     }
+
+
 }

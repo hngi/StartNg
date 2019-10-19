@@ -114,52 +114,29 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container">
-            <a href="/" class="navbar-brand"><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                    class="img-fluid" alt="logo" width="150px"></a>
-            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbar9" style="color: #000;">
+        <div class="container pb-2 pt-2">
+            <a href="index.blade.php" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('about')}}">About Us</a>
+                        <a class="nav-link" href="about.blade.php">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
+                        <a class="nav-link" href="courses.blade.php">Courses</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
+                        <a class="nav-link" href="hire.blade.php">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                        <a class="nav-link" href="contact.blade.php">Contact Us</a>
                     </li>
-                    @if(!Auth::guest())
-
-                            {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
-                            {{--</a>--}}
-                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-
-
-                    @endif
-
-                    @if(Auth::guest())
-                        <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="/signup" style="color: #fff;">Start
-                                Learning</a>
-                        </li>
-                    @endif
-
+                    <li class="nav-item mr-5">
+                        <a class="btn btn-success nav-link px-5" href="register.blade.php" style="color: #fff;">Start
+                            Learning</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -216,41 +193,40 @@
 </form>
 
     <!-- Footer -->
-    <div class="container-fluid text-white deep">
+    <div class="container-fluid text-white deep mt-5">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                            alt="">
+                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
                     </div>
                 </div>
 
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('register')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('about')}}">About Us</a></li>
-                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
+                        <li><a href="about.blade.php">About Us</a></li>
+                        <li><a href="courses.blade.php">Our Course</a></li>
+                        <li><a href="hire.blade.php">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blog2')}}">Blog</a></li>
-                        <li><a href="{{route('blog1')}}">Student Stories</a></li>
+                        <li><a href="curriculum.html">Curriculum</a></li>
+                        <li><a href="blog2.html">Blog</a></li>
+                        <li><a href="blog1.html">Student Stories</a></li>
 
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="search.html">Find a Course</a></li>
                         <li><a href="#">Our Partners</a></li>
-                        <li><a href="{{route('contact')}}">Contact Us</a></li>
+                        <li><a href="contact.blade.php">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('help')}}">FAQ</a></li>
-                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
-                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
+                        <li><a href="help.html">FAQ</a></li>
+                        <li><a href="termsOfService.html">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </div>
                 </div>
 
@@ -260,11 +236,12 @@
         <div class="container text-right">
             <div class="row icons">
                 <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href=""><i class='fa fa-twitter' aria-hidden="true"></i></a>
+                    <a href=""><i class='fa fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </div>
             </div>
+
         </div>
         </footer>
     </div>
