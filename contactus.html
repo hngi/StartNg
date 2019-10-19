@@ -19,11 +19,6 @@
 
         .navbar-custom li a {
             color: #000;
-            transition: transform 0.5s;
-
-        }
-        .navbar-custom li a:hover{
-            transform:scale(1.03)
         }
 
         .btn-success {
@@ -91,23 +86,7 @@
         a:hover {
             text-decoration: none;
         }
-
-        .green-buttons{
-            transition: background-color 1s;
-        }
-        .green-buttons:hover{
-            background-color: #32bf83;
-            border: 1px solid #32bf83;
-    
-        }
-        .green-link{
-            color: #44CF6C;
-            transition: color 0.5s;
-        }
-        .green-link:hover{
-            color: #32bf83;
-        }
-
+        
 
         .icons i {
             font-size: 26px;
@@ -135,16 +114,7 @@
         .search {
             background-color: #44CF6C;
         }
-        #faq-link{
 
-            transition: transform 1.5s;
-
-            transition: transform 0.5s;
-
-        }
-        #faq-link:hover{
-            transform: scale(1.07);
-        }
         .support {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570910454/startng/Rectangle_66_iauqka.png');
             background-position: center center;
@@ -208,7 +178,7 @@
                         <a class="nav-link" href="contactus.html">Contact Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5 text-white green-buttons" href="register.html">Start
+                        <a class="btn btn-success nav-link px-5" href="register.html">Start
                             Learning</a>
                     </li>
                 </ul>
@@ -222,17 +192,10 @@
     <div class="container-fluid search pt-5 pb-5">
         <div class="input-group col-12 col-md-10 mx-auto pt-3 pb-3">
             <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;">
-
             <div class="input-group-append">
-                    <button class="btn btn-secondary w-100 px-md-5"  id = "faq-link" type="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">
-                            <a href="help.html" style =  "color: #44CF6C;">Search FAQ </a>
-                    </button>
-
-            <div class="input-group-append" id = "faq-link">
-                    <a class="btn btn-secondary w-100 px-md-5 input-group-text" href="help.html"  role="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">
-                        Search FAQ
-                    </a>
-
+                <button class="btn btn-secondary w-100 px-md-5" type="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">
+                    Search FAQ
+                </button>
             </div>
         </div>
     </div>
@@ -243,17 +206,17 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">First Name</label>
-                            <input type="text" pattern = "[A-Za-z -]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
+                            <input type="text" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Last Name</label>
-                            <input type="text" pattern = "[A-Za-z -]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
+                            <input type="text" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-1 mt-md-5 mb-2">
+                <div class="row mt-5 mb-2">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-2">Email Address</label>
@@ -277,13 +240,8 @@
                 </div>
 
                 <div class="col-md-6 offset-md-3 text-center mb-5">
-
                     <p class="pb-3">By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
-                    <button class="btn btn-success pl-5 pr-5" id = "submit">Submit</button>
-
-                    <p class="pb-3">By filling out this form and clicking submit, <br> you acknowledge our <a href="privacy-policy.html" class = "green-link">privacy policy</a></p>
-                    <button class="btn btn-success pl-5 pr-5 green-buttons" id = "submit">Submit</button>
-
+                    <button class="btn btn-success pl-5 pr-5">Submit</button>
                 </div>
             </div>
         </form>
@@ -312,7 +270,7 @@
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5 green-buttons'>Start!</a>
+                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="about.html">About Us</a></li>
@@ -336,6 +294,7 @@
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </div>
                 </div>
+
             </div>
     </div>
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
@@ -353,34 +312,9 @@
 
     <!-- End of Footer -->
 
-    <script>
-        const submit = document.getElementById("submit");
-        const firstName = document.getElementById("Fname");
-        const lastName = document.getElementById("Lname");
-        const email = document.getElementById("Eaddr");
-        const number = document.getElementById("Pnum");
-        const message = document.getElementById("comment");
-        const array = [submit,firstName,lastName,email,number,message];
-        let isFirstNameValid = 
-        window.onload = () =>{
-            submit.addEventListener("click", ()=>{
-                if(allFieldsValid(array)){
-                    alert("Your message has been sent");
-                }
-            });
-        }
-
-        function allFieldsValid(array){
-            return [...array].every(field => field.checkValidity());
-        }
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
-
 </html> 
-
-</html> 
-
