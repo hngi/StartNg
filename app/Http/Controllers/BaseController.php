@@ -17,7 +17,7 @@ class BaseController extends Controller
     {
         $courses = DB::table('courses')->get();
 
-        return view('frontend.frontend.index',compact('courses'));
+        return view('pages.index',compact('courses'));
     }
 
     public function registerCourses($id)
@@ -88,7 +88,7 @@ class BaseController extends Controller
 
     public function register()
     {
-        return view('frontend.frontend.register');
+        return view('pages.register');
     }
 
     public function admin()
@@ -98,47 +98,47 @@ class BaseController extends Controller
 
     public function contact()
     {
-        return view('frontend.frontend.contact');
+        return view('pages.contact');
     }
     public function about()
     {
-        return view('frontend.frontend.about');
+        return view('pages.about');
     }
     public function hire()
     {
-        return view('frontend.frontend.hire');
+        return view('pages.hire');
     }
     public function courses()
     {
-        return view('frontend.frontend.courses');
+        return view('pages.courses');
     }
 
     public function privacy(){
-        return view('frontend.frontend.privacy');
+        return view('pages.privacy');
     }
 
     public function faq(){
-        return view('frontend.frontend.faq');
-    }
-
-    public function partners(){
-        return view('frontend.frontend.partners');
+        return view('pages.faq');
     }
 
     public function findcourse(){
-        return view('frontend.frontend.findcourse');
+        return view('pages.findcourse');
     }
 
-    public function blog(){
-        return view('frontend.frontend.blog');
+    public function blog1(){
+        return view('pages.blog1');
+    }
+
+    public function blog2(){
+        return view('pages.blog2');
     }
 
     public function curriculum(){
-        return view('frontend.frontend.curriculum');
+        return view('pages.curriculum');
     }
 
     public function terms(){
-        return view('frontend.frontend.terms');
+        return view('pages.terms');
     }
 
 
