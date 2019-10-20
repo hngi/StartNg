@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Start NG</title>
 
     <style>
@@ -203,7 +204,7 @@
                 The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
                 software developers
             </p>
-            <a href="register.blade.php" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+            <a href="/signup" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
         </div>
     </div>
 
@@ -215,13 +216,8 @@
                     software developers.<br> Everyone is welcome to participate (there is no entrance exam).<br> Anyone
                     can log into the internship using
                     their laptop. Each week, we give tasks. </p>
-                <form action="{{route('course.search')}}" method="post" >
-                    @csrf
-                    <input type="text" name="course" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
-                    <button type="submit" class="btn btn-success pl-5 pr-5 mb-3">  Find A Course</button>
-                    {{--<a href="" >Find A Course</a> --}}
-                </form>
-
+                <input type="text" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
+                <a href="" class="btn btn-success pl-5 pr-5 mb-3">Find A Course</a>
             </div>
             <div class="col-md-6 mb-3">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png"
@@ -412,8 +408,38 @@
 
     <div class="container-fluid pt-5 pb-5" style="background-color: #fff;">
         <div class="col-md-10 offset-md-1">
-            <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930756/startng/Testimonials_dwtp2n.png"
-                class="img-fluid">
+            <div class="container mt-3" align="center">
+  <h2 style="text-align: center;"><strong>What people have to say about us</strong></h2><br>
+  <div class="media border p-3" style="border-radius:3%; width:85% ">
+    <img src="https://res.cloudinary.com/drbrain/image/upload/v1567742595/HNG%206.0/dr_qtopjx.jpg" alt="Dennis Lagbaja" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+    <div class="media-body">
+       <p style="text-align:left;">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into internship using their laptop. Each week, we give tasks.</p>  
+       <div style="text-align:left;">
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i>
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <h4><strong>Dennis Lagbaja</strong></h4>
+        <small><i>Completed the front End Developer Class</i></small></div>          
+    </div>
+  </div><br>
+
+    <div class="media border p-3" style="border-radius:3%; width:85% ">
+    <img src="https://res.cloudinary.com/drbrain/image/upload/v1571143305/HNG%206.0/images_wiqrif.jpg" alt="Khadirat Uche Jumbo" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+    <div class="media-body">
+   <p style="text-align:left;">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into internship using their laptop. Each week, we give tasks.</p>
+      <div style="text-align:left;">
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i>
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star_half</i> 
+       <h4><strong>Khadirat Uche Jumbo </strong></h4>
+        <small><i>Completed the Laravel PHP Class</i></small></div>      
+    </div>
+  </div>
+</div>
         </div>
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
             <h4>Online or Offline, We Are Here For You</h4>
@@ -460,28 +486,28 @@
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="register.blade.php" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('about')}}">About Us</a></li>
-                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
+                        <li><a href="about.blade.php">About Us</a></li>
+                        <li><a href="courses.blade.php">Our Course</a></li>
+                        <li><a href="hire.blade.php">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blog')}}">Blog</a></li>
+                        <li><a href="curriculum.html">Curriculum</a></li>
+                        <li><a href="blog2.html">Blog</a></li>
+                        <li><a href="blog1.html">Student Stories</a></li>
 
-
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('find-course'))}}">Find a Course</a></li>
-
-                        <li><a href="{{route('contact')}}">Contact Us</a></li>
+                        <li><a href="search.html">Find a Course</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="contact.blade.php">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('faq'))}}">FAQ</a></li>
-                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
-                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
+                        <li><a href="help.html">FAQ</a></li>
+                        <li><a href="termsOfService.html">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </div>
                 </div>
 

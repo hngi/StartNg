@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <title>About</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Start NG | About</title>
 
     <style>
         /* Style for Navbar Starts */
@@ -207,13 +208,12 @@
             </p>
         </div>
     </div>
-
+Choose from over 100,000 online video courses with new additions published every month
     <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
         <div class="row align-items-center">
             <div class="col-md-6 pb-5">
                 <h4 class="pl-5" style="color: #7F5A83;">Courses</h4>
-                <p class="pl-5">Lorem ipsum was going to church and she forgot to <br> ferdsdscsd sdsdnd dffdss wesa
-                    dsea wxli sde zdxd asw <br> fdesd fdvdfvddscd sdd.</p>
+                <p class="pl-5">Choose from over 100,000 online video courses <br> with new additions published Frequently <br> Complete quide.</p>
                 <ul class="pl-5 ml-3" style="color: #44CF6C;">
                     <li>100% Online</li>
                     <li>Flexible Online Learning</li>
@@ -230,9 +230,7 @@
 
     <div class="container-fluid loren-ipsum pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> Lorem ipsum was going to church and she forgot to ferd <br> nd dffdss wesa dsea
-                wxli sde zdxd asw df sds dcdsc <br> dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede <br> ws a as
-                ff g ss ddcdd fr es waa dde saw asz cde ers ffggt <br> sdawd dfdv ddv dssdsx xsccdvdvf ss </p>
+            <p style="color: #fff;"> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team.<br> dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede <br> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team.<br> dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede </p>
         </div>
         <div class="col-md-4 offset-md-4">
             <div class="row">
