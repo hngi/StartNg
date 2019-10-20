@@ -67,5 +67,6 @@ Route::get('/privacy', 'BaseController@privacy')->name('privacy');
 Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
 Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
-Route::get('/blog', 'BaseController@blog')->name('blog');
+Route::get('/blog1', 'BaseController@blog1')->name('blog1');
+Route::get('/blog2', 'BaseController@blog2')->name('blog2');
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
