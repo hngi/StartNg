@@ -161,32 +161,32 @@
                         <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Uss</a>
                     </li>
 
-                    @if(!Auth::guest())
+                    {{--@if(!Auth::guest())--}}
 
-                        {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
+                            {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
+                            {{--</a>--}}
+                        {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"--}}
+                           {{--onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">--}}
+                            {{--{{ __('Logout') }}--}}
                         {{--</a>--}}
-                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
+                        {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+                            {{--@csrf--}}
+                        {{--</form>--}}
 
 
-                    @endif
+                    {{--@endif--}}
 
-                    @if(Auth::guest())
-                        <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="/signup" style="color: #fff;">Start
-                                Learning</a>
-                        </li>
-                    @endif
+                    {{--@if(Auth::guest())--}}
+                        {{--<li class="nav-item mr-5">--}}
+                            {{--<a class="btn btn-success nav-link px-5" href="{{route('signup')}}" style="color: #fff;">Start--}}
+                                {{--Learning</a>--}}
+                        {{--</li>--}}
+                    {{--@endif--}}
 
                 </ul>
             </div>
@@ -203,26 +203,69 @@
                 The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
                 software developers
             </p>
-            <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+            <a href="{{route('index)}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
         </div>
     </div>
 
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h4 class="mb-4 mt-3">Begin Your Journey to Self Development</h4>
+                <p>The HNG internship is a 3-month remote internship designed <br> to find and develop the most talented
+                    software developers.<br> Everyone is welcome to participate (there is no entrance exam).<br> Anyone
+                    can log into the internship using
+                    their laptop. Each week, we give tasks. </p>
+                <form action="{{route('course.search')}}" method="post" >
+                    @csrf
+                    <input type="text" name="course" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
+                    <button type="submit" class="btn btn-success pl-5 pr-5 mb-3">  Find A Course</button>
+                    <a href="" >Find A Course</a>
+                </form>
 
+            </div>
+            <div class="col-md-6 mb-3">
+                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png"
+                    class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    {{--<div id="response">--}}
+        {{--@if (session('message'))--}}
+            {{--<div class="alert alert-success">--}}
+                {{--{!! session('message') !!}--}}
+            {{--</div>--}}
+        {{--@endif--}}
+        {{--@if (session('success'))--}}
+            {{--<div class="alert alert-success">--}}
+                {{--{!!  session('success') !!}--}}
+            {{--</div>--}}
+        {{--@endif--}}
+        {{--@if (session('error'))--}}
+            {{--<div class="alert alert-danger">--}}
+                {{--{{ session('error') }}--}}
+            {{--</div>--}}
+        {{--@endif--}}
+        {{--@if (session('warning'))--}}
+            {{--<div class="alert alert-warning">--}}
+                {{--{!! session('warning') !!}--}}
+
+            {{--</div>--}}
+        {{--@endif--}}
+        {{--@if ($errors->any())--}}
+            {{--<div class="alert alert-danger">--}}
+                {{--<ul>--}}
+                    {{--@foreach ($errors->all() as $error)--}}
+                        {{--<li>{{ $error }}</li>--}}
+                    {{--@endforeach--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+        {{--@endif--}}
+    {{--</div>--}}
 
     <div class="container mt-5">
-        <h4 class="text-center" style="color: #3A0842;">Your Registered Courses</h4>
+        <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
         <hr>
-
-        @if (session('success'))
-            <div class="alert alert-success">
-                {!!  session('success') !!}
-            </div>
-        @endif
-        @if (session('error'))
-            <div class="alert alert-danger text-center ">
-                {{ session('error') }}
-            </div>
-        @endif
 
         @php
         $counter=3;
@@ -239,15 +282,22 @@
                                  src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
                                  alt="Card image">
                             <div class="card-body">
-                                <h4 class="card-title" style="font-weight: bold;">{{$item['name']}}</h4>
-                                <p>{{$item['description']}}</p>
+                                <h4 class="card-title" style="font-weight: bold;">{{$item->name}}</h4>
+                                <p>{{$item->description}}</p>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked mb-3"></span> <br>
-
-                                {{--<a href="{{route('details',$item['id'])}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
+                                {{--@if(Auth::guest())--}}
+                                    {{--<a href="{{route('index')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
+                                       {{--style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>--}}
+                                    {{--@endif--}}
+                                {{--@if(!Auth::guest())--}}
+                                    {{--<a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
+                                       {{--style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>--}}
+                                {{--@endif--}}
+                                {{--<a href="{{route('details',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
                                    {{--style="background-color: #FFE797; border: thin solid #FFE797;">Details</a>--}}
                             </div>
                         </div>
@@ -343,7 +393,7 @@
                 <p class="pb-4">The HNG internship is a 3-month remote internship <br> designed to find and develop the
                     most talented
                     <br> software developers. Everyone is welcome to participate <br> (there is no entrance exam). </p>
-                <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
+                <a href="{{route('index')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
             </div>
         </div>
     </div>
@@ -370,7 +420,7 @@
             <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software
                 developers.
             </p>
-            <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5">Start
+            <a href="{{route('index')}}" class="btn btn-success pl-5 pr-5">Start
                 Learning</a>
         </div>
     </div>
@@ -398,12 +448,12 @@
 
     <!-- Footer -->
     <div class="container-fluid text-white deep">
-        <footer>
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
                         <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                             alt="">
+                            alt="">
                     </div>
                 </div>
 
@@ -437,7 +487,10 @@
 
             </div>
     </div>
+    </div>
+
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+        <footer>
         <div class="container text-right">
             <div class="row icons">
                 <div class="col-md-12 ">

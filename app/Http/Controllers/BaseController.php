@@ -17,7 +17,7 @@ class BaseController extends Controller
     {
         $courses = DB::table('courses')->get();
 
-        return view('pages.index',compact('courses'));
+        return view('frontend.frontend.index',compact('courses'));
     }
 
     public function registerCourses($id)
@@ -88,7 +88,7 @@ class BaseController extends Controller
 
     public function register()
     {
-        return view('pages.register');
+        return view('frontend.frontend.register');
     }
 
     public function admin()
@@ -98,47 +98,47 @@ class BaseController extends Controller
 
     public function contact()
     {
-        return view('pages.contact');
+        return view('frontend.frontend.contact');
     }
     public function about()
     {
-        return view('pages.about');
+        return view('frontend.frontend.about');
     }
     public function hire()
     {
-        return view('pages.hire');
+        return view('frontend.frontend.hire');
     }
     public function courses()
     {
-        return view('pages.courses');
+        return view('frontend.frontend.courses');
     }
 
     public function privacy(){
-        return view('pages.privacy');
+        return view('frontend.frontend.privacy');
     }
 
     public function faq(){
-        return view('pages.faq');
+        return view('frontend.frontend.faq');
+    }
+
+    public function partners(){
+        return view('frontend.frontend.partners');
     }
 
     public function findcourse(){
-        return view('pages.findcourse');
+        return view('frontend.frontend.findcourse');
     }
 
-    public function blog1(){
-        return view('pages.blog1');
-    }
-
-    public function blog2(){
-        return view('pages.blog2');
+    public function blog(){
+        return view('frontend.frontend.blog');
     }
 
     public function curriculum(){
-        return view('pages.curriculum');
+        return view('frontend.frontend.curriculum');
     }
 
     public function terms(){
-        return view('pages.terms');
+        return view('frontend.frontend.terms');
     }
 
 
@@ -163,11 +163,13 @@ class BaseController extends Controller
 
             else{
               $message="no registered course";
+                return redirect('mycourse')->with('error',$message);
             }
             $user=DB::table('users')->where('id',$id)->get()[0];
         }
         else{
             $message='user does not exist';
+            return redirect('mycourse')->with('error',$message);
         }
 
     }

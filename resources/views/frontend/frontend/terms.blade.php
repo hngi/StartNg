@@ -563,7 +563,7 @@
         <div class="container">
             <p class="lead">Didn’t find an answer to your question?</p>
             <p class="sub-lead">Write us a message and describe your problem!</p>
-            <a href="contact.blade.php" class="btn btn-primary pt-2 pb-2 pl-5 pr-5">
+            <a href="{{route('contact')}}" class="btn btn-primary pt-2 pb-2 pl-5 pr-5">
                 Contact Us
             </a>
         </div>

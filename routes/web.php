@@ -18,7 +18,7 @@ Route::get('/', 'BaseController@index')->name('index');
 
 Route::get('/signup', 'BaseController@register')->name('signup');
 Route::get('/signin', 'BaseController@login')->name('signin');
-Route::get('/admin', 'BaseController@admin')->name('admin');
+
 
 
 Auth::routes();
@@ -32,6 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/admin', 'BaseController@admin')->name('admin');
     Route::get('/course', 'CourseController@show')->name('courses');
     Route::get('/course/create', 'CourseController@create')->name('course.create');
     Route::get('/course/disable/{id}', 'CourseController@destroy')->name('course.disable');
@@ -67,6 +68,5 @@ Route::get('/privacy', 'BaseController@privacy')->name('privacy');
 Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
 Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
-Route::get('/blog1', 'BaseController@blog1')->name('blog1');
-Route::get('/blog2', 'BaseController@blog2')->name('blog2');
+Route::get('/blog', 'BaseController@blog')->name('blog');
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');

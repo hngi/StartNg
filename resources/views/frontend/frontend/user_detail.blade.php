@@ -150,6 +150,8 @@
                     </div>
                 @endif
 
+
+
                 <div>
                     Name: {{$user->name}}
                 </div>
