@@ -135,7 +135,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container pt-2 pb-2">
-            <a href="{{route('/')}}" class="navbar-brand"><img
+            <a href="{{route('index')}}" class="navbar-brand"><img
                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
                     class="img-fluid" alt="logo" width="150px"></a>
             <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
