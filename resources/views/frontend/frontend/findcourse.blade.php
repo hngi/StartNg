@@ -557,32 +557,59 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container pt-1 pb-1">
-            <a href="index.blade.php" class="navbar-brand"><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                    class="img-fluid" alt="logo" width="150px"></a>
+        <div class="container">
+            <a href="/" class="navbar-brand"><img
+                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
+                        class="img-fluid" alt="logo" width="150px"></a>
             <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbar9" style="color: #000;">
+                    data-target="#navbar9" style="color: #000;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="about.blade.php">About Us</a>
+                        <a class="nav-link" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="courses.blade.php">Courses</a>
+                        <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
+                    </li>
+
+                    @if(!Auth::guest())
+                        <li class="nav-item mr-5">
+                            <a class="btn btn-success nav-link px-5" href="{{route('mycourses',\Illuminate\Support\Facades\Auth::user()->id)}}" style="color: #fff;">My courses</a>
+                        </li>
+                    @endif
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="hire.blade.php">Hire A Grad</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="contact.blade.php">Contact Us</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5" href="register.blade.php" style="color: #fff;">Start
-                            Learning</a>
-                    </li>
+
+                    @if(!Auth::guest())
+
+                        {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
+                        {{--</a>--}}
+                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+
+
+                    @endif
+
+                    @if(Auth::guest())
+                        <li class="nav-item mr-5">
+                            <a class="btn btn-success nav-link px-5" href="/signup" style="color: #fff;">Start
+                                Learning</a>
+                        </li>
+                    @endif
+
                 </ul>
             </div>
         </div>
@@ -598,7 +625,7 @@
                 talented software developers.
             </p>
 
-            <a href="register.blade.php" class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;">Start
+            <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;">Start
 
                 Learning</a>
         </div>

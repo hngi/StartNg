@@ -86,7 +86,7 @@ final class Facade
             $this->highLowerBound
         );
 
-        $directory->render($report, $target . 'index.blade.php');
+        $directory->render($report, $target . 'indexx.blade.php');
         $dashboard->render($report, $target . 'dashboard.html');
 
         foreach ($report as $node) {
@@ -97,7 +97,7 @@ final class Facade
                     throw new \RuntimeException(\sprintf('Directory "%s" was not created', $target . $id));
                 }
 
-                $directory->render($node, $target . $id . '/index.blade.php');
+                $directory->render($node, $target . $id . '/indexx.blade.php');
                 $dashboard->render($node, $target . $id . '/dashboard.html');
             } else {
                 $dir = \dirname($target . $id);

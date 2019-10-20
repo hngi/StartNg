@@ -625,7 +625,7 @@
                 talented software developers.
             </p>
 
-            <a href="register.blade.php" class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;">Start
+            <a href="{{route('index')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;">Start
 
                 Learning</a>
         </div>

@@ -222,7 +222,7 @@
                     dolor semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor .</p>
                 <div class="clearfix">
                     <div class="float-left">
-                        <a class="btn btn-success pt-1 pb-1" href="details-course.blade.php">More
+                        <a class="btn btn-success pt-1 pb-1" href="#">More
                             Details</a>
                     </div>
                     <div class="float-right">
