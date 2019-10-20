@@ -145,12 +145,14 @@
                             <td>{{$item->name}}</td>
                             <td>{{$item->price}}</td>
                             <td>
-                                <a href="{{route('course.details',$item->id)}}"> View</a>
+                                <a href="{{route('course.details',$item->id)}}"> <button class=" btn btn-success ">
+                                        View
+                                    </button> </a>
                                 @if($item->active)
-                                <a href="{{route('course.disable',$item->id)}}"> Disable</a>
+                                <a href="{{route('course.disable',$item->id)}}"> <button class="btn btn-danger" >Disable</button> </a>
                                     @endif
                                 @if(!$item->active)
-                                    <a href="{{route('course.disable',$item->id)}}"> Enable</a>
+                                    <a href="{{route('course.disable',$item->id)}}"> <button class="btn btn-info" >Enable</button> </a>
                                 @endif
                             </td>
 

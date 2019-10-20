@@ -32,6 +32,7 @@ trait RegistersUsers
 
         event(new Registered($user = $this->create($request->all())));
 
+
         $this->guard()->login($user);
 
         return $this->registered($request, $user)
@@ -57,6 +58,6 @@ trait RegistersUsers
      */
     protected function registered(Request $request, $user)
     {
-        //
+
     }
 }

@@ -135,7 +135,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container pt-2 pb-2">
-            <a href="index.blade.php" class="navbar-brand"><img
+            <a href="{{route('/')}}" class="navbar-brand"><img
                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
                     class="img-fluid" alt="logo" width="150px"></a>
             <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
@@ -356,35 +356,35 @@
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
                         <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                            alt="">
+                             alt="">
                     </div>
                 </div>
 
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="register.blade.php" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="about.blade.php">About Us</a></li>
-                        <li><a href="courses.blade.php">Our Course</a></li>
-                        <li><a href="hire.blade.php">Hire a Grad</a></li>
+                        <li><a href="{{route('about')}}">About Us</a></li>
+                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
+                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="curriculum.html">Curriculum</a></li>
-                        <li><a href="blog2.html">Blog</a></li>
-                        <li><a href="blog1.html">Student Stories</a></li>
+                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
+                        <li><a href="{{route('blog')}}">Blog</a></li>
+
 
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="search.html">Find a Course</a></li>
-                        <li><a href="#">Our Partners</a></li>
-                        <li><a href="contact.blade.php">Contact Us</a></li>
+                        <li><a href="{{route(('find-course'))}}">Find a Course</a></li>
+
+                        <li><a href="{{route('contact')}}">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="help.html">FAQ</a></li>
-                        <li><a href="termsOfService.html">Terms of Service</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="{{route(('faq'))}}">FAQ</a></li>
+                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
+                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
                     </div>
                 </div>
 

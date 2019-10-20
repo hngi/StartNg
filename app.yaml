@@ -24,8 +24,8 @@ env_variables:
   DB_HOST: localhost
   DB_PORT: 3306
   DB_DATABASE: hngseven
-  DB_USERNAME: root
-  DB_PASSWORD:
+  DB_USERNAME: stanlab
+  DB_PASSWORD: 1234
   DB_SOCKET: /cloudsql/startng:us-central1:hngseven
   #DB_SOCKET: /cloudsql/farmcorps:us-central1:farmcorps
 

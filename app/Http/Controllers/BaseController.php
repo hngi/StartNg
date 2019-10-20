@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use foo\bar;
 use Illuminate\Support\Facades\DB;
 use App\RegisteredCourse;
 use Symfony\Component\HttpFoundation\Session\Flash;
 use App\Contact;
 use Illuminate\Support\Facades\Session;
+use App\Course;
 
 use Illuminate\Http\Request;
 
@@ -69,6 +71,21 @@ class BaseController extends Controller
         return view('frontend.frontend.login');
     }
 
+    public function search(){
+        $data= request()->validate([
+            'course'=>'required'
+        ]);
+
+        $query= Course::Where('name', 'like', '%' . $data['course'] . '%')->exists();
+        if($query){
+            $courses= Course::Where('name', 'like', '%' . $data['course'] . '%')->get();
+            return view('frontend.frontend.search',compact('courses'));
+        }
+        return redirect('find-course')->with('error','Course Not Found');
+        return view('frontend.frontend.findcourse')->with('error','Course not Found');
+
+    }
+
     public function register()
     {
         return view('frontend.frontend.register');
@@ -94,6 +111,34 @@ class BaseController extends Controller
     public function courses()
     {
         return view('frontend.frontend.courses');
+    }
+
+    public function privacy(){
+        return view('frontend.frontend.privacy');
+    }
+
+    public function faq(){
+        return view('frontend.frontend.faq');
+    }
+
+    public function partners(){
+        return view('frontend.frontend.partners');
+    }
+
+    public function findcourse(){
+        return view('frontend.frontend.findcourse');
+    }
+
+    public function blog(){
+        return view('frontend.frontend.blog');
+    }
+
+    public function curriculum(){
+        return view('frontend.frontend.curriculum');
+    }
+
+    public function terms(){
+        return view('frontend.frontend.terms');
     }
 
 

@@ -36,6 +36,17 @@ class CourseController extends Controller
 
     }
 
+    public function search(){
+        $data= request()->validate([
+            'course'=>'required'
+        ]);
+
+       $query= Course::Where('course', 'like', '%' . Input::get('course') . '%')->get();
+
+        dd($query);
+
+    }
+
     public function course($id){
         $check=DB::table('courses')->where('id',$id)->exists();
 

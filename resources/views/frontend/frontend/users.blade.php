@@ -144,12 +144,12 @@
                             <td>{{$user->email}}</td>
 
                             <td>
-                                <a href="{{route('user.details',$user->id)}}"> View</a>
+                                <a href="{{route('user.details',$user->id)}}"> <button class="btn btn-success" > View </button> </a>
                                 @if($user->active)
-                                    <a href="{{route('user.disable',$user->id)}}"> Disable</a>
+                                    <a href="{{route('user.disable',$user->id)}}"> <button class="btn btn-danger" >Disable</button> </a>
                                 @endif
                                 @if(!$user->active)
-                                    <a href="{{route('user.disable',$user->id)}}"> Enable</a>
+                                    <a href="{{route('user.disable',$user->id)}}"> <button class="btn btn-info">Enable </button> </a>
                                 @endif
                             </td>
                         </tr>
