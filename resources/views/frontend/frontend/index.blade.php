@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Start NG</title>
 
     <style>
@@ -404,11 +405,40 @@
             </a>
         </div>
     </div>
-
-    <div class="container-fluid pt-5 pb-5" style="background-color: #fff;">
+<div class="container-fluid pt-5 pb-5" style="background-color: #fff;">
         <div class="col-md-10 offset-md-1">
-            <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930756/startng/Testimonials_dwtp2n.png"
-                class="img-fluid">
+            <div class="container mt-3" align="center">
+  <h2 style="text-align: center;"><strong>What people have to say about us</strong></h2><br>
+  <div class="media border p-3" style="border-radius:3%; width:85% ">
+    <img src="https://res.cloudinary.com/drbrain/image/upload/v1567742595/HNG%206.0/dr_qtopjx.jpg" alt="Dennis Lagbaja" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+    <div class="media-body">
+       <p style="text-align:left;">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into internship using their laptop. Each week, we give tasks.</p>  
+       <div style="text-align:left;">
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i>
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <h4><strong>Dennis Lagbaja</strong></h4>
+        <small><i>Completed the front End Developer Class</i></small></div>          
+    </div>
+  </div><br>
+
+    <div class="media border p-3" style="border-radius:3%; width:85% ">
+    <img src="https://res.cloudinary.com/drbrain/image/upload/v1571143305/HNG%206.0/images_wiqrif.jpg" alt="Khadirat Uche Jumbo" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+    <div class="media-body">
+   <p style="text-align:left;">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into internship using their laptop. Each week, we give tasks.</p>
+      <div style="text-align:left;">
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i>
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star</i> 
+       <i class="material-icons" style="font-size:40px;color:yellow">star_half</i> 
+       <h4><strong>Khadirat Uche Jumbo </strong></h4>
+        <small><i>Completed the Laravel PHP Class</i></small></div>      
+    </div>
+  </div>
+</div>
         </div>
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
             <h4>Online or Offline, We Are Here For You</h4>
