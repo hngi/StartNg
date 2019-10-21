@@ -1,0 +1,45 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+  - .env
+  - denv
+
+env_variables:
+  # Put production environment variables here.
+  APP_ENV: production
+  APP_LOG: errorlog
+  APP_KEY: base64:5YxREERG+2ydfCE7IVYd3b3xdQKwHihyXpuZaaeOY5Q=
+
+  APP_DEBUG : true # or false
+  STORAGE_DIR: /tmp
+
+  DB_CONNECTION: mysql
+  #CACHE_DRIVER: file
+  #SESSION_DRIVER: file
+  DB_HOST: localhost
+  DB_PORT: 3306
+  DB_DATABASE: hngseven
+  DB_USERNAME: stanlab
+  DB_PASSWORD: 1234
+  DB_SOCKET: /cloudsql/startng:us-central1:hngseven
+  #DB_SOCKET: /cloudsql/farmcorps:us-central1:farmcorps
+
+
+
+
+  LOG_DELETE:  true # this is a parameter added by us in the project .env file. You can add here any setting you would add to your .env file
+  GOOGLE_VISION_PROJECT_ID : startng
+  #GOOGLE_VISION_PROJECT_ID : farmcorps
+
+  GOOGLE_API_KEY: AIzaSyDzY9i8ApRT2A2Equ50-L7vvUO3Yma67Y0
+beta_settings:
+   # for Cloud SQL, set this value to the Cloud SQL connection name,
+   # e.g. "project:region:cloudsql-instance"
+   #cloud_sql_instances: "farmcorps:us-central1:farmcorps"
+   cloud_sql_instances: "startng:us-central1:hngseven"
+
