@@ -314,18 +314,43 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <img class="img-fluid"
-            src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961661/startng/Group_419_c7p8rv.png">
-        <div class="col-md-8 offset-md-1">
-            <h4 class="font-weight-bold">Subscribe to our Newsletter</h4>
-            <p>Stay Updated with our latest news, discount and promotions</p>
-            <form class="form-inline pb-5">
-                <input type="email" class="form-control col-md-8" placeholder="Email Address"><button type="submit"
-                    class="btn btn-success">Subscribe</button>
-            </form>
+    
+    <!-- Benefits Section -->
+    <div class="container-fluid mt-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="ml-3 mt-5">
+                    <h2 class="h2 text-white">Benefits</h2>
+                    <ul class="pt-5">
+                        <li><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp; Full time Mentorship</li>
+                        <li><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;  Expert Instructors</li>
+                        <li><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;  Real Time Collaboration</li>
+                        <li><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;  Build Real Time Products</li>
+                        <li><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;  Learn up-to-date remote tools</li>
+                        <li><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;  Offline Meet-ups</li>
+                    </ul>
+                    <a class="btn btn-success btn-block mt-5" href="register.html" role="button">Start Here</a>
+                </div>
+                <div class="ml-auto mt-3 mb-3 col-md-5">
+                    <img src="https://res.cloudinary.com/ratselaft/image/upload/v1571145212/screen1_uvs2zn.png" class="img-fluid">
+                </div>
+            </div>
         </div>
     </div>
+    <!-- End of benefits section -->
+
+    <!-- Subscribe Section -->
+    <div class="container">
+        <div class="mt-5">
+            <h3 class="h3">Subscribe To Our Newsletter</h3>
+            <p class="lead">Stay Updated with our latest news, discount and promotions.</p>
+            <div class="form-group">
+                <input type="email" class="form-control col-sm-12 col-md-8 col-lg-8" placeholder="Email Address">
+            </div>
+            <button type="submit" class="btn btn-lg btn-success mb-5">Subscribe</button>
+        </div>
+    </div>
+    <!-- End of subscribe section -->
 
     <!-- Footer -->
     <div class="container-fluid text-white deep mt-5">
