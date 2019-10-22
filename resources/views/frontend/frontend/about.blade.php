@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <title>Start NG | About</title>
 
     <style>
@@ -135,7 +137,62 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        /* Slick style */
+        .slick-initialized .slick-slide {
+            /* margin: 8px !important; */
+        }
+        .slick-active {
+            transition: 0.2s;
+            box-shadow: none !important;
+            transform: scale(0.9);
+        }
 
+        .slick-active + .slick-active {
+            transition: 0.2s;
+            transform: scale(1);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+        }
+
+        .slick-active + .slick-active + .slick-active {
+            transition: 0.2s;
+            box-shadow: none !important;
+            transform: scale(0.9);
+        }
+
+        .slick-active + .slick-active .card{
+            transition: 0.2s;
+            transform: scale(1);
+        }
+        .slick-arrow-first, .slick-arrow-second{
+            background-color: #3A0842 !important;
+            color: #fff !important;
+        }
+        .slick-arrow-first{
+            position: absolute;
+            z-index: 1000;
+            top: 50%;
+            right: -30px;
+        }
+        .slick-arrow-second{
+            position: absolute;
+            z-index: 1000;
+            top: 50%;
+            left: -30px;
+        }
+                /* Vidoe style */
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         /* Body Style Ends */
     </style>
 </head>
@@ -153,7 +210,7 @@
             <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('about')}}">About Us</a>
+                        <a class="nav-link" href="/about">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
@@ -168,7 +225,7 @@
                         <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                        <a class="nav-link" href="/contact">Contact Us</a>
                     </li>
 
                     @if(!Auth::guest())
@@ -208,7 +265,7 @@
             </p>
         </div>
     </div>
-Choose from over 100,000 online video courses with new additions published every month
+
     <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
         <div class="row align-items-center">
             <div class="col-md-6 pb-5">
@@ -219,7 +276,7 @@ Choose from over 100,000 online video courses with new additions published every
                     <li>Flexible Online Learning</li>
                     <li>Earn a Course Certificate</li>
                 </ul>
-                <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('signup')}}">Start Learning</a>
+                <a class="btn btn-success ml-5 pl-5 pr-5" href="/signup">Start Learning</a>
             </div>
             <div class="col-md-6">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915745/startng/Rectangle_9_w0iucz.png"
@@ -230,7 +287,7 @@ Choose from over 100,000 online video courses with new additions published every
 
     <div class="container-fluid loren-ipsum pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team.<br> dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede <br> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team.<br> dfvdfvdf csd dscsdc dvsdd sdvsdv vfv vfv sdcd fvfv dede </p>
+            <p style="color: #fff;"> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team. <br> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team.<br> </p>
         </div>
         <div class="col-md-4 offset-md-4">
             <div class="row">
@@ -244,10 +301,68 @@ Choose from over 100,000 online video courses with new additions published every
         </div>
     </div>
 
-    <div class="container-fluid">
-        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570921068/startng/Group_257_kibawi.png"
-            class="img-fluid">
-    </div>
+ <section class="sliding-content py-5">
+        <div class="container">
+            <div class="our-students my-4 py-4 mx-4">
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color: #3A0842;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
+                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color: #44CF6C;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
+                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color: #3A0842;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
+                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color:#44CF6C;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
+                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="container-fluid priviledge pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
@@ -316,22 +431,31 @@ Choose from over 100,000 online video courses with new additions published every
             </div>
         </div>
     </div>
-
+ <section class="">
     <div class="container-fluid pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
             <p style="color: #3A0842;">Hi</p>
             <p style="color: #3A0842;">Do you know you can Enrol for</p>
             <p style="color: #3A0842; font-weight: bold;">FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</p>
-            <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
+            <a href="/signup" class="btn btn-success pl-5 pr-5">Start Learning</a>
         </div>
     </div>
-
-    <div class="container-fluid started">
-        <div class="row align-items-center">
-            <div class="col-md-6 pb-2">
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570919824/startng/Group_360_s7w45n.png">
-            </div>
+</section>
+    <section class="">
+        <div class="container-fluid started">
+            <div class="row align-items-center">
+                <div class="col-md-6 pb-2 mt-0 pt-0">
+                    <div class="videoWrapper">
+                        <iframe 
+                            width="100%" 
+                            height="380"
+                            src="https://www.youtube.com/embed/DYaq2sWTWAA" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             <div class="col-md-6 text-center pb-2">
                 <h4 style="color: #7F5A83; font-weight: bold;">How It All Started</h4>
                 <p>Start.ng was going to church and she forgot to ferdsdscsd <br> sdsdnd dffdss wesa dsea wxli sde zdxd
@@ -371,28 +495,28 @@ Choose from over 100,000 online video courses with new additions published every
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="/signup" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('about')}}">About Us</a></li>
-                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/course">Our Course</a></li>
+                        <li><a href="/graduates">Hire a Grad</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blog')}}">Blog</a></li>
+                        <li><a href="/curriculum">Curriculum</a></li>
+                        <li><a href="/blog">Blog</a></li>
 
 
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('find-course'))}}">Find a Course</a></li>
+                        <li><a href="/find-course">Find a Course</a></li>
 
-                        <li><a href="{{route('contact')}}">Contact Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('faq'))}}">FAQ</a></li>
-                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
-                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
                     </div>
                 </div>
 
@@ -416,6 +540,68 @@ Choose from over 100,000 online video courses with new additions published every
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+       <script type="text/javascript">
+        // Find all YouTube videos
+        var $allVideos = $("iframe[src^='//www.youtube.com']");
+        // The element that is fluid width
+        $fluidEl = $("body");
+        // Figure out and save aspect ratio for each video
+        $allVideos.each(function() {
+            $(this)
+            .data('aspectRatio', this.height / this.width)
+            // and remove the hard coded width/height
+            .removeAttr('height')
+            .removeAttr('width');
+        });
+
+        // When the window is resized
+        $(window).resize(function() {
+
+            var newWidth = $fluidEl.width();
+
+            // Resize all videos according to their own aspect ratio
+            $allVideos.each(function() {
+
+            var $el = $(this);
+                $el
+                .width(newWidth)
+                .height(newWidth * $el.data('aspectRatio'));
+            });
+            // Kick off one resize to fix all videos on page load
+        }).resize();
+        $(document).ready(function(){
+            $('.our-students').slick({
+                centerMode: true,
+                centerPadding: '0px',
+                slidesToScroll: 1,
+                slidesToShow: 3,
+                autoplay: true,
+                arrows: true,
+                nextArrow: '<span class="slick-arrow-first text-white py-1 px-2 rounded-circle"><i class="fas fa-arrow-right"></i></span>',
+                prevArrow: '<span class="slick-arrow-second text-white py-1 px-2 rounded-circle"><i class="fas fa-arrow-left"></i></span>',
+                responsive: [{
+                    breakpoint: 508,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>

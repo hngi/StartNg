@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin</title>
+    <title>Admin | USER DETAILS </title>
 
     <!-- Bootstrap core CSS -->
 
@@ -83,12 +83,14 @@
             </div>
             <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
 
-                <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+                <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842;">Users</a>
+                <a href="{{route('admin')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
+                    Admin</a>
                 <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
                     Courses</a>
                 <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
 
-                <a class="list-group-item list-group-item-action pt-3 pb-3" href="{{ route('logout') }}"
+                <a class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
@@ -117,7 +119,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link btn btn-danger" href="#" style="color: #fff;">LOGOUT</a>
+                            <a class="nav-link btn btn-danger" href="{{ route('logout') }}" style="color: #fff;">LOGOUT</a>
                         </li>
                     </ul>
                 </div>
@@ -128,10 +130,12 @@
 
                 <table class="table">
                     <thead>
-                        <tr>
+                        <tr> 
+                            <th>Id</th>
                             <th>Name</th>
-
+                            <th>Phone</th>
                             <th>Email</th>
+                            <th>Action</th>
 
                             <th></th>
                         </tr>
@@ -139,10 +143,11 @@
                     <tbody>
                     @foreach($users as $user)
                         <tr>
+                            <td>{{$user->id}}</td>
                             <td>{{$user->name}}</td>
-
+                            <td>{{$user->phone}}</td>
                             <td>{{$user->email}}</td>
-
+                           
                             <td>
                                 <a href="{{route('user.details',$user->id)}}"> <button class="btn btn-success" > View </button> </a>
                                 @if($user->active)

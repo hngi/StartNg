@@ -163,11 +163,13 @@ class BaseController extends Controller
 
             else{
               $message="no registered course";
+                return redirect('mycourse')->with('error',$message);
             }
             $user=DB::table('users')->where('id',$id)->get()[0];
         }
         else{
             $message='user does not exist';
+            return redirect('mycourse')->with('error',$message);
         }
 
     }

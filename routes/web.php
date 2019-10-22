@@ -18,7 +18,7 @@ Route::get('/', 'BaseController@index')->name('index');
 
 Route::get('/signup', 'BaseController@register')->name('signup');
 Route::get('/signin', 'BaseController@login')->name('signin');
-Route::get('/admin', 'BaseController@admin')->name('admin');
+
 
 
 Auth::routes();
@@ -32,6 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/admin', 'BaseController@admin')->name('admin');
     Route::get('/course', 'CourseController@show')->name('courses');
     Route::get('/course/create', 'CourseController@create')->name('course.create');
     Route::get('/course/disable/{id}', 'CourseController@destroy')->name('course.disable');

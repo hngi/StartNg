@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,12 +74,11 @@
         }
         
         .btn-secondary:hover {
-            background-color: rgb(2, 20, 12);
+            background-color: var(--secondary-color);
             opacity: 0.85;
-            border: thin solid rgb(2, 20, 12);
         }
         /* Button styles end */
-        /*	collapsible accordion starts */
+        /*  collapsible accordion starts */
         
         .myaccordion {
             box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
@@ -115,7 +115,7 @@
         .myaccordion li+li {
             margin-top: 10px;
         }
-        /*	collapsible accordion ends	*/
+        /*  collapsible accordion ends  */
         
         * {
             box-sizing: border-box;
@@ -188,7 +188,6 @@
         /* Style for Footer Ends */
     </style>
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
@@ -263,7 +262,7 @@
                                     <input type="text" name="Search" class="form-control pt-2 pb-2 rounded-0" placeholder="Search" required aria-label="Search question" aria-describedby="button-addon2" style="border: thin solid #fff;">
                                     <div class="input-group-append">
                                         <button class="btn btn-light rounded-0" type="button" id="button-addon2"><i
-												class="fas fa-search"></i> </button>
+                                                class="fas fa-search"></i> </button>
                                     </div>
                                 </div>
                             </form>
@@ -289,12 +288,12 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-												Do you offer certification or degrees?
-												<span class="fa-stack fa-sm">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                Do you offer certification or degrees?
+                                                <span class="fa-stack fa-sm">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -310,12 +309,12 @@
                                     <div class="card-header" id="headingTwo">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-												Do you offer student discount?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                Do you offer student discount?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -330,13 +329,12 @@
                                 <div class="card">
                                     <div class="card-header" id="headingThree">
                                         <h2 class="mb-0">
-                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-												Are there free courses?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">                 Are there free courses?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -352,12 +350,12 @@
                                     <div class="card-header" id="headingFour">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-												Do you offer student discount?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                Do you offer student discount?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
@@ -373,12 +371,12 @@
                                     <div class="card-header" id="headingFive">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-												Are there free courses?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                Are there free courses?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
@@ -406,7 +404,8 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
+  <!-- Footer -->
+<div class="container-fluid text-white deep">
     <footer>
         <div class="container">
             <div class="row">
@@ -445,19 +444,20 @@
             </div>
 
         </div>
-        </div>
-        <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-            <div class="container text-right">
-                <div class="row icons">
-                    <div class="col-md-12 ">
-                        <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                        <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                        <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    </div>
-                </div>
+</div>
+<div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
+    <div class="container text-right">
+        <div class="row icons">
+            <div class="col-md-12 ">
+                <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
+                <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+                <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
             </div>
+        </div>
+    </div>
     </footer>
-    <!-- End of Footer -->
+</div>
+  <!-- End of Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>

@@ -197,7 +197,7 @@
             <h4 class="pb-5 pt-5" style="font-weight: bold; font-size: 40px;">Hire a Grad</h4>
             <p class="pb-4" style="font-weight: 600; font-size: 25px;">After 3 months of training and projects, <br> our
                 graduates are ready to take on full-time <br> or remote jobs at your company.</p>
-            <a href="hire.blade.php" class="btn btn-success pl-5 pr-5 mb-3">Hire a
+            <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5 mb-3">Hire a
                 Graduate</a>
         </div>
     </div>

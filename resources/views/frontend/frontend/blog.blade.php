@@ -271,8 +271,8 @@
             <h4 class="mb-5"
                 style="color: #fff; font-style: normal; font-weight: bold; font-size: 30px; line-height: 50px; text-align: center; letter-spacing: 0.655606px;">
                 How much will I earn as a UI/UX Designer?</h4>
-            <a href="details-course.blade.php" class="btn btn-success pl-5 pr-5 mb-5">Read</a> <br>
-            <a href=""><img
+            <a href="#" class="btn btn-success pl-5 pr-5 mb-5">Read</a> <br>
+            <a href="#"><img
                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923285/startng/Group_303_dr7xs0.png"
                     class="img-fluid"></a>
 
@@ -296,11 +296,12 @@
         <div class="input-group col-md-8 offset-md-2 mb-5 pb-3">
             <input type="text" class="form-control" placeholder="Search">
             <div class="input-group-append">
-                <a href="search.blade.php">
-                    <button class="btn btn-success" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </a>
+                <form action="{{route('course.search')}}" method="post" >
+                    @csrf
+                    <input type="text" name="course" class="form-control col-md-10 mb-3" placeholder="Type in your preferred course">
+                    <button type="submit" class="btn btn-success pl-5 pr-5 mb-3">  Find A Course</button>
+                    {{--<a href="" >Find A Course</a> --}}
+                </form>
             </div>
         </div>
     </div>
