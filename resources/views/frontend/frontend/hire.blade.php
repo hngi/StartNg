@@ -207,10 +207,9 @@
             <div class="col-md-6">
                 <div class="col-md-8 offset-md-2">
                     <h4 class="pb-3" style="font-weight: bold; font-size: 25px;">Versatile</h4>
-                    <p>Our graduates are versatile, dedicated,Lorem <br> ipsum dolor sit amet, consectetur adipiscing
-                        <br> elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Non diam <br>
-                        phasellus vestibulum lorem sed.
-                    </p>
+                    <p>Our graduates are versatile , dedicated & equipped with the right skill sets to adapt
+                        <br>to various areas of the workplace.<br> Our intensive 3 months program ensures our graduates are trained <br>with necessary skill sets needed for any workplace.
+                    </p>   
                 </div>
             </div>
             <div class="col-md-6">
@@ -275,11 +274,10 @@
             <div class="col-md-6">
                 <div class="col-md-8 offset-md-2">
                     <h4 class="pb-4" style="font-weight: bold;">Remote Flexibility</h4>
-                    <p>Our graduates are taught how to be effective <br> remote employees. Lorem ipsum dolor sit <br>
-                        amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore
-                        <br> magna aliqua. Non diam phasellus vestibulum
-                        <br> lorem sed.</p>
-                </div>
+                    <p>Our graduates are taught how to be effective remote employees . <br> They are trained to connect & work digitally at any time with <br>employers and clients around the world. With the rise in demand for remote <br> work, we ensure our graduates are up to date <br> with the latest practices to fill in these roles suitably.<br> lorem sed.</p>
+                </div> 
+
+ 
             </div>
         </div>
     </div>

@@ -270,11 +270,13 @@
         <div class="row align-items-center">
             <div class="col-md-6 pb-5">
                 <h4 class="pl-5" style="color: #7F5A83;">Courses</h4>
-                <p class="pl-5">Choose from over 100,000 online video courses <br> with new additions published Frequently <br> Complete quide.</p>
+                <p class="pl-5">Interns are able to select from the number of courses we offer:<br> Complete quide. <br>100% Online. Flexible Online Learning and Earn a Course Certificate</p>
                 <ul class="pl-5 ml-3" style="color: #44CF6C;">
-                    <li>100% Online</li>
-                    <li>Flexible Online Learning</li>
-                    <li>Earn a Course Certificate</li>
+                    <li>Machine Learning</li>
+                    <li>Digital Marketing</li>
+                    <li>Front End development</li>
+                    <li>Back end Development</li>
+ 
                 </ul>
                 <a class="btn btn-success ml-5 pl-5 pr-5" href="/signup">Start Learning</a>
             </div>
@@ -287,7 +289,7 @@
 
     <div class="container-fluid loren-ipsum pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team. <br> Teach what you love. we gives you the tools to create a course <br>Get unlimited access to 500+ of Start Ng’s top courses for your team.<br> </p>
+            <p style="color: #fff;"> You can have access to our free courses in Web development, Machine learning,  <br> and Digital Marketing.We have also made available paid courses that would give<br> maximum and intense information about any course <br>you u will be interested in and you will have the opportunity to get <br>your hands on enough practicals and projects of which at the end of the course, certificates will be issued.<br> </p>   
         </div>
         <div class="col-md-4 offset-md-4">
             <div class="row">
@@ -312,9 +314,9 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
-                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Moses Obanega</h5>
+                            <p class="card-text">Managing tasks and having to deliver meeting up with deadlines in a few days under pressure is not a big deal anymore. I say a big thank you to the organizers of the HNG program and the sponsors.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front End Track |From Imo State</small></p>
                         </div>
                     </div>
                 </div>
@@ -326,9 +328,9 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
-                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
+                            <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
                         </div>
                     </div>
                 </div>
@@ -340,9 +342,9 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
-                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Sydney Collins</h5>
+                            <p class="card-text">I came into HNG with zero knowledge in programming and I'll be leaving with so much knowledge acquired in programming, now I can be called a front end web developer. Thanks to HNG.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front End track | From Cameroon</small></p>
                         </div>
                     </div>
                 </div>
@@ -354,9 +356,9 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message Akunna</h5>
-                            <p class="card-text">Lorem ipsum was going to church and she forgot to ferd nd dffdss wesa dsea  desh dfds ddsasd asaas dfdf asas asa dsdsdd.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Laravel | PHP</small></p>
+                           <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
+                            <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
                         </div>
                     </div>
                 </div>
@@ -376,11 +378,11 @@
                             class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-8">
-                        <p style="color: #3A0842">Learn from the Best Teachers</p>
-                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
-                        </p>
+                        <p style="color: #3A0842">LEARN FROM THE BEST TEACHERS</p>
+                        <p>We hire Tutors with 100% knowledge on each track. Interns are provided best andappropriate advice from tutors based on their experiences.</p>
                     </div>
                 </div>
+
 
 
             </div>
@@ -392,10 +394,10 @@
                             class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-8">
-                        <p style="color: #3A0842">Join Online Developer Community</p>
-                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
-                        </p>
+                        <p style="color: #3A0842">JOIN ONLINE DEVELOPER COMMUNITY</p>
+                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -407,12 +409,10 @@
                             class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-8">
-                        <p style="color: #3A0842">Get Academic and Technical Support</p>
-                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
-                        </p>
+                        <p style="color: #3A0842">GET ACADEMIC AND TECHNICAL SUPPORT</p>
+                        <p>Interns are exposed to updated usage of some technologies and effective training on their usage is provided</p>
                     </div>
                 </div>
-
 
             </div>
             <div class="col-md-2"></div>
@@ -423,9 +423,8 @@
                             class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-8">
-                        <p style="color: #3A0842">Earn a Certifcate</p>
-                        <p>Lorem ipsum was going to church and she forgot to ferdsdscsd sdsdnd dffdss gg dzxf fgg.
-                        </p>
+                        <p style="color: #3A0842">EARN A CERTIFICATE</p>
+                        <p>Interns are eligible for a certificate if only they get to a certain stage of the internship.</p>
                     </div>
                 </div>
             </div>
