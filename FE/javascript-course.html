@@ -11,6 +11,13 @@
     <title>Javascript</title>
 
     <style>
+        html {
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: Nunito;
         }
@@ -152,18 +159,13 @@
             color: #fff;
         }
         
-        .panel-default>.panel-heading+.panel-collapse>.panel-body {
-            /* border: solid 1px #EEEEEE; */
-            /* background: rgba(129, 22, 124, 0.05); */
-        }
-        
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
         
         .panel-group .panel {
             border: none;
-            -webkit-box-shadow: none;
+            box-shadow: none;
         }
         
         .exp-tt {
@@ -199,6 +201,174 @@
         .course-drop {
             padding-bottom: 40px;
         }
+
+        /* What you will learn */
+        .build img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .learn p {
+            list-style-type: none;
+            font-style: normal;
+            font-weight: normal;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            font-size: 20px;
+            line-height: 22px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .learn img{
+            margin-right: 10px;
+        }
+
+        .head-2 h2 {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 34px;
+            text-align: center;
+            letter-spacing: 0.655606px;
+            color: #000000;
+        }
+
+        .head-3 h2 {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 55px;
+            letter-spacing: 0.655606px;
+            color: #000000;
+        }
+
+        .head-3 p {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+        }
+
+        .head-3 button {
+            background: #3F113D;
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        /* Start.ng form here */
+        .projects-horizontal {
+            color:#313437;
+            background-color:#fcfcfc;
+        }
+        .projects-horizontal p {
+            color:#2b2d42;
+            font-size:15px;
+            font-family:'Open Sans', sans-serif;
+        }
+        .projects-horizontal h2 {
+            font-weight:bold;
+            margin-bottom:40px;
+            padding-top:40px;
+            color:#3a0842;
+            font-size:25px;
+            font-family:Nunito, sans-serif;
+        }
+        .icon-div{
+            width:82px;
+            height:82px;
+            background-color:#44cf6c;
+            border-radius:50%;
+        }
+        .icon-div img{
+            padding:20px;
+        }
+       
+        .projects-horizontal .intro {
+            font-size:16px;
+            max-width:500px;
+            margin:0 auto 10px;
+        }
+        .projects-horizontal .projects {
+            padding-bottom:40px;
+        }
+        .projects-horizontal .item {
+            padding-top:60px;
+            min-height:160px;
+        }
+        .projects-horizontal .item .name {
+            font-size:16px;
+            font-weight:bold;
+            margin-top:10px;
+            margin-bottom:15px;
+            color:#3a0842;
+            font-family:'Open Sans', sans-serif;
+        }
+        /* Start.ng end here */
+
+        /* Responsiveness */
+        @media (max-width:991px) {
+            .projects-horizontal .item .name {
+                margin-top:22px;
+                color:#3a0842;
+                font-family:'Open Sans', sans-serif;
+            }
+        }
+
+        @media (max-width:767px) {
+            .projects-horizontal h2 {
+                margin-bottom:25px;
+                padding-top:25px;
+                font-size:25px;
+                font-family:Nunito, sans-serif;
+                color:#3a0842;
+            }
+
+            .sec .item1 .icon-div {
+                margin: 0 auto;
+            }
+        }
+        
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+        .learn p {
+            list-style-type: none;
+            font-style: normal;
+            font-weight: bold;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+        }
+        
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            .float-right { margin-top: 6px;
+                           margin-bottom: 2px; }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            .subbtn { margin-top: 15px; }
+        }
+        
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+            .stuimg { position: absolute;
+                display:block;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+            .user-details { padding-left: 75px;
+                             padding-bottom: 20px;
+                             margin-top: -10px;}  
+                
+            }
+      }
     </style>
 </head>
 
@@ -261,15 +431,66 @@
     </div>
 
     <div class="container pb-5 pt-5">
-        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
+        <div class="head-2 text-center">
+            <h2 class="text-center">What you will learn</h2>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6 col-sm-12  learn">
+            
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        UserFlow, User journey using FlowMapp</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        User Research, ideation</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        Interactive Design</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        Prototyping using Figma</p>
+        
+
+            </div>
+            <div class="col-md-6 col-sm-12  learn">
+                
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        Wireframes(Low-Fidelity & High Fidelity)</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        Mobile Interface(IOS, Android)</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        IOS Design Guidelines</p>
+                    <p><img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169889/Vector_1_vzw80l.png"
+                            alt="">
+                        Material Design Guidelines</p>
+            
+            </div>
+        </div>
+
     </div>
-    <div class="contaner-fluid">
-        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+    <div class="contaner-fluid bg-success ">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 head-3 p-5">
+                <h2>Build Real time Project</h2>
+                <p>
+                    Students are expected to have some basic knowledge in HTML and CSS to take this course. And should at the end of the course, be able to build a usable web application.
+                </p>
+                <a href="register.html"><button>Start Learning</button></a>
+            </div>
+            <div class=" col d-none d-sm-none d-md-block build ">
+                <img class="img-fluid "
+                    src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1571169865/Group_227_c71pat.png" alt="">
+            </div>
+        </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid course-acc" style="background:rgba(129, 22, 124, 0.05);">
 
-        <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
+        <div >
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
@@ -294,16 +515,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                General overview  of JavaScript programming language
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                It's syntax and comparison with other programming languages.
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Applications that could be developed with JavaScript
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                JavaScript evolution and recent versions.
                                             </li>
                                         </ul>
                                     </div>
@@ -314,7 +535,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Data types
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -324,16 +545,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                String
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Boolean
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Numbers
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Type conversion
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -344,7 +568,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Program Structure
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -354,16 +578,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Expression and Statements
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Variable declarations and naming
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Functions and Methods
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Control structures
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -374,7 +601,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Functions
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -382,7 +609,23 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
+                                        <ul>
+                                            <li>
+                                                Defining a Function
+                                            </li>
+                                            <li>
+                                                Arrow Function
+                                            </li>
+                                            <li>
+                                                Closure
+                                            </li>
+                                            <li>
+                                                Recursion
+                                            </li>
+                                            <li>
+                                                Exercises
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -391,7 +634,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Objects and Arrays
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -401,16 +644,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Datasets
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Onjects
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Methods
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Array loop
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -421,7 +667,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Higher-order Function
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -431,16 +677,25 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Abstraction
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Higher-order function
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Script dataset
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Filtering datasets
+                                            </li>
+                                            <li>
+                                                Transforming with map
+                                            </li>
+                                            <li>
+                                                String and character codes
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -459,7 +714,7 @@
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> User Research
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Oriented Object Programming
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -469,16 +724,25 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Object
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Classes
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Polymorphism
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Data Abstraction
+                                            </li>
+                                            <li>
+                                                Maps
+                                            </li>
+                                            <li>
+                                                Methods
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -489,7 +753,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Ideation
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Debugging
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -499,16 +763,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Strict mode
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Exceptions
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Try and catch error
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Testing
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -519,7 +786,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Wireframes
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Regular expression
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -529,16 +796,10 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Creating a regular expression 
                                             </li>
                                             <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -549,7 +810,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> JavaScript environment
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -559,16 +820,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                W.W.W(World wide web)
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Browsers compatibility.
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Http and Https
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                JavaScript with HTML
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -579,7 +843,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Document Object Model(DOM)
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -589,16 +853,28 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                The DOM
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Finding element
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Manipulating documents
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Creating nodes
+                                            </li>
+                                            <li>
+                                                Query Selectors
+                                            </li>
+                                            <li>
+                                                Event handlers
+                                            </li>
+                                            <li>
+                                                Even and DOM nodes
+                                            </li>
+                                            <li>
+                                                Exercises
                                             </li>
                                         </ul>
                                     </div>
@@ -609,7 +885,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Project: Goal Tracker web Application
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -619,16 +895,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Login page
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Signup page
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                The Dashboard
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Hosting
+                                            </li>
+                                            <li>
+                                                Certificate
                                             </li>
                                         </ul>
                                     </div>
@@ -646,9 +925,67 @@
 
 
 
-            <div class="col-md-10 offset-md-1 pb-5 pt-5">
-                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
+            <div class="projects-horizontal">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">On Start.ng, you are privileged to</h2>
             </div>
+            <div class="row projects">
+                <div class="col-sm-6 item">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
+                            <div class="icon-div">
+                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210454/icon1_sehqtm.png">
+                            </div>
+                        </div>
+                        <div class="col text-md-left text-center">
+                            <h3 class="name">LEARN FROM THE BEST TEACHERS</h3>
+                            <p class="description">We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
+                            <div class="icon-div">
+                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210456/icon2_cxog3h.png">
+                            </div>
+                        </div>
+                        <div class="col text-md-left text-center">
+                            <h3 class="name">JOIN ONLINE DEVELOPER COMMUNITY</h3>
+                            <p class="description">A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.<br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
+                            <div class="icon-div">
+                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210458/icon3_xd7ce2.png">
+                            </div>
+                        </div>
+                        <div class="col text-md-left text-center">
+                            <h3 class="name">EARN A CERTIFICATE</h3>
+                            <p class="description">Interns are eligible for a certificate if only they get to a certain stage of the internship.<br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row sec">
+                        <div class="col-md-12 col-lg-3 item1">
+                            <div class="icon-div">
+                                <img src="https://res.cloudinary.com/stephy/image/upload/v1571210461/icon4_gix6ni.png">
+                            </div>
+                        </div>
+                        <div class="col text-md-left text-center">
+                            <h3 class="name">GET ACADEMIC AND TECHNICAL SUPPORT</h3>
+                            <p class="description">Interns are exposed to updated usage of some technologies and effective training on their usage is provided.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
             <div class="col-md-10 offset-md-1 pt-5 pb-5">
                 <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
             </div>
@@ -688,8 +1025,8 @@
 
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
-                        <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <h4 class="mb-4">Ready to take the Leap?</h4>
+                        <a href="#" class="btn btn-success px-5 py-2 mb-5">Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="about.html">About Us</a></li>
@@ -715,18 +1052,19 @@
                 </div>
 
             </div>
-    </div>
+    
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
         <div class="container text-right">
             <div class="row icons">
                 <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
-        </footer>
+    </div>
+    </footer>
     </div>
 
     <!-- End of Footer -->
