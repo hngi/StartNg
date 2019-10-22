@@ -17,7 +17,6 @@
             margin: 0px;
             overflow-x: hidden;
         }
-
         body {
             font-family: Nunito;
         }
@@ -201,13 +200,11 @@
         .course-drop {
             padding-bottom: 40px;
         }
-
         /* What you will learn */
         .build img {
             height: 100%;
             width: 100%;
         }
-
         .learn p {
             list-style-type: none;
             font-style: normal;
@@ -218,11 +215,9 @@
             line-height: 22px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         }
-
         .learn img{
             margin-right: 10px;
         }
-
         .head-2 h2 {
             font-family: Nunito;
             font-style: normal;
@@ -233,7 +228,6 @@
             letter-spacing: 0.655606px;
             color: #000000;
         }
-
         .head-3 h2 {
             font-family: Nunito;
             font-style: normal;
@@ -243,7 +237,6 @@
             letter-spacing: 0.655606px;
             color: #000000;
         }
-
         .head-3 p {
             font-family: Lato;
             font-style: normal;
@@ -252,7 +245,6 @@
             line-height: 24px;
             color: #000000;
         }
-
         .head-3 button {
             background: #3F113D;
             border-radius: 10px;
@@ -260,7 +252,6 @@
             padding: 10px 20px;
             color: white;
         }
-
         /* Start.ng form here */
         .projects-horizontal {
             color:#313437;
@@ -310,7 +301,158 @@
             font-family:'Open Sans', sans-serif;
         }
         /* Start.ng end here */
+        /* New Addition @cre8tcodes */
+/* Duration Start Here */
+.inline-element__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: .8rem;
+        }
+        .inline-element__top {
+            display: block;
+            font-family: Lato;
+            font-style: normal;
+            font-size: 12px;
+            font-weight: normal;
+        }
 
+        .inline-element__bottom {
+            display: block;
+            font-family: Lato;
+            font-style: normal;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .checked {
+            color: #ffce31;
+            width: 20px; 
+            height: 20px; 
+            margin: 0 5px;
+            padding: 5px;
+            font-size: 15px;
+        }
+
+       span.inline-element--button a {
+          color: #44CF6C;
+          text-decoration: underline #44CF6C;
+       }
+
+       span.inline-element--button a:hover {
+         color: #228B22;
+       }
+        /* Duration Ends Here */
+       /* testimonials Start Here */
+       .testimonials-container {
+            margin: 20px auto;
+            max-width: 768px;
+            padding: 20px 60px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            background: #FFFFFF;
+            box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+        }
+
+        .testimonial {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 30px;
+            color: #333333;
+        }
+        
+        .secbox {
+            background-color: #fff;
+            max-width: 100%;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .subtop {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 31px;
+            text-align: center;
+            letter-spacing: 0.655606px;
+            color: #2A2B2A;
+        }
+
+        .itemposition {
+            display: flex;
+        }
+
+        .stuimg {
+            position: static;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .user-details {
+            position: static;
+            margin-left: 10px;
+        }
+
+        .username {
+            margin: 0;
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 124.8%;
+            letter-spacing: 0.655606px;
+            padding: 0 9px;
+            color: #474747;
+        }
+
+        
+        
+        .action {
+            margin: 0;
+            font-family: Open Sans;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 14px;
+            padding: 0 7px;
+            line-height: 151.2%;
+            color: #737373;
+        }
+
+        .more {
+            text-align: center;
+        }
+
+        .more a {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 14px 51.49px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .more a.xbutton {
+            padding: 12px 28px;
+            background: #44CF6C;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+        }
+         /* Testimonial End Here */
+
+
+
+
+
+
+        /*Ends here */
         /* Responsiveness */
         @media (max-width:991px) {
             .projects-horizontal .item .name {
@@ -319,7 +461,6 @@
                 font-family:'Open Sans', sans-serif;
             }
         }
-
         @media (max-width:767px) {
             .projects-horizontal h2 {
                 margin-bottom:25px;
@@ -328,12 +469,48 @@
                 font-family:Nunito, sans-serif;
                 color:#3a0842;
             }
-
             .sec .item1 .icon-div {
                 margin: 0 auto;
             }
         }
-        
+        /* Cre8tcodes addition start here */
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            .inline-element__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: .7rem;
+        }
+        .inline-element__top {
+            display: block;
+        }
+
+        .inline-element__bottom {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+       .checked {
+            color: #ffce31;
+            width: 15px; 
+            height: 20px; 
+            margin: 0 5px;
+            padding: 5px;
+            font-size: 15px;
+        }
+
+       span.inline-element--button a {
+          color: #44CF6C;
+          text-decoration: underline #44CF6C;
+       }
+
+       span.inline-element--button a:hover {
+         color: #228B22;
+       }
+        }
+        /* Cre8tcodes addition ends here */
         @media screen and (min-width: 320px) and (max-width: 480px) {
         .learn p {
             list-style-type: none;
@@ -350,7 +527,6 @@
             .float-right { margin-top: 6px;
                            margin-bottom: 2px; }
         }
-
         @media screen and (min-width: 320px) and (max-width: 480px) {
             .subbtn { margin-top: 15px; }
         }
@@ -361,7 +537,6 @@
                 max-width: 100%;
                 max-height: 100%;
             }
-
             @media screen and (min-width: 320px) and (max-width: 480px) {
             .user-details { padding-left: 75px;
                              padding-bottom: 20px;
@@ -408,7 +583,15 @@
                 <div class="col-md-6">
                     <p class="font-weight-bold">N50,000 for 3 months full training </p>
                     <h4 class="font-weight-bold pb-3">Modern Javascript from Scratch</h4>
-                    <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p class="pb-2">Learn and build a product with JAVASCRIPT in no time with our route of training you.
+                        Modern JavaScript is a safe and secure programming language for you to build your first project. 
+                        It is very good because when it's running in the browser, JavaScript is able to proceed 
+                        anything related to web page manipulations, users' interactions and interactions with the server (to some extent).
+                        This is one of the best programming languages you can learn very fast and can as well help land your first product at ease.
+                        In many ways, JavaScript is one of the easiest programming languages to learn as your first language. 
+                        The way that it functions as an interpreted language within the web browser means that you can easily write even the most complex code by writing it a small piece at a time and testing it in the web browser as you go.
+                        subscribe to this course to learn the depth of it.
+                        </p>
 
                     <div class="clearfix">
                         <div class="float-left">
@@ -421,7 +604,32 @@
                             <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <!--Start here -->
+            <div class="inline-element__container">
+                <div class="container-items mr-2">
+                    <p>
+                    <span class="inline-element__top">Duration</span>
+                    <span class="inline-element__bottom">12 Weeks</span>
+                    </p>
+                </div>
+                <div class="container-items mr-2">
+                    <p>
+                     <span class="inline-element__top">Courses starts</span>
+                    <span class="inline-element__bottom">5th of November, 2019</span>
+                </p>
+                </div>
+                <div class="container-items mr-2">
+                       <span class="inline-element__top">Average ratings</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="inline-element--button"><a href="./javascript-course.html#reviews">See all reviews</a></span>
+            
+                </div>
+            </div>
+            <!--End here -->
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964974/startng/Group_369_ubc2ec.png">
@@ -488,7 +696,7 @@
         </div>
     </div>
 
-    <div class="container-fluid course-acc" style="background:rgba(129, 22, 124, 0.05);">
+   
 
         <div >
             <div class="container course-drop">
@@ -986,9 +1194,66 @@
             </div>
         </div>
    </div>
-            <div class="col-md-10 offset-md-1 pt-5 pb-5">
-                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
+  <!--Testimonial Start-->  
+  <section class="secbox">
+    <p class="subtop">What Students have to say about us</p>
+    <div class="testimonials-container">
+        <p class="testimonial">
+            It was a very good decision I made paying for this course. 
+            I've been able to build cool stuff on my own with JavaScript. 
+            My advice for those wanting to opt-in is that they avoid skipping an exercise. 
+            All exercises should be attempted. 
+            If you are stuck somewhere. Read up the material again. Shalom
+        </p>
+        <br />
+        <div class="itemposition">
+            <img class="stuimg"
+                src="https://res.cloudinary.com/cre8tcodes/image/upload/v1571178595/Ellipse1_kufvgh.png"
+                alt="student" />
+            <div class="user-details">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p class="username">Fisayo Damilola</p>
+                <p class="action">Front End Track from Lagos
+                    </p>
             </div>
+        </div>
+    </div>
+    <div class="testimonials-container">
+        <p class="testimonial">
+            This is one of the best courses I have taken on JavaScript. 
+            We expect some courses on frameworks like React or Angular. 
+            Basically for front end developers like me. 
+            Thank you
+
+        </p>
+        <br />
+        <div class="itemposition">
+            <img class="stuimg"
+                src="https://res.cloudinary.com/cre8tcodes/image/upload/v1571178595/Ellipse2_we7s7n.png"
+                alt="student" />
+            <div class="user-details">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p class="username">Abdul-Salam Ruqoyya
+                    
+                    </p>
+                <p class="action">Front End Track from Kano</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="more">
+        <a class="xbutton" href="#">See More Reviews</a>
+    </div>
+    </section>  
+  <!--Testimonial Ends here-->      
 
             <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
                 <div class="container pt-5 pb-5">
@@ -999,7 +1264,7 @@
                             </p>
                             <form class="form-inline">
                                 <input type="text" class="form-control col-md-8" id="email">
-                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
+                                <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5 subbtn" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                             </form>
                         </div>
                         <div class="col-md-4">
