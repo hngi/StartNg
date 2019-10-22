@@ -82,6 +82,23 @@
         a:hover {
             text-decoration: none;
         }
+<<<<<<< HEAD:about.html
+        
+        .btn:hover,
+    .nav-link:hover,
+    li a:hover {
+        font-weight: bolder;
+        font-size: larger;
+        transition: font-weight 0.5s, font-size 0.5s;
+    }
+
+    .nav-link:hover {
+        border-bottom: 1px solid #2dce89;
+        padding-bottom: 1px;
+        transition: border-bottom 0.5s,
+    }
+=======
+>>>>>>> 7261e5024ec98b2efe525e8534a7aa16a4c4e477:resources/views/frontend/frontend/about.blade.php
 
         .icons i {
             font-size: 26px;
@@ -135,6 +152,19 @@
             background-size: cover;
         }
 
+<<<<<<< HEAD:about.html
+/* the point at which the hamburger menu appears and the nav items disappear*/
+        @media only screen and (max-width: 991px) {
+             .nav-link:hover {
+                border-bottom: 0;
+            }
+
+            .nav-link {
+                display: inline-block;
+            }
+        }
+=======
+>>>>>>> 7261e5024ec98b2efe525e8534a7aa16a4c4e477:resources/views/frontend/frontend/about.blade.php
         /* Body Style Ends */
     </style>
 </head>

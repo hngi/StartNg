@@ -86,6 +86,23 @@
         text-decoration: none;
     }
 
+<<<<<<< HEAD:search.html
+    .btn:hover,
+    .nav-link:hover,
+    li a:hover {
+    	font-weight: bolder;
+        font-size: larger;
+        transition: font-weight 0.5s, font-size 0.5s;
+    }
+
+    .nav-link:hover {
+    	border-bottom: 1px solid #2dce89;
+    	padding-bottom: 1px;
+    	transition: border-bottom 0.5s,
+    }
+    
+=======
+>>>>>>> 7261e5024ec98b2efe525e8534a7aa16a4c4e477:resources/views/frontend/frontend/findcourse.blade.php
     .icons i {
         font-size: 26px;
         height: 50px;
@@ -552,6 +569,17 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+/* the point at which the hamburger menu appears and the nav items disappear*/
+    @media only screen and (max-width: 991px) {
+             .nav-link:hover {
+                border-bottom: 0;
+            }
+
+            .nav-link {
+                display: inline-block;
+            }
+        }
 </style>
 
 <body>
