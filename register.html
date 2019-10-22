@@ -274,8 +274,8 @@
                     <div class="form-group">
                         <label for="usr" style="font-weight: bold;">Mobile Number:</label>
                         <input type="text" class="form-control" id="mobileNumber"
-                            placeholder="Format: +99(99) 9999 9999" pattern="[+0-9]{12}"
-                            title="Use this format: +99(99) 9999 9999" required name="mobilenumber">
+                           placeholder="Enter  Phone number" pattern="[0-9]*"
+                            title="Enter Phone number" required name="mobilenumber">
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
                         </small>
@@ -534,8 +534,8 @@
                 email.nextElementSibling.textContent = "";
                 email.style.borderBottomColor = ""
             }
-            if (!mobileNumber.value || !/[+0-9]{12}/.test(mobileNumber.value)) {
-                mobileNumber.nextElementSibling.textContent = "Phone number should be in the format +9999 9999 9999";
+            if (!mobileNumber.value || !/[0-9]*/.test(mobileNumber.value)) {
+                mobileNumber.nextElementSibling.textContent = "Phone number should be numeric";
                 mobileNumber.style.borderBottomColor = "red"
             } else {
                 mobileNumber.nextElementSibling.textContent = "";
