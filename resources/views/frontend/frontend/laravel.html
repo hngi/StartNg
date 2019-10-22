@@ -240,7 +240,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				width: 90%;
-				margin: 0 auto;
+				margin: 2.5em auto;
 			}
 
 			.learning-items {
@@ -331,11 +331,11 @@
 
         .start-images {
         	position: absolute;
-        	bottom: 1.5em;
-        	width: 80%;
-        	height: 450px;
+        	bottom: 0.2em;
+        	width: 70%;
+        	height: 480px;
         	left: 37em;
-        	transform: rotate(-16.45deg);
+        	transform: rotate(-12.45deg);
         	overflow: hidden;
         	
         	
@@ -343,13 +343,21 @@
 
         .start-images img {
         	position: absolute;
-        	width: 50%;
+        	width: 40%;
         	height: 90%;
         	object-fit: cover;
-        	overflow: hidden;
+        	margin-top: 1em;
         	border: 2em solid #fff;
         	border-radius: 2em;
-			
+        }
+
+        .start-images img:last-child {
+			margin-left: 6em;
+			border-left: 0;
+			margin-top: 3em;
+			border-top: 0;
+			height: 84%;
+			width: 35%;
         }
 
         /*Media query to track the learning outcome section*/
@@ -368,7 +376,20 @@
 				width: 80%;
 			}
         }
-        
+
+        /*Media query to track the build section*/
+        @media screen and (max-width: 1190px){
+			.start-images {
+				display: none;
+			}
+
+			.start-text {
+				margin-left: auto;
+				margin-right: auto;
+				width: 60%;
+				min-width: 300px;
+			}
+        }
     </style>
 </head>
 
