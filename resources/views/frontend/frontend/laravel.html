@@ -304,6 +304,71 @@
         .testimony-card i {
         	color: #faf35e;
         }
+
+        .start {
+        	width: 82%;
+        	height: 414px;
+        	background-color: #2dce89;
+        	margin: 0 auto;
+        	position: relative;
+        	margin-bottom: 2em;
+        }
+
+        .start-text {
+        	width: 40%;
+        	margin: 0 0 0 6em;
+        	padding-top: 6em;
+        }
+
+        .start-text button {
+        	width: 195px;
+        	height: 58px;
+        	border-radius: 10px;
+        	background-color: #3f113d;
+        	color: #fff;
+        	font-weight: bold;
+        }
+
+        .start-images {
+        	position: absolute;
+        	bottom: 1.5em;
+        	width: 80%;
+        	height: 450px;
+        	left: 37em;
+        	transform: rotate(-16.45deg);
+        	overflow: hidden;
+        	
+        	
+        }
+
+        .start-images img {
+        	position: absolute;
+        	width: 50%;
+        	height: 90%;
+        	object-fit: cover;
+        	overflow: hidden;
+        	border: 2em solid #fff;
+        	border-radius: 2em;
+			
+        }
+
+        /*Media query to track the learning outcome section*/
+        @media screen and (max-width: 1199px){
+        	.learning-items-flex {
+        		width: 	100%;
+        	}
+
+        	.learning-items {
+				width: 40%;
+			}
+        }
+
+        @media screen and (max-width: 700px){
+        	.learning-items {
+				width: 80%;
+			}
+        }
+        
     </style>
 </head>
 
@@ -453,7 +518,20 @@
         <!-- <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png"> -->
     </div>
     <div class="contaner-fluid">
-        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+    	<div class="start">
+    		<div class="start-text">
+    			<h3>Build Real time Project</h3>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis assumenda repudiandae impedit ab asperiores reprehenderit doloremque, corporis odio repellat aut! Dignissimos ducimus unde necessitatibus saepe in quasi fugit consequatur, vel.</p>
+    		<button>Start Learning</button>
+    		</div>
+
+    		<div class="start-images">
+    			<img src="2226806_1.png" alt="#">
+    			<img src="2226806.png" alt="#">
+    		</div>
+    		
+    	</div>
+        <!-- <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png"> -->
     </div>
 
     <div class="container">
