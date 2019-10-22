@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Laravel</title>
 
     <style>
@@ -219,6 +220,10 @@
 			
         }
 
+        .side-text p {
+        	padding-top: 2px;
+        }
+
 		.main-flex {
 			display: flex;
 			flex-wrap: wrap;
@@ -230,6 +235,24 @@
 				width: 50%;
 				margin-bottom: 2em;
 			}
+
+			.learning-items-flex {
+				display: flex;
+				flex-wrap: wrap;
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			.learning-items {
+				width: 45%;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+				margin: 0 1.5em;
+				padding-top: 1em;
+			}
+
+			.learning-items .side-text {
+				font-family: "Open Sans", sans-serif;
+			}
 			
 			.sub-flex:nth-child(odd) {
 				padding-right: 2em;
@@ -239,7 +262,7 @@
 				padding-left: 2em;
 			}
 
-        .testimony h3 {
+        .testimony h3, .container h3 {
         	text-align: center;
         	padding-bottom: 0.5em;
         }
@@ -343,7 +366,91 @@
     </div>
 
     <div class="container pb-5 pt-5">
-        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
+    	<h3>What you will learn</h3>
+    	<div class="learning-items-flex">
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>UserFlow, User Journey using  FlowMapp</p></div>
+    		</div>
+    		
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>Wireframes (Low-Fidelity & High Fidelioty)</p></div>
+    		</div>
+
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>User Research, Ideation</p></div>
+    		</div>
+
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>Mobile Interface (IOS, Android)</p></div>
+    		</div>
+
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>Interactive Design </p></div>
+    		</div>
+
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>IOS Design Guidelines</p></div>
+    		</div>
+
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>Prototyping using Figma</p></div>
+    		</div>
+
+    		<div class="learning-items">
+    			<div class="icon">
+    			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 10C18 11.5823 17.5308 13.129 16.6518 14.4446C15.7727 15.7602 14.5233 16.7855 13.0615 17.391C11.5997 17.9965 9.99113 18.155 8.43928 17.8463C6.88743 17.5376 5.46197 16.7757 4.34315 15.6569C3.22433 14.538 2.4624 13.1126 2.15372 11.5607C1.84504 10.0089 2.00346 8.40034 2.60896 6.93853C3.21447 5.47672 4.23984 4.22729 5.55544 3.34824C6.87103 2.46919 8.41775 2 10 2C10.763 2 11.5 2.114 12.2 2.314L13.772 0.742C12.5748 0.252063 11.2936 3.6016e-05 10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10H18ZM5.913 8.086L4.5 9.5L9 14L19 4L17.586 2.586L9 11.172L5.914 8.086H5.913Z" fill="black"/>
+</svg>
+    		</div>
+    		
+<div class="side-text"><p>Material Design Guidelines  </p></div>
+    		</div>
+
+    	</div>
+
+        <!-- <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png"> -->
     </div>
     <div class="contaner-fluid">
         <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
