@@ -106,8 +106,68 @@
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
+/* Style for Footer Ends */
+        /* Fade In */
+        .fade-in {
+            animation: fadeIn ease 5s;
+            -webkit-animation: fadeIn ease 5s;
+            -moz-animation: fadeIn ease 5s;
+            -o-animation: fadeIn ease 5s;
+            -ms-animation: fadeIn ease 5s;
+        }
 
-        /* Style for Footer Ends */
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        /* Fade-In Ends */
+        
 
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961662/startng/Group_420_naoymq.png');
@@ -217,7 +277,7 @@
         <div class="row align-items-center mt-4">
             <div class="col-md-6 mt-5">
                 <h4 class="font-weight-bold pb-3 mt-5">UI/UX Design</h4>
-                <p class="pb-2">Learn about UI/UX design at your own pace depending on your choice on how you intend 
+                <p class="pb-2">Learn about UI/UX design at your own pace depending on your choice on how you intend
                     to go about the learning. UI/UX design means User interface design and user experience.</p>
                 <div class="clearfix">
                     <div class="float-left">
@@ -234,21 +294,21 @@
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_415_m3n0cq.png"
-                    class="img-fluid">
+                <img data-src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_415_m3n0cq.png"
+                    class="img-fluid lazy fade-in">
             </div>
 
         </div>
         <div class="row align-items-center mt-3">
             <div class="col-md-6 mt-5">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_416_wlg555.png"
-                    class="img-fluid">
+                <img data-src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_416_wlg555.png"
+                    class="img-fluid lazy fade-in">
             </div>
             <div class="col-md-6 mt-4">
                 <h4 class="font-weight-bold pb-3">Modern Javascript from Scratch</h4>
                 <p class="pb-2">Learn and build a product with JAVASCRIPT in no time with our route of training you.
-                        Modern JavaScript is a safe and secure programming language for you to build your first project.
-                        </p>
+                    Modern JavaScript is a safe and secure programming language for you to build your first project.
+                </p>
                 <div class="clearfix">
                     <div class="float-left">
                         <a class="btn btn-success pt-1 pb-1" href="javascript-course.html">More
@@ -268,8 +328,8 @@
             <div class="col-md-6 mt-5">
                 <h4 class="font-weight-bold pb-3 mt-5">Laravel PHP from Scratch</h4>
                 <p class="pb-2">Join this great platform to learn this wonderful. The course, Laravel PHP is a framework
-                     for creating web applications with an easy to use syntax. Taking this course would lead you to have
-                      deep idea behind Laravel PHP.</p>
+                    for creating web applications with an easy to use syntax. Taking this course would lead you to have
+                    deep idea behind Laravel PHP.</p>
                 <div class="clearfix">
                     <div class="float-left">
                         <a class="btn btn-success pt-1 pb-1" href="laravel.html">More
@@ -285,20 +345,21 @@
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_417_akfrop.png"
-                    class="img-fluid">
+                <img data-src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_417_akfrop.png"
+                    class="img-fluid lazy fade-in">
             </div>
 
         </div>
         <div class="row align-items-center mt-3">
             <div class="col-md-6 mt-5">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_418_ranmxy.png"
-                    class="img-fluid">
+                <img data-src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_418_ranmxy.png"
+                    class="img-fluid lazy fade-in">
             </div>
             <div class="col-md-6 mt-3">
                 <h4 class="font-weight-bold pb-3">Full Stack Developer</h4>
-                <p class="pb-2">Subscribe to this course to have a great knowledge mostly about frontend and backend track
-                     at ease. With this course, you’ll be fully equipped with the entirety of web development. </p>
+                <p class="pb-2">Subscribe to this course to have a great knowledge mostly about frontend and backend
+                    track
+                    at ease. With this course, you’ll be fully equipped with the entirety of web development. </p>
                 <div class="clearfix">
                     <div class="float-left">
                         <a class="btn btn-success pt-1 pb-1" href="fullstack.html">More
@@ -325,7 +386,7 @@
                 <span class="message success">Valid Email</span>
                 <span class="message error">Invalid Email</span>
                 <input type="email" class="form-control col-md-8" placeholder="Email Address"><button type="submit"
-                class="btn btn-success">Subscribe</button>
+                    class="btn btn-success">Subscribe</button>
             </form>
         </div>
     </div>
@@ -384,20 +445,50 @@
     </div>
 
     <!-- End of Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyloadImages = document.querySelectorAll("img.lazy");
+            var lazyloadThrottleTimeout;
 
+            function lazyload() {
+                if (lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function () {
+                    var scrollTop = window.pageYOffset;
+                    lazyloadImages.forEach(function (img) {
+                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        }
+                    });
+                    if (lazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                    }
+                }, 60);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Email validation -->
     <script>
-        $(function(){
-            var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;  
+        $(function () {
+            var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
 
-        $('[type="email"]').on('keyup', function() {
-            $('.message').hide();
-            regExp.test( $(this).val() ) ? $('.message.success').show() : $('.message.error').show();
-        });
+            $('[type="email"]').on('keyup', function () {
+                $('.message').hide();
+                regExp.test($(this).val()) ? $('.message.success').show() : $('.message.error').show();
+            });
 
         });
     </script>
