@@ -492,6 +492,24 @@
         .build {
             font-weight: bold;
         }
+
+        @media screen and (max-width: 551px) {
+
+        .sechose {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 551px) {
+        #MoreSection {
+            display: none;
+        }
+    }
+
+    .show {
+        display: block;
+    }
+
         
     </style>
 </head>
@@ -575,16 +593,16 @@
     <div>
         <h3 class="subhead">What you will learn</h3>
         <div class="points1">
-        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to setup a software development process and model</p><hr>
-        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to organize a software development project</p><hr>
-        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to write user stories for software requirement</p><hr>
-        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to manage and deploy software releases</p><hr>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to setup a software development process and model</p>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to organize a software development project</p>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to write user stories for software requirement</p>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to manage and deploy software releases</p>
         </div>
         <div class="points2">
-                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to verify software solution</p><hr>
-                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to validate a software solution</p><hr>
-                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to use Git and Github for your versioning management</p><hr>
-                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Material Design Guidelines</p><hr>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to verify software solution</p>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to validate a software solution</p>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to use Git and Github for your versioning management</p>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Material Design Guidelines</p>
                 </div>
     </div>
 
@@ -781,7 +799,7 @@
 
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 sechose">
                         <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
 
                             <div class="panel panel-default">
@@ -968,6 +986,14 @@
                         </div>
                         <!-- panel-group -->
 
+                    </div>
+
+                    <div class="col-sm-6">
+                            <h4 id="MoreSection" class="panel-title">
+                                <a class="text-center text">
+                                    <i  style="color:#000;"></i> More Sections
+                                </a>
+                            </h4>
                     </div>
 
                 </div>
@@ -1163,6 +1189,21 @@
     </div>
 
     <!-- End of Footer -->
+    <script>
+            let moreSection = document.querySelector('#MoreSection')
+            let section = document.querySelector(".sechose")
+            let text = document.querySelector(".text")
+    
+            moreSection.addEventListener("click", () => {
+                section.classList.toggle("show")
+                if (section.className === "col-sm-6 sechose show"){
+                    text.textContent = "Less Sections"
+                } else if ( section.className === "col-sm-6 sechose"){
+                    text.textContent = "More Sections"
+                }
+            })
+        
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
