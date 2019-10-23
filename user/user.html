@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            overflow-x: hidden;
+            background-color: rgb(246, 246, 246);
+        }
+        
+        .btn-success {
+            background-color: #44CF6C;
+            border-color: #44CF6C;
+        }
+        
+        .btn-success:hover {
+            background-color: #44CF6C;
+            border-color: #44CF6C;
+        }
+        
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+            background-color: #44CF6C;
+        }
+        
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+        
+        #sidebar-wrapper .list-group {
+            width: 15rem;
+        }
+        
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+        
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+        
+        .admin-personal-info {
+            border-bottom: 0.5px solid #EAEAF2;
+        }
+        
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+        
+        .nav-link {
+            color: #3A0842;
+        }
+        
+        .nav-item .nav-link.active {
+            background-color: #3A0842;
+        }
+        
+        .nav-item .nav-link.active:hover {
+            color: #fff;
+        }
+        
+        .nav-item .nav-link:hover {
+            color: #3A0842;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav pl-4 ml-5 mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img class="img-fluid w-75" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-danger" href="#" style="color: #fff;">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <h1><br> </h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-2 mb-3">
+                        <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">View Courses</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-md-4 -->
+                    <div class="col-md-10">
+                        <div class="col-md-10 offset-md-1">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                    <div class="clearfix">
+                                        <div class="float-left">
+                                            <h2>Home</h2>
+                                            <p>Welcome back, First Name.</p>
+                                        </div>
+                                        <div class="float-right">
+                                            <a class="btn btn-primary" href="../register.html" style="color: #fff; background-color: #3A0842; border-color: #3A0842;">Register
+                                                For a New
+                                                Course</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <input class="form-control mt-5 mb-5" type="text" name="" placeholder="Search For A Course" aria-label="Recipient's " aria-describedby="my-addon">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-success mt-5 mb-5" style="background-color: #3A0842; border-color: #3A0842;">SEARCH</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Modern Javascript from Scratch</h5>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor .</p>
+                                                    <a href="" class="btn btn-primary" style="background-color: #3A0842; border-color: #3A0842;">View
+                                                        Course Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Modern Javascript from Scratch</h5>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor .</p>
+                                                    <a href="" class="btn btn-primary" style="background-color: #3A0842; border-color: #3A0842;">View
+                                                        Course Details</a>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Modern Javascript from Scratch</h5>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor .</p>
+                                                    <a href="" class="btn btn-primary" style="background-color: #3A0842; border-color: #3A0842;">View
+                                                        Course Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <h2>Profile</h2>
+                                    <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571318326/startng/icons8-user-80_espeij.png" class="d-block mx-auto img-fluid">
+
+                                    <br>
+
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card" style="background-color: #fff;">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Personal Details</h4> <br>
+
+                                                    <p><span class="font-weight-bold">Name:</span> Full Name</p>
+                                                    <p><span class="font-weight-bold">Email Address:</span> e@mail.com
+                                                    </p>
+                                                    <p><span class="font-weight-bold">Phone Number:</span> +2349099887766
+                                                    </p> <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card" style="background-color: #fff;">
+                                                <div class="card-body">
+                                                    <h4>Account Details</h4> <br>
+                                                    <p><span class="font-weight-bold">Username:</span> UserName </p>
+                                                    <p><span class="font-weight-bold">Password:</span> password
+
+                                                    </p>
+                                                    <a href="" class="d-block mx-auto btn btn-primary" style="background-color: #3A0842; border-color: #3A0842;">Change
+                                                        Password</a>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-4">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Courses Registered</h5>
+                                                    <div class="bs-example">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>S/N</th>
+                                                                        <th>Course Name</th>
+                                                                        <th>Course Duration</th>
+                                                                        <th>Course Price (NGN)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>Course Name</td>
+                                                                        <td>Duration in Months</td>
+                                                                        <td>Price</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>Course Name</td>
+                                                                        <td>Duration in Months</td>
+                                                                        <td>Price</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td>Course Name</td>
+                                                                        <td>Duration in Months</td>
+                                                                        <td>Price</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <h2>Courses Registered</h2>
+                                    <div class="container" style="min-height:80vH;">
+                                        <div class="mb-4 py-2 border-bottom text-center">
+                                            <h5 class="font-weight-bolder" style="color: #3A0842;">Number of Courses: 4
+                                            </h5>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="card-deck">
+
+                                                <div class="col-md-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="https://lancer-app.000webhostapp.com/startng/images/landing/backend-1.png" alt="Card image cap">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Software Development Training</h5>
+                                                            <p class="card-text">Learn the basics of HTML and CSS with this quick and easy course. If you're looking for a place to start your journey as a web-developer, then look no further.</p>
+                                                        </div>
+                                                        <div class="card-footer justify-content-between">
+                                                            <small class="text-muted float-left">₦3000</small>
+
+
+                                                        </div>
+                                                        <!--end of .card-footer-->
+                                                    </div>
+                                                    <!--end of .card-->
+
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="https://lancer-app.000webhostapp.com/startng/images/landing/backend-1.png" alt="Card image cap">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Modern Javascript from Scratch</h5>
+                                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor .
+                                                            </p>
+                                                        </div>
+                                                        <div class="card-footer justify-content-between">
+                                                            <small class="text-muted float-left">₦3000</small>
+
+
+                                                        </div>
+                                                        <!--end of .card-footer-->
+                                                    </div>
+                                                    <!--end of .card-->
+
+                                                </div>
+
+
+
+                                            </div>
+                                            <!--end of card deck-->
+
+                                        </div>
+                                        <!--end of .row-->
+
+                                        <div class="row mt-3">
+                                            <div class="card-deck">
+
+                                                <div class="col-md-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="https://lancer-app.000webhostapp.com/startng/images/landing/backend-1.png" alt="Card image cap">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Software Development Training</h5>
+                                                            <p class="card-text">Learn the basics of HTML and CSS with this quick and easy course. If you're looking for a place to start your journey as a web-developer, then look no further.</p>
+                                                        </div>
+                                                        <div class="card-footer justify-content-between">
+                                                            <small class="text-muted float-left">₦3000</small>
+
+                                                        </div>
+                                                        <!--end of .card-footer-->
+                                                    </div>
+                                                    <!--end of .card-->
+
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="https://lancer-app.000webhostapp.com/startng/images/landing/backend-1.png" alt="Card image cap">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Modern Javascript from Scratch</h5>
+                                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor .
+                                                            </p>
+                                                        </div>
+                                                        <div class="card-footer justify-content-between">
+                                                            <small class="text-muted float-left">₦3000</small>
+
+
+                                                        </div>
+                                                        <!--end of .card-footer-->
+                                                    </div>
+                                                    <!--end of .card-->
+
+                                                </div>
+
+
+                                            </div>
+                                            <!--end of card deck-->
+
+                                        </div>
+                                        <!--end of .row-->
+
+                                        <ul class="pagination justify-content-center mt-3">
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                        </ul>
+
+                                        <!-- </div> -->
+
+
+                                    </div>
+                                    <!-- end of .container-->
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-md-8 -->
+            </div>
+
+
+
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+</body>
+
+</html>
