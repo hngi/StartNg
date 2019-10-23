@@ -115,6 +115,32 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
+
+        /* Style for news letter form */
+        .form-inline button {
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+
+        .form-inline input {
+            margin-bottom: 1em;
+        }
+
+        /*form validation*/
+        .message {
+            min-width: 80%;
+            display: none;
+            font-weight: bold;
+
+        }
+
+        .error {
+            color: #f00;
+        }
+
+        .success {
+            color: #0f0;
+        }
     </style>
 </head>
 
@@ -294,8 +320,10 @@
             <h4 class="font-weight-bold">Subscribe to our Newsletter</h4>
             <p>Stay Updated with our latest news, discount and promotions</p>
             <form class="form-inline pb-5">
+                <span class="message success">Valid Email</span>
+                <span class="message error">Invalid Email</span>
                 <input type="email" class="form-control col-md-8" placeholder="Email Address"><button type="submit"
-                    class="btn btn-success">Subscribe</button>
+                class="btn btn-success">Subscribe</button>
             </form>
         </div>
     </div>
@@ -358,6 +386,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Email validation -->
+    <script>
+        $(function(){
+            var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;  
+
+        $('[type="email"]').on('keyup', function() {
+            $('.message').hide();
+            regExp.test( $(this).val() ) ? $('.message.success').show() : $('.message.error').show();
+        });
+
+        });
+    </script>
 </body>
 
 </html>
