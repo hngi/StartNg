@@ -271,55 +271,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
     
-    $('input[type=password]').keyup(function() {
-        var pwd = $(this).val();
-        
-        //validate the length
-        if ( pwd.length < 8 ) {
-            $('#length').removeClass('valid').addClass('invalid');
-        } else {
-            $('#length').removeClass('invalid').addClass('valid');
-        }
-        
-        //validate letter
-        if ( pwd.match(/[A-z]/) ) {
-            $('#letter').removeClass('invalid').addClass('valid');
-        } else {
-            $('#letter').removeClass('valid').addClass('invalid');
-        }
-
-        //validate capital letter
-        if ( pwd.match(/[A-Z]/) ) {
-            $('#capital').removeClass('invalid').addClass('valid');
-        } else {
-            $('#capital').removeClass('valid').addClass('invalid');
-        }
-
-        //validate number
-        if ( pwd.match(/\d/) ) {
-            $('#number').removeClass('invalid').addClass('valid');
-        } else {
-            $('#number').removeClass('valid').addClass('invalid');
-        }
-        
-        //validate space
-        if ( pwd.match(/[^a-zA-Z0-9\-\/]/) ) {
-            $('#space').removeClass('invalid').addClass('valid');
-        } else {
-            $('#space').removeClass('valid').addClass('invalid');
-        }
-        
-    }).focus(function() {
-        $('#pwd_info').show();
-    }).blur(function() {
-        $('#pwd_info').hide();
-    });
-    
-});
-    </script>
 </body>
 
 </html>
