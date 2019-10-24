@@ -109,19 +109,12 @@
         .banner {
             background-color: #E5EBFF;
         }
-        #err-email, #err-pwd{
+        #err-email, #err-pwd, #err-msg{
             margin: 10px 0;
             padding: 10px;
             border-radius: 3px 3px 3px 3px;
             color: #D8000C;
             background-color: #FFBABA;
-        }
-        #success-email, #success-pwd{
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 3px 3px 3px 3px;
-            color: #270;
-            background-color: #DFF2BF;
         }
     </style>
 </head>
@@ -174,9 +167,9 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!--Successful Password-->
-                <div id="success-pwd">
+                <div id="err-msg">
                     <i class="fa fa-times-circle"></i>
-                    Valid Password!
+                    Wrong Email or Password!
                 </div>
                 <!--Invalid Email-->
                 <div id="err-email">
@@ -187,11 +180,6 @@
                 <div id="err-pwd">
                     <i class="fa fa-times-circle"></i>
                     Invalid Password!
-                </div>
-                <!--Successful Email-->
-                <div id="success-email">
-                    <i class="fa fa-times-circle"></i>
-                    Valid Email!
                 </div>
                 <div class="form-group">
                     <label for="usr" style="font-weight: bold;">Email:</label>
