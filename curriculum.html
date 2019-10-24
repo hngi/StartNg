@@ -423,7 +423,7 @@
         </p>
         <div class="row" id="row-div">
             <div class="col-md-3">
-                <a role="button" href="#" class="btn btn-outline-success" style="color: #000">Full Stack Development</a>
+                <a role="button" href="#" class="btn btn-outline-success active">Full Stack Development</a>
 
 
                </div>
@@ -894,9 +894,9 @@
             </div>
         </div>
     </div>
-
+<footer>
     <div class="container-fluid text-white deep mt-5">
-        <footer>
+        
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
@@ -933,6 +933,7 @@
                 </div>
 
             </div>
+            
     </div>
     <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
         <div class="container text-right">
@@ -944,9 +945,9 @@
                 </div>
             </div>
         </div>
-        </footer>
+        
     </div>
-
+</footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -969,6 +970,18 @@
         })
       });
     </script>
+     <script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("row-div");
+var btns = header.getElementsByClassName("btn btn-outline-success");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
 </body>
 
 </html>

@@ -24,223 +24,103 @@
 
     <style>
         body {
-
             font-family: 'Nunito', sans-serif;
-
         }
-
-
 
         /* Style for Navbar Starts */
-
-
-
         .navbar-custom li a {
-
             color: #000;
-
         }
-
-
 
         .btn-success {
-
             background-color: #2DCE89;
-
             color: #fff;
-
             border: thin solid #2dce89;
-
         }
-
-
 
         .btn-success:hover {
-
             background-color: #2DCE89;
-
             color: #fff;
-
             border: thin solid #2dce89;
-
-
-
-
-
         }
-
-
 
         .custom-toggler .navbar-toggler-icon {
-
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
         }
-
-
 
         .custom-toggler.navbar-toggler {
-
             border-color: #000;
-
         }
-
-
 
         /* Style for Navbar Ends */
-
         /* Style for Footer Starts */
-
-
-
         * {
-
             box-sizing: border-box;
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
             font-family: 'Nunito', sans-serif;
-
         }
-
-
 
         a {
-
             text-decoration: none;
-
         }
-
-
 
         .deep {
-
             background: #3A0842;
-
             color: #fff;
-
         }
-
-
 
         .deep #slink {
-
             background: #44CF6C;
-
             border-radius: 10px;
-
             color: white;
-
             padding: 10px 70px;
-
         }
-
-
 
         .deep li a {
-
             text-decoration: none;
-
             color: #fff;
-
             font-size: 16px;
-
             line-height: 30px;
-
         }
-
-
 
         .deep li {
-
             list-style: none;
-
         }
-
-
 
         .deep li a:hover {
-
             text-decoration: none;
-
         }
-
-
 
         a:hover {
-
             text-decoration: none;
-
         }
-
-
 
         .icons i {
-
             font-size: 26px;
-
             height: 50px;
-
             width: 50px;
-
             padding: 10px 20px;
-
             color: white;
-
         }
-
-
 
         .icons i.fab.fa-twitter:hover {
-
-
-
             color: #00aced;
-
-
-
         }
-
-
 
         .icons i.fab.fa-facebook:hover {
-
-
-
             color: #3b5598;
-
-
-
         }
-
-
 
         .icons i.fab.fa-instagram:hover {
-
-
-
             color: #ed3833;
-
-
-
         }
 
-
-
         /* Style for Footer Ends */
-
         /* Body Style */
-
-
-
         .banner {
-
             background-color: #E5EBFF;
-
         }
     </style>
 
@@ -309,11 +189,7 @@
 
     </nav>
 
-    <div class="container">
 
-        <div id="main-container"></div>
-
-    </div>
 
     <div class="container-fluid banner">
 
@@ -348,19 +224,20 @@
     </div>
 
     <div class="container pt-4 pb-5">
-
-        <form id="formSubmit">
+        <div id="main-container"></div>
+        <form id="formSubmit" method="POST" action="register.php">
 
             <div class="row pt-5">
 
                 <div class="col-md-6">
 
                     <div class="form-group">
-
                         <label for="usr" style="font-weight: bold;">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name"
+                            pattern="[A-Z||a-z]*" title="You can only input letters" name="firstname" required>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
 
-                        <input type="text" class="form-control" id="firstName" placeholder="Jane" required>
-
+                        </small>
                     </div>
 
                 </div>
@@ -368,27 +245,26 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
+                        <label for="usr" style="font-weight: bold;">Last Name:</label>
+                        <input type="text" class="form-control" id="secondName" pattern="[A-Z||a-z]*"
+                            placeholder="Enter Last Name" title="You can only input letters" name="lastname" required>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
 
-                        <label for="usr" style="font-weight: bold;">Second Name:</label>
-
-                        <input type="text" class="form-control" id="secondName" required>
-
+                        </small>
                     </div>
 
                 </div>
 
-            </div>
-
-            <div class="row">
-
                 <div class="col-md-6">
 
                     <div class="form-group">
-
                         <label for="usr" style="font-weight: bold;">Email Address:</label>
+                        <input type="email" class="form-control" id="email" placeholder="xyz@gmail.com"
+                            pattern="[a-z]*{(0-9)}*@[a-z]*{(0-9)}*.com" name="email"
+                            title="Email address should be in the format: x@x.com">
+                        <small id="passwordHelpBlock" class="form-text text-muted">
 
-                        <input type="text" class="form-control" id="email" required>
-
+                        </small>
                     </div>
 
                 </div>
@@ -396,120 +272,75 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-
                         <label for="usr" style="font-weight: bold;">Mobile Number:</label>
-
-                        <input type="text" class="form-control" id="mobileNumber" required>
-
+                        <input type="text" class="form-control" id="mobileNumber"
+                           placeholder="Enter  Phone number" pattern="[0-9]*"
+                            title="Enter Phone number" required name="mobilenumber">
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
-                            e.g. +2348101234567
-
                         </small>
-
                     </div>
 
                 </div>
 
-    
-                <div class="row">
-    
-                    <div class="col-md-6">
-    
-                        <div class="form-group">
-    
-                            <label style="font-weight: bold;">Course interested in:</label>
-    
-                            <select class="form-control" id="course" required>
-
-
-                                <option value="" selected disabled>Select a Course</option>
-                                <option value="Full Stack Development">Full Stack Development</option>
-    
-                                <option value="Machine Learning">Machine Learning</option>
-
-    
-         
-    
-
-
-    
-                                <option value="Gaming">Gaming</option>
-    
-                                <option value="Artificial Intelligence">Artificial Intelligence</option>
-    
-                            </select>
-    
-                        </div>
-    
-
-
-            </div>
-
-            <div class="row">
-
                 <div class="col-md-6">
 
                     <div class="form-group">
-
                         <label style="font-weight: bold;">Course interested in:</label>
-
-                        <select class="form-control" id="course" required>
-
+                        <select class="form-control" id="course" required name="course">
+                            <option value="" selected disabled>Select a Course</option>
                             <option value="Full Stack Development">Full Stack Development</option>
-
-                            <option value="Machine Learning" selected>Machine Leaning</option>
-
-                            <option value="Gaming">Gaming</option>
-
-                            <option value="Artificial Intelligence">Artificial Intelligence</option>
-
+                            <option value="Frontend">Front End Development</option>
+                            <option value="Backend">Back End Development</option>
+                            <option value="UI/UX"> UI/UX </option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
                         </select>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
 
+                        </small>
                     </div>
+
+
 
                 </div>
 
                 <div class="col-md-6">
 
                     <div class="form-group">
-
                         <label style="font-weight: bold;">Experience:</label>
-
-                        <select class="form-control" id="experience" required>
-
-                            <option value="0-1" selected>0 - 1 Years Experience</option>
-
+                        <select class="form-control" id="experience" required name="experience">
+                            <option value="" selected disabled>Years of Experience</option>
+                            <option value="0-1">0 - 1</option>
                             <option value="1-2">1-2</option>
-
                             <option value="2-5">2-5</option>
-
                             <option value="5-30">Above 5 years</option>
-
                         </select>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
 
+                        </small>
                     </div>
 
                 </div>
 
-            </div>
-
-            <div class="row pb-5">
-
-                <div class="col-md-6">
+                <div class="col-md-6 pb-5">
 
                     <div class="form-group">
-
                         <label for="usr" style="font-weight: bold;">Country of Residence:</label>
-
-                        <input type="text" class="form-control" id="country" required>
-
+                        <select class="form-control" id="country" required name="country">
+                            <option value="" selected disabled>Select a Country</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="cameroon">Cameroon</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="south africa">South Africa</option>
+                            <option value="united kingdom">United Kingdom</option>
+                            <option value="united states of america">United States Of America</option>
+                            <option value="canada">Canada</option>
+                            <option value="germany">Germany</option>
+                        </select>
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
-                            e.g. Nigeria
-
                         </small>
-
                     </div>
 
                 </div>
@@ -517,24 +348,21 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-
                         <label for="usr" style="font-weight: bold;">State of Residence:</label>
-
-                        <input type="text" class="form-control" id="state">
-
+                        <input type="text" class="form-control" id="state" name="state"
+                            placeholder="Enter state of residence" pattern="[A-Z||a-z]*"
+                            title="You can only input letters">
                         <small id="passwordHelpBlock" class="form-text text-muted">
 
-                            e.g. Lagos
-
                         </small>
-
                     </div>
 
                 </div>
 
             </div>
 
-            <button type="submit" class="btn btn-success d-block mx-auto pl-5 pr-5 mb-4">Continue</button>
+            <button type="submit" onclick="return submitForm()"
+                class="btn btn-success d-block mx-auto pl-5 pr-5 mb-4">Continue</button>
 
         </form>
 
@@ -549,7 +377,7 @@
 
     <div class="container-fluid text-white deep mt-5">
 
-   
+
 
         <footer>
 
@@ -575,7 +403,7 @@
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
 
 
-                       
+
 
 
                         <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
@@ -630,15 +458,13 @@
 
             </div>
 
-    </div>
 
-    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
 
-        <div class="container text-right">
+            <div class="container text-right">
 
-            <div class="row icons">
+                <div class="row icons">
 
-                <div class="col-md-12 ">
+                    <div class="col-md-12 ">
 
 
                         <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
@@ -646,170 +472,105 @@
 
 
                         <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-    
-    
-    
+
+
+
                         <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
 
+                    </div>
+
                 </div>
+
+
+
+
+
+
+
 
             </div>
 
 
-
-
-                   
-                    
-                    
-                
-
-            
-
-        </div>
-
-        </footer>
-
     </div>
 
+    </footer>
+
+    </div>
 
 
     <!-- End of Footer -->
 
     <script>
-
-        const mainContainer = document.querySelector('#main-container');
-
         const formSubmit = document.querySelector('#formSubmit');
 
-        let error = [];
-
-
-
-        formSubmit.addEventListener('submit', (e) => {
-
-            e.preventDefault();
-
-
-
-            const firstName = document.querySelector('#firstName').value;
-
-            const secondName = document.querySelector('#secondName').value;
-
-            const email = document.querySelector('#email').value;
-
-            const mobileNumber = document.querySelector('#mobileNumber').value;
-
-            const course = document.querySelector('#course').value;
-
-            const experience = document.querySelector('#experience').value;
-
-            const state = document.querySelector('#state').value;
-
-            const country = document.querySelector('#country').value;
-
-
-
-            if (!firstName || firstName.length < 5) {
-
-                error.push('FirstName should not be less than 5')
-
+        function submitForm() {
+            const firstName = document.querySelector('#firstName');
+            const secondName = document.querySelector('#secondName');
+            const email = document.querySelector('#email');
+            const mobileNumber = document.querySelector('#mobileNumber');
+            const course = document.querySelector('#course');
+            const experience = document.querySelector('#experience');
+            const state = document.querySelector('#state');
+            const country = document.querySelector('#country');
+            if (!firstName.value || firstName.value.length < 5 || typeof (firstName.value) === 'number') {
+                firstName.nextElementSibling.textContent = "First Name should not be less than 5 characters and should not contain a number";
+                firstName.style.borderBottomColor = "red"
+            } else {
+                firstName.nextElementSibling.textContent = "";
+                firstName.style.borderBottomColor = ""
+            }
+            if (!secondName.value || secondName.value.length < 5 || tyepof(secondName.value) === 'number') {
+                secondName.nextElementSibling.textContent = "Second Name should not be less than 5 characters and should not contain a number";
+                secondName.style.borderBottomColor = "red"
+            } else {
+                secondName.nextElementSibling.textContent = "";
+                secondName.style.borderBottomColor = ""
             }
 
-
-
-            if (!secondName || secondName.length < 5) {
-
-                error.push('SecondName should not be less than 5')
-
+            if (!email.value || email.value.length < 5 || !/[a-z]*{(0-9)}*@[a-z]*{(0-9)}*.com/.test(email.value)) {
+                email.nextElementSibling.textContent = "Email address should be in the format x@x.com";
+                email.style.borderBottomColor = "red"
+            } else {
+                email.nextElementSibling.textContent = "";
+                email.style.borderBottomColor = ""
             }
-
-
-
-            if (!email || email.length < 5) {
-
-                error.push('Email field cannot be less than 5 characters')
-
+            if (!mobileNumber.value || !/[0-9]*/.test(mobileNumber.value)) {
+                mobileNumber.nextElementSibling.textContent = "Phone number should be numeric";
+                mobileNumber.style.borderBottomColor = "red"
+            } else {
+                mobileNumber.nextElementSibling.textContent = "";
+                mobileNumber.style.borderBottomColor = ""
             }
-
-
-
-            if (!mobileNumber || mobileNumber.length < 5) {
-
-                error.push('Mobile Number should not be less than 5 numbers')
-
+            if (!course.value) {
+                course.nextElementSibling.textContent = "You have to select a course";
+                course.style.borderColor = "red"
+            } else {
+                course.nextElementSibling.textContent = "";
+                course.style.borderColor = ""
             }
-
-
-
-            if (!course) {
-
-                error.push('Course field cannot be blank')
-
+            if (!experience.value) {
+                experience.nextElementSibling.textContent = "Please input your years of experience";
+                experience.style.borderColor = "red"
+            } else {
+                experience.nextElementSibling.textContent = "";
+                experience.style.borderColor = ""
             }
-
-
-
-            if (!experience) {
-
-                error.push('Experience cannot be blank')
-
+            if (!state.value) {
+                state.nextElementSibling.textContent = "Please enter your state of residence";
+                state.style.borderBottomColor = "red"
+            } else {
+                state.nextElementSibling.textContent = "";
+                state.style.borderBottomColor = ""
             }
-
-
-
-            if (!state) {
-
-                error.push('State of Residence cannot be blank')
-
+            if (!country.value) {
+                country.nextElementSibling.textContent = "Please select a country from the list";
+                country.style.borderColor = "red"
+            } else {
+                country.nextElementSibling.textContent = "";
+                country.style.borderColor = ""
             }
-
-
-
-            if (!country) {
-
-                error.push('Country cannot be blank')
-
-            }
-
-
-
-            if (error.length > 0) {
-
-                error.forEach(err => {
-
-                    const div = document.createElement('div');
-
-                    div.style.width = '100%';
-
-                    div.style.padding = '10px 8px';
-
-                    div.style.backgroundColor = 'green';
-
-                    div.style.color = '#fff';
-
-                    div.style.marginBottom = '10px';
-
-                    div.style.borderRadius = '4px';
-
-                    div.textContent = err;
-
-                    mainContainer.append(div);
-
-                    setTimeout(() => div.remove(), 5000);
-
-                });
-
-                error.length = 0;
-
-                return
-
-            }
-
-            console.log(true);
-
-        });
-
-
+            return true;
+        }
 
     </script>
 
@@ -821,24 +582,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
-
-
-</html>
-
