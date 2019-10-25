@@ -33,15 +33,16 @@
         }
 
         .btn-success {
-            background-color: #2DCE89;
+            background-color: #218838;
             color: #fff;
-            border: thin solid #2dce89;
+            border: thin solid#1e7e34;
+            
         }
 
         .btn-success:hover {
-            background-color: #2DCE89;
+            background-color: rgb(11, 119, 69);
             color: #fff;
-            border: thin solid #2dce89;
+            border: thin solid #1b8a5a;
         }
 
         .custom-toggler .navbar-toggler-icon {
@@ -54,11 +55,11 @@
 
         /* Style for Navbar Ends */
         /* Style for Footer Starts */
-        * {
-            box-sizing: border-box;
+        *footer {
+          
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            
             font-family: 'Nunito', sans-serif;
         }
 
@@ -121,6 +122,67 @@
         /* Body Style */
         .banner {
             background-color: #E5EBFF;
+        }
+        .footer {
+            background: #3A0842;
+            color: #fff;
+        }
+        .footer ul {
+            margin-left: 0;
+            padding: 0;
+        }
+        .footer ul li {
+            list-style: none;
+        }
+        .footer ul li a {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .copyrights {
+            background: #2E0435;
+            background-size: 0px;
+           
+            color: #fff;
+            padding-top: 20px;
+        
+        }
+        .copyrights .icons i {
+            color: #fff;
+            font-size: 24px;
+            padding-left: 5px;
+            height: 45px;
+            width: 50px;
+        } 
+
+        .testimonials .overlay1 {
+        	background: #2DCE89;
+        	padding: 50px;
+        }
+        .testimonials .overlay2 {
+        	background: purple;
+        	padding: 50px;
+        }
+        .testimonials-content img {
+            border: 2px solid #2DCE89;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            top: -50px;
+        }
+        .testimonials-content p {
+            max-width: 588px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+        .testimonials-content h2 {
+            color: #2DCE89;
+            font-size: 16px;
+            padding-bottom: 10px;
+        }
+        .testimonials-content h3 {
+            font-size: 14px;
         }
     </style>
 
@@ -356,22 +418,25 @@
                         </small>
                     </div>
 
-                    <div class="row">
+                </div>   
+                    
 
-                        <div class="col-md-6">
+                        <div class="col-md-6 pb-5" style="margin-top: -50px">
         
                             <div class="form-group">
         
                                 <label for="usr" style="font-weight: bold;">Password:</label>
         
                                 <input type="password" name="password" class="form-control" id="password" required>
-        
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+
+                                </small>
                                 
                             </div>
         
                         </div>
         
-                        <div class="col-md-6">
+                        <div class="col-md-6 " style="margin-top: -50px">
         
                             <div class="form-group">
         
@@ -380,8 +445,9 @@
                                 <input type="password" name="confirm_password" class="form-control" id="confirm_password" required>
                                         
                             </div>
-
-                </div>
+                        </div>
+                    
+                
 
             </div>
 
@@ -392,9 +458,9 @@
     </div>
 
     <!-- Footer -->
-    <div class="container-fluid text-white deep mt-5">
+    
 
-
+<div class="container-fluid text-white deep mt-5">
 
         <footer>
 
@@ -417,13 +483,8 @@
 
                     <div class="col-lg-4 col-md-12 mb-3">
 
-                        <h4 class='mb-4'>Ready to take the Leap?</h4>
-
-
-
-
-
-                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <p class="pb-2">Ready to take the Leap?</p>
+                        <a href="register.html" class="btn btn-success mb-5 pl-5 pr-5" >Start!</a>
 
                     </div>
 
@@ -475,37 +536,22 @@
 
             </div>
 
-
-
-            <div class="container text-right">
-
-                <div class="row icons">
-
-                    <div class="col-md-12 ">
-
-
-                        <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-
-
-
-                        <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-
-
-
-                        <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
-
+            <div class="copyrights">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; copyrights 2019. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-right icons">
+                            <a href="#"><i class='fab fa-twitter' aria-hidden="true"></i></a>
+                            <a href="#"><i class='fab fa-instagram' aria-hidden="true"></i></a>
+                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        </div>
                     </div>
-
                 </div>
-
-
-
-
-
-
-
-
             </div>
+
+        
     </div>
 
     </footer>
