@@ -131,23 +131,29 @@
 
 
     @csrf
+    <div class="row pt-5">
+
+
+    </div>
+
     <div class="container pt-4 pb-5">
-        @if ($errors->any())
-            <div class="alert text-center alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+
         <div class="row pt-5">
+
             <div class="col-md-2"></div>
             <div class="col-md-8">
+                @error('email')
+
+                <span class="alert text-center  text-danger" role="alert">
+                     <i class="fa fa-times-circle"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
                 <div class="form-group">
                     <label for="usr" style="font-weight: bold;">Email:</label>
                     <input type="text" name="email" class="form-control" id="usr" placeholder="Your Email Address" required>
                 </div>
+
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -159,6 +165,11 @@
                     <label for="usr" style="font-weight: bold;">Password:</label>
                     <input type="password" name="password" class="form-control" id="usr" placeholder="Your Password" minlength="8" maxlength="21" required>
                 </div>
+                @error('password')
+                <span class="alert text-danger" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
             </div>
             <div class="col-md-2"></div>
         </div>

@@ -15,7 +15,7 @@ class BaseController extends Controller
 {
     public function index()
     {
-        $courses = DB::table('courses')->take(6)->get();
+        $courses = DB::table('courses')->where('active',true)->take(6)->get();
 
         return view('frontend.frontend.index',compact('courses'));
         
@@ -112,7 +112,7 @@ class BaseController extends Controller
     public function courses()
     {
         $course=DB::table('courses')->get();
-        return view('frontend.frontend.newcourses',compact('course'));
+        return view('frontend.frontend.newnewcourse',compact('course'));
     }
 
     public function privacy(){

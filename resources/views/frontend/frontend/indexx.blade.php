@@ -290,16 +290,16 @@
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked mb-3"></span> <br>
-                                {{--@if(Auth::guest())--}}
-                                    {{--<a href="{{route('index')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
-                                       {{--style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>--}}
-                                    {{--@endif--}}
-                                {{--@if(!Auth::guest())--}}
-                                    {{--<a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
-                                       {{--style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>--}}
-                                {{--@endif--}}
-                                {{--<a href="{{route('details',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"--}}
-                                   {{--style="background-color: #FFE797; border: thin solid #FFE797;">Details</a>--}}
+                                @if(Auth::guest())
+                                    <a href="{{route('index')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                       style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                                    @endif
+                                @if(!Auth::guest())
+                                    <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                       style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                                @endif
+                                <a href="{{route('details',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                   style="background-color: #FFE797; border: thin solid #FFE797;">Details</a>
                             </div>
                         </div>
                     </div>

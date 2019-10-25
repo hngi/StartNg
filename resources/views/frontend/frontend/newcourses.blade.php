@@ -136,7 +136,7 @@ $counter=3;
 @endphp
 <div class="container pt-5 pb-5">
 @foreach($course as $items)
-    @if($counter%2==0)
+
 
         <div class="row align-items-center mt-3">
             <div class="col-md-6 mt-5">
@@ -161,12 +161,8 @@ $counter=3;
                 </div>
             </div>
         </div>
-        @endif
 
-    @if($counter%2!=0)
-
-
-            <div class="row align-items-center mt-3">
+        <div class="row align-items-center mt-3">
                 <div class="col-md-6 mt-5">
                     <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_418_ranmxy.png"
                          class="img-fluid">
@@ -189,7 +185,8 @@ $counter=3;
                     </div>
                 </div>
             </div>
-        @endif
+
+
 @endforeach
 
 
