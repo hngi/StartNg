@@ -85,6 +85,9 @@
 
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
 
         .icons i {
@@ -203,7 +206,8 @@
                 The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
                 software developers
             </p>
-            <a href="{{route('index)}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+        
+            <a href="{{route('index')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
         </div>
     </div>
 

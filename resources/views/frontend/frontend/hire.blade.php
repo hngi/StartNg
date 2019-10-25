@@ -99,6 +99,9 @@
 
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
 
         .icons i {
@@ -133,64 +136,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container pt-2 pb-2">
-            <a href="{{route('/')}}" class="navbar-brand"><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                    class="img-fluid" alt="logo" width="150px"></a>
-            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbar9" style="color: #000;">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbar9">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('about')}}">About Us</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
-                    </li>
-
-                    @if(!Auth::guest())
-                        <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="{{route('mycourses',\Illuminate\Support\Facades\Auth::user()->id)}}" style="color: #fff;">My courses</a>
-                        </li>
-                    @endif
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-                    </li>
-
-                    @if(!Auth::guest())
-
-                        {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
-                        {{--</a>--}}
-                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-
-
-                    @endif
-
-                    @if(Auth::guest())
-                        <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="/signup" style="color: #fff;">Start
-                                Learning</a>
-                        </li>
-                    @endif
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('../inc.navbar')
 
     <div class="container-fluid body-banner pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center" style="color: #fff;">
@@ -274,7 +220,7 @@
             <div class="col-md-6">
                 <div class="col-md-8 offset-md-2">
                     <h4 class="pb-4" style="font-weight: bold;">Remote Flexibility</h4>
-                    <p>Our graduates are taught how to be effective remote employees . <br> They are trained to connect & work digitally at any time with <br>employers and clients around the world. With the rise in demand for remote <br> work, we ensure our graduates are up to date <br> with the latest practices to fill in these roles suitably.<br> lorem sed.</p>
+                    <p>Our graduates are taught how to be effective remote employees . <br> They are trained to connect & work digitally at any time with <br>employers and clients around the world. With the rise in demand for remote <br> work, we ensure our graduates are up to date <br> with the latest practices to fill in these roles suitably.</p>
                 </div> 
 
  
@@ -327,19 +273,19 @@
         <div class="col-md-10 offset-md-1 pt-5 pb-5">
             <h4 class="text-center font-weight-bold pb-3">Learn more about hiring our grads</h4>
             <p class="text-center font-weight-bold pb-5">Fill out the form and we will get in touch.</p>
-            <div class="row pb-4">
-                <div class="col-md-6">
+            <div class="row pb-4" style="margin-left: 25%">
+                <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Full Name">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <input type="email" class="form-control" placeholder="Email Address">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row"  style="margin-left: 25%">
+                <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Company Name">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Job Title">
                 </div>
             </div>
@@ -348,58 +294,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="container-fluid text-white deep">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                             alt="">
-                    </div>
-                </div>
-
-                <div class="row pb-4">
-                    <div class="col-lg-4 col-md-12 mb-3">
-                        <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('about')}}">About Us</a></li>
-                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blog')}}">Blog</a></li>
-
-
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('find-course'))}}">Find a Course</a></li>
-
-                        <li><a href="{{route('contact')}}">Contact Us</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('faq'))}}">FAQ</a></li>
-                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
-                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
-                    </div>
-                </div>
-
-            </div>
-    </div>
-    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-        <div class="container text-right">
-            <div class="row icons">
-                <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-        </footer>
-    </div>
+    @include('../inc.footer')
 
     <!-- End of Footer -->
 

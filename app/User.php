@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','phone','role', 'state','country'
+        'name', 'email', 'password','state', 'role','phone',
     ];
 
     /**
@@ -43,5 +44,9 @@ class User extends Authenticatable
 
     public function registercourse(){
         return $this->hasMany(RegisteredCourse::class);
+    }
+
+    public function posts(){
+        return $this->hasMany(Blog::class);
     }
 }

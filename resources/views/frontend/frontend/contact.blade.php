@@ -31,6 +31,7 @@
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
+
         }
 
         .custom-toggler .navbar-toggler-icon {
@@ -85,6 +86,9 @@
 
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
         
 
@@ -154,79 +158,23 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-        <div class="container pt-2 pr-2">
-            <a href="/" class="navbar-brand"><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                    class="img-fluid" alt="logo" width="150px"></a>
-            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbar9" style="color: #000;">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbar9">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('about')}}">About Us</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
-                    </li>
-
-                    @if(!Auth::guest())
-                        <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="{{route('mycourses',\Illuminate\Support\Facades\Auth::user()->id)}}" style="color: #fff;">My courses</a>
-                        </li>
-                    @endif
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-                    </li>
-
-                    @if(!Auth::guest())
-
-                        {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
-                        {{--</a>--}}
-                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-
-
-                    @endif
-
-                    @if(Auth::guest())
-                        <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="/signup" style="color: #fff;">Start
-                                Learning</a>
-                        </li>
-                    @endif
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('../inc.navbar')
 
     <div class="container-fluid banner">
         <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570908542/startng/Group_411_d0xdb8.png" class="img-fluid contact" height="100">
     </div>
-    <div class="container-fluid search pt-5 pb-5">
-        <div class="input-group col-12 col-md-10 mx-auto pt-3 pb-3">
-            <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;">
-            <div class="input-group-append">
-                <button class="btn btn-secondary w-100 px-md-5" type="button" style="background-color: #fff; color: #44CF6C; border-color: #fff; border-left-color: #44CF6C;">
-                    Search FAQ
-                </button>
-            </div>
-        </div>
-    </div>
+
     <div class="container-fluid mt-5">
+    <div class="row">
+  <div class="col-sm-6">
+   
+      <div class="card-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15856.334481934015!2d3.3627260269792587!3d6.511099574643041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.5137963!2d3.3691252!4m5!1s0x103b8c58aa4e0931%3A0x9ddabc4518c15d14!2sHotels.ng%2C%203%20Birrel%20Ave%2C%20Yaba%2C%20Lagos!3m2!1d6.509180799999999!2d3.3795045999999997!5e0!3m2!1sen!2sng!4v1571971640480!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+
+  <div class="col-sm-6">
+         <div class="card-body">
         <div>
             @if(session('failed'))
                 <div class="text-center alert alert-danger">
@@ -245,114 +193,66 @@
         </div>
         <form method="post" action="{{route('contact.store')}}">
             @csrf
-            <div class="col-md-10 offset-md-1 pt-5 pb-5">
-                <div class="row mb-2">
+            <div class="col-md-10 offset-md-1 ">
+                <div class="row ">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="usr" class="pb-2">First Name</label>
+                            <label for="usr" class="pb-1">First Name</label>
                             <input type="text" name="fname" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="usr" class="pb-2">Last Name</label>
+                            <label for="usr" class="pb-1">Last Name</label>
                             <input type="text" name="lname" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-5 mb-2">
+                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="usr" class="pb-2">Email Address</label>
+                            <label for="usr" class="pb-1">Email Address</label>
                             <input type="email"  name="email" class="form-control" id="Eaddr" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="usr" class="pb-2">Phone Number</label>
+                            <label for="usr" class="pb-1">Phone Number</label>
                             <input type="text" name="phone" pattern = "^[0-9\)\(+-]+$" title = "Please input a correct phone number" class="form-control" id="Pnum" required>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-5 mb-5">
+                <div class="row ">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="comment" class="pb-2">Write Your Message</label>
+                            <label for="comment" class="pb-1">Write Your Message</label>
                             <textarea name="message" class="form-control" rows="5" id="comment" required></textarea>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 offset-md-3 text-center mb-5">
-                    <p class="pb-3">By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
-                    <button type="submit" class="btn btn-success pl-5 pr-5">Submit</button>
+                <div class="col-md-12 text-center ">
+                    <p>By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
+                    <button type="submit" class="btn btn-success pl-3 pr-3">Submit</button>
                 </div>
             </div>
         </form>
+   </div>
     </div>
+  </div>
+</div>
 
     <div class="container-fluid support pt-5 pb-5 mb-0" style="padding-left: 15px;">
 
         <h1 class="pt-5 mt-5 pl-3 pl-sm-5 pr-5 ml-md-5" style="font-family: Nunito; font-style: normal; font-weight: bold; font-size: 50px; ">
             CUSTOMER SUPPORT</h1>
         <p class="pt-3 pb-3 pl-3 pl-sm-5 pr-5 ml-md-5" style="font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 15px; letter-spacing: 0.655606px;">
-            Call +23480500000 or send a mail to support@start.ng</p>
+            Call +2348050000000 or send a mail to support@start.ng</p>
 
     </div>
 
     <!-- Footer -->
-    <div class="container-fluid text-white deep">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                             alt="">
-                    </div>
-                </div>
-
-                <div class="row pb-4">
-                    <div class="col-lg-4 col-md-12 mb-3">
-                        <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('about')}}">About Us</a></li>
-                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blog')}}">Blog</a></li>
-
-
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('find-course'))}}">Find a Course</a></li>
-
-                        <li><a href="{{route('contact')}}">Contact Us</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route(('faq'))}}">FAQ</a></li>
-                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
-                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
-                    </div>
-                </div>
-
-            </div>
-    </div>
-    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-        <div class="container text-right">
-            <div class="row icons">
-                <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-        </footer>
-    </div>
+    @include('../inc.footer')
 
     <!-- End of Footer -->
 

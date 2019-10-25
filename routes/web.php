@@ -43,11 +43,20 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
     Route::get('/users/{id}', 'UserController@user')->name('user.details');
     Route::get('/course/{id}', 'CourseController@course')->name('course.details');
     Route::post('/course', 'CourseController@store')->name('course.store');
+
+    //Forgot password
+    Route::get('auth/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
+    Route::post('auth/password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('password/rest/{token}', 'Auth\ResetPasswordController@showRequestForm')->name('password.reset.token');
+    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 });
 
 
 
 Route::post('/search-course', 'BaseController@search')->name('course.search');
+
+
+
 
 
 
@@ -68,5 +77,23 @@ Route::get('/privacy', 'BaseController@privacy')->name('privacy');
 Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
 Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
-Route::get('/blog', 'BaseController@blog')->name('blog');
+//Route::get('/blog', 'BaseController@blog')->name('blog');
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
+
+/**
+ *
+ * SuperAdmin Routes
+ */
+
+Route::resource('mentors', 'AdminController');
+Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/mentors', 'AdminController@index')->name('mentors');
+    Route::get('/mentors/create', 'AdminController@create')->name('mentors.create');
+     Route::post('/mentors', 'AdminController@store')->name('mentors.store');
+    Route::get('/mentor/{id}/detail', 'AdminController@show')->name('mentor.show');
+    Route::get('/mentor/{id}', 'AdminController@destroy')->name('mentor.destroy');
+});
+
+Route::resource('blogs', 'BlogController');
+Route::get('/blogs/{id}/posts', 'BlogController@show_individual')->name('show.individual');
+

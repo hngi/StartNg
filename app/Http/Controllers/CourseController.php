@@ -15,11 +15,11 @@ class CourseController extends Controller
 
     public function show(){
         $courses = DB::table('courses')->get();
-        return view('frontend.frontend.admin-courses',compact('courses'));
+        return view('admin.admin-courses',compact('courses'));
     }
 
     public function create(){
-        return view('frontend.frontend.add-courses');
+        return view('admin.add-courses');
     }
 
     public function store(){
@@ -27,6 +27,7 @@ class CourseController extends Controller
             'name'=>'required',
             'description'=>'required',
             'price'=>'required',
+            'tutor'=>'required',
             'duration'=>'required'
         ]);
 
@@ -53,11 +54,13 @@ class CourseController extends Controller
 
         if($check){
             $course=DB::table('courses')->where('id',$id)->get()[0];
+            $total=DB::table('registered_courses')->where('id',$id)->count();
 
-            return view('frontend.frontend.course_detail',compact('course'));
+
+            return view('admin.course_detail',compact('course','total'));
         }
         else{
-
+            return back()->with('error','Course Does Not Exist');
         }
     }
 
@@ -77,6 +80,8 @@ class CourseController extends Controller
 //        Flash::success("User has been $title successfully.");
         return redirect(route('courses'));
     }
+
+    
 
 
 }

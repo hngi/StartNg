@@ -15,9 +15,9 @@ class UserController extends Controller
         $this->middleware('auth');
     }
     public function show(){
-        $users = DB::table('users')->get();
-
-        return view('frontend.frontend.users',compact('users'));
+        $users =DB::table('users')->get();
+        $mentors = $users;
+        return view('admin.users',compact('users'));
     }
     public function user($id){
         $check=DB::table('users')->where('id',$id)->exists();
@@ -37,7 +37,7 @@ class UserController extends Controller
 
 
             else{
-                $courses=array('no course registered');
+                $courses=[];
             }
 
 
@@ -48,7 +48,7 @@ class UserController extends Controller
         else{
 
         }
-        return view('frontend.frontend.user_detail',compact('user','courses'));
+        return view('admin.userDetails',compact('user','courses'));
     }
 
     public function destroy($id)
@@ -83,5 +83,10 @@ class UserController extends Controller
 //        Flash::success("User has been $title successfully.");
         return back()->with('success','User has been '.$title.' succesfully');
 
+    }
+    
+    public function navbar(){
+        $user = User::all();
+        return view('inc.navbar')->with('user', $user);
     }
 }
