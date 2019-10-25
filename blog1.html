@@ -10,40 +10,42 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <style>
+         :root {
+            --gradient: linear-gradient(rgba(117, 19, 93, 0.73), rgba(117, 19, 93, 0.73));
+        }
         /* Style for Navbar Starts */
-
+        
         body {
             font-family: Nunito;
         }
-
+        
         .navbar-custom li a {
             color: #000;
         }
-
+        
         .btn-success {
             background-color: #2DCE89;
             color: #fff;
             border: thin solid #2dce89;
         }
-
+        
         .btn-success:hover {
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
             cursor: pointer;
         }
-
+        
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
-
+        
         .custom-toggler.navbar-toggler {
             border-color: #000;
         }
-
         /* Style for Navbar Ends */
         /* Style for Footer Starts */
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -51,42 +53,42 @@
             box-sizing: border-box;
             font-family: 'Nunito', sans-serif;
         }
-
+        
         a {
             text-decoration: none;
         }
-
+        
         .deep {
             background: #3A0842;
             color: #fff;
         }
-
+        
         .deep #slink {
             background: #44CF6C;
             border-radius: 10px;
             color: white;
             padding: 10px 70px;
         }
-
+        
         .deep li a {
             text-decoration: none;
             color: #fff;
             font-size: 16px;
             line-height: 30px;
         }
-
+        
         .deep li {
             list-style: none;
         }
-
+        
         .deep li a:hover {
             text-decoration: none;
         }
-
+        
         a:hover {
             text-decoration: none;
         }
-
+        
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -94,56 +96,60 @@
             padding: 10px 20px;
             color: white;
         }
-
+        
         .icons i.fa.fa-twitter:hover {
             color: #00aced;
         }
-
+        
         .icons i.fa.fa-facebook:hover {
             color: #3b5598;
         }
-
+        
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
-
         /* Style for Footer Ends */
         /* Body Starts */
-
         
         .pagination li a {
             color: #3A0842;
         }
+        
         .header_btn {
-            color: #fff;
             border: 1px solid #44CF6C;
             padding: 5px 70px;
-            background: #44CF6C;
             border-radius: 10px;
         }
+        
         .header_btn:hover {
-            color: #44CF6C;
-            background: transparent;
             transition: all .5s;
         }
         
-
-
-        .banner {
-            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570922862/startng/Group_413_dy6fmr.png');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
         .pagination li a {
             color: #3A0842;
         }
-
+        
         .pagination li.active {
             background-color: #3A0842;
         }
-
+        
+        .blog-image {
+            width: 290px;
+            height: 230px;
+        }
+        
+        .c-image {
+            background-repeat: none;
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+            height: 400px;
+            content: '';
+        }
+        
+        .hide {
+            display: none;
+        }
         /* Body Ends */
     </style>
 </head>
@@ -151,11 +157,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
         <div class="container pt-2 pb-2">
-            <a href="index.html" class="navbar-brand"><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                    class="img-fluid" alt="logo" width="150px"></a>
-            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbar9" style="color: #000;">
+            <a href="index.html" class="navbar-brand"><img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png" class="img-fluid" alt="logo" width="150px"></a>
+            <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbar9">
@@ -193,78 +196,70 @@
         <!--/.Indicators-->
         <!--Slides-->
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-interval="4000">
                 <div class="view">
-                    <img class="d-block w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571144019/mystart/Group_427_ry58n0.png" alt="First slide">
-                    <div class="mask rgba-black-light"></div>
+                    <div class="d-block w-100 img-fluid c-image" style=" background-image: var(--gradient), url(https://res.cloudinary.com/gboyega/image/upload/v1571828908/HNG/photo-1559028012-481c04fa702d_s2kk8p.jpg);">
+                    </div>
+                    <div class="mask rgba-black-light "></div>
                 </div>
                 <div class="carousel-caption">
                     <h3 class="h3-responsive">How much will I earn as a UI/UX Designer?</h3>
                     <p style="margin-top: 20px">
-                        <a href="" class="header_btn">
+                        <a href="#ui/ux" class="header_btn btn-success">
                             Read
                         </a>
                     </p>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-interval="4000">
                 <!--Mask color-->
                 <div class="view">
-                    <img class="d-block w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571144020/mystart/Group_429_leath8.png" alt="Second slide">
-                    <div class="mask rgba-black-strong"></div>
+                    <div class="d-block w-100 img-fluid c-image" style=" background-image: var(--gradient), url(https://res.cloudinary.com/gboyega/image/upload/v1571828968/HNG/photo-1517694712202-14dd9538aa97_hnl2sn.jpg);"></div>
+                    <div class="mask rgba-black-strong "></div>
                 </div>
                 <div class="carousel-caption">
                     <h3 class="h3-responsive">How much will I earn as a Web Developer?</h3>
                     <p style="margin-top: 20px">
-                        <a href="" class="header_btn">
+                        <a href="#web-dev" class="header_btn btn-success">
                             Read
                         </a>
                     </p>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-interval="4000">
                 <!--Mask color-->
                 <div class="view">
-                    <img class="d-block w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571144020/mystart/Group_428_fqdqgg.png" alt="Third slide">
-                    <div class="mask rgba-black-slight"></div>
-                </div>
-                <div class="carousel-caption">
-                    <h3 class="h3-responsive">How much will I earn as a Machine Learning Engineer?</h3>
-                    <p style="margin-top: 20px">
-                        <a href="" class="header_btn">
+                    <div class="ml ">
+                        <div class="d-block w-100 img-fluid c-image" style=" background-image: var(--gradient), url(https://res.cloudinary.com/gboyega/image/upload/e_art:peacock/v1571829869/HNG/pexels-photo-2599244_gnnuz1.jpg);">
+                        </div>
+                        <div class="mask rgba-black-slight "></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">How much will I earn as a Machine Learning Engineer?</h3>
+                        <p style="margin-top: 20px">
+                            <a href="#ml" class="header_btn btn-success">
                             Read
                         </a>
-                    </p>
-                    
+                        </p>
+                    </div>
                 </div>
             </div>
-
-    <div class="container-fluid banner pt-5 pb-5">
-        <div class="col-md-8 offset-md-2 text-center pt-5 mt-3">
-            <h4 class="mb-5"
-                style="color: #fff; font-style: normal; font-weight: bold; font-size: 30px; line-height: 50px; text-align: center; letter-spacing: 0.655606px;">
-                How much will I earn as a UI/UX Designer?</h4>
-            <a href="ui-ux.html" class="btn btn-success pl-5 pr-5 mb-5">Read</a> <br>
-            <a href=""><img
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923285/startng/Group_303_dr7xs0.png"
-                    class="img-fluid"></a>
-
+            <!--/.Slides-->
+            <!-- controls -->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!-- controls end -->
+            <!--/.Carousel Wrapper-->
         </div>
-        <!--/.Slides-->
-        <!--Controls-->
-        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <!--/.Controls-->
     </div>
-    <!--/.Carousel Wrapper-->
 
-    <div class="container-fluid">
+    <div class="container">
         <h2 class="text-center pt-5 mt-5 pb-4">StartNG BLOG</h2>
         <div class="input-group col-md-8 offset-md-2 mb-5 pb-3">
             <input type="text" class="form-control" placeholder="Search">
@@ -277,136 +272,81 @@
             </div>
         </div>
     </div>
+    </div>
 
 
     <div class="col-md-10 offset-md-1 pt-5">
         <hr>
-        <div class="row pt-3">
+        <div class="row pt-5 mt-3" id="ml">
             <div class="col-md-4">
-                <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
+                <p>October 15, 2019</p>
+                <img class="img-fluid blog-image img-thumbnail" src="https://res.cloudinary.com/gboyega/image/upload/v1571829869/HNG/pexels-photo-2599244_gnnuz1.jpg">
             </div>
             <div class="col-md-8">
-                <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
+                <h4 class="mt-5 pt-3 pb-3">How much will I earn as a Machine learning Engineer</h4>
+                <p class="mb-5 pb-3">
+                    Machine learning engineers are in high demand. And machine learning engineer salary and benefits packages reflect that. In fact, machine learning engineering is the best job in the United States, according to an Indeed study analyzing the average salaries
+                    and job posting growth between 2015 and 2018.<br> So, exactly how much do machine learning engineers make?<br> The average machine learning salary, according to Indeed’s research, is approximately ₦190,000 .
+                    <br> The average machine learning engineer salary far outpaced other technology jobs on the list.<br> Machine learning engineers are also responsible for scaling theoretical data science models to production-level models that can handle
+                    vast amounts of data in real-time. The ultimate goal here is to develop algorithms that can enable machines to analyze the information they gather, identify patterns, enable deep insights, and make decisions based on their findings.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row pt-5 mt-3" id="web-dev">
+            <div class="col-md-4">
+                <p>October 12, 2019</p>
+                <img class="img-fluid blog-image img-thumbnail" src="https://res.cloudinary.com/gboyega/image/upload/v1571828968/HNG/photo-1517694712202-14dd9538aa97_hnl2sn.jpg">
+            </div>
+            <div class="col-md-8">
+                <h4 class="mt-5 pt-3 pb-3">How much will I earn as a Web Developer</h4>
+                <p class="mb-5 pb-3">
+                    Web Development is one of the most common Freelance Skills, Non-Tech Companies usually outsource their website to reduce employee liability. This makes web developers earn some decent money from freelancing.<br> Being able to create
+                    your own designs for your webpage can help you increase your earning potential. You and your client will not have to hire a separate web designer and you will be able to get the work completed faster since you will not be working with
+                    another person and have to conform to their schedule. You can create your own design and work with your client to create a page that they will be happy with.<br> As with any profession, web developer salaries vary depending on where
+                    in the world you’re based. To give you a rough idea of the kind of money you could be earning, these figures are based on the latest data provided by payscale for the job title “web developer” (updated in 2019).<br> ₦1,001,009($2761.4)
+                    yearly.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row pt-5 mt-3" id="ui/ux">
+            <div class="col-md-4">
+                <p>October 8, 2019</p>
+                <img class="img-fluid blog-image img-thumbnail" src="https://res.cloudinary.com/gboyega/image/upload/v1571828908/HNG/photo-1559028012-481c04fa702d_s2kk8p.jpg">
+            </div>
+            <div class="col-md-8">
+                <h4 class="mt-5 pt-3 pb-3">How much will I earn as a UI/UX designer</h4>
+                <p class="mb-5 pb-3">
+                    Are you interested in learning UX/UI design? It’s one of the most promising as well as the creative sector in the industry right now. You can learn the UX/UI design from StartNG, Nigeria’s leading software development organization.<br>                    To give you an idea of your earning potential, we’ve done some research into the average UI designer salaries in various parts of the world, using data provided by Glassdoor, Indeed and PayScale. For ease of comparison, we’ve listed
+                    these averages in both the local currency and in US dollars (updated in 2019).<br> Nigeria: ₦106,000($292.41) per month<br> This is just a snapshot: exact salary information is somewhat hard to come by within the industry, and your
+                    actual salary may fall below or above these figures depending on what stage you’re at in your career and the exact skills you bring to the table. However, this serves as a great benchmark — especially if you’re new to the field.
+                </p>
             </div>
         </div>
         <hr>
         <div class="row pt-5 mt-3">
             <div class="col-md-4">
                 <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
+                <img class="img-fluid blog-image img-thumbnail" src="https://res.cloudinary.com/jeffogah/image/upload/v1564073433/Start_Default.png">
             </div>
             <div class="col-md-8">
                 <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row pt-5 mt-3">
-            <div class="col-md-4">
-                <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
-            </div>
-            <div class="col-md-8">
-                <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row pt-5 mt-3">
-            <div class="col-md-4">
-                <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
-            </div>
-            <div class="col-md-8">
-                <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row pt-5 mt-3">
-            <div class="col-md-4">
-                <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
-            </div>
-            <div class="col-md-8">
-                <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row pt-5 mt-3">
-            <div class="col-md-4">
-                <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
-            </div>
-            <div class="col-md-8">
-                <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row pt-5 mt-3">
-            <div class="col-md-4">
-                <p>October 5, 2019</p>
-                <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570923818/startng/Rectangle_78_uzftqh.png">
-            </div>
-            <div class="col-md-8">
-                <h4 class="mt-5 pt-3 pb-3">What you need to know about StartNG</h4>
-                <p class="mb-5 pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing .</p>
+                <p class="mb-5 pb-3">StartNg is a platform for learning programming where anyone, anywhere in the world can join and become a better programmer. It offers both free and paid courses with the best mentors in the world.<br> The StartNG platform was built by
+                    the interns of HNGI7 so as to solve the problems of software development courses.<br> The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate
+                    (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, tasks are being given and at the end of the week, interns are being promoted to the next stage.
+                </p>
             </div>
         </div>
     </div>
-    <div class="col-md-6 offset-md-5 mb-5 pb-5">
+
+    </div>
+    <div class="col-md-6 offset-md-5 mb-5 pb-5 hide">
         <ul class="pagination">
             <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item active" style="background-color: #3A0842;"><a class="page-link" href="#"
-                    style="background-color: #3A0842; border: thin solid #3A0842;">10</a></li>
+            <li class="page-item active" style="background-color: #3A0842;"><a class="page-link" href="#" style="background-color: #3A0842; border: thin solid #3A0842;">10</a></li>
             <li class="page-item"><a class="page-link" href="#">11</a></li>
             <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
         </ul>
@@ -420,8 +360,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                            alt="">
+                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" alt="">
                     </div>
                 </div>
 
