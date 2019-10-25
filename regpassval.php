@@ -362,8 +362,6 @@
                         </small>
                     </div>
 
-
-
                 </div>
 
                 <div class="col-md-6">
@@ -384,7 +382,7 @@
 
                 </div>
 
-                <div class="col-md-6 pb-5">
+                <div class="col-md-6">
 
                     <div class="form-group">
                         <label for="usr" style="font-weight: bold;">Country of Residence:</label>
@@ -403,10 +401,9 @@
 
                         </small>
                     </div>
-
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6" style="">
 
                     <div class="form-group">
                         <label for="usr" style="font-weight: bold;">State of Residence:</label>
@@ -417,11 +414,11 @@
 
                         </small>
                     </div>
-
                 </div>   
                     
 
-                        <div class="col-md-6 pb-5" style="margin-top: -50px">
+                        <div class="col-md-6" >
+                        
         
                             <div class="form-group">
         
@@ -430,14 +427,12 @@
                                 <input type="password" name="password" class="form-control" id="password" required>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
 
-                                </small>
-                                
+                                </small>                         
                             </div>
-        
                         </div>
         
-                        <div class="col-md-6 " style="margin-top: -50px">
-        
+                        <div class="col-md-6">
+                        <div id="main-container"></div>
                             <div class="form-group">
         
                                 <label for="usr" style="font-weight: bold;">Confirm Password:</label>
@@ -446,9 +441,8 @@
                                         
                             </div>
                         </div>
-                    
-                
-
+                      
+                  </div>
             </div>
 
             <button type="submit" onclick="return submitForm()"
@@ -667,4 +661,4 @@
 
 </body>
 
-</html>
+</html
