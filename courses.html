@@ -106,8 +106,9 @@
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
-/* Style for Footer Ends */
-        
+
+        /* Style for Footer Ends */
+
 
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961662/startng/Group_420_naoymq.png');
@@ -141,13 +142,69 @@
         .success {
             color: #0f0;
         }
-        @media (max-width: 767.98px) {
-        .clearfix{
+
+        .benefits {
+            background-color: #2A2B2A;
+            overflow: visible;
             width: 100%;
-            font-size: 0.8em;
-        }    
+            height: 34rem;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
         }
 
+        .imgi {
+            float: right;
+            right: -4rem;
+        }
+
+        #leftImg {
+            position: relative;
+            bottom: 7rem;
+        }
+
+        #rightImg {
+            position: relative;
+            right: 12rem;
+            bottom: 4rem;
+
+        }
+
+        .txtBlock {
+            padding-left: 7rem;
+
+        }
+
+        .txtBlock img {
+            padding-right: 1em;
+        }
+
+        .benefits p {
+            display: inline-block;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.25em;
+            line-height: 27px;
+            letter-spacing: 0.655606px;
+            color: #ffffff;
+            padding-bottom: 1em;
+
+        }
+
+
+        @media (max-width: 767.98px) {
+            .txtBlock {
+                padding-left: 1rem;
+            }
+
+            .imgi {
+                display: none;
+            }
+
+            .txtBlock a {
+                margin-left: 15%;
+            }
+        }
     </style>
 </head>
 
@@ -323,9 +380,41 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid benefits">
+        <div class="row justify-content">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 col-xl-auto mt-5 txtBlock">
+                <p style="font-size: 3em;"><strong>Benefits</strong></p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Full
+                    Time Mentorship</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Expert Instructors</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Real
+                    Time Collaboration</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Build Real Time Products</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Learn up-to-date remote tools</p><br>
+                <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start Learning</a>
+            </div>
+            <div class="col-md-6 imgi">
+                <img src="https://res.cloudinary.com/soot3/image/upload/r_30/v1571930190/Group_226_whxtfm.png"
+                    alt="search" id="leftImg" class="img-fluid">
+                <img src="https://res.cloudinary.com/soot3/image/upload/r_50/v1571930219/2226806_1_ed2bka.png"
+                    alt="statistics" id="rightImg" class="img-fluid">
+
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <img class="img-fluid"
-            src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961661/startng/Group_419_c7p8rv.png">
+
         <div class="col-md-8 offset-md-1">
             <h4 class="font-weight-bold">Subscribe to our Newsletter</h4>
             <p>Stay Updated with our latest news, discount and promotions</p>
