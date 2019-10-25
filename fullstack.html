@@ -11,37 +11,42 @@
     <title>FullStack</title>
 
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         body {
             font-family: Nunito;
         }
         /* Style for Navbar Starts */
-        
+
         .navbar-custom li a {
             color: #000;
         }
-        
+
         .btn-success {
             background-color: #2DCE89;
             color: #fff;
             border: thin solid #2dce89;
         }
-        
+
         .btn-success:hover {
-            background-color: rgb(2, 20, 12);
+            background-color: #2DCE89;
             color: #fff;
-            border: thin solid rgb(2, 20, 12);
+            border: thin solid #2dce89;
         }
-        
+
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            background-position: center;
         }
-        
+
         .custom-toggler.navbar-toggler {
             border-color: #000;
         }
         /* Style for Navbar Ends */
         /* Style for Footer Starts */
-        
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -49,42 +54,42 @@
             box-sizing: border-box;
             font-family: 'Nunito', sans-serif;
         }
-        
+
         a {
             text-decoration: none;
         }
-        
+
         .deep {
             background: #3A0842;
             color: #fff;
         }
-        
+
         .deep #slink {
             background: #44CF6C;
             border-radius: 10px;
             color: white;
             padding: 10px 70px;
         }
-        
+
         .deep li a {
             text-decoration: none;
             color: #fff;
             font-size: 16px;
             line-height: 30px;
         }
-        
+
         .deep li {
             list-style: none;
         }
-        
+
         .deep li a:hover {
             text-decoration: none;
         }
-        
+
         a:hover {
             text-decoration: none;
         }
-        
+
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -92,113 +97,326 @@
             padding: 10px 20px;
             color: white;
         }
-        
+
         .icons i.fa.fa-twitter:hover {
             color: #00aced;
         }
-        
+
         .icons i.fa.fa-facebook:hover {
             color: #3b5598;
         }
-        
+
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
         /* Style for Footer Ends */
-        
+
         .accordion .card-header:after {
             font-family: 'FontAwesome';
             content: "\f068";
             float: right;
         }
-        
+
         .accordion .card-header.collapsed:after {
-            /* symbol for "collapsed" panels */
             content: "\f067";
         }
-        
+
         .panel-group .panel {
-            /* border-radius: 5px; */
-            /* border-color: #DBCCD9; */
             padding: 0;
         }
-        
+
         .panel-default>.panel-heading {
             color: #000;
             font-size: 25px;
             font-weight: bold;
             background-color: #DBCCD9;
-            /* border-color: #DBCCD9; */
         }
-        
+
         .panel-default {
             margin-bottom: 30px;
         }
-        
+
         .panel-title {
             font-size: 25px;
             background: #DBCCD9;
         }
-        
+
         .panel-title>a {
             display: block;
             padding: 15px;
             text-decoration: none;
             color: #000;
         }
-        
+
         .short-full {
             float: right;
             color: #fff;
         }
-        
-        .panel-default>.panel-heading+.panel-collapse>.panel-body {
-            /* border: solid 1px #EEEEEE; */
-            /* background: rgba(129, 22, 124, 0.05); */
-        }
-        
+
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
-        
+
         .panel-group .panel {
             border: none;
             -webkit-box-shadow: none;
         }
-        
+
         .exp-tt {
             font-size: 16px;
             padding-top: 60px;
             padding-bottom: 30px;
         }
-        
+
         h3 .text-center {
             font-size: 25px;
         }
-        
+
         .panel-tt {
             margin: 20px 0 40px 0;
             font-weight: bold;
         }
-        
+
         .panel-title {
             font-weight: bold;
         }
-        
+
         .panel-body ul {
             padding-inline-start: 10px;
         }
-        
+
         .panel-body li {
             list-style-type: none;
             padding: 7px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             font-size: 16px;
         }
-        
+
         .course-drop {
             padding-bottom: 40px;
         }
+        .student{
+            margin: auto;
+            font-family: 'Nunito', sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 124.8%;
+            color: #2A2B2A;
+        }
+        .box{
+        background-color: #fff;
+        border-radius:10px;
+        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+        height: 450px;
+        width: 919px;
+        margin: auto;
+        }
+        .content{
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
+            line-height: 151.2%;
+            font-weight: normal;
+            color: #333333;
+            text-align: justify;
+        }
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+            margin-left: 20px;
+        }
+        .rate:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+        }
+        .rate:not(:checked) > label {
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:30px;
+            color:#ccc;
+        }
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+        .rate > input:checked ~ label {
+            color: #FAF35E;
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #FAF35E;
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #FAF35E;
+        }
+
+        .pix{
+            float: left;
+        }
+        .name {
+            font-weight: 600px;
+            font-size: 16px;
+            margin-left: 105px;
+            letter-spacing: 0.655606px;
+        }
+        .task{
+            font-weight: 600px;
+            font-style: italic;
+            font-size: 14px;
+            margin-left: 105px;
+            letter-spacing: 0.655606px;
+
+        }
+        #see{
+            border-radius: 10px;
+            margin-left: 40%;
+            padding: 10px 30px 10px 30px;
+
+        }
+        .media-body p {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .mt-0 {
+            font-size: 20px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .text1 {
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .text1 h3 {
+            font-weight: bolder;
+            font-size: 22px;
+        }
+
+        img.align-self-start.mr-3 {
+            margin-right: 8% !important;
+            background-color: #44CF6C;
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        .media {
+            padding: 30px;
+        }
+
+        .section1 {
+            background-color: rgba(129, 22, 124, 0.05)
+        }
+
+        .section2 {
+            background: #fcfcfc;
+        }
+
+        .my-3{
+            font-weight: bolder;
+            padding-bottom: 40px;
+        }
+        #side{
+            margin: auto;
+        }
+        .green{
+            margin-top: 30px;
+            width: 100%;
+        }
+        .im-ban .col-md-6 img {
+            display: inline;
+            position: relative;
+        }
+        .two{
+            background-color: #2DCE89;
+            background-image: url(https://res.cloudinary.com/oluchii/image/upload/v1571222324/2226806_1.png);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        .cs4 h3 {
+            font-weight: bold;
+            font-size: 30px;
+            padding: 10px 0px 10px 0px;
+        }
+        .cs4 p {
+            font-size: 24px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+        @media (min-width: 320px) and (max-width: 480px) {
+            .content{
+                font-size: 14px;
+            }
+            .box{
+                width: 700px;
+                height: 500px;
+            }
+            .student{
+            margin: auto;
+            font-size: 18px;
+            }
+            .task{
+                margin-left: 0px;
+            }
+            .name{
+                margin-left: 50px;
+            }
+            .rate{
+                margin-left: 51px;
+            }
+            .pix{
+                margin-left: -20px;
+            }
+            #see{
+                margin-left: 45px;
+            }
+            h3.priv{
+                font-size: 18px;
+            }
+            img.align-self-start.mr-3{
+                margin-left: -30px;
+                margin-top: 0px;
+                padding: 0px;
+            }
+            div.media-body{
+                text-align: justify;
+            }
+            .two{
+                background-color: #2DCE89;
+                background-image: none;
+            }
+            .float-right{
+                margin-top: 15px;
+            }
+            #subscribe{
+                margin-top: 5px;
+                margin-left: 2px;
+            }
+            #email{
+                margin-left: 5px;
+            }
+            }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+        .two{
+            background-color: #2DCE89;
+            background-image: url(https://res.cloudinary.com/oluchii/image/upload/v1571222324/2226806_1.png);
+            background-size: 50% 100%;
+
+        }
+
+
+        }
+
+
+
     </style>
 </head>
 
@@ -238,12 +456,11 @@
                 <div class="col-md-6">
                     <p class="font-weight-bold">N50,000 for 3 months full training </p>
                     <h4 class="font-weight-bold pb-3">Full Stack Development</h4>
-                    <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. At at varius dolor pharetra dolor semper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p class="pb-2">Learn to Master multiple Front & Back end technologies to develop an advanced Web Application or Website </p>
 
                     <div class="clearfix">
                         <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html" >Start
-                                Learning</a>
+                            <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
                         </div>
                         <div class="float-right">
                             <a href="" style="color: #000;">Beginner</a>
@@ -251,7 +468,32 @@
                             <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
                         </div>
                     </div>
-                    <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965296/startng/Group_422_gdcqn9.png">
+                    <div class="course-details row align-tems-center justify-content-between" style="margin-top: 20px; margin-left: 1px; margin-bottom: 15px;">
+                            <div class="duration padding-bottom-sm">
+                                <h4 class="title" style="font-size: 12px;">Duration</h4>
+                                <span style="font-size: 15px; font-weight: bold;">8 Weeks</span>
+                            </div>
+                            <div class="duration padding-bottom-sm">
+                                <h4 class="title" style="font-size: 12px;" >Course Starts</h4>
+                                <span style="font-size: 15px; font-weight: bold;">5th of October, 2019</span>
+                            </div>
+                            <div class="duration padding-bottom-sm">
+                                <h4 class="title" style="font-size: 12px;" >Average Ratings</h4>
+                                <div class="d-inline" style="font-size: 15px; font-weight: bold;">
+                                    <div class="">
+                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
+                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
+                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
+                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
+                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
+
+                                    <a href="#" class="color-green" style="color: #2DCE89; text-decoration: underline;"> See all reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- change this image to code -->
+                    <!-- <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/gimage/upload/v1570965296/startng/Group_422_gdcqn9.png"> -->
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570973959/startng/creative-web-designer-planning-application-developing-template-layout_1418-2436_zq3paj.png">
@@ -260,15 +502,70 @@
         </div>
     </div>
 
-    <div class="container pb-5 pt-5">
-        <img class="img-fluid mt-5 mb-5" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965540/startng/Group_423_s3a4ez.png">
-    </div>
-    <div class="contaner-fluid">
-        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
-    </div>
 
-    <div class="container">
+    <section class="section3">
+        <div class="contaner-fluid">
+            <h3 class="text-center my-3">What You Will Learn</h3>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; UserFlow, User Journey using Flow Map</p>
+                        <hr style="width: 90%" />
+                    </div>
+                <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Wire-frames (Low-Fidelity & High Fidelity)</p>
+                        <hr style="width: 90%" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; User Research, Ideation</p>
+                        <hr style="width: 90%" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Mobile Interface (IOS, Android)</p>
+                        <hr style="width: 90%" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Interactive Design</p>
+                        <hr style="width: 90%" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; IOS Design Guidelines</p>
+                        <hr style="width: 90%" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Prototyping using Figma</p>
+                        <hr style="width: 90%" />
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Material Design Guidelines</p>
+                        <hr style="width: 90%" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="section4">
+        <div class="im-ban">
+            <div class="two">
+                <div class="container">
+                    <div class="col-md-6 py-4 pl-3">
+                        <div class="cs4">
+                            <h3>Build Real Time Project</h3>
+                            <p style="text-align: justify; font-size: 18px;">We have a team of highly-skilled and experienced mentors who guide the students through every step of the program to achieve the best results. Our training program is specially designed to expose our graduates to real-life world problems and how to find the best solutions to solve these problems.
+
+                            </p>
+                            <button class="btn btn-primary" style="background: #3F113D;">Start Learning</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- <div class="contaner-fluid" id="side">
+        <img class="green" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
+    </div> -->
+
+
+    <section class="sessionforcollapse">
         <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
@@ -283,27 +580,25 @@
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Introduction
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>  Architecture
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                         </a>
-
-
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Container
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Facades
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Flexibility
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Robustness
                                             </li>
                                         </ul>
                                     </div>
@@ -314,7 +609,8 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Setup & Installation
+
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -324,16 +620,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Requirement
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Installation
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Web Server Configuration
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Project Structure
                                             </li>
                                         </ul>
                                     </div>
@@ -344,7 +640,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Basic Routing
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -354,16 +650,10 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Basic Routing
                                             </li>
                                             <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
+                                                Route Parameters
                                             </li>
                                         </ul>
                                     </div>
@@ -374,7 +664,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Responses
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -382,7 +672,22 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
+                                        <ul>
+                                            <li>
+                                                Views
+                                            </li>
+                                            <li>
+                                                View Data
+                                            </li>
+                                            <ul>
+                                            <li>
+                                                Redirects
+                                            </li>
+                                            <li>
+                                                Custom Responses
+                                            </li>
+                                            </ul>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -391,7 +696,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Filter
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -401,16 +706,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Basic Filters
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Multiple Filters
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Global Filters
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Pattern Filters
                                             </li>
                                         </ul>
                                     </div>
@@ -421,7 +726,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Controllers
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -431,16 +736,13 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Creating Controllers
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Controller Routing
                                             </li>
                                             <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
+                                                RESTFul Controllers
                                             </li>
                                         </ul>
                                     </div>
@@ -459,7 +761,7 @@
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> User Research
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Blade Templates
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -469,16 +771,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Creating Templates
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                PHP Output
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Control Structures
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Templates
+                                            </li>
+                                            <li>
+                                                Template Inheritance
                                             </li>
                                         </ul>
                                     </div>
@@ -489,7 +794,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Ideation
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Advanced Routing
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -499,16 +804,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Named Routes
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Secure Routes
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Parameters Constraints 
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Route Profixing
+                                            </li>
+                                            <li>
+                                                Domain Routing
                                             </li>
                                         </ul>
                                     </div>
@@ -519,7 +827,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Wireframes
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> URL Generation
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -529,16 +837,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                The Current URl
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Generating Framework URLs
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Asset URLs
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Generation Shortcuts
                                             </li>
                                         </ul>
                                     </div>
@@ -549,7 +857,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Forms
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -559,16 +867,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Forms
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Fields
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Buttons
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Macros
+                                            </li>
+                                            <li>
+                                                Security
                                             </li>
                                         </ul>
                                     </div>
@@ -579,7 +890,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Validations
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -589,16 +900,19 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Validation
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Rules
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Error Messages
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Custom Rules
+                                            </li>
+                                            <li>
+                                                Custom Message
                                             </li>
                                         </ul>
                                     </div>
@@ -609,7 +923,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Databases
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -619,23 +933,18 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Abstraction
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Configuration
                                             </li>
                                             <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
+                                                Preparing
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                         <!-- panel-group -->
 
@@ -644,26 +953,135 @@
                 </div>
             </div>
         </div>
-    </div>
+</section>
+
+    <section class="section2">
+        <div class="text1">
+            <h3 class="priv">On Start.ng, you are privileged to </h3>
+        </div>
+        <div class="col-md-10 offset-md-1 pb-5 pt-5">
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="media">
+                            <img class="align-self-start mr-3"
+                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230671/Group_305_w3t3ik.png"
+                                alt="Learn from the Best teachers">
+                            <div class="media-body">
+                                <h4 class="mt-0">Learn from the Best Teachers</h4>
+                                <p>We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="media">
+                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230760/Group_309_yrwwlu.png"
+                                alt="Online community">
+                            <div class="media-body">
+                                <h4 class="mt-0">Join our Online Developer Community</h4>
+                                <p>Join a community of independent code learners, where knowledge is been share and also learn faster.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="media">
+                            <img class="align-self-start mr-3"
+                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230791/Group_300_guwfwc.png" alt="Support">
+                            <div class="media-body">
+                                <h4 class="mt-0">Support from Mentors</h4>
+                                <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="media">
+                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230828/Group_306_cjdqqu.png"
+                                alt="Certificate">
+                            <div class="media-body">
+                                <h4 class="mt-0">Earn a Certificate</h4>
+                                <p>Interns are eligible for a certificate if only they get to a certain stage of the internship.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <div class="col-md-10 offset-md-1 pb-5 pt-5">
-        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965739/startng/Group_424_eokznw.png">
+   <!-- @miz_kas start from here -->
+
+    <div class="container col-md-8 my-5">
+    <div class="row aligh-items-center">
+        <h1 class="student my-5"> What students have to say about us </h1>
+        <div class="box">
+            <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
+            <div class="box-2 px-5">
+                <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218974/Ellipse_bw76jr.png" alt="picture">
+
+                    <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5">5 stars</label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4">4 stars</label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3">3 stars</label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2">2 stars</label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1">1 star</label>
+                    </div>
+                    <br>
+                    <br>
+                          <p class="name"> Dennis Lagbaja </p>
+                          <span class="task">Completed the Front End Developer Class</span>
+            </div>
+        </div>
+
+        <div class="box mt-5">
+                <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
+                <div class="box-2 px-5">
+                    <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218964/Ellipse_1_acflsk.png" alt="picture">
+
+                        <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1">1 star</label>
+                        </div>
+                        <br>
+                        <br>
+                              <p class="name"> Khadirat Uche Jumbo </p>
+                              <span class="task">Completed the Laravel PHP Class</span>
+                </div>
+            </div>
     </div>
-    <div class="col-md-10 offset-md-1 pt-5 pb-5">
-        <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965845/startng/Testimonials_skqwbu.png">
+
+    <button type="submit" class="btn btn-primary my-5 " id="see" style="background-color: #44CF6C; border-color: #44CF6C;">See More Reviews</button>
     </div>
+
 
     <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
         <div class="container pt-5 pb-5">
             <div class="row align-items-center">
                 <div class="col-md-8 pb-5">
-                    <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
+                    <h4 class="sub" style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                     <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                     </p>
                     <form class="form-inline">
-                        <input type="text" class="form-control col-md-8" id="email">
-                        <button type="submit" class="btn btn-success ml-1 pl-5 pr-5">Subscribe</button>
+                        <input type="text" class="form-control col-md-8 col-xm-4" id="email">
+                        <button type="submit" id="subscribe" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
                     </form>
                 </div>
                 <div class="col-md-4">
@@ -672,9 +1090,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <!-- Footer -->
     <div class="container-fluid text-white deep">
@@ -689,7 +1104,7 @@
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="about.html">About Us</a></li>
@@ -710,7 +1125,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="help.html">FAQ</a></li>
                         <li><a href="termsOfService.html">Terms of Service</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </div>
                 </div>
 
