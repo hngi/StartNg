@@ -85,6 +85,9 @@
 
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
 
         .icons i {
@@ -342,7 +345,7 @@
     </div>
 
     <!-- Footer -->
-    @include('../inc.footer')
+   @include('../inc.footer')
     <!-- End of Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>

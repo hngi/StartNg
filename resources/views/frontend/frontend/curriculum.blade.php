@@ -58,7 +58,10 @@
 
         .deep li a:hover { text-decoration: none; }
 
-        a:hover { text-decoration: none; }
+        a:hover { text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;}
 
         .icons i {
             font-size: 26px; height: 50px; width: 50px; padding: 10px 20px; color: white;

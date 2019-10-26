@@ -78,7 +78,31 @@
     <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-        @include('inc.sidebar')
+       <div class="border-right" id="sidebar-wrapper" style="background-color: #3A0842;">
+    <div class="sidebar-heading"><a href="{{route('index')}}"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
+    </div>
+    <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
+    @if(Auth::user()->role==2)
+        <a href="{{route('mentors')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Admin</a>
+        <a href="{{route('mentors.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842;">Add Admin</a>
+    @endif
+        <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+        <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
+            Courses</a>
+        <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
+
+        <a class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+
+    </div>
+</div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -99,8 +123,10 @@
             </nav>
 
             <div class="container">
-                <h2 class="text-center mt-5 mb-5">ADD A MENTOR</h2>
-                <div>
+  <div class="row">
+ <div class="col-sm-8 offset-sm-2">
+    <h2 class="text-center mt-5 mb-5">ADD NEW ADMIN</h2>
+  <div>         <div>
                     @if(session('failed'))
                         <div class="text-center alert alert-danger">
                             {{session('failed')}}
@@ -116,46 +142,94 @@
 
                     @endif
                 </div>
-                <form action="{{route('mentors.store')}}" method="post">
-                    @csrf
-                    <div class="col-md-10 offset-md-1">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Mentor Name</label>
-                                    <input id="name" class="form-control" required type="text" name="name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Mentor Email</label>
-                                    <input id="email" class="form-control" required type="email" name="email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="phone">Mentor Phone Number</label>
-                                    <input id="phone" class="form-control" required type="number" name="phone">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="password">Mentor Password</label>
-                                    <input id="password" class="form-control" required type="password" name="password">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-success d-block mx-auto pr-5 pl-5" style="background-color: #3A0842; border-color: #3A0842;">ADD</button>
-                </form>
-            </div>
+                      <form method="POST" action="{{route('mentors.store')}}">
+                        @csrf
 
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                           <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="phone" value="{{ old('name') }}" required autocomplete="phone" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Location') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="state" value="{{ old('name') }}" required autocomplete="state" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
+                             <div class="col-md-6">
+                                <select name="role">
+                                <option >Select Role</option>
+                                <option value="2">Super Admin</option>
+                                <option value="1">Admin</option>
+                                </select>
+                              </div>
+                        </div>                        
+                                        
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                               <button type="submit" class="btn btn-success d-block mx-auto pr-5 pl-5" style="background-color: #3A0842; border-color: #3A0842;"> {{ __('Add') }}</button>
+                            </div>
+                        </div>
+                    </form>
         </div>
         <!-- /#page-content-wrapper -->
 

@@ -18,7 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
-    <title>Privacy Policy</title>
+    <title> Start Ng | Privacy Policy</title>
 
 
 
@@ -166,8 +166,10 @@
 
 
         a:hover {
-
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
 
         }
 

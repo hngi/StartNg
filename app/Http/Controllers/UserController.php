@@ -16,7 +16,7 @@ class UserController extends Controller
     }
     public function show(){
         $users =DB::table('users')->get();
-
+        $mentors = $users;
         return view('admin.users',compact('users'));
     }
     public function user($id){

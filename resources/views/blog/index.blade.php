@@ -2,7 +2,10 @@
 
 @section('content')
 
-<h2 class="text-center pt-5 mt-5 pb-4">StartNG BLOG</h2>
+<h2 class="text-center pt-5 mt-5 pb-4">StartNG | BLOG</h2>
+<div>
+        <a href="{{route('blogs.create')}}">Create Post</a>
+    </div>
 <div class="col-md-10 offset-md-1 pt-5">
     @if(count($posts) > 0)
         @foreach($posts as $post)
@@ -26,8 +29,5 @@
     @else
         <p>No Post</p>
     @endif
-    <div>
-        <a href="{{route('blogs.create')}}">Create Post</a>
     </div>
-</div>
 @endsection

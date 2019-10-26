@@ -22,7 +22,7 @@
                     </li>
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-                    </li>
+                    </li><br>
 
                     @if(!Auth::guest())
 
@@ -49,7 +49,7 @@
                     @if(Auth::guest())
                         <li class="nav-item mr-5">
                             <a class="btn btn-success nav-link px-5" href="{{ route('register') }}" style="color: #fff;">Register</a>
-                        </li>
+                        </li><br>
                         <li class="nav-item mr-5">
                             <a class="btn btn-success nav-link px-5" href="{{ route('signin') }}" style="color: #fff;">Login</a>
                         </li>

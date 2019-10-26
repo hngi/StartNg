@@ -99,6 +99,9 @@
 
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
 
         .icons i {
@@ -217,7 +220,7 @@
             <div class="col-md-6">
                 <div class="col-md-8 offset-md-2">
                     <h4 class="pb-4" style="font-weight: bold;">Remote Flexibility</h4>
-                    <p>Our graduates are taught how to be effective remote employees . <br> They are trained to connect & work digitally at any time with <br>employers and clients around the world. With the rise in demand for remote <br> work, we ensure our graduates are up to date <br> with the latest practices to fill in these roles suitably.<br> lorem sed.</p>
+                    <p>Our graduates are taught how to be effective remote employees . <br> They are trained to connect & work digitally at any time with <br>employers and clients around the world. With the rise in demand for remote <br> work, we ensure our graduates are up to date <br> with the latest practices to fill in these roles suitably.</p>
                 </div> 
 
  
@@ -270,19 +273,19 @@
         <div class="col-md-10 offset-md-1 pt-5 pb-5">
             <h4 class="text-center font-weight-bold pb-3">Learn more about hiring our grads</h4>
             <p class="text-center font-weight-bold pb-5">Fill out the form and we will get in touch.</p>
-            <div class="row pb-4">
-                <div class="col-md-6">
+            <div class="row pb-4" style="margin-left: 25%">
+                <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Full Name">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <input type="email" class="form-control" placeholder="Email Address">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row"  style="margin-left: 25%">
+                <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Company Name">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Job Title">
                 </div>
             </div>

@@ -78,7 +78,30 @@
     <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-        @include('inc.sidebar')
+       <div class="border-right" id="sidebar-wrapper" style="background-color: #3A0842;">
+    <div class="sidebar-heading"><a href="{{route('index')}}"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
+    </div>
+    <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
+    @if(Auth::user()->role==2)
+        <a href="{{route('mentors')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Admin</a>
+        <a href="{{route('mentors.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add Admin</a>
+    @endif
+        <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+        <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842;">Add  Courses</a>
+        <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
+
+        <a class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+
+    </div>
+</div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -120,17 +143,17 @@
 
                     @endif
                 </div>
-                <form action="{{route('course.store')}}" method="post">
+               <form action="{{route('course.store')}}" method="post">
                     @csrf
-                    <div class="col-md-10 offset-md-1">
+                    <div class="col-md-10 offset-md-3">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="coursename">Course Title</label>
                                     <input id="coursename" class="form-control" required type="text" name="name">
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="coursecode">Course Duration</label>
                                     <div class="input-group">
@@ -142,22 +165,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
+                           <div class="row">
+                            <div class="col-md-5">
                                 <div class="form-group">
-                                    <label for="">Course Price</label>
+                                    <label for="coursename">Course Tutor</label>
+                                    <input id="coursename" class="form-control" required type="text" name="tutor">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="coursecode">Course Price</label>
                                     <div class="input-group">
-
-                                        <input class="form-control" name="price" type="number" required  placeholder="" aria-label="Recipient's " aria-describedby="my-addon">
+                                        <input class="form-control" name="duration" type="number" required placeholder="" aria-label="Recipient's " aria-describedby="new-addon">
                                         <div class="input-group-append">
-                                            <span class="input-group-text" id="my-addon">NGN</span>
+                                            <span class="input-group-text" id="new-addon">NGN</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="coursedesc">Course Description</label>
                                     <textarea id="coursedesc" class="form-control" required name="description" rows="4"></textarea>

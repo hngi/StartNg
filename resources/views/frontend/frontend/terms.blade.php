@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Terms of Service</title>
+    <title>Start Ng | Terms of Service</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
@@ -353,29 +353,6 @@
 
         }
 
-        ::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        /* Track */
-
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px grey;
-            border-radius: 10px;
-        }
-
-        /* Handle */
-
-        ::-webkit-scrollbar-thumb {
-            background: #44cf6c;
-            border-radius: 10px;
-        }
-
-        /* Handle on hover */
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #44cf6c;
-        }
 
         /* Style for Footer Starts */
 
@@ -420,6 +397,9 @@
 
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
 
         .icons i {

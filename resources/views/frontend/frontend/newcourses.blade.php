@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <title>Courses</title>
+    <title> Start Ng | Courses</title>
 
     <style>
         body {
@@ -70,6 +70,9 @@
         }
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
         .icons i {
             font-size: 26px;
@@ -215,58 +218,7 @@ $counter=3;
 </div>
 
 <!-- Footer -->
-<div class="container-fluid text-white deep mt-5">
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mt-3 mb-4">
-                    <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                         alt="">
-                </div>
-            </div>
-
-            <div class="row pb-4">
-                <div class="col-lg-4 col-md-12 mb-3">
-                    <h4 class='mb-4'>Ready to take the Leap?</h4>
-                    <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="courses.html">Our Course</a></li>
-                    <li><a href="hireGrad.html">Hire a Grad</a></li>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                    <li><a href="curriculum.html">Curriculum</a></li>
-                    <li><a href="blog2.html">Blog</a></li>
-                    <li><a href="blog1.html">Student Stories</a></li>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                    <li><a href="courses.html">Find a Course</a></li>
-                    <li><a href="#">Our Partners</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                    <li><a href="help.html">FAQ</a></li>
-                    <li><a href="termsOfService.html">Terms of Service</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                </div>
-            </div>
-
-        </div>
-</div>
-<div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-    <div class="container text-right">
-        <div class="row icons">
-            <div class="col-md-12 ">
-                <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div>
-    </footer>
-</div>
-
+@include('../inc.footer')
 <!-- End of Footer -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>

@@ -80,10 +80,33 @@
     <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-        @include('inc.sidebar')
-        <!-- /#sidebar-wrapper -->
+          <div class="border-right" id="sidebar-wrapper" style="background-color: #3A0842;">
+    <div class="sidebar-heading"><a href="{{route('index')}}"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
+    </div>
+    <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
+    @if(Auth::user()->role==2)
+        <a href="{{route('mentors')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Admin</a>
+        <a href="{{route('mentors.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add Admin</a>
+    @endif
+        <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+        <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
+            Courses</a>
+        <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #fff; color: #3A0842;">View Courses</a>
 
-        <!-- Page Content -->
+        <a class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+
+    </div>
+</div>
+        <!-- /#sidebar-wrapper -->
+         <!-- Page Content -->
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -104,8 +127,8 @@
                 </div>
             </nav>
 
-            <div class="table-responsive col-md-10 offset-md-1 mt-5">
-                <h2 class="text-center mb-5">Course DETAILS</h2>
+            
+               
                 <div>
                     @if(session('failed'))
                         <div class="text-center alert alert-danger">
@@ -122,47 +145,41 @@
 
                     @endif
                 </div>
-                <table class="table">
-                    <thead>
-                    <tr>
+                <div class="table-responsive col-md-10 offset-md-1 mt-5">
+                <div class="row">
+               <h2 class="text-center mt-5 mb-5">Course Details</h2>   
+                <table class="table table-striped">
+                <thead style="font-weight: bold; text-transform: bold">  
+                <tr style="text-transform: bold">
                         <th>Name</th>
                         <th>Price</th>
                         <th>Duration</th>
                         <th>Description</th>
-                        <th>Student Registered</th>
+                        <th colspan="2">Student Registered</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td> {{$course->name}}</td>
-                        <td>{{$course->price}}</td>
+                        <td><span>&#8358;</span>{{$course->price}}</td>
                         <td>{{$course->duration}}</td>
-                        <td>
-                            {{$course->description}}
+                        <td>{{$course->description}}</td>
+                        <td colspan="2">{{$total}}
                         </td>
-                        <td>
-                         {{$total}}
-                        </td>
-                        <td>
+                        <td><a href="#"> <button class="btn btn-warning" >Edit</button> </a>
                             @if($course->active)
                                 <a href="{{route('course.disable',$course->id)}}"> <button class="btn btn-danger" >Disable</button> </a>
                             @endif
                             @if(!$course->active)
                                 <a href="{{route('course.disable',$course->id)}}"> <button class="btn btn-info" >Enable</button> </a>
                             @endif
-
                         </td>
                     </tr>
-
-
                     </tbody>
                 </table>
             </div>
 
-
-
-        </div>
         <!-- /#page-content-wrapper -->
 
     </div>

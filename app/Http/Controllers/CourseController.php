@@ -27,6 +27,7 @@ class CourseController extends Controller
             'name'=>'required',
             'description'=>'required',
             'price'=>'required',
+            'tutor'=>'required',
             'duration'=>'required'
         ]);
 

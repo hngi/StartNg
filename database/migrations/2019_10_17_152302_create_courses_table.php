@@ -20,6 +20,7 @@ class CreateCoursesTable extends Migration
             $table->string('description');
             $table->float('price');
             $table->string('duration');
+            $table->string('tutor');
             $table->boolean('active')->default(1);
             $table->timestamps();
         });

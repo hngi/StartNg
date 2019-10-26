@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Search</title>
+    <title> Start Ng | Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
         integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
@@ -84,6 +84,9 @@
 
     a:hover {
         text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
     }
 
     .icons i {
