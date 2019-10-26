@@ -117,18 +117,13 @@
             content: "\f067";
         }
         
-        .panel-group .panel {
-            /* border-radius: 5px; */
-            /* border-color: #DBCCD9; */
-            padding: 0;
-        }
+        .panel-group .panel { padding: 0; }
         
         .panel-default>.panel-heading {
             color: #000;
             font-size: 25px;
             font-weight: bold;
             background-color: #DBCCD9;
-            /* border-color: #DBCCD9; */
         }
         
         .panel-default {
@@ -199,6 +194,12 @@
         .course-drop {
             padding-bottom: 40px;
         }
+
+        .nav-link { font-weight: 500; color: gray !important; font-family: sans-serif; font-size: 15px;}
+        .nav-link:hover { color: gray !important; font-weight: 600; font-size: 17px;}
+        #btn { color: whitesmoke !important;}
+        #btn:hover { color: whitesmoke !important; font-weight: 500; }
+
     </style>
 </head>
 
@@ -224,7 +225,7 @@
                         <a class="nav-link" href="contactus.html">Contact Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
+                        <a id="btn" class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
                             Learning</a>
                     </li>
                 </ul>
