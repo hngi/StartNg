@@ -106,7 +106,8 @@
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
-/* Style for Footer Ends */
+
+        /* Style for Footer Ends */
         /* Fade In */
         .fade-in {
             animation: fadeIn ease 5s;
@@ -166,8 +167,9 @@
                 opacity: 1;
             }
         }
+
         /* Fade-In Ends */
-        
+
 
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961662/startng/Group_420_naoymq.png');
@@ -176,11 +178,28 @@
             background-position: center center;
         }
 
-        .nav-link { font-weight: 500; color: gray !important; font-family: sans-serif; font-size: 15px;}
-        .nav-link:hover { color: gray !important; font-weight: 600; font-size: 17px;}
-        #btn { color: whitesmoke !important;}
-        #btn:hover { color: whitesmoke !important; font-weight: 500; }
-      
+        .nav-link {
+            font-weight: 500;
+            color: gray !important;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        .nav-link:hover {
+            color: gray !important;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        #btn {
+            color: whitesmoke !important;
+        }
+
+        #btn:hover {
+            color: whitesmoke !important;
+            font-weight: 500;
+        }
+
         /* Style for news letter form */
         .form-inline button {
             margin-left: 1em;
@@ -206,23 +225,204 @@
         .success {
             color: #0f0;
         }
-        /* Style for Benefit section begins */ 
-        .benefits{
-        margin: 1rem;
-        background-color: rgba(17, 17, 17, 0.979);
-        color: white;
+
+        /* Style for Benefit section begins */
+        .benefits {
+            background-color: #2A2B2A;
+            width: 100%;
+            height: auto;
+            margin-top: 4rem;
         }
-        .benefits ul li{
-        margin-left: 5rem;
-        margin-top: 0.5rem
-        list-style-image: url(https://res.cloudinary.com/dlyuvm4rn/image/upload/v1571816732/IMG_20191023_084232_458.jpg)
+
+        .imgi {
+            display: none;
         }
-        #list{
-        margin-left: 4.2rem;
+
+        .txtBlock {
+            margin-left: 2rem;
+            margin-top: 2rem;
+
         }
-        
-        /* Style for Benefit section Ends */ 
-        
+
+        .txtBlock img {
+            padding-right: 1rem;
+        }
+
+        .txtBlock a {
+            margin-left: 4rem;
+        }
+
+        .benefits p {
+            display: inline-block;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.20em;
+            line-height: 27px;
+            letter-spacing: 0.655606px;
+            color: #ffffff;
+            padding-bottom: 0.8em;
+
+        }
+
+        .susForm {
+            background-color: rgba(42, 43, 42, 0.05);
+            padding-top: 4em;
+        }
+
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .benefits {
+                overflow: visible;
+                height: 33rem;
+            }
+
+            .imgi {
+                display: flex;
+                position: relative;
+                right: 10rem;
+                height: fit-content;
+            }
+
+            #leftImg {
+                position: relative;
+                bottom: 9rem;
+            }
+
+            #rightImg {
+                position: relative;
+                right: 12rem;
+                bottom: 5rem;
+            }
+        }
+
+
+
+        @media (min-width: 1200px) and (max-width: 1517px) {
+            .benefits {
+                overflow: visible;
+                height: 33rem;
+            }
+
+            .txtBlock {
+                position: relative;
+                left: 8rem;
+            }
+
+            .imgi {
+                display: flex;
+                position: relative;
+                right: 5rem;
+                height: fit-content;
+            }
+
+            #leftImg {
+                position: relative;
+                bottom: 9rem;
+            }
+
+            #rightImg {
+                position: relative;
+                right: 12rem;
+                bottom: 5rem;
+            }
+        }
+
+        @media (min-width: 1518px) and (max-width: 1802px) {
+            .benefits {
+                overflow: visible;
+                height: 33rem;
+            }
+
+            .txtBlock {
+                padding-left: 9rem;
+                position: relative;
+                left: 8rem;
+            }
+
+            .imgi {
+                display: flex;
+                position: relative;
+                right: 5rem;
+                height: fit-content;
+            }
+
+            #leftImg {
+                position: relative;
+                bottom: 9rem;
+            }
+
+            #rightImg {
+                position: relative;
+                right: 12rem;
+                bottom: 5rem;
+            }
+        }
+
+        @media (min-width: 1803px)and (max-width: 1950px) {
+            .benefits {
+                overflow: visible;
+                height: 33rem;
+            }
+
+            .txtBlock {
+                padding-left: 10rem;
+                position: relative;
+                left: 14rem;
+            }
+
+            .imgi {
+                display: flex;
+                position: relative;
+                right: 5rem;
+                height: fit-content;
+            }
+
+            #leftImg {
+                position: relative;
+                bottom: 9rem;
+            }
+
+            #rightImg {
+                position: relative;
+                right: 12rem;
+                bottom: 5rem;
+            }
+        }
+
+        @media (min-width: 1951px) {
+            .benefits {
+                overflow: visible;
+                height: 33rem;
+            }
+
+            .txtBlock {
+                padding-left: 10rem;
+                position: relative;
+                left: 14rem;
+            }
+
+            .imgi {
+                display: flex;
+                position: relative;
+                right: 5rem;
+                height: fit-content;
+            }
+
+            #leftImg {
+                position: relative;
+                bottom: 9rem;
+            }
+
+            #rightImg {
+                position: relative;
+                right: 12rem;
+                bottom: 5rem;
+            }
+        }
+
+
+        /* Style for Benefit section Ends */
     </style>
 </head>
 
@@ -251,7 +451,8 @@
                         <a class="nav-link" href="contactus.html">Contact Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a id="btn" class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
+                        <a id="btn" class="btn btn-success nav-link px-5" href="register.html"
+                            style="color: #fff;">Start
                             Learning</a>
                     </li>
                 </ul>
@@ -398,40 +599,55 @@
             </div>
         </div>
     </div>
-    
-    <div class="benefits">
-    <div class="row" style="margin: 200px 0 300px 0;">
-    <div class="col-lg-12 mt-5 col-sm-12 col-md-12"  style="position: relative;">
-    <h3 id="list">Benefits</h3>
-    <ul>
-    <li>Full time Membership</li>
-    <li>Expert Instructors</li>
-    <li>Real time Collaboration</li>
-    <li>Build Real Time Products</li>
-    <li>Learn up-to-date remote tools</li>
-    <li>Offline Meet-ups</li>
-    </ul>
-    <a href="register.html" class='btn btn-success px-5 py-2 mb-5' id="list" >Start Learning</a>
-    </div>
-    </div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="container-fluid">
-        <div class="col-md-8 offset-md-1">
-            <h4 class="font-weight-bold">Subscribe to our Newsletter</h4>
-            <p>Stay Updated with our latest news, discount and promotions</p>
-            <form class="form-inline pb-5">
-                <span class="message success">Valid Email</span>
-                <span class="message error">Invalid Email</span>
-                <input type="email" class="form-control col-md-8" placeholder="Email Address"><button type="submit"
-                    class="btn btn-success">Subscribe</button>
-            </form>
+
+    <div class="container-fluid benefits">
+        <div class="row justify-content">
+            <div class="col txtBlock">
+                <p style="font-size: 3rem;"><strong>Benefits</strong></p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Full
+                    Time Mentorship</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Expert Instructors</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Real
+                    Time Collaboration</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Build Real Time Products</p><br>
+                <img src="https://res.cloudinary.com/soot3/image/upload/v1571931406/Vector_1_vroqi9.png"
+                    alt="checkmark">
+                <p>Learn up-to-date remote tools</p><br>
+                <a href="register.html" class='btn btn-success mb-5'>Start Learning</a>
+            </div>
+            <div class="col imgi">
+                <img src="https://res.cloudinary.com/soot3/image/upload/r_30/v1571930190/Group_226_whxtfm.png"
+                    alt="search" id="leftImg" class="img-fluid">
+                <img src="https://res.cloudinary.com/soot3/image/upload/r_50/v1571930219/2226806_1_ed2bka.png"
+                    alt="statistics" id="rightImg" class="img-fluid">
+            </div>
         </div>
     </div>
+    <div class="susForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-1">
+                    <h4 class="font-weight-bold">Subscribe to our Newsletter</h4>
+                    <p>Stay Updated with our latest news, discount and promotions</p>
+                    <form class="form-inline pb-5">
+                        <span class="message success">Valid Email</span>
+                        <span class="message error">Invalid Email</span>
+                        <input type="email" class="form-control col-md-8" placeholder="Email Address"><button
+                            type="submit" class="btn btn-success">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <div class="container-fluid text-white deep mt-5">
