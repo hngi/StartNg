@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $tutors = User::where('role', '1')->paginate(5);
+        return view('admin.tutors')->with('tutors', $tutors);
     }
 
     /**
@@ -22,20 +27,29 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create(){
+        return view('admin.create-mentor');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'password' => 'required'
+        ]);
+
+        $mentor = new User;
+        $mentor->name = $request->input('name');
+        $mentor->email = $request->input('email');
+        $mentor->phone = $request->input('phone');
+        $mentor->password = Hash::make($request->input('password'));
+        $mentor->role = 1;
+        $mentor->state = $request->input('phone');
+        $mentor->save();
+
+        return back()->with('success','Mentor Successfully Created');
+
     }
 
     /**
@@ -46,7 +60,8 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $mentor = User::find($id);
+        return view('admin.mentor_detail')->with('mentor', $mentor);
     }
 
     /**
@@ -80,6 +95,18 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $mentor = User::find($id);
+        if (empty($mentor)) {
+            Flash::error('Mentor not found');
+            return redirect(route('mentors.index'));
+        }
+
+        $mentor->active = ($mentor->active == 0) ? 1 : 0;
+        $title = ($mentor->active == 1) ? "enabled" : "disabled";
+
+
+        $mentor->save();
+//        Flash::success("User has been $title successfully.");
+        return redirect(route('mentors'));
     }
 }
