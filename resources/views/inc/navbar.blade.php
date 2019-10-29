@@ -10,7 +10,7 @@
             <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
                         <a class="nav-link" href="#">Courses</a>
@@ -18,10 +18,10 @@
 
                     
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Hire A Grad</a>
+                        <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
 
                     @if(!Auth::guest())
@@ -48,10 +48,10 @@
 
                     @if(Auth::guest())
                         <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="#" style="color: #fff;">Register</a>
+                            <a class="btn btn-success nav-link px-5" href="{{route('signup')}}" style="color: #fff;">Register</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="#" style="color: #fff;">Login</a>
+                            <a class="btn btn-success nav-link px-5" href="{{route('signin')}}" style="color: #fff;">Login</a>
                         </li>
                     @endif
                 </ul>

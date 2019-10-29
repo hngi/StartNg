@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blogs.index')}}">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('find-course')}}">Find a Course</a></li>
