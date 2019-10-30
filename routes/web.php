@@ -34,6 +34,3 @@ Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
 Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
-
-Route::get('/signup', 'BaseController@register')->name('signup');
-Route::get('/signin', 'BaseController@login')->name('signin');

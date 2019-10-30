@@ -33,25 +33,23 @@
                     @endif
 
                     @if(!Auth::guest())
-                        {{--<a class="btn btn-success nav-link px-5" href="#" style="color: #fff;">Logout--}}
-                        {{--</a>--}}
-                        <a class="btn btn-success nav-link px-5" href="#"
+                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
-                        <form id="logout-form" action="#" method="POST" style="display: none;">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     @endif
 
                     @if(Auth::guest())
                         <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="{{route('signup')}}" style="color: #fff;">Register</a>
+                            <a class="btn btn-success nav-link px-5" href="{{route('register')}}" style="color: #fff;">Register</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="{{route('signin')}}" style="color: #fff;">Login</a>
+                            <a class="btn btn-success nav-link px-5" href="{{route('login')}}" style="color: #fff;">Login</a>
                         </li>
                     @endif
                 </ul>

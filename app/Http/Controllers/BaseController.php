@@ -49,14 +49,4 @@ class BaseController extends Controller
     public function curriculum(){
         return view('pages.curriculum');
     }
-
-    public function register()
-    {
-        return view('pages.register');
-    }
-
-    public function login()
-    {
-        return view('pages.login');
-    }
 }
