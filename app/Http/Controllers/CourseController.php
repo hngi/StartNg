@@ -14,7 +14,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        $courses = Courses::all();
+        return view('courses.index', compact('courses'));
     }
 
     /**

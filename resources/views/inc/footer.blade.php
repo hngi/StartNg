@@ -12,7 +12,7 @@
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('signup')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="{{route('register')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('about')}}">About Us</a></li>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="{{route('blogs.index')}}">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="{{route('find-course')}}">Find a Course</a></li>
