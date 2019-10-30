@@ -13,7 +13,7 @@
                         <a class="nav-link" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link" href="{{route('course.index')}}">Courses</a>
                     </li>
 
                     

@@ -160,6 +160,9 @@
             </div>
         </div>
         @endforeach
+
+    @else
+    <p>No course for now. Check back</p>
     @endif
     </div>
     <div class="container-fluid">
