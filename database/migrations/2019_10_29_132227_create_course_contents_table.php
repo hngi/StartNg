@@ -16,6 +16,7 @@ class CreateCourseContentsTable extends Migration
         Schema::create('course_contents', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
+            $table->integer('course_id');
             $table->timestamps();
         });
     }

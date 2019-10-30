@@ -17,6 +17,7 @@ class CreateRegisteredCoursesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->integer('course_id');
+            $table->integer('progress');
             $table->timestamps();
         });
     }
