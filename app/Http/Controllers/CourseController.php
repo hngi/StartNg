@@ -87,12 +87,12 @@ class CourseController extends Controller
             return redirect('/')->with('error', 'That course is not available');
         }
 
-        if(auth()->user()->id == 0){
+        if(auth()->user()->role == 0){
             return redirect('/')->with('error', 'Unauthorized Page');
         }
 
-        if(auth()->user()->id == 1){
-            if(auth()->user()->id == $course->user_id){
+        if(auth()->user()->role == 1){
+            if(auth()->user()->role == $course->user_id){
                 return redirect('/')->with('error', 'Unauthorized Page');
             }
         }
