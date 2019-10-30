@@ -20,3 +20,7 @@ Route::resource('Blog', 'BlogController');
 Route::resource('User', 'UserController');
 Route::resource('Course', 'CourseController');
 Route::resource('Contact', 'ContactController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
