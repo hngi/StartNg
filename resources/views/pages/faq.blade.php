@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <title>StartNg</title>
-    <style type="text/css">
+@section('style')
+
+<style type="text/css">
         /* Style for Navbar Starts */
         
          :root {
@@ -187,12 +181,9 @@
         }
         /* Style for Footer Ends */
     </style>
-</head>
+@endsection
 
-<body>
-    <header>
-        @include('inc.navbar')
-    </header>
+@section('content')
     <main>
         <!--  -->
         <section class="jumbotron rounded-0 py-4 mb-0">
@@ -349,14 +340,4 @@
             </div>
         </section>
     </main>
-    <!-- Footer -->
-    <footer class="mt-0">
-        @include('inc.footer')
-    </footer>
-    <!-- End of Footer -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+@endsection
