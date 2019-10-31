@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use App\User;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -20,8 +18,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $mentors = User::where('role', '1')->get();
-        return view('admin.mentors')->with('mentors', $mentors);
+        $tutors = User::where('role', '1')->paginate(5);
+        return view('admin.tutors')->with('tutors', $tutors);
     }
 
     /**

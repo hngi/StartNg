@@ -3,21 +3,21 @@
     </div>
     <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
     @if(Auth::user()->role==2)
-        <a href="{{route('mentors')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Mentors</a>
-        <a href="{{route('mentors.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add Mentor</a>
+        <a href="#" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Admin</a>
+        <a href=# class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add Admin</a>
     @endif
-        <a href="{{route('users')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
-        <a href="{{route('course.create')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
+        <a href="#" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
+        <a href="#" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
             Courses</a>
-        <a href="{{route('courses')}}" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
+        <a href="" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
 
-        <a class="list-group-item list-group-item-action pt-3 pb-3" href="{{ route('logout') }}"
+        <a class="list-group-item list-group-item-action pt-3 pb-3" href="#"
             onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        <form id="logout-form" action="#" method="POST" style="display: none;">
             @csrf
         </form>
 

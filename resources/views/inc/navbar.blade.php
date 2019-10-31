@@ -10,18 +10,18 @@
             <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('about')}}">About Us</a>
+                        <a class="nav-link" href="#">About Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
+                        <a class="nav-link" href="#">Courses</a>
                     </li>
 
                     
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
+                        <a class="nav-link" href="#">Hire A Grad</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                        <a class="nav-link" href="#">Contact Us</a>
                     </li>
 
                     @if(!Auth::guest())
@@ -33,25 +33,25 @@
                     @endif
 
                     @if(!Auth::guest())
-                        {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
+                        {{--<a class="btn btn-success nav-link px-5" href="#" style="color: #fff;">Logout--}}
                         {{--</a>--}}
-                        <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
+                        <a class="btn btn-success nav-link px-5" href="#"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        <form id="logout-form" action="#" method="POST" style="display: none;">
                             @csrf
                         </form>
                     @endif
 
                     @if(Auth::guest())
                         <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="{{ route('register') }}" style="color: #fff;">Register</a>
+                            <a class="btn btn-success nav-link px-5" href="#" style="color: #fff;">Register</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="btn btn-success nav-link px-5" href="{{ route('signin') }}" style="color: #fff;">Login</a>
+                            <a class="btn btn-success nav-link px-5" href="#" style="color: #fff;">Login</a>
                         </li>
                     @endif
                 </ul>
