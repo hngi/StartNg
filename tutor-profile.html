@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>
+        Tutor Dashboard
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/paper-dashboard.css" rel="stylesheet"/>
+</head>
+<style>
+    .left-tutor-card{
+        height: 100%;
+        
+    }  
+    .tutor-name{
+        color: #34B5B8;
+        font-weight: bolder;
+    }
+     
+</style>
+<body class="">
+ <div class="wrapper">
+  <div class="sidebar" data-color="white" data-active-color="danger">
+   <div class="logo">
+    <a href="http://startng.ml">
+     <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
+    </a>
+   </div>
+   <div class="sidebar-wrapper">
+    <ul class="nav">
+     <li class="active">
+      <a href="./tutor-dashboard.html">
+       <i class="fa fa-home"></i>
+        <p>Dashboard</p>
+      </a>
+     </li>
+     <li>
+      <a href="./tutor-profile.html">
+       <i class="fa fa-home"></i>
+        <p>Tutor Profile</p>
+      </a>
+     </li>
+     <li>
+      <a href="./tutor-courses.html">
+       <i class="fa fa-book"></i>
+        <p>View Courses</p>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <div class="main-panel">
+  <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+    <div class="container-fluid">
+     <div class="navbar-wrapper">
+      <div class="navbar-toggle">
+        <button type="button" class="navbar-toggler">
+         <span class="navbar-toggler-bar bar1"></span>
+         <span class="navbar-toggler-bar bar2"></span>
+         <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <a class="navbar-brand" href="#pablo">DASHBOARD</a>
+     </div>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+      <span class="navbar-toggler-bar navbar-kebab"></span>
+     </button>
+     <div class="collapse navbar-collapse justify-content-end" id="navigation">
+      <form>
+       <div class="input-group no-border">
+        <input type="text" value="" class="form-control" placeholder="Search..."><br>
+         <div class="input-group-append">
+          <div class="input-group-text">
+           <i class="fa fa-search"></i>
+          </div>
+         </div>
+       </div>
+      </form>
+     </div>
+    </div> 
+   </nav>
+<!-- End Navbar -->
+<div class="content">
+ <div class="row">
+  <div class="col-sm-4 left-tutor-card">
+    <div class="card">
+     <img src="" class="card-img-top" alt="" style="background-color:purple; height: 120px;">
+      <div class="card-body text-center">
+       <img src="https://res.cloudinary.com/angelae/image/upload/v1566504621/Start-ng-Pre-internship/Angela_E._yx0mgw.jpg" alt="..." style="border-radius: 50%; height: 130px; width: 130px; margin-top: -70px;"> <br><br>
+        <h5 class="card-title tutor-name">Angela Egerega</h5>
+        <p class="card-text">@Angela E.</p>
+        <p class="about-tutor">"About Me"</p><br><br>
+        <hr>
+       <div class="row">
+        <div class="col-sm-6">
+         <p>1 <br>Project(s) Pending</p>
+        </div>
+        <div class="col-sm-6">
+         <p>1 <br>Project(s) Pending</p>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Edit Profile</h5>
+        <form action="" method="post">
+          <div class="row">
+           <div class="col-5">
+            <label>User Name</label>
+             <input type="text" class="form-control">
+           </div>
+           <div class="col-2">
+           </div>
+           <div class="col-5">
+            <label>Email Address</label>
+             <input type="text" class="form-control">
+           </div>
+          </div><br>
+          <div class="row">
+           <div class="col">
+            <label>First Name</label>
+             <input type="text" class="form-control">
+           </div>
+           <div class="col">
+            <label>Last Name</label>
+             <input type="text" class="form-control">
+           </div>
+          </div><br>
+          <div class="custom-file">
+           <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">upload profile picture</label>
+          </div><br><br>
+          <div class="form-group">
+           <label>Address</label>
+           <input type="text" class="form-control">
+          </div><br>
+          <div class="form-row">
+           <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">City</label>
+             <input type="text" class="form-control" id="validationTooltip03" required>
+              <div class="invalid-tooltip">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip04">Country</label>
+              <input type="text" class="form-control" id="validationTooltip04" required>
+              <div class="invalid-tooltip">
+                Please provide a valid country.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationTooltip05">Postal Code</label>
+              <input type="number" class="form-control" id="validationTooltip05" required>
+              <div class="invalid-tooltip">
+                Please provide a valid postal code.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+           <label>About me</label>
+           <input type="textarea" class="form-control" style="height: 70px;" placeholder="write a few things about yourself">
+          </div>
+          <div class="text-center">
+           <a href="#" class="btn btn-primary" style="height:35px; border-radius: 30px;">update profile</a>
+          </div>
+        </form>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+ </div>
+</div>
+</body>
+    <!--   Core JS Files   -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+    <script src="js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="js/demo.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+            demo.initChartsPages();
+        });
+    </script>
+</html>
