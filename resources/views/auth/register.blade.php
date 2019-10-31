@@ -1,257 +1,231 @@
-<!DOCTYPE html>
+@extends('layouts.app')
 
-<html lang="en">
+@section('style')
 
+<style>
+    body {
 
+        font-family: 'Nunito', sans-serif;
 
-<head>
+    }
 
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    /* Style for Navbar Starts */
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    .navbar-custom li a {
 
-    <title>Register</title>
+        color: #000;
 
+    }
 
 
-    <style>
-        body {
 
-            font-family: 'Nunito', sans-serif;
+    .btn-success {
 
-        }
+        background-color: #2DCE89;
 
+        color: #fff;
 
+        border: thin solid #2dce89;
 
-        /* Style for Navbar Starts */
+    }
 
 
 
-        .navbar-custom li a {
+    .btn-success:hover {
 
-            color: #000;
+        background-color: #2DCE89;
 
-        }
+        color: #fff;
 
+        border: thin solid #2dce89;
 
 
-        .btn-success {
 
-            background-color: #2DCE89;
 
-            color: #fff;
 
-            border: thin solid #2dce89;
+    }
 
-        }
 
 
+    .custom-toggler .navbar-toggler-icon {
 
-        .btn-success:hover {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 
-            background-color: #2DCE89;
+    }
 
-            color: #fff;
 
-            border: thin solid #2dce89;
 
+    .custom-toggler.navbar-toggler {
 
+        border-color: #000;
 
+    }
 
 
-        }
 
+    /* Style for Navbar Ends */
 
+    /* Style for Footer Starts */
 
-        .custom-toggler .navbar-toggler-icon {
 
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 
-        }
+    * {
 
+        box-sizing: border-box;
 
+        margin: 0;
 
-        .custom-toggler.navbar-toggler {
+        padding: 0;
 
-            border-color: #000;
+        box-sizing: border-box;
 
-        }
+        font-family: 'Nunito', sans-serif;
 
+    }
 
 
-        /* Style for Navbar Ends */
 
-        /* Style for Footer Starts */
+    a {
 
+        text-decoration: none;
 
+    }
 
-        * {
 
-            box-sizing: border-box;
 
-            margin: 0;
+    .deep {
 
-            padding: 0;
+        background: #3A0842;
 
-            box-sizing: border-box;
+        color: #fff;
 
-            font-family: 'Nunito', sans-serif;
+    }
 
-        }
 
 
+    .deep #slink {
 
-        a {
+        background: #44CF6C;
 
-            text-decoration: none;
+        border-radius: 10px;
 
-        }
+        color: white;
 
+        padding: 10px 70px;
 
+    }
 
-        .deep {
 
-            background: #3A0842;
 
-            color: #fff;
+    .deep li a {
 
-        }
+        text-decoration: none;
 
+        color: #fff;
 
+        font-size: 16px;
 
-        .deep #slink {
+        line-height: 30px;
 
-            background: #44CF6C;
+    }
 
-            border-radius: 10px;
 
-            color: white;
 
-            padding: 10px 70px;
+    .deep li {
 
-        }
+        list-style: none;
 
+    }
 
 
-        .deep li a {
 
-            text-decoration: none;
+    .deep li a:hover {
 
-            color: #fff;
+        text-decoration: none;
 
-            font-size: 16px;
+    }
 
-            line-height: 30px;
 
-        }
 
+    a:hover {
 
+        text-decoration: none;
 
-        .deep li {
+    }
 
-            list-style: none;
 
-        }
 
+    .icons i {
 
+        font-size: 26px;
 
-        .deep li a:hover {
+        height: 50px;
 
-            text-decoration: none;
+        width: 50px;
 
-        }
+        padding: 10px 20px;
 
+        color: white;
 
+    }
 
-        a:hover {
 
-            text-decoration: none;
 
-        }
+    .icons i.fab.fa-twitter:hover {
 
 
 
-        .icons i {
+        color: #00aced;
 
-            font-size: 26px;
 
-            height: 50px;
 
-            width: 50px;
+    }
 
-            padding: 10px 20px;
 
-            color: white;
 
-        }
+    .icons i.fab.fa-facebook:hover {
 
 
 
-        .icons i.fab.fa-twitter:hover {
+        color: #3b5598;
 
 
 
-            color: #00aced;
+    }
 
 
 
-        }
+    .icons i.fab.fa-instagram:hover {
 
 
 
-        .icons i.fab.fa-facebook:hover {
+        color: #ed3833;
 
 
 
-            color: #3b5598;
+    }
 
 
 
-        }
+    /* Style for Footer Ends */
 
+    /* Body Style */
 
 
-        .icons i.fab.fa-instagram:hover {
 
+    .banner {
 
+        background-color: #E5EBFF;
 
-            color: #ed3833;
+    }
+</style>
+@endsection
 
-
-
-        }
-
-
-
-        /* Style for Footer Ends */
-
-        /* Body Style */
-
-
-
-        .banner {
-
-            background-color: #E5EBFF;
-
-        }
-    </style>
-
-</head>
-
-
-
-<body>
-
-    @include('inc.navbar')
-
+@section('content')
     <div class="container">
 
         <div id="main-container"></div>
@@ -411,16 +385,12 @@
 
         </form>
 
-</div>
+    </div>
     </div>
 
     </div>
 
 
-
-    <!-- Footer -->
-        @include('inc.footer')
-    <!-- End of Footer -->
 
     <script>
 
@@ -486,40 +456,6 @@
 
             }
 
-
-
-            if (!course) {
-
-                error.push('Course field cannot be blank')
-
-            }
-
-
-
-            if (!experience) {
-
-                error.push('Experience cannot be blank')
-
-            }
-
-
-
-            if (!state) {
-
-                error.push('State of Residence cannot be blank')
-
-            }
-
-
-
-            if (!country) {
-
-                error.push('Country cannot be blank')
-
-            }
-
-
-
             if (error.length > 0) {
 
                 error.forEach(err => {
@@ -559,32 +495,4 @@
 
 
     </script>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
-
-
-</html>
+@endsection

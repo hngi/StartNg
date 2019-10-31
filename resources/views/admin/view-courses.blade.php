@@ -102,9 +102,6 @@
                                                 <td>
                                                     {{$user->phone}}
                                                 </td>
-                                                <td class="text">
-                                                    <a class="btn btn-warning">VIEW DETAILS</a>
-                                                </td>
                                             </tr>
                                             @endif
                                         @endforeach
@@ -118,6 +115,7 @@
                     </div>
                 </div>
                 @endforeach
+                {{$courses->links()}}
             </div>
             @else
             <p>No course found<p>
