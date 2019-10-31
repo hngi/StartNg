@@ -47,3 +47,4 @@ Route::post('/admin', 'AdminController@store_course')->name('admin.store-course'
 
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::resource('subscriptions', 'SubscriptionsController'); 
