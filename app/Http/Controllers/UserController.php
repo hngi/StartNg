@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
+use App\Courses;
+use App\RegisteredCourses;
 
 class UserController extends Controller
 {
@@ -14,7 +17,22 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $id = auth()->user()->id;
+        
+        $data = array(
+            'courses' => Courses::all(),
+            'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
+            #'user' => User::where('id', $id)->get(),
+        );
+        return view('user.view-courses')->with($data);
+    }
+
+    public function profile()
+    {
+        $id = auth()->user()->id;
+        $user = User::find($id);
+        
+        return view('user.user-profile')->with('user', $user);
     }
 
     /**
@@ -46,7 +64,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        #$user = User::where('id', $id)
     }
 
     /**
