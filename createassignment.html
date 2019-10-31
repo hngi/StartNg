@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Tutor Dashboard
+        User Dashboard
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -141,9 +141,8 @@
                 </div>
                </div>
             </div> 
-        </div>
-        
-        <footer class="footer footer-black  footer-white ">
+        </div>  
+            <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">
                         <nav class="footer-nav">
@@ -151,7 +150,7 @@
                                 <li>
                                     <a href="https://startng.ml" target="_blank">STARTNG</a>
                                 </li>
-        
+
                             </ul>
                         </nav>
                         <div class="credits ml-auto">
@@ -165,152 +164,165 @@
                     </div>
                 </div>
             </footer>
-        
-        <script>
-        
-        class Review {
-            constructor(name, msg) {
-            this.name = name;
-            this.msg = msg;
-        
-            }
-        }
-        
-        class UI {
-            addReviewToList(review) {
-                const list = document.querySelector('.dynamic');
-        
-                const div = document.createElement('div');
-                const h4 = document.createElement('h4');
-                const par = document.createElement('p');
-                const btn = document.createElement('button');
-                const btndiv = document.createElement('div');
-        
-        
-        
-                h4.textContent = `Question ${review.name}`;  
-                par.textContent = `${review.msg}`;
-                btn.textContent = 'Delete';
-        
-        
-                div.classList.add("divHolder");
-                h4.classList.add("nameHolder");
-                par.classList.add("parHolder");
-                btn.classList.add("delete");
-                btndiv.classList.add("test");
-        
-        
-                btndiv.appendChild(btn)
-                div.appendChild(h4);
-        
-                div.appendChild(par)
-                div.appendChild(btndiv)
-                list.appendChild(div)
-            }
-        
-            showAlert(message, className) {
-                const div = document.createElement('div');
-                div.className = `alert ${className}`;
-                div.appendChild(document.createTextNode(message));
-                const container = document.querySelector('.container');
-                const form = document.querySelector('#review-form');
-                container.insertBefore(div, form);
-        
-                setTimeout(function(){
-                document.querySelector('.alert').remove();
-                }, 3000);
-            }
-        
-            deleteReview(target) {
-                if(target.className === 'delete') {
-                    target.parentElement.parentElement.remove();
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script>
+    
+            class Review {
+                constructor(name, msg) {
+                this.name = name;
+                this.msg = msg;
+            
                 }
             }
-        
-            clearFields() {
-                document.getElementsByClassName('name').value = '';
-        
-                document.getElementById('desc2').value = '';
-                document.getElementById('desc').value = '';
+            
+            class UI {
+                addReviewToList(review) {
+                    const list = document.querySelector('.dynamic');
+            
+                    const div = document.createElement('div');
+                    const h4 = document.createElement('h4');
+                    const par = document.createElement('p');
+                    const btn = document.createElement('button');
+                    const btndiv = document.createElement('div');
+            
+            
+            
+                    h4.textContent = `Question ${review.name}`;  
+                    par.textContent = `${review.msg}`;
+                    btn.textContent = 'Delete';
+            
+            
+                    div.classList.add("divHolder");
+                    h4.classList.add("nameHolder");
+                    par.classList.add("parHolder");
+                    btn.classList.add("delete");
+                    btndiv.classList.add("test");
+            
+            
+                    btndiv.appendChild(btn)
+                    div.appendChild(h4);
+            
+                    div.appendChild(par)
+                    div.appendChild(btndiv)
+                    list.appendChild(div)
+                }
+            
+                showAlert(message, className) {
+                    const div = document.createElement('div');
+                    div.className = `alert ${className}`;
+                    div.appendChild(document.createTextNode(message));
+                    const container = document.querySelector('.container');
+                    const form = document.querySelector('#review-form');
+                    container.insertBefore(div, form);
+            
+                    setTimeout(function(){
+                    document.querySelector('.alert').remove();
+                    }, 3000);
+                }
+            
+                deleteReview(target) {
+                    if(target.className === 'delete') {
+                        target.parentElement.parentElement.remove();
+                    }
+                }
+            
+                clearFields() {
+                    document.getElementsByClassName('name').value = '';
+            
+                    document.getElementById('desc2').value = '';
+                    document.getElementById('desc').value = '';
+                }
             }
-        }
-        
-        class Store {
-            static getReviews() {
-                let reviews;
-                if(localStorage.getItem('reviews') === null) {
-                    reviews = [];
+            
+            class Store {
+                static getReviews() {
+                    let reviews;
+                    if(localStorage.getItem('reviews') === null) {
+                        reviews = [];
+                    } else {
+                        reviews = JSON.parse(localStorage.getItem('reviews'));
+                    }
+            
+                return reviews;
+                }
+            
+                static displayReviews() {
+                    const reviews = Store.getReviews();
+            
+                    reviews.forEach(function(review){
+                        const ui  = new UI;
+            
+                        ui.addReviewToList(review);
+                    });
+                }
+            
+                static addReview(review) {
+                    const reviews = Store.getReviews();
+            
+                    reviews.push(review);
+            
+                    localStorage.setItem('reviews', JSON.stringify(reviews));
+                }
+            
+                static removeReview(msg) {
+                    const reviews = Store.getReviews();
+            
+                    reviews.forEach(function(review, index){
+                        reviews.splice(index, 1);
+            
+                    });
+            
+                    localStorage.setItem('reviews', JSON.stringify(reviews));
+                }
+            }
+            
+            document.addEventListener('DOMContentLoaded', Store.displayReviews);
+            
+            document.querySelector('.newBtn').addEventListener('click', function(e){
+            
+                const name = document.getElementById('desc2').value;
+                const msg = document.getElementById('desc').value;
+            
+                let review = new Review(name, msg);  
+                const ui = new UI();
+            
+                if(name === '' || msg === '' ) {
+                ui.showAlert('Please fill in all fields', 'error');
                 } else {
-                    reviews = JSON.parse(localStorage.getItem('reviews'));
-                }
-        
-            return reviews;
+                ui.addReviewToList(review);
+                Store.addReview(review);
+                ui.showAlert('Comment Submitted!', 'success');
+                ui.clearFields();
             }
-        
-            static displayReviews() {
-                const reviews = Store.getReviews();
-        
-                reviews.forEach(function(review){
-                    const ui  = new UI;
-        
-                    ui.addReviewToList(review);
-                });
-            }
-        
-            static addReview(review) {
-                const reviews = Store.getReviews();
-        
-                reviews.push(review);
-        
-                localStorage.setItem('reviews', JSON.stringify(reviews));
-            }
-        
-            static removeReview(msg) {
-                const reviews = Store.getReviews();
-        
-                reviews.forEach(function(review, index){
-                    reviews.splice(index, 1);
-        
-                });
-        
-                localStorage.setItem('reviews', JSON.stringify(reviews));
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', Store.displayReviews);
-        
-        document.querySelector('.newBtn').addEventListener('click', function(e){
-        
-            const name = document.getElementById('desc2').value;
-            const msg = document.getElementById('desc').value;
-        
-            let review = new Review(name, msg);  
-            const ui = new UI();
-        
-            if(name === '' || msg === '' ) {
-            ui.showAlert('Please fill in all fields', 'error');
-            } else {
-            ui.addReviewToList(review);
-            Store.addReview(review);
-            ui.showAlert('Comment Submitted!', 'success');
-            ui.clearFields();
-        }
-        
-        e.preventDefault();
-        });
-        
-        document.querySelector('.dynamic').addEventListener('dblclick' , function(e){  
-            const ui = new UI();
-            ui.deleteReview(e.target);
-            Store.removeReview(e.target.parentElement.parentElement.textContent);
-            ui.showAlert('Comment Deleted!', 'success');
-        
+            
             e.preventDefault();
+            });
+            
+            document.querySelector('.dynamic').addEventListener('dblclick' , function(e){  
+                const ui = new UI();
+                ui.deleteReview(e.target);
+                Store.removeReview(e.target.parentElement.parentElement.textContent);
+                ui.showAlert('Comment Deleted!', 'success');
+            
+                e.preventDefault();
+            });
+            
+            </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+    <script src="js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="js/demo.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+            demo.initChartsPages();
         });
-        
-        </script>
-        
-        </body>
-        </html>
-           
-          
+    </script>
+</body>
+
+</html>
