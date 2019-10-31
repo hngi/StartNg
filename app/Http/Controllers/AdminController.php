@@ -55,8 +55,7 @@ class AdminController extends Controller
         $course->user_id = $request->input('tutor');
         $course->save();
 
-        return 'success';
-        #return back()->with('success','Course Successfully Created');
+        return back()->with('success','Course Successfully Created');
     }
 
     public function create(){
@@ -186,7 +185,7 @@ class AdminController extends Controller
     public function view_courses()
     {
         $data = array(
-            'courses' => Courses::all(),
+            'courses' => Courses::orderBy('created_at','asc')->paginate(5),
             'registered_courses' => RegisteredCourses::all(),
             'users' => User::all(),
         );
@@ -195,7 +194,7 @@ class AdminController extends Controller
 
     public function view_students()
     {
-        $students = User::where('role', 0)->get();
+        $students = User::where('role', 0)->paginate(10);
         return view('admin.view-students')->with('students', $students);
     }
 
@@ -212,7 +211,7 @@ class AdminController extends Controller
 
     public function view_tutors()
     {
-        $students = User::where('role', 1)->get();
+        $students = User::where('role', 1)->paginate(10);
         return view('admin.view-tutors')->with('students', $students);
     }
 }
