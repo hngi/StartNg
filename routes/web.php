@@ -38,3 +38,5 @@ Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
+
+Route::resource('subscriptions', 'SubscriptionsController'); 

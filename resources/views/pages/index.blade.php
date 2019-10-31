@@ -1,3 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <title>Start NG</title>
+
+
+    <style>
+        /* Style for Navbar Starts */
+        :root {
+            --primary-color: #3A0842;
+            --secondary-color: #44CF6C;
+            --default-color: #7f7979;
+            --dark-color: #2A2B2A;
+            --light-color: #D3D5D4;
+        }
+        
+        body {
+            font-family: Nunito;
+        }
+
+        /* Style for Navbar Starts */
+
+        .navbar-custom li a {
+            color: #000;
+        }
+
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+
+        .btn-success:hover {
+            background-color: rgb(2, 20, 12);
+            color: #fff;
+            border: thin solid rgb(2, 20, 12);
+        }
+
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
+
+        /* Style for Navbar Ends */
+
+        /* Background style starts */
+        .bg-primary{
+            background-color: var(--primary-color) !important;
+        }
+        .bg-secondary{
+            background-color: var(--secondary-color) !important;
+        }
+        /* Background style starts */
+
+        /* Text styles starts */
+        .text-primary{
+            color: var(--primary-color) !important;
+        }
+        .text-secondary{
+            color: var(--secondary-color) !important;
+        }
+        /* Text styles ends */
+
+        /* Button styles starts */
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: thin solid var(--primary-color);
+            transition: 0.25s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            opacity: 0.85;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: thin solid var(--secondary-color);
+            transition: 0.25s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            opacity: 0.85;
+        }
+
+        /* Button styles end */
+
+        /* Style for Footer Starts */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /*main tag style starts here */
+        .jumbotron{
+            background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/lead-image.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .journey img{
+            max-width: 340px;
+        }
+        .video-overlay{
+            background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/beginer.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 300px;
+            display:flex;
+            align-items:center; /* vertically aligned! */
+            justify-content: center;
+        }
+
+        .steps-section img{
+            max-width: 340px;
+        }
+        .professional-section{
+            background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/professional.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        /*main tag style ends here */
+
+        /* Style for Footer Starts */
+
+        .deep {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .deep #slink {
+            background: #44CF6C;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 70px;
+        }
+
+        .deep li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .deep li {
+            list-style: none;
+        }
+
+        .deep li a:hover {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .icons i {
+            font-size: 26px;
+            height: 50px;
+            width: 50px;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .icons i.fa.fa-twitter:hover {
+            color: #00aced;
+        }
+
+        .icons i.fa.fa-facebook:hover {
+            color: #3b5598;
+        }
+
+        .icons i.fa.fa-instagram:hover {
+            color: #ed3833;
+        }
+
+        /* Style for Footer Ends */
+
+        .body-banner {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926364/startng/Group_415_yteas3.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        .video {
+            background-color: #44CF6C;
+        }
+
+        .help {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930464/startng/Group_418_ngwxfa.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        /* Vidoe style */
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+@include('../inc.navbar')
+@include('inc.messages');
+
 @extends('layouts.app')
 
 @section('style')
@@ -253,6 +506,28 @@
     </div>
 </div>
 
+ <!--  -->
+        <section class="journey">
+            <div class="container py-5">
+                <div class="row d-flex">
+                    <div class="col-md-7 order-sm-1 order-md-2">
+                        <div class="text-center">
+                            <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-sm-2 order-md-1 ">
+                        <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
+                        <p class="my-4 text-muted">
+                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. 
+                        </p>
+                        <form class="my-4">
+                            <div class="form-group w-75 mt-3">
+                                <input type="text" name="searchCourses" class="form-control" required>
+                            </div>
+                            <button class="btn btn-secondary py-2 px-4 mt-3"><i class="fas fa-search"></i> Find a Course</button>
+                        </form>
+                    </div>
+
 <!--  -->
 <section class="journey">
     <div class="container py-5">
@@ -260,6 +535,7 @@
             <div class="col-md-7 order-sm-1 order-md-2">
                 <div class="text-center">
                     <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
+
                 </div>
             </div>
             <div class="col-md-5 order-sm-2 order-md-1 ">
@@ -279,7 +555,7 @@
 </section>
 <!--  -->
 
-<div id="response">
+{{-- <div id="response">
     @if (session('message'))
         <div class="alert alert-success">
             {!! session('message') !!}
@@ -310,7 +586,7 @@
             </ul>
         </div>
     @endif
-</div>
+</div> --}}
 
 <div class="container mt-5">
     <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
@@ -507,12 +783,14 @@
             <div class="col-md-8 pb-5">
                 <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                 <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
-                </p>
-                <form class="form-inline">
-                    <input type="text" class="form-control col-md-8" id="email">
-                    <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5"
-                            style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
-                </form>
+            
+                
+                {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
+                {{ csrf_field() }}
+                {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
+                {{Form::submit('Subscribe', ['class' => 'btn btn-primary ml-1 pl-5 pr-5', 'style' => 'background-color: #44CF6C; border-color: #44CF6C' ])}}
+
+                {!! form::close() !!}
             </div>
             <div class="col-md-4">
                 <img class="img-fluid"
