@@ -249,6 +249,7 @@
 
 <body>
 @include('../inc.navbar')
+@include('inc.messages');
 
 <div class="container-fluid body-banner pt-5 pb-5">
     <div class="col-md-6 offset-md-2">
@@ -264,7 +265,7 @@
     </div>
 </div>
 
-< <!--  -->
+ <!--  -->
         <section class="journey">
             <div class="container py-5">
                 <div class="row d-flex">
@@ -290,7 +291,7 @@
         </section>
         <!--  -->
 
-<div id="response">
+{{-- <div id="response">
     @if (session('message'))
         <div class="alert alert-success">
             {!! session('message') !!}
@@ -321,7 +322,7 @@
             </ul>
         </div>
     @endif
-</div>
+</div> --}}
 
 <div class="container mt-5">
     <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
@@ -577,12 +578,18 @@
             <div class="col-md-8 pb-5">
                 <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                 <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
-                </p>
-                <form class="form-inline">
+            
+                {{-- <form class="form-inline">
                     <input type="text" class="form-control col-md-8" id="email">
                     <button type="submit" class="btn btn-primary ml-1 pl-5 pr-5"
                             style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
-                </form>
+                </form> --}}
+                {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
+                {{ csrf_field() }}
+                {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
+                {{Form::submit('Subscribe', ['class' => 'btn btn-primary ml-1 pl-5 pr-5', 'style' => 'background-color: #44CF6C; border-color: #44CF6C' ])}}
+
+                {!! form::close() !!}
             </div>
             <div class="col-md-4">
                 <img class="img-fluid"
