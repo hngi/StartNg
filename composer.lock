@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "609db66fae0a5e3a4483fd7a2fd900cf",
+    "content-hash": "b8442beb0872bd2d0eafb8d5bc5d8bb6",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -221,50 +221,6 @@
                 "schedule"
             ],
             "time": "2019-03-31T00:38:28+00:00"
-        },
-        {
-            "name": "drewm/mailchimp-api",
-            "version": "v2.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drewm/mailchimp-api.git",
-                "reference": "c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drewm/mailchimp-api/zipball/c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a",
-                "reference": "c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "7.0.*",
-                "vlucas/phpdotenv": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DrewM\\MailChimp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Drew McLellan",
-                    "email": "drew.mclellan@gmail.com",
-                    "homepage": "http://allinthehead.com/"
-                }
-            ],
-            "description": "Super-simple, minimum abstraction MailChimp API v3 wrapper",
-            "homepage": "https://github.com/drewm/mailchimp-api",
-            "time": "2019-08-06T09:24:58+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -776,74 +732,6 @@
                 "psysh"
             ],
             "time": "2019-08-07T15:10:45+00:00"
-        },
-        {
-            "name": "laravelcollective/html",
-            "version": "v5.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "3a1c9974ea629eed96e101a24e3852ced382eb29"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/3a1c9974ea629eed96e101a24e3852ced382eb29",
-                "reference": "3a1c9974ea629eed96e101a24e3852ced382eb29",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "5.8.*",
-                "illuminate/routing": "5.8.*",
-                "illuminate/session": "5.8.*",
-                "illuminate/support": "5.8.*",
-                "illuminate/view": "5.8.*",
-                "php": ">=7.1.3"
-            },
-            "require-dev": {
-                "illuminate/database": "5.8.*",
-                "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~7.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.8-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Collective\\Html\\HtmlServiceProvider"
-                    ],
-                    "aliases": {
-                        "Form": "Collective\\Html\\FormFacade",
-                        "Html": "Collective\\Html\\HtmlFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Collective\\Html\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Adam Engebretson",
-                    "email": "adam@laravelcollective.com"
-                },
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "HTML and Form Builders for the Laravel Framework",
-            "homepage": "https://laravelcollective.com",
-            "time": "2019-09-05T12:32:25+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1581,66 +1469,6 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
-        },
-        {
-            "name": "spatie/laravel-newsletter",
-            "version": "4.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-newsletter.git",
-                "reference": "c41a7d067379dac873b1e202f83fbb3ecafc02ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-newsletter/zipball/c41a7d067379dac873b1e202f83fbb3ecafc02ba",
-                "reference": "c41a7d067379dac873b1e202f83fbb3ecafc02ba",
-                "shasum": ""
-            },
-            "require": {
-                "drewm/mailchimp-api": "^2.4",
-                "illuminate/support": "~5.8.0|^6.0",
-                "php": "~7.2"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\Newsletter\\NewsletterServiceProvider"
-                    ],
-                    "aliases": {
-                        "Newsletter": "Spatie\\Newsletter\\NewsletterFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Newsletter\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://murze.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Manage newsletters in Laravel",
-            "homepage": "https://github.com/spatie/laravel-newsletter",
-            "keywords": [
-                "laravel",
-                "mailchimp",
-                "newsletter"
-            ],
-            "time": "2019-09-16T09:35:27+00:00"
         },
         {
             "name": "spatie/laravel-permission",
