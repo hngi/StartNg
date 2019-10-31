@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.btn {
+    background-color: #3A0842;
+}
+.main {
+
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 300px;
+}
+.text {
+    font-size: 14px;
+}
+
+.suc {
+    color: #3A0842;
+}
