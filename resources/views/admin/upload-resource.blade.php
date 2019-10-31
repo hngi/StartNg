@@ -5,15 +5,15 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Tutor Dashboard
+        User Dashboard
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/paper-dashboard.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/paper-dashboard.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -30,24 +30,31 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active">
-                        <a href="./dashboard.html">
+                    <li>
+                        <a href="dashboard.html">
                             <i class="fa fa-home"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./user.html">
-                            <i class="fa fa-home"></i>
-                            <p>Tutor Profile</p>
+                        <a href="user-profile.html">
+                            <i class="fa fa-user"></i>
+                            <p>User Profile</p>
                         </a>
                     </li>
                     <li>
-                        <a href="./user.html">
-                            <i class="fa fa-book"></i>
-                            <p>View Courses</p>
+                        <a href="view-student.html">
+                            <i class="fa fa-users"></i>
+                            <p>View Students</p>
                         </a>
                     </li>
+                    <li class="active">
+                        <a href="upload-resource.html">
+                            <i class="fa fa-file"></i>
+                            <p>Upload Resource</p>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -92,17 +99,62 @@
 
 
 </div> -->
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="desc">Resource Description</label>
+                            <input id="desc" class="form-control" type="text" name="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Upload
+                                    File</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a class="btn btn-warning" href="">SUBMIT</a>
+                </div>
+            </div>
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li>
+                                    <a href="https://startng.ml" target="_blank">STARTNG</a>
+                                </li>
 
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, made by Startdotng Team
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
     <!--   Core JS Files   -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
 
-    <script src="js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
-    <script src="js/demo.js"></script>
+    <script src="/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="/js/demo.js"></script>
     <script>
         $(document).ready(function() {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js

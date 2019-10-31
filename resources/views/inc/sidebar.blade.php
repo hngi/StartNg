@@ -1,25 +1,56 @@
-<div class="border-right" id="sidebar-wrapper" style="background-color: #3A0842;">
-    <div class="sidebar-heading"><a href="{{route('index')}}"><img class="img-fluid pt-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
-    </div>
-    <div class="list-group list-group-flush" style="background-color: #3A0842; color: #fff; text-transform: uppercase;">
-    @if(Auth::user()->role==2)
-        <a href="#" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Admin</a>
-        <a href=# class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add Admin</a>
-    @endif
-        <a href="#" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Users</a>
-        <a href="#" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">Add
-            Courses</a>
-        <a href="" class="list-group-item list-group-item-action pt-3 pb-3" style="background-color: #3A0842; color: #fff;">View Courses</a>
+<div class="sidebar" data-color="white" data-active-color="danger">
+    <div class="logo">
+    <a href="{{route('index')}}">
 
-        <a class="list-group-item list-group-item-action pt-3 pb-3" href="#"
-            onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
+            <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
+
         </a>
 
-        <form id="logout-form" action="#" method="POST" style="display: none;">
-            @csrf
-        </form>
-
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li>
+                <a href="{{route('admin.index')}}">
+                    <i class="fa fa-home"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.create')}}">
+                    <i class="fa fa-user"></i>
+                    <p>Create Admin</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.create-course')}}">
+                    <i class="fa fa-user"></i>
+                    <p>Create Course</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.view-courses')}}">
+                    <i class="fa fa-users"></i>
+                    <p>View All Courses</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.view-tutors')}}">
+                    <i class="fa fa-users"></i>
+                    <p>View All Tutors</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.view-students')}}">
+                    <i class="fa fa-users"></i>
+                    <p>View All Students</p>
+                </a>
+            </li>
+            <!--<li>
+                <a href="upload-resource.html">
+                    <i class="fa fa-file"></i>
+                    <p>Upload Resource</p>
+                </a>
+            </li>-->
+        </ul>
     </div>
 </div>

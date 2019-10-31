@@ -27,6 +27,9 @@ class DashboardController extends Controller
         if(auth()->user()->role == 0){
             return view('user.dashboard');
         }
+        elseif(auth()->user()->role == 1){
+            return view('tutor.dashboard');
+        }
         else{
             return view('admin.dashboard');
         }
