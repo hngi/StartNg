@@ -48,6 +48,7 @@ Route::get('/admins/view-user-detail/{id}', 'AdminController@view_user_detail')-
 Route::get('/admins/create-course', 'AdminController@create_course')->name('admin.create-course');
 Route::post('/admins/store', 'AdminController@store_course')->name('admin.store-course');
 
+Route::get('/users/profile', 'UserController@profile')->name('user.profile');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController'); 
