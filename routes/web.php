@@ -37,3 +37,13 @@ Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
+
+Route::get('/admins/view-courses', 'AdminController@view_courses')->name('admin.view-courses');
+Route::get('/admins/view-students', 'AdminController@view_students')->name('admin.view-students');
+Route::get('/admins/view-tutors', 'AdminController@view_tutors')->name('admin.view-tutors');
+Route::get('/admins/view-user-detail/{id}', 'AdminController@view_user_detail')->name('admin.view-user-detail');
+Route::get('/admins/create-course', 'AdminController@create_course')->name('admin.create-course');
+Route::post('/admin', 'AdminController@store_course')->name('admin.store-course');
+
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
