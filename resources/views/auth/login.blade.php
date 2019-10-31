@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <title>Login</title>
+@section('style')
 
-    <style>
+<style>
         body {
             font-family: 'Nunito', sans-serif;
         }
@@ -110,11 +102,9 @@
             background-color: #E5EBFF;
         }
     </style>
-</head>
+@endsection
 
-<body>
-    @include('../inc.navbar')
-
+@section('content')
     <div class="container-fluid banner">
         <div class="container">
             <div class="row align-items-center pt-5">
@@ -164,14 +154,4 @@
         <button type="submit" class="btn btn-success d-block mx-auto pl-5 pr-5 mb-4">Login</button>
     </div>
 </form>
-
-    <!-- Footer -->
-    @include('../inc.footer')
-    <!-- End of Footer -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+@endsection

@@ -9,37 +9,37 @@
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li>
+            <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
                 <a href="{{route('admin.index')}}">
                     <i class="fa fa-home"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li>
+            <li class="{{ (request()->is('admin/create')) ? 'active' : '' }}">
                 <a href="{{route('admin.create')}}">
                     <i class="fa fa-user"></i>
                     <p>Create Admin</p>
                 </a>
             </li>
-            <li>
+            <li class="{{ (request()->is('admins/create-course')) ? 'active' : '' }}">
                 <a href="{{route('admin.create-course')}}">
                     <i class="fa fa-user"></i>
                     <p>Create Course</p>
                 </a>
             </li>
-            <li>
+            <li class="{{ (request()->is('admins/view-courses')) ? 'active' : '' }}">
                 <a href="{{route('admin.view-courses')}}">
                     <i class="fa fa-users"></i>
                     <p>View All Courses</p>
                 </a>
             </li>
-            <li>
+            <li class="{{ (request()->is('admins/view-tutors')) ? 'active' : '' }}">
                 <a href="{{route('admin.view-tutors')}}">
                     <i class="fa fa-users"></i>
                     <p>View All Tutors</p>
                 </a>
             </li>
-            <li>
+            <li class="{{ (request()->is('admins/view-students')) ? 'active' : '' }}">
                 <a href="{{route('admin.view-students')}}">
                     <i class="fa fa-users"></i>
                     <p>View All Students</p>
