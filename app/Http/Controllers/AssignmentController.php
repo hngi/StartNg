@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Courses;
-use App\User;
 use App\Assignment;
 
-class TutorController extends Controller
+class AssignmentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +18,9 @@ class TutorController extends Controller
      */
     public function index()
     {
-        //
+         return view('tutor.assignment');
     }
+     
 
     /**
      * Show the form for creating a new resource.
