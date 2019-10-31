@@ -16,6 +16,13 @@ class CreateAssignmentsTable extends Migration
         Schema::create('assignments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->unsignedBigInteger('user_id'); //tutor in-charge
+            $table->string('title');
+            $table->string('description');
+            $table->string('file');
+            $table->date('date_from');
+            $table->date('date_to');
+            $table->boolean('active')->default(1);
         });
     }
 
