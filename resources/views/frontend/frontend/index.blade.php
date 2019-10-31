@@ -236,14 +236,20 @@
             <div class="mb-4 py-2 border-bottom text-center">
                 <h5 class="font-weight-bolder text-primary">Explore Our Courses</h5>
             </div>
+            @if (Session::has('success'))
+            
+        <p class="alert alert-primary text-center">{{Session('success')}}</p>
+                
+            @endif
             <div class="row">
+             
                 <!-- card -->
-
                 @foreach($courses as $item)
                     <div class="col-md-4">
                         <div class="card mb-4 shadow border-0">
                             <img src="https://lancer-app.000webhostapp.com/startng/images/landing/backend-1.png" class="card-img-top img-fluid img-responsive" alt="Courses" role="img">
                             <div class="card-body">
+                                
                                 <h5 class="card-title">{{$item->name}}</h5>
                                 <p class="card-text text-muted mb-0">{{$item->description}}</p>
                                 <p class="text-warning pb-2 my-0">
@@ -254,14 +260,22 @@
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="">
+                                        
                                         @if(Auth::guest())
                                             <a href="{{route('index')}}" class="btn btn-sm btn-primary rounded-pill py-0 mr-1"
                                                style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
                                         @endif
                                         @if(!Auth::guest())
-                                            <a href="{{route('register.courses',$item->id)}}" class="btn btn-sm btn-primary rounded-pill py-0 mr-1"
+                                        @if ( !auth()->user()->registercourse)
+                                     
+                                            <a href="{{route('verify',$item->id)}}" class="btn btn-sm btn-primary rounded-pill py-0 mr-1"
                                                style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                                        @endif
+                                               @endif
+                                               @else
+                                               <a href="{{route('verify',$item->id)}}" class="btn btn-sm btn-primary rounded-pill py-0 mr-1"
+                                                    style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                                               @endif
+                                              
                                         <a href="{{route('details',$item->id)}}" class="btn btn-sm btn-warning rounded-pill py-0"
                                            style="background-color: #FFE797; border: thin solid #FFE797;">Details</a>
                                     </div>
@@ -277,8 +291,6 @@
                 <!-- card -->
 
                 <!-- card -->
-
-
                 <!-- card -->
 
             </div>

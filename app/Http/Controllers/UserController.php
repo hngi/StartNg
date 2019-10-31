@@ -89,4 +89,5 @@ class UserController extends Controller
         $user = User::all();
         return view('inc.navbar')->with('user', $user);
     }
+
 }

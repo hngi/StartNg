@@ -600,7 +600,7 @@
 </form>
         <div class="results">
             @foreach($courses as $item)
-                <div class="result1 active-2">
+                {{-- <div class="result1 active-2">
                     <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS"
                          title="image-result" class="image-result">
                     <p class="first-result">{{$item->name}} &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$item->duration}}
@@ -609,13 +609,25 @@
                         @if(Auth::guest())
                             <a href="{{route('signup')}}" class="online-link">Register</a>
                             @endif
-                            @if(!Auth::guest())
-                                <a href="{{route('register.courses',$item->id)}}" class="online-link">Register</a>
-                            @endif
+                            
 
                         <a href="{{route('details',$item->id)}}" class="free-link">Details</a>
                     </p>
-                </div>
+                </div> --}}
+
+                <div class="card">
+                    <div class="card-header">
+                  <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="">
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title">{{$item->name}}</h5>
+                    <p class="card-text">{{$item->description}}</p>
+                   
+                    <a href="{{route('details',$item->id)}}" class="btn btn-primary">Details</a>
+                    </div>
+                  </div>
+
+
                 @endforeach
 
 

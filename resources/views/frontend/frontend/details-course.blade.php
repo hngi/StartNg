@@ -279,7 +279,12 @@
                                 <a class="btn btn-success pt-1 pb-1" href="/signup">Register</a>
                             @endif
                             @if(!Auth::guest())
-                                    <a class="btn btn-success pt-1 pb-1" href="{{route('register.courses',$course->id)}}">Register</a>
+                            @if (! auth()->user()->registercourse)
+                                
+                         
+                            <a href="{{route('verify',$course->id)}}" class="btn btn-sm btn-primary rounded-pill py-0 mr-1"
+                                    style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                                    @endif
 
                             @endif
                         </div>
