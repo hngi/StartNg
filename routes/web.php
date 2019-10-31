@@ -24,6 +24,8 @@ Route::resource('user', 'UserController');
 Route::resource('course', 'CourseController');
 Route::resource('course-content', 'CourseContentController');
 Route::resource('contact', 'ContactController');
+Route::resource('tutor', 'TutorController');
+Route::resource('tutor', 'AssignmentController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
