@@ -15,8 +15,86 @@
 //    return view('frontend.frontend.index');
 //});
 Route::get('/', 'BaseController@index')->name('index');
-Route::resource('Admin', 'AdminController');
-Route::resource('Blog', 'BlogController');
-Route::resource('User', 'UserController');
-Route::resource('Course', 'CourseController');
-Route::resource('Contact', 'ContactController');
+
+Route::get('/signup', 'BaseController@register')->name('signup');
+Route::get('/signin', 'BaseController@login')->name('signin');
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ *
+ * Admin Routes
+ */
+
+
+Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/admin', 'BaseController@admin')->name('admin');
+    Route::get('/course', 'CourseController@show')->name('courses');
+    Route::get('/course/create', 'CourseController@create')->name('course.create');
+    Route::get('/course/disable/{id}', 'CourseController@destroy')->name('course.disable');
+
+    Route::get('/users', 'UserController@show')->name('users');
+    Route::get('/user/disable/admin/{id}', 'UserController@disableAdmin')->name('user.disableAdmin');
+    Route::get('/user/disable/{id}', 'UserController@destroy')->name('user.disable');
+    Route::get('/users/{id}', 'UserController@user')->name('user.details');
+    Route::get('/course/{id}', 'CourseController@course')->name('course.details');
+    Route::post('/course', 'CourseController@store')->name('course.store');
+
+   //Forgot password
+    Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.reset');
+    Route::post('password/email','ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('password/rest/{token}', 'ResetPasswordController@showRequestForm')->name('password.reset.token');
+    Route::post('password/reset', 'ResetPasswordController@reset');
+});
+
+
+
+Route::post('/search-course', 'BaseController@search')->name('course.search');
+
+
+
+
+
+
+
+
+Route::get('/about', 'BaseController@about')->name('about');
+Route::get('/graduates', 'BaseController@hire')->name('hire');
+Route::get('/contact', 'BaseController@contact')->name('contact');
+Route::get('/courses/index', 'BaseController@courses')->name('courses.index');
+Route::get('/mycourses/{id}', 'BaseController@mycourse')->name('mycourses');
+Route::get('/verified/course/{id}', 'BaseController@registercourse')->name('verify');
+
+
+Route::get('/register-course/{id}', 'BaseController@registerCourses')->name('register.courses');
+Route::get('/course-details/{id}', 'BaseController@details')->name('details');
+
+Route::post('/contact', 'BaseController@storecontact')->name('contact.store');
+
+Route::get('/privacy', 'BaseController@privacy')->name('privacy');
+Route::get('/terms', 'BaseController@terms')->name('terms');
+Route::get('/faq', 'BaseController@faq')->name('faq');
+Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
+//Route::get('/blog', 'BaseController@blog')->name('blog');
+Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
+
+/**
+ *
+ * SuperAdmin Routes
+ */
+
+
+Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/mentors', 'AdminController@index')->name('mentors');
+    Route::get('/mentors/create', 'AdminController@create')->name('mentors.create');
+    Route::post('/mentors', 'AdminController@store')->name('mentors.store');
+    Route::get('/mentor/{id}/detail', 'AdminController@show')->name('mentor.show');
+    Route::get('/mentor/{id}', 'AdminController@destroy')->name('mentor.destroy');
+});
+
+Route::resource('blogs', 'BlogController');
+Route::get('/blogs/{id}/posts', 'BlogController@show_individual')->name('show.individual');

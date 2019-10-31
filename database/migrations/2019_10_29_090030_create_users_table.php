@@ -23,6 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->integer('role')->default(0);
             $table->boolean('active')->default(1);
+<<<<<<< HEAD:database/migrations/2019_10_29_090030_create_users_table.php
+=======
+            $table->string('role')->default(0);
+            $table->boolean('registercourse')->default(0);
+>>>>>>> master:database/migrations/2014_10_12_000000_create_users_table.php
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
