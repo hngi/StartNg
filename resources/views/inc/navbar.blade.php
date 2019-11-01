@@ -20,10 +20,10 @@
                 </li>
                 @if(Auth::guest())
                     <li class="nav-item mr-4">
-                        <a class="btn btn-custom nav-link pl-5 pr-5" href="{{route('register')}}" style="color: #fff;">Register</a>
-                    </li>
+                        <a class="btn btn-success nav-link pl-5 pr-5" href="{{route('register')}}" style="color: #fff;">Register</a>
+                    </li><br>
                     <li class="nav-item mr-4">
-                        <a class="btn btn-custom nav-link pl-5 pr-5" href="{{route('login')}}" style="color: #fff;">Login</a>
+                        <a class="btn btn-success nav-link pl-5 pr-5" href="{{route('login')}}" style="color: #fff;">Login</a>
                     </li>
                 @else
                     <li class="nav-item mr-4">

@@ -207,11 +207,26 @@ class AdminController extends Controller
         elseif ($user->role == 1){
             return view('admin.view-tutor-detail')->with('user', $user);
         }
+         elseif ($user->role == 2){
+            return view('admin.view-admin-detail')->with('user', $user);
+        }
     }
 
     public function view_tutors()
     {
-        $students = User::where('role', 1)->paginate(10);
-        return view('admin.view-tutors')->with('students', $students);
+        $tutors = User::where('role', 1)->paginate(10);
+        return view('admin.view-tutors')->with('tutors', $tutors);
+    }
+     public function view_admins()
+    {
+        $admins = User::where('role', 2)->paginate(10);
+        return view('admin.view-admins')->with('admins', $admins);
+    }
+        public function destroyadmin($id)
+    {
+        $admin = user::find($id);
+        $admin->delete();
+
+        return redirect('admin.view-admins')->with('success', 'Admin deleted!');
     }
 }

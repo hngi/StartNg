@@ -29,34 +29,7 @@
 
             </div>
             <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="dashboard.html">
-                            <i class="fa fa-home"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="user-profile.html">
-                            <i class="fa fa-user"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="view-student.html">
-                            <i class="fa fa-users"></i>
-                            <p>View Students</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="upload-resource.html">
-                            <i class="fa fa-file"></i>
-                            <p>Upload Resource</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  @include('inc.tutorsidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Dashboard
+        Admin Course Dashboard | StartNg
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -56,7 +56,7 @@
             <!-- End Navbar -->
             <!-- <div class="panel-header panel-header-lg">
   <canvas id="bigDashboardChart"></canvas>
-</div> -->  
+</div> -->   @include('inc.messages')
             @if(count($courses) > 0)
             <div class=" content">
                 @foreach($courses as $course)
