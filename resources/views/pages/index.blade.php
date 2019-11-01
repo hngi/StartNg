@@ -288,6 +288,7 @@
 @include('inc.messages')
 </div> --}}
 </div>
+
 <div class="container mt-5">
 <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
 <hr>
@@ -329,42 +330,7 @@
                         style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
                 </div>
             </div>
-    @endforeach
 </div>
-</div>
- <!--  -->
-<section class="beginning-lesson">
-    <div class="row no-gutters">
-        <div class="col-md-6 bg-secondary">
-            <div class="container">
-                <div class="mb-4 pt-5 px-md-5 mx-md-5">
-                    <h5 class="text-white">The beginning of your career starts here. With us.</h5>
-                    <dl class="d-flex align-items-start text-white mb-0">
-                        <dt class="">-</dt>
-                        <dd class="ml-4 mb-0">
-                            <p class="d-inline">
-                                <div class="font-weight-bold mb-2">
-                                    Intensive learning sessions
-                                </div>
-                                <span class="">The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software developers.
-                                </span>
-                            </p>
-                        </dd>
-                    </dl>
-                    <dl class="d-flex align-items-start text-white pt-0">
-                        <dt class="">-</dt>
-                        <dd class="ml-4">
-                            <p class="d-inline">
-                                <div class="font-weight-bold mb-2">
-                                    Intensive learning sessions
-                                </div>
-                                <span class="">The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software developers.
-                                </span>
-                            </p>
-                        </dd>
-                    </dl>
-                    <div class=""></div>
-        </div>
         @if($counter%3==0) <br>   @endif
 
         @php
