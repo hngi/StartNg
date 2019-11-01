@@ -1,52 +1,85 @@
     <!-- Footer -->
-    <div class="container-fluid text-white deep">
-        <footer>
-            <div class="container">
+    <footer>
+        <div class="container-fluid footer-top col-lg-12">
+            <div class="container col-md-12 p-5">
+                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
                 <div class="row">
-                    <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png"
-                            alt="">
-                    </div>
-                </div>
+                   @if(Auth::guest())
+                    <div class="col-md-4 mt-4">
 
-                <div class="row pb-4">
-                    <div class="col-lg-4 col-md-12 mb-3">
-                        <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="{{route('register')}}" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <h4 class="">Ready to take the leap?</h4>
+                        <a class="btn btn-custom mt-3 pl-5 pr-5" href="{{route('register')}}">Start</a>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('about')}}">About Us</a></li>
-                        <li><a href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a href="{{route('hire')}}">Hire a Grad</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('curriculum')}}">Curriculum</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('find-course')}}">Find a Course</a></li>
-                        <li><a href="{{route('faq')}}">FAQ</a></li>
-                        <li><a href="{{route('contact')}}">Contact Us</a></li>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
-                        <li><a href="{{route('terms')}}">Terms of Service</a></li>
-                        <li><a href="{{route('privacy')}}">Privacy Policy</a></li>
-                    </div>
-                </div>
+                @else
+                     <div class="col-md-4 mt-4">
 
-            </div>
-    </div>
-    <div class="container-fluid text-white py-2" style="background: #2E0435; width:100%;">
-        <div class="container text-right">
-            <div class="row icons">
-                <div class="col-md-12 ">
-                    <a href=""><i class='fab fa-twitter' aria-hidden="true"></i></a>
-                    <a href=""><i class='fab fa-instagram' aria-hidden="true"></i></a>
-                    <a href=""><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                         <a class="btn btn-custom mt-3 pl-5 pr-5" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                         </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                        </form>
+                    </div>
+                @endif
+                    <div class="col-md-2 mt-4">
+
+                        <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
+                        <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                        <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
+
+                    </div>
+                    <div class="col-md-2 mt-4">
+
+                        <li>
+                            <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="">Blog</a>
+                        </li>
+
+                    </div>
+                    <div class="col-md-2 mt-4">
+                        <li>
+                            <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="{{route('faq')}}">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
+                        </li>
+                    </div>
+                    <div class="col-md-2 mt-4">
+                        <li>
+                            <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
+                        </li>
+                    </div>
                 </div>
             </div>
         </div>
-        </footer>
-    </div>
+        <div class="container-fluid footer-social col-lg-12">
+            <div class="container p-3">
+                <div class="clearfix">
+                    <div class="float-left">
+
+                    </div>
+                    <div class="float-right">
+                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- End of Footer -->

@@ -19,11 +19,14 @@ Auth::routes();
 
 Route::get('/', 'BaseController@index')->name('index');
 Route::resource('admin', 'AdminController');
+Route::resource('admin', 'TutorController');
 Route::resource('blog', 'BlogController');
 Route::resource('user', 'UserController');
 Route::resource('course', 'CourseController');
 Route::resource('course-content', 'CourseContentController');
 Route::resource('contact', 'ContactController');
+Route::resource('tutor', 'TutorController');
+// Route::resource('tutor', 'AssignmentController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
@@ -37,3 +40,21 @@ Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
+
+Route::post('admin/store', 'AdminController@store')->name('admin.store');
+Route::get('/admins/view-admins', 'AdminController@view_admins')->name('admin.view-admins');
+Route::get('/admins/view-courses', 'AdminController@view_courses')->name('admin.view-courses');
+Route::get('/admins/view-students', 'AdminController@view_students')->name('admin.view-students');
+Route::get('/admins/view-tutors', 'AdminController@view_tutors')->name('admin.view-tutors');
+Route::get('/admins/destroy/{id}', 'AdminController@view_user_detail')->name('admin.destroy');
+Route::get('/admins/destroy/{id}', 'TutorController@destroy')->name('tutor.destroy');
+Route::get('/admins/view-tutor-detail/{id}', 'AdminController@destroy')->name('admin.view-tutor-detail');
+Route::get('/admins/create-course', 'AdminController@create_course')->name('admin.create-course');
+Route::post('/admins/store', 'AdminController@store_course')->name('admin.store-course');
+
+Route::get('/users/profile', 'UserController@profile')->name('user.profile');
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::resource('subscriptions', 'SubscriptionsController'); 
+
+Route::get('/tutors/view-courses', 'TutorController@index')->name('tutor.view-courses');
