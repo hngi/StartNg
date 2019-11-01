@@ -257,75 +257,78 @@
         <a href="#" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
     </div>
 </div>
+<!--  -->
+<section class="journey">
+    <div class="container py-5">
+        <div class="row d-flex">
+            <div class="col-md-7 order-sm-1 order-md-2">
+                <div class="text-center">
+                    <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
 
- <!--  -->
-        <section class="journey">
-            <div class="container py-5">
-                <div class="row d-flex">
-                    <div class="col-md-7 order-sm-1 order-md-2">
-                        <div class="text-center">
-                            <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-5 order-sm-2 order-md-1 ">
+                <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
+                <p class="my-4 text-muted">
+                    The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. 
+                </p>
+                <form class="my-4">
+                    <div class="form-group w-75 mt-3">
+                        <input type="text" name="searchCourses" class="form-control" required>
                     </div>
-                    <div class="col-md-5 order-sm-2 order-md-1 ">
-                        <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
-                        <p class="my-4 text-muted">
-                            The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. 
-                        </p>
-                        <form class="my-4">
-                            <div class="form-group w-75 mt-3">
-                                <input type="text" name="searchCourses" class="form-control" required>
-                            </div>
-                            <button class="btn btn-success py-2 px-4 mt-3"><i class="fas fa-search"></i> Find a Course</button>
-                        </form>
-                    </div>
+                    <button class="btn btn-secondary py-2 px-4 mt-3"><i class="fas fa-search"></i> Find a Course</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  -->
+
 {{-- <div id="response">
 @include('inc.messages')
 </div> --}}
 </div>
 <div class="container mt-5">
-    <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
-    <hr>
+<h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
+<hr>
 
-    @php
-        $counter=3;
-    @endphp
+@php
+    $counter=4;
+@endphp
+
+@if (session('success'))
+    <div class=" text-center alert alert-success">
+        {!!  session('success') !!}
+    </div>
+@endif
+@if (session('error'))
+    <div class="text-center alert alert-warning">
+        {{ session('error') }}
+    </div>
+@endif
+
+<div class="row">
 
     @foreach($courses as $item)
-        @if($counter%3==0)
-            <div class="row">
-                @endif
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top"
-                             src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
-                             alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title" style="font-weight: bold;">{{$item->name}}</h4>
-                            <p>{{$item->description}}</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked mb-3"></span> <br>
-                            @if(Auth::guest())
-                                <a href="#" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                                   style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                            @endif
-                            @if(!Auth::guest())
-                                <a href="#" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                                   style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                            @endif
-                            <a href="#" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                               style="background-color: #FFE797; border: thin solid #FFE797;">Details</a>
-                        </div>
-                    </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top"
+                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
+                        alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-weight: bold;">{{$item->name}}</h4>
+                    <p>{{$item->description}}</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked mb-3"></span> <br>
+                    <a href="{{route('register.courses',$item->id)}}" class="reg btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                        style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                    <a href="#" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                        style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
                 </div>
-
-                @if($counter%3==0)
             </div>
-        @endif
-
     @endforeach
 </div>
 </div>
@@ -361,24 +364,85 @@
                         </dd>
                     </dl>
                     <div class=""></div>
+        </div>
+        @if($counter%3==0) <br>   @endif
+
+        @php
+            $counter+=1;
+        @endphp
+
+    @endforeach
+</div>
+<br>
+
+<div class="text-center">
+    <a href="{{route('courses.index')}}">
+        <button class="btn btn-primary    pt-3">
+            View More Courses
+        </button>
+    </a>
+</div>
+<br>
+<!--  -->
+<br>
+<!--  -->
+    <section class="beginning-lesson">
+        <div class="row no-gutters">
+            <div class="col-md-6 bg-secondary">
+                <div class="container">
+                    <div class="mb-4 pt-5 px-md-5 mx-md-5">
+                        <h5 class="text-white">The beginning of your career starts here. With us.</h5>
+                        <dl class="d-flex align-items-start text-white mb-0">
+                            <dt class="">-</dt>
+                            <dd class="ml-4 mb-0">
+                                <p class="d-inline">
+                                    <div class="font-weight-bold mb-2">
+                                        Intensive learning sessions
+                                    </div>
+                                    <span class="">The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software developers.
+                                    </span>
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl class="d-flex align-items-start text-white pt-0">
+                            <dt class="">-</dt>
+                            <dd class="ml-4">
+                                <p class="d-inline">
+                                    <div class="font-weight-bold mb-2">
+                                        Intensive learning sessions
+                                    </div>
+                                    <span class="">The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software developers.
+                                    </span>
+                                </p>
+                            </dd>
+                        </dl>
+                        <div class=""></div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 mt-0 pt-0">
-            <div class="videoWrapper">
-                <iframe 
-                    width="100%" 
-                    height="380"
-                    src="https://www.youtube.com/embed/DYaq2sWTWAA" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+            <div class="col-md-6 mt-0 pt-0">
+                <div class="videoWrapper">
+                    <iframe 
+                        width="100%" 
+                        height="380"
+                        src="https://www.youtube.com/embed/DYaq2sWTWAA" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- <div class="container">
+                    <div class="text-center">
+                        <button class="btn btn-light btn-lg rounded-circle text-secondary pt-3">
+                            <i class="fas fa-play fa-2x"></i>
+                        </button>
+                    </div>
+                </div> -->
             </div>
-        </div>
-    </div>            
-</section>
-<!--  -->
+        </div>            
+    </section>
+    <!--  -->
 
 <!-- Take Your First Steps in Achieving Your Dreams -->
         <section class="steps-section">
@@ -479,7 +543,7 @@
             <div class="col-md-8 pb-5">
                 <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                 <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
-                           
+
                 {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
                 {{ csrf_field() }}
                 {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}

@@ -18,17 +18,7 @@
 
 <body class="">
     <div class="wrapper ">
-        <div class="sidebar" data-color="white" data-active-color="danger">
 
-            <div class="logo">
-                <a href="http://startng.ml">
-
-                    <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
-
-                </a>
-
-            </div>
-            <div class="sidebar-wrapper">
   @include('inc.tutorsidebar')
         <div class="main-panel">
             <!-- Navbar -->
