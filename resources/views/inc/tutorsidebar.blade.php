@@ -9,20 +9,20 @@
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
-                <a href="{{route('tutor.index')}}">
+            <li class="{{ (request()->is('tutor/dashboard')) ? 'active' : '' }}">
+                <a href="{{route('tutor.dashboard')}}">
                     <i class="fa fa-home"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admin/create')) ? 'active' : '' }}">
-                <a href="#">
+            <li class="{{ (request()->is('tutor/profile')) ? 'active' : '' }}">
+                <a href="{{route('tutor.profile')}}">
                     <i class="fa fa-user"></i>
                     <p>My Profile</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/create-course')) ? 'active' : '' }}">
-                <a href="{{route('admin.create-course')}}">
+            <li class="{{ (request()->is('tutors/view-courses')) ? 'active' : '' }}">
+                <a href="{{route('tutor.view-courses')}}">
                     <i class="fa fa-book"></i>
                     <p>My Courses</p>
                 </a>
@@ -33,20 +33,20 @@
                     <p>Reviews</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/view-courses')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-courses')}}">
+            <li class="{{ (request()->is('tutors/assignment')) ? 'active' : '' }}">
+                <a href="{{route('tutor.assignment')}}">
                     <i class="fa fa-book"></i>
                     <p>Assignments</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/view-tutors')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-tutors')}}">
-                    <i class="fa fa-users"></i>
-                    <p>View All Tutors</p>
+            <li class="{{ (request()->is('tutors/upload-resource')) ? 'active' : '' }}">
+                <a href="{{route('tutor.upload-resource')}}">
+                    <i class="fa fa-file"></i>
+                    <p>Resourses</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/view-students')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-students')}}">
+            <li class="{{ (request()->is('tutors/view-students')) ? 'active' : '' }}">
+                <a href="{{route('tutor.view-students')}}">
                     <i class="fa fa-users"></i>
                     <p>View All My Students</p>
                 </a>

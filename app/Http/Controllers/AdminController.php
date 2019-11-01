@@ -166,7 +166,20 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $tutor = User::find($id);
+        if (empty($tutor)) {
+            Flash::error('tutor not found');
+            return redirect(route('view-tutors'));
+        }
+
+        $tutor->active = ($tutor->active == 0) ? 1 : 0;
+        $title = ($tutor->active == 1) ? "enabled" : "disabled";
+
+
+        $tutor->save();
+//        Flash::success("User has been $title successfully.");
+        return redirect(route('dashboard'));
     }
 
     public function view_courses()

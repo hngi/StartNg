@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Tutor Dashboard | StartNg
+        Tutor Dashboard | StartNg
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -19,7 +19,7 @@
 
 <body class="">
     <div class="wrapper ">
-        @include('inc.sidebar')
+        @include('inc.tutorsidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -32,7 +32,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW ALL ADMINS</a>
+                        <a class="navbar-brand" href="#pablo">VIEW ALL STUDENTS</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -53,39 +53,51 @@
                     </div>
                 </div>
             </nav>
-             @include('inc.messages')
+            @include('inc.messages') 
             <div class=" content">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">ADMINS</h4>
+                                <h4 class="card-title">STUDENTS</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class=" text-primary">
-                                           <th>Name</th>
-                                                <th>Username</th>
-                                                <th>Email Address</th>
-                                                <th>Phone Number</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>Email Address</th>
+                                            <th>Phone Number</th>
+                                            <th>Location</th>
+                                            <th>Action</th>
                                         </thead>
                                         <tbody>
-                                            @foreach($admins as $admin)
+                                            @foreach($students as $student)
                                             <tr>
-                                                <td>{{$admin->first_name}} {{$admin->last_name}}</td>
-                                                <td>{{$admin->username}}</td>
-                                                <td>{{$admin->email}}</td>
-                                                <td>{{$admin->phone}}</td>
-
+                                                <td>
+                                                    {{$student->first_name}} {{$student->last_name}}
+                                                </td>
+                                                <td>
+                                                    {{$student->username}}
+                                                </td>
+                                                <td>
+                                                    {{$student->email}}
+                                                </td>
+                                                <td>
+                                                    {{$student->phone}}
+                                                </td>
+                                                <td>
+                                                    {{$student->state}}
+                                                </td>
                                                 <td class="text">
-                                                    <a href="{{route('admin.view-user-detail', $admin->id)}}" class="btn btn-warning">VIEW DETAILS</a>
+                                                    <a href="{{route('admin.view-user-detail', $student->id)}}" class="btn btn-warning">VIEW DETAILS</a>
                                                 </td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    {{$admins->links()}}
+                                    {{$students->links()}}
                                 </div>
                             </div>
                         </div>
@@ -105,18 +117,6 @@
             demo.initChartsPages();
         });
     </script>
-     </script>
-                <script type="text/javascript">
-                $(document).ready(function() {
-                var newUrl = "";
-                $("#dothis").change(function() {
-                $newUrl = $("#dothis option:selected").val();
-                });
-                $("#executelink").click(function() {
-                location = $newUrl ;
-                });
-                });
-                </script>
 </body>
 
 </html>
