@@ -80,6 +80,9 @@
                                                 Price
                                             </th>
                                             <th>
+                                                Progress
+                                            </th>
+                                            <th>
                                                 Tutor
                                             </th>
                                             <th class="text"> </th>
@@ -99,6 +102,9 @@
                                                     NGN{{$course->price}}
                                                 </td>
                                                 <td>
+                                                    {{$registered_course->progress}}%
+                                                </td>
+                                                <td>
                                                     @foreach($users as $user)
                                                     @if($user->id == $course->user_id)
                                                     {{$user->username}}
@@ -106,7 +112,7 @@
                                                     @endforeach
                                                 </td>
                                                 <td class="text">
-                                                    <a class="btn btn-warning">VIEW COURSE</a>
+                                                    <a href="{{route('user.show', $course->id)}}" class="btn btn-warning">VIEW COURSE</a>
                                                 </td>
                                             </tr>
                                             @endif

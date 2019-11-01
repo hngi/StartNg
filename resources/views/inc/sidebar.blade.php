@@ -9,8 +9,8 @@
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
-                <a href="{{route('admin.index')}}">
+            <li class="{{ (request()->is('dashboard')) ? 'active' : '' }}">
+                <a href="{{route('dashboard')}}">
                     <i class="fa fa-home"></i>
                     <p>Dashboard</p>
                 </a>

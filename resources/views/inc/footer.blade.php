@@ -4,7 +4,7 @@
             <div class="container col-md-12 p-5">
                 <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
                 <div class="row">
-                   @if(Auth::guest())
+                @if(Auth::guest())
                     <div class="col-md-4 mt-4">
 
                         <h4 class="">Ready to take the leap?</h4>
