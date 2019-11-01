@@ -91,9 +91,6 @@
                                 </h5>
                             </div>
                         </div>
-                    <div>
-                        <button><a href="{{route('admin.edit', $user->id)}}">EDIT</a></button>
-                    </div>
                 </div>
             </div>
         </div>

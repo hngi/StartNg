@@ -69,7 +69,6 @@
                                                 <th>Username</th>
                                                 <th>Email Address</th>
                                                 <th>Phone Number</th>
-                                                <th>Action </th>
                                         </thead>
                                         <tbody>
                                             @foreach($admins as $admin)
@@ -78,17 +77,9 @@
                                                 <td>{{$admin->username}}</td>
                                                 <td>{{$admin->email}}</td>
                                                 <td>{{$admin->phone}}</td>
-                                                <td><select id="dothis">
-                                                        <option value="">Please select an action</option>
-                                                        <option value="{{route('admin.destroy',$admin->id)}}">Enable</option>
-                                                        <option value="{{route('admin.destroy',$admin->id)}}">Diable</option>
-                                                        <option value="{{route('admin.edit', $admin->id)}}">Edit</option>
-                                                        <option value="{{route('admin.destroy', $admin->id)}}">Delete</option>
-                                                        <option value="{{route('admin.view-tutor-detail', $admin->id)}}">View Details</option>
-                                                    </select></td>
-                                                    <td><button id="executelink">Go</button>
-                                                        
-                                                    </td>
+                                                <td class="text">
+                                                    <a href="{{route('admin.view-user-detail', $admin->id)}}" class="btn btn-warning">VIEW DETAILS</a>
+                                                </td>
                                             </tr>
                                             @endforeach
                                         </tbody>

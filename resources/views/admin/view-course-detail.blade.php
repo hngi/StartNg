@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Dashboard | StartNg
+        Admin Dashboard |StartNg
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -32,7 +32,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW TUTOR DETAIL</a>
+                        <a class="navbar-brand" href="#pablo">VIEW STUDENT DETAIL</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -53,51 +53,23 @@
                     </div>
                 </div>
             </nav>
-             @include('inc.messages')
+      @include('inc.messages')       
             <div class="content">
                 <div class="card card-register">
                     <div class="card-header">
-                        <h5 class="card-title">{{$user->username}}</h5>
+                        <h5 class="card-title">DETAILS</h5>
+                        @foreach($users as $user)
+                        @if($course->user_id == $user->id)
+                        <h4 class="card-title">Tutor: {{$user->username}}</h4>
+                        @endif
+                        @endforeach
+                        <h4 class="card-title">Number of Students: {{$number}}</h4>
                     </div>
                     <div class="card-body">
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>NAME: {{$user->first_name}} {{$user->last_name}}</h5>
-                            </div>
-
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>USERNAME: {{$user->username}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>EMAIL: {{$user->email}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Phone Number: {{$user->phone}}</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>COURSES:<span>
-                                @foreach($courses as $course)
-                                        <li class="mt-4">{{$course->title}}</li>
-                                @endforeach
-                                </h5>
-                            </div>
-                        </div>
-                    <div>
-                        <button><a href="{{route('admin.edit', $user->id)}}">EDIT</a></button>
+                        Reviews:
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
     <!--   Core JS Files   -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>

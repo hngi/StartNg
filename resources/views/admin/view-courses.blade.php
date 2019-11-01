@@ -56,7 +56,7 @@
             <!-- End Navbar -->
             <!-- <div class="panel-header panel-header-lg">
   <canvas id="bigDashboardChart"></canvas>
-</div> -->   @include('inc.messages')
+</div> -->  @include('inc.messages')
             @if(count($courses) > 0)
             <div class=" content">
                 @foreach($courses as $course)
@@ -64,7 +64,12 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">{{$course->title}}</h4>
+                                <h4 class="card-title"><a href="{{route('admin.view-course-detail', $course->id)}}">{{$course->title}}</a></h4>
+                                @foreach($users as $user)
+                                @if($course->user_id == $user->id)
+                                <h4 class="card-title">Tutor: {{$user->username}}</h4>
+                                @endif
+                                @endforeach
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

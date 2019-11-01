@@ -28,7 +28,7 @@
                 @else
                     <li class="nav-item mr-4">
                         <a class="btn btn-custom nav-link pl-5 pr-5" href="{{route('dashboard')}}" style="color: #fff;">Dashboard</a>
-                    </li>
+                    </li class="nav-item mr-4"><br>
                     <a class="btn btn-custom nav-link pl-5 pr-5" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

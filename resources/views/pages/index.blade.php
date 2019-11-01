@@ -317,16 +317,22 @@
                         src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
                         alt="Card image">
                 <div class="card-body">
-                    <h4 class="card-title" style="font-weight: bold;">{{$item->name}}</h4>
+                    <h4 class="card-title" style="font-weight: bold;">{{$item->title}}</h4>
                     <p>{{$item->description}}</p>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked mb-3"></span> <br>
-                    <a href="{{route('register.courses',$item->id)}}" class="reg btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                        style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                    <a href="#" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                    @if(Auth::guest())
+                        <a href="{{route('register')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                            style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                    @endif
+                    @if(!Auth::guest())
+                        <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                            style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                    @endif
+                    <a href="{{route('course.show', $item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
                         style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
                 </div>
             </div>
