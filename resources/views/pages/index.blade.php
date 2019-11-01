@@ -537,6 +537,14 @@
             <div class="col-md-8 pb-5">
                 <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                 <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
+
+
+                {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
+                {{ csrf_field() }}
+                {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
+                {{Form::submit('Subscribe', ['class' => 'btn btn-primary ml-1 pl-5 pr-5', 'style' => 'background-color: #44CF6C; border-color: #44CF6C' ])}}
+
+                {!! form::close() !!}
             </div>
             <div class="col-md-4">
                 <img class="img-fluid"
