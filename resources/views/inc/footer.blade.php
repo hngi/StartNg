@@ -8,12 +8,12 @@
                     <div class="col-md-4 mt-4">
 
                         <h4 class="">Ready to take the leap?</h4>
-                        <a class="btn btn-custom mt-3 pl-5 pr-5" href="{{route('register')}}">Start</a>
+                        <a class="btn btn-success mt-3 pl-5 pr-5" href="{{route('register')}}">Start</a>
                     </div>
                 @else
                      <div class="col-md-4 mt-4">
 
-                         <a class="btn btn-custom mt-3 pl-5 pr-5" href="{{ route('logout') }}"
+                         <a class="btn btn-success mt-3 pl-5 pr-5" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
