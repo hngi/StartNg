@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li class="{{ (request()->is('admin/create')) ? 'active' : '' }}">
-                <a href="{{route('tutor.myprofile')}}">
+                <a href="#">
                     <i class="fa fa-user"></i>
                     <p>My Profile</p>
                 </a>
