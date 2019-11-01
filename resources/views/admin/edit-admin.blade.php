@@ -108,14 +108,17 @@
                                                 <label>Phone Number</label>
                                                 <input type="tel" name="phone" class="form-control" value="{{$admin->phone}}">
                                             </div>
-                                        </div>
+                                        </div>@if(Auth::user()->role==2)
                                         <div class="col-md-4 pl-1">
-                                            <div class="form-group">
-                                                <label>Role</label>
-                                                <input type="radio" name="role" value="2" class="form-control"> Admin
-                                                <input type="radio" name="role" value="1" class="form-control"> Tutor
+                                                <div class="form-group">
+                                                    <label>Role</label><br>
+                                                    <input type="radio" name="role" value="2" class="form-check-label">
+                                                    <label class="form-check-label"> Admin </label><br>
+                                                    <input type="radio" name="role" value="1" class="form-check-label">
+                                                    <label class="form-check-label"> Tutor </label>
+                                                </div>
                                             </div>
-                                        </div>
+                                             @endif
                                     </div>
                                     <div class="row">
                                         <div class="update ml-auto mr-auto">

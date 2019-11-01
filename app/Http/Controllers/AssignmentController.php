@@ -16,12 +16,14 @@ class AssignmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-    // {
-    //      return view('tutor.assignment');
-         return view('tutor.user-profile');
+    public function index()
+    {
+              return view('tutor.assignment');
     }
-     
+      public function upload()
+      {
+              return view('tutor.upload-resource');
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -254,7 +254,7 @@
             The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
             software developers
         </p>
-        <a href="#" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+        <a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
     </div>
 </div>
 <!--  -->
@@ -357,7 +357,7 @@
 <br>
 <!--  -->
 <br>
-<!--  -->
+<!--  --></div>
     <section class="beginning-lesson">
         <div class="row no-gutters">
             <div class="col-md-6 bg-secondary">
@@ -514,13 +514,11 @@
         <div class="row align-items-center">
             <div class="col-md-8 pb-5">
                 <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
-                <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
-
+                <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions</p>
                 {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
                 {{ csrf_field() }}
                 {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
                 {{Form::submit('Subscribe', ['class' => 'btn btn-success ml-1 pl-5 pr-5'])}}
-
                 {!! form::close() !!}
             </div>
             <div class="col-md-4">
