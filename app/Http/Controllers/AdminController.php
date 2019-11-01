@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Courses;
 use App\RegisteredCourses;
+use App\Reviews;
 
 class AdminController extends Controller
 {
@@ -196,11 +197,13 @@ class AdminController extends Controller
     {
         $course = Courses::find($id);
         $registered_courses = RegisteredCourses::where('course_id', $id)->get();
+        $reviews = Reviews::where('course_id', $id)->get();
 
         $data = array(
             'course' => $course,
             'number' => count($registered_courses),
             'users' => User::all(),
+            'reviews' => $reviews,
         );
         return view('admin.view-course-detail')->with($data);
     }

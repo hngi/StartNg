@@ -60,29 +60,15 @@
                         <h5 class="card-title">DETAILS</h5>
                     </div>
                     <div class="card-body">
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>TITLE: {{$course->title}}</h5>
+                        <div class="card-header">
+                                <h4 class="card-title">Assigment</h4>
                             </div>
-
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Price: {{$course->price}}</h5>
+                            <div class="card-body">
+                                {{$assignment->title}}<br>
+                                {{$assignment->description}}<br>
+                                Started:{{$assignment->created_at}}<br>
+                                Finish:{{($assignment->created_at->addDays(5))}}
                             </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Duration: {{$course->duration}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Description: {{$course->description}}</h5>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="{{route('register.courses', $course->id)}}">Register</a>
                         </div>
                     </div>
                 </div>

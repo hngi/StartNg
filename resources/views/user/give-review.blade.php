@@ -32,7 +32,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW COURSE DETAIL</a>
+                        <a class="navbar-brand" href="#pablo">Give A Review</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -57,34 +57,26 @@
             <div class="content">
                 <div class="card card-register">
                     <div class="card-header">
-                        <h5 class="card-title">DETAILS</h5>
+                        <h5 class="card-title">Review {{$course->title}}</h5>
                     </div>
                     <div class="card-body">
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>TITLE: {{$course->title}}</h5>
+                                <form action="{{route('user.store-review', $course->id)}}" method="post">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Review Course</label>
+                                                <textarea class="form-control" required name="review" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="update ml-auto mr-auto">
+                                            <button type="submit" class="btn btn-primary btn-round">Send</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Price: {{$course->price}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Duration: {{$course->duration}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Description: {{$course->description}}</h5>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="{{route('register.courses', $course->id)}}">Register</a>
-                        </div>
-                    </div>
                 </div>
             </div>
     <!--   Core JS Files   -->

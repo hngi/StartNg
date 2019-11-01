@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div>
-                            <a href="{{route('register.courses', $course->id)}}">Register</a>
+                            <a href="{{route('user.review', $course->id)}}">Review</a>
                         </div>
                     </div>
                 </div>

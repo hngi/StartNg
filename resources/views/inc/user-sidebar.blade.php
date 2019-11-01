@@ -19,13 +19,25 @@
                     <li>
                         <a href="{{route('user.profile')}}">
                             <i class="fa fa-user"></i>
-                            <p>User Profile</p>
+                            <p>My Profile</p>
                         </a>
                     </li>
                     <li>
                         <a href="{{route('user.index')}}">
                             <i class="fa fa-book"></i>
+                            <p>View My Courses</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('user.courses')}}">
+                            <i class="fa fa-book"></i>
                             <p>View Courses</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('user.assignment')}}">
+                            <i class="fa fa-book"></i>
+                            <p>View Assignments</p>
                         </a>
                     </li>
                 </ul>

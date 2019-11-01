@@ -61,6 +61,11 @@ Route::get('/admins/create-course', 'AdminController@create_course')->name('admi
 Route::post('/admins/store', 'AdminController@store_course')->name('admin.store-course');
 
 Route::get('/users/profile', 'UserController@profile')->name('user.profile');
+Route::get('/users/review/{id}', 'UserController@review')->name('user.review');
+Route::post('/users/store-review/{id}', 'UserController@store_review')->name('user.store-review');
+Route::get('/users/assignment', 'UserController@assignment')->name('user.assignment');
+Route::get('/users/assignment/{id}', 'UserController@assignment_detail')->name('user.assignment-detail');
+Route::get('/users/courses', 'UserController@courses')->name('user.courses');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController'); 

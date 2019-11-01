@@ -54,35 +54,63 @@
                 </div>
             </nav>
       @include('inc.messages')       
-            <div class="content">
-                <div class="card card-register">
-                    <div class="card-header">
-                        <h5 class="card-title">DETAILS</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>TITLE: {{$course->title}}</h5>
+      <div class="content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card card-user">
+                            <div class="card-header">
+                                <h5 class="card-title">My Profile</h5>
                             </div>
+                            <div class="card-body">
+                                <form action="{{route('user.update', $user->id)}}" method="post">
+                                    @csrf 
+                                    @method('PUT')
+                                    <div class="row">
+                                        <div class="col-md-5 pr-1">
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="text" name="username" class="form-control" value="{{$user->username}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 px-1">
 
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Price: {{$course->price}}</h5>
+                                        </div>
+                                        <div class="col-md-5 pl-1">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" name="email" class="form-control" value="{{$user->email}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" name="first_name" class="form-control" value="{{$user->first_name}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pl-1">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" name="last_name" class="form-control" value="{{$user->last_name}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 pr-1">
+                                            <div class="form-group">
+                                                <label>Phone Number</label>
+                                                <input type="tel" name="phone" class="form-control" value="{{$user->phone}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="update ml-auto mr-auto">
+                                            <button type="submit" class="btn btn-primary btn-round">EDIT</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Duration: {{$course->duration}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Description: {{$course->description}}</h5>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="{{route('register.courses', $course->id)}}">Register</a>
                         </div>
                     </div>
                 </div>

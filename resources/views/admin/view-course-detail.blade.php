@@ -67,6 +67,11 @@
                     </div>
                     <div class="card-body">
                         Reviews:
+                        <ul>
+                        @foreach($reviews as $review)     
+                            <li>{{$review->comment}}</li>   
+                        @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>

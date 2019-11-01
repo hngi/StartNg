@@ -60,29 +60,27 @@
                         <h5 class="card-title">DETAILS</h5>
                     </div>
                     <div class="card-body">
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>TITLE: {{$course->title}}</h5>
+                        <div class="card-header">
+                                <h4 class="card-title">Assigments</h4>
                             </div>
-
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Price: {{$course->price}}</h5>
+                            <div class="card-body">
+                            <ul>
+                            @foreach($registered_courses as $registered_course)
+                            @foreach($assignments as $assignment)
+                            @if($registered_course->course_id == $assignment->user_id)
+                            <li>
+                                <a href="{{route('user.assignment-detail', $assignment->id)}}">{{$assignment->title}}</a> -
+                                    @foreach($courses as $course)
+                                    @if($assignment->user_id == $course->id)
+                                        {{$course->title}}
+                                    @endif
+                                    @endforeach
+                            </li>
+                            @endif
+                            @endforeach
+                            @endforeach
+                            </ul>
                             </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Duration: {{$course->duration}}</h5>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>Description: {{$course->description}}</h5>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="{{route('register.courses', $course->id)}}">Register</a>
                         </div>
                     </div>
                 </div>
