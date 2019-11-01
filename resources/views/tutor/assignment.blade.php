@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin | StartNg
+      Tutor | StartNg
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -18,7 +18,46 @@
 
 <body class="">
     <div class="wrapper ">
-        @include('inc.sidebar')
+        <div class="sidebar" data-color="white" data-active-color="danger">
+
+            <div class="logo">
+                <a href="http://startng.ml">
+
+                    <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
+
+                </a>
+
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa fa-home"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user-profile.html">
+                            <i class="fa fa-user"></i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="view-student.html">
+                            <i class="fa fa-users"></i>
+                            <p>View Students</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="upload-resource.html">
+                            <i class="fa fa-file"></i>
+                            <p>Upload Resource</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -31,7 +70,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">Edit Admin Details</a>
+                        <a class="navbar-brand" href="#pablo">DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -59,73 +98,33 @@
   <canvas id="bigDashboardChart"></canvas>
 
 
-</div> -->
+</div> --> @include('inc.messages')
             <div class="content">
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="card card-user">
-                            <div class="card-header">
-                                <h5 class="card-title">Edit {{$admin->username}}</h5>
-                            </div>
-                            <div class="card-body">
-                                <form action="{{route('admin.update', $admin->id)}}" method="post">
-                                    @csrf 
-                                    @method('PUT')
-                                    <div class="row">
-                                        <div class="col-md-5 pr-1">
-                                            <div class="form-group">
-                                                <label>Username</label>
-                                                <input type="text" name="username" class="form-control" value="{{$admin->username}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 px-1">
-
-                                        </div>
-                                        <div class="col-md-5 pl-1">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" name="email" class="form-control" value="{{$admin->email}}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 pr-1">
-                                            <div class="form-group">
-                                                <label>First Name</label>
-                                                <input type="text" name="first_name" class="form-control" value="{{$admin->first_name}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 pl-1">
-                                            <div class="form-group">
-                                                <label>Last Name</label>
-                                                <input type="text" name="last_name" class="form-control" value="{{$admin->last_name}}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 pr-1">
-                                            <div class="form-group">
-                                                <label>Phone Number</label>
-                                                <input type="tel" name="phone" class="form-control" value="{{$admin->phone}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 pl-1">
-                                            <div class="form-group">
-                                                <label>Role</label>
-                                                <input type="radio" name="role" value="2" class="form-control"> Admin
-                                                <input type="radio" name="role" value="1" class="form-control"> Tutor
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="update ml-auto mr-auto">
-                                            <button type="submit" class="btn btn-primary btn-round">EDIT</button>
-                                        </div>
-                                    </div>
-                                </form>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="desc">Resource Description</label>
+                            <input id="desc" class="form-control" type="text" name="">
+                        </div>
+                    </div>
+                </div><br>
+                 <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <div class="custom-file">
+                               <?php
+                                 echo Form::open(array('url' => '/uploadfile','files'=>'true'));
+                                 echo 'Select the file to upload.';
+                                 echo Form::file('image');
+                                 echo Form::submit('Upload File');
+                                 echo Form::close();
+                              ?>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a class="btn btn-warning" href="">submit</a>
                 </div>
             </div>
             <footer class="footer footer-black  footer-white ">

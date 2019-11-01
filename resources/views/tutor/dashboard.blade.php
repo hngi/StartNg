@@ -18,7 +18,8 @@
 
 <body class="">
     <div class="wrapper ">
-        @include('inc.tutor-dashboard')
+
+  @include('inc.tutorsidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">

@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use App\Courses;
-use App\RegisteredCourses;
 use App\User;
 use App\Assignment;
 
 class TutorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,16 +22,12 @@ class TutorController extends Controller
      */
     public function index()
     {
-        $id = auth()->user()->id;
-        
-        $data = array(
-            'courses' => Courses::where('user_id', $id)->get(),
-            'registered_courses' => RegisteredCourses::all(),
-            'users' => User::all(),
-        );
-        return view('tutor.view-courses')->with($data);
+         return view('tutor.dashboard');
     }
-
+ public function myprofile()
+    {
+         return view('tutor.user-profile');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -90,6 +91,9 @@ class TutorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tutor = user::find($id);
+        $tutor->delete();
+
+        return redirect('/view-tutors')->with('success', 'tutor deleted!');
     }
 }

@@ -10,33 +10,33 @@
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
-                <a href="{{route('admin.index')}}">
+                <a href="{{route('tutor.index')}}">
                     <i class="fa fa-home"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
             <li class="{{ (request()->is('admin/create')) ? 'active' : '' }}">
-                <a href="{{route('admin.create')}}">
+                <a href="{{route('tutor.myprofile')}}">
                     <i class="fa fa-user"></i>
-                    <p>Create Admin</p>
+                    <p>My Profile</p>
                 </a>
             </li>
             <li class="{{ (request()->is('admins/create-course')) ? 'active' : '' }}">
                 <a href="{{route('admin.create-course')}}">
                     <i class="fa fa-book"></i>
-                    <p>Create Course</p>
+                    <p>My Courses</p>
                 </a>
             </li>
               <li class="{{ (request()->is('admins/view-admins')) ? 'active' : '' }}">
                 <a href="{{route('admin.view-admins')}}">
                     <i class="fa fa-users"></i>
-                    <p>View All Admins</p>
+                    <p>Reviews</p>
                 </a>
             </li>
             <li class="{{ (request()->is('admins/view-courses')) ? 'active' : '' }}">
                 <a href="{{route('admin.view-courses')}}">
                     <i class="fa fa-book"></i>
-                    <p>View All Courses</p>
+                    <p>Assignments</p>
                 </a>
             </li>
             <li class="{{ (request()->is('admins/view-tutors')) ? 'active' : '' }}">
@@ -48,7 +48,7 @@
             <li class="{{ (request()->is('admins/view-students')) ? 'active' : '' }}">
                 <a href="{{route('admin.view-students')}}">
                     <i class="fa fa-users"></i>
-                    <p>View All Students</p>
+                    <p>View All My Students</p>
                 </a>
             </li>
             <!--<li>

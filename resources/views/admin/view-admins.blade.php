@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Dashboard | StartNg
+        Admin Tutor Dashboard | StartNg
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -32,7 +32,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW ALL STUDENTS</a>
+                        <a class="navbar-brand" href="#pablo">VIEW ALL ADMINS</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -53,55 +53,47 @@
                     </div>
                 </div>
             </nav>
-            @include('inc.messages') 
+             @include('inc.messages')
             <div class=" content">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">STUDENTS</h4>
+                                <h4 class="card-title">ADMINS</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class=" text-primary">
-                                            <th>
-                                                Name
-                                            </th>
-                                            <th>
-                                                Username
-                                            </th>
-                                            <th>
-                                                Email Address
-                                            </th>
-                                            <th>
-                                                Phone Number
-                                            </th>
-                                            <th class="text"> </th>
+                                           <th>Name</th>
+                                                <th>Username</th>
+                                                <th>Email Address</th>
+                                                <th>Phone Number</th>
+                                                <th>Action </th>
                                         </thead>
                                         <tbody>
-                                            @foreach($students as $student)
+                                            @foreach($admins as $admin)
                                             <tr>
-                                                <td>
-                                                    {{$student->first_name}} {{$student->last_name}}
-                                                </td>
-                                                <td>
-                                                    {{$student->username}}
-                                                </td>
-                                                <td>
-                                                    {{$student->email}}
-                                                </td>
-                                                <td>
-                                                    {{$student->phone}}
-                                                </td>
-                                                <td class="text">
-                                                    <a href="{{route('admin.view-user-detail', $student->id)}}" class="btn btn-warning">VIEW DETAILS</a>
-                                                </td>
+                                                <td>{{$admin->first_name}} {{$admin->last_name}}</td>
+                                                <td>{{$admin->username}}</td>
+                                                <td>{{$admin->email}}</td>
+                                                <td>{{$admin->phone}}</td>
+                                                <td><select id="dothis">
+                                                        <option value="">Please select an action</option>
+                                                        <option value="{{route('admin.destroy',$admin->id)}}">Enable</option>
+                                                        <option value="{{route('admin.destroy',$admin->id)}}">Diable</option>
+                                                        <option value="{{route('admin.edit', $admin->id)}}">Edit</option>
+                                                        <option value="{{route('admin.destroy', $admin->id)}}">Delete</option>
+                                                        <option value="{{route('admin.view-tutor-detail', $admin->id)}}">View Details</option>
+                                                    </select></td>
+                                                    <td><button id="executelink">Go</button>
+                                                        
+                                                    </td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    {{$students->links()}}
+                                    {{$admins->links()}}
                                 </div>
                             </div>
                         </div>
@@ -121,6 +113,18 @@
             demo.initChartsPages();
         });
     </script>
+     </script>
+                <script type="text/javascript">
+                $(document).ready(function() {
+                var newUrl = "";
+                $("#dothis").change(function() {
+                $newUrl = $("#dothis option:selected").val();
+                });
+                $("#executelink").click(function() {
+                location = $newUrl ;
+                });
+                });
+                </script>
 </body>
 
 </html>

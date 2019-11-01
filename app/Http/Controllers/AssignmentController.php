@@ -16,9 +16,10 @@ class AssignmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-         return view('tutor.assignment');
+    public function index(){
+    // {
+    //      return view('tutor.assignment');
+         return view('tutor.user-profile');
     }
      
 

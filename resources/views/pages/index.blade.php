@@ -3,239 +3,244 @@
 @section('style')
 
 <style>
-    /* Style for Navbar Starts */
-    :root {
-        --primary-color: #3A0842;
-        --secondary-color: #44CF6C;
-        --default-color: #7f7979;
-        --dark-color: #2A2B2A;
-        --light-color: #D3D5D4;
-    }
-    
-    body {
-        font-family: Nunito;
-    }
+        /* Style for Navbar Starts */
+        :root {
+            --primary-color: #3A0842;
+            --secondary-color: #44CF6C;
+            --default-color: #7f7979;
+            --dark-color: #2A2B2A;
+            --light-color: #D3D5D4;
+        }
+        
+        body {
+            font-family: Nunito;
+        }
 
-    /* Style for Navbar Starts */
+        /* Style for Navbar Starts */
 
-    .navbar-custom li a {
-        color: #000;
-    }
+        .navbar-custom li a {
+            color: #000;
+        }
 
-    .btn-success {
-        background-color: #2DCE89;
-        color: #fff;
-        border: thin solid #2dce89;
-    }
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
 
-    .btn-success:hover {
-        background-color: rgb(2, 20, 12);
-        color: #fff;
-        border: thin solid rgb(2, 20, 12);
-    }
+        .btn-success:hover {
+            background-color: rgb(2, 20, 12);
+            color: #fff;
+            border: thin solid rgb(2, 20, 12);
+        }
 
-    .custom-toggler .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
 
-    .custom-toggler.navbar-toggler {
-        border-color: #000;
-    }
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
 
-    /* Style for Navbar Ends */
+        /* Style for Navbar Ends */
 
-    /* Background style starts */
-    .bg-primary{
-        background-color: var(--primary-color) !important;
-    }
-    .bg-secondary{
-        background-color: var(--secondary-color) !important;
-    }
-    /* Background style starts */
+        /* Background style starts */
+        .bg-primary{
+            background-color: var(--primary-color) !important;
+        }
+        .bg-secondary{
+            background-color: var(--secondary-color) !important;
+        }
+        /* Background style starts */
 
-    /* Text styles starts */
-    .text-primary{
-        color: var(--primary-color) !important;
-    }
-    .text-secondary{
-        color: var(--secondary-color) !important;
-    }
-    /* Text styles ends */
+        /* Text styles starts */
+        .text-primary{
+            color: var(--primary-color) !important;
+        }
+        .text-secondary{
+            color: var(--secondary-color) !important;
+        }
+        /* Text styles ends */
 
-    /* Button styles starts */
-    .btn-primary {
-        background-color: var(--primary-color);
-        color: #fff;
-        border: thin solid var(--primary-color);
-        transition: 0.25s;
-    }
-    
-    .btn-primary:hover {
-        background-color: var(--primary-color);
-        opacity: 0.85;
-    }
+        /* Button styles starts */
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: thin solid var(--primary-color);
+            transition: 0.25s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            opacity: 0.85;
+        }
 
-    .btn-secondary {
-        background-color: var(--secondary-color);
-        color: #fff;
-        border: thin solid var(--secondary-color);
-        transition: 0.25s;
-    }
-    
-    .btn-secondary:hover {
-        background-color: var(--secondary-color);
-        opacity: 0.85;
-    }
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: thin solid var(--secondary-color);
+            transition: 0.25s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            opacity: 0.85;
+        }
 
-    /* Button styles end */
+        /* Button styles end */
 
-    /* Style for Footer Starts */
+        /* Style for Footer Starts */
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Nunito', sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
 
-    a {
-        text-decoration: none;
-    }
-    /*main tag style starts here */
-    .jumbotron{
-        background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/lead-image.png);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    .journey img{
-        max-width: 340px;
-    }
-    .video-overlay{
-        background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/beginer.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        min-height: 300px;
-        display:flex;
-        align-items:center; /* vertically aligned! */
-        justify-content: center;
-    }
+        a {
+            text-decoration: none;
+        }
+        /*main tag style starts here */
+        .jumbotron{
+            background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/lead-image.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .journey img{
+            max-width: 340px;
+        }
+        .video-overlay{
+            background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/beginer.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 300px;
+            display:flex;
+            align-items:center; /* vertically aligned! */
+            justify-content: center;
+        }
 
-    .steps-section img{
-        max-width: 340px;
-    }
-    .professional-section{
-        background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/professional.png);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    /*main tag style ends here */
+        .steps-section img{
+            max-width: 340px;
+        }
+        .professional-section{
+            background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/professional.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        /*main tag style ends here */
 
-    /* Style for Footer Starts */
+        /* Style for Footer Starts */
 
-    .deep {
-        background: var(--primary-color);
-        color: #fff;
-    }
+        .deep {
+            background: var(--primary-color);
+            color: #fff;
+        }
 
-    .deep #slink {
-        background: #44CF6C;
-        border-radius: 10px;
-        color: white;
-        padding: 10px 70px;
-    }
+        .deep #slink {
+            background: #44CF6C;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 70px;
+        }
 
-    .deep li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 16px;
-        line-height: 30px;
-    }
+        .deep li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+        }
 
-    .deep li {
-        list-style: none;
-    }
+        .deep li {
+            list-style: none;
+        }
 
-    .deep li a:hover {
-        text-decoration: none;
-    }
+        .deep li a:hover {
+            text-decoration: none;
 
-    a:hover {
-        text-decoration: none;
-    }
+        }
 
-    .icons i {
-        font-size: 26px;
-        height: 50px;
-        width: 50px;
-        padding: 10px 20px;
-        color: white;
-    }
+        a:hover {
+            text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
 
-    .icons i.fa.fa-twitter:hover {
-        color: #00aced;
-    }
+        }
 
-    .icons i.fa.fa-facebook:hover {
-        color: #3b5598;
-    }
+        .icons i {
+            font-size: 26px;
+            height: 50px;
+            width: 50px;
+            padding: 10px 20px;
+            color: white;
+        }
 
-    .icons i.fa.fa-instagram:hover {
-        color: #ed3833;
-    }
+        .icons i.fa.fa-twitter:hover {
+            color: #00aced;
+        }
 
-    /* Style for Footer Ends */
+        .icons i.fa.fa-facebook:hover {
+            color: #3b5598;
+        }
 
-    .body-banner {
-        background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926364/startng/Group_415_yteas3.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
+        .icons i.fa.fa-instagram:hover {
+            color: #ed3833;
+        }
 
-    .checked {
-        color: orange;
-    }
+        /* Style for Footer Ends */
 
-    .video {
-        background-color: #44CF6C;
-    }
+        .body-banner {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926364/startng/Group_415_yteas3.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
 
-    .help {
-        background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930464/startng/Group_418_ngwxfa.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-    /* Vidoe style */
-    .videoWrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        padding-top: 25px;
-        height: 0;
-    }
-    .videoWrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
+        .checked {
+            color: orange;
+        }
+
+        .video {
+            background-color: #44CF6C;
+        }
+
+        .help {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930464/startng/Group_418_ngwxfa.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        /* Vidoe style */
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -252,7 +257,6 @@
         <a href="#" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
     </div>
 </div>
-
 <!--  -->
 <section class="journey">
     <div class="container py-5">
@@ -281,37 +285,9 @@
 <!--  -->
 
 {{-- <div id="response">
-    @if (session('message'))
-        <div class="alert alert-success">
-            {!! session('message') !!}
-        </div>
-    @endif
-    @if (session('success'))
-        <div class="alert alert-success">
-            {!!  session('success') !!}
-        </div>
-    @endif
-    @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
-    @if (session('warning'))
-        <div class="alert alert-warning">
-            {!! session('warning') !!}
-
-        </div>
-    @endif
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+@include('inc.messages')
 </div> --}}
+</div>
 
 <div class="container mt-5">
 <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
@@ -354,12 +330,7 @@
                         style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
                 </div>
             </div>
-
-        </div>
-
-
-
-
+</div>
         @if($counter%3==0) <br>   @endif
 
         @php
@@ -413,6 +384,7 @@
                         </dl>
                         <div class=""></div>
                     </div>
+
                 </div>
             </div>
             <div class="col-md-6 mt-0 pt-0">
@@ -538,17 +510,16 @@
                 <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                 <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
 
-
                 {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
                 {{ csrf_field() }}
                 {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
-                {{Form::submit('Subscribe', ['class' => 'btn btn-primary ml-1 pl-5 pr-5', 'style' => 'background-color: #44CF6C; border-color: #44CF6C' ])}}
+                {{Form::submit('Subscribe', ['class' => 'btn btn-success ml-1 pl-5 pr-5'])}}
 
                 {!! form::close() !!}
             </div>
             <div class="col-md-4">
                 <img class="img-fluid"
-                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
+                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png"> 
             </div>
         </div>
     </div>

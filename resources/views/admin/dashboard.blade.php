@@ -60,6 +60,7 @@
 
 
 </div> -->
+ @include('inc.messages')
             <div class="content">
                 <div class="row">
 
