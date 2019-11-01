@@ -18,45 +18,7 @@
 
 <body class="">
     <div class="wrapper ">
-        <div class="sidebar" data-color="white" data-active-color="danger">
-
-            <div class="logo">
-                <a href="http://startng.ml">
-
-                    <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
-
-                </a>
-
-            </div>
-            <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="dashboard.html">
-                            <i class="fa fa-home"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="user-profile.html">
-                            <i class="fa fa-user"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="view-student.html">
-                            <i class="fa fa-users"></i>
-                            <p>View Students</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="upload-resource.html">
-                            <i class="fa fa-file"></i>
-                            <p>Upload Resource</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        @include('inc.tutor-dashboard')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">

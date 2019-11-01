@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Courses;
+use App\RegisteredCourses;
 use App\User;
 use App\Assignment;
 
@@ -16,7 +17,14 @@ class TutorController extends Controller
      */
     public function index()
     {
-        //
+        $id = auth()->user()->id;
+        
+        $data = array(
+            'courses' => Courses::where('user_id', $id)->get(),
+            'registered_courses' => RegisteredCourses::all(),
+            'users' => User::all(),
+        );
+        return view('tutor.view-courses')->with($data);
     }
 
     /**
