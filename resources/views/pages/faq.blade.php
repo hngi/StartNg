@@ -16,6 +16,19 @@
         .navbar-custom li a {
             color: #000;
         }
+          
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+
+        .btn-success:hover {
+            background-color: rgb(2, 20, 12);
+            color: #fff;
+            border: thin solid rgb(2, 20, 12);
+        }
+
         
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -67,12 +80,11 @@
         }
         
         .btn-secondary:hover {
-            background-color: rgb(2, 20, 12);
+            background-color: var(--secondary-color);
             opacity: 0.85;
-            border: thin solid rgb(2, 20, 12);
         }
         /* Button styles end */
-        /*	collapsible accordion starts */
+        /*  collapsible accordion starts */
         
         .myaccordion {
             box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
@@ -109,7 +121,7 @@
         .myaccordion li+li {
             margin-top: 10px;
         }
-        /*	collapsible accordion ends	*/
+        /*  collapsible accordion ends  */
         
         * {
             box-sizing: border-box;
@@ -158,6 +170,9 @@
         
         a:hover {
             text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
         }
         
         .icons i {
@@ -197,7 +212,7 @@
                                     <input type="text" name="Search" class="form-control pt-2 pb-2 rounded-0" placeholder="Search" required aria-label="Search question" aria-describedby="button-addon2" style="border: thin solid #fff;">
                                     <div class="input-group-append">
                                         <button class="btn btn-light rounded-0" type="button" id="button-addon2"><i
-												class="fas fa-search"></i> </button>
+                                                class="fas fa-search"></i> </button>
                                     </div>
                                 </div>
                             </form>
@@ -223,19 +238,17 @@
                                     <div class="card-header" id="headingOne">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-												Do you offer certification or degrees?
-												<span class="fa-stack fa-sm">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                Do you offer certification or degrees?
+                                                <span class="fa-stack fa-sm">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                         <div class="card-body">
-                                            <p class="text-muted">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .
+                                            <p class="text-muted">At Start.ng, we offer Certification upon completion of the selected courses. And certificates are presented to deserving students with their grades clearly states on the certificates.
                                             </p>
                                         </div>
                                     </div>
@@ -244,19 +257,18 @@
                                     <div class="card-header" id="headingTwo">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-												Do you offer student discount?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                Do you offer student discount?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                         <div class="card-body">
                                             <p class="text-muted">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .
+                                               Everyone who enrolls and participates in the software development training as well as other courses are considered to be students and therefore treated equally.
                                             </p>
                                         </div>
                                     </div>
@@ -264,20 +276,18 @@
                                 <div class="card">
                                     <div class="card-header" id="headingThree">
                                         <h2 class="mb-0">
-                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-												Are there free courses?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">                 Are there free courses?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                         <div class="card-body">
                                             <p class="text-muted">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .
+                                               Yes. In fact, all the Courses offered at Start.ng are free. All you are requires to do is to enroll for the courses you are interested in when the portal for registration opens. And get yourself ready for the 3-month rigorous training by our professionals.
                                             </p>
                                         </div>
                                     </div>
@@ -286,42 +296,24 @@
                                     <div class="card-header" id="headingFour">
                                         <h2 class="mb-0">
                                             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-												Do you offer student discount?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
+                                                What do I require for a successful training?
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            </button>
                                         </h2>
                                     </div>
                                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                                         <div class="card-body">
                                             <p class="text-muted">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .
+                                            <li> You require a very good laptop with a good battery or power source.</li>
+                                            <li>You’ll need a good internet service provider, as you’ll have to be online mostly.</li>
+                                            <li>Data is essential and you must be willing to download the resources as specified by the mentors</li>
                                             </p>
                                         </div>
-                                    </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                        <h2 class="mb-0">
-                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-												Are there free courses?
-												<span class="fa-stack fa-2x">
-													<i class="fas fa-circle fa-stack-2x"></i>
-													<i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
-												</span>
-											</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <p class="text-muted">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .
-                                            </p>
-                                        </div>
+                            
                                     </div>
                                 </div>
                             </div>
