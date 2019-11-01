@@ -79,10 +79,10 @@
                                                     <td><select id="dothis">
                                                         <option value="">Please select an action</option>
                                                         <option value="{{route('admin.destroy',$tutor->id)}}">Enable</option>
-                                                        <option value="{{route('admin.destroy',$tutor->id)}}">Diable</option>
+                                                        <option value="{{route('admin.destroy',$tutor->id)}}">Disable</option>
                                                         <option value="{{route('admin.edit', $tutor->id)}}">Edit</option>
                                                         <option value="{{route('tutor.destroy', $tutor->id)}}">Delete</option>
-                                                        <option value="{{route('admin.view-tutor-detail', $tutor->id)}}">View Details</option>
+                                                        <option value="{{route('admin.view-user-detail', $tutor->id)}}">View Details</option>
                                                     </select></td>
                                                     <td><button id="executelink">Go</button>
                                                         

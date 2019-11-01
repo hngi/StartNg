@@ -66,7 +66,7 @@
 
                     <div class="col-md-4">
                         <div class="card card-stats">
-                            <a href="" style="text-decoration: none;">
+                            <a href="{{route('tutor.view-students')}}" style="text-decoration: none;">
                                 <div class="card-body">
                                     <div class="row">
 
@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-stats">
-                            <a href="" style="text-decoration: none;">
+                            <a href="{{route('tutor.assignment')}}" style="text-decoration: none;">
                                 <div class="card-body">
                                     <div class="row">
 
@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-stats">
-                            <a href="" style="text-decoration: none;">
+                            <a href="{{route('tutor.upload-resource')}}" style="text-decoration: none;">
                                 <div class="card-body">
                                     <div class="row">
 

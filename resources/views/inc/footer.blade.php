@@ -70,12 +70,12 @@
 
                     </div>
                     <div class="float-right">
-                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                        <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
                                 class="fab fa-twitter"></i></a>
-                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                        <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
                                 class="fab fa-instagram"></i></a>
                         <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
-                                class="fab fa-facebook"></i></a>
+                                class="fab fa-facebook"></i></a> -->
                     </div>
                 </div>
             </div>

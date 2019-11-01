@@ -117,6 +117,7 @@
             </div>
         </div>
     </div>
+    
 <form action="{{ route('login') }}" method="post">
     @csrf
     <div class="container pt-4 pb-5">

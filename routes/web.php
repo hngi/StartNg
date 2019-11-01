@@ -16,10 +16,17 @@
 //});
 
 Auth::routes();
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/', 'BaseController@index')->name('index');
 Route::resource('admin', 'AdminController');
-Route::resource('admin', 'TutorController');
 Route::resource('blog', 'BlogController');
 Route::resource('user', 'UserController');
 Route::resource('course', 'CourseController');
@@ -57,4 +64,10 @@ Route::get('/users/profile', 'UserController@profile')->name('user.profile');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController'); 
 
-Route::get('/tutors/view-courses', 'TutorController@index')->name('tutor.view-courses');
+// Tutor Route
+Route::get('/tutors', 'TutorController@index')->name('tutor.dashboard');
+Route::get('/tutors/view-courses', 'TutorController@view_courses')->name('tutor.view-courses');
+Route::get('/tutors/profile', 'TutorController@profile')->name('tutor.profile');
+Route::get('/tutors/assignment', 'AssignmentController@index')->name('tutor.assignment');
+Route::get('/tutors/upload-resource', 'AssignmentController@upload')->name('tutor.upload-resource');
+Route::get('/tutors/view-students', 'TutorController@view_students')->name('tutor.view-students');
