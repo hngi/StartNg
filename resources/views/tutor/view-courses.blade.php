@@ -5,17 +5,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        User Dashboard
+        Admin Dashboard
     </title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
-        name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/paper-dashboard.css" rel="stylesheet" />
-    <link href="css/view-course.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/paper-dashboard.css" rel="stylesheet" />
+    <link href="/css/view-course.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -33,10 +32,9 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">USER PROFILE</a>
+                        <a class="navbar-brand" href="#pablo">VIEW ALL COURSES</a>
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -58,13 +56,15 @@
             <!-- End Navbar -->
             <!-- <div class="panel-header panel-header-lg">
   <canvas id="bigDashboardChart"></canvas>
-</div> -->
+</div> -->  
+            @if(count($courses) > 0)
             <div class=" content">
+                @foreach($courses as $course)
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Courses Registered</h4>
+                                <h4 class="card-title">{{$course->title}}</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -74,64 +74,62 @@
                                                 Name
                                             </th>
                                             <th>
-                                                Duration(Months)
+                                                Username
                                             </th>
                                             <th>
-                                                Price
+                                                Email Address
                                             </th>
                                             <th>
-                                                Tutor
+                                                Phone Number
                                             </th>
                                             <th class="text"> </th>
                                         </thead>
+                                        @foreach($registered_courses as $registered_course)
+                                        @if($registered_course->course_id == $course->id)
                                         <tbody>
-                                            @foreach($registered_courses as $registered_course)
-                                            @foreach($courses as $course)
-                                            @if($registered_course->course_id == $course->id)
+                                        @foreach($users as $user)
+                                            @if($user->id == $registered_course->user_id)
                                             <tr>
                                                 <td>
-                                                    {{$course->title}}
+                                                    {{$user->first_name}} {{$user->last_name}}
                                                 </td>
                                                 <td>
-                                                    {{$course->duration}}
-                                                </td>
-                                                <td>
-                                                    NGN{{$course->price}}
-                                                </td>
-                                                <td>
-                                                    @foreach($users as $user)
-                                                    @if($user->id == $course->user_id)
                                                     {{$user->username}}
-                                                    @endif
-                                                    @endforeach
                                                 </td>
-                                                <td class="text">
-                                                    <a class="btn btn-warning">VIEW COURSE</a>
+                                                <td>
+                                                    {{$user->email}}
+                                                </td>
+                                                <td>
+                                                    {{$user->phone}}
                                                 </td>
                                             </tr>
                                             @endif
-                                            @endforeach
-                                            @endforeach
-                                        </tbody>
+                                        @endforeach
+                                        </tbody> 
+                                        @endif
+                                        @endforeach   
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            
+            @else
+            <p>No course found<p>
+            @endif
         </div>
     </div>
     <!--   Core JS Files   -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
-    <script src="js/demo.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="/js/demo.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
             demo.initChartsPages();
         });

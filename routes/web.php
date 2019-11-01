@@ -40,7 +40,7 @@ Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
 
-#Route::post('admin/store', 'AdminController@store')->name('admin.store');
+
 Route::get('/admins/view-courses', 'AdminController@view_courses')->name('admin.view-courses');
 Route::get('/admins/view-students', 'AdminController@view_students')->name('admin.view-students');
 Route::get('/admins/view-tutors', 'AdminController@view_tutors')->name('admin.view-tutors');
@@ -52,3 +52,5 @@ Route::get('/users/profile', 'UserController@profile')->name('user.profile');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController'); 
+
+Route::get('/tutors/view-courses', 'TutorController@index')->name('tutor.view-courses');

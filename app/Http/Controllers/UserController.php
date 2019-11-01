@@ -22,7 +22,7 @@ class UserController extends Controller
         $data = array(
             'courses' => Courses::all(),
             'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
-            #'user' => User::where('id', $id)->get(),
+            'users' => User::all(),
         );
         return view('user.view-courses')->with($data);
     }
