@@ -97,8 +97,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        $mentor = User::find($id);
-        #return view('admin.mentor_detail')->with('mentor', $mentor);
+        //
     }
 
     /**
@@ -167,6 +166,7 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
+
         $tutor = User::find($id);
         if (empty($tutor)) {
             Flash::error('tutor not found');
@@ -192,6 +192,19 @@ class AdminController extends Controller
         return view('admin.view-courses')->with($data);
     }
 
+    public function view_course_detail($id)
+    {
+        $course = Courses::find($id);
+        $registered_courses = RegisteredCourses::where('course_id', $id)->get();
+
+        $data = array(
+            'course' => $course,
+            'number' => count($registered_courses),
+            'users' => User::all(),
+        );
+        return view('admin.view-course-detail')->with($data);
+    }
+
     public function view_students()
     {
         $students = User::where('role', 0)->paginate(10);
@@ -202,13 +215,27 @@ class AdminController extends Controller
     {
         $user = User::find($id);
         if ($user->role == 0){
-            return view('admin.view-student-detail')->with('user', $user);
+            $registered_courses = RegisteredCourses::where('user_id', $user->id)->get();
+            $courses = Courses::all();
+            return view('admin.view-student-detail')->with([
+                'user' => $user,
+                'registered_courses' => $registered_courses,
+                'courses' => $courses,
+                ]);
         }
         elseif ($user->role == 1){
-            return view('admin.view-tutor-detail')->with('user', $user);
+            $courses = Courses::where('user_id', $user->id)->get();
+            return view('admin.view-tutor-detail')->with([
+                'user' => $user,
+                'courses' => $courses,
+                ]);
         }
-         elseif ($user->role == 2){
-            return view('admin.view-admin-detail')->with('user', $user);
+        elseif ($user->role == 2){
+            $courses = Courses::where('user_id', $user->id)->get();
+            return view('admin.view-admin-detail')->with([
+                'user' => $user,
+                'courses' => $courses,
+                ]);
         }
     }
 
@@ -222,11 +249,23 @@ class AdminController extends Controller
         $admins = User::where('role', 2)->paginate(10);
         return view('admin.view-admins')->with('admins', $admins);
     }
-        public function destroyadmin($id)
+    public function disable($id)
     {
-        $admin = user::find($id);
-        $admin->delete();
+        $user = User::find($id);
 
-        return redirect('admin.view-admins')->with('success', 'Admin deleted!');
+        if (empty($user)) {
+            return back()->with('error', 'User not found');
+        }
+        
+        if ($user->role == 0){
+            $user->active = ($user->active == 0) ? 1 : 0;
+            $action = ($user->active == 1) ? "enabled" : "disabled";
+            $user->save();
+            return back()->with("success", "$user->username has been $action successfully");
+        }
+        else{
+            return back()->with('error', 'Uauthorized Permission');
+        }
+        
     }
 }

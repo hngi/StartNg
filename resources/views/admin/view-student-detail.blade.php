@@ -57,7 +57,7 @@
             <div class="content">
                 <div class="card card-register">
                     <div class="card-header">
-                        <h5 class="card-title">{{$user->username}}</h5>
+                        <h5 class="card-title">DETAILS</h5>
                     </div>
                     <div class="card-body">
                         <div class="row mt-2">
@@ -81,35 +81,39 @@
                                 <h5>Phone Number: {{$user->phone}}</h5>
                             </div>
                         </div>
+
                         <div class="row mt-2">
                             <div class="col-md-12">
                                 <h5>COURSES:<span>
-                                        <li class="mt-4">LARAVEL <span> <br>Progress: <div
+                                @foreach($registered_courses as $registered_course)
+                                @foreach($courses as $course)
+                                @if($registered_course->course_id == $course->id)
+                                        <li class="mt-4">{{$course->title}} <span> <br>Progress: <div
                                                     class="progress md-progress mt-3" style="height: 20px">
                                                     <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                        role="progressbar" style="width: 50%; height: 20px;"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%
-                                                    </div>
-                                                </div></span></li>
-                                    <li class="mt-4">JAVASCRIPT <span> <br>Progress: <div
-                                                    class="progress md-progress mt-3" style="height: 20px">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                        role="progressbar" style="width: 80%; height: 20px;"
-                                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%
-                                                    </div>
-                                                </div></span></li>
-                                    <li class="mt-4">UI/UX <span> <br>Progress: <div
-                                                    class="progress md-progress mt-3" style="height: 20px">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                        role="progressbar" style="width: 20%; height: 20px;"
-                                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%
+                                                        role="progressbar" style="width: {{$registered_course->progress}}%; height: 20px;"
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">{{$registered_course->progress}}%
                                                     </div>
                                                 </div></span></li>
                                     </span>
+                                @endif
+                                @endforeach
+                                @endforeach
                                 </h5>
                             </div>
                         </div>
 
+                        <div class="row mt-2">
+                        @if($user->active)
+                            <div>
+                                <a class=" btn btn-info" href="{{route('admin.disable',$user->id)}}" >Disable</a>
+                            </div>
+                        @else
+                            <div>
+                                <a class=" btn btn-primary" href="{{route('admin.disable',$user->id)}}" >Enable</a>
+                            </div>
+                        @endif
+                        </div>
                     </div>
                 </div>
             </div>

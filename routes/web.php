@@ -48,13 +48,14 @@ Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
 
-Route::post('admin/store', 'AdminController@store')->name('admin.store');
+#Route::post('admin/store', 'AdminController@store')->name('admin.store');
 Route::get('/admins/view-admins', 'AdminController@view_admins')->name('admin.view-admins');
 Route::get('/admins/view-courses', 'AdminController@view_courses')->name('admin.view-courses');
 Route::get('/admins/view-students', 'AdminController@view_students')->name('admin.view-students');
 Route::get('/admins/view-tutors', 'AdminController@view_tutors')->name('admin.view-tutors');
-Route::get('/admins/destroy/{id}', 'AdminController@view_user_detail')->name('admin.destroy');
-Route::get('/admins/destroy/{id}', 'TutorController@destroy')->name('tutor.destroy');
+Route::get('/admins/view/{id}', 'AdminController@view_user_detail')->name('admin.view-user-detail');
+Route::get('/admins/{id}/view', 'AdminController@view_course_detail')->name('admin.view-course-detail');
+Route::get('/admins/destroy/{id}', 'AdminController@disable')->name('admin.disable');
 Route::get('/admins/view-tutor-detail/{id}', 'AdminController@destroy')->name('admin.view-tutor-detail');
 Route::get('/admins/create-course', 'AdminController@create_course')->name('admin.create-course');
 Route::post('/admins/store', 'AdminController@store_course')->name('admin.store-course');

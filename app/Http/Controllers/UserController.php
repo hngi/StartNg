@@ -64,7 +64,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        #$user = User::where('id', $id)
+        $course = Courses::find($id);
+        return view('user.view-course-detail')->with('course', $course);
     }
 
     /**
