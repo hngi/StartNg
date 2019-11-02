@@ -7,52 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <title>FullStack</title>
+    <title>Laravel Three</title>
 
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
         body {
             font-family: Nunito;
         }
         /* Style for Navbar Starts */
-
-        .nav-link { font-weight: 500; color: gray !important; font-family: sans-serif; font-size: 15px;}
-        .nav-link:hover { color: gray !important; font-weight: 600; font-size: 17px;}
-        #btn { color: whitesmoke !important;}
-        #btn:hover { color: whitesmoke !important; font-weight: 500; }
         
-
         .navbar-custom li a {
             color: #000;
         }
-
+        
         .btn-success {
             background-color: #2DCE89;
             color: #fff;
             border: thin solid #2dce89;
         }
 
-        .btn-success:hover {
-            background-color: #2DCE89;
+        .btn-success2 {
+            background-color: #3F113D;
             color: #fff;
-            border: thin solid #2dce89;
+            border: thin solid #3F113D;
         }
-
+        
+        .btn-success:hover {
+            color: #fff;
+            border: thin solid rgb(2, 20, 12);
+        }
+        
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-            background-position: center;
         }
-
+        
         .custom-toggler.navbar-toggler {
             border-color: #000;
         }
         /* Style for Navbar Ends */
         /* Style for Footer Starts */
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -60,42 +56,42 @@
             box-sizing: border-box;
             font-family: 'Nunito', sans-serif;
         }
-
+        
         a {
             text-decoration: none;
         }
-
+        
         .deep {
             background: #3A0842;
             color: #fff;
         }
-
+        
         .deep #slink {
             background: #44CF6C;
             border-radius: 10px;
             color: white;
             padding: 10px 70px;
         }
-
+        
         .deep li a {
             text-decoration: none;
             color: #fff;
             font-size: 16px;
             line-height: 30px;
         }
-
+        
         .deep li {
             list-style: none;
         }
-
+        
         .deep li a:hover {
             text-decoration: none;
         }
-
+        
         a:hover {
             text-decoration: none;
         }
-
+        
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -103,326 +99,419 @@
             padding: 10px 20px;
             color: white;
         }
-
+        
         .icons i.fa.fa-twitter:hover {
             color: #00aced;
         }
-
+        
         .icons i.fa.fa-facebook:hover {
             color: #3b5598;
         }
-
+        
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
         /* Style for Footer Ends */
-
+        
         .accordion .card-header:after {
             font-family: 'FontAwesome';
             content: "\f068";
             float: right;
         }
-
+        
         .accordion .card-header.collapsed:after {
+            /* symbol for "collapsed" panels */
             content: "\f067";
         }
-
+        
         .panel-group .panel {
+            /* border-radius: 5px; */
+            /* border-color: #DBCCD9; */
             padding: 0;
         }
-
+        
         .panel-default>.panel-heading {
             color: #000;
             font-size: 25px;
             font-weight: bold;
             background-color: #DBCCD9;
+            /* border-color: #DBCCD9; */
         }
-
+        
         .panel-default {
             margin-bottom: 30px;
         }
-
+        
         .panel-title {
             font-size: 25px;
             background: #DBCCD9;
         }
-
+        
         .panel-title>a {
             display: block;
             padding: 15px;
             text-decoration: none;
             color: #000;
         }
-
+        
         .short-full {
             float: right;
             color: #fff;
         }
-
+       
+         
+    
         .course-acc {
             background: rgba(129, 22, 124, 0.05);
         }
-
+        
         .panel-group .panel {
             border: none;
-            -webkit-box-shadow: none;
+        
         }
-
+        
         .exp-tt {
             font-size: 16px;
             padding-top: 60px;
             padding-bottom: 30px;
         }
-
+        
         h3 .text-center {
             font-size: 25px;
         }
-
+        
         .panel-tt {
             margin: 20px 0 40px 0;
             font-weight: bold;
         }
-
+        
         .panel-title {
             font-weight: bold;
         }
-
+        
         .panel-body ul {
             padding-inline-start: 10px;
         }
-
+        
         .panel-body li {
             list-style-type: none;
             padding: 7px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.2);
             font-size: 16px;
         }
-
+        
         .course-drop {
             padding-bottom: 40px;
         }
-        .student{
-            margin: auto;
-            font-family: 'Nunito', sans-serif;
-            font-size: 25px;
+
+        .projectText {
+            text-align: left;
+            background-image: url("https://res.cloudinary.com/ladydondammy/image/upload/v1571313862/real_time_background_x9alew.png");
+            padding: 100px;
+            width:100%
+            
+        }
+
+        .grp-tab {
+            margin-top:10px;
+        }
+
+        .medium1 {
+            font-size : 18px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .projectText {
+                padding: 20px;
+            }
+        }
+
+        hr {
+            width:400px;
+            }
+
+        .subhead {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
             font-weight: bold;
-            line-height: 124.8%;
-            color: #2A2B2A;
-        }
-        .box{
-        background-color: #fff;
-        border-radius:10px;
-        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
-        height: 450px;
-        width: 919px;
-        margin: auto;
-        }
-        .content{
-            font-family: 'Nunito', sans-serif;
-            font-size: 20px;
-            line-height: 151.2%;
-            font-weight: normal;
-            color: #333333;
-            text-align: justify;
-        }
-        .rate {
-            float: left;
-            height: 46px;
-            padding: 0 10px;
-            margin-left: 20px;
-        }
-        .rate:not(:checked) > input {
-            position:absolute;
-            top:-9999px;
-        }
-        .rate:not(:checked) > label {
-            float:right;
-            width:1em;
-            overflow:hidden;
-            white-space:nowrap;
-            cursor:pointer;
-            font-size:30px;
-            color:#ccc;
-        }
-        .rate:not(:checked) > label:before {
-            content: '★ ';
-        }
-        .rate > input:checked ~ label {
-            color: #FAF35E;
-        }
-        .rate:not(:checked) > label:hover,
-        .rate:not(:checked) > label:hover ~ label {
-            color: #FAF35E;
-        }
-        .rate > input:checked + label:hover,
-        .rate > input:checked + label:hover ~ label,
-        .rate > input:checked ~ label:hover,
-        .rate > input:checked ~ label:hover ~ label,
-        .rate > label:hover ~ input:checked ~ label {
-            color: #FAF35E;
+        
         }
 
-        .pix{
-            float: left;
+        .subhead2 {
+            font-weight: bold;
         }
-        .name {
-            font-weight: 600px;
-            font-size: 16px;
-            margin-left: 105px;
-            letter-spacing: 0.655606px;
+
+        .points1 {
+            display: inline-block;
+            
+            padding: 10px 100px 40px 100px;
         }
-        .task{
-            font-weight: 600px;
-            font-style: italic;
-            font-size: 14px;
-            margin-left: 105px;
-            letter-spacing: 0.655606px;
+
+          .points2 {
+            display: inline-block;
+            padding: 10px 100px 40px 100px;
+            
+        }
+
+        @media screen and (max-width: 500px){
+            .points1 {
+                padding: 10px 10px 40px 10px;
+                width:100%;
+                
+              }
+            
+            .points2 {
+                padding: 10px 10px 40px 10px;
+                width:100%;
+         }
+            
+        }
+
+      
+
+        p img {
+            padding-right: 15px;
+        }
+
+        .checked {
+        color: yellow;
+        }
+
+        .duration {
+            display:inline-block;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+
+        .courseStarts {
+            display: inline-block;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+
+        .rating 
+        {
+            display: inline-block;
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+
+        @media screen and (min-width: 1080px){
+            .margin1 {
+            margin-top:80px;
+        }
 
         }
-        #see{
+        
+
+        .reviews {
+            font-size:13px;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+
+        .but-suc:hover{
+            color: white;
+        }
+
+        .review-img {
+            display: inline-block;
+            text-align: left;
+            
+            
+        }
+
+        .textreview {
+            display: inline-block;
+            padding-left: 10px;
+            text-align: left;
+            
+        }
+
+        .review {
+            border: 1px solid white;
+            width: 70%;
+            box-shadow: 5px 5px 5px 5px lightgrey;
             border-radius: 10px;
-            margin-left: 40%;
-            padding: 10px 30px 10px 30px;
-
-        }
-        .media-body p {
-            font-size: 18px;
-            text-align: left;
+            padding: 30px 100px;
+            margin: auto;
+            margin-bottom: 30px;
+            margin-top: 40px;
         }
 
-        .mt-0 {
-            font-size: 20px;
-            text-align: left;
+        .review p {
+            margin:0px;
+            padding:0px;
+            width: 100%;
+        }
+
+        .review-foot{
+            display:flex;
+            width:100%;
+            margin-top:30px;
+        }
+
+        .small {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 800px){
+            .review {
+                padding: 20px 20px;
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 400px){
+            .review {
+                padding: 10px 10px;
+                width: 90%;
+            }
+        }
+
+
+
+        .seeMore {
+            text-align: center;
+            margin:30px;
+
+        }
+
+        .full-contain {
+            display: flex;
+            flex-wrap:wrap;
+            width:100%;
+            align-content: space-between;
+        }
+        
+        
+        .box {
+            width:40%;
+            margin:30px;
+            display:flex; 
+        }
+
+
+        .inner-box {
+           margin-right: 20px;
+        }
+
+        @media screen and (max-width:947px) {
+            .box {
+                width:100%;
+            }
+
+        }
+
+        @media screen and (max-width: 400px){
+            .box {
+                display:block;
+            }
+
+            .inner-box {
+                width: 100%;
+                text-align:center;
+                margin-bottom: 30px;
+            }
+
+            .inner-box h6 {
+                text-align: center;
+            }
+        }
+
+
+        h5{
             font-weight: bold;
-        }
-
-        .text1 {
-            padding-top: 40px;
             text-align: center;
         }
 
-        .text1 h3 {
-            font-weight: bolder;
-            font-size: 22px;
-        }
-
-        img.align-self-start.mr-3 {
-            margin-right: 8% !important;
-            background-color: #44CF6C;
-            border-radius: 50%;
-            padding: 8px;
-        }
-
-        .media {
-            padding: 30px;
-        }
-
-        .section1 {
-            background-color: rgba(129, 22, 124, 0.05)
-        }
-
-        .section2 {
-            background: #fcfcfc;
-        }
-
-        .my-3{
-            font-weight: bolder;
-            padding-bottom: 40px;
-        }
-        #side{
-            margin: auto;
-        }
-        .green{
-            margin-top: 30px;
-            width: 100%;
-        }
-        .im-ban .col-md-6 img {
-            display: inline;
-            position: relative;
-        }
-        .two{
-            background-color: #2DCE89;
-            background-image: url(https://res.cloudinary.com/oluchii/image/upload/v1571222324/2226806_1.png);
-            background-repeat: no-repeat;
-            background-position: right;
-        }
-        .cs4 h3 {
+        h6{
             font-weight: bold;
-            font-size: 30px;
-            padding: 10px 0px 10px 0px;
+            text-align: left; 
         }
-        .cs4 p {
-            font-size: 24px;
-            padding-top: 5px;
-            padding-bottom: 10px;
+
+        .btn-but {
+            padding : 10px  30px 10px 30px;
         }
-        @media (min-width: 320px) and (max-width: 480px) {
-            .content{
+
+        .btn-but1 {
+            padding : 10px  15px 10px 15px;
+            margin: 0px 5px 0px 5px
+        }
+
+        @media screen and (max-width:376px){
+            .btn-but1 {
+                padding: 5px 5px 5px 5px
+            }
+        }
+
+        .medium {
+            font-size: 20px;
+        }
+
+        .big {
+            font-size: 25px;
+            margin-top:5px;
+        }
+
+        .startsec {
+            margin-bottom: 50px;
+            background-color: #FCFCFC;
+        }
+
+        @media screen and (max-width: 997px){
+           
+            .coll-1 {
+              width:100%;
+              margin-bottom: 20px;;
+            }
+
+            .coll-2 {
+                width:100%;
+                
+            }
+
+        }
+
+        @media screen and (max-width: 360px){
+            .points2 {
                 font-size: 14px;
             }
-            .box{
-                width: 700px;
-                height: 500px;
+            .points1 {
+                font-size: 14px;
             }
-            .student{
-            margin: auto;
-            font-size: 18px;
-            }
-            .task{
-                margin-left: 0px;
-            }
-            .name{
-                margin-left: 50px;
-            }
-            .rate{
-                margin-left: 51px;
-            }
-            .pix{
-                margin-left: -20px;
-            }
-            #see{
-                margin-left: 45px;
-            }
-            h3.priv{
-                font-size: 18px;
-            }
-            img.align-self-start.mr-3{
-                margin-left: -30px;
-                margin-top: 0px;
-                padding: 0px;
-            }
-            div.media-body{
-                text-align: justify;
-            }
-            .two{
-                background-color: #2DCE89;
-                background-image: none;
-            }
-            .float-right{
-                margin-top: 15px;
-            }
-            #subscribe{
-                margin-top: 5px;
-                margin-left: 2px;
-            }
-            #email{
-                margin-left: 5px;
-            }
-            }
+        }
 
-        @media (min-width: 768px) and (max-width: 1024px) {
-        .two{
-            background-color: #2DCE89;
-            background-image: url(https://res.cloudinary.com/oluchii/image/upload/v1571222324/2226806_1.png);
-            background-size: 50% 100%;
+        @media screen and (max-width:574px) {
+            .sub {
+                margin-top:10px;
+            }
+        }
 
+        .build {
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 551px) {
+
+        .sechose {
+            display: none;
+        }
+    }
+
+        @media screen and (min-width: 551px) {
+            #MoreSection {
+                display: none;
+            }
+        }
+
+        .show {
+            display: block;
         }
 
 
-        }
-
-
-
+        
     </style>
 </head>
 
@@ -456,123 +545,79 @@
         </div>
     </nav>
 
-    <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
+    <div class="container-fluid contain pt-5 pb-5" style="background-color: #F0F2F6;">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="font-weight-bold">N50,000 for 3 months full training </p>
-                    <h4 class="font-weight-bold pb-3">Full Stack Development</h4>
-                    <p class="pb-2">Learn to Master multiple Front & Back end technologies to develop an advanced Web Application or Website </p>
+                <div class="col-md-6 margin1 col-content">
+                    <p class="font-weight-bold medium">N10,000 for 3 months full training </p>
+                    <h3 class="font-weight-bold pb-3">LARAVEL Three</h3>
+                    <p class="pb-2">Subscribe to this course to have a great knowledge about laravel at ease.</p>
 
-                    <div class="clearfix">
-                        <div class="float-left">
-                            <a class="btn btn-success pt-1 pb-1" href="register.html" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                    <div class="clearfix contain">
+                        <div class="float-left coll-1 ">
+                            <a class="btn btn-success btn-but pt-2 pb-2" href="register.html" >Start Learning</a>
                         </div>
-                        <div class="float-right">
-                            <a href="" style="color: #000;">Beginner</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
-                            <a class="btn btn-success pt-1 pb-1" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797;">FREE</a>
+                        <div class="float-right coll-2">
+                            <button class="btn btn-success btn-but1 pt-2 pb-2" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797; border-radius:10px">BEGINNER</button>
+                            <button class="btn btn-success btn-but1 pt-2 pb-2" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0; border-radius:10px">ONLINE</button>
+                            <button class="btn btn-success btn-but1 pt-2 pb-2" style="background-color: #FFE797; color:#E3B82A; border-color: #FFE797; border-radius:10px">PAID</button>
                         </div>
                     </div>
-                    <div class="course-details row align-tems-center justify-content-between" style="margin-top: 20px; margin-left: 1px; margin-bottom: 15px;">
-                            <div class="duration padding-bottom-sm">
-                                <h4 class="title" style="font-size: 12px;">Duration</h4>
-                                <span style="font-size: 15px; font-weight: bold;">8 Weeks</span>
-                            </div>
-                            <div class="duration padding-bottom-sm">
-                                <h4 class="title" style="font-size: 12px;" >Course Starts</h4>
-                                <span style="font-size: 15px; font-weight: bold;">5th of October, 2019</span>
-                            </div>
-                            <div class="duration padding-bottom-sm">
-                                <h4 class="title" style="font-size: 12px;" >Average Ratings</h4>
-                                <div class="d-inline" style="font-size: 15px; font-weight: bold;">
-                                    <div class="">
-                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
-                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
-                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
-                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
-                                        <i class="fas fa-star icon" style="color: #FFCE31;"></i>
-
-                                    <a href="#" class="color-green" style="color: #2DCE89; text-decoration: underline;"> See all reviews</a>
-                                </div>
-                            </div>
+                    <div class="grp-tab">
+                        <div class="duration">
+                            <p class="small">Duration<br>
+                            <b class="medium1">12 weeks</b></p>
                         </div>
+                        <div class="courseStarts">
+                            <p class="small">Course starts<br>
+                            <b class="medium1">5th of October, 2019</b></p>
                         </div>
-                        <!-- change this image to code -->
-                    <!-- <img class="img-fluid mt-2" src="https://res.cloudinary.com/sgnolebagabriel/gimage/upload/v1570965296/startng/Group_422_gdcqn9.png"> -->
+                        <div class="rating">
+                            <p class="small">Average ratings<br>
+                            <span class="fa fa-star checked big"></span>
+                            <span class="fa fa-star checked big"></span>
+                            <span class="fa fa-star checked big"></span>
+                            <span class="fa fa-star checked big"></span>
+                            <span class="fa fa-star checked big"></span>
+                            <a class="reviews" href="#">See all reviews</a>
+        
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img class="img-fluid w-100" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570973959/startng/creative-web-designer-planning-application-developing-template-layout_1418-2436_zq3paj.png">
+                <div class="col-md-6 col-img">
+                    <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570964975/startng/premium-mobile-phone-screen-mockup-template_53876-76515_1_ri1dx4.png">
                 </div>
+                
             </div>
         </div>
     </div>
-
-
-    <section class="section3">
-        <div class="contaner-fluid">
-            <h3 class="text-center my-3">What You Will Learn</h3>
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; UserFlow, User Journey using Flow Map</p>
-                        <hr style="width: 90%" />
-                    </div>
-                <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Wire-frames (Low-Fidelity & High Fidelity)</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; User Research, Ideation</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Mobile Interface (IOS, Android)</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Interactive Design</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; IOS Design Guidelines</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Prototyping using Figma</p>
-                        <hr style="width: 90%" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="padding: 10px"><img src="https://res.cloudinary.com/miz-kas/image/upload/v1571229528/Vector_wdbjy8.png">&nbsp; &nbsp; &nbsp; Material Design Guidelines</p>
-                        <hr style="width: 90%" />
-                    </div>
-                </div>
-            </div>
+    <div>
+        <h3 class="subhead">What you will learn</h3>
+        <div class="points1">
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to setup a software development process and model</p>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to organize a software development project</p>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to write user stories for software requirement</p>
+        <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to manage and deploy software releases</p>
         </div>
-    </section>
-
-    <section class="section4">
-        <div class="im-ban">
-            <div class="two">
-                <div class="container">
-                    <div class="col-md-6 py-4 pl-3">
-                        <div class="cs4">
-                            <h3>Build Real Time Project</h3>
-                            <p style="text-align: justify; font-size: 18px;">We have a team of highly-skilled and experienced mentors who guide the students through every step of the program to achieve the best results. Our training program is specially designed to expose our graduates to real-life world problems and how to find the best solutions to solve these problems.
-
-                            </p>
-                            <button class="btn btn-primary" style="background: #3F113D;">Start Learning</button>
-                        </div>
-                    </div>
+        <div class="points2">
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to verify software solution</p>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to validate a software solution</p>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">How to use Git and Github for your versioning management</p>
+                <p><img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571316052/checkmark_d0jhrb.png">Material Design Guidelines</p>
                 </div>
-            </div>
-    <!-- <div class="contaner-fluid" id="side">
-        <img class="green" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570965650/startng/Group_372_ywrzu3.png">
-    </div> -->
+    </div>
 
+    <div class="contaner-fluid">
+        <div class="projectText">
+        <h2 class="subhead2">Build Real time Projects</h2>
+        <p class="build">A Web App <br>A Basic One Page Blog<br>A full Blog and CMS<br>A website offering real life or external service using third part APIs</p>
+        <button class="btn btn-success2 pt-1 pb-1 but-suc" href="register.html" >Start Learning</button>
+        </div>
+     </div>
 
-    <section class="sessionforcollapse">
-        <div class="course-acc" style="background:rgba(129, 22, 124, 0.05);">
+    <div class="container-fluid"  style="background:rgba(129, 22, 124, 0.05); padding: 0px;">
+
+        <div class="course-acc">
             <div class="container course-drop">
                 <p class="text-center exp-tt">No Experience Required. Knowledge on how to use the computer. Use windows or MAC OSX
                 </p>
@@ -586,25 +631,27 @@
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i>  Architecture
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Introduction
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
                                         </a>
+
+
                                     </h4>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Container
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Facades
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Flexibility
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Robustness
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -615,8 +662,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Setup & Installation
-
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Front-end technology
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -626,16 +672,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Requirement
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Installation
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Web Server Configuration
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Project Structure
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -646,7 +692,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Basic Routing
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Development Languages
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -656,10 +702,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Basic Routing
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Route Parameters
+                                                Design Pattern - definition
+                                            </li>
+                                            <li>
+                                                The scenario in a software project
+                                            </li>
+                                            <li>
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -670,7 +722,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Responses
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Version control system (VCS)
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -678,22 +730,7 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                Views
-                                            </li>
-                                            <li>
-                                                View Data
-                                            </li>
-                                            <ul>
-                                            <li>
-                                                Redirects
-                                            </li>
-                                            <li>
-                                                Custom Responses
-                                            </li>
-                                            </ul>
-                                        </ul>
+                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
                                     </div>
                                 </div>
                             </div>
@@ -702,7 +739,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Filter
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Basic design ability
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -712,16 +749,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Basic Filters
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Multiple Filters
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Global Filters
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Pattern Filters
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -732,7 +769,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Controllers
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Database and cache
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -742,13 +779,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Creating Controllers
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Controller Routing
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                RESTFul Controllers
+                                                The scenario in a software project
+                                            </li>
+                                            <li>
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -760,14 +800,14 @@
 
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 sechose">
                         <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
 
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Blade Templates
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> User Research
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -777,19 +817,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Creating Templates
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                PHP Output
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Control Structures
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Templates
-                                            </li>
-                                            <li>
-                                                Template Inheritance
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -800,7 +837,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Advanced Routing
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Ideation
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -810,19 +847,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Named Routes
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Secure Routes
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Parameters Constraints 
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Route Profixing
-                                            </li>
-                                            <li>
-                                                Domain Routing
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -833,7 +867,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> URL Generation
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Wireframes
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -843,16 +877,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The Current URl
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Generating Framework URLs
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Asset URLs
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Generation Shortcuts
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -863,7 +897,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Forms
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Working with API (REST & SOAP)
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -873,19 +907,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Forms
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Fields
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Buttons
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Macros
-                                            </li>
-                                            <li>
-                                                Security
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -896,7 +927,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Validations
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> FrontEnd Frameworks
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -906,19 +937,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Validation
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Rules
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Error Messages
+                                                The scenario in a software project
                                             </li>
                                             <li>
-                                                Custom Rules
-                                            </li>
-                                            <li>
-                                                Custom Message
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
@@ -929,7 +957,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Databases
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> BackEnd Frameworks
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -939,155 +967,163 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                Abstraction
+                                                The software Development process - overview
                                             </li>
                                             <li>
-                                                Configuration
+                                                Design Pattern - definition
                                             </li>
                                             <li>
-                                                Preparing
+                                                The scenario in a software project
+                                            </li>
+                                            <li>
+                                                The problem: understand the customer requirement
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                         <!-- panel-group -->
 
                     </div>
 
+                    <div class="col-sm-6">
+                            <h4 id="MoreSection" class="panel-title">
+                                <a class="text-center text">
+                                    <i  style="color:#000;"></i> More Sections
+                                </a>
+                            </h4>
+                    </div>
+
                 </div>
             </div>
         </div>
-</section>
+    </div>
 
-    <section class="section2">
-        <div class="text1">
-            <h3 class="priv">On Start.ng, you are privileged to </h3>
-        </div>
-        <div class="col-md-10 offset-md-1 pb-5 pt-5">
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3"
-                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230671/Group_305_w3t3ik.png"
-                                alt="Learn from the Best teachers">
-                            <div class="media-body">
-                                <h4 class="mt-0">Learn from the Best Teachers</h4>
-                                <p>We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.
-                                </p>
-                            </div>
-                        </div>
+    <div class="startsec">
+    <div class="col-md-10 offset-md-1 pb-5 pt-5">
+         <h5>On Start.ng, you are privileged to</h5>
+            <div class="full-contain">
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img1_rnyatt.png">
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230760/Group_309_yrwwlu.png"
-                                alt="Online community">
-                            <div class="media-body">
-                                <h4 class="mt-0">Join our Online Developer Community</h4>
-                                <p>Join a community of independent code learners, where knowledge is been share and also learn faster.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3"
-                                src="https://res.cloudinary.com/miz-kas/image/upload/v1571230791/Group_300_guwfwc.png" alt="Support">
-                            <div class="media-body">
-                                <h4 class="mt-0">Support from Mentors</h4>
-                                <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="media">
-                            <img class="align-self-start mr-3" src="https://res.cloudinary.com/miz-kas/image/upload/v1571230828/Group_306_cjdqqu.png"
-                                alt="Certificate">
-                            <div class="media-body">
-                                <h4 class="mt-0">Earn a Certificate</h4>
-                                <p>Interns are eligible for a certificate if only they get to a certain stage of the internship.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="inner-text">
+                        <h6>Learn From the Best Teachers</h6></span>
+                        <p>We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.
+                        </p>
                     </div>
                 </div>
-            </div>
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img2_a35wyh.png">
+                    </div>
+                    <div class="inner-text">
+                        <h6>Join our Online Developer Community</h6>
+                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                        <div class="inner-box">
+                            <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img3_qfn4gm.png">
+                        </div>
+                        <div class="inner-text">
+                            <h6>Support from Mentors</h6>
+                            <p>Interns are exposed to updated usage of some technologies and effective training on their usage is provided
+                            </p>
+                        </div>
+                </div>
+                <div class="box">
+                        <div class="inner-box">
+                            <img src="https://res.cloudinary.com/ottyhaq/image/upload/v1571341253/img4_wixjig.png">
+                        </div>
+                        <div class="inner-text">
+                            <h6>Earn a Certificate</h6>
+                            <p> Interns are eligible for a certificate if only they get to a certain stage of the internship.
+                            </p>
+                        </div>
+                </div>
+                </div>    
+    </div>
+    </div>
+    
+        <h3 class="subhead">What students have to say about us</h3>
+
+    <section class="review">
+        <div>
+            <p>The HNG internship is a 3-month remote internship designed to find and develop the
+            most talented software developers. Everyone is welcome to participate (there is no
+            entrance exam). Anyone can log into the internship using their laptop. Each week, we
+            give tasks.</p>
+
+        <div class="review-foot">
+
+        <div class="review-img">
+            <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571329788/review_image_1_lz73bl.png">
         </div>
+
+        <div class="textreview">
+                <p><span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <span class="fa fa-star checked big"></span>
+                    <p> Dennis Lagbaja</p>
+                    <i>Completed the Front End Developer Class</i> </p>
+    
+        </div>
+
+        </div>
+        </div>
+            
     </section>
 
+    <section class="review">
+            <div >
+                <p>The HNG internship is a 3-month remote internship designed to find and develop the
+                most talented software developers. Everyone is welcome to participate (there is no 
+                entrance exam). Anyone can log into the internship using their laptop. Each week, we
+                give tasks.</p>
 
-   <!-- @miz_kas start from here -->
-
-    <div class="container col-md-8 my-5">
-    <div class="row aligh-items-center">
-        <h1 class="student my-5"> What students have to say about us </h1>
-        <div class="box">
-            <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
-            <div class="box-2 px-5">
-                <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218974/Ellipse_bw76jr.png" alt="picture">
-
-                    <div class="rate">
-                            <input type="radio" id="star5" name="rate" value="5" />
-                            <label for="star5">5 stars</label>
-                            <input type="radio" id="star4" name="rate" value="4" />
-                            <label for="star4">4 stars</label>
-                            <input type="radio" id="star3" name="rate" value="3" />
-                            <label for="star3">3 stars</label>
-                            <input type="radio" id="star2" name="rate" value="2" />
-                            <label for="star2">2 stars</label>
-                            <input type="radio" id="star1" name="rate" value="1" />
-                            <label for="star1">1 star</label>
-                    </div>
-                    <br>
-                    <br>
-                          <p class="name"> Dennis Lagbaja </p>
-                          <span class="task">Completed the Front End Developer Class</span>
+            <div class="review-foot">
+            <div class="review-img">
+                <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1571335861/review_image_2_dljw5c.png">
+    
             </div>
+    
+            <div class="textreview">
+                    <p><span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span>
+                        <span class="fa fa-star checked big"></span><br>
+                        Khadirat Uche Jumbo<br>
+                        <i>Completed the Laravel PHP Class</i> </p>
+        
+            </div>
+            </div>
+            </div>
+                
+        </section>
+        <div class=" seeMore">
+                <button class="btn btn-success" >See More Reviews</button>
+
         </div>
-
-        <div class="box mt-5">
-                <p class="content p-5">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.</p>
-                <div class="box-2 px-5">
-                    <img class="pix" src="https://res.cloudinary.com/miz-kas/image/upload/v1571218964/Ellipse_1_acflsk.png" alt="picture">
-
-                        <div class="rate">
-                                <input type="radio" id="star5" name="rate" value="5" />
-                                <label for="star5">5 stars</label>
-                                <input type="radio" id="star4" name="rate" value="4" />
-                                <label for="star4">4 stars</label>
-                                <input type="radio" id="star3" name="rate" value="3" />
-                                <label for="star3">3 stars</label>
-                                <input type="radio" id="star2" name="rate" value="2" />
-                                <label for="star2">2 stars</label>
-                                <input type="radio" id="star1" name="rate" value="1" />
-                                <label for="star1">1 star</label>
-                        </div>
-                        <br>
-                        <br>
-                              <p class="name"> Khadirat Uche Jumbo </p>
-                              <span class="task">Completed the Laravel PHP Class</span>
-                </div>
-            </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary my-5 " id="see" style="background-color: #44CF6C; border-color: #44CF6C;">See More Reviews</button>
-    </div>
-
+    
 
     <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
         <div class="container pt-5 pb-5">
             <div class="row align-items-center">
                 <div class="col-md-8 pb-5">
-                    <h4 class="sub" style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
+                    <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
                     <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions
                     </p>
                     <form class="form-inline">
-                        <input type="text" class="form-control col-md-8 col-xm-4" id="email">
-                        <button type="submit" id="subscribe" class="btn btn-primary ml-1 pl-5 pr-5" style="background-color: #44CF6C; border-color: #44CF6C;">Subscribe</button>
+                        <input type="text" class="form-control col-md-8" id="email">
+                        <button type="submit" class="btn btn-success ml-1 pl-5 pr-5 sub">Subscribe</button>
                     </form>
                 </div>
                 <div class="col-md-4">
@@ -1096,6 +1132,9 @@
             </div>
         </div>
     </div>
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid text-white deep">
@@ -1110,7 +1149,7 @@
                 <div class="row pb-4">
                     <div class="col-lg-4 col-md-12 mb-3">
                         <h4 class='mb-4'>Ready to take the Leap?</h4>
-                        <a href="#" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
+                        <a href="register.html" class='btn btn-success px-5 py-2 mb-5'>Start!</a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="about.html">About Us</a></li>
@@ -1131,7 +1170,7 @@
                     <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 my-2">
                         <li><a href="help.html">FAQ</a></li>
                         <li><a href="termsOfService.html">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </div>
                 </div>
 
@@ -1151,6 +1190,21 @@
     </div>
 
     <!-- End of Footer -->
+    <script>
+            let moreSection = document.querySelector('#MoreSection')
+            let section = document.querySelector(".sechose")
+            let text = document.querySelector(".text")
+    
+            moreSection.addEventListener("click", () => {
+                section.classList.toggle("show")
+                if (section.className === "col-sm-6 sechose show"){
+                    text.textContent = "Less Sections"
+                } else if ( section.className === "col-sm-6 sechose"){
+                    text.textContent = "More Sections"
+                }
+            })
+        
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>

@@ -106,8 +106,68 @@
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
+/* Style for Footer Ends */
+        /* Fade In */
+        .fade-in {
+            animation: fadeIn ease 5s;
+            -webkit-animation: fadeIn ease 5s;
+            -moz-animation: fadeIn ease 5s;
+            -o-animation: fadeIn ease 5s;
+            -ms-animation: fadeIn ease 5s;
+        }
 
-        /* Style for Footer Ends */
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        /* Fade-In Ends */
+        
 
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961662/startng/Group_420_naoymq.png');
@@ -157,7 +217,7 @@
                         <a class="nav-link" href="contactus.html">Contact Us</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
+                        <a id="btn" class="btn btn-success nav-link px-5" href="register.html" style="color: #fff;">Start
                             Learning</a>
                     </li>
                 </ul>
@@ -216,11 +276,14 @@
         </div>
         <div class="row align-items-center mt-3">
             <div class="col-md-6 mt-5">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_416_wlg555.png" class="img-fluid">
+                <img data-src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_416_wlg555.png"
+                    class="img-fluid lazy fade-in">
             </div>
             <div class="col-md-6 mt-4">
                 <h4 class="font-weight-bold pb-3">Modern Javascript from Scratch</h4>
-                <p class="pb-2">You can solve any JavaScript problem you encounter if you can think like a developer. You can build anything you want. You won’t freeze up. You won’t copy-paste from google either.</p>
+                <p class="pb-2">Learn and build a product with JAVASCRIPT in no time with our route of training you.
+                    Modern JavaScript is a safe and secure programming language for you to build your first project.
+                </p>
                 <div class="clearfix">
                     <div class="float-left">
                         <a class="btn btn-success pt-1 pb-1" href="javascript-course.html">More Details</a>
@@ -249,7 +312,8 @@
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_417_akfrop.png" class="img-fluid">
+                <img data-src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961660/startng/Group_417_akfrop.png"
+                    class="img-fluid lazy fade-in">
             </div>
         </div>
         <div class="row align-items-center mt-3">
@@ -361,10 +425,53 @@
     
 
     <!-- End of Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyloadImages = document.querySelectorAll("img.lazy");
+            var lazyloadThrottleTimeout;
 
+            function lazyload() {
+                if (lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function () {
+                    var scrollTop = window.pageYOffset;
+                    lazyloadImages.forEach(function (img) {
+                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        }
+                    });
+                    if (lazyloadImages.length == 0) {
+                        document.removeEventListener("scroll", lazyload);
+                        window.removeEventListener("resize", lazyload);
+                        window.removeEventListener("orientationChange", lazyload);
+                    }
+                }, 60);
+            }
+
+            document.addEventListener("scroll", lazyload);
+            window.addEventListener("resize", lazyload);
+            window.addEventListener("orientationChange", lazyload);
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Email validation -->
+    <script>
+        $(function () {
+            var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+
+            $('[type="email"]').on('keyup', function () {
+                $('.message').hide();
+                regExp.test($(this).val()) ? $('.message.success').show() : $('.message.error').show();
+            });
+
+        });
+    </script>
 </body>
 
 </html>
