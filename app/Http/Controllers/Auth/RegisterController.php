@@ -7,7 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Auth;
+
 class RegisterController extends Controller
 {
     /*
@@ -28,20 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-//    protected $redirectTo = '/';
-    protected $registerView = 'frontend.frontend.register';
-
-    protected function redirectTo()
-    {
-        $role = Auth::user()->role;
-        $email = Auth::user()->email;
-        //use your own route
-        if(!$role){
-            return route('index');
-        }
-        return route('admin');
-
-    }
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -52,13 +39,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-    public function showRegistrationForm() {
-        return view('frontend.frontend.register');
-    }
 
-    public function showLoginForm() {
-        return view('frontend.frontend.register');
-    }
     /**
      * Get a validator for an incoming registration request.
      *
@@ -67,13 +48,13 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255','unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone'=>'',
+            'phone' => ['required', 'string', 'max:14', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            
         ]);
     }
 
@@ -86,11 +67,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'username' => $data['username'],
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
-            'state' => $data['phone'],
         ]);
     }
 }
