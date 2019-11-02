@@ -15,40 +15,40 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li class="{{ (request()->is('admin')) ? 'active' : '' }}">
+                <a href="{{route('admin.index')}}">
+                    <i class="fa fa-users"></i>
+                    <p>View All Admins</p>
+                </a>
+            </li>
+            <li class="{{ (request()->is('course')) ? 'active' : '' }}">
+                <a href="{{route('course.index')}}">
+                    <i class="fa fa-book"></i>
+                    <p>View All Courses</p>
+                </a>
+            </li>
+            <li class="{{ (request()->is('tutor')) ? 'active' : '' }}">
+                <a href="{{route('tutor.index')}}">
+                    <i class="fa fa-users"></i>
+                    <p>View All Tutors</p>
+                </a>
+            </li>
+            <li class="{{ (request()->is('user')) ? 'active' : '' }}">
+                <a href="{{route('user.index')}}">
+                    <i class="fa fa-users"></i>
+                    <p>View All Students</p>
+                </a>
+            </li>
             <li class="{{ (request()->is('admin/create')) ? 'active' : '' }}">
                 <a href="{{route('admin.create')}}">
                     <i class="fa fa-user"></i>
                     <p>Create Admin</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/create-course')) ? 'active' : '' }}">
-                <a href="{{route('admin.create-course')}}">
+            <li class="{{ (request()->is('course/create')) ? 'active' : '' }}">
+                <a href="{{route('course.create')}}">
                     <i class="fa fa-book"></i>
                     <p>Create Course</p>
-                </a>
-            </li>
-              <li class="{{ (request()->is('admins/view-admins')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-admins')}}">
-                    <i class="fa fa-users"></i>
-                    <p>View All Admins</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('admins/view-courses')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-courses')}}">
-                    <i class="fa fa-book"></i>
-                    <p>View All Courses</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('admins/view-tutors')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-tutors')}}">
-                    <i class="fa fa-users"></i>
-                    <p>View All Tutors</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('admins/view-students')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-students')}}">
-                    <i class="fa fa-users"></i>
-                    <p>View All Students</p>
                 </a>
             </li>
             <!--<li>

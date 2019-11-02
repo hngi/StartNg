@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Courses;
 use App\RegisteredCourses;
 use App\User;
+use App\Reviews;
 
 class CourseController extends Controller
 {
@@ -17,8 +18,24 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Courses::where('active', 1)->get();
-        return view('course.index')->with('courses', $courses);
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $data = array(
+                'courses' => Courses::orderBy('created_at','asc')->paginate(5),
+                'registered_courses' => RegisteredCourses::all(),
+                'users' => User::all(),
+            );
+        }
+        else{
+            $user_role = ($role == 1) ? 'tutor' : 'user';
+            $data = array(
+                'courses' => Courses::where('active', 1)->paginate(10),
+                'registered' => RegisteredCourses::where('user_id', auth()->user()->id)->get()
+            );
+        }   
+
+        return view("$user_role.courses")->with($data);
     }
 
     /**
@@ -28,10 +45,16 @@ class CourseController extends Controller
      */
     public function create()
     {
-        if(auth()->user()->role == 0){
-            //return to user dashboard
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $users = User::all();
         }
-        //return create course page
+        else{
+            return back()->with('error', 'Unauthorized');
+        }
+        
+        return view("$user_role.create-course")->with('users', $users);
     }
 
     /**
@@ -70,7 +93,52 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Courses::find($id);
-        return view('course.detail')->with('course', $course);
+        
+        if($course){
+            if(auth()->user()){
+                $role = auth()->user()->role;
+                if ($role == 2){
+                    $user_role = 'admin';
+                    $registered_courses = RegisteredCourses::where('course_id', $id)->get();
+                    $reviews = Reviews::where('course_id', $id)->get();
+            
+                    $data = array(
+                        'course' => $course,
+                        'number' => count($registered_courses),
+                        'users' => User::all(),
+                        'reviews' => $reviews,
+                    );
+                }
+                elseif ($role == 1){
+                    $user_role = 'tutor';
+                    $registered_courses = RegisteredCourses::where('course_id', $id)->get();
+            
+                    $data = array(
+                        'course' => $course,
+                        'number' => count($registered_courses),
+                        'users' => User::all(),
+                    );
+                }
+                elseif ($role == 0){
+                    $user_role = 'user';
+                    $user_id = auth()->user()->id;
+                    $data = array(
+                        'course' => $course,
+                        'registered' => RegisteredCourses::where(['course_id'=>$id, 'user_id'=>$user_id])->exists()
+                    );
+                }
+            }
+            else{
+                $user_role = 'course';
+                $data = array(
+                    'course' => $course,
+                );
+            }
+        }
+        else{
+            return back()->with('error', 'Course not found');
+        }
+        return view("$user_role.show-course")->with($data);
     }
 
     /**
@@ -81,23 +149,7 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        $course = Courses::find($id);
-        
-        if (!isset($course)){
-            return redirect('/')->with('error', 'That course is not available');
-        }
-
-        if(auth()->user()->role == 0){
-            return redirect('/')->with('error', 'Unauthorized Page');
-        }
-
-        if(auth()->user()->role == 1){
-            if(auth()->user()->role == $course->user_id){
-                return redirect('/')->with('error', 'Unauthorized Page');
-            }
-        }
-
-        //return view('course.edit')->with('course', $course);
+        //
     }
 
     /**
@@ -175,34 +227,22 @@ class CourseController extends Controller
         }
     }
 
-    public function mycourse($id){
-        $check = User::where('id',$id)->exists();
+    public function myCourses()
+    {
+        $role = auth()->user()->role;
+        if ($role == 0){
+            $myCourses = RegisteredCourses::where('user_id', auth()->user()->id)->get();
+            $courses = Courses::all();
 
-        if($check) {
-            $check = RegisteredCourses::where('user_id', $id)->exists();
-            if($check) {
-                $check = RegisteredCourses::where('user_id', $id)->get();
-                $courses = [];
-                foreach ($check as $item) {
-
-                    $output = Course::where('id', $item->course_id)->get()[0];
-
-                    array_push($courses, (array)$output);
-                }
-
-                return view('course.mycourses',compact('courses'));
-            }
-
-            else{
-              $message="no registered course";
-                return redirect('mycourse')->with('error',$message);
-            }
-            $user=DB::table('users')->where('id',$id)->get()[0];
+            $data = array(
+                'myCourses' => $myCourses,
+                'courses' => $courses,
+                'users' => User::all()
+            );
+            return view('user.my-courses')->with($data);
         }
         else{
-            $message='user does not exist';
-            return redirect('mycourse')->with('error',$message);
+            return 'fail';
         }
-
     }
 }

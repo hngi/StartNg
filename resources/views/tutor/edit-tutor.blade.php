@@ -1,4 +1,4 @@
-@extends('layouts.admin-dashboard')
+@extends('layouts.tutor-dashboard')
 
 @section('content')
 <div class="content">
@@ -6,7 +6,7 @@
                     <div class="col-md-8">
                         <div class="card card-user">
                             <div class="card-header">
-                                <h5 class="card-title">Edit {{$admin->username}}</h5>
+                                <h5 class="card-title">Edit</h5>
                             </div>
                             <div class="card-body">
                                 <form action="{{route('admin.update', $admin->id)}}" method="post">
@@ -49,17 +49,7 @@
                                                 <label>Phone Number</label>
                                                 <input type="tel" name="phone" class="form-control" value="{{$admin->phone}}">
                                             </div>
-                                        </div>@if(Auth::user()->role==2)
-                                        <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    <label>Role</label><br>
-                                                    <input type="radio" name="role" value="2" class="form-check-label">
-                                                    <label class="form-check-label"> Admin </label><br>
-                                                    <input type="radio" name="role" value="1" class="form-check-label">
-                                                    <label class="form-check-label"> Tutor </label>
-                                                </div>
-                                            </div>
-                                             @endif
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="update ml-auto mr-auto">

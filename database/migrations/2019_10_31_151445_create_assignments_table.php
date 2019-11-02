@@ -19,9 +19,7 @@ class CreateAssignmentsTable extends Migration
             $table->unsignedBigInteger('user_id'); //tutor in-charge
             $table->string('title');
             $table->string('description');
-            $table->string('file');
-            $table->date('date_from');
-            $table->date('date_to');
+            $table->integer('duration');
             $table->boolean('active')->default(1);
         });
     }

@@ -9,46 +9,28 @@
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="{{ (request()->is('tutor/dashboard')) ? 'active' : '' }}">
-                <a href="{{route('tutor.dashboard')}}">
+            <li class="{{ (request()->is('dashboard')) ? 'active' : '' }}">
+                <a href="{{route('dashboard')}}">
                     <i class="fa fa-home"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('tutor/profile')) ? 'active' : '' }}">
-                <a href="{{route('tutor.profile')}}">
+            <li class="{{ (request()->is(route('tutor.edit', auth()->user()->id))) ? 'active' : '' }}">
+                <a href="{{route('tutor.edit', auth()->user()->id)}}">
                     <i class="fa fa-user"></i>
                     <p>My Profile</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('tutors/view-courses')) ? 'active' : '' }}">
-                <a href="{{route('tutor.view-courses')}}">
+            <li class="{{ (request()->is('course')) ? 'active' : '' }}">
+                <a href="{{route('course.index')}}">
                     <i class="fa fa-book"></i>
-                    <p>My Courses</p>
+                    <p>View Courses</p>
                 </a>
             </li>
-              <li class="{{ (request()->is('admins/view-admins')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-admins')}}">
+            <li class="{{ (request()->is('user')) ? 'active' : '' }}">
+                <a href="{{route('user.index')}}">
                     <i class="fa fa-users"></i>
-                    <p>Reviews</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('tutors/assignment')) ? 'active' : '' }}">
-                <a href="{{route('tutor.assignment')}}">
-                    <i class="fa fa-book"></i>
-                    <p>Assignments</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('tutors/upload-resource')) ? 'active' : '' }}">
-                <a href="{{route('tutor.upload-resource')}}">
-                    <i class="fa fa-file"></i>
-                    <p>Resourses</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('tutors/view-students')) ? 'active' : '' }}">
-                <a href="{{route('tutor.view-students')}}">
-                    <i class="fa fa-users"></i>
-                    <p>View All My Students</p>
+                    <p>View Students</p>
                 </a>
             </li>
             <!--<li>

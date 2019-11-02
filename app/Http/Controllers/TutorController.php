@@ -17,13 +17,6 @@ class TutorController extends Controller
         $this->middleware('auth');
     }
 
-    public function profile()
-    {
-        $id = auth()->user()->id;
-        $tutor = User::find($id);
-        
-        return view('tutor.user-profile')->with('tutor', $tutor);
-    }
     /**
      * Display a listing of the resource.
      *
@@ -31,7 +24,16 @@ class TutorController extends Controller
      */
     public function index()
     {
-         return view('tutor.dashboard');
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $tutors = User::where('role', 1)->paginate(10);
+        }
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        return view("$user_role.tutors")->with('tutors', $tutors);
     }
   
     public function view_courses()
@@ -58,7 +60,15 @@ class TutorController extends Controller
      */
     public function create()
     {
-        //
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+        }
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        return redirect(route('admin.create'));
     }
 
     /**
@@ -79,7 +89,7 @@ class TutorController extends Controller
             'role' => 'required'
         ]);
         
-            $tutor = User::find($id);
+        $tutor = User::find($id);
         $tutor->first_name = $request->input('first_name');
         $tutor->last_name = $request->input('last_name');
         $tutor->username = $request->input('username');
@@ -107,7 +117,28 @@ class TutorController extends Controller
      */
     public function show($id)
     {
-        //
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $user = User::find($id);
+            if($user->role == 1){
+                $tutor = $user;
+                $courses = Courses::where('user_id', $id);
+            }
+            else{
+                return back()->with('error', 'User not Tutor'); 
+            }
+        }   
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        $data = array(
+            'tutor' => $tutor,
+            'courses' => $courses
+        );
+
+        return view("$user_role.show-tutor")->with($data);
     }
 
     /**
@@ -118,7 +149,36 @@ class TutorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $user = User::find($id);
+            if($user->role == 1){
+                $admin = $user;
+            }
+            else{
+                return back()->with('error', 'User not Tutor'); 
+            }
+        }
+        elseif ($role == 1){
+            $user_role = 'tutor';
+            $user = User::find($id);
+            if($user->id == auth()->user()->id){
+                $admin = $user;
+            }
+            else{
+                return back()->with('error', 'Unauthorized'); 
+            }
+        }
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        $data = array(
+            'admin' => $admin,
+        );
+
+        return view("$user_role.edit-$user_role")->with($data);
     }
 
     /**
@@ -136,7 +196,6 @@ class TutorController extends Controller
             'username' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'max:14'],
-            'role' => 'required'
         ]);
         
         $tutor = User::find($id);
@@ -145,15 +204,9 @@ class TutorController extends Controller
         $tutor->username = $request->input('username');
         $tutor->email = $request->input('email');
         $tutor->phone = $request->input('phone');
-        $tutor->role = $request->input('role');
-        $tutor->image = $request->input('image');
-        $tutor->address = $request->input('address');
-        $tutor->state = $request->input('state');
-        $tutor->country = $request->input('country');
-        $tutor->aboutme = $request->input('aboutme');
         $tutor->save();
         
-          return redirect('/tutors/myprofile')->with('success', 'Profile updated!');
+        return back()->with('success', 'Profile updated!');
     }
     /**
      * Remove the specified resource from storage.
@@ -163,9 +216,7 @@ class TutorController extends Controller
      */
     public function destroy($id)
     {
-        $tutor = user::find($id);
-        $tutor->delete();
-
-        return redirect('/view-tutors')->with('success', 'tutor deleted!');
+        //
     }
+    
 }

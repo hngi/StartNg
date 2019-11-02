@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Dashboard | StartNg
+        Tutor Dashboard
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -14,12 +14,12 @@
     <!-- CSS Files -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/paper-dashboard.css" rel="stylesheet" />
-    <link href="/css/view-course.css" rel="stylesheet" />
 </head>
 
 <body class="">
     <div class="wrapper ">
-        @include('inc.sidebar')
+
+  @include('inc.tutorsidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -32,7 +32,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW ALL STUDENTS</a>
+                        <a class="navbar-brand" href="#pablo">DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -50,69 +50,49 @@
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </nav>
-            @include('inc.messages') 
-            <div class=" content">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">STUDENTS</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class=" text-primary">
-                                            <th>
-                                                Name
-                                            </th>
-                                            <th>
-                                                Username
-                                            </th>
-                                            <th>
-                                                Email Address
-                                            </th>
-                                            <th>
-                                                Phone Number
-                                            </th>
-                                            <th class="text"> </th>
-                                        </thead>
-                                        <tbody>
-                                            @foreach($students as $student)
-                                            <tr>
-                                                <td>
-                                                    {{$student->first_name}} {{$student->last_name}}
-                                                </td>
-                                                <td>
-                                                    {{$student->username}}
-                                                </td>
-                                                <td>
-                                                    {{$student->email}}
-                                                </td>
-                                                <td>
-                                                    {{$student->phone}}
-                                                </td>
-                                                <td class="text">
-                                                    <a href="{{route('admin.view-user-detail', $student->id)}}" class="btn btn-warning">VIEW DETAILS</a>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                    {{$students->links()}}
-                                </div>
-                            </div>
+            <!-- End Navbar -->
+            <!-- <div class="panel-header panel-header-lg">
+
+  <canvas id="bigDashboardChart"></canvas>
+
+
+</div> -->
+@include('inc.messages')
+@yield('content')
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li>
+                                    <a href="{{route('index')}}" target="_blank">STARTNG</a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, made by Startdotng Team
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
+        </div>
+    </div>
     <!--   Core JS Files   -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+
     <script src="/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
     <script src="/js/demo.js"></script>
     <script>
