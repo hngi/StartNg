@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Assignment;
+use App\Courses;
+use App\RegisteredCourses;
 
 class AssignmentController extends Controller
 {
@@ -18,11 +20,27 @@ class AssignmentController extends Controller
      */
     public function index()
     {
-              return view('tutor.assignment');
-    }
-      public function upload()
-      {
-              return view('tutor.upload-resource');
+        $role = auth()->user()->role;
+        $id = auth()->user()->id;
+        if ($role == 0){
+            $user_role = 'user';
+            $registered_courses = RegisteredCourses::where('user_id', $id)->get();
+            $courses = Courses::all();
+            $assignments = Assignment::where('active', 1)->get();
+        }
+        else{
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            $registered_courses = '';
+            $courses = Courses::where('user_id', $id)->get();
+            $assignments = Assignment::all();
+        }
+
+        $data = array(
+            'registered_courses' => $registered_courses,
+            'courses' => $courses,
+            'assignments' => $assignments
+        );
+        return view("$user_role.assignment")->with($data);
     }
 
     /**
@@ -32,7 +50,17 @@ class AssignmentController extends Controller
      */
     public function create()
     {
-        //
+        $role = auth()->user()->role;
+
+        if ($role == 0){
+            return back()->with('error', 'Unauthorized page');
+        }
+        else{
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            $id = auth()->user()->id;
+            $courses = Courses::where('user_id', $id)->get();
+            return view("$user_role.create-assignment")->with('courses', $courses);
+        }
     }
 
     /**
@@ -43,7 +71,14 @@ class AssignmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $assignment = new Assignment;
+        $assignment->title = $request->input('title');
+        $assignment->description = $request->input('description');
+        $assignment->duration = $request->input('duration');
+        $assignment->user_id = $request->input('course');
+        $assignment->save();
+
+        return back()->with('success', 'Assignment Created');
     }
 
     /**
@@ -54,7 +89,33 @@ class AssignmentController extends Controller
      */
     public function show($id)
     {
-        //
+        $role = auth()->user()->role;
+        $user_id = auth()->user()->id;
+        $assignment = Assignment::find($id);
+        if ($role == 0){
+            $registered = RegisteredCourses::where(['user_id'=>$user_id, 'course_id'=>$assignment->user_id])->exists();
+            if($registered){
+                $user_role = 'user';
+            }
+            else{
+                return back()->with('error', 'You cannot view this Assignment');
+            }
+        }
+        else{
+            $mycourse = Courses::where(['user_id'=>$user_id, 'id'=>$assignment->user_id])->exists();
+            if($mycourse){
+                $user_role = ($role == 1) ? 'tutor' : 'admin';
+            }
+            else{
+                return back()->with('error', 'You cannot view this Assignment');
+            }
+        }
+
+        $data = array(
+            'assignment' => $assignment,
+        );
+
+        return view("$user_role.show-assignment")->with($data);
     }
 
     /**
@@ -65,7 +126,28 @@ class AssignmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = auth()->user()->role;
+        $user_id = auth()->user()->id;
+        $assignment = Assignment::find($id);
+        if ($role == 0){
+            return back()->with('error', 'Access Denied');
+        }
+        else{
+            $mycourse = Courses::where(['user_id'=>$user_id, 'id'=>$assignment->user_id])->exists();
+            if($mycourse){
+                $user_role = ($role == 1) ? 'tutor' : 'admin';
+            }
+            else{
+                return back()->with('error', 'Access Denied');
+            }
+        }
+
+        $data = array(
+            'assignment' => $assignment,
+            'courses' => Courses::where('user_id', $user_id)->get()
+        );
+
+        return view("$user_role.edit-assignment")->with($data);
     }
 
     /**
@@ -77,7 +159,14 @@ class AssignmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $assignment =  Assignment::find($id);
+        $assignment->title = $request->input('title');
+        $assignment->description = $request->input('description');
+        $assignment->duration = $request->input('duration');
+        $assignment->user_id = $request->input('course');
+        $assignment->save();
+
+        return back()->with('success', 'Assignment Updated');
     }
 
     /**

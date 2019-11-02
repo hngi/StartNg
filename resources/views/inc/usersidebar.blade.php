@@ -10,32 +10,32 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active">
+                    <li class="{{ (request()->is('dashboard')) ? 'active' : '' }}">
                         <a href="{{route('dashboard')}}">
                             <i class="fa fa-home"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('user.profile')}}">
+                    <li class="{{ (request()->is(route('user.show', auth()->user()->id))) ? 'active' : '' }}">
+                        <a href="{{route('user.show', auth()->user()->id)}}">
                             <i class="fa fa-user"></i>
                             <p>My Profile</p>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('user.index')}}">
+                    <li class="{{ (request()->is(route('tutor.edit', auth()->user()->id))) ? 'active' : '' }}">
+                        <a href="{{route('course.mycourses')}}">
                             <i class="fa fa-book"></i>
                             <p>View My Courses</p>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('user.courses')}}">
+                    <li class="{{ (request()->is('course')) ? 'active' : '' }}">
+                        <a href="{{route('course.index')}}">
                             <i class="fa fa-book"></i>
                             <p>View Courses</p>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('user.assignment')}}">
+                    <li class="{{ (request()->is('assignment')) ? 'active' : '' }}">
+                        <a href="{{route('assignment.index')}}">
                             <i class="fa fa-book"></i>
                             <p>View Assignments</p>
                         </a>

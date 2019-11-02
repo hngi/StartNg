@@ -33,7 +33,7 @@ Route::resource('course', 'CourseController');
 Route::resource('course-content', 'CourseContentController');
 Route::resource('contact', 'ContactController');
 Route::resource('tutor', 'TutorController');
-// Route::resource('tutor', 'AssignmentController');
+Route::resource('assignment', 'AssignmentController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
@@ -64,8 +64,8 @@ Route::get('/users/profile', 'UserController@profile')->name('user.profile');
 Route::get('/users/review/{id}', 'UserController@review')->name('user.review');
 Route::post('/users/store-review/{id}', 'UserController@store_review')->name('user.store-review');
 Route::get('/users/assignment', 'UserController@assignment')->name('user.assignment');
-Route::get('/users/assignment/{id}', 'UserController@assignment_detail')->name('user.assignment-detail');
-Route::get('/users/courses', 'UserController@courses')->name('user.courses');
+Route::get('/users/disable/{id}', 'UserController@disable')->name('user.disable');
+Route::get('/courses/registered', 'CourseController@myCourses')->name('course.mycourses');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController'); 

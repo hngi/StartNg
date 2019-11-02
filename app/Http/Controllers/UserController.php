@@ -12,6 +12,10 @@ use App\Assignment;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,14 +23,16 @@ class UserController extends Controller
      */
     public function index()
     {
-        $id = auth()->user()->id;
+        $role = auth()->user()->role;
+        if ($role == 0){
+            return back()->with('error', 'Unauthorized Page');
+        }
+        else{
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            $students = User::where('role', 0)->paginate(10);
+        }
         
-        $data = array(
-            'courses' => Courses::all(),
-            'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
-            'users' => User::all(),
-        );
-        return view('user.view-my-courses')->with($data);
+        return view("$user_role.users")->with('students', $students);
     }
 
     public function courses()
@@ -69,15 +75,37 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = auth()->user()->id;
-        $course = Courses::find($id);
-        $registered = RegisteredCourses::where(['course_id'=>$id, 'user_id'=>$user])->exists();
-        if($registered){
-            return view('user.view-registered-course-detail')->with('course', $course);
+        $student = User::find($id);
+        $role = auth()->user()->role;
+        if ($role == 0){
+            if ($student->id == auth()->user()->id){
+                $user_role = 'user';
+                $data = array(
+                    'student' => $student
+                );
+            }
+            else{
+                return back()->with('error', 'Unauthorized Page');
+            }
+            
         }
         else{
-            return view('user.view-course-detail')->with('course', $course);
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            if ($student->role == 0){
+                $registered_courses = RegisteredCourses::where('user_id', $id)->get();
+                $courses = Courses::all();
+                $data = array(
+                    'courses' => $courses,
+                    'registered_courses' => $registered_courses,
+                    'student' => $student
+                );
+            }
+            else{
+                return back()->with('error', 'Unauthorized Page');
+            }
         }
+        
+        return view("$user_role.show-user")->with($data);
         
     }
 
@@ -89,7 +117,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return redirect(route('user.show', $id));
     }
 
     /**
@@ -120,7 +148,24 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return 'uui';
+        /*$user = User::find($id);
+        $role = auth()->user()->role;
+        if ($role == 0){
+            return back()->with('error', 'Uauthorized Permission');
+        }
+        else{
+            if ($user->role == 0){
+                return 'lk';
+                $user->active = ($user->active == 0) ? 1 : 0;
+                $action = ($user->active == 1) ? "enabled" : "disabled";
+                $user->save();
+                return back()->with("success", "$user->username has been $action successfully");
+            }
+            else{
+                return back()->with('error', 'Uauthorized Permission');
+            }
+        }*/
     }
 
     public function review($id)
@@ -141,36 +186,24 @@ class UserController extends Controller
 
         return back()->with('success', 'Review Sent Successfully');
     }
-    
-    public function profile()
-    {
-        $id = auth()->user()->id;
-        $user = User::find($id);
-        
-        return view('user.view-profile')->with('user', $user);
-    }
 
-    public function assignment()
+    public function disable($id)
     {
-        $id = auth()->user()->id;
         $user = User::find($id);
-        $data = array(
-            'courses' => Courses::all(),
-            'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
-            'assignments' => Assignment::all(),
-        );
-        
-        return view('user.view-assignments')->with($data);
-    }
-
-    public function assignment_detail($id)
-    {
-        $assignment = Assignment::find($id);
-        $data = array(
-            'courses' => Courses::all(),
-            'assignment' => $assignment,
-        );
-        
-        return view('user.view-assignment-detail')->with($data);
+        $role = auth()->user()->role;
+        if ($role == 0){
+            return back()->with('error', 'Uauthorized Permission');
+        }
+        else{
+            if ($user->role == 0){
+                $user->active = ($user->active == 0) ? 1 : 0;
+                $action = ($user->active == 1) ? "enabled" : "disabled";
+                $user->save();
+                return back()->with("success", "$user->username has been $action successfully");
+            }
+            else{
+                return back()->with('error', 'Uauthorized Permission');
+            }
+        }
     }
 }

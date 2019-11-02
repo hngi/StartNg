@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Dashboard |StartNg
+        Admin Dashboard | StartNg
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -14,12 +14,11 @@
     <!-- CSS Files -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/paper-dashboard.css" rel="stylesheet" />
-    <link href="/css/view-course.css" rel="stylesheet" />
 </head>
 
 <body class="">
     <div class="wrapper ">
-        @include('inc.user-sidebar')
+        @include('inc.sidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -32,7 +31,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW COURSE DETAIL</a>
+                        <a class="navbar-brand" href="#pablo">ADMIN DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -50,46 +49,49 @@
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </nav>
-      @include('inc.messages')       
-            <div class="content">
-                <div class="card card-register">
-                    <div class="card-header">
-                        <h5 class="card-title">DETAILS</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header">
-                                <h4 class="card-title">Assigments</h4>
-                            </div>
-                            <div class="card-body">
+            <!-- End Navbar -->
+            <!-- <div class="panel-header panel-header-lg">
+
+  <canvas id="bigDashboardChart"></canvas>
+
+
+</div> -->
+@include('inc.messages')
+@yield('content')
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
                             <ul>
-                            @foreach($registered_courses as $registered_course)
-                            @foreach($assignments as $assignment)
-                            @if($registered_course->course_id == $assignment->user_id)
-                            <li>
-                                <a href="{{route('user.assignment-detail', $assignment->id)}}">{{$assignment->title}}</a> -
-                                    @foreach($courses as $course)
-                                    @if($assignment->user_id == $course->id)
-                                        {{$course->title}}
-                                    @endif
-                                    @endforeach
-                            </li>
-                            @endif
-                            @endforeach
-                            @endforeach
+                                <li>
+                                    <a href="{{route('index')}}" target="_blank">STARTNG</a>
+                                </li>
+
                             </ul>
-                            </div>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, made by Startdotng Team
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
+        </div>
+    </div>
     <!--   Core JS Files   -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+
     <script src="/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
     <script src="/js/demo.js"></script>
     <script>

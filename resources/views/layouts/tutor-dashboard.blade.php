@@ -12,45 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/paper-dashboard.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/paper-dashboard.css" rel="stylesheet" />
 </head>
 
 <body class="">
     <div class="wrapper ">
-        <div class="sidebar" data-color="white" data-active-color="danger">
 
-            <div class="logo">
-                <a href="http://startng.ml">
-
-                    <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
-
-                </a>
-
-            </div>
-            <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="./dashboard.html">
-                            <i class="fa fa-home"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./user.html">
-                            <i class="fa fa-home"></i>
-                            <p>Tutor Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./user.html">
-                            <i class="fa fa-book"></i>
-                            <p>View Courses</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  @include('inc.tutorsidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -92,17 +61,40 @@
 
 
 </div> -->
+@include('inc.messages')
+@yield('content')
+            <footer class="footer footer-black  footer-white ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li>
+                                    <a href="{{route('index')}}" target="_blank">STARTNG</a>
+                                </li>
 
+                            </ul>
+                        </nav>
+                        <div class="credits ml-auto">
+                            <span class="copyright">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>, made by Startdotng Team
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
     <!--   Core JS Files   -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
 
-    <script src="js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
-    <script src="js/demo.js"></script>
+    <script src="/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="/js/demo.js"></script>
     <script>
         $(document).ready(function() {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
