@@ -211,7 +211,7 @@ class PhpGeneratorDumperTest extends TestCase
         include $this->testTmpFilepath;
 
         $projectUrlGenerator = new \NonExistingRoutesUrlGenerator(new RequestContext());
-        $projectUrlGenerator->generate('NonExisting', []);
+        $url = $projectUrlGenerator->generate('NonExisting', []);
     }
 
     public function testDumpForRouteWithDefaults()

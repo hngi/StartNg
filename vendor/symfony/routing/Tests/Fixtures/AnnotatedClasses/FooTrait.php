@@ -6,7 +6,7 @@ trait FooTrait
 {
     public function doBar()
     {
-        self::class;
+        $baz = self::class;
         if (true) {
         }
     }

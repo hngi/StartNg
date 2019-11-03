@@ -141,6 +141,5 @@ class DummyTest
 {
     public function __toString()
     {
-        return 'DummyTest';
     }
 }

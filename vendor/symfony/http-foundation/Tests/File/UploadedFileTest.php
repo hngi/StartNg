@@ -152,7 +152,7 @@ class UploadedFileTest extends TestCase
             UPLOAD_ERR_OK
         );
 
-        $file->move(__DIR__.'/Fixtures/directory');
+        $movedFile = $file->move(__DIR__.'/Fixtures/directory');
     }
 
     public function failedUploadedFile()

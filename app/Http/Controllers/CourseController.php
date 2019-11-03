@@ -159,19 +159,23 @@ class CourseController extends Controller
                 ->where('course_id',$id)->exists();
 
             if($post){
-                return back()->with('error', 'You Have Previously Registered for the Course');
+                $message='You Have Previously Registered for the Course';
+                Flash::error($message);
+                return back();
             }
             else{
-                $add_course = new RegisteredCourses;
-                $add_course->course_id = $id;
-                $add_course->user_id = auth()->user()->id;
-                $add_course->progress = 0;
-                $add_course->save();                
-                return route('user.course')->with('success', 'Registration was Succesful');
+                $result=auth()->user()->registercourse()->create([
+                   "course_id"=>$id
+                ]);
+                $message='Registration was Succesfull';
+                Flash::success($message);
+                return back();
             }
         }
         else{
-            return back()->with('error', 'Course does not exist');
+            $message='Course Does Not Exist';
+            Flash::error($message);
+            return back();
         }
     }
 

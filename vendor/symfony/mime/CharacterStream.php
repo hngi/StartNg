@@ -116,6 +116,7 @@ final class CharacterStream
         if ($this->currentPos >= $this->charCount) {
             return null;
         }
+        $ret = null;
         $length = ($this->currentPos + $length > $this->charCount) ? $this->charCount - $this->currentPos : $length;
         if ($this->fixedWidth > 0) {
             $len = $length * $this->fixedWidth;

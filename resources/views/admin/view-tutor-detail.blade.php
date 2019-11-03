@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Dashboard | StartNg
+        Admin Dashboard
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -32,7 +32,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">VIEW TUTOR DETAIL</a>
+                        <a class="navbar-brand" href="#pablo">VIEW STUDENT DETAIL</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </nav>
-             @include('inc.messages')
+            
             <div class="content">
                 <div class="card card-register">
                     <div class="card-header">
@@ -82,15 +82,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                            <div class="col-md-12">
-                                <h5>COURSES:<span>
-                                @foreach($courses as $course)
-                                        <li class="mt-4">{{$course->title}}</li>
-                                @endforeach
-                                </h5>
-                            </div>
-                        </div>
                     <div>
                         <button><a href="{{route('admin.edit', $user->id)}}">EDIT</a></button>
                     </div>

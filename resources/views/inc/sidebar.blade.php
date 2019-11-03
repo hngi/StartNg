@@ -9,57 +9,41 @@
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="{{ (request()->is('dashboard')) ? 'active' : '' }}">
-                <a href="{{route('dashboard')}}">
+            <li>
+                <a href="{{route('admin.index')}}">
                     <i class="fa fa-home"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admin/create')) ? 'active' : '' }}">
+            <li>
                 <a href="{{route('admin.create')}}">
                     <i class="fa fa-user"></i>
                     <p>Create Admin</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/create-course')) ? 'active' : '' }}">
+            <li>
                 <a href="{{route('admin.create-course')}}">
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-user"></i>
                     <p>Create Course</p>
                 </a>
             </li>
-              <li class="{{ (request()->is('admins/view-admins')) ? 'active' : '' }}">
-                <a href="{{route('admin.view-admins')}}">
-                    <i class="fa fa-users"></i>
-                    <p>View All Admins</p>
-                </a>
-            </li>
-            <li class="{{ (request()->is('admins/view-courses')) ? 'active' : '' }}">
+            <li>
                 <a href="{{route('admin.view-courses')}}">
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-users"></i>
                     <p>View All Courses</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/view-tutors')) ? 'active' : '' }}">
+            <li>
                 <a href="{{route('admin.view-tutors')}}">
                     <i class="fa fa-users"></i>
                     <p>View All Tutors</p>
                 </a>
             </li>
-            <li class="{{ (request()->is('admins/view-students')) ? 'active' : '' }}">
+            <li>
                 <a href="{{route('admin.view-students')}}">
                     <i class="fa fa-users"></i>
                     <p>View All Students</p>
                 </a>
-            </li>
-            <li class="{{ (request()->is('logout')) ? 'active' : '' }}">
-                <a href="{{route('logout')}}"  onclick="event.preventDefault();
-                   document.getElementById('logout-form').submit();" >
-                    <i class="fa fa-users"></i>
-                    <p>Logout</p>
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
             </li>
             <!--<li>
                 <a href="upload-resource.html">
@@ -67,7 +51,6 @@
                     <p>Upload Resource</p>
                 </a>
             </li>-->
-
         </ul>
     </div>
 </div>

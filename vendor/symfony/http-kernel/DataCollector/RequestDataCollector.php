@@ -49,6 +49,7 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
             }
         }
 
+        $content = null;
         try {
             $content = $request->getContent();
         } catch (\LogicException $e) {
@@ -58,6 +59,7 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
 
         $sessionMetadata = [];
         $sessionAttributes = [];
+        $session = null;
         $flashes = [];
         if ($request->hasSession()) {
             $session = $request->getSession();
@@ -78,9 +80,9 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
         }
 
         $dotenvVars = [];
-        foreach (explode(',', $_SERVER['SYMFONY_DOTENV_VARS'] ?? $_ENV['SYMFONY_DOTENV_VARS'] ?? '') as $name) {
-            if ('' !== $name && isset($_ENV[$name])) {
-                $dotenvVars[$name] = $_ENV[$name];
+        foreach (explode(',', getenv('SYMFONY_DOTENV_VARS')) as $name) {
+            if ('' !== $name && false !== $value = getenv($name)) {
+                $dotenvVars[$name] = $value;
             }
         }
 

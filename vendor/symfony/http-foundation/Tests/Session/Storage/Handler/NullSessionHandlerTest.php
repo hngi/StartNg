@@ -28,7 +28,7 @@ class NullSessionHandlerTest extends TestCase
 {
     public function testSaveHandlers()
     {
-        $this->getStorage();
+        $storage = $this->getStorage();
         $this->assertEquals('user', ini_get('session.save_handler'));
     }
 

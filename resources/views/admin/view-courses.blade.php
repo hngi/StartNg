@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin Course Dashboard | StartNg
+        Admin Dashboard
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -56,7 +56,7 @@
             <!-- End Navbar -->
             <!-- <div class="panel-header panel-header-lg">
   <canvas id="bigDashboardChart"></canvas>
-</div> -->  @include('inc.messages')
+</div> -->  
             @if(count($courses) > 0)
             <div class=" content">
                 @foreach($courses as $course)
@@ -64,12 +64,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title"><a href="{{route('admin.view-course-detail', $course->id)}}">{{$course->title}}</a></h4>
-                                @foreach($users as $user)
-                                @if($course->user_id == $user->id)
-                                <h4 class="card-title">Tutor: {{$user->username}}</h4>
-                                @endif
-                                @endforeach
+                                <h4 class="card-title">{{$course->title}}</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -107,6 +102,9 @@
                                                 <td>
                                                     {{$user->phone}}
                                                 </td>
+                                                <td class="text">
+                                                    <a class="btn btn-warning">VIEW DETAILS</a>
+                                                </td>
                                             </tr>
                                             @endif
                                         @endforeach
@@ -120,7 +118,6 @@
                     </div>
                 </div>
                 @endforeach
-                {{$courses->links()}}
             </div>
             @else
             <p>No course found<p>

@@ -1,9 +1,18 @@
 
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('style')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <title>{{ $course->name }}</title>
 
-<style>
+    <style>
         body {
             font-family: Nunito;
         }
@@ -528,10 +537,13 @@
         } */
 
     </style>
-@endsection
+</head>
 
-@section('content')
-<!--------------------------------------- Hero-------------------------------------->
+<body>
+    <!------------------------Navigation--------------------------------------------->
+    @include('inc.navbar')
+
+     <!--------------------------------------- Hero-------------------------------------->
     <div class="container-fluid pt-5 pb-5" style="background-color: #F0F2F6;">
         <div class="container">
             <div class="row align-items-center">
@@ -543,12 +555,12 @@
                     <div class="clearfix">
                         <div class="action--link-container">
                         @if(Auth::guest())
-                            <a href="{{route('register')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                                style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                            <a href="/signup" class="action--link default-btn"
+                                style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Register</a>
                         @endif
                         @if(!Auth::guest())
-                            <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                                style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                            <a href="{{route('register.courses',$course->id)}}" class="action--link success-btn"
+                                style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Register</a>
                         @endif
                         <a href="#" class="action--link" style="color: #000; background: rgba(128, 128, 128, 0.178)">Beginner</a>
                         <a href="#" class="action--link" style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
@@ -1157,4 +1169,16 @@
             </div>
         </div>
     </div>
-@endsection
+
+
+    <!--------------------------Footer ----------------------------------->
+    @include('inc.footer')
+
+    <!--------------------------- End of Footer ------------------------------------------>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,21 +1,25 @@
-    <div class="container col-lg-12 pl-5 pr-3" style="margin-top:60px; ">
-    @if ($errors->any())
+@if(count($errors) > 0)
+    @foreach($errors->all() as $error)
         <div class="alert alert-danger">
-         @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-        </div><br />
-        @endif
-   
+            {{$error}}
+        </div>
+    @endforeach
+@endif
+
 @if(session('success'))
     <div class="alert alert-success">
         {{session('success')}}
     </div>
 @endif
+
 @if(session('failure'))
     <div class="alert alert-danger">
         {{session('failure')}}
     </div>
 @endif
-    
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{session('error')}}
     </div>
+@endif

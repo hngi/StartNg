@@ -54,7 +54,7 @@ class PdoSessionHandlerTest extends TestCase
         $pdo = $this->getMemorySqlitePdo();
         $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_SILENT);
 
-        new PdoSessionHandler($pdo);
+        $storage = new PdoSessionHandler($pdo);
     }
 
     public function testInexistentTable()

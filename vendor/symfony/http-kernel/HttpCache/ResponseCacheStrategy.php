@@ -130,6 +130,7 @@ class ResponseCacheStrategy implements ResponseCacheStrategyInterface
         $response->headers->set('Cache-Control', implode(', ', array_keys($flags)));
 
         $maxAge = null;
+        $sMaxage = null;
 
         if (is_numeric($this->ageDirectives['max-age'])) {
             $maxAge = $this->ageDirectives['max-age'] + $this->age;

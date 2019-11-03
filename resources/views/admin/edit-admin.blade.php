@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Admin | StartNg
+        User Profile
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -31,7 +31,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">Edit Admin Details</a>
+                        <a class="navbar-brand" href="#pablo">USER PROFILE</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -108,17 +108,14 @@
                                                 <label>Phone Number</label>
                                                 <input type="tel" name="phone" class="form-control" value="{{$admin->phone}}">
                                             </div>
-                                        </div>@if(Auth::user()->role==2)
+                                        </div>
                                         <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    <label>Role</label><br>
-                                                    <input type="radio" name="role" value="2" class="form-check-label">
-                                                    <label class="form-check-label"> Admin </label><br>
-                                                    <input type="radio" name="role" value="1" class="form-check-label">
-                                                    <label class="form-check-label"> Tutor </label>
-                                                </div>
+                                            <div class="form-group">
+                                                <label>Role</label>
+                                                <input type="radio" name="role" value="2" class="form-control"> Admin
+                                                <input type="radio" name="role" value="1" class="form-control"> Tutor
                                             </div>
-                                             @endif
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="update ml-auto mr-auto">

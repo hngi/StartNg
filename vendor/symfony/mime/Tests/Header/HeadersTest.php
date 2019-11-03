@@ -173,6 +173,8 @@ class HeadersTest extends TestCase
 
     public function testRemoveRemovesAllHeadersWithName()
     {
+        $header0 = new UnstructuredHeader('X-Test', 'some@id');
+        $header1 = new UnstructuredHeader('X-Test', 'other@id');
         $headers = new Headers();
         $headers->addIdHeader('X-Test', 'some@id');
         $headers->addIdHeader('X-Test', 'other@id');
@@ -183,6 +185,7 @@ class HeadersTest extends TestCase
 
     public function testHasIsNotCaseSensitive()
     {
+        $header = new IdentificationHeader('Message-ID', 'some@id');
         $headers = new Headers();
         $headers->addIdHeader('Message-ID', 'some@id');
         $this->assertTrue($headers->has('message-id'));
@@ -206,6 +209,7 @@ class HeadersTest extends TestCase
 
     public function testRemoveIsNotCaseSensitive()
     {
+        $header = new IdentificationHeader('Message-ID', 'some@id');
         $headers = new Headers();
         $headers->addIdHeader('Message-ID', 'some@id');
         $headers->remove('message-id');
