@@ -348,7 +348,7 @@
                             <h5 class="card-title" style="color: #3A0842;">@Message: Isuma Chidera </h5>
                             <p class="card-text">I enrolled for start StartNg program a preparatory program for the main internship HNGI. it was a wonderful experience for me and I got to learn so many new things in software development.
 Things like how to communicate with your team remotely through slack, how to use git and github, how to meet up with deadlines on task for each week e.t.c</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FullStack development</small></p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FullStack development</small></p> 
                         </div>
                     </div>
                 </div>
