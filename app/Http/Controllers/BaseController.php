@@ -11,7 +11,7 @@ class BaseController extends Controller
     public function index()
     {
         $courses = Courses::all();
-        return view('pages.index',compact('courses'));
+        return view('pages.new_index',compact('courses'));
     }
 
     public function about(){
@@ -19,11 +19,11 @@ class BaseController extends Controller
     }
 
     public function hire(){
-        return view('pages.hire');
+        return view('pages.hireGrad');
     }
 
     public function contact(){
-        return view('pages.contact');
+        return view('pages.contactus');
     }
 
     public function help(){
@@ -39,7 +39,7 @@ class BaseController extends Controller
     }
 
     public function find_course(){
-        return view('pages.findcourse');
+        return view('pages.find-course');
     }
 
     public function faq(){
@@ -48,5 +48,19 @@ class BaseController extends Controller
 
     public function curriculum(){
         return view('pages.curriculum');
+    }
+
+    public function getCourse(){
+        $data= request()->validate([
+            'course'=>'required'
+        ]);
+
+        $query= Courses::Where('title', 'like', '%' . $data['course'] . '%')->exists();
+        if($query){
+            $courses= Courses::Where('title', 'like', '%' . $data['course'] . '%')->get();
+            return view('pages.new_search',compact('courses'));
+        }
+
+        return redirect()->route('find-course')->with('error','Course not Found');
     }
 }

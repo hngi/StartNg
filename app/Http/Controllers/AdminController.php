@@ -55,8 +55,7 @@ class AdminController extends Controller
         $course->user_id = $request->input('tutor');
         $course->save();
 
-        return 'success';
-        #return back()->with('success','Course Successfully Created');
+        return back()->with('success','Course Successfully Created');
     }
 
     public function create(){
@@ -98,8 +97,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        $mentor = User::find($id);
-        #return view('admin.mentor_detail')->with('mentor', $mentor);
+        //
     }
 
     /**
@@ -168,34 +166,48 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        $mentor = User::find($id);
-        if (empty($mentor)) {
-            Flash::error('Mentor not found');
-            return redirect(route('mentors.index'));
+
+        $tutor = User::find($id);
+        if (empty($tutor)) {
+            Flash::error('tutor not found');
+            return redirect(route('view-tutors'));
         }
 
-        $mentor->active = ($mentor->active == 0) ? 1 : 0;
-        $title = ($mentor->active == 1) ? "enabled" : "disabled";
+        $tutor->active = ($tutor->active == 0) ? 1 : 0;
+        $title = ($tutor->active == 1) ? "enabled" : "disabled";
 
 
-        $mentor->save();
+        $tutor->save();
 //        Flash::success("User has been $title successfully.");
-        return redirect(route('mentors'));
+        return redirect(route('dashboard'));
     }
 
     public function view_courses()
     {
         $data = array(
-            'courses' => Courses::all(),
+            'courses' => Courses::orderBy('created_at','asc')->paginate(5),
             'registered_courses' => RegisteredCourses::all(),
             'users' => User::all(),
         );
         return view('admin.view-courses')->with($data);
     }
 
+    public function view_course_detail($id)
+    {
+        $course = Courses::find($id);
+        $registered_courses = RegisteredCourses::where('course_id', $id)->get();
+
+        $data = array(
+            'course' => $course,
+            'number' => count($registered_courses),
+            'users' => User::all(),
+        );
+        return view('admin.view-course-detail')->with($data);
+    }
+
     public function view_students()
     {
-        $students = User::where('role', 0)->get();
+        $students = User::where('role', 0)->paginate(10);
         return view('admin.view-students')->with('students', $students);
     }
 
@@ -203,16 +215,57 @@ class AdminController extends Controller
     {
         $user = User::find($id);
         if ($user->role == 0){
-            return view('admin.view-student-detail')->with('user', $user);
+            $registered_courses = RegisteredCourses::where('user_id', $user->id)->get();
+            $courses = Courses::all();
+            return view('admin.view-student-detail')->with([
+                'user' => $user,
+                'registered_courses' => $registered_courses,
+                'courses' => $courses,
+                ]);
         }
         elseif ($user->role == 1){
-            return view('admin.view-tutor-detail')->with('user', $user);
+            $courses = Courses::where('user_id', $user->id)->get();
+            return view('admin.view-tutor-detail')->with([
+                'user' => $user,
+                'courses' => $courses,
+                ]);
+        }
+        elseif ($user->role == 2){
+            $courses = Courses::where('user_id', $user->id)->get();
+            return view('admin.view-admin-detail')->with([
+                'user' => $user,
+                'courses' => $courses,
+                ]);
         }
     }
 
     public function view_tutors()
     {
-        $students = User::where('role', 1)->get();
-        return view('admin.view-tutors')->with('students', $students);
+        $tutors = User::where('role', 1)->paginate(10);
+        return view('admin.view-tutors')->with('tutors', $tutors);
+    }
+     public function view_admins()
+    {
+        $admins = User::where('role', 2)->paginate(10);
+        return view('admin.view-admins')->with('admins', $admins);
+    }
+    public function disable($id)
+    {
+        $user = User::find($id);
+
+        if (empty($user)) {
+            return back()->with('error', 'User not found');
+        }
+        
+        if ($user->role == 0){
+            $user->active = ($user->active == 0) ? 1 : 0;
+            $action = ($user->active == 1) ? "enabled" : "disabled";
+            $user->save();
+            return back()->with("success", "$user->username has been $action successfully");
+        }
+        else{
+            return back()->with('error', 'Uauthorized Permission');
+        }
+        
     }
 }
