@@ -65,7 +65,9 @@
 
 <body>
     @include('inc.navbar')
-@include('inc.messages')
+
+    @include('inc.messages')
+    
     @yield('content')
 
     @include('inc.footer')

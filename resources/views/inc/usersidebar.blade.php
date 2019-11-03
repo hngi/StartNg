@@ -16,8 +16,8 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="{{ (request()->is(route('user.show', auth()->user()->id))) ? 'active' : '' }}">
-                        <a href="{{route('user.show', auth()->user()->id)}}">
+                    <li class="{{ (request()->is(route('user.profile', auth()->user()->id))) ? 'active' : '' }}">
+                        <a href="{{route('user.profile', auth()->user()->id)}}">
                             <i class="fa fa-user"></i>
                             <p>My Profile</p>
                         </a>

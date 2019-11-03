@@ -55,6 +55,10 @@ class UserController extends Controller
     {
         //
     }
+     public function profile()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
