@@ -33,7 +33,7 @@ class LoginController extends Controller
 
 
         if($email=='admin@gmail.com' || $role==3){
-            return view('admin.dashboard');
+            return route('admin-Dashboard');
 
         }
         if($role==2 || $email=='tutor@gmail.com'){
