@@ -33,6 +33,12 @@
                     <p>View Students</p>
                 </a>
             </li>
+            <li class="{{ (request()->is('course-content/create')) ? 'active' : '' }}">
+                <a href="{{route('course-content.create')}}">
+                    <i class="fa fa-book"></i>
+                    <p>Create Course Content</p>
+                </a>
+            </li>
             <!--<li>
                 <a href="upload-resource.html">
                     <i class="fa fa-file"></i>

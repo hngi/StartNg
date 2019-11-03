@@ -16,8 +16,36 @@ class CourseContentController extends Controller
      */
     public function index($id)
     {
-        $course = Courses::find($id);
-        $course_contents = CourseContent::where('course_id', $course->id)->get();
+        if(\Auth::check()){
+            $role = auth()->user()->role;
+            if ($role == 2){
+                $user_role = 'admin';
+                $data = array(
+                    'courses' => Courses::orderBy('created_at','asc')->paginate(5),
+                    'registered_courses' => RegisteredCourses::all(),
+                    'users' => User::all(),
+                );
+            }
+            else{
+                $user_role = ($role == 1) ? 'tutor' : 'user';
+                $data = array(
+                    'courses' => Courses::where('active', 1)->paginate(10),
+                    'registered' => RegisteredCourses::where('user_id', auth()->user()->id)->get()
+                );
+            } 
+        }
+        else{
+            $user_role = 'course';
+            $course = Courses::find($id);
+            $course_contents = CourseContent::where('course_id', $course->id)->get();
+            $data = array(
+                'courses' => Courses::where('active', 1)->paginate(10),
+            );
+        }
+          
+
+        return view("$user_role.courses")->with($data);
+        
         
         return view('course.course_contents')->with('course_contents', $course_contents);
     }
@@ -27,15 +55,18 @@ class CourseContentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        $course = Courses::find($id);
+        $role = auth()->user()->role;
 
-        if(auth()->user()->id == $course->user_id){
-            //return create content
+        if ($role == 0){
+            return back()->with('error', 'Unauthorized page');
         }
         else{
-            //return unauthorization message
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            $id = auth()->user()->id;
+            $courses = Courses::where('user_id', $id)->get();
+            return view("$user_role.create-course-content")->with('courses', $courses);
         }
     }
 
@@ -45,20 +76,14 @@ class CourseContentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        $course = Courses::find($id);
-
-        $data=request()->validate([
-            'title'=>'required',
-        ]);
-
         $content = new CourseContent;
         $content->title = $request->input('title');
-        $content->course_id = $course->id;
-        $course->save();
-        
-        return redirect('/')->with('success','Content Successfully Created');
+        $content->course_id = $request->input('course');
+        $content->save();
+
+        return back()->with('success', 'Course Content Created');
     }
 
     /**

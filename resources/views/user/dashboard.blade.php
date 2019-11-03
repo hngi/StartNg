@@ -42,7 +42,24 @@
                     <p class="card-category">Keep track of assignments given by your tutors</p>
                 </div>
                 <div class="card-body ">
-
+                    <ul>
+                    @foreach($registered_courses as $registered_course)
+                    @foreach($assignments as $assignment)
+                    @if($registered_course->course_id == $assignment->user_id)
+                    @if($assignment->active)
+                    <li>
+                        <a href="{{route('assignment.show', $assignment->id)}}">{{$assignment->title}}</a> -
+                            @foreach($courses as $course)
+                            @if($assignment->user_id == $course->id)
+                                {{$course->title}}
+                            @endif
+                            @endforeach
+                    </li>
+                    @endif
+                    @endif
+                    @endforeach
+                    @endforeach
+                    </ul>
                 </div>
                 <div class="card-footer ">
                     <hr>
@@ -78,6 +95,53 @@
             </div>
         </div>
 
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header ">
+                    <h5 class="card-title">Class Schedule</h5>
+                    <p class="card-category">Schedule for your classes</p>
+                </div>
+                <div class="card-body ">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Time
+                                </th>
+                                <th>
+                                    Course
+                                </th>
+                                <th class="text"> </th>
+                            </thead>
+                            <tbody>
+                            @foreach($schedules as $schedule)
+                                <tr>
+                                    <td>
+                                        {{$schedule->date}}
+                                    </td>
+                                    <td>
+                                        {{$schedule->time}}
+                                    </td>
+                                    <td>
+                                        @foreach($courses as $course)
+                                        @if($schedule->course_id == $course->id)
+                                        {{$course->title}}
+                                        @endif
+                                        @endforeach
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

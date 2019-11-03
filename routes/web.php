@@ -34,6 +34,7 @@ Route::resource('course-content', 'CourseContentController');
 Route::resource('contact', 'ContactController');
 Route::resource('tutor', 'TutorController');
 Route::resource('assignment', 'AssignmentController');
+Route::resource('schedule', 'ScheduleController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');

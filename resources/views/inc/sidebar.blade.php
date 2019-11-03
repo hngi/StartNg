@@ -45,10 +45,22 @@
                     <p>Create Admin</p>
                 </a>
             </li>
+            <li class="{{ (request()->is('schedule/create')) ? 'active' : '' }}">
+                <a href="{{route('schedule.create')}}">
+                    <i class="fa fa-book"></i>
+                    <p>Create Schedule</p>
+                </a>
+            </li>
             <li class="{{ (request()->is('course/create')) ? 'active' : '' }}">
                 <a href="{{route('course.create')}}">
                     <i class="fa fa-book"></i>
                     <p>Create Course</p>
+                </a>
+            </li>
+            <li class="{{ (request()->is('course-content/create')) ? 'active' : '' }}">
+                <a href="{{route('course-content.create')}}">
+                    <i class="fa fa-book"></i>
+                    <p>Create Course Content</p>
                 </a>
             </li>
             <!--<li>
