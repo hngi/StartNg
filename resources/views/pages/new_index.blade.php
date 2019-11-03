@@ -159,7 +159,49 @@
 
     <div class="container-fluid pt-5 pb-5" style="background-color: #fff;">
         <div class="col-md-10 offset-md-1">
-            <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930756/startng/Testimonials_dwtp2n.png" class="img-fluid">
+            <section class="">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h4 class="font-weight-bold">What people have to say about us</h4>
+        </div>
+        <div class="mb-5 card border-0 rounded rounded-lg shadow bg-white">
+            <div class="card-body mx-md-5 my-2">
+                <p class="lead text-muted">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
+                <div class="d-flex justify-content-start align-items-left mt-5">
+                    <img src="https://lancer-app.000webhostapp.com/startng/images/landing/dennis.png" class="img img-responsive rounded-circle" width="100" height="100">
+                    <div class="ml-4">
+                        <p class="text-warning pb-2 my-0" >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </p>
+                        <h6>Dennis Lagbaja</h6>
+                        <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-0 rounded rounded-lg shadow bg-white">
+            <div class="card-body mx-md-5 my-2">
+                <p class="lead text-muted">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
+                <div class="d-flex justify-content-start align-items-left mt-5">
+                    <img src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" class="img img-responsive rounded-circle" width="100" height="100">
+                    <div class="ml-4">
+                        <p class="text-warning pb-2 my-0" >
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </p>
+                        <h6>Akunna Message</h6>
+                        <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
             <h4>Online or Offline, We Are Here For You</h4>
