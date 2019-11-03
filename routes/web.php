@@ -48,7 +48,7 @@ Route::get('/privacy', 'BaseController@privacy')->name('privacy');
 Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
 
-
+Route::get('/disable/course/{id}', 'CourseController@destroy')->name('course.destroy');
 
 Route::get('/find-course', 'BaseController@find_course')->name('find-course');
 

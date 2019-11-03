@@ -57,6 +57,17 @@
             <div class="content">
                 <div class="card card-register">
                     <div class="card-header">
+                        @if($course->active)
+                            <div class="pull-right ">
+                                <a href="{{route('course.destroy',$course->id)}}" ><button class="btn btn-danger" >Disable</button></a>
+                            </div>
+                        @endif
+                            @if(!$course->active)
+                                <div class="pull-right ">
+                                    <a href="{{route('course.destroy',$course->id)}}"><button class="btn btn-success" >Enable</button> </a>
+                                </div>
+                            @endif
+
                         <h5 class="card-title">DETAILS</h5>
                         @foreach($users as $user)
                         @if($course->user_id == $user->id)

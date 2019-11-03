@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Courses;
+use Illuminate\Support\Facades\DB;
 
 class BaseController extends Controller
 {
     public function index()
     {
-        $courses = Courses::all();
+        $courses = DB::table('courses')->where('active',true)->take(6)->get();
         return view('pages.new_index',compact('courses'));
     }
 
