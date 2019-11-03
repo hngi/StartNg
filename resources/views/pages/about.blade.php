@@ -249,11 +249,11 @@
                     <li>Back end Development</li>
  
                 </ul>
-                     @if(Auth::guest())
+                @if(Auth::guest())
                  <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
                  <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
-                  @endif
+                @endif
             </div>
             <div class="col-md-6">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915745/startng/Rectangle_9_w0iucz.png"
@@ -269,10 +269,10 @@
         <div class="col-md-4 offset-md-4">
             <div class="row">
                 <div class="col-6">
-                    <a href="#" class="btn btn-success pr-5 pl-5">Free Courses</a>
+                    <a href="https://www.youtube.com/channel/UCTmmCTH_jUmaXIMqHZK648A" class="btn btn-success pr-5 pl-5">Free Courses</a>
                 </div>
                 <div class="col-6">
-                    <a href="#" class="btn btn-success pr-5 pl-5">Paid Courses</a>
+                    <a href="{{route('course.index')}}" class="btn btn-success pr-5 pl-5">Paid Courses</a>
                 </div>
             </div>
         </div>
