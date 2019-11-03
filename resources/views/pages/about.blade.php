@@ -289,9 +289,9 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Moses Obanega</h5>
-                            <p class="card-text">Managing tasks and having to deliver meeting up with deadlines in a few days under pressure is not a big deal anymore. I say a big thank you to the organizers of the HNG program and the sponsors.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front End Track |From Imo State</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Chidinma O.</h5>
+                            <p class="card-text"> StartNg was indeed a Start for me on my long term path to a career switch. I literally stumbled on the application link on twitter. I liked that the classes were in written text, interns were encouraged to help each other, the learning process was great and the certificate was a welcome incentive. I'm still reeling with pride!</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front development</small></p>
                         </div>
                     </div>
                 </div>
@@ -303,9 +303,37 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
-                            <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Egesi Ndubuisi Success</h5>
+                            <p class="card-text">StartNg program was very helpful to me as I learned the basics of Web development and other courses relevant to the field. With several tasks, learning became interesting, I was able to practice within limited time and effectively collaborate with remote teammates.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FrontEnd development</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color: #44CF6C;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Agboola Eniola</h5>
+                            <p class="card-text">I have always been a tech enthusiast. I started my tech journey with start.ng. Though, the duration of the program was not enough to grasp all you need to know about software development, however i bet it is a great start. The secret to being a pro is getting started, start with start.ng.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Backend development</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color: #44CF6C;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Anonymous</h5>
+                            <p class="card-text">Writing code was a daunting task for me. I didn’t know where to begin or what questions to ask, and people never seemed to follow through when I ask questions. Attending the StartNg program exposed me to a world of limitless knowledge and amazing programming result.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Backend development</small></p>
                         </div>
                     </div>
                 </div>
@@ -317,9 +345,10 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Sydney Collins</h5>
-                            <p class="card-text">I came into HNG with zero knowledge in programming and I'll be leaving with so much knowledge acquired in programming, now I can be called a front end web developer. Thanks to HNG.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front End track | From Cameroon</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Isuma Chidera </h5>
+                            <p class="card-text">I enrolled for start StartNg program a preparatory program for the main internship HNGI. it was a wonderful experience for me and I got to learn so many new things in software development.
+Things like how to communicate with your team remotely through slack, how to use git and github, how to meet up with deadlines on task for each week e.t.c</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FullStack development</small></p> 
                         </div>
                     </div>
                 </div>
@@ -331,9 +360,37 @@
                             </div>  
                         </div>
                         <div class="card-body mt-5">
-                           <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
-                            <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
+                           <h5 class="card-title" style="color: #3A0842;">@Message: Kayode O. </h5>
+                            <p class="card-text">Start.Ng has made a significant difference in my life. I've seen over 100% increase in my programming abilities and website development since I joined Start.Ng. The most amazing part of the internship is that you learn at your pace.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Mobile development</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color:#44CF6C;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                           <h5 class="card-title" style="color: #3A0842;">@Message: Bakare O. </h5>
+                            <p class="card-text">When it comes to Internship placement there are loads of Internship out that talk a good game, but Start.Ng help you make your programming dream come alive. They have enabled me, coached me and given me the confidence to be able to pursue a career in the IT world without any worry. I give thanks to the mentors and the CEO for making my dream come through.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Frontend development</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card rounded-0">
+                        <div class="card-header" style="height: 110px; background-color:#44CF6C;">
+                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                            </div>  
+                        </div>
+                        <div class="card-body mt-5">
+                           <h5 class="card-title" style="color: #3A0842;">@Message: Ubong Ndoh</h5>
+                            <p class="card-text">I finally wrote my first tech article on the three basics on web development i.e. HTML, CSS and JAVASCRIPT. I also learned how to filter important information from thousands of information</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;"> FrontEnd development</small></p>
                         </div>
                     </div>
                 </div>
@@ -369,8 +426,8 @@
                             class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-8">
-                        <p style="color: #3A0842">JOIN ONLINE DEVELOPER COMMUNITY</p>
-                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
+                        <p style="color: #3A0842">JOIN ONLINE development COMMUNITY</p>
+                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developments. They also would not miss out on important information about events and meetups.</p>
                     </div>
 
                 </div>
@@ -453,7 +510,7 @@
                 in the world.</p>
             <p class="pb-3">Most Sought after Programming Skills </p>
             <p class="pb-3">Experienced Qualified Teachers</p>
-            <p class="pb-3">Access to the Largest Online Developer Community</p>
+            <p class="pb-3">Access to the Largest Online development Community</p>
             <a href="/" class="btn btn-secondary pl-5 pr-5 mb-3"
                style="background-color: #3A0842; border: thin solid #3A0842; cursor: pointer;">Explore Start.ng</a>
         </div>

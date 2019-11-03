@@ -13,13 +13,13 @@
 
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Nunito', sans-serif; 
         }
         
         .btn-custom {
             color: #fff;
             background-color: #2DCE89;
-        }
+    
         
         .btn-custom:hover {
             color: #fff;

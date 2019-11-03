@@ -25,7 +25,7 @@ class ForgotPassController extends Controller
 
         $check=DB::table('users')->where('email', $data['email'])->exists();
         if(!$check){
-            return back()->with('error','Email Dosent Exist');
+            return back()->with("error','Email Doesn't Exist");
         }
         else{
             $user=DB::table('users')->where('email', $data['email'])->get()[0];
@@ -77,7 +77,7 @@ class ForgotPassController extends Controller
         $email=Session::get('email');
         
         if($data['password']!=$data['confirm_password']){
-            return back()->with('error','password dosent match');
+            return back()->with("error','password doesnt't match");
         }
 
         $tokenData = DB::table('password_resets')
