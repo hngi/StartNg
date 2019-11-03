@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
     <title>Start NG | About</title>
 
     <style>
@@ -26,11 +27,11 @@
             border: thin solid #2dce89;
         }
 
-        .btn-success:hover {
+        /*.btn-success:hover {
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
-        }
+        }*/
 
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -54,7 +55,7 @@
         a {
             text-decoration: none;
         }
-
+         
         .deep {
             background: #3A0842;
             color: #fff;
@@ -82,13 +83,7 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: none;
-            background-color: rgb(45, 206, 137);
-            border: thin solid rgb(45, 206, 137);
-            border-radius: 10px;
-        }
-
+       
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -112,13 +107,13 @@
         /* Style for Footer Ends */
         /* Body Style */
 
-        .banner {
+           .banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915217/startng/Rectangle_7_ak5zc2.png');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-
+        
         .loren-ipsum {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570916337/startng/Rectangle_10_pwiqsf.png');
             background-position: center center;
@@ -126,14 +121,14 @@
             background-size: cover;
         }
 
-        .priviledge {
+           .priviledge {
             background-color: #FCFCFC;
         }
-
+        
         .started {
             background-color: #FCFCFC;
         }
-
+        
         .global-reach {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570920182/startng/Rectangle_57_xdcvbs.png');
             background-position: center center;
@@ -198,30 +193,6 @@
         }
         /* Body Style Ends */
 
-        .footer-top {
-            background-color: #3A0842;
-            color: #fff;
-        }
-        
-        .footer-top li {
-            list-style-type: none;
-        }
-        
-        .footer-link {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-        }
-        
-        .footer-link:hover {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .footer-social {
-            background-color: #2E0435;
-            color: #fff;
-        }
     </style>
 </head>
 
@@ -230,6 +201,7 @@
 
     <div class="container-fluid banner pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5 mb-5">
+            <h2 class="mt-5" style="color: #3A0842;">ABOUT US</h2>
             <p class="pb-5 mb-5" style="color: #3A0842;">A platform for learning programming <br> where anyone, anywhere
                 in the world <br> can join and become
                 <br> a better programmer
@@ -237,24 +209,27 @@
         </div>
     </div>
 
-    <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
+     <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
         <div class="row align-items-center">
             <div class="col-md-6 pb-5">
-                <h4 class="pl-5" style="color: #7F5A83;">Courses</h4>
-                <p class="pl-5">Interns are able to select from the number of courses we offer:<br> Complete quide. <br>100% Online. Flexible Online Learning and Earn a Course Certificate</p>
-                <ul class="pl-5 ml-3" style="color: #44CF6C;">
-                    <li>Machine Learning</li>
-                    <li>Digital Marketing</li>
-                    <li>Front End development</li>
-                    <li>Back end Development</li>
+                <div class="col-10 offset-2">
+                    <h4 style="color: #7F5A83;">Courses</h4>
+                    <p>
+                        Interns are able to select from the number of courses we offer: <br> Machine Learning <br> Digital Marketing <br> Front End development <br> Back end Development <br>
+                    </p>
+                    <li style="color: #44CF6C;">100% Online</li>
+                    <li style="color: #44CF6C;">Flexible Online Learning</li>
+                    <li style="color: #44CF6C;">Earn a Course Certificate</li>
+
  
                 </ul>
                      @if(Auth::guest())
-                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
-                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
                   @endif
             </div>
+        </div>
             <div class="col-md-6">
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915745/startng/Rectangle_9_w0iucz.png"
                     class="img-fluid">
@@ -264,17 +239,18 @@
 
     <div class="container-fluid loren-ipsum pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> You can have access to our free courses in Web development, Machine learning,  <br> and Digital Marketing.We have also made available paid courses that would give<br> maximum and intense information about any course <br>you u will be interested in and you will have the opportunity to get <br>your hands on enough practicals and projects of which at the end of the course, certificates will be issued.<br> </p>   
+            <p style="color: #fff;"> You can have access to our free courses in Web development, Machine learning, and Digital Marketing. We have also made available paid courses that would give maximum and intense information about any course you will be interested in and you
+                will have the opportunity to get your hands on enough practicals and projects of which at the end of the course, certificates will be issued. Free Courses</p>
         </div>
-        <div class="col-md-4 offset-md-4">
-            <div class="row">
-                <div class="col-6">
-                    <a href="#" class="btn btn-success pr-5 pl-5">Free Courses</a>
-                </div>
-                <div class="col-6">
-                    <a href="#" class="btn btn-success pr-5 pl-5">Paid Courses</a>
-                </div>
-            </div>
+       <div class="text-center">
+
+
+            <a href="courses.html" class="btn btn-custom pr-5 pl-5">Free Courses</a>
+
+
+            <a href="courses.html" class="btn btn-custom pr-5 pl-5">Paid Courses</a>
+
+
         </div>
     </div>
 
@@ -313,7 +289,7 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" alt='Agent picture' />
                             </div>  
                         </div>
                         <div class="card-body mt-5">
@@ -327,7 +303,7 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle img-fluid" alt='Agent picture' />
                             </div>  
                         </div>
                         <div class="card-body mt-5">
@@ -341,7 +317,7 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle img-fluid" alt='Agent picture' />
                             </div>  
                         </div>
                         <div class="card-body mt-5">
@@ -396,37 +372,36 @@ Things like how to communicate with your team remotely through slack, how to use
                 </div>
             </div>
         </div>
-    </section>
-
-    <div class="container-fluid priviledge pt-5 pb-5">
+           </section>
+</div>
+   <div class="container-fluid priviledge pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
             <p style="color: #3A0842;">On Start.ng, you are privileged to</p>
         </div>
         <div class="row mt-5 pt-3">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
                             class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">LEARN FROM THE BEST TEACHERS</p>
-                        <p>We hire Tutors with 100% knowledge on each track. Interns are provided best andappropriate advice from tutors based on their experiences.</p>
+                    <div class="col-md-9">
+                        <p style="color: #3A0842">Learn from the Best Teachers</p>
+                        <p>
+                            We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.
+                        </p>
                     </div>
                 </div>
 
-
-
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
                             class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">JOIN ONLINE development COMMUNITY</p>
+                    <div class="col-md-9">
+                        <p style="color: #3A0842">Join Online Developer Community</p>
                         <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developments. They also would not miss out on important information about events and meetups.</p>
                     </div>
 
@@ -434,44 +409,46 @@ Things like how to communicate with your team remotely through slack, how to use
             </div>
         </div>
         <div class="row mt-5 pt-3">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
                             class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">GET ACADEMIC AND TECHNICAL SUPPORT</p>
-                        <p>Interns are exposed to updated usage of some technologies and effective training on their usage is provided</p>
+                    <div class="col-md-9">
+                         <p style="color: #3A0842">Get Academic and Technical Support</p>
+                        <p>
+                            Interns are exposed to updated usage of some technologies and effective training on their usage is provided.
+                        </p>
                     </div>
                 </div>
 
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
                             class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">EARN A CERTIFICATE</p>
-                        <p>Interns are eligible for a certificate if only they get to a certain stage of the internship.</p>
+                    <div class="col-md-9">
+                         <p style="color: #3A0842">Earn a Certifcate</p>
+                        <p>
+                            Interns are eligible for a certificate if only they get to a certain stage of the internship.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
- <section class="">
-    <div class="container-fluid pt-5 pb-5">
-        <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #3A0842;">Hi</p>
-            <p style="color: #3A0842;">Do you know you can Enrol for</p>
-            <p style="color: #3A0842; font-weight: bold;">FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</p>
+<div class="container-fluid enrol pt-5 pb-5">
+        <div class="col-md-6 offset-md-3 text-center text-white">
+            <p>Hi</p>
+            <p>Do you know you can Enrol for</p>
+            <p style="font-weight: bold;">FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</p>
                  @if(Auth::guest())
-                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
-                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
                   @endif
         </div>
     </div>
@@ -491,28 +468,26 @@ Things like how to communicate with your team remotely through slack, how to use
                         </iframe>
                     </div>
                 </div>
-            <div class="col-md-6 text-center pb-2">
+
+              <div class="col-md-6 text-center pb-2">
                 <h4 style="color: #7F5A83; font-weight: bold;">How It All Started</h4>
-                <p>Start.ng was going to church and she forgot to ferdsdscsd <br> sdsdnd dffdss wesa dsea wxli sde zdxd
-                    asw fdesd <br> fdvdfvddscd sdd fvvdfvdf sds dcdsc dfvdfvdf vscscsd <br> dscsdc dvsdvsdvsdsvsdvsdsd
-                    sdvsdv vfv vfv sdcd fvfv dede <br> ws a as ff g ss ddcdd fr es waa dde saw asz cde ers ffggt <br>
-                    sdawd dfdv ddv dssdsx xsccdvdvf ss day that a woman <br> goes to church to meet with Mick Jagger</p>
+                <p>
+                    The Internship was born out of passion and dedication to see aspiring youths attain their goals in the tech world by becoming software developers. The co-founder Mark Essien initiated this Internship in 2017, and since then, the vision has remained the
+                    same - massively accelerate Nigerians and Africans becoming software developers. And doing this in a way that is open for all, no barriers and no bias. The only limitation should be your own willingness to continue.
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid global-reach pt-5 pb-5">
+  <div class="container-fluid global-reach pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center pt-5">
             <h4 class="pb-3">Our Global Reach</h4>
-            <p class="pb-5">Start.ng is the leading online learning platform for programming courses nationwide and
-                across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each students
-                with knowledge and character needed to excel anywhere
+            <p class="pb-5">Start.ng is the leading online learning platform for programming courses nationwide and across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each students with knowledge and character needed to excel anywhere
                 in the world.</p>
             <p class="pb-3">Most Sought after Programming Skills </p>
             <p class="pb-3">Experienced Qualified Teachers</p>
-            <p class="pb-3">Access to the Largest Online development Community</p>
-            <a href="/" class="btn btn-secondary pl-5 pr-5 mb-3"
-               style="background-color: #3A0842; border: thin solid #3A0842; cursor: pointer;">Explore Start.ng</a>
+            <p class="pb-3">Access to the Largest Online Developer Community</p>
+            <a href="/curriculum" class="btn btn-secondary pl-5 pr-5 mb-3" style="background-color: #3A0842; border: thin solid #3A0842; cursor: pointer;">Explore Start.ng</a>
         </div>
     </div>
  <!-- Footer -->
@@ -525,12 +500,12 @@ Things like how to communicate with your team remotely through slack, how to use
                     <div class="col-md-4 mt-4">
 
                         <h4 class="">Ready to take the leap?</h4>
-                        <a class="btn btn-success mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
+                        <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
                     </div>
                 @else
                      <div class="col-md-4 mt-4">
 
-                         <a class="btn btn-success mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
+                         <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}

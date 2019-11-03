@@ -39,7 +39,7 @@
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                      <div class="collapse navbar-collapse justify-content-center" id="navigation">
                         <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -49,9 +49,24 @@
                                     </div>
                                 </div>
                             </div>
+                            </form>
+                        </div>
+                            <div class="collapse navbar-collapse justify-content-end">
+                            <div class="navbar-brand"><a class="text-uppercase" href="{{ route('dashboard') }}"><strong>{{ Auth::user()->username }}</strong></a></div>
+                            <div><li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                          <a class="dropdown-item" href="{{url('/users/profile'.Auth::user()->user_id)}}">Edit Profile</a>
+                         <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
                         </form>
-
-                    </div>
+                        </div>
+                      </li>
+                  </div>
                 </div>
             </nav>
             <!-- End Navbar -->
