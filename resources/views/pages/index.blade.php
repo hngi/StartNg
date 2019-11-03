@@ -28,12 +28,7 @@
             border: thin solid #2dce89;
         }
 
-        .btn-success:hover {
-            background-color: rgb(2, 20, 12);
-            color: #fff;
-            border: thin solid rgb(2, 20, 12);
-        }
-
+       
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -175,14 +170,7 @@
 
         }
 
-        a:hover {
-            text-decoration: none;
-            background-color: rgb(45, 206, 137);
-            border: thin solid rgb(45, 206, 137);
-            border-radius: 10px;
-
-        }
-
+        
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -254,7 +242,7 @@
             The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
             software developers
         </p>
-        <a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+        <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5 mb-4">Start Learning</a>
     </div>
 </div>
 <!--  -->
@@ -431,7 +419,7 @@
                             <p class="my-4 text-muted">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam).  
                             </p>
-                            <a href="#" class="btn btn-success pl-5 pr-5">Start Learning</a>
+                            <a href="#" class="btn btn-custom pl-5 pr-5">Start Learning</a>
                        </div>
                     </div>
                 </div>
@@ -448,7 +436,7 @@
                             <br> are ready to take on full-time or remote jobs at your
                             <br> company.
                         </p>
-                        <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5">Hire a Graduate</a>
+                        <a href="{{route('hire')}}" class="btn btn-cu pl-5 pr-5">Hire a Graduate</a>
                     </div>
                 </div>
             </div>
@@ -504,7 +492,7 @@
         <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software
             developers.
         </p>
-        <a href="#" class="btn btn-success pl-5 pr-5">Start
+        <a href="#" class="btn btn-custom pl-5 pr-5">Start
             Learning</a>
     </div>
 </div>
@@ -518,7 +506,7 @@
                 {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
                 {{ csrf_field() }}
                 {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
-                {{Form::submit('Subscribe', ['class' => 'btn btn-success ml-1 pl-5 pr-5'])}}
+                {{Form::submit('Subscribe', ['class' => 'btn btn-custom ml-1 pl-5 pr-5'])}}
                 {!! form::close() !!}
             </div>
             <div class="col-md-4">
