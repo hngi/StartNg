@@ -210,7 +210,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-success d-block mx-auto pl-5 pr-5 mb-4">Login</button>
                                 <hr class="my-4">
-                                <div style="text-align: center;"><a href="#" class="forget-password">Forgot Password?</a> | <a href="{{route('register')}}">Sign Up</a> </div>
+                                <div style="text-align: center;"><a href="/password/reset" class="forget-password">Forgot Password?</a> | <a href="{{route('register')}}">Sign Up</a> </div>
                             </form>
                         </div>
                     </div>
