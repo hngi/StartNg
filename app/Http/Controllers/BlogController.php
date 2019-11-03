@@ -3,15 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Blog;
-use App\User;
+use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
-    }
     /**
      * Display a listing of the resource.
      *
@@ -19,8 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = Blog::orderBy('created_at','desc')->paginate(3);
-        return view('blog.index')->with('posts', $posts);
+        //
     }
 
     /**
@@ -30,7 +24,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blog.create');
+        //
     }
 
     /**
@@ -41,18 +35,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'title' => 'required',
-            'body' => 'required',
-        ]);
-
-        $post = new Blog;
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->user_id = auth()->user()->id;
-        $post->save();
-        
-        return redirect('/blogs')->with('success','Post Successfully Created');
+        //
     }
 
     /**
@@ -63,18 +46,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $post = Blog::find($id);
-        return view('blog.show')->with('post', $post);
-    }
-
-    public function show_individual($user_id)
-    {
-        $user = User::find($user_id);
-        $data = array(
-            'user' => $user,
-            'posts' => $user->posts,
-        );
-        return view('blog.individual')->with($data);
+        //
     }
 
     /**
@@ -85,19 +57,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $post = Blog::find($id);
-        
-        //Check if post exists before deleting
-        if (!isset($post)){
-            return redirect('/blogs')->with('error', 'No Post Found');
-        }
-
-        // Check for correct user
-        if(auth()->user()->id !==$post->user_id){
-            return redirect('/blogs')->with('error', 'Unauthorized Page');
-        }
-
-        return view('blog.edit')->with('post', $post);
+        //
     }
 
     /**
@@ -109,18 +69,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'title' => 'required',
-            'body' => 'required',
-        ]);
-
-        $post = Blog::find($id);
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->user_id = auth()->user()->id;
-        $post->save();
-        
-        return redirect('/blogs')->with('success','Post Successfully Updated');
+        //
     }
 
     /**
@@ -131,17 +80,6 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $post = Blog::find($id);
-        
-        if (!isset($post)){
-            return redirect('/blogs')->with('error', 'No Post Found');
-        }
-
-        if(auth()->user()->id !== $post->user_id){
-            return redirect('/blogs')->with('error', 'Unauthorized Page');
-        }
-
-        $post->delete();
-        return redirect('/blogs')->with('success', 'Post Removed');
+        //
     }
 }

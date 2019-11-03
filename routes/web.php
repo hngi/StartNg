@@ -14,85 +14,73 @@
 //Route::get('/', function () {
 //    return view('frontend.frontend.index');
 //});
-Route::get('/', 'BaseController@index')->name('index');
-
-Route::get('/signup', 'BaseController@register')->name('signup');
-Route::get('/signin', 'BaseController@login')->name('signin');
-
-
 
 Auth::routes();
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-/**
- *
- * Admin Routes
- */
+Route::get('/user/course','UserController@show')->name('user.courses');
 
+Route::get('/', 'BaseController@index')->name('index');
+Route::resource('admin', 'AdminController');
+Route::resource('blog', 'BlogController');
+Route::resource('user', 'UserController');
+Route::resource('course', 'CourseController');
+Route::resource('course-content', 'CourseContentController');
+Route::resource('contact', 'ContactController');
+Route::resource('tutor', 'TutorController');
+Route::resource('tutor', 'AssignmentController');
 
-Route::group(['middleware' => ['auth', 'admin']], function() {
-    Route::get('/admin', 'BaseController@admin')->name('admin');
-    Route::get('/course', 'CourseController@show')->name('courses');
-    Route::get('/course/create', 'CourseController@create')->name('course.create');
-    Route::get('/course/disable/{id}', 'CourseController@destroy')->name('course.disable');
-
-    Route::get('/users', 'UserController@show')->name('users');
-    Route::get('/user/disable/admin/{id}', 'UserController@disableAdmin')->name('user.disableAdmin');
-    Route::get('/user/disable/{id}', 'UserController@destroy')->name('user.disable');
-    Route::get('/users/{id}', 'UserController@user')->name('user.details');
-    Route::get('/course/{id}', 'CourseController@course')->name('course.details');
-    Route::post('/course', 'CourseController@store')->name('course.store');
-
-    //Forgot password
-    Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.reset');
-    Route::post('password/email','ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-    Route::get('password/rest/{token}', 'ResetPasswordController@showRequestForm')->name('password.reset.token');
-    Route::post('password/reset', 'ResetPasswordController@reset');
-});
-
-
-
-Route::post('/search-course', 'BaseController@search')->name('course.search');
-
-
-
-
-
-
+Route::post('/search', 'BaseController@getCourse')->name('course.search');
 
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
 Route::get('/contact', 'BaseController@contact')->name('contact');
-Route::get('/courses/index', 'BaseController@courses')->name('courses.index');
-Route::get('/mycourses/{id}', 'BaseController@mycourse')->name('mycourses');
-
-Route::get('/register-course/{id}', 'BaseController@registerCourses')->name('register.courses');
-Route::get('/course-details/{id}', 'BaseController@details')->name('details');
-
-Route::post('/contact', 'BaseController@storecontact')->name('contact.store');
-
+Route::get('/courses/index', 'CourseController@index')->name('courses.index');
 Route::get('/privacy', 'BaseController@privacy')->name('privacy');
 Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
-Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
-//Route::get('/blog', 'BaseController@blog')->name('blog');
+
+
+
+Route::get('/find-course', 'BaseController@find_course')->name('find-course');
+
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 
-/**
- *
- * SuperAdmin Routes
- */
+Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
+Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
 
+Route::post('admin/store', 'AdminController@store')->name('admin.store');
+Route::get('/admins/view-admins', 'AdminController@view_admins')->name('admin.view-admins');
+Route::get('/admins/view-courses', 'AdminController@view_courses')->name('admin.view-courses');
+Route::get('/admins/view-students', 'AdminController@view_students')->name('admin.view-students');
+Route::get('/admins/view-tutors', 'AdminController@view_tutors')->name('admin.view-tutors');
+Route::get('/admins/view/{id}', 'AdminController@view_user_detail')->name('admin.view-user-detail');
+Route::get('/admins/{id}/view', 'AdminController@view_course_detail')->name('admin.view-course-detail');
+Route::get('/admins/destroy/{id}', 'AdminController@disable')->name('admin.disable');
+Route::get('/admins/view-tutor-detail/{id}', 'AdminController@destroy')->name('admin.view-tutor-detail');
+Route::get('/admins/create-course', 'AdminController@create_course')->name('admin.create-course');
+Route::post('/admins/store', 'AdminController@store_course')->name('admin.store-course');
 
-Route::group(['middleware' => ['auth', 'admin']], function() {
-    Route::get('/mentors', 'AdminController@index')->name('mentors');
-    Route::get('/mentors/create', 'AdminController@create')->name('mentors.create');
-    Route::post('/mentors', 'AdminController@store')->name('mentors.store');
-    Route::get('/mentor/{id}/detail', 'AdminController@show')->name('mentor.show');
-    Route::get('/mentor/{id}', 'AdminController@destroy')->name('mentor.destroy');
-});
+Route::get('/users/profile', 'UserController@profile')->name('user.profile');
+Route::post('/users/update', 'UserController@update')->name('user.update');
 
-Route::resource('blogs', 'BlogController');
-Route::get('/blogs/{id}/posts', 'BlogController@show_individual')->name('show.individual');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::resource('subscriptions', 'SubscriptionsController');
+
+// Tutor Route
+Route::get('/tutors', 'TutorController@index')->name('tutor.dashboard');
+Route::get('/tutors/view-courses', 'TutorController@view_courses')->name('tutor.view-courses');
+Route::get('/tutors/profile', 'TutorController@profile')->name('tutor.profile');
+Route::get('/tutors/assignment', 'AssignmentController@index')->name('tutor.assignment');
+Route::get('/tutors/upload-resource', 'AssignmentController@upload')->name('tutor.upload-resource');
+Route::get('/tutors/view-students', 'TutorController@view_students')->name('tutor.view-students');
+
+Route::post('/upload','AssignmentController@uploadAss')->name('ass.upload');
