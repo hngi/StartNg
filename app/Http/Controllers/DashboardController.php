@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Courses;
 use App\RegisteredCourses;
+use App\Schedule;
+use App\Assignment;
 
 class DashboardController extends Controller
 {
@@ -26,21 +28,27 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->role == 0){
+        $role = auth()->user()->role;
+
+        if($role == 0){
             $id = auth()->user()->id;
-        
+            $user_role = 'user';
+
             $data = array(
-            'courses' => Courses::all(),
-            'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
-            'users' => User::all(),
-        );
-            return view('user.dashboard')->with($data);
-        }
-        elseif(auth()->user()->role == 1){
-            return view('tutor.dashboard');
+                'courses' => Courses::all(),
+                'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
+                'users' => User::all(),
+                'schedules' => Schedule::all(),
+                'assignments' => Assignment::where('active', 1)->get()
+            );
         }
         else{
-            return view('admin.dashboard');
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            $data = array(
+                'courses' => Courses::all(),
+                'schedules' => Schedule::all()
+            );
         }
+        return view("$user_role.dashboard")->with($data);
     }
 }
