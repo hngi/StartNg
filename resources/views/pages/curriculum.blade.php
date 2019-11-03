@@ -363,7 +363,7 @@
         <div class="col-md-6 offset-md-1 text-white " id="top">
             <h4 class="font-weight-bold mt-5 pt-5 pb-4">Upgrade Your Skills with <br> Our Curriculum</h4>
             <p class="pb-4" style="font-size: 20px;">The HNG internship is a 3-month remote <br> internship designed ---to find and develop the <br> most talented software developers. </p>
-            <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('signup')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+            <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
                 Learning</a>
         </div>
     </div>
@@ -391,8 +391,6 @@
         <div class="row" id="row-div">
             <div class="col-md-3">
                 <a role="button" href="#" class="btn btn-outline-success" style="color: #000">Full Stack Development</a>
-
-
                </div>
             <br>
             <div class="col-md-3">
@@ -428,7 +426,7 @@
                 <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers</p>
             </div>
             <div  id="col" class="act-btn">
-                <a href="{{route('signup')}}" class="btn">Start Learning</a>
+                <a href="{{route('register')}}" class="btn">Start Learning</a>
             </div>
           </div>
         </div>
@@ -853,7 +851,7 @@
                 <h4 class="font-weight-bold pb-3">Begin Your Journey to Being Certified in Your Field</h4>
                 <p class="pb-3">The HNG internship is a 3-month remote <br> internship designed to find and develop the
                     <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
-                <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+                <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
                     Learning</a>
             </div>
             <div class="col-md-6">

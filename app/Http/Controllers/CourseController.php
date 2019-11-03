@@ -8,6 +8,7 @@ use App\Courses;
 use App\RegisteredCourses;
 use App\User;
 use App\Reviews;
+use App\CourseContent;
 
 class CourseController extends Controller
 {
@@ -18,22 +19,31 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $role = auth()->user()->role;
-        if ($role == 2){
-            $user_role = 'admin';
-            $data = array(
-                'courses' => Courses::orderBy('created_at','asc')->paginate(5),
-                'registered_courses' => RegisteredCourses::all(),
-                'users' => User::all(),
-            );
+        if(\Auth::check()){
+            $role = auth()->user()->role;
+            if ($role == 2){
+                $user_role = 'admin';
+                $data = array(
+                    'courses' => Courses::orderBy('created_at','asc')->paginate(5),
+                    'registered_courses' => RegisteredCourses::all(),
+                    'users' => User::all(),
+                );
+            }
+            else{
+                $user_role = ($role == 1) ? 'tutor' : 'user';
+                $data = array(
+                    'courses' => Courses::where('active', 1)->paginate(10),
+                    'registered' => RegisteredCourses::where('user_id', auth()->user()->id)->get()
+                );
+            } 
         }
         else{
-            $user_role = ($role == 1) ? 'tutor' : 'user';
+            $user_role = 'course';
             $data = array(
                 'courses' => Courses::where('active', 1)->paginate(10),
-                'registered' => RegisteredCourses::where('user_id', auth()->user()->id)->get()
             );
-        }   
+        }
+          
 
         return view("$user_role.courses")->with($data);
     }
@@ -93,6 +103,7 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Courses::find($id);
+        $contents = CourseContent::where('course_id', $id)->get();
         
         if($course){
             if(auth()->user()){
@@ -107,6 +118,7 @@ class CourseController extends Controller
                         'number' => count($registered_courses),
                         'users' => User::all(),
                         'reviews' => $reviews,
+                        'contents' => $contents
                     );
                 }
                 elseif ($role == 1){
@@ -117,6 +129,7 @@ class CourseController extends Controller
                         'course' => $course,
                         'number' => count($registered_courses),
                         'users' => User::all(),
+                        'contents' => $contents
                     );
                 }
                 elseif ($role == 0){
@@ -124,7 +137,8 @@ class CourseController extends Controller
                     $user_id = auth()->user()->id;
                     $data = array(
                         'course' => $course,
-                        'registered' => RegisteredCourses::where(['course_id'=>$id, 'user_id'=>$user_id])->exists()
+                        'registered' => RegisteredCourses::where(['course_id'=>$id, 'user_id'=>$user_id])->exists(),
+                        'contents' => $contents
                     );
                 }
             }
