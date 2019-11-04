@@ -38,11 +38,7 @@
                                 </ul>
                             </div>
                         </div>
-                        @if($registered)
-                        <div>
-                            <a href="{{route('user.review', $course->id)}}">Review</a>
-                        </div>
-                        @else
+                        @if(!$registered)
                         <div>
                             <a href="{{route('register.courses', $course->id)}}">Register</a>
                         </div>

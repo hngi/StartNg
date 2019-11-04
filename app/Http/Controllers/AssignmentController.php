@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Assignment;
 use App\Courses;
 use App\RegisteredCourses;
+use App\CourseContent;
 
 class AssignmentController extends Controller
 {
@@ -26,6 +27,7 @@ class AssignmentController extends Controller
             $user_role = 'user';
             $registered_courses = RegisteredCourses::where('user_id', $id)->get();
             $courses = Courses::all();
+            $contents = CourseContent::all();
             $assignments = Assignment::where('active', 1)->get();
         }
         else{
@@ -38,7 +40,8 @@ class AssignmentController extends Controller
         $data = array(
             'registered_courses' => $registered_courses,
             'courses' => $courses,
-            'assignments' => $assignments
+            'assignments' => $assignments,
+            'contents' => $contents
         );
         return view("$user_role.assignment")->with($data);
     }
@@ -58,8 +61,13 @@ class AssignmentController extends Controller
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
             $id = auth()->user()->id;
-            $courses = Courses::where('user_id', $id)->get();
-            return view("$user_role.create-assignment")->with('courses', $courses);
+            $courses = Courses::where('tutor_id', $id)->get();
+            $contents = CourseContent::all();
+            $data = array(
+                'courses' => $courses,
+                'contents' => $contents
+            );
+            return view("$user_role.create-assignment")->with($data);
         }
     }
 
@@ -75,7 +83,7 @@ class AssignmentController extends Controller
         $assignment->title = $request->input('title');
         $assignment->description = $request->input('description');
         $assignment->duration = $request->input('duration');
-        $assignment->user_id = $request->input('course');
+        $assignment->course_content_id = $request->input('content');
         $assignment->save();
 
         return back()->with('success', 'Assignment Created');
@@ -93,8 +101,9 @@ class AssignmentController extends Controller
         $user_id = auth()->user()->id;
         $assignment = Assignment::find($id);
         if ($role == 0){
-            $registered = RegisteredCourses::where(['user_id'=>$user_id, 'course_id'=>$assignment->user_id])->exists();
-            if($registered){
+            $content = CourseContent::where('id', $assignment->course_content_id)->get()[0];
+            $registered = RegisteredCourses::where(['user_id'=>$user_id, 'course_id'=>$content->course_id])->get()[0];
+            if($content->course_id==$registered->course_id){
                 $user_role = 'user';
             }
             else{
@@ -102,8 +111,9 @@ class AssignmentController extends Controller
             }
         }
         else{
-            $mycourse = Courses::where(['user_id'=>$user_id, 'id'=>$assignment->user_id])->exists();
-            if($mycourse){
+            $content = CourseContent::where('id', $assignment->course_content_id)->get()[0];
+            $mycourse = Courses::where(['tutor_id'=>$user_id, 'id'=>$content->course_id])->get()[0];
+            if($content->course_id==$mycourse->id){
                 $user_role = ($role == 1) ? 'tutor' : 'admin';
             }
             else{

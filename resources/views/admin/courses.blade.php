@@ -9,7 +9,7 @@
                             <div class="card-header">
                                 <h4 class="card-title"><a href="{{route('course.show', $course->id)}}">{{$course->title}}</a></h4>
                                 @foreach($users as $user)
-                                @if($course->user_id == $user->id)
+                                @if($course->tutor_id == $user->id)
                                 <h4 class="card-title">Tutor: {{$user->username}}</h4>
                                 @endif
                                 @endforeach

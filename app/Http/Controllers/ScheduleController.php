@@ -74,7 +74,20 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $schedule = Schedule::find($id);
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $data = array(
+                'courses' => Courses::all(),
+                'schedule' => $schedule
+            );
+        }
+        else{
+            return back()->with('error', 'Unauthorized');
+        }
+        
+        return view("$user_role.edit-schedule")->with($data);
     }
 
     /**
@@ -86,7 +99,15 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $schedule = Schedule::find($id);
+        $schedule->date = $request->input('date');
+        $schedule->time = $request->input('time');
+        if($request->input('course')){
+            $schedule->course_id = $request->input('course');
+        }
+        $schedule->save();
+        
+        return back()->with('success','Schedule Successfully Updated');
     }
 
     /**
@@ -97,6 +118,15 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return 'device';
+        $schedule = Schedule::find($id);
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $schedule->delete();
+            return back('dashboard')->with('success', 'Schedule Deleted');
+        }
+        else{
+            return back()->with('error', 'Unauthorized');
+        }
     }
 }

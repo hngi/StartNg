@@ -22,7 +22,11 @@
                                                 <div class="form-group">
                                                     <label>Course</label>
                                                     @foreach($courses as $course)
-                                                    <input type="radio" name="course" value="{{$course->id}}" class="form-control">{{$course->title}}
+                                                    @foreach($contents as $content)
+                                                    @if($content->course_id==$course->id)
+                                                    <input type="radio" name="content" value="{{$content->id}}" class="form-control">{{$content->title}}
+                                                    @endif
+                                                    @endforeach
                                                     @endforeach
                                                 </div>
                                             </div>
