@@ -150,35 +150,13 @@ class TutorController extends Controller
     public function edit($id)
     {
         $role = auth()->user()->role;
-        if ($role == 2){
-            $user_role = 'admin';
-            $user = User::find($id);
-            if($user->role == 1){
-                $admin = $user;
-            }
-            else{
-                return back()->with('error', 'User not Tutor'); 
-            }
-        }
-        elseif ($role == 1){
-            $user_role = 'tutor';
-            $user = User::find($id);
-            if($user->id == auth()->user()->id){
-                $admin = $user;
-            }
-            else{
-                return back()->with('error', 'Unauthorized'); 
-            }
+        if ($id==auth()->user()->id){
+            $tutor = User::find($id);
+            return view('tutor.edit-tutor')->with('tutor', $tutor);
         }
         else{
-            return back()->with('error', 'Unauthorized page');
+            return back()->with('error', 'Access Denied');
         }
-
-        $data = array(
-            'admin' => $admin,
-        );
-
-        return view("$user_role.edit-$user_role")->with($data);
     }
 
     /**
@@ -191,22 +169,31 @@ class TutorController extends Controller
       public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'phone' => ['required', 'string', 'max:14'],
+            'profile_pic' => 'image|nullable|max:1999'
         ]);
         
+        if($request->hasFile('profile_pic')){
+            $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('profile_pic')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('profile_pic')->storeAs('public/profile_pictures', $fileNameToStore);
+        } 
+
         $tutor = User::find($id);
         $tutor->first_name = $request->input('first_name');
         $tutor->last_name = $request->input('last_name');
         $tutor->username = $request->input('username');
         $tutor->email = $request->input('email');
         $tutor->phone = $request->input('phone');
+        $tutor->status = $request->input('status');
+        $tutor->about = $request->input('about');
+        if($request->hasFile('profile_pic')){
+            $tutor->profile_pic = $fileNameToStore;
+        }
         $tutor->save();
-        
-        return back()->with('success', 'Profile updated!');
+
+        return back()->with('success', 'Updated Successfully');
     }
     /**
      * Remove the specified resource from storage.

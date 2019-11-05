@@ -55,10 +55,6 @@ class UserController extends Controller
     {
         //
     }
-     public function profile()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -121,7 +117,14 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return redirect(route('user.show', $id));
+        $role = auth()->user()->role;
+        if ($id==auth()->user()->id){
+            $user = User::find($id);
+            return view('user.edit-user')->with('user', $user);
+        }
+        else{
+            return back()->with('error', 'Access Denied');
+        }
     }
 
     /**
@@ -133,12 +136,29 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'profile_pic' => 'image|nullable|max:1999'
+        ]);
+        
+        if($request->hasFile('profile_pic')){
+            $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('profile_pic')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('profile_pic')->storeAs('public/profile_pictures', $fileNameToStore);
+        } 
+
         $user = User::find($id);
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
         $user->username = $request->input('username');
         $user->email = $request->input('email');
         $user->phone = $request->input('phone');
+        $user->status = $request->input('status');
+        $user->about = $request->input('about');
+        if($request->hasFile('profile_pic')){
+            $user->profile_pic = $fileNameToStore;
+        }
         $user->save();
 
         return back()->with('success', 'Updated Successfully');
@@ -152,7 +172,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        return 'uui';
         /*$user = User::find($id);
         $role = auth()->user()->role;
         if ($role == 0){
@@ -170,25 +189,6 @@ class UserController extends Controller
                 return back()->with('error', 'Uauthorized Permission');
             }
         }*/
-    }
-
-    public function review($id)
-    {
-        $course = Courses::find($id);
-        return view('user.give-review')->with('course', $course);
-    }
-
-    public function store_review(Request $request, $id)
-    {
-        $course = Courses::find($id);
-
-        $review = new Reviews;
-        $review->user_id = auth()->user()->id;
-        $review->course_id = $id;
-        $review->comment = $request->input('review');
-        $review->save();
-
-        return back()->with('success', 'Review Sent Successfully');
     }
 
     public function disable($id)

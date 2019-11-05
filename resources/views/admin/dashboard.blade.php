@@ -113,6 +113,16 @@
                                                     @endif
                                                     @endforeach
                                                 </td>
+                                                <td>
+                                                    <div>
+                                                        <a class=" btn btn-info" href="{{route('schedule.edit', $schedule->id)}}" >EDIT</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <a class=" btn btn-info" href="{{route('schedule.destroy', $schedule->id)}}" >DELETE</a>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         @endforeach
                                         </tbody>

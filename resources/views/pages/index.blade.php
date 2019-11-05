@@ -242,7 +242,11 @@
             The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
             software developers
         </p>
+        @if(Auth::guest())
+        <a href="{{route('register')}}" class="btn btn-custom pl-5 pr-5 mb-4">Start Learning</a>
+        @else
         <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5 mb-4">Start Learning</a>
+        @endif
     </div>
 </div>
 <!--  -->
@@ -419,7 +423,11 @@
                             <p class="my-4 text-muted">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam).  
                             </p>
-                            <a href="#" class="btn btn-custom pl-5 pr-5">Start Learning</a>
+                            @if(Auth::guest())
+                            <a href="{{route('register')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
+                            @else
+                            <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
+                            @endif
                        </div>
                     </div>
                 </div>

@@ -223,11 +223,11 @@
 
  
                 </ul>
-                     @if(Auth::guest())
-                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                @if(Auth::guest())
+                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
-                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
-                  @endif
+                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                @endif
             </div>
         </div>
             <div class="col-md-6">
@@ -245,10 +245,10 @@
        <div class="text-center">
 
 
-            <a href="courses.html" class="btn btn-custom pr-5 pl-5">Free Courses</a>
+            <a href="https://www.youtube.com/channel/UCTmmCTH_jUmaXIMqHZK648A" class="btn btn-custom pr-5 pl-5">Free Courses</a>
 
 
-            <a href="courses.html" class="btn btn-custom pr-5 pl-5">Paid Courses</a>
+            <a href="{{route('course.index')}}" class="btn btn-custom pr-5 pl-5">Paid Courses</a>
 
 
         </div>

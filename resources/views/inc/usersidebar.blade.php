@@ -16,8 +16,8 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="{{ (request()->is(route('user.profile', auth()->user()->id))) ? 'active' : '' }}">
-                        <a href="{{route('user.profile', auth()->user()->id)}}">
+                    <li class="{{ (request()->is(route('user.show', auth()->user()->id))) ? 'active' : '' }}">
+                        <a href="{{route('user.show', auth()->user()->id)}}">
                             <i class="fa fa-user"></i>
                             <p>My Profile</p>
                         </a>
@@ -26,6 +26,12 @@
                         <a href="{{route('course.mycourses')}}">
                             <i class="fa fa-book"></i>
                             <p>View My Courses</p>
+                        </a>
+                    </li>
+                    <li class="{{ (request()->is('review/create')) ? 'active' : '' }}">
+                        <a href="{{route('review.create')}}">
+                            <i class="fa fa-book"></i>
+                            <p>Review My Courses</p>
                         </a>
                     </li>
                     <li class="{{ (request()->is('course')) ? 'active' : '' }}">

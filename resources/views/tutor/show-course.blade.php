@@ -17,6 +17,26 @@
             <li>{{$content->title}}</li>
             @endforeach
             </ul>
+            @if($mine)
+            Reviews:
+            @foreach($reviews as $review)
+            {{$review->comment}}
+            @endforeach
+            <div class="row mt-2">
+                <div>
+                    <a class=" btn btn-info" href="{{route('course.edit', $course->id)}}" >Edit</a>
+                </div>
+            @if($course->active)
+                <div>
+                    <a class=" btn btn-info" href="{{route('courses.disable', $course->id)}}" >Disable</a>
+                </div>
+            @else
+                <div>
+                    <a class=" btn btn-primary" href="{{route('courses.disable', $course->id)}}" >Enable</a>
+                </div>
+            @endif
+            </div>
+            @endif
         </div>
     </div>
 </div>
