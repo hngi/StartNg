@@ -264,9 +264,10 @@
                 <p class="my-4 text-muted">
                     The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. 
                 </p>
-                <form class="my-4">
+                <form class="my-4" action="{{route('search')}}" method="post" >
+                    @csrf 
                     <div class="form-group w-75 mt-3">
-                        <input type="text" name="searchCourses" class="form-control" required>
+                        <input type="text" name="course" class="form-control" required>
                     </div>
                     <button class="btn btn-secondary py-2 px-4 mt-3"><i class="fas fa-search"></i> Find a Course</button>
                 </form>
