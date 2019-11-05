@@ -1,0 +1,264 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Message Akunna">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+    <title>Startng: coming soon </title>
+
+    <link rel="canonical" href="">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    
+    <style>
+        html {
+        height: 100%
+        }
+        body {
+        height: 100%;
+        min-height: 35rem;
+        position: relative;
+        font-family: 'Source Sans Pro';
+        font-weight: 300
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+        font-family: Merriweather;
+        font-weight: 700
+        }
+        .side-img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1
+        }
+        @media (pointer:coarse) and (hover:none) {
+        body {
+            background: rgba(58, 8, 66, 0.6) no-repeat center center scroll;
+            background-position: cover
+        }
+        body .side-img {
+            display: none
+        }
+        }
+        .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: -webkit-linear-gradient(110deg, #2DCE89 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, rgba(0, 139, 79, 0.829) 70%, #3a0842bd 70%);
+        background: -o-linear-gradient(110deg, #2DCE89 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, rgba(0, 139, 79, 0.829) 70%, #3a0842bd 70%);
+        background: -moz-linear-gradient(110deg, #2DCE89 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, rgba(0, 139, 79, 0.829) 70%, #3a0842bd 70%);
+        background: linear-gradient(10deg, #2DCE89 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, rgba(0, 139, 79, 0.829) 70%, #3a0842bd 70%);
+        opacity: .7;
+        z-index: 0
+        }
+        .masthead {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 3rem;
+        z-index: 2
+        }
+        .masthead .masthead-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        min-height: 35rem;
+        height: 100%;
+        background-color: rgb(58, 8, 66);
+        transform: skewY(4deg);
+        transform-origin: bottom right
+        }
+        .masthead .masthead-content h1 {
+        font-size: 2.5rem
+        }
+        .masthead .masthead-content p {
+        font-size: 1.2rem
+        }
+        .masthead .masthead-content p strong {
+        font-weight: 700
+        }
+        .masthead .masthead-content .input-group-newsletter input {
+        height: auto;
+        font-size: 1rem;
+        padding: 1rem
+        }
+        .masthead .masthead-content .input-group-newsletter button {
+        font-size: .8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem
+        }
+        @media (min-width:768px) {
+        .masthead {
+            height: 100%;
+            min-height: 0;
+            width: 40.5rem;
+            padding-bottom: 0
+        }
+        .masthead .masthead-bg {
+            min-height: 0;
+            transform: skewX(-8deg);
+            transform-origin: top right
+        }
+        .masthead .masthead-content {
+            padding-left: 3rem;
+            padding-right: 10rem
+        }
+        .masthead .masthead-content h1 {
+            font-size: 3.5rem
+        }
+        .masthead .masthead-content p {
+            font-size: 1.3rem
+        }
+        }
+        .social-icons {
+        position: absolute;
+        margin-bottom: 2rem;
+        width: 100%;
+        z-index: 2
+        }
+        .social-icons ul {
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center
+        }
+        .social-icons ul > li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: inline-block
+        }
+        .social-icons ul > li > a {
+        display: block;
+        color: #fff;
+        background-color: rgb(58, 8, 66);
+        border-radius: 100%;
+        font-size: 2rem;
+        line-height: 4rem;
+        height: 4rem;
+        width: 4rem
+        }
+        @media (min-width:768px) {
+        .social-icons {
+            margin: 0;
+            position: absolute;
+            right: 2.5rem;
+            bottom: 2rem;
+            width: auto
+        }
+        .social-icons ul {
+            margin-top: 0;
+            width: auto
+        }
+        .social-icons ul > li {
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 2rem
+        }
+        .social-icons ul > li:last-child {
+            margin-bottom: 0
+        }
+        .social-icons ul > li > a {
+            transition: all .2s ease-in-out;
+            font-size: 2rem;
+            line-height: 4rem;
+            height: 4rem;
+            width: 4rem
+        }
+        .social-icons ul > li > a:hover {
+            background-color: rgba(58, 8, 66, 0.6)
+        }
+        }
+        .btn-secondary {
+        background-color: #2DCE89;
+        border-color: #2DCE89
+        }
+        .btn-secondary:active,
+        .btn-secondary:focus,
+        .btn-secondary:hover {
+        background-color: #2DCE89!important;
+        border-color: #2DCE89!important
+        }
+        .input {
+        font-weight: 300!important
+        }
+    </style>
+  </head>
+  <body class="">
+    <div class="overlay"></div>
+    <div class="side-img">
+        <!-- <img src="https://lancer-app.000webhostapp.com/startng/images/undraw_prototyping_process_rswj.svg" class="img-fluid"> -->
+    </div>
+    <div class="masthead">
+        <div class="masthead-bg"></div>
+        <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 my-auto">
+            <div class="masthead-content text-white py-5 py-md-0">
+                <a href="/" class="text-center">
+                    <img src="https://res.cloudinary.com/juwon-tech/image/upload/v1570818437/Logo_1_oyasky.png" class="img-fluid" alt="logo" width="150px">
+                </a>
+                <h1 class="mb-3">Coming Soon!</h1>
+                <p class="mb-5">We're working hard to finish the development of this site. Our target launch date is <strong>9<sup>th</sup> of November 2019</strong>! Sign up for updates using the form below!.</p>
+                <form>
+                    <div class="input-group input-group-newsletter">
+                        <input type="email" class="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="basic-addon" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="submit">Notify Me!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="social-icons">
+        <ul class="list-unstyled text-center mb-0">
+            <li class="list-unstyled-item">
+                <a href="https://www.twitter.com/hnginternship" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <!-- <li class="list-unstyled-item">
+                <a href="#">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="list-unstyled-item">
+                <a href="#">
+                <i class="fab fa-instagram"></i>
+                </a>
+            </li> -->
+        </ul>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
