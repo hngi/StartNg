@@ -53,7 +53,8 @@ class SubscriptionsController extends Controller
 			//$subcriber->email = $request->input('email');
 	        $subscriber->save();
 	        	return redirect('/')->with('success', 'Check your email to confirm subscription.');
-	        } else {
+            } 
+            else {
 	        	 return redirect('/')->with('failure', 'You are already subscribed.');
 	        }
 
