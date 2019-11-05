@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
     <title>StartNG</title>
 
     <style>
@@ -35,6 +36,7 @@
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
+<<<<<<< HEAD
 
         .footer-top {
             background-color: #3A0842;
@@ -60,6 +62,9 @@
             background-color: #2E0435;
             color: #fff;
         }
+=======
+        
+>>>>>>> f2b473c80eaf0a5d466f5ef4f93d000839b089d7
     </style>
 
     @yield('style')
@@ -68,6 +73,8 @@
 <body>
     @include('inc.navbar')
 
+    @include('inc.messages')
+    
     @yield('content')
 
     @include('inc.footer')
@@ -75,6 +82,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

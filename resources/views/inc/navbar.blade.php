@@ -21,15 +21,15 @@
                 @if(Auth::guest())
                     <li class="nav-item mr-4">
                         <a class="btn btn-custom nav-link pl-5 pr-5" href="{{route('register')}}" style="color: #fff;">Register</a>
-                    </li>
+                    </li><br>
                     <li class="nav-item mr-4">
                         <a class="btn btn-custom nav-link pl-5 pr-5" href="{{route('login')}}" style="color: #fff;">Login</a>
                     </li>
                 @else
                     <li class="nav-item mr-4">
-                        <a class="btn btn-custom nav-link pl-5 pr-5" href="#" style="color: #fff;">Dashboard</a>
-                    </li>
-                    <a class="btn btn-custom nav-link pl-5 pr-5" href="{{ route('logout') }}"
+                        <a class="btn btn-custom nav-link pl-5 pr-5" href="{{route('dashboard')}}" style="color: #fff;">Dashboard</a>
+                    </li><br>
+                    <a class="btn btn-custom nav-link pl-5 pr-5" href="{{ route('logout') }}" style="color: #fff;"
                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}

@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use App\User;
+use App\Courses;
+use App\RegisteredCourses;
+use App\Reviews;
 
 class AdminController extends Controller
 {
@@ -18,8 +23,16 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $tutors = User::where('role', '1')->paginate(5);
-        return view('admin.tutors')->with('tutors', $tutors);
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $admins = User::where('role', 2)->paginate(10);
+        }
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        return view("$user_role.admins")->with('admins', $admins);
     }
 
     /**
@@ -27,29 +40,41 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create(){
-        return view('admin.create-mentor');
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+        }
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        return view("$user_role.create-admin");
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'password' => 'required'
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'phone' => ['required', 'string', 'max:14', 'unique:users'],
+            'role' => 'required'
         ]);
-
-        $mentor = new User;
-        $mentor->name = $request->input('name');
-        $mentor->email = $request->input('email');
-        $mentor->phone = $request->input('phone');
-        $mentor->password = Hash::make($request->input('password'));
-        $mentor->role = 1;
-        $mentor->state = $request->input('phone');
-        $mentor->save();
-
-        return back()->with('success','Mentor Successfully Created');
-
+    
+    $admin = new User;
+    $admin->first_name = $request->input('first_name');
+    $admin->last_name = $request->input('last_name');
+    $admin->username = $request->input('username');
+    $admin->email = $request->input('email');
+    $admin->password = $request->input('password');
+    $admin->phone = $request->input('phone');
+    $admin->role = $request->input('role');
+    $admin->save();
+    
+    return back()->with('success','Admin Successfully Updated');
     }
 
     /**
@@ -60,8 +85,28 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        $mentor = User::find($id);
-        return view('admin.mentor_detail')->with('mentor', $mentor);
+        $role = auth()->user()->role;
+        if ($role == 2){
+            $user_role = 'admin';
+            $user = User::find($id);
+            if($user->role == 2){
+                $admin = $user;
+                $courses = Courses::where('user_id', $id);
+            }
+            else{
+                return back()->with('error', 'User not Admin'); 
+            }
+        }
+        else{
+            return back()->with('error', 'Unauthorized page');
+        }
+
+        $data = array(
+            'admin' => $admin,
+            'courses' => $courses
+        );
+
+        return view("$user_role.show-admin")->with($data);
     }
 
     /**
@@ -72,7 +117,14 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = auth()->user()->role;
+        if ($id==auth()->user()->id){
+            $admin = User::find($id);
+            return view('admin.edit-admin')->with('admin', $admin);
+        }
+        else{
+            return back()->with('error', 'Access Denied');
+        }
     }
 
     /**
@@ -84,7 +136,25 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'phone' => ['required', 'string', 'max:14'],
+            'role' => 'required'
+        ]);
+        
+        $admin = User::find($id);
+        $admin->first_name = $request->input('first_name');
+        $admin->last_name = $request->input('last_name');
+        $admin->username = $request->input('username');
+        $admin->email = $request->input('email');
+        $admin->phone = $request->input('phone');
+        $admin->role = $request->input('role');
+        $admin->save();
+        
+        return back()->with('success','Admin Successfully Updated');
     }
 
     /**
@@ -95,18 +165,6 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        $mentor = User::find($id);
-        if (empty($mentor)) {
-            Flash::error('Mentor not found');
-            return redirect(route('mentors.index'));
-        }
-
-        $mentor->active = ($mentor->active == 0) ? 1 : 0;
-        $title = ($mentor->active == 1) ? "enabled" : "disabled";
-
-
-        $mentor->save();
-//        Flash::success("User has been $title successfully.");
-        return redirect(route('mentors'));
+        //
     }
 }
