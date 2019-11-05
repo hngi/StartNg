@@ -47,10 +47,6 @@ class BaseController extends Controller
         return view('pages.faq');
     }
 
-    public function curriculum(){
-        return view('pages.curriculum');
-    }
-
     public function getCourse(){
         $data= request()->validate([
             'course'=>'required'
@@ -64,4 +60,9 @@ class BaseController extends Controller
 
         return redirect()->route('find-course')->with('error','Course not Found');
     }
+    
+    public function curriculum(){
+        return view('pages.curriculum');
+    }
+
 }

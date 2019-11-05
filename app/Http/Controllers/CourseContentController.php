@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Courses;
 use App\CourseContent;
+use Session;
 
 class CourseContentController extends Controller
 {
@@ -57,6 +58,7 @@ class CourseContentController extends Controller
         $content->title = $request->input('title');
         $content->course_id = $course->id;
         $course->save();
+        Session::flash('Content Successfully Created');
         
         return redirect('/')->with('success','Content Successfully Created');
     }
