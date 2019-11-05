@@ -30,9 +30,11 @@ Route::resource('admin', 'AdminController');
 Route::resource('blog', 'BlogController');
 Route::resource('user', 'UserController');
 Route::resource('course', 'CourseController');
+Route::get('/disable/course/{id}', 'CourseController@disable')->name('courses.disable');
 Route::resource('course-content', 'CourseContentController');
 Route::resource('contact', 'ContactController');
 Route::resource('tutor', 'TutorController');
+Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('schedule', 'ScheduleController');
 
@@ -43,8 +45,9 @@ Route::get('/courses/index', 'CourseController@index')->name('courses.index');
 Route::get('/privacy', 'BaseController@privacy')->name('privacy');
 Route::get('/terms', 'BaseController@terms')->name('terms');
 Route::get('/faq', 'BaseController@faq')->name('faq');
-Route::get('/find-course', 'BaseController@findcourse')->name('find-course');
+Route::get('/find-course', 'BaseController@find_course')->name('find-course');
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
+Route::post('/search-course', 'BaseController@search')->name('search');
 
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');

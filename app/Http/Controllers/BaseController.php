@@ -49,4 +49,17 @@ class BaseController extends Controller
     public function curriculum(){
         return view('pages.curriculum');
     }
+
+    public function search(){
+        $data = request()->validate([
+            'course'=>'required'
+        ]);
+
+        $query= Courses::where('title', 'like', '%' . $data['course'] . '%')->exists();
+        if($query){
+            $courses = Courses::where('title', 'like', '%' . $data['course'] . '%')->get();
+            return view('pages.search',compact('courses'));
+        }
+        return redirect('find-course')->with('error', 'Course not found');
+    }
 }

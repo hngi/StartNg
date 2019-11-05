@@ -489,7 +489,7 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <form method="post" action="{{route('course.search')  }}">
+                    <form method="post" action="{{route('search')  }}">
                         <div class="find">
                             <h3>Search Courses</h3>
                             @csrf
@@ -503,16 +503,16 @@
                         <div class="result1 active-2">
                             <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS"
                             title="image-result" class="image-result">
-                            <p class="first-result">{{$course->name}} &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
+                            <p class="first-result">{{$course->title}} &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
                         Months</em></p>
                         <p class="second-result">
                             @if(Auth::guest())
-                            <a href="{{route('signup')}}" class="online-link">Register</a>
+                            <a href="{{route('register')}}" class="online-link">Register</a>
                             @endif
                             @if(!Auth::guest())
                             <a href="{{route('register.courses',$course->id)}}" class="online-link">Register</a>
                             @endif
-                            <a href="{{route('courses.detail',$course->id)}}" class="free-link">Details</a>
+                            <a href="{{route('course.show',$course->id)}}" class="free-link">Details</a>
                         </p>
                     </div>
                     @endforeach
