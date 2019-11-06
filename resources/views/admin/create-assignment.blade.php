@@ -20,7 +20,7 @@
                                             </div>
                                             <div class="col-md-2 px-1">
                                                 <div class="form-group">
-                                                    <label>Course</label>
+                                                    <label>Course Content</label>
                                                     @foreach($courses as $course)
                                                     @foreach($contents as $content)
                                                     @if($content->course_id==$course->id)
