@@ -29,8 +29,13 @@
                     <li class="nav-item mr-4">
                         <a class="btn btn-success nav-link pl-5 pr-5" href="{{route('dashboard')}}" style="color: #fff;">Dashboard</a>
                     </li><br>
+
                     <a class="btn btn-custom nav-link" style="width:5rem; height:2.6rem; color: #fff;text-align:center;" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
+
+                    <!-- <a class="btn btn-success nav-link pl-5 pr-5" href="{{ route('logout') }}" style="color: #fff;"
+                       onclick="event.preventDefault(); -->
+
                                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>

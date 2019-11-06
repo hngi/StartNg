@@ -296,74 +296,10 @@
                 background: #44cf6c;
                 }
 
-
-                /* Style for Footer Starts */
-
-                * {
-                    box-sizing: border-box;
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                    font-family: 'Nunito', sans-serif;
-                }
-
-                a {
-                    text-decoration: none;
-                }
-
-                .deep {
-                    background: #3A0842;
-                    color: #fff;
-                }
-
-                .deep #slink {
-                    background: #44CF6C;
-                    border-radius: 10px;
-                    color: white;
-                    padding: 10px 70px;
-                }
-
-                .deep li a {
-                    text-decoration: none;
-                    color: #fff;
-                    font-size: 16px;
-                    line-height: 30px;
-                }
-
-                .deep li {
-                    list-style: none;
-                }
-
-                .deep li a:hover {
-                    text-decoration: none;
-                }
-
-
-                .icons i {
-                    font-size: 26px;
-                    height: 50px;
-                    width: 50px;
-                    padding: 10px 20px;
-                    color: white;
-                }
-
-                .icons i.fa.fa-twitter:hover {
-                    color: #00aced;
-                }
-
-                .icons i.fa.fa-facebook:hover {
-                    color: #3b5598;
-                }
-
-                .icons i.fa.fa-instagram:hover {
-                    color: #ed3833;
-                }
-
-                /* Style for Footer Ends */
-            </style>
-        </head>
-        <body>
-                @include('inc.navbar')
+        </style>
+    </head>
+    <body>
+        @include('../inc.navbar')
                 <div class="jumbotron jumbotron-fluid first">
                     <div class="container">
                         <h1 class="display-4">Terms of Services</h1>

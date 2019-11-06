@@ -23,11 +23,11 @@
             color: #fff;
             border: thin solid #2dce89;
         }
-        .btn-success:hover {
+        /* .btn-success:hover {
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
-        }
+        } */
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -105,9 +105,11 @@
         .priviledge {
             background-color: #FCFCFC;
         }
+
         .started {
             background-color: #FCFCFC;
         }
+
         .global-reach {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570920182/startng/Rectangle_57_xdcvbs.png');
             background-position: center center;
@@ -210,6 +212,7 @@
     <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
         <div class="row align-items-center">
             <div class="col-md-6 pb-5">
+
                 <h4 class="pl-5" style="color: #7F5A83;">Courses</h4>
                 <p class="pl-5">Interns are able to select from the number of courses we offer:<br> Complete quide. <br>100% Online. Flexible Online Learning and Earn a Course Certificate</p>
                 <ul class="pl-5 ml-3" style="color: #44CF6C;">
@@ -273,9 +276,11 @@
                             </div>
                         </div>
                         <div class="card-body mt-5">
+
                             <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
                             <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
                             <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
+
                         </div>
                     </div>
                 </div>
@@ -283,6 +288,7 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
                             </div>
                         </div>
@@ -301,9 +307,11 @@
                             </div>
                         </div>
                         <div class="card-body mt-5">
+
                            <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
                             <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
                             <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
+
                         </div>
                     </div>
                 </div>
