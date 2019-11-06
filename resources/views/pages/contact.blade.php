@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="col-md-12 text-center ">
-                    <p>By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
+                    <p>By filling out this form and clicking submit, <br> you acknowledge our <a href="{{route('privacy')}}" style="color: #44CF6C">privacy policy</a></p>
                     <button type="submit" class="btn btn-custom pl-3 pr-3">Submit</button>
                 </div>
             </div>

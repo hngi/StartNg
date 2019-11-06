@@ -312,9 +312,11 @@
         <div class="col-md-6 offset-md-1 text-white " id="top">
             <h4 class="font-weight-bold mt-5 pt-5 pb-4">Upgrade Your Skills with <br> Our Curriculum</h4>
             <p class="pb-4" style="font-size: 20px;">The HNG internship is a 3-month remote <br> internship designed ---to find and develop the <br> most talented software developers. </p>
-            <a class="btn btn-custom pl-5 pr-5 mb-4" href="{{route('dashboard')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
-
-                Learning</a>
+            @if(Auth::guest())
+            <a class="btn btn-custom pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+            @else
+            <a class="btn btn-custom pl-5 pr-5 mb-4" href="{{route('dashboard')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+            @endif
         </div>
     </div>
 
@@ -327,7 +329,7 @@
               <div class="col-md-6">
                   <h4 class="font-weight-bold" style="font-size: 1.25rem">Learn Anywhere, Anytime, With Other Creatives</h4>
                   <p class="exp">The HNG internship is a 3-month remote <br> internship designed to find and develop the <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
-                  <a href="#" class="more">Learn more >></a>
+                  <a href="{{route('about')}}" class="more">Learn more >></a>
               </div>
             </div>
         </div>
@@ -376,8 +378,11 @@
                 <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers</p>
             </div>
             <div  id="col" class="act-btn">
-     <a href="{{route('dashboard')}}" class="btn">Start Learning</a>
-
+                @if(Auth::guest())
+                <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                @else
+                <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                @endif
             </div>
           </div>
         </div>
@@ -802,8 +807,12 @@
                 <p class="pb-3">The HNG internship is a 3-month remote <br> internship designed to find and develop the
                     <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
 <a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
-
                     Learning</a>
+                    @if(Auth::guest())
+                    <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                    @else
+                    <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('dashboard')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                    @endif
             </div>
             <div class="col-md-6">
                 <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570976615/startng/image_4_iff7wn.png">

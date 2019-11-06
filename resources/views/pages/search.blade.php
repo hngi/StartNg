@@ -504,7 +504,7 @@
                         <div class="result1 active-2">
                             <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS"
                             title="image-result" class="image-result">
-                            <p class="first-result">{{$course->title}} &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
+                            <p class="first-result"><a href="{{route('course.show', $course->id)}}">{{$course->title}}</a> &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
                         Months</em></p>
                         <p class="second-result">
                             @if(Auth::guest())
