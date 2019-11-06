@@ -1195,6 +1195,21 @@
         ]
     },
     {
+        "name": "laravel/ui",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel/ui.git",
+            "reference": "57e2361b55ed1bc80ff0b3258b9713626fb38a2b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel/ui/zipball/57e2361b55ed1bc80ff0b3258b9713626fb38a2b",
+            "reference": "57e2361b55ed1bc80ff0b3258b9713626fb38a2b",
+            "shasum": ""
+        },
+        "require"
         "name": "laravelcollective/html",
         "version": "v5.8.1",
         "version_normalized": "5.8.1.0",
@@ -1236,16 +1251,19 @@
                     "Form": "Collective\\Html\\FormFacade",
                     "Html": "Collective\\Html\\HtmlFacade"
                 }
+
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
+
                 "Collective\\Html\\": "src/"
             },
             "files": [
                 "src/helpers.php"
             ]
+
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -1253,6 +1271,7 @@
         ],
         "authors": [
             {
+
                 "name": "Adam Engebretson",
                 "email": "adam@laravelcollective.com"
             },
@@ -1263,6 +1282,7 @@
         ],
         "description": "HTML and Form Builders for the Laravel Framework",
         "homepage": "https://laravelcollective.com"
+
     },
     {
         "name": "league/flysystem",

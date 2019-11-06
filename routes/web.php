@@ -26,6 +26,7 @@ Auth::routes();
 // Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/', 'BaseController@index')->name('index');
+
 Route::resource('admin', 'AdminController');
 Route::resource('user', 'UserController');
 Route::resource('course', 'CourseController');
@@ -56,7 +57,7 @@ Route::get('/admins/destroy/{id}', 'AdminController@disable')->name('admin.disab
 Route::get('/courses/registered', 'CourseController@myCourses')->name('course.mycourses');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::resource('subscriptions', 'SubscriptionsController'); 
+Route::resource('subscriptions', 'SubscriptionsController');
 
 // Tutor Route
 Route::get('/tutors/upload-resource', 'AssignmentController@upload')->name('tutor.upload-resource');

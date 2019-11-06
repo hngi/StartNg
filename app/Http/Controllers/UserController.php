@@ -31,7 +31,7 @@ class UserController extends Controller
             $user_role = ($role == 1) ? 'tutor' : 'admin';
             $students = User::where('role', 0)->paginate(10);
         }
-        
+
         return view("$user_role.users")->with('students', $students);
     }
 
@@ -53,7 +53,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.template');
     }
 
     /**
@@ -87,7 +87,7 @@ class UserController extends Controller
             else{
                 return back()->with('error', 'Unauthorized Page');
             }
-            
+
         }
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
@@ -104,9 +104,9 @@ class UserController extends Controller
                 return back()->with('error', 'Unauthorized Page');
             }
         }
-        
-        return view("$user_role.show-user")->with($data);
-        
+
+        return view("user.show-user")->with($data);
+
     }
 
     /**
@@ -139,14 +139,14 @@ class UserController extends Controller
         $this->validate($request, [
             'profile_pic' => 'image|nullable|max:1999'
         ]);
-        
+
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('profile_pic')->getClientOriginalExtension();
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             $path = $request->file('profile_pic')->storeAs('public/profile_pictures', $fileNameToStore);
-        } 
+        }
 
         $user = User::find($id);
         $user->first_name = $request->input('first_name');
