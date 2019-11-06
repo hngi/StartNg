@@ -55,7 +55,7 @@
         a {
             text-decoration: none;
         }
-         
+
         .deep {
             background: #3A0842;
             color: #fff;
@@ -83,7 +83,7 @@
             text-decoration: none;
         }
 
-       
+
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -113,7 +113,7 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         .loren-ipsum {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570916337/startng/Rectangle_10_pwiqsf.png');
             background-position: center center;
@@ -124,11 +124,11 @@
            .priviledge {
             background-color: #FCFCFC;
         }
-        
+
         .started {
             background-color: #FCFCFC;
         }
-        
+
         .global-reach {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570920182/startng/Rectangle_57_xdcvbs.png');
             background-position: center center;
@@ -221,7 +221,7 @@
                     <li style="color: #44CF6C;">Flexible Online Learning</li>
                     <li style="color: #44CF6C;">Earn a Course Certificate</li>
 
- 
+
                 </ul>
                 @if(Auth::guest())
                  <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
@@ -262,7 +262,7 @@
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                             <h5 class="card-title" style="color: #3A0842;">@Message: Chidinma O.</h5>
@@ -276,7 +276,7 @@
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                             <h5 class="card-title" style="color: #3A0842;">@Message: Egesi Ndubuisi Success</h5>
@@ -290,7 +290,7 @@
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                             <h5 class="card-title" style="color: #3A0842;">@Message: Agboola Eniola</h5>
@@ -304,7 +304,7 @@
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle img-fluid" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                             <h5 class="card-title" style="color: #3A0842;">@Message: Anonymous</h5>
@@ -318,13 +318,13 @@
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle img-fluid" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                             <h5 class="card-title" style="color: #3A0842;">@Message: Isuma Chidera </h5>
                             <p class="card-text">I enrolled for start StartNg program a preparatory program for the main internship HNGI. it was a wonderful experience for me and I got to learn so many new things in software development.
 Things like how to communicate with your team remotely through slack, how to use git and github, how to meet up with deadlines on task for each week e.t.c</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FullStack development</small></p> 
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FullStack development</small></p>
                         </div>
                     </div>
                 </div>
@@ -333,7 +333,7 @@ Things like how to communicate with your team remotely through slack, how to use
                         <div class="card-header" style="height: 110px; background-color:#44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                            <h5 class="card-title" style="color: #3A0842;">@Message: Kayode O. </h5>
@@ -347,7 +347,7 @@ Things like how to communicate with your team remotely through slack, how to use
                         <div class="card-header" style="height: 110px; background-color:#44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                            <h5 class="card-title" style="color: #3A0842;">@Message: Bakare O. </h5>
@@ -361,7 +361,7 @@ Things like how to communicate with your team remotely through slack, how to use
                         <div class="card-header" style="height: 110px; background-color:#44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
                            <h5 class="card-title" style="color: #3A0842;">@Message: Ubong Ndoh</h5>
@@ -458,12 +458,12 @@ Things like how to communicate with your team remotely through slack, how to use
             <div class="row align-items-center">
                 <div class="col-md-6 pb-2 mt-0 pt-0">
                     <div class="videoWrapper">
-                        <iframe 
-                            width="100%" 
+                        <iframe
+                            width="100%"
                             height="380"
-                            src="https://www.youtube.com/embed/DYaq2sWTWAA" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            src="https://www.youtube.com/embed/DYaq2sWTWAA"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>

@@ -64,7 +64,7 @@ Route::get('/users/disable/{id}', 'UserController@disable')->name('user.disable'
 Route::get('/courses/registered', 'CourseController@myCourses')->name('course.mycourses');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::resource('subscriptions', 'SubscriptionsController'); 
+Route::resource('subscriptions', 'SubscriptionsController');
 
 // Tutor Route
 Route::get('/tutors/profile', 'TutorController@profile')->name('tutor.profile');

@@ -1,6 +1,18 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('style')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
+    <title>Start NG/title>
 
 <style>
         /* Style for Navbar Starts */
@@ -11,7 +23,7 @@
             --dark-color: #2A2B2A;
             --light-color: #D3D5D4;
         }
-        
+
         body {
             font-family: Nunito;
         }
@@ -28,7 +40,7 @@
             border: thin solid #2dce89;
         }
 
-       
+
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -64,7 +76,7 @@
             border: thin solid var(--primary-color);
             transition: 0.25s;
         }
-        
+
         .btn-primary:hover {
             background-color: var(--primary-color);
             opacity: 0.85;
@@ -76,7 +88,7 @@
             border: thin solid var(--secondary-color);
             transition: 0.25s;
         }
-        
+
         .btn-secondary:hover {
             background-color: var(--secondary-color);
             opacity: 0.85;
@@ -170,7 +182,7 @@
 
         }
 
-        
+
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -229,9 +241,11 @@
             height: 100%;
         }
     </style>
-@endsection
 
-@section('content')
+</head>
+<body>
+
+    @include('../inc.navbar')
 <div class="container-fluid body-banner pt-5 pb-5">
     <div class="col-md-6 offset-md-2">
         <h4 class="pt-5 mt-5 pb-4"
@@ -262,10 +276,10 @@
             <div class="col-md-5 order-sm-2 order-md-1 ">
                 <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
                 <p class="my-4 text-muted">
-                    The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. 
+                    The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.
                 </p>
                 <form class="my-4" action="{{route('search')}}" method="post" >
-                    @csrf 
+                    @csrf
                     <div class="form-group w-75 mt-3">
                         <input type="text" name="course" class="form-control" required>
                     </div>
@@ -388,12 +402,12 @@
             </div>
             <div class="col-md-6 mt-0 pt-0">
                 <div class="videoWrapper">
-                    <iframe 
-                        width="100%" 
+                    <iframe
+                        width="100%"
                         height="380"
-                        src="https://www.youtube.com/embed/DYaq2sWTWAA" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        src="https://www.youtube.com/embed/DYaq2sWTWAA"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -405,7 +419,7 @@
                     </div>
                 </div> -->
             </div>
-        </div>            
+        </div>
     </section>
     <!--  -->
 
@@ -422,7 +436,7 @@
                         <div class="mr-md-5">
                             <h5 class="my-4 font-weight-bold">Take Your First Steps in Achieving Your Dreams</h5>
                             <p class="my-4 text-muted">
-                                The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam).  
+                                The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam).
                             </p>
                             @if(Auth::guest())
                             <a href="{{route('register')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
@@ -450,7 +464,7 @@
                 </div>
             </div>
         </section>
-        
+
 <!-- What people have to say about us -->
 <section class="">
     <div class="container py-5">
@@ -520,40 +534,131 @@
             </div>
             <div class="col-md-4">
                 <img class="img-fluid"
-                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png"> 
+                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
             </div>
         </div>
     </div>
 </div>
 
-    <script type="text/javascript">
-        // Find all YouTube videos
-        var $allVideos = $("iframe[src^='//www.youtube.com']");
-        // The element that is fluid width
-        $fluidEl = $("body");
-        // Figure out and save aspect ratio for each video
-        $allVideos.each(function() {
-            $(this)
-            .data('aspectRatio', this.height / this.width)
-            // and remove the hard coded width/height
-            .removeAttr('height')
-            .removeAttr('width');
-        });
+    <!-- Footer -->
+       <footer>
+           <div class="container-fluid footer-top col-lg-12">
+               <div class="container col-md-12 p-5">
+                   <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
+                   <div class="row">
+                   @if(Auth::guest())
+                       <div class="col-md-4 mt-4">
 
-        // When the window is resized
-        $(window).resize(function() {
+                           <h4 class="">Ready to take the leap?</h4>
+                           <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
+                       </div>
+                   @else
+                        <div class="col-md-4 mt-4">
 
-            var newWidth = $fluidEl.width();
+                            <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">
+                           {{ __('Logout') }}
+                            </a>
 
-            // Resize all videos according to their own aspect ratio
-            $allVideos.each(function() {
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                           @csrf
+                           </form>
+                       </div>
+                   @endif
+                       <div class="col-md-2 mt-4">
 
-            var $el = $(this);
-                $el
-                .width(newWidth)
-                .height(newWidth * $el.data('aspectRatio'));
-            });
-            // Kick off one resize to fix all videos on page load
-        }).resize();
-    </script>
-@endsection
+                           <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
+                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
+
+                       </div>
+                       <div class="col-md-2 mt-4">
+
+                           <li>
+                               <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="">Blog</a>
+                           </li>
+
+                       </div>
+                       <div class="col-md-2 mt-4">
+                           <li>
+                               <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="{{route('faq')}}">FAQ</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
+                           </li>
+                       </div>
+                       <div class="col-md-2 mt-4">
+                           <li>
+                               <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
+                           </li>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="container-fluid footer-social col-lg-12">
+               <div class="container p-3">
+                   <div class="clearfix">
+                       <div class="float-left">
+
+                       </div>
+                       <div class="float-right">
+                           <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                   class="fab fa-twitter"></i></a>
+                           <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                   class="fab fa-instagram"></i></a>
+                           <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                   class="fab fa-facebook"></i></a> -->
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </footer>
+
+
+           <script type="text/javascript">
+               // Find all YouTube videos
+               var $allVideos = $("iframe[src^='//www.youtube.com']");
+               // The element that is fluid width
+               $fluidEl = $("body");
+               // Figure out and save aspect ratio for each video
+               $allVideos.each(function() {
+                   $(this)
+                   .data('aspectRatio', this.height / this.width)
+                   // and remove the hard coded width/height
+                   .removeAttr('height')
+                   .removeAttr('width');
+               });
+
+               // When the window is resized
+               $(window).resize(function() {
+
+                   var newWidth = $fluidEl.width();
+
+                   // Resize all videos according to their own aspect ratio
+                   $allVideos.each(function() {
+
+                   var $el = $(this);
+                       $el
+                       .width(newWidth)
+                       .height(newWidth * $el.data('aspectRatio'));
+                   });
+                   // Kick off one resize to fix all videos on page load
+               }).resize();
+           </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
