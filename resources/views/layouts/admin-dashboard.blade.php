@@ -39,7 +39,7 @@ background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">ADMIN DASHBOARD</a>
+                        <a class="navbar-brand" href="">ADMIN DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -66,7 +66,7 @@ background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                          <a class="dropdown-item" href="{{url('/users/profile'.Auth::user()->user_id)}}">Edit Profile</a>
+                          <a class="dropdown-item" href="#">Edit Profile</a>
                          <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

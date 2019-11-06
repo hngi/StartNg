@@ -11,28 +11,6 @@
             <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Open+Sans:400,700&display=swap"
                 rel="stylesheet" />
                 <style>
-                /* Style for Navbar Starts */
-                .navbar-custom li a {
-                color: #000;
-                }
-                .btn-success {
-                background-color: #2DCE89;
-                color: #fff;
-                border: thin solid #2dce89;
-                }
-                .btn-success:hover {
-                background-color: rgb(2, 20, 12);
-                color: #fff;
-                border: thin solid rgb(2, 20, 12);
-                cursor: pointer;
-                }
-                .custom-toggler .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-                }
-                .custom-toggler.navbar-toggler {
-                border-color: #000;
-                }
-                /* Style for Navbar Ends */
                 .display-4 {
                 font-weight: bold;
                 font-size: 40px;
@@ -314,63 +292,10 @@
                 ::-webkit-scrollbar-thumb:hover {
                 background: #44cf6c;
                 }
-                /* Style for Footer Starts */
-                * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Nunito', sans-serif;
-                }
-                a {
-                text-decoration: none;
-                }
-                .deep {
-                background: #3A0842;
-                color: #fff;
-                }
-                .deep #slink {
-                background: #44CF6C;
-                border-radius: 10px;
-                color: white;
-                padding: 10px 70px;
-                }
-                .deep li a {
-                text-decoration: none;
-                color: #fff;
-                font-size: 16px;
-                line-height: 30px;
-                }
-                .deep li {
-                list-style: none;
-                }
-                .deep li a:hover {
-                text-decoration: none;
-                }
-                a:hover {
-                text-decoration: none;
-                }
-                .icons i {
-                font-size: 26px;
-                height: 50px;
-                width: 50px;
-                padding: 10px 20px;
-                color: white;
-                }
-                .icons i.fa.fa-twitter:hover {
-                color: #00aced;
-                }
-                .icons i.fa.fa-facebook:hover {
-                color: #3b5598;
-                }
-                .icons i.fa.fa-instagram:hover {
-                color: #ed3833;
-                }
-                /* Style for Footer Ends */
                 </style>
             </head>
             <body>
-                @include('inc.navbar')
+                @include('../inc.navbar')
                 <div class="jumbotron jumbotron-fluid first">
                     <div class="container">
                         <h1 class="display-4">Terms of Services</h1>
@@ -429,7 +354,7 @@
                         </div>
                     </div>
                     <!-- Footer -->
-                    @include('inc.footer')
+                    @include('../inc.footer')
                     <!-- End of Footer -->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>

@@ -341,7 +341,7 @@
 <br>
 
 <div class="text-center">
-    <a href="{{route('courses.index')}}">
+    <a href="{{route('course.index')}}">
         <button class="btn btn-primary    pt-3">
             View More Courses
         </button>
@@ -445,7 +445,7 @@
                             <br> are ready to take on full-time or remote jobs at your
                             <br> company.
                         </p>
-                        <a href="{{route('hire')}}" class="btn btn-cu pl-5 pr-5">Hire a Graduate</a>
+                        <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5">Hire a Graduate</a>
                     </div>
                 </div>
             </div>
@@ -501,8 +501,11 @@
         <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software
             developers.
         </p>
-        <a href="#" class="btn btn-custom pl-5 pr-5">Start
-            Learning</a>
+        @if(Auth::guest())
+        <a href="{{route('register')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
+        @else
+        <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
+        @endif
     </div>
 </div>
 
