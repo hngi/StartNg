@@ -5,50 +5,116 @@
         body {
             font-family: Nunito;
         }
-        /* Body Style */
+        /* Style for Navbar Starts */
         .navbar-custom li a {
             color: #000;
+        }
+        .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+        }
+        .btn-success:hover {
+            background-color: rgb(2, 20, 12);
+            color: #fff;
+            border: thin solid rgb(2, 20, 12);
+        }
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        .custom-toggler.navbar-toggler {
+            border-color: #000;
+        }
+        /* Style for Navbar Ends */
+        /* Style for Footer Starts */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
         }
         a {
             text-decoration: none;
         }
+        .deep {
+            background: #3A0842;
+            color: #fff;
+        }
+        .deep #slink {
+            background: #44CF6C;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 70px;
+        }
+        .deep li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        .deep li {
+            list-style: none;
+        }
+        .deep li a:hover {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+            background-color: rgb(45, 206, 137);
+            border: thin solid rgb(45, 206, 137);
+            border-radius: 10px;
+        }
+        
+        .icons i {
+            font-size: 26px;
+            height: 50px;
+            width: 50px;
+            padding: 10px 20px;
+            color: white;
+        }
+        .icons i.fa.fa-twitter:hover {
+            color: #00aced;
+        }
+        .icons i.fa.fa-facebook:hover {
+            color: #3b5598;
+        }
+        .icons i.fa.fa-instagram:hover {
+            color: #ed3833;
+        }
+        /* Style for Footer Ends */
+        /* Body Style */
         .search {
             background-color: #44CF6C;
         }
-        
         .support {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570910454/startng/Rectangle_66_iauqka.png');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
         .contact {
             width: 1200px;
             margin-left: 25px;
         }
-        
         @media screen and (max-width: 1024px) {
             .contact {
                 width: 1200px;
                 margin-left: 10px;
             }
         }
-        
         @media screen and (max-width: 768px) {
             .contact {
                 width: 1200px;
                 margin-left: 10px;
             }
         }
-        
         @media screen and (max-width: 425px) {
             .contact {
                 width: 1200px;
                 margin-left: -21px;
             }
         }
-        
         @media screen and (max-width: 375px) {
             .contact {
                 width: 1200px;
@@ -118,8 +184,8 @@
                 </div>
 
                 <div class="col-md-12 text-center ">
-                    <p>By filling out this form and clicking submit, <br> you acknowledge our <a href="{{route('privacy')}}" style="color: #44CF6C">privacy policy</a></p>
-                    <button type="submit" class="btn btn-custom pl-3 pr-3">Submit</button>
+                    <p>By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
+                    <button type="submit" class="btn btn-success pl-3 pr-3">Submit</button>
                 </div>
             </div>
         </form>

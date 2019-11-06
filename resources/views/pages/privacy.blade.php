@@ -258,5 +258,4 @@
         console.log(true);
         });
         </script>
-
 @endsection
