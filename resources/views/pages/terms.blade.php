@@ -300,6 +300,7 @@
     </head>
     <body>
         @include('../inc.navbar')
+
                 <div class="jumbotron jumbotron-fluid first">
                     <div class="container">
                         <h1 class="display-4">Terms of Services</h1>
@@ -440,6 +441,7 @@
                             </div>
                         </div>
                     </footer>
+
 
                     <!-- End of Footer -->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>

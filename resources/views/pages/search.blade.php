@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -405,54 +406,60 @@
             /* Style for Footer Ends */
             @media only screen and (max-width: 576px) {
             .online-link {
+
             margin-right: 2px;
             padding: 1px 5px 1px 5px;
-            }
-            .free-link {
+        }
+        .free-link {
             padding: 1px 6px 1px 6px;
-            }
-            .content {
+        }
+        .content {
             width: 80%;
-            }
-            .find i {
+        }
+        .find i {
             left: 20%;
-            }
-            }
-            @media only screen and (min-width: 576px) {
-            .content {
+        }
+    }
+    
+    @media only screen and (min-width: 576px) {
+        .content {
             width: 80%;
-            }
-            .find i {
+        }
+        .find i {
             left: 20%;
-            }
-            }
-            @media only screen and (min-width: 798px) {
-            .content {
+        }
+    }
+    
+    @media only screen and (min-width: 798px) {
+        .content {
             width: 60%;
-            }
-            .find i {
+        }
+        .find i {
             left: 25%;
-            }
-            }
-            /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
-            @media only screen and (max-width: 802px) {
-            .find i {
+        }
+    }
+    /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
+    
+    @media only screen and (max-width: 802px) {
+        .find i {
             left: 16%;
-            }
-            .find input[type="text"] {
+        }
+        .find input[type="text"] {
             width: 80%;
-            }
-            .results {
+        }
+        .results {
             width: 80%;
             margin: 0 auto;
-            }
-            .result1 {
+        }
+        .result1 {
             padding: 4px;
-            }
-            }
-            @media only screen and (min-width: 992px) {}
-            @media only screen and (min-width: 1200px) {
-            .content {
+        }
+    }
+    
+    @media only screen and (min-width: 992px) {}
+    
+    @media only screen and (min-width: 1200px) {
+        .content {
             width: 35%;
             }
             }
@@ -509,15 +516,15 @@
                         <p class="second-result">
                             @if(Auth::guest())
                             <a href="{{route('register')}}" class="online-link">Register</a>
-                            @endif
-                            @if(!Auth::guest())
-                            <a href="{{route('register.courses',$course->id)}}" class="online-link">Register</a>
-                            @endif
-                            <a href="{{route('course.show',$course->id)}}" class="free-link">Details</a>
-                        </p>
-                    </div>
-                    @endforeach
+                        @endif
+                        @if(!Auth::guest())
+                            <a href="{{route('register.courses',$item->id)}}" class="online-link">Register</a>
+                        @endif
+
+                        <a href="{{route('course.show',$item->id)}}" class="free-link">Details</a>
+                    </p>
                 </div>
+
                 <!-- Footer -->
                    <footer>
                        <div class="container-fluid footer-top col-lg-12">
