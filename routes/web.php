@@ -29,11 +29,13 @@ Route::get('/', 'BaseController@index')->name('index');
 
 Route::resource('admin', 'AdminController');
 Route::resource('user', 'UserController');
+Route::get('/disable/user/{id}', 'UserController@disable')->name('users.disable');
 Route::resource('course', 'CourseController');
 Route::get('/disable/course/{id}', 'CourseController@disable')->name('courses.disable');
 Route::resource('course-content', 'CourseContentController');
 Route::resource('contact', 'ContactController');
 Route::resource('tutor', 'TutorController');
+Route::get('/disable/tutor/{id}', 'TutorController@disable')->name('tutors.disable');
 Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('schedule', 'ScheduleController');

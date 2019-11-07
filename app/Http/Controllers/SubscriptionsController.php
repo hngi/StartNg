@@ -54,7 +54,7 @@ class SubscriptionsController extends Controller
 	        $subscriber->save();
 	        	return redirect('/')->with('success', 'Check your email to confirm subscription.');
 	        } else {
-	        	 return redirect('/')->with('failure', 'You are already subscribed.');
+	        	return redirect('/')->with('failure', 'You are already subscribed.');
 	        }
 
 	          
