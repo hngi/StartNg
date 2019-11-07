@@ -32,6 +32,12 @@
         border: thin solid rgb(2, 20, 12);
 
         } */
+        .btn-secondary {
+        background-color: #3A0842;
+        border-color: #3A0842;
+        color: #fff !important;
+        cursor: pointer;
+        }
         .custom-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -160,7 +166,7 @@
         }
 
         .footer-link:hover {
-        color: #fff;
+        color: #2DCE89;
         text-decoration: none;
         }
 
@@ -251,7 +257,7 @@
                            <div class="col-md-2 mt-4">
 
                                <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                               <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                               <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                                <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                            </div>

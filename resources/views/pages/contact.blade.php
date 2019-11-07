@@ -26,6 +26,18 @@
         a {
             text-decoration: none;
         }
+        
+        .btn-success {
+        background-color: #2DCE89;
+        color: #fff;
+        border: thin solid #2dce89;
+        }
+        .btn-secondary {
+        background-color: #3A0842;
+        border-color: #3A0842;
+        color: #fff !important;
+        cursor: pointer;
+        }
         .search {
             background-color: #44CF6C;
         }
@@ -179,7 +191,7 @@
                        <div class="col-md-2 mt-4">
 
                            <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                            <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                        </div>
