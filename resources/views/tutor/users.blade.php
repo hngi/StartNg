@@ -9,13 +9,14 @@
                                 <h4 class="card-title">STUDENTS</h4>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive">
+                                <div class="table-responsive-sm">
                                     <table class="table">
                                         <thead class=" text-primary">
                                             <th>Name</th>
                                             <th>Username</th>
                                             <th>Email Address</th>
                                             <th>Phone Number</th>
+                                            <th>Action</th>
                                         </thead>
                                         <tbody>
                                             @foreach($students as $student)

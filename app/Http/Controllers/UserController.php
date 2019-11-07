@@ -136,10 +136,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'profile_pic' => 'image|nullable|max:1999'
-        ]);
-
+        
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
@@ -156,6 +153,7 @@ class UserController extends Controller
         $user->phone = $request->input('phone');
         $user->status = $request->input('status');
         $user->about = $request->input('about');
+        $user->profile_pic = $request->input('profile_pic');
         if($request->hasFile('profile_pic')){
             $user->profile_pic = $fileNameToStore;
         }
