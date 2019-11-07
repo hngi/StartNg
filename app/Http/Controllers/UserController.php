@@ -105,7 +105,7 @@ class UserController extends Controller
             }
         }
 
-        return view("user.show-user")->with($data);
+        return view("$user_role.show-user")->with($data);
 
     }
 

@@ -489,7 +489,7 @@
                             <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                         </li>
                         <li>
-                            <a class="footer-link" href="">Blog</a>
+                            <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                         </li>
 
                     </div>
