@@ -15,7 +15,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        
+        // 
     }
     
 
@@ -26,7 +26,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('contact');
+        // 
     }
 
     /**
@@ -37,23 +37,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'email'=>'required',
-            'phone'=>'required',
-            'message'=>'required'
-        ]);  
-
-        $contacts = new Contact([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'message' => $request->get('message'),
-        ]);
-        $contact->save();
-         return back()->withSuccess('Sent successfully. We will Get back to you ASAP.');
+        // 
     }
 
     /**
