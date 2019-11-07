@@ -14,7 +14,6 @@
     <link href="/css/modifiedstyles.css" rel="stylesheet" />
     <title>Contact Us</title>
 
-<style>
     <style>
 
         /* Style for Navbar Starts */
