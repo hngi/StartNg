@@ -18,6 +18,21 @@
             font-family: Nunito;
         }
 
+        .navbar-custom li a {
+        color: #000;
+        }
+        .btn-success {
+        background-color: #2DCE89;
+        color: #fff;
+        border: thin solid #2dce89;
+        }
+        .btn-secondary {
+        background-color: #3A0842;
+        border-color: #3A0842;
+        color: #fff !important;
+        cursor: pointer;
+        }
+
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570925063/startng/Group_414_xmbnpz.png');
             background-size: cover;
@@ -677,7 +692,7 @@
                                <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                            </li>
                            <li>
-                               <a class="footer-link" href="">Blog</a>
+                               <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                            </li>
 
                        </div>

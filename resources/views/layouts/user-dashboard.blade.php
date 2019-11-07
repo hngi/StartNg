@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/paper-dashboard.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/paper-dashboard.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -31,7 +31,7 @@
                               <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="">USER DASHBOARD</a>
+                        <a class="navbar-brand" href=""><strong>USER DASHBOARD</strong></a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -57,7 +57,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
 
-                          <a class="dropdown-item" href="{{route('user.profile', auth()->user()->id)}}">Profile</a>
+                          <a class="dropdown-item" href="{{route('user.index', auth()->user()->id)}}">Profile</a>
                           <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
                           <!-- <a class="dropdown-item" href="{{route('user.show', auth()->user()->id)}}">Profile</a>
@@ -104,13 +104,13 @@
         </div>
     </div>
     <!--   Core JS Files   -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
 
-    <script src="js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
-    <script src="js/demo.js"></script>
+    <script src="/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="/js/demo.js"></script>
     <script>
         $(document).ready(function() {
             // Javascript method's body can be found in assets/assets-for-demo/js/demo.js

@@ -33,11 +33,11 @@
         color: #fff !important;
         cursor: pointer;
         }
-        .btn-success:hover {
+        /* .btn-success:hover {
         background-color: rgb(2, 20, 12);
         color: #fff !important;
         border: thin solid rgb(2, 20, 12);
-        }
+        } */
         .btn-secondary:hover {
         background-color: rgb(2, 20, 12);
         color: #fff;
@@ -302,7 +302,7 @@
                                    <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                                </li>
                                <li>
-                                   <a class="footer-link" href="">Blog</a>
+                                   <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                                </li>
 
                            </div>
