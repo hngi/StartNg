@@ -32,12 +32,12 @@
                         <div> <label for="username">User Name</label></div>
                         <input type="text" id="username"  placeholder="Username" name="username" value="{{$student->email}}">
                     </div>
-                    
+
                     <div class="col-sm py-2">
                         <div><label for="email">Email Address</label></div>
                         <input type="email" name="email" id="email" placeholder="Email" value="{{$student->email}}">
                     </div>
-                    
+
                 </div>
 
                 <div class="row">
@@ -53,7 +53,7 @@
                         </div>
 
                 </div>
-                
+
                 <div class="row">
                     <div class="col-sm py-2">
                         <div> <label for="address">Phone</label> </div>
@@ -63,7 +63,7 @@
                         <div> <label for="address">Status</label> </div>
                         <input type="text" name="status" class="about" id="status" placeholder="Status" value="{{$student->status}}">
                     </div>
-                    
+
                 </div>
 
                 <div class="row">

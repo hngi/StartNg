@@ -21,7 +21,7 @@
                                             </div>
                                             <div class="col-md-2 px-1">
                                                 <div class="form-group">
-                                                    <label>Course</label>
+                                                    <label>Course Content</label>
                                                     @foreach($courses as $course)
                                                     <input type="radio" name="course" value="{{$course->id}}" class="form-control">{{$course->title}}
                                                     @endforeach
