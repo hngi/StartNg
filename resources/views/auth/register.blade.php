@@ -314,7 +314,7 @@
                        <div class="col-md-2 mt-4">
 
                            <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                            <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                        </div>
