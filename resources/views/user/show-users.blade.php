@@ -18,7 +18,7 @@
 
 <body class="">
     <div class="wrapper ">
-        @include('inc.usersidebar')
+        @include('../inc.usersidebar')
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -31,7 +31,7 @@
                               <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href=""><strong>USER DASHBOARD</strong></a>
+                        <a class="navbar-brand" href="">USER DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -71,14 +71,7 @@
                   </div>
             </nav>
             <!-- End Navbar -->
-            <!-- <div class="panel-header panel-header-lg">
 
-  <canvas id="bigDashboardChart"></canvas>
-
-
-</div> -->
-@include('inc.messages')
-@yield('content')
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">
