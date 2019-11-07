@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Terms of Service</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-            <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Open+Sans:400,700&display=swap"
-                rel="stylesheet" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
+    <title>Terms of Service</title>
                 <style>
+                body {
+                font-family: Nunito;
+                }
+                /* Style for Navbar Starts */
+                .navbar-custom li a {
+                color: #000;
+                }
+                .btn-success {
+                background-color: #2DCE89;
+                color: #fff;
+                border: thin solid #2dce89;
+                }
+                .btn-secondary {
+                background-color: #3A0842;
+                border-color: #3A0842;
+                color: #fff !important;
+                cursor: pointer;
+                }
                 .display-4 {
                 font-weight: bold;
                 font-size: 40px;
@@ -57,7 +78,7 @@
                 .navbar-nav {
                 margin-left: 18rem;
                 }
-                .nav-item {
+                /* .nav-item {
                 margin: 0 15px;
                 font-family: "Nunito", sans-serif;
                 font-style: normal;
@@ -68,7 +89,7 @@
                 line-height: 22px;
                 letter-spacing: 0.655606px;
                 color: #2a2b2a !important;
-                }
+                } */
                 #learn {
                 color: white !important
                 }
@@ -214,11 +235,11 @@
                 .jumbotron {
                 margin-bottom: 0;
                 }
-                .btn:hover {
+                /* .btn:hover {
                 background: #2dce89;
                 border: none;
                 cursor: pointer;
-                }
+                } */
                 .contact-btn:hover {
                 background: #2e0435;
                 cursor: pointer;
@@ -292,10 +313,12 @@
                 ::-webkit-scrollbar-thumb:hover {
                 background: #44cf6c;
                 }
-                </style>
-            </head>
-            <body>
-                @include('inc.navbar')
+
+        </style>
+    </head>
+    <body>
+        @include('../inc.navbar')
+
                 <div class="jumbotron jumbotron-fluid first">
                     <div class="container">
                         <h1 class="display-4">Terms of Services</h1>
@@ -354,7 +377,90 @@
                         </div>
                     </div>
                     <!-- Footer -->
-                    @include('inc.footer')
+                    <footer>
+                        <div class="container-fluid footer-top col-lg-12">
+                            <div class="container col-md-12 p-5">
+                                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
+                                <div class="row">
+                                @if(Auth::guest())
+                                    <div class="col-md-4 mt-4">
+
+                                        <h4 class="">Ready to take the leap?</h4>
+                                        <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
+                                    </div>
+                                @else
+                                     <div class="col-md-4 mt-4">
+
+                                         <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                    document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                         </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                        </form>
+                                    </div>
+                                @endif
+                                    <div class="col-md-2 mt-4">
+
+                                        <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
+                                        <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
+                                        <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
+
+                                    </div>
+                                    <div class="col-md-2 mt-4">
+
+                                        <li>
+                                            <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
+                                        </li>
+                                        <li>
+                                            <a class="footer-link" href="">Blog</a>
+                                        </li>
+
+                                    </div>
+                                    <div class="col-md-2 mt-4">
+                                        <li>
+                                            <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
+                                        </li>
+                                        <li>
+                                            <a class="footer-link" href="{{route('faq')}}">FAQ</a>
+                                        </li>
+                                        <li>
+                                            <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
+                                        </li>
+                                    </div>
+                                    <div class="col-md-2 mt-4">
+                                        <li>
+                                            <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
+                                        </li>
+                                        <li>
+                                            <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid footer-social col-lg-12">
+                            <div class="container p-3">
+                                <div class="clearfix">
+                                    <div class="float-left">
+
+                                    </div>
+                                    <div class="float-right">
+                                        <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                                class="fab fa-instagram"></i></a>
+                                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                                class="fab fa-facebook"></i></a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+
                     <!-- End of Footer -->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>

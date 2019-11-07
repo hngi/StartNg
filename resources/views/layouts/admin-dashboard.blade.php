@@ -59,14 +59,14 @@ background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
                             </form>
                         </div>
                             <div class="collapse navbar-collapse justify-content-end">
-                            <div class="navbar-brand"><a class="text-uppercase" href="{{ route('dashboard') }}"><strong>{{ Auth::user()->username }}</strong></a></div>
+                            <div class="navbar-brand"><a class="text-uppercase"  style="text-decoration:none" href="{{ route('dashboard') }}"><strong>{{ Auth::user()->username }}</strong></a></div>
                             <div><li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle">
+                          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle mr-3">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                          <a class="dropdown-item" href="#">Edit Profile</a>
+                          <a class="dropdown-item" href="{{route('user.show', auth()->user()->id)}}">Edit Profile</a>
                          <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
