@@ -38,18 +38,9 @@
                                 </h5>
                             </div>
                         </div>
-                    <!--<div>
-                        <a class=" btn btn-info" href="{{route('tutor.edit', $tutor->id)}}" >Disable</a>
-                    </div>-->
-                    @if($tutor->active)
-                        <div>
-                            <a class=" btn btn-info" href="{{route('tutors.disable', $tutor->id)}}" >Disable</a>
-                        </div>
-                    @else
-                        <div>
-                            <a class=" btn btn-primary" href="{{route('tutors.disable', $tutor->id)}}" >Enable</a>
-                        </div>
-                    @endif
+                    <div>
+                        <button><a href="{{route('tutor.edit', $tutor->id)}}">EDIT</a></button>
+                    </div>
                 </div>
             </div>
 @endsection

@@ -739,7 +739,6 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
 
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
@@ -748,16 +747,6 @@
                                             <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
-=======
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
->>>>>>> parent of afefcc32... Added curriculum page contents
                                         </a>
                                     </h4>
                                 </div>
@@ -875,7 +864,7 @@
                        <div class="col-md-2 mt-4">
 
                            <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                            <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                        </div>
@@ -885,7 +874,7 @@
                                <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                            </li>
                            <li>
-                               <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
+                               <a class="footer-link" href="">Blog</a>
                            </li>
 
                        </div>

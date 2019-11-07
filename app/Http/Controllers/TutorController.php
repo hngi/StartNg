@@ -123,7 +123,7 @@ class TutorController extends Controller
             $user = User::find($id);
             if($user->role == 1){
                 $tutor = $user;
-                $courses = Courses::where('tutor_id', $id)->get();
+                $courses = Courses::where('user_id', $id);
             }
             else{
                 return back()->with('error', 'User not Tutor'); 
@@ -206,23 +206,4 @@ class TutorController extends Controller
         //
     }
     
-    public function disable($id)
-    {
-        $tutor = User::find($id);
-        $role = auth()->user()->role;
-        if ($role == 2){
-            if ($tutor->role == 1){
-                $tutor->active = ($tutor->active == 0) ? 1 : 0;
-                $action = ($tutor->active == 1) ? "enabled" : "disabled";
-                $tutor->save();
-                return back()->with("success", "$tutor->username has been $action successfully");
-            }
-            else{
-                return back()->with('error', 'Access Denied');
-            }
-        }
-        else{
-            return back()->with('error', 'Uauthorized Permission');
-        }
-    }
 }

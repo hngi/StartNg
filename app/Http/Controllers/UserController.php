@@ -105,7 +105,7 @@ class UserController extends Controller
             }
         }
 
-        return view("$user_role.show-user")->with($data);
+        return view("user.show-user")->with($data);
 
     }
 
@@ -136,7 +136,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $this->validate($request, [
+            'profile_pic' => 'image|nullable|max:1999'
+        ]);
+
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
@@ -153,7 +156,6 @@ class UserController extends Controller
         $user->phone = $request->input('phone');
         $user->status = $request->input('status');
         $user->about = $request->input('about');
-        $user->profile_pic = $request->input('profile_pic');
         if($request->hasFile('profile_pic')){
             $user->profile_pic = $fileNameToStore;
         }
@@ -170,13 +172,14 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
+        /*$user = User::find($id);
         $role = auth()->user()->role;
         if ($role == 0){
             return back()->with('error', 'Uauthorized Permission');
         }
         else{
             if ($user->role == 0){
+                return 'lk';
                 $user->active = ($user->active == 0) ? 1 : 0;
                 $action = ($user->active == 1) ? "enabled" : "disabled";
                 $user->save();
@@ -185,7 +188,7 @@ class UserController extends Controller
             else{
                 return back()->with('error', 'Uauthorized Permission');
             }
-        }
+        }*/
     }
 
     public function disable($id)

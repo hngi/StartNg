@@ -53,11 +53,11 @@
                         <div class="row mt-2">
                         @if($student->active)
                             <div>
-                                <a class=" btn btn-info" href="{{route('users.disable', $student->id)}}" >Disable</a>
+                                <a class=" btn btn-info" href="{{route('user.disable', $student->id)}}" >Disable</a>
                             </div>
                         @else
                             <div>
-                                <a class=" btn btn-primary" href="{{route('users.disable', $student->id)}}" >Enable</a>
+                                <a class=" btn btn-primary" href="{{route('user.disable', $student->id)}}" >Enable</a>
                             </div>
                         @endif
                         </div>

@@ -174,13 +174,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">First Name</label>
-                            <input type="text" name="fname" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
+                            <input type="text" name="first_name" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">Last Name</label>
-                            <input type="text" name="lname" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
+                            <input type="text" name="last_name" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                        <div class="col-md-2 mt-4">
 
                            <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                            <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                        </div>
@@ -265,7 +265,7 @@
                                <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                            </li>
                            <li>
-                               <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
+                               <a class="footer-link" href="">Blog</a>
                            </li>
 
                        </div>

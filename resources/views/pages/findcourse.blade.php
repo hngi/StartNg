@@ -430,7 +430,7 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <form method="post" action="{{route('search')}}">
+                    <form method="post" action="{{route('search')  }}">
                         <div class="find">
                             <h3>Search Courses</h3>
                             @csrf
@@ -471,7 +471,7 @@
                            <div class="col-md-2 mt-4">
 
                                <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                               <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                               <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                                <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                            </div>
@@ -481,7 +481,7 @@
                                    <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                                </li>
                                <li>
-                                   <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
+                                   <a class="footer-link" href="">Blog</a>
                                </li>
 
                            </div>
