@@ -55,13 +55,8 @@
                           <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle mr-3">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-
-                          <a class="dropdown-item" href="{{route('user.index', auth()->user()->id)}}">Profile</a>
-                          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-
-                          <!-- <a class="dropdown-item" href="{{route('user.show', auth()->user()->id)}}">Profile</a>
-                         <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a> -->
+                          <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a><a class="dropdown-item" href="{{route('user.show', auth()->user()->id)}}">Profile</a>
+                         <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

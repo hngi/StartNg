@@ -63,13 +63,18 @@
                     <p>Create Course Content</p>
                 </a>
             </li>
-            <!--<li>
-                <a href="upload-resource.html">
+            <li class="{{ (request()->is('admin/upload-resource')) ? 'active' : '' }}">
+                <a href="{{route('admin.upload-resource')}}">
                     <i class="fa fa-file"></i>
-                    <p>Upload Resource</p>
+                    <p>Upload Resources</p>
                 </a>
-            </li>-->
-
+            </li>
+             <li class="{{ (request()->is('admins/show-resources')) ? 'active' : '' }}">
+                <a href="{{route('admin.show-resources')}}">
+                    <i class="fa fa-file"></i>
+                    <p>Show Resources</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
