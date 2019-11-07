@@ -212,7 +212,7 @@
 </head>
 
 <body>
-@include('../inc.navbar')
+@include('inc.navbar')
 
     <div class="container-fluid banner pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5 mb-5">

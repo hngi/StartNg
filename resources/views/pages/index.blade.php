@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -211,42 +212,30 @@
 
         /* Style for Footer Ends */
 
+
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926364/startng/Group_415_yteas3.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
-
+        
         .checked {
             color: orange;
         }
-
+        
         .video {
             background-color: #44CF6C;
         }
-
+        
         .help {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930464/startng/Group_418_ngwxfa.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
-        /* Vidoe style */
-        .videoWrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            padding-top: 25px;
-            height: 0;
-        }
-        .videoWrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
     </style>
+
 
 </head>
 <body>
@@ -267,16 +256,8 @@
         @else
         <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5 mb-4">Start Learning</a>
         @endif
-    </div>
-</div>
-<!--  -->
-<section class="journey">
-    <div class="container py-5">
-        <div class="row d-flex">
-            <div class="col-md-7 order-sm-1 order-md-2">
-                <div class="text-center">
-                    <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
 
+    </div>
                 </div>
             </div>
             <div class="col-md-5 order-sm-2 order-md-1 ">
@@ -290,122 +271,74 @@
                         <input type="text" name="course" class="form-control" required>
                     </div>
                     <button class="btn btn-secondary py-2 px-4 mt-3"><i class="fas fa-search"></i> Find a Course</button>
+
                 </form>
+            </div>
+            <div class="col-md-6 mb-3">
+                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid">
             </div>
         </div>
     </div>
-</section>
-<!--  -->
-
-{{-- <div id="response">
-@include('inc.messages')
-</div> --}}
-</div>
-
-<div class="container mt-5">
-<h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
-<hr>
-
 @php
-    $counter=4;
-@endphp
-
-@if (session('success'))
-    <div class=" text-center alert alert-success">
-        {!!  session('success') !!}
-    </div>
-@endif
-@if (session('error'))
-    <div class="text-center alert alert-warning">
-        {{ session('error') }}
-    </div>
-@endif
-
-<div class="row">
-
-    @foreach($courses as $item)
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
-                        alt="Card image">
-                <div class="card-body">
-                    <h4 class="card-title" style="font-weight: bold;">{{$item->title}}</h4>
-                    <p>{{$item->description}}</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked mb-3"></span> <br>
-                    @if(Auth::guest())
-                        <a href="{{route('register')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                            style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                    @endif
-                    @if(!Auth::guest())
-                        <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                            style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                    @endif
-                    <a href="{{route('course.show', $item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                        style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
-                </div>
-            </div>
-</div>
-        @if($counter%3==0) <br>   @endif
-
-        @php
-            $counter+=1;
-        @endphp
-
-    @endforeach
-</div>
-<br>
-
-<div class="text-center">
-    <a href="{{route('course.index')}}">
-        <button class="btn btn-primary    pt-3">
-            View More Courses
-        </button>
-    </a>
-</div>
-<br>
-<!--  -->
-<br>
-<!--  --></div>
-    <section class="beginning-lesson">
-        <div class="row no-gutters">
-            <div class="col-md-6 bg-secondary">
-                <div class="container">
-                    <div class="mb-4 pt-5 px-md-5 mx-md-5">
-                        <h5 class="text-white">The beginning of your career starts here. With us.</h5>
-                        <dl class="d-flex align-items-start text-white mb-0">
-                            <dt class="">-</dt>
-                            <dd class="ml-4 mb-0">
-                                <p class="d-inline">
-                                    <div class="font-weight-bold mb-2">
-                                        Intensive learning sessions
-                                    </div>
-                                    <span class="">The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software developers.
-                                    </span>
-                                </p>
-                            </dd>
-                        </dl>
-                        <dl class="d-flex align-items-start text-white pt-0">
-                            <dt class="">-</dt>
-                            <dd class="ml-4">
-                                <p class="d-inline">
-                                    <div class="font-weight-bold mb-2">
-                                        Intensive learning sessions
-                                    </div>
-                                    <span class="">The HNG internship is a 3-month remote internship designed ---to find and develop the most talented software developers.
-                                    </span>
-                                </p>
-                            </dd>
-                        </dl>
-                        <div class=""></div>
+        $counter=0; @endphp
+    <div class="container mt-5">
+        <h4 class="text-center" style="color: #3A0842;">Explore Our Courses</h4>
+        <hr>
+        <div class="row">
+            @foreach($courses as $item)
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top"
+                             src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
+                             alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-weight: bold;">{{$item->title}}</h4>
+                            <p>{{$item->description}}</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked mb-3"></span> <br>
+                            @if(Auth::guest())
+                                <a href="{{route('register')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                   style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                            @endif
+                            @if(!Auth::guest())
+                                <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                   style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                            @endif
+                            <a href="{{route('course.show', $item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                               style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
+                        </div>
                     </div>
+                </div>
+                @if($counter%3==0) <br>   @endif
 
+                @php
+                    $counter+=1;
+                @endphp
+
+            @endforeach
+
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid video col-lg-12">
+        <div class="row align-items-center">
+            <div class="col-md-6 pb-3" style="color: #fff;">
+                <div class="col-md-10 col-lg-10 offset-md-1">
+                    <h4 class="pb-3" style="font-weight:bold; font-size: 24px;">The beginning of your career <br> starts here. With us.
+                    </h4>
+                    <p class="" style="font-weight:bold;">- Intensive learning sessions</p>
+                    <p class="">The HNG internship is a 3-month remote <br> internship designed ---to find and <br> develop the most talented software developers. </p>
+                    <p class="" style="font-weight:bold;">- Intensive learning sessions</p>
+                    <p class="">The HNG internship is a 3-month remote <br> internship designed ---to find and <br> develop the most talented software developers. </p>
+                    <a href="{{route('about')}}" class="" style="color: #fff; font-weight: bold;">Learn more >></a>
                 </div>
             </div>
+
             <div class="col-md-6 mt-0 pt-0">
                 <div class="videoWrapper">
                     <iframe
@@ -452,27 +385,20 @@
                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="professional-section">
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-md-12 text-white text-center">
-                        <h4 class="my-4 font-weight-bold">Need Professional Help?</h4>
-                        <p class="">
-                            After 3 months of training and projects, our graduates
-                            <br> are ready to take on full-time or remote jobs at your
-                            <br> company.
-                        </p>
-                        <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5">Hire a Graduate</a>
-                    </div>
-                </div>
             </div>
+            <div class="col-md-6">
+                <h4 class="pb-3">Take Your First Steps in Achieving Your Dreams</h4>
+                <p class="pb-4">The HNG internship is a 3-month remote internship <br> designed to find and develop the most talented
+                    <br> software developers. Everyone is welcome to participate <br> (there is no entrance exam). </p>
+                <a href="{{asset('register')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
+            </div>
+
         </section>
 
 <!-- What people have to say about us -->
 <section class="">
+
     <div class="container py-5">
         <div class="text-center mb-5">
             <h4 class="font-weight-bold">What people have to say about us</h4>
@@ -515,19 +441,15 @@
         </div>
     </div>
 </section>
-    <!--  -->
-    <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
-        <h4 class="my-4 font-weight-bold">Online or Offline, We Are Here For You</h4>
-        <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software
-            developers.
-        </p>
-        @if(Auth::guest())
-        <a href="{{route('register')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
-        @else
-        <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5">Start Learning</a>
-        @endif
+        </div>
+        <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
+            <h4>Online or Offline, We Are Here For You</h4>
+            <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.
+            </p>
+            <a href="{{asset('register')}}" class="btn btn-success pl-5 pr-5">Start
+                Learning</a>
+        </div>
     </div>
-</div>
 
 <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
     <div class="container pt-5 pb-5">
@@ -544,12 +466,13 @@
             <div class="col-md-4">
                 <img class="img-fluid"
                      src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
+
             </div>
         </div>
     </div>
-</div>
 
     <!-- Footer -->
+
        <footer>
            <div class="container-fluid footer-top col-lg-12">
                <div class="container col-md-12 p-5">
