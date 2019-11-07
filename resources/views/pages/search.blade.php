@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Search</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito&display=swap">
-            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-                integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-            </head>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
+    <title>Start NG | Search</title>
             <style>
             /* Style for Navbar Starts */
             .navbar-custom li a {
@@ -23,11 +24,11 @@
             color: #fff;
             border: thin solid #2dce89;
             }
-            .btn-success:hover {
+            /* .btn-success:hover {
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
-            }
+            } */
             .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
             }
@@ -68,12 +69,12 @@
             .deep li a:hover {
             text-decoration: none;
             }
-            a:hover {
+            /* a:hover {
             text-decoration: none;
             background-color: rgb(45, 206, 137);
             border: thin solid rgb(45, 206, 137);
             border-radius: 10px;
-            }
+            } */
             .icons i {
             font-size: 26px;
             height: 50px;
@@ -292,26 +293,26 @@
             margin-top: 80px;
             background-color: #3A0842;
             }
-            
+
             .row {
             padding: 30px 50px;
             color: #fff;
             }
-            
+
             .col-md-2 {
             margin-top: 30px;
             }
-            
+
             .col-md-2 ul li a {
             color: #fff;
             }
-            
+
             .footer-copyright {
             background-color: #2E0435;
             padding-right: 50px;
             overflow: hidden;
             }
-            
+
             .footer-copyright a img {
             margin-right: 15px;
             } */
@@ -405,54 +406,60 @@
             /* Style for Footer Ends */
             @media only screen and (max-width: 576px) {
             .online-link {
+
             margin-right: 2px;
             padding: 1px 5px 1px 5px;
-            }
-            .free-link {
+        }
+        .free-link {
             padding: 1px 6px 1px 6px;
-            }
-            .content {
+        }
+        .content {
             width: 80%;
-            }
-            .find i {
+        }
+        .find i {
             left: 20%;
-            }
-            }
-            @media only screen and (min-width: 576px) {
-            .content {
+        }
+    }
+    
+    @media only screen and (min-width: 576px) {
+        .content {
             width: 80%;
-            }
-            .find i {
+        }
+        .find i {
             left: 20%;
-            }
-            }
-            @media only screen and (min-width: 798px) {
-            .content {
+        }
+    }
+    
+    @media only screen and (min-width: 798px) {
+        .content {
             width: 60%;
-            }
-            .find i {
+        }
+        .find i {
             left: 25%;
-            }
-            }
-            /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
-            @media only screen and (max-width: 802px) {
-            .find i {
+        }
+    }
+    /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
+    
+    @media only screen and (max-width: 802px) {
+        .find i {
             left: 16%;
-            }
-            .find input[type="text"] {
+        }
+        .find input[type="text"] {
             width: 80%;
-            }
-            .results {
+        }
+        .results {
             width: 80%;
             margin: 0 auto;
-            }
-            .result1 {
+        }
+        .result1 {
             padding: 4px;
-            }
-            }
-            @media only screen and (min-width: 992px) {}
-            @media only screen and (min-width: 1200px) {
-            .content {
+        }
+    }
+    
+    @media only screen and (min-width: 992px) {}
+    
+    @media only screen and (min-width: 1200px) {
+        .content {
             width: 35%;
             }
             }
@@ -463,7 +470,8 @@
             background-size: cover;
             }
             </style>
-            <body>
+  </head>
+    <body>
                 @include('inc.navbar')
                 <div class="container-fluid banner-body pt-5 pb-5">
                     <div class="col-md-6 offset-md-1 align-items-center">
@@ -489,7 +497,7 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <form method="post" action="{{route('course.search')  }}">
+                    <form method="post" action="{{route('search')  }}">
                         <div class="find">
                             <h3>Search Courses</h3>
                             @csrf
@@ -503,23 +511,107 @@
                         <div class="result1 active-2">
                             <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS"
                             title="image-result" class="image-result">
-                            <p class="first-result">{{$course->name}} &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
+                            <p class="first-result"><a href="{{route('course.show', $course->id)}}">{{$course->title}}</a> &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
                         Months</em></p>
                         <p class="second-result">
                             @if(Auth::guest())
-                            <a href="{{route('signup')}}" class="online-link">Register</a>
-                            @endif
-                            @if(!Auth::guest())
-                            <a href="{{route('register.courses',$course->id)}}" class="online-link">Register</a>
-                            @endif
-                            <a href="{{route('courses.detail',$course->id)}}" class="free-link">Details</a>
-                        </p>
-                    </div>
-                    @endforeach
+                            <a href="{{route('register')}}" class="online-link">Register</a>
+                        @endif
+                        @if(!Auth::guest())
+                            <a href="{{route('register.courses',$item->id)}}" class="online-link">Register</a>
+                        @endif
+
+                        <a href="{{route('course.show',$item->id)}}" class="free-link">Details</a>
+                    </p>
                 </div>
-            </section>
-            <!-- Footer -->
-            @include('inc.footer')
-            <!-- End of Footer -->
-        </body>
-    </html>
+
+                <!-- Footer -->
+                   <footer>
+                       <div class="container-fluid footer-top col-lg-12">
+                           <div class="container col-md-12 p-5">
+                               <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
+                               <div class="row">
+                               @if(Auth::guest())
+                                   <div class="col-md-4 mt-4">
+
+                                       <h4 class="">Ready to take the leap?</h4>
+                                       <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
+                                   </div>
+                               @else
+                                    <div class="col-md-4 mt-4">
+
+                                        <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                                   document.getElementById('logout-form').submit();">
+                                       {{ __('Logout') }}
+                                        </a>
+
+                                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                       @csrf
+                                       </form>
+                                   </div>
+                               @endif
+                                   <div class="col-md-2 mt-4">
+
+                                       <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
+                                       <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                                       <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
+
+                                   </div>
+                                   <div class="col-md-2 mt-4">
+
+                                       <li>
+                                           <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
+                                       </li>
+                                       <li>
+                                           <a class="footer-link" href="">Blog</a>
+                                       </li>
+
+                                   </div>
+                                   <div class="col-md-2 mt-4">
+                                       <li>
+                                           <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
+                                       </li>
+                                       <li>
+                                           <a class="footer-link" href="{{route('faq')}}">FAQ</a>
+                                       </li>
+                                       <li>
+                                           <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
+                                       </li>
+                                   </div>
+                                   <div class="col-md-2 mt-4">
+                                       <li>
+                                           <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
+                                       </li>
+                                       <li>
+                                           <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
+                                       </li>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="container-fluid footer-social col-lg-12">
+                           <div class="container p-3">
+                               <div class="clearfix">
+                                   <div class="float-left">
+
+                                   </div>
+                                   <div class="float-right">
+                                       <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                               class="fab fa-twitter"></i></a>
+                                       <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                               class="fab fa-instagram"></i></a>
+                                       <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                               class="fab fa-facebook"></i></a> -->
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

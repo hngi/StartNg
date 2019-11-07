@@ -28,11 +28,17 @@
                                 <h5>Description: {{$course->description}}</h5>
                             </div>
                         </div>
-                        @if($registered)
-                        <div>
-                            <a href="{{route('user.review', $course->id)}}">Review</a>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <h5>Course Contents:</h5>
+                                <ul>
+                                @foreach($contents as $content)
+                                <li>{{$content->title}}</li>
+                                @endforeach
+                                </ul>
+                            </div>
                         </div>
-                        @else
+                        @if(!$registered)
                         <div>
                             <a href="{{route('register.courses', $course->id)}}">Register</a>
                         </div>

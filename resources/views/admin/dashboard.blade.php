@@ -98,42 +98,33 @@
                                             <th class="text"> </th>
                                         </thead>
                                         <tbody>
+                                        @foreach($schedules as $schedule)
                                             <tr>
                                                 <td>
-                                                    2019-11-11
+                                                    {{$schedule->date}}
                                                 </td>
                                                 <td>
-                                                    09:30
+                                                    {{$schedule->time}}
                                                 </td>
                                                 <td>
-                                                    Laravel
+                                                    @foreach($courses as $course)
+                                                    @if($schedule->course_id == $course->id)
+                                                    {{$course->title}}
+                                                    @endif
+                                                    @endforeach
                                                 </td>
-
+                                                <td>
+                                                    <div>
+                                                        <a class=" btn btn-info" href="{{route('schedule.edit', $schedule->id)}}" >EDIT</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <a class=" btn btn-info" href="{{route('schedule.destroy', $schedule->id)}}" >DELETE</a>
+                                                    </div>
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    2019-11-12
-                                                </td>
-                                                <td>
-                                                    14:00
-                                                </td>
-                                                <td>
-                                                    Javascript
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    2019-11-13
-                                                </td>
-                                                <td>
-                                                    15:00
-                                                </td>
-                                                <td>
-                                                    UI/UX
-                                                </td>
-
-                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

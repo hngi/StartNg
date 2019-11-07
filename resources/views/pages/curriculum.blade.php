@@ -1,82 +1,22 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('style')
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
+    <title>Curriculum</title>
 <style>
-        body { font-family: Nunito; }
-        /* Style for Navbar Starts */
-
-        .navbar-custom li a {
-            color: #000;
+         body {
+            font-family: Nunito;
         }
-
-        .btn-success {
-            background-color: #2DCE89;
-            color: #fff;
-            border: thin solid #2dce89;
-        }
-
-        .btn-success:hover {
-            background-color: rgb(2, 20, 12);
-            color: #fff;
-            border: thin solid rgb(2, 20, 12);
-        }
-
-        .custom-toggler .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-        }
-
-        .custom-toggler.navbar-toggler {
-            border-color: #000;
-        }
-        /* Style for Navbar Ends */
-        /* Style for Footer Starts */
-
-        * {
-            box-sizing: border-box; margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif;
-        }
-
-        a { text-decoration: none;}
-
-        .deep { background: #3A0842; color: #fff; }
-
-        .deep #slink { background: #44CF6C; border-radius: 10px; color: white; padding: 10px 70px; }
-
-        .deep li a {
-            text-decoration: none; color: #fff; font-size: 16px; line-height: 30px;
-        }
-
-        .deep li { list-style: none; }
-
-        .deep li a:hover { text-decoration: none; }
-
-        a:hover { text-decoration: none;
-            background-color: rgb(45, 206, 137);
-            border: thin solid rgb(45, 206, 137);
-            border-radius: 10px;}
-
-        .icons i {
-            font-size: 26px; height: 50px; width: 50px; padding: 10px 20px; color: white;
-        }
-
-        .icons i.fa.fa-twitter:hover {
-            color: #00aced;
-        }
-
-        .icons i.fa.fa-facebook:hover {
-            color: #3b5598;
-        }
-
-        .icons i.fa.fa-instagram:hover {
-            color: #ed3833;
-        }
-
-        .icons i.fa.fa-twitter:hover { color: #00aced; }
-
-        .icons i.fa.fa-facebook:hover { color: #3b5598; }
-
-        .icons i.fa.fa-instagram:hover { color: #ed3833; }
-        /* Style for Footer Ends */
 
         .body-banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570925063/startng/Group_414_xmbnpz.png');
@@ -87,33 +27,45 @@
 
         #wrapper {
             background-image: url('https://res.cloudinary.com/obinna93/image/upload/v1571211941/Rectangle24_s77svh.png');
-
         }
 
-        #wrapper-1 { width: 82%; }
+        #wrapper-1 {
+            width: 82%;
+        }
 
-        #top h4 { font-size: 40px;}
+        #top h4 {
+            font-size: 40px;
+        }
 
-        .overlay { background: rgba(7, 101, 34, 0.82); }
+        .overlay {
+            background: rgba(7, 101, 34, 0.82);
+        }
 
-        .col-md-8 { padding-left: 5%;}
+        .col-md-8 {
+            padding-left: 5%;
+        }
 
-        #wrapper div:nth-child(1) { color: whitesmoke; }
+        #wrapper div:nth-child(1) {
+            color: whitesmoke;
+        }
 
-        #col a{
+        #col a {
             width: 80%;
             color: #44CF6C;
             background: #FFFFFF;
             border-radius: 8px;
         }
-
         /* .col-text { padding-left: 15px; padding-right: 50px; } */
         /* .col-text p { margin: 13% 0;  } */
-        .col-text a { color:  #44CF6C; font-weight: bold;}
+
+        .col-text a {
+            color: #44CF6C;
+            font-weight: bold;
+        }
 
         #text-center {
-          /* width: 60%; */
-          /* margin: 3% 20%; */
+            /* width: 60%; */
+            /* margin: 3% 20%; */
         }
 
         .accordion .card-header:after {
@@ -176,7 +128,9 @@
         }
 
         .exp-tt {
-            font-size: 16px; padding-top: 60px; padding-bottom: 30px;
+            font-size: 16px;
+            padding-top: 60px;
+            padding-bottom: 30px;
         }
 
         h3 .text-center {
@@ -207,164 +161,162 @@
             padding-bottom: 40px;
         }
 
-        .bgcolor{
+        .bgcolor {
             background-color: #44CF6C;
             color: #fff;
-
         }
+
         table.a {
             margin: auto;
         }
 
         .table {
-          width: 70%;
+            width: 70%;
         }
 
-       .flexy {
-        display: flex;
-        justify-content:space-between;
-       }
+        .flexy {
+            display: flex;
+            justify-content: space-between;
+        }
 
-       .learn-btn-div {
-        width: 30%;
-        margin: 0 auto;
-        padding: 0.3em;
-        text-align: right;
-       }
+        .learn-btn-div {
+            width: 30%;
+            margin: 0 auto;
+            padding: 0.3em;
+            text-align: right;
+        }
 
-       #learn-btn {
-        border-radius: 10px;
-        color: #44CF6C;
-        background: #FFFFFF;
-        font-size: 16px;
-        line-height: 22px;
-        line-height: 22px;
-        width: 60%;
-        padding: 0.3em;
-        letter-spacing: 0.655606px;
-       }
+        #learn-btn {
+            border-radius: 10px;
+            color: #44CF6C;
+            background: #FFFFFF;
+            font-size: 16px;
+            line-height: 22px;
+            line-height: 22px;
+            width: 60%;
+            padding: 0.3em;
+            letter-spacing: 0.655606px;
+        }
 
-       .green-bg {
-         background:rgba(7, 101, 34, 0.82);
-         padding: 2em 2.5em;
-       }
+        .green-bg {
+            background: rgba(7, 101, 34, 0.82);
+            padding: 2em 2.5em;
+        }
 
-       .exp {
-          text-align: justify;
-          font-size: 20px;
-       }
+        .exp {
+            text-align: justify;
+            font-size: 20px;
+        }
 
-       .more {
-          color:#44CF6C;
-       }
+        .more {
+            color: #44CF6C;
+        }
 
-       .check {
-         /* text-align: left !important; */
-         display: flex;
-         justify-content: space-between;
-         margin-top: 0em !important;
-       }
+        .check {
+            /* text-align: left !important; */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0em !important;
+        }
 
-       .desc {
-          width: 60%;
-          padding: 1em;
-       }
+        .desc {
+            width: 60%;
+            padding: 1em;
+        }
 
-       .desc p {
-          margin: 0.5rem;
-       }
+        .desc p {
+            margin: 0.5rem;
+        }
 
-       .act-btn {
-         width: 30%;
-        padding-top: 1.8em;
-       }
+        .act-btn {
+            width: 30%;
+            padding-top: 1.8em;
+        }
 
-       .header {
-         padding: 1em;
-       }
+        .header {
+            padding: 1em;
+        }
 
-       .header h3 {
-         margin: 1rem;
-       }
+        .header h3 {
+            margin: 1rem;
+        }
 
-       .pad {
-         padding: 1em;
-       }
+        .pad {
+            padding: 1em;
+        }
 
-       .btn-outline-success {
-         color: rgba(51, 51, 51, 0.4);
-         border: none;
-         font-size: 20px;
-         margin: auto;
-       }
+        .btn-outline-success {
+            color: rgba(51, 51, 51, 0.4);
+            border: none;
+            font-size: 20px;
+            margin: auto;
+        }
 
-       @media screen and (min-width: 1000px) {
-         .flexy {
-           margin-top: 0px !important;
-         }
-       }
+        @media screen and (min-width: 1000px) {
+            .flexy {
+                margin-top: 0px !important;
+            }
+        }
 
-       @media screen and (max-width: 768px) {
-         .learn-btn-div {
-           text-align: center;
-         }
-         #learn-btn {
-           width: 100%;
-         }
-       }
+        @media screen and (max-width: 768px) {
+            .learn-btn-div {
+                text-align: center;
+            }
+            #learn-btn {
+                width: 100%;
+            }
+        }
 
-       @media screen and (max-width: 575px) {
-         .change {
-           display: block !important
-         }
-         .img {
-           margin-bottom: 1em;
-         }
-       }
+        @media screen and (max-width: 575px) {
+            .change {
+                display: block !important
+            }
+            .img {
+                margin-bottom: 1em;
+            }
+        }
 
-       @media screen and (max-width: 500px) {
-         .flexy {
-           display: block;
-           padding: 0.8em;
-         }
-
-         .desc {
-           width: 100%;
-           padding: 1em;
-         }
-
-         .act-btn {
-           width: 70% !important;
-           padding: 2em;
-         }
-
-         .learn-btn-div {
-           width: 80%;
-           text-align: center;
-         }
-         #learn-btn {
-           width: 80%;
-         }
-         .table {
-           width: 100%;
-         }
-
-         .header h3 {
-           font-size: 1.55rem;
-         }
-
-       }
+        @media screen and (max-width: 500px) {
+            .flexy {
+                display: block;
+                padding: 0.8em;
+            }
+            .desc {
+                width: 100%;
+                padding: 1em;
+            }
+            .act-btn {
+                width: 70% !important;
+                padding: 2em;
+            }
+            .learn-btn-div {
+                width: 80%;
+                text-align: center;
+            }
+            #learn-btn {
+                width: 80%;
+            }
+            .table {
+                width: 100%;
+            }
+            .header h3 {
+                font-size: 1.55rem;
+            }
+        }
     </style>
-@endsection
+  </head>
+  <body>
 
-@section('content')
-
+  @include('../inc.navbar')
     <div class="container-fluid body-banner pt-5 pb-5">
         <div class="col-md-6 offset-md-1 text-white " id="top">
             <h4 class="font-weight-bold mt-5 pt-5 pb-4">Upgrade Your Skills with <br> Our Curriculum</h4>
             <p class="pb-4" style="font-size: 20px;">The HNG internship is a 3-month remote <br> internship designed ---to find and develop the <br> most talented software developers. </p>
-            <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('signup')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
-                Learning</a>
+            @if(Auth::guest())
+            <a class="btn btn-custom pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+            @else
+            <a class="btn btn-custom pl-5 pr-5 mb-4" href="{{route('dashboard')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+            @endif
         </div>
     </div>
 
@@ -377,7 +329,7 @@
               <div class="col-md-6">
                   <h4 class="font-weight-bold" style="font-size: 1.25rem">Learn Anywhere, Anytime, With Other Creatives</h4>
                   <p class="exp">The HNG internship is a 3-month remote <br> internship designed to find and develop the <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
-                  <a href="#" class="more">Learn more >></a>
+                  <a href="{{route('about')}}" class="more">Learn more >></a>
               </div>
             </div>
         </div>
@@ -391,8 +343,6 @@
         <div class="row" id="row-div">
             <div class="col-md-3">
                 <a role="button" href="#" class="btn btn-outline-success" style="color: #000">Full Stack Development</a>
-
-
                </div>
             <br>
             <div class="col-md-3">
@@ -411,7 +361,7 @@
                 <a role="button" href="#" class="btn btn-outline-success">Brand...</a>
             </div>
             <div class="col-md-1">
-                <a role="button" href="#" class="btn btn-outline-success" style="color: #44CF6C;">></a>
+                <a role="button" href="#" class="btn btn-outline-success" style="color: #44CF6C;"></a>
             </div>
         </div>
     </div>
@@ -428,7 +378,11 @@
                 <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers</p>
             </div>
             <div  id="col" class="act-btn">
-                <a href="{{route('signup')}}" class="btn">Start Learning</a>
+                @if(Auth::guest())
+                <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                @else
+                <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                @endif
             </div>
           </div>
         </div>
@@ -846,15 +800,19 @@
             </tbody>
           </table>
     </div>
-
     <div class="container pt-5 pb-5">
         <div class="row align-items-center">
             <div class="col-md-6">
                 <h4 class="font-weight-bold pb-3">Begin Your Journey to Being Certified in Your Field</h4>
                 <p class="pb-3">The HNG internship is a 3-month remote <br> internship designed to find and develop the
                     <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
-                <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+<a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
                     Learning</a>
+                    @if(Auth::guest())
+                    <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                    @else
+                    <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('dashboard')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
+                    @endif
             </div>
             <div class="col-md-6">
                 <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570976615/startng/image_4_iff7wn.png">
@@ -862,21 +820,110 @@
         </div>
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const title = document.querySelector('#title');
-        const tabs = document.querySelectorAll('.btn-outline-success');
-        const links = Array.from(tabs);
+    <!-- Footer -->
+       <footer>
+           <div class="container-fluid footer-top col-lg-12">
+               <div class="container col-md-12 p-5">
+                   <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
+                   <div class="row">
+                   @if(Auth::guest())
+                       <div class="col-md-4 mt-4">
 
-        links.forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            let text = e.target.textContent;
-            if (text !== '>') {
-              title.textContent = text;
-            }
-          })
-        })
-      });
-    </script>
-@endsection
+                           <h4 class="">Ready to take the leap?</h4>
+                           <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
+                       </div>
+                   @else
+                        <div class="col-md-4 mt-4">
+
+                            <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">
+                           {{ __('Logout') }}
+                            </a>
+
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                           @csrf
+                           </form>
+                       </div>
+                   @endif
+                       <div class="col-md-2 mt-4">
+
+                           <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
+                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
+
+                       </div>
+                       <div class="col-md-2 mt-4">
+
+                           <li>
+                               <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="">Blog</a>
+                           </li>
+
+                       </div>
+                       <div class="col-md-2 mt-4">
+                           <li>
+                               <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="{{route('faq')}}">FAQ</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
+                           </li>
+                       </div>
+                       <div class="col-md-2 mt-4">
+                           <li>
+                               <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
+                           </li>
+                           <li>
+                               <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
+                           </li>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="container-fluid footer-social col-lg-12">
+               <div class="container p-3">
+                   <div class="clearfix">
+                       <div class="float-left">
+
+                       </div>
+                       <div class="float-right">
+                           <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                   class="fab fa-twitter"></i></a>
+                           <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                   class="fab fa-instagram"></i></a>
+                           <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                   class="fab fa-facebook"></i></a> -->
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </footer>
+
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+         const title = document.querySelector('#title');
+         const tabs = document.querySelectorAll('.btn-outline-success');
+         const links = Array.from(tabs);
+
+         links.forEach(link => {
+           link.addEventListener('click', (e) => {
+             e.preventDefault();
+             let text = e.target.textContent;
+             if (text !== '>') {
+               title.textContent = text;
+             }
+           })
+         })
+       });
+     </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+
+  </html>

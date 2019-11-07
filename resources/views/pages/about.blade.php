@@ -15,34 +15,27 @@
 
     <style>
         /* Style for Navbar Starts */
-
         .navbar-custom li a {
             color: #000;
         }
-
         .btn-success {
             background-color: #2DCE89;
             color: #fff;
             border: thin solid #2dce89;
         }
-
-        .btn-success:hover {
+        /* .btn-success:hover {
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
-        }
-
+        } */
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
-
         .custom-toggler.navbar-toggler {
             border-color: #000;
         }
-
         /* Style for Navbar Ends */
         /* Style for Footer Starts */
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -50,7 +43,6 @@
             box-sizing: border-box;
             font-family: 'Nunito', sans-serif;
         }
-
         a {
             text-decoration: none;
         }
@@ -59,35 +51,25 @@
             background: #3A0842;
             color: #fff;
         }
-
         .deep #slink {
             background: #44CF6C;
             border-radius: 10px;
             color: white;
             padding: 10px 70px;
         }
-
         .deep li a {
             text-decoration: none;
             color: #fff;
             font-size: 16px;
             line-height: 30px;
         }
-
         .deep li {
             list-style: none;
         }
-
         .deep li a:hover {
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: none;
-            background-color: rgb(45, 206, 137);
-            border: thin solid rgb(45, 206, 137);
-            border-radius: 10px;
-        }
 
         .icons i {
             font-size: 26px;
@@ -96,22 +78,17 @@
             padding: 10px 20px;
             color: white;
         }
-
         .icons i.fa.fa-twitter:hover {
             color: #00aced;
         }
-
         .icons i.fa.fa-facebook:hover {
             color: #3b5598;
         }
-
         .icons i.fa.fa-instagram:hover {
             color: #ed3833;
         }
-
         /* Style for Footer Ends */
         /* Body Style */
-
         .banner {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570915217/startng/Rectangle_7_ak5zc2.png');
             background-position: center center;
@@ -125,7 +102,6 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-
         .priviledge {
             background-color: #FCFCFC;
         }
@@ -149,19 +125,16 @@
             box-shadow: none !important;
             transform: scale(0.9);
         }
-
         .slick-active + .slick-active {
             transition: 0.2s;
             transform: scale(1);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
         }
-
         .slick-active + .slick-active + .slick-active {
             transition: 0.2s;
             box-shadow: none !important;
             transform: scale(0.9);
         }
-
         .slick-active + .slick-active .card{
             transition: 0.2s;
             transform: scale(1);
@@ -197,27 +170,26 @@
             height: 100%;
         }
         /* Body Style Ends */
-
         .footer-top {
             background-color: #3A0842;
             color: #fff;
         }
-        
+
         .footer-top li {
             list-style-type: none;
         }
-        
+
         .footer-link {
             color: #fff;
             text-decoration: none;
             font-size: 1em;
         }
-        
+
         .footer-link:hover {
             color: #fff;
             text-decoration: none;
         }
-        
+
         .footer-social {
             background-color: #2E0435;
             color: #fff;
@@ -226,7 +198,7 @@
 </head>
 
 <body>
-@include('../inc.navbar')
+@include('inc.navbar')
 
     <div class="container-fluid banner pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5 mb-5">
@@ -240,6 +212,7 @@
     <div class="container-fluid pt-5 mt-5 mb-5 pb-5">
         <div class="row align-items-center">
             <div class="col-md-6 pb-5">
+
                 <h4 class="pl-5" style="color: #7F5A83;">Courses</h4>
                 <p class="pl-5">Interns are able to select from the number of courses we offer:<br> Complete quide. <br>100% Online. Flexible Online Learning and Earn a Course Certificate</p>
                 <ul class="pl-5 ml-3" style="color: #44CF6C;">
@@ -247,7 +220,7 @@
                     <li>Digital Marketing</li>
                     <li>Front End development</li>
                     <li>Back end Development</li>
- 
+
                 </ul>
                      @if(Auth::guest())
                  <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
@@ -264,15 +237,15 @@
 
     <div class="container-fluid loren-ipsum pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> You can have access to our free courses in Web development, Machine learning,  <br> and Digital Marketing.We have also made available paid courses that would give<br> maximum and intense information about any course <br>you u will be interested in and you will have the opportunity to get <br>your hands on enough practicals and projects of which at the end of the course, certificates will be issued.<br> </p>   
+            <p style="color: #fff;"> You can have access to our free courses in Web development, Machine learning,  <br> and Digital Marketing.We have also made available paid courses that would give<br> maximum and intense information about any course <br>you u will be interested in and you will have the opportunity to get <br>your hands on enough practicals and projects of which at the end of the course, certificates will be issued.<br> </p>
         </div>
         <div class="col-md-4 offset-md-4">
             <div class="row">
                 <div class="col-6">
-                    <a href="#" class="btn btn-success pr-5 pl-5">Free Courses</a>
+                    <a href="https://www.youtube.com/channel/UCTmmCTH_jUmaXIMqHZK648A" class="btn btn-success pr-5 pl-5">Free Courses</a>
                 </div>
                 <div class="col-6">
-                    <a href="#" class="btn btn-success pr-5 pl-5">Paid Courses</a>
+                    <a href="{{route('course.index')}}" class="btn btn-success pr-5 pl-5">Paid Courses</a>
                 </div>
             </div>
         </div>
@@ -286,12 +259,12 @@
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Chidinma O.</h5>
-                            <p class="card-text"> StartNg was indeed a Start for me on my long term path to a career switch. I literally stumbled on the application link on twitter. I liked that the classes were in written text, interns were encouraged to help each other, the learning process was great and the certificate was a welcome incentive. I'm still reeling with pride!</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front development</small></p>
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Moses Obanega</h5>
+                            <p class="card-text">Managing tasks and having to deliver meeting up with deadlines in a few days under pressure is not a big deal anymore. I say a big thank you to the organizers of the HNG program and the sponsors.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front End Track |From Imo State</small></p>
                         </div>
                     </div>
                 </div>
@@ -300,40 +273,14 @@
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Egesi Ndubuisi Success</h5>
-                            <p class="card-text">StartNg program was very helpful to me as I learned the basics of Web development and other courses relevant to the field. With several tasks, learning became interesting, I was able to practice within limited time and effectively collaborate with remote teammates.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FrontEnd development</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card rounded-0">
-                        <div class="card-header" style="height: 110px; background-color: #44CF6C;">
-                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
-                        </div>
-                        <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Agboola Eniola</h5>
-                            <p class="card-text">I have always been a tech enthusiast. I started my tech journey with start.ng. Though, the duration of the program was not enough to grasp all you need to know about software development, however i bet it is a great start. The secret to being a pro is getting started, start with start.ng.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Backend development</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card rounded-0">
-                        <div class="card-header" style="height: 110px; background-color: #44CF6C;">
-                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
-                        </div>
-                        <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Anonymous</h5>
-                            <p class="card-text">Writing code was a daunting task for me. I didn’t know where to begin or what questions to ask, and people never seemed to follow through when I ask questions. Attending the StartNg program exposed me to a world of limitless knowledge and amazing programming result.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Backend development</small></p>
+
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
+                            <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
+
                         </div>
                     </div>
                 </div>
@@ -341,14 +288,14 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
+
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
-                            <h5 class="card-title" style="color: #3A0842;">@Message: Isuma Chidera </h5>
-                            <p class="card-text">I enrolled for start StartNg program a preparatory program for the main internship HNGI. it was a wonderful experience for me and I got to learn so many new things in software development.
-Things like how to communicate with your team remotely through slack, how to use git and github, how to meet up with deadlines on task for each week e.t.c</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">FullStack development</small></p> 
+                            <h5 class="card-title" style="color: #3A0842;">@Message: Sydney Collins</h5>
+                            <p class="card-text">I came into HNG with zero knowledge in programming and I'll be leaving with so much knowledge acquired in programming, now I can be called a front end web developer. Thanks to HNG.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Front End track | From Cameroon</small></p>
                         </div>
                     </div>
                 </div>
@@ -357,40 +304,14 @@ Things like how to communicate with your team remotely through slack, how to use
                         <div class="card-header" style="height: 110px; background-color:#44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
                                 <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
+                            </div>
                         </div>
                         <div class="card-body mt-5">
-                           <h5 class="card-title" style="color: #3A0842;">@Message: Kayode O. </h5>
-                            <p class="card-text">Start.Ng has made a significant difference in my life. I've seen over 100% increase in my programming abilities and website development since I joined Start.Ng. The most amazing part of the internship is that you learn at your pace.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Mobile development</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card rounded-0">
-                        <div class="card-header" style="height: 110px; background-color:#44CF6C;">
-                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
-                        </div>
-                        <div class="card-body mt-5">
-                           <h5 class="card-title" style="color: #3A0842;">@Message: Bakare O. </h5>
-                            <p class="card-text">When it comes to Internship placement there are loads of Internship out that talk a good game, but Start.Ng help you make your programming dream come alive. They have enabled me, coached me and given me the confidence to be able to pursue a career in the IT world without any worry. I give thanks to the mentors and the CEO for making my dream come through.</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Frontend development</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="card rounded-0">
-                        <div class="card-header" style="height: 110px; background-color:#44CF6C;">
-                            <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
-                            </div>  
-                        </div>
-                        <div class="card-body mt-5">
-                           <h5 class="card-title" style="color: #3A0842;">@Message: Ubong Ndoh</h5>
-                            <p class="card-text">I finally wrote my first tech article on the three basics on web development i.e. HTML, CSS and JAVASCRIPT. I also learned how to filter important information from thousands of information</p>
-                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;"> FrontEnd development</small></p>
+
+                           <h5 class="card-title" style="color: #3A0842;">@Message: Ibrahim Adamu</h5>
+                            <p class="card-text">One of the many things learned during the HNG program is collaborating with people online effectively. And I won't forget to commend the efforts of the mentors who we could reach out to when we are faced with some big problems. Lol.</p>
+                            <p class="card-text ">Course: <small class="font-style-bold" style="color: #3A0842 !important;">Machine Learning Track | From Kano</small></p>
+
                         </div>
                     </div>
                 </div>
@@ -426,8 +347,8 @@ Things like how to communicate with your team remotely through slack, how to use
                             class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-8">
-                        <p style="color: #3A0842">JOIN ONLINE development COMMUNITY</p>
-                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developments. They also would not miss out on important information about events and meetups.</p>
+                        <p style="color: #3A0842">JOIN ONLINE DEVELOPER COMMUNITY</p>
+                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
                     </div>
 
                 </div>
@@ -481,12 +402,12 @@ Things like how to communicate with your team remotely through slack, how to use
             <div class="row align-items-center">
                 <div class="col-md-6 pb-2 mt-0 pt-0">
                     <div class="videoWrapper">
-                        <iframe 
-                            width="100%" 
+                        <iframe
+                            width="100%"
                             height="380"
-                            src="https://www.youtube.com/embed/DYaq2sWTWAA" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            src="https://www.youtube.com/embed/DYaq2sWTWAA"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -510,94 +431,13 @@ Things like how to communicate with your team remotely through slack, how to use
                 in the world.</p>
             <p class="pb-3">Most Sought after Programming Skills </p>
             <p class="pb-3">Experienced Qualified Teachers</p>
-            <p class="pb-3">Access to the Largest Online development Community</p>
+            <p class="pb-3">Access to the Largest Online Developer Community</p>
             <a href="/" class="btn btn-secondary pl-5 pr-5 mb-3"
                style="background-color: #3A0842; border: thin solid #3A0842; cursor: pointer;">Explore Start.ng</a>
         </div>
     </div>
  <!-- Footer -->
-    <footer>
-        <div class="container-fluid footer-top col-lg-12">
-            <div class="container col-md-12 p-5">
-                <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
-                <div class="row">
-                @if(Auth::guest())
-                    <div class="col-md-4 mt-4">
-
-                        <h4 class="">Ready to take the leap?</h4>
-                        <a class="btn btn-success mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
-                    </div>
-                @else
-                     <div class="col-md-4 mt-4">
-
-                         <a class="btn btn-success mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                         </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                        </form>
-                    </div>
-                @endif
-                    <div class="col-md-2 mt-4">
-
-                        <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                        <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
-                        <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
-
-                    </div>
-                    <div class="col-md-2 mt-4">
-
-                        <li>
-                            <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="">Blog</a>
-                        </li>
-
-                    </div>
-                    <div class="col-md-2 mt-4">
-                        <li>
-                            <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="{{route('faq')}}">FAQ</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
-                        </li>
-                    </div>
-                    <div class="col-md-2 mt-4">
-                        <li>
-                            <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid footer-social col-lg-12">
-            <div class="container p-3">
-                <div class="clearfix">
-                    <div class="float-left">
-
-                    </div>
-                    <div class="float-right">
-                        <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
-                                class="fab fa-twitter"></i></a>
-                        <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
-                                class="fab fa-facebook"></i></a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('inc.footer')
 
     <!-- End of Footer -->
 
@@ -618,15 +458,11 @@ Things like how to communicate with your team remotely through slack, how to use
             .removeAttr('height')
             .removeAttr('width');
         });
-
         // When the window is resized
         $(window).resize(function() {
-
             var newWidth = $fluidEl.width();
-
             // Resize all videos according to their own aspect ratio
             $allVideos.each(function() {
-
             var $el = $(this);
                 $el
                 .width(newWidth)

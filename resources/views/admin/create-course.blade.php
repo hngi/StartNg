@@ -9,7 +9,7 @@
                                 <h5 class="card-title">Add a course</h5>
                             </div>
                             <div class="card-body">
-                                <form action="{{route('admin.store-course')}}" method="post">
+                                <form action="{{route('course.store')}}" method="post">
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-5 pr-1">

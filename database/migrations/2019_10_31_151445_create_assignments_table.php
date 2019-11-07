@@ -16,10 +16,10 @@ class CreateAssignmentsTable extends Migration
         Schema::create('assignments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->unsignedBigInteger('user_id'); //tutor in-charge
             $table->string('title');
             $table->string('description');
             $table->integer('duration');
+            $table->string('course_content_id');
             $table->boolean('active')->default(1);
         });
     }

@@ -26,19 +26,19 @@
                     <div class="navbar-wrapper">
                         <div class="navbar-toggle">
                             <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
+                              <span class="navbar-toggler-bar bar1"></span>
+                              <span class="navbar-toggler-bar bar2"></span>
+                              <span class="navbar-toggler-bar bar3"></span>
+                            </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">DASHBOARD</a>
+                        <a class="navbar-brand" href="">USER DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -48,10 +48,27 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                            </form>
+                            <a class="text-uppercase ml-5 mr-2" style="text-decoration:none" href="{{ route('dashboard') }}"><strong>{{ Auth::user()->username }}</strong></a>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle mr-3">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
 
-                    </div>
-                </div>
+                          <a class="dropdown-item" href="{{route('user.profile', auth()->user()->id)}}">Profile</a>
+                          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+
+                          <!-- <a class="dropdown-item" href="{{route('user.show', auth()->user()->id)}}">Profile</a>
+                         <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a> -->
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                        </form>
+                        </div>
+                      </li>
+                  </div>
             </nav>
             <!-- End Navbar -->
             <!-- <div class="panel-header panel-header-lg">

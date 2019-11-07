@@ -1,97 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Search</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito&display=swap">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="/css/modifiedstyles.css" rel="stylesheet" />
+    <title>Find Course</title>
             <style>
-            /* Style for Navbar Starts */
-            .navbar-custom li a {
-            color: #000;
-            }
-            .btn-success {
-            background-color: #2DCE89;
-            color: #fff;
-            border: thin solid #2dce89;
-            }
-            .btn-success:hover {
-            background-color: rgb(2, 20, 12);
-            color: #fff;
-            border: thin solid rgb(2, 20, 12);
-            }
-            .custom-toggler .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-            }
-            .custom-toggler.navbar-toggler {
-            border-color: #000;
-            }
-            /* Style for Navbar Ends */
-            /* Style for Footer start */
-            * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
-            }
-            a {
-            text-decoration: none;
-            }
-            .deep {
-            background: #3A0842;
-            color: #fff;
-            }
-            .deep #slink {
-            background: #44CF6C;
-            border-radius: 10px;
-            color: white;
-            padding: 10px 70px;
-            }
-            .deep li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 16px;
-            line-height: 30px;
-            }
-            .deep li {
-            list-style: none;
-            }
-            .deep li a:hover {
-            text-decoration: none;
-            }
-            a:hover {
-            text-decoration: none;
-            background-color: rgb(45, 206, 137);
-            border: thin solid rgb(45, 206, 137);
-            border-radius: 10px;
-            }
-            .icons i {
-            font-size: 26px;
-            height: 50px;
-            width: 50px;
-            padding: 10px 20px;
-            color: white;
-            }
-            .icons i.fa.fa-twitter:hover {
-            color: #00aced;
-            }
-            .icons i.fa.fa-facebook:hover {
-            color: #3b5598;
-            }
-            .icons i.fa.fa-instagram:hover {
-            color: #ed3833;
-            }
-            /* Style for Footer Ends */
             body {
             box-sizing: border-box;
             font-size: small;
@@ -293,26 +215,26 @@
             margin-top: 80px;
             background-color: #3A0842;
             }
-            
+
             .row {
             padding: 30px 50px;
             color: #fff;
             }
-            
+
             .col-md-2 {
             margin-top: 30px;
             }
-            
+
             .col-md-2 ul li a {
             color: #fff;
             }
-            
+
             .footer-copyright {
             background-color: #2E0435;
             padding-right: 50px;
             overflow: hidden;
             }
-            
+
             .footer-copyright a img {
             margin-right: 15px;
             } */
@@ -463,61 +385,11 @@
             background-repeat: no-repeat;
             background-size: cover;
             }
-            </style>
-
+      </style>
+</head>
 <body>
 
     @include('inc.navbar')
- <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-                    <div class="container">
-                        <a href="/" class="navbar-brand"><img
-                            src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"
-                        class="img-fluid" alt="logo" width="150px"></a>
-                        <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbar9" style="color: #000;">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse" id="navbar9">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item mr-5">
-                                    <a class="nav-link" href="{{route('about')}}">About Us</a>
-                                </li>
-                                <li class="nav-item mr-5">
-                                    <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
-                                </li>
-                                @if(!Auth::guest())
-                                <li class="nav-item mr-5">
-                                    <a class="btn btn-success nav-link px-5" href="{{route('mycourses',\Illuminate\Support\Facades\Auth::user()->id)}}" style="color: #fff;">My courses</a>
-                                </li>
-                                @endif
-                                <li class="nav-item mr-5">
-                                    <a class="nav-link" href="{{route('hire')}}">Hire A Grad</a>
-                                </li>
-                                <li class="nav-item mr-5">
-                                    <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-                                </li>
-                                @if(!Auth::guest())
-                                {{--<a class="btn btn-success nav-link px-5" href="{{ route('logout') }}" style="color: #fff;">Logout--}}
-                                {{--</a>--}}
-                                <a class="btn btn-success nav-link px-5" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                                @endif
-                                @if(Auth::guest())
-                                <li class="nav-item mr-5">
-                                    <a class="btn btn-success nav-link px-5" href="/signup" style="color: #fff;">Start
-                                    Learning</a>
-                                </li>
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
                 <div class="container-fluid banner-body pt-5 pb-5">
                     <div class="col-md-6 offset-md-1 align-items-center">
                         <h4 class="mb-4 mt-5 pt-4"
@@ -527,8 +399,11 @@
                             The HNG internship is a 3-month remote <br> internship designed ---to find and develop the <br> most
                             talented software developers.
                         </p>
-                        <a href="{{route('signup')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;">Start
-                        Learning</a>
+                        @if(Auth::guest())
+                        <a class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;" href="{{route('register')}}">Start Learning</a>
+                        @else
+                        <a class="btn btn-success pl-5 pr-5 mb-4" style="background-color: #44CF6C;" href="{{route('dashboard')}}">Start Learning</a>
+                        @endif
                     </div>
                 </div>
                 <section class="main-field">
@@ -542,7 +417,7 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <form method="post" action="{{route('course.search')  }}">
+                    <form method="post" action="{{route('search')  }}">
                         <div class="find">
                             <h3>Search Courses</h3>
                             @csrf
@@ -554,12 +429,93 @@
                     <div class="results">
                     </div>
                 </section>
+        <!-- Footer -->
+           <footer>
+               <div class="container-fluid footer-top col-lg-12">
+                   <div class="container col-md-12 p-5">
+                       <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
+                       <div class="row">
+                       @if(Auth::guest())
+                           <div class="col-md-4 mt-4">
 
-    <!-- Footer -->
-    @include('inc.footer')
+                               <h4 class="">Ready to take the leap?</h4>
+                               <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{route('register')}}">Start</a>
+                           </div>
+                       @else
+                            <div class="col-md-4 mt-4">
 
-    <!-- End of Footer -->
+                                <a class="btn btn-custom mt-3 pl-5 pr-5"  href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                           document.getElementById('logout-form').submit();">
+                               {{ __('Logout') }}
+                                </a>
 
-</body>
+                               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                               @csrf
+                               </form>
+                           </div>
+                       @endif
+                           <div class="col-md-2 mt-4">
 
-</html>
+                               <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
+                               <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                               <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
+
+                           </div>
+                           <div class="col-md-2 mt-4">
+
+                               <li>
+                                   <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
+                               </li>
+                               <li>
+                                   <a class="footer-link" href="">Blog</a>
+                               </li>
+
+                           </div>
+                           <div class="col-md-2 mt-4">
+                               <li>
+                                   <a class="footer-link" href="{{route('find-course')}}">Find a Course</a>
+                               </li>
+                               <li>
+                                   <a class="footer-link" href="{{route('faq')}}">FAQ</a>
+                               </li>
+                               <li>
+                                   <a class="footer-link" href="{{route('contact')}}">Contact Us</a>
+                               </li>
+                           </div>
+                           <div class="col-md-2 mt-4">
+                               <li>
+                                   <a class="footer-link" href="{{route('terms')}}">Terms of Service</a>
+                               </li>
+                               <li>
+                                   <a class="footer-link" href="{{route('privacy')}}">Privacy Policy</a>
+                               </li>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="container-fluid footer-social col-lg-12">
+                   <div class="container p-3">
+                       <div class="clearfix">
+                           <div class="float-left">
+
+                           </div>
+                           <div class="float-right">
+                               <a href="https://twitter.com/hotelsng" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                       class="fab fa-twitter"></i></a>
+                               <!-- <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                       class="fab fa-instagram"></i></a>
+                               <a href="" class="text-white pl-2 pr-2" style="font-size: 1.5em;"><i
+                                       class="fab fa-facebook"></i></a> -->
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </footer>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+
+  </html>

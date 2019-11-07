@@ -15,7 +15,15 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/paper-dashboard.css" rel="stylesheet" />
 </head>
+<style>
 
+.bg-custom-1 {
+  background-color: #85144b;
+}
+
+.bg-custom-2 {
+background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}</style>
 <body class="">
     <div class="wrapper ">
         @include('inc.sidebar')
@@ -31,14 +39,14 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">ADMIN DASHBOARD</a>
+                        <a class="navbar-brand" href="">ADMIN DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <div class="collapse navbar-collapse justify-content-center" id="navigation">
                         <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -48,9 +56,24 @@
                                     </div>
                                 </div>
                             </div>
+                            </form>
+                        </div>
+                            <div class="collapse navbar-collapse justify-content-end">
+                            <div class="navbar-brand"><a class="text-uppercase"  style="text-decoration:none" href="{{ route('dashboard') }}"><strong>{{ Auth::user()->username }}</strong></a></div>
+                            <div><li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="50" height="50" class="rounded-circle mr-3">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                          <a class="dropdown-item" href="#">Edit Profile</a>
+                         <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
                         </form>
-
-                    </div>
+                        </div>
+                      </li>
+                  </div>
                 </div>
             </nav>
             <!-- End Navbar -->

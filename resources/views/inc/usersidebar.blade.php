@@ -28,6 +28,12 @@
                             <p>View My Courses</p>
                         </a>
                     </li>
+                    <li class="{{ (request()->is('review/create')) ? 'active' : '' }}">
+                        <a href="{{route('review.create')}}">
+                            <i class="fa fa-book"></i>
+                            <p>Review My Courses</p>
+                        </a>
+                    </li>
                     <li class="{{ (request()->is('course')) ? 'active' : '' }}">
                         <a href="{{route('course.index')}}">
                             <i class="fa fa-book"></i>

@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Reviews;
+use App\RegisteredCourses;
+use App\Courses;
 
-class BlogController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +27,20 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        $role = auth()->user()->role;
+
+        if ($role == 0){
+            $courses = Courses::all();
+            $registered_courses = RegisteredCourses::where('user_id', auth()->user()->id)->get();
+            $data = array(
+                'courses' => $courses,
+                'registered_courses' => $registered_courses
+            );
+            return view('user.create-review')->with($data);
+        }
+        else{
+            return back()->with('error', 'Access Denied');
+        }
     }
 
     /**
@@ -35,7 +51,13 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $review = new Reviews;
+        $review->user_id = auth()->user()->id;
+        $review->course_id = $request->input('course');
+        $review->comment = $request->input('comment');
+        $review->save();
+
+        return back()->with('success', 'Review saved');
     }
 
     /**
