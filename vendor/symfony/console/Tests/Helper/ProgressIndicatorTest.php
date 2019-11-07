@@ -104,7 +104,7 @@ class ProgressIndicatorTest extends TestCase
     {
         $this->expectException('InvalidArgumentException');
         $this->expectExceptionMessage('Must have at least 2 indicator value characters.');
-        new ProgressIndicator($this->getOutputStream(), null, 100, ['1']);
+        $bar = new ProgressIndicator($this->getOutputStream(), null, 100, ['1']);
     }
 
     public function testCannotStartAlreadyStartedIndicator()
