@@ -14,6 +14,10 @@
         "laracasts/flash": "^3.0",
         "laravel/framework": "^5.8",
         "laravel/tinker": "^1.0",
+
+        "intervention/image": "dev-master",
+        "laravelcollective/html": "^5.8",
+
         "spatie/laravel-permission": "^3.2"
     },
     "require-dev": {
