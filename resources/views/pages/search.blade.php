@@ -497,7 +497,7 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <form method="post" action="{{route('search')  }}">
+                    <form method="post" action="{{route('search')}}">
                         <div class="find">
                             <h3>Search Courses</h3>
                             @csrf
@@ -514,16 +514,16 @@
                             <p class="first-result"><a href="{{route('course.show', $course->id)}}">{{$course->title}}</a> &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>{{$course->duration}}
                         Months</em></p>
                         <p class="second-result">
-                            @if(Auth::guest())
+                        @if(Auth::guest())
                             <a href="{{route('register')}}" class="online-link">Register</a>
+                        @else
+                            <a href="{{route('register.courses',$course->id)}}" class="online-link">Register</a>
                         @endif
-                        @if(!Auth::guest())
-                            <a href="{{route('register.courses',$item->id)}}" class="online-link">Register</a>
-                        @endif
-
-                        <a href="{{route('course.show',$item->id)}}" class="free-link">Details</a>
-                    </p>
-                </div>
+                        <a href="{{route('course.show',$course->id)}}" class="free-link">Details</a>
+                        @endforeach
+                        </p>
+                        
+                    </div>
 
                 <!-- Footer -->
                    <footer>
@@ -564,7 +564,7 @@
                                            <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                                        </li>
                                        <li>
-                                           <a class="footer-link" href="">Blog</a>
+                                           <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                                        </li>
 
                                    </div>

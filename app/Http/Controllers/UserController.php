@@ -105,7 +105,7 @@ class UserController extends Controller
             }
         }
 
-        return view("user.show-user")->with($data);
+        return view("$user_role.show-user")->with($data);
 
     }
 
@@ -171,14 +171,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        /*$user = User::find($id);
+        $user = User::find($id);
         $role = auth()->user()->role;
         if ($role == 0){
             return back()->with('error', 'Uauthorized Permission');
         }
         else{
             if ($user->role == 0){
-                return 'lk';
                 $user->active = ($user->active == 0) ? 1 : 0;
                 $action = ($user->active == 1) ? "enabled" : "disabled";
                 $user->save();
@@ -187,7 +186,7 @@ class UserController extends Controller
             else{
                 return back()->with('error', 'Uauthorized Permission');
             }
-        }*/
+        }
     }
 
     public function disable($id)
