@@ -40,7 +40,6 @@ Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('schedule', 'ScheduleController');
 
-
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
 Route::get('/contact', 'BaseController@contact')->name('contact');
@@ -63,15 +62,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController');
 
 // Tutor Route
-Route::get('/tutors/profile', 'TutorController@profile')->name('tutor.profile');
-Route::get('/tutors/assignment', 'AssignmentController@index')->name('tutor.assignment');
-Route::get('/tutors/upload-resource', 'UploadController@tutor')->name('tutor.upload-resource');
 Route::get('/tutors/upload-resource', 'AssignmentController@upload')->name('tutor.upload-resource');
-
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('upload-resource', 'UploadController'); 
-Route::get('/admins/upload-resource','UploadController@index')->name('admin.upload-resource');
-Route::post('/upload-resource/save','UploadController@save')->name('upload-resource');
-Route::get('/admins/show-resources','UploadController@show')->name('admin.show-resources');
-Route::get('/tutors/show-resources','UploadController@show')->name('tutor.show-resources');
