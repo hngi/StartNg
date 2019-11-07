@@ -16,9 +16,7 @@
 
 <style>
     <style>
-        body {
-            font-family: Nunito;
-        }
+
         /* Style for Navbar Starts */
         .navbar-custom li a {
             color: #000;
@@ -28,11 +26,11 @@
             color: #fff;
             border: thin solid #2dce89;
         }
-        .btn-success:hover {
+        /* .btn-success:hover {
             background-color: rgb(2, 20, 12);
             color: #fff;
             border: thin solid rgb(2, 20, 12);
-        }
+        } */
         .custom-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -51,7 +49,14 @@
         a {
             text-decoration: none;
         }
-        .deep {
+
+        .btn-secondary {
+        background-color: #3A0842;
+        border-color: #3A0842;
+        color: #fff !important;
+        cursor: pointer;
+        }
+     .deep {
             background: #3A0842;
             color: #fff;
         }
@@ -73,13 +78,13 @@
         .deep li a:hover {
             text-decoration: none;
         }
-        a:hover {
+        /* a:hover {
             text-decoration: none;
             background-color: rgb(45, 206, 137);
             border: thin solid rgb(45, 206, 137);
             border-radius: 10px;
-        }
-        
+        } */
+
         .icons i {
             font-size: 26px;
             height: 50px;
@@ -251,7 +256,7 @@
                        <div class="col-md-2 mt-4">
 
                            <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                           <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                           <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                            <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                        </div>

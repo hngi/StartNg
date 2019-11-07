@@ -16,13 +16,26 @@
             <style>
             body {
             box-sizing: border-box;
-            font-size: small;
             margin: 0;
             padding: 0;
-            font-family: "Nunito", sans-serif;
+            font-family: 'Nunito';
+            }
+            .navbar-custom li a {
+            color: #000;
+            }
+            .btn-success {
+            background-color: #2DCE89;
+            color: #fff;
+            border: thin solid #2dce89;
+            }
+            .btn-secondary {
+            background-color: #3A0842;
+            border-color: #3A0842;
+            color: #fff !important;
+            cursor: pointer;
             }
             /*... NavBar..*/
-            ul.navbar-nav li {
+            /* ul.navbar-nav li {
             margin: auto 13px;
             font-family: Nunito;
             font-style: normal;
@@ -31,7 +44,7 @@
             line-height: 22px;
             letter-spacing: 0.655606px;
             color: #2A2B2A;
-            }
+            } */
             ul.navbar-nav button {
             background-color: #2DCE89;
             border-radius: 7px;
@@ -458,7 +471,7 @@
                            <div class="col-md-2 mt-4">
 
                                <li><a class="footer-link" href="{{route('about')}}">About Us</a></li>
-                               <li><a class="footer-link" href="{{route('courses.index')}}">Our Course</a></li>
+                               <li><a class="footer-link" href="{{route('course.index')}}">Our Course</a></li>
                                <li><a class="footer-link" href="{{route('hire')}}">Hire a Grad</a></li>
 
                            </div>
