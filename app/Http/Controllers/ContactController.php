@@ -14,6 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
+
         //
     }
 
@@ -24,7 +25,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        // 
     }
 
     /**
@@ -35,7 +36,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
     }
 
     /**

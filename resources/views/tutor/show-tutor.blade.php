@@ -6,7 +6,7 @@
                     <div class="col-md-4">
                         <div class="card card-user">
                             <div class="image">
-                                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572364388/startng/3A0842_gfrakh.jpg" class="img-fluid w-100" alt="...">
+                     <!--            <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572364388/startng/3A0842_gfrakh.jpg" class="img-fluid w-100" alt="...">
                             </div>
                             <div class="card-body">
                                 <div class="author">
@@ -20,7 +20,7 @@
                                     <p class=" text-black"><strong>State:</strong>{{$tutor->state}}</p>
                                 </div>
                                 <p class=" text-center text-black"><strong>aboutme:</strong>{{$tutor->aboutme}}</p>
-                            </div>
+                            </div> -->
                             <!-- <div class="card-footer">
                                 <hr>
                                 <div class="button-container">

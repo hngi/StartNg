@@ -14,6 +14,7 @@
     <!-- CSS Files -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/paper-dashboard.css" rel="stylesheet" />
+  
 </head>
 
 <body class="">
