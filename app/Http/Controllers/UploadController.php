@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Contact;
+Use App\Upload;
 
-class ContactController extends Controller
+class UploadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,18 +15,33 @@ class ContactController extends Controller
      */
     public function index()
     {
-        
+        return view('admin.upload-resource');
     }
-    
-
+        public function tutor()
+    {
+        return view('tutor.upload-resource');
+    }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('contact');
+    public function save(Request $request)
+   {
+       request()->validate([
+         'file'  => 'required|mimes:doc,docx,pdf,txt|max:10048',
+       ]);
+ 
+       if ($files = $request->file('Uploads')) {
+           $destinationPath = 'App/storage/'; // upload path
+           $file = date('YmdHis') . "." . $files->getClientOriginalExtension();
+           $files->move($destinationPath, $file);
+           $insert['file'] = "$file";
+           $description = $request->input('description');
+        }
+        
+           return back()->withSuccess('Great! file has been successfully uploaded.');
+ 
     }
 
     /**
@@ -37,23 +52,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'email'=>'required',
-            'phone'=>'required',
-            'message'=>'required'
-        ]);  
-
-        $contacts = new Contact([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'message' => $request->get('message'),
-        ]);
-        $contact->save();
-         return back()->withSuccess('Sent successfully. We will Get back to you ASAP.');
+        //
     }
 
     /**

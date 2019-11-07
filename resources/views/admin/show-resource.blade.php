@@ -2,17 +2,20 @@
 
 @section('content')
 <div class="content">
-                <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="card card-stats">
-                            <a href="{{route('user.index')}}" style="text-decoration: none;">
-                                <div class="card-body">
+               
                                     <div class="row">
-
-                                        <div class="col-md-12 text-center">
-                                            <h4 class="text-black">VIEW <br> STUDENTS</h4>
-                                        </div>
+                                     <div class="col-md-6 offset-md-3 book-desc">
+    <div class="card">
+        <img class="card-img-top" src="{{url('tutors/show-resources/'.$resource->filename)}}" alt="{{$resource->filename}}">
+        <div class="card-body">
+            <h4 class="card-title">Resource No: {{ $file->id}}</h4>
+            <p class="card-text">
+                Resource <strong>{{ $resource->name}}</strong> Description <strong>{{ $resource->description}}</strong>
+            </p>
+            <a href="{{ route('tutor.upload-resource') }}" class="btn btn-dark">Back</a>
+        </div>
+    </div>
+</div>
                                     </div>
                                 </div>
                             </a>
