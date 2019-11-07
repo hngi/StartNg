@@ -13,23 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="card"></div>
-                    <div class="card-header">Welcome</div>
-                    <div class="card-body">
-                        <h1>  You are logged in!</h1>
-                        <p>Welcome to startng your preferred displayed</p>
-                        @auth
-                        <form action="" method="POST">
 
-                                <input type="hidden" name="content" id="content">
-                               
-                                <button type="submit" class="btn btn-primary my-2">Add </button>
-                                </form>
-
-                    </div>
-                   
-
-               
+                    You are logged in!
                 </div>
             </div>
         </div>

@@ -219,15 +219,15 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
-        
+
         .checked {
             color: orange;
         }
-        
+
         .video {
             background-color: #44CF6C;
         }
-        
+
         .help {
             background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570930464/startng/Group_418_ngwxfa.png');
             background-size: cover;
@@ -258,8 +258,9 @@
         @endif
 
     </div>
-                </div>
-            </div>
+  </div>
+    <div class="container mt-5">
+      <div class="row">
             <div class="col-md-5 order-sm-2 order-md-1 ">
                 <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
                 <p class="my-4 text-muted">
@@ -287,28 +288,34 @@
         <div class="row">
             @foreach($courses as $item)
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-2" style="height:33rem">
                         <img class="card-img-top"
                              src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570927379/startng/Rectangle_44_w9fioh.png"
-                             alt="Card image">
-                        <div class="card-body">
-                            <h4 class="card-title" style="font-weight: bold;">{{$item->title}}</h4>
-                            <p>{{$item->description}}</p>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked mb-3"></span> <br>
-                            @if(Auth::guest())
-                                <a href="{{route('register')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                                   style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                            @endif
-                            @if(!Auth::guest())
-                                <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                                   style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
-                            @endif
-                            <a href="{{route('course.show', $item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
-                               style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
+                             alt="Card image" style="height:10rem">
+                        <div class="card-body" style="height:23rem">
+                            <h4 class="card-title" style="font-weight:bold; height:2.3rem">{{$item->title}}</h4>
+                            <p style="height:12rem">{{$item->description}}</p>
+                            <div class="" style="height:">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked mb-3"></span> <br>
+                              <div class="mb-1">
+                                @if(Auth::guest())
+                                    <a href="{{route('register')}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                       style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                                @endif
+                                @if(!Auth::guest())
+                                    <a href="{{route('register.courses',$item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                       style="background-color: #9A75A0; border: thin solid #9A75A0;">Register</a>
+                                @endif
+                                <a href="{{route('course.show', $item->id)}}" class="btn btn-primary pr-3 pl-3 pt-1 pb-1"
+                                   style="background-color: #9A75A0; border: thin solid #FFE797;">Details</a>
+                              </div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -359,7 +366,7 @@
                 </div> -->
             </div>
         </div>
-    </section>
+    </div>
     <!--  -->
 
 <!-- Take Your First Steps in Achieving Your Dreams -->
@@ -386,12 +393,6 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="col-md-6">
-                <h4 class="pb-3">Take Your First Steps in Achieving Your Dreams</h4>
-                <p class="pb-4">The HNG internship is a 3-month remote internship <br> designed to find and develop the most talented
-                    <br> software developers. Everyone is welcome to participate <br> (there is no entrance exam). </p>
-                <a href="{{asset('register')}}" class="btn btn-success pl-5 pr-5">Start Learning</a>
             </div>
 
         </section>
@@ -441,7 +442,6 @@
         </div>
     </div>
 </section>
-        </div>
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
             <h4>Online or Offline, We Are Here For You</h4>
             <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.
@@ -449,7 +449,7 @@
             <a href="{{asset('register')}}" class="btn btn-success pl-5 pr-5">Start
                 Learning</a>
         </div>
-    </div>
+
 
 <div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
     <div class="container pt-5 pb-5">
@@ -470,7 +470,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <!-- Footer -->
 
        <footer>

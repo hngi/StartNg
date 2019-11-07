@@ -67,6 +67,7 @@ background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
                           <a class="dropdown-item" href="{{route('admin.edit', auth()->user()->id)}}">Edit Profile</a>
+
                          <a  class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

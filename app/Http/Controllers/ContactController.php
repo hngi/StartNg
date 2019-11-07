@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Contact;
 
 class ContactController extends Controller
 {
@@ -15,9 +14,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        // 
+
+        //
     }
-    
 
     /**
      * Show the form for creating a new resource.
