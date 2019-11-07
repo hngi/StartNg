@@ -135,7 +135,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {  $this->validate($request, [
+           'profile_pic' => ['required', 'string', 'max:500'] ]);
         
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();

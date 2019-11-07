@@ -168,9 +168,7 @@ class TutorController extends Controller
      */
       public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'profile_pic' => 'image|nullable|max:1999'
-        ]);
+        
         
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
@@ -188,6 +186,7 @@ class TutorController extends Controller
         $tutor->phone = $request->input('phone');
         $tutor->status = $request->input('status');
         $tutor->about = $request->input('about');
+        $tutor->profile_pic = $request->input('profile_pic');
         if($request->hasFile('profile_pic')){
             $tutor->profile_pic = $fileNameToStore;
         }
