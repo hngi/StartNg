@@ -446,71 +446,12 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
+                            
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Responsive web design
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -518,37 +459,7 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
+                                    This topic will cover the features and processes of building a responsive web design to meet client's requirements
                                     </div>
                                 </div>
                             </div>
@@ -557,7 +468,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Using Frameworks and libraries
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -567,16 +478,15 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                               The need of frontend frameworks and libraries across all programming langauges                                            </li>
+                                            <li>
+                                                How to use them 
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                The kind of a software project to use them with
                                             </li>
                                             <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
+                                                The problem: understand the customer requirements
                                             </li>
                                         </ul>
                                     </div>
@@ -594,7 +504,7 @@
                                 <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> User Research
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Version Control system
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -604,16 +514,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Version control system - overview
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                git version control - Introduction
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Effective team collaboration
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Challenges of git
                                             </li>
                                         </ul>
                                     </div>
@@ -624,7 +534,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Ideation
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> css
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -634,16 +544,16 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Cascading styling sheet - overview
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                            Responsive styling with css - Introduction
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Building a webpage with only css
                                             </li>
                                             <li>
-                                                The problem: understand the customer requirement
+                                                Other styling languages - overview
                                             </li>
                                         </ul>
                                     </div>
@@ -654,7 +564,7 @@
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseNine" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Wireframes
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> HTML, CSS, & JAVASCRIPT
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -664,107 +574,15 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li>
-                                                The software Development process - overview
+                                                Coding with HTML, CSS & JAVASCRIPT - overview
                                             </li>
                                             <li>
-                                                Design Pattern - definition
+                                                Choosing a focus to become the best programmer
                                             </li>
                                             <li>
-                                                The scenario in a software project
+                                                Using other languages with HTML and CSS
                                             </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -782,7 +600,7 @@
 
     <div class="container">
         <h4 class="text-center font-weight-bold pb-3">Schedule for Onsite Training</h4>
-        <p class="text-center pb-3">The HNG internship is a 3-month remote internship designed to find and develop <br> the most talented software developers.</p>
+        <p class="text-center pb-3">The HNG internship is fully remote and also does onsite training <br> with the listed schedule.</p>
 
 
         <table class="table table-hover table-bordered shadow p-3 mb-5 bg-white rounded a">
@@ -806,7 +624,7 @@
                 </tr>
                 <tr>
                     <td>1pm - 5pm</td>
-                    <th>Collaborative Learning</th>
+                    <th>Networking</th>
                 </tr>
                 <tr>
                     <td>5pm - 5:15pm</td>
