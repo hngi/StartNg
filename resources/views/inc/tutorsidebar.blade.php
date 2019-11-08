@@ -38,26 +38,13 @@
                     <i class="fa fa-book"></i>
                     <p>Create Course Content</p>
                 </a>
-            </li> 
-              <li class="{{ (request()->is('tutors/assignment')) ? 'active' : '' }}">
-                <a href="{{route('tutor.assignment')}}">
-                    <i class="fa fa-book"></i>
-                    <p>Create Assignment</p>
-                </a>
-            </li>    
-            <li class="{{ (request()->is('tutors/upload-resource')) ? 'active' : '' }}">
-                <a href="{{route('tutor.upload-resource')}}">
-                    <i class="fa fa-file"></i>
-                    <p>Upload Resources</p>
-                </a>
             </li>
-             <li class="{{ (request()->is('tutors/show-resources')) ? 'active' : '' }}">
-                <a href="{{route('tutor.show-resources')}}">
+            <!--<li>
+                <a href="upload-resource.html">
                     <i class="fa fa-file"></i>
-                    <p>Show Resources</p>
+                    <p>Upload Resource</p>
                 </a>
-            </li>
-            
+            </li>-->
 
         </ul>
     </div>

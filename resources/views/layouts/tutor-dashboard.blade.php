@@ -14,6 +14,7 @@
     <!-- CSS Files -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/paper-dashboard.css" rel="stylesheet" />
+  
 </head>
 
 <body class="">
@@ -32,7 +33,7 @@
                                 <span class="navbar-toggler-bar bar3"></span>
                             </button>
                         </div>
-                        <a class="navbar-brand" href="#pablo">TUTOR DASHBOARD</a>
+                        <a class="navbar-brand" href="">TUTOR DASHBOARD</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar navbar-kebab"></span>

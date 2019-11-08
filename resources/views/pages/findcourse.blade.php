@@ -419,7 +419,95 @@
                         @endif
                     </div>
                 </div>
-                <section class="main-field">
+
+
+    <section class="main-field">
+      <div class="find">
+          <h3>Search Courses</h3>
+          <input type="text" name="search">
+          <i class="fa fa-search"></i>
+      </div>
+
+      <div class="results">
+          <div class="result1 active-2">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+          <div class="result1">
+              <img src="https://res.cloudinary.com/dht5bpbmi/image/upload/v1570800314/Group_34_pklbgg.png" alt="JS" title="image-result" class="image-result">
+              <p class="first-result">Front End Development &nbsp; &nbsp; &nbsp; <i>Beginner</i> <span>.</span> <em>2
+                      Days</em></p>
+              <p class="second-result">
+                  <a href="#" class="online-link">ONLINE</a>
+                  <a href="#" class="free-link">FREE</a>
+              </p>
+          </div>
+      </div>
+
+  </section>
+
+
+
+                <!-- <section class="main-field">
                     @if (session('success'))
                     <div class="alert alert-success">
                         {!!  session('success') !!}
@@ -430,7 +518,7 @@
                         {{ session('error') }}
                     </div>
                     @endif
-                    <form method="post" action="{{route('search')  }}">
+                    <form method="post" action="{{route('search')}}">
                         <div class="find">
                             <h3>Search Courses</h3>
                             @csrf
@@ -441,7 +529,7 @@
                     </form>
                     <div class="results">
                     </div>
-                </section>
+                </section> -->
         <!-- Footer -->
            <footer>
                <div class="container-fluid footer-top col-lg-12">
@@ -481,7 +569,7 @@
                                    <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                                </li>
                                <li>
-                                   <a class="footer-link" href="">Blog</a>
+                                   <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                                </li>
 
                            </div>

@@ -56,11 +56,11 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'phone' => ['required', 'string', 'max:14', 'unique:users'],
+           'first_name' => ['required', 'string','min:4', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'last_name' => ['required', 'string', 'min:4','max:255','regex:/^[a-zA-Z]+$/u'],
+            'username' => ['required', 'string', 'max:255','unique:users'],
+            'email' => ['required', 'email', 'max:255','unique:users'],
+            'phone' => ['required', 'numeric', 'size:11', 'max:14'],
             'role' => 'required'
         ]);
     
@@ -91,7 +91,7 @@ class AdminController extends Controller
             $user = User::find($id);
             if($user->role == 2){
                 $admin = $user;
-                $courses = Courses::where('user_id', $id);
+                $courses = Courses::where('tutor_id', $id)->get();
             }
             else{
                 return back()->with('error', 'User not Admin'); 
@@ -137,12 +137,11 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'phone' => ['required', 'string', 'max:14'],
-            'role' => 'required'
+            'first_name' => ['required', 'string','min:4', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'last_name' => ['required', 'string', 'min:4','max:255','regex:/^[a-zA-Z]+$/u'],
+            'username' => ['required', 'string', 'max:255','unique:users'],
+            'email' => ['required', 'email', 'max:255','unique:users'],
+            'phone' => ['required', 'numeric', 'size:11', 'max:14']
         ]);
         
         $admin = User::find($id);
@@ -151,11 +150,11 @@ class AdminController extends Controller
         $admin->username = $request->input('username');
         $admin->email = $request->input('email');
         $admin->phone = $request->input('phone');
-        $admin->role = $request->input('role');
+        $admin->profile_pic = $request->input('profile_pic');
         $admin->save();
         
         return back()->with('success','Admin Successfully Updated');
-    }
+    }           
 
     /**
      * Remove the specified resource from storage.

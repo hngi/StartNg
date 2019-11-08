@@ -271,8 +271,7 @@
                     <div class="form-group w-75 mt-3">
                         <input type="text" name="course" class="form-control" required>
                     </div>
-                    <button class="btn btn-secondary py-2 px-4 mt-3"><i class="fas fa-search"></i> Find a Course</button>
-
+                    <a class="btn btn-success py-2 px-4 mt-3" href="{{route('find-course')}}"><i class="fas fa-search"></i>Find a Course</a>
                 </form>
             </div>
             <div class="col-md-6 mb-3">
@@ -398,79 +397,152 @@
         </section>
 
 <!-- What people have to say about us -->
-<section class="">
-
-    <div class="container py-5">
-        <div class="text-center mb-5">
-            <h4 class="font-weight-bold">What people have to say about us</h4>
-        </div>
-        <div class="mb-5 card border-0 rounded rounded-lg shadow bg-white">
-            <div class="card-body mx-md-5 my-2">
-                <p class="lead text-muted">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
-                <div class="d-flex justify-content-start align-items-left mt-5">
-                    <img src="https://lancer-app.000webhostapp.com/startng/images/landing/dennis.png" class="img img-responsive rounded-circle" width="100" height="100">
-                    <div class="ml-4">
-                        <p class="text-warning pb-2 my-0" >
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </p>
-                        <h6>Dennis Lagbaja</h6>
-                        <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card border-0 rounded rounded-lg shadow bg-white">
-            <div class="card-body mx-md-5 my-2">
-                <p class="lead text-muted">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks. </p>
-                <div class="d-flex justify-content-start align-items-left mt-5">
-                    <img src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" class="img img-responsive rounded-circle" width="100" height="100">
-                    <div class="ml-4">
-                        <p class="text-warning pb-2 my-0" >
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </p>
-                        <h6>Akunna Message</h6>
-                        <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <div class="col-md-6 offset-md-3 text-center pt-5 pb-5">
-            <h4>Online or Offline, We Are Here For You</h4>
-            <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.
-            </p>
-            <a href="{{asset('register')}}" class="btn btn-success pl-5 pr-5">Start
-                Learning</a>
-        </div>
 
 
-<div class="container-fluid pt-5 pb-5" style="background-color: rgba(42, 43, 42, 0.05);">
-    <div class="container pt-5 pb-5">
-        <div class="row align-items-center">
-            <div class="col-md-8 pb-5">
-                <h4 style="font-weight: bold; font-size: 40px;">Subscribe to our Newsletter</h4>
-                <p style="font-size: 20px;">Stay Updated with our latest news, discount and promotions</p>
-                {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
-                {{ csrf_field() }}
-                {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
-                {{Form::submit('Subscribe', ['class' => 'btn btn-custom ml-1 pl-5 pr-5'])}}
-                {!! form::close() !!}
-            </div>
-            <div class="col-md-4">
-                <img class="img-fluid"
-                     src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570931071/startng/newsletter_1_h3frhq.png">
 
-            </div>
-        </div>
-    </div>
-</div>
+<section class="professional-section">
+      <div class="container py-5">
+          <div class="row">
+              <div class="col-md-12 text-white text-center">
+                  <h4 class="my-4 font-weight-bold">Need Professional Help?</h4>
+                  <p class="">
+                      After 3 months of training and projects, our graduates
+                      <br> are ready to take on full-time or remote jobs at your
+                      <br> company.
+                  </p>
+                  <a href="{{route('hire')}}" class="btn btn-success my-3 py-2 px-4 mt-3">Hire a Graduate</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- https://lancer-app.000webhostapp.com/startng/images/landing/dennis.png -->
+  <section class="">
+      <div class="container py-5">
+          <div class="text-center mb-5">
+              <h4 class="font-weight-bold">What people have to say about us</h4>
+          </div>
+          <div class="mb-4 card border-0 rounded rounded-lg shadow bg-white">
+              <div class="card-body mx-md-5 my-2">
+                  <p class="lead text-muted">StartNg was indeed a Start for me on my long term path to a career switch. I literally stumbled on the application link on twitter. I liked that the classes were in written text, interns were encouraged to help each other, the learning process was great and the certificate was a welcome incentive. I'm still reeling with pride!</p>
+                  <div class="d-flex justify-content-start align-items-left mt-5">
+                      <img src="https://img.icons8.com/clouds/100/000000/user.png" class="img img-responsive rounded-circle img-thumbnail" width="100" height="100">
+                      <div class="ml-4">
+                          <p class="text-warning pb-2 my-0" >
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                          </p>
+                          <h6>Chidinma O.</h6>
+                          <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="mb-4 card border-0 rounded rounded-lg shadow bg-white">
+              <div class="card-body mx-md-5 my-2">
+                  <p class="lead text-muted">StartNg program was very helpful to me as I learned the basics of Web development and other courses relevant to the field. With several tasks, learning became interesting, I was able to practice within limited time and effectively collaborate with remote teammates.</p>
+                  <div class="d-flex justify-content-start align-items-left mt-5">
+                      <img src="https://img.icons8.com/bubbles/50/000000/user-female.png" class="img img-responsive rounded-circle img-thumbnail" width="100" height="100">
+                      <div class="ml-4">
+                          <p class="text-warning pb-2 my-0" >
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                          </p>
+                          <h6>Egesi Ndubuisi Success.</h6>
+                          <small class="text-muted"><em>Completed the Front End Developer Class</em></small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="mb-4 card border-0 rounded rounded-lg shadow bg-white">
+              <div class="card-body mx-md-5 my-2">
+                  <p class="lead text-muted">I enrolled for start StartNg program a preparatory program for the main internship HNGI. it was a wonderful experience for me and I got to learn so many new things in software development.
+                      Things like how to communicate with your team remotely through slack, how to use git and github, how to meet up with deadlines on task for each week e.t.c.</p>
+                  <div class="d-flex justify-content-start align-items-left mt-5">
+                      <img src="https://img.icons8.com/bubbles/50/000000/user-female.png" class="img img-responsive rounded-circle img-thumbnail" width="100" height="100">
+                      <div class="ml-4">
+                          <p class="text-warning pb-2 my-0" >
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                          </p>
+                          <h6>Isuma Chidera.</h6>
+                          <small class="text-muted"><em>FullStack Developer</em></small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="mb-5 card border-0 rounded rounded-lg shadow bg-white">
+              <div class="card-body mx-md-5 my-2">
+                  <p class="lead text-muted">I have always been a tech enthusiast. I started my tech journey with start.ng. Though, the duration of the program was not enough to grasp all you need to know about software development, however i bet it is a great start. The secret to being a pro is getting started, start with start.ng.</p>
+                  <div class="d-flex justify-content-start align-items-left mt-5">
+                      <img src="https://img.icons8.com/clouds/100/000000/user.png" class="img img-responsive rounded-circle img-thumbnail" width="100" height="100">
+                      <div class="ml-4">
+                          <p class="text-warning pb-2 my-0" >
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                          </p>
+                          <h6>Agboola Eniola</h6>
+                          <small class="text-muted"><em>Backend Developer</em></small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--  -->
+  <section class="">
+      <div class="container py-md-5">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <h4 class="my-4 font-weight-bold">Online or Offline, We Are Here For You</h4>
+                  <p class="text-muted ">
+                      The HNG internship is a 3-month remote internship designed to find and develop <br> the most talented software developers.
+                  </p>
+                  <a href="{{route('register')}}" class="btn btn-success my-3 py-2 px-4 mt-3">Start Learning</a>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--  -->
+  <!--  -->
+  <section class="bg-light">
+      <div class="container py-md-5 ">
+          <div class="row d-flex">
+              <div class="col-md-6 col-sm-12 order-sm-1 order-md-2">
+                  <div class="text-center mb-4">
+                      <img src="https://lancer-app.000webhostapp.com/startng/images/landing/email.png" class="img img-responsive " width="" height="">
+                  </div>
+              </div>
+              <div class="col-md-6 order-sm-2 order-md-1">
+                  <h4 class="my-2 font-weight-bold">Subscribe to our Newsletter</h4>
+                  <p class="">
+                      Stay Updated with our latest news, discount and promotions.
+                  </p>
+                  {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'my-4']) !!}
+                  {{ csrf_field() }}
+                  <div class="input-group input-group-lg mt-3">
+                  {{Form::email('email', '', ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
+                  <div class="input-group-append">
+                  {{Form::submit('Subscribe', ['class' => 'btn btn-custom'])}}
+                  </div>
+                  </div>
+                  {!! form::close() !!}
+              </div>
+          </div>
+      </div>
+  </section>
     <!-- Footer -->
 
        <footer>
@@ -511,7 +583,7 @@
                                <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                            </li>
                            <li>
-                               <a class="footer-link" href="">Blog</a>
+                               <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                            </li>
 
                        </div>

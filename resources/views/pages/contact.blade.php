@@ -151,20 +151,30 @@
   <body>
 
   @include('../inc.navbar')
-        <div class="container-fluid banner">
-        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570908542/startng/Group_411_d0xdb8.png" class="img-fluid contact" height="100">
-    </div>
+  <div class="container-fluid banner" style="margin-top:-1.5rem">
+  <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570908542/startng/Group_411_d0xdb8.png" class="img-fluid contact" height="100">
+</div>
+<div class="container-fluid search pt-5 pb-5">
+  <div class="input-group col-12 col-md-10 mx-auto pt-3 pb-3">
+      <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;">
+      <div class="input-group-append">
+          <button class="btn btn-secondary w-100 px-md-5" type="button" style="background-color: #fff; color: #44CF6C !important; border-color: #fff; border-left-color: #44CF6C;">
+              Search FAQ
+          </button>
+      </div>
+  </div>
+</div>
 
     <div class="container-fluid mt-5">
     <div class="row">
   <div class="col-sm-6">
 
       <div class="card-body">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15856.334481934015!2d3.3627260269792587!3d6.511099574643041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.5137963!2d3.3691252!4m5!1s0x103b8c58aa4e0931%3A0x9ddabc4518c15d14!2sHotels.ng%2C%203%20Birrel%20Ave%2C%20Yaba%2C%20Lagos!3m2!1d6.509180799999999!2d3.3795045999999997!5e0!3m2!1sen!2sng!4v1571971640480!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15856.334481934015!2d3.3627260269792587!3d6.511099574643041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.5137963!2d3.3691252!4m5!1s0x103b8c58aa4e0931%3A0x9ddabc4518c15d14!2sHotels.ng%2C%203%20Birrel%20Ave%2C%20Yaba%2C%20Lagos!3m2!1d6.509180799999999!2d3.3795045999999997!5e0!3m2!1sen!2sng!4v1571971640480!5m2!1sen!2sng" width="500" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-6" style="margin-top:-9rem">
          <div class="card-body">
     @include('inc.messages')
         <form method="post" action="{{route('contact.store')}}">
@@ -174,13 +184,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">First Name</label>
-                            <input type="text" name="first_name" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
+                            <input type="text" name="fname" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">Last Name</label>
-                            <input type="text" name="last_name" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
+                            <input type="text" name="lname" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
                         </div>
                     </div>
                 </div>
@@ -265,7 +275,7 @@
                                <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                            </li>
                            <li>
-                               <a class="footer-link" href="">Blog</a>
+                               <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                            </li>
 
                        </div>

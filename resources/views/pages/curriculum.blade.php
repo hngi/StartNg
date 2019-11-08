@@ -392,7 +392,7 @@
             <div class="desc">
                 <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers</p>
             </div>
-            <div  id="col" class="act-btn">
+            <div  id="col" class="act-btn mr-5">
                 @if(Auth::guest())
                 <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
@@ -476,82 +476,7 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
@@ -680,100 +605,7 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
 
                 </div>
             </div>
@@ -874,7 +706,7 @@
                                <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                            </li>
                            <li>
-                               <a class="footer-link" href="">Blog</a>
+                               <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                            </li>
 
                        </div>

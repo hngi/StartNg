@@ -255,15 +255,162 @@
         </div>
         <div class="col-md-4 offset-md-4">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 text-center">
                     <a href="https://www.youtube.com/channel/UCTmmCTH_jUmaXIMqHZK648A" class="btn btn-success pr-5 pl-5">Free Courses</a>
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-center">
                     <a href="{{route('course.index')}}" class="btn btn-success pr-5 pl-5">Paid Courses</a>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <div class="col-10 offset-1">
+      <!-- Section: Testimonials v.2 -->
+      <section class="text-center my-5">
+
+          <!-- Section heading -->
+          <h2 class="h1-responsive font-weight-bold my-5">Testimonials</h2>
+
+          <div class="wrapper-carousel-fix">
+              <!-- Carousel Wrapper -->
+              <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                  <!--Slides-->
+                  <div class="carousel-inner" role="listbox">
+                      <!--First slide-->
+                      <div class="carousel-item active">
+                          <div class="testimonial">
+                              <!--Avatar-->
+                              <div class="avatar mx-auto mb-4">
+
+                              </div>
+                              <!--Content-->
+                              <p>
+                                  <i class="fas fa-quote-left"></i> StartNg was indeed a Start for me on my long term path to a career switch. I literally stumbled on the application link on twitter. I liked that the classes were in written text, interns
+                                  were encouraged to help each other, the learning process was great and the certificate was a welcome incentive. I'm still reeling with pride!
+                              </p>
+                              <h4 class="font-weight-bold">Chidinma O.</h4>
+                              <h6 class="font-weight-bold my-3"> Completed the FrontEnd Developer</h6>
+                              <!--Review-->
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star-half-alt blue-text"> </i>
+                          </div>
+                      </div>
+                      <!--First slide-->
+                      <!--Second slide-->
+                      <div class="carousel-item">
+                          <div class="testimonial">
+                              <!--Avatar-->
+                              <div class="avatar mx-auto mb-4">
+                                  <img src="" class="rounded-circle img-fluid" alt="Second sample avatar image">
+                              </div>
+                              <!--Content-->
+                              <p>
+                                  <i class="fas fa-quote-left"></i> StartNg program was very helpful to me as I learned the basics of Web development and other courses relevant to the field. With several tasks, learning became interesting, I was able
+                                  to practice within limited time and effectively collaborate with remote teammates.
+                                  <i class="fas fa-quote-right"></i> </p>
+                              <h4 class="font-weight-bold">Egesi Ndubuisi Success</h4>
+                              <h6 class="font-weight-bold my-3">Completed the FrontEnd Developer</h6>
+                              <!--Review-->
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                          </div>
+                      </div>
+                      <!--Second slide-->
+                      <!--Third slide-->
+                      <div class="carousel-item">
+                          <div class="testimonial">
+                              <!--Avatar-->
+                              <div class="avatar mx-auto mb-4">
+                                  <img src="" class="rounded-circle img-fluid" alt="Third sample avatar image">
+                              </div>
+                              <!--Content-->
+                              <p>
+                                  <i class="fas fa-quote-left"></i>I enrolled for start StartNg program a preparatory program for the main internship HNGI. it was a wonderful experience for me and I got to learn so many new things in software development.
+                                  Things like how to communicate with your team remotely through slack, how to use git and github, how to meet up with deadlines on task for each week e.t.c
+                                  <i class="fas fa-quote-right"></i>
+                              </p>
+                              <h4 class="font-weight-bold">Isuma Chidera</h4>
+                              <h6 class="font-weight-bold my-3">FullStack Developer</h6>
+                              <!--Review-->
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="far fa-star blue-text"> </i>
+                          </div>
+                      </div>
+                      <!--Third slide-->
+                      <div class="carousel-item">
+                          <div class="testimonial">
+                              <!--Avatar-->
+                              <div class="avatar mx-auto mb-4">
+                                  <img src="" class="rounded-circle img-fluid" alt="Third sample avatar image">
+                              </div>
+                              <!--Content-->
+                              <p>
+                                  <i class="fas fa-quote-left"></i>I finally wrote my first tech article on the three basics on web development i.e. HTML, CSS and JAVASCRIPT. I also learned how to filter important information from thousands of information
+                                  <i class="fas fa-quote-right"></i>
+                              </p>
+                              <h4 class="font-weight-bold">Ubong Ndoh</h4>
+                              <h6 class="font-weight-bold my-3">Completed the FrontEnd Developer</h6>
+                              <!--Review-->
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="far fa-star blue-text"> </i>
+                          </div>
+                      </div>
+
+                      <div class="carousel-item">
+                          <div class="testimonial">
+                              <!--Avatar-->
+                              <div class="avatar mx-auto mb-4">
+                                  <img src="" class="rounded-circle img-fluid" alt="Third sample avatar image">
+                              </div>
+                              <!--Content-->
+                              <p>
+                                  <i class="fas fa-quote-left"></i>I have always been a tech enthusiast. I started my tech journey with start.ng. Though, the duration of the program was not enough to grasp all you need to know about software development,
+                                  however i bet it is a great start. The secret to being a pro is getting started, start with start.ng.
+                                  <i class="fas fa-quote-right"></i>
+                              </p>
+                              <h4 class="font-weight-bold">Agboola Eniola</h4>
+                              <h6 class="font-weight-bold my-3">Backend Developer</h6>
+                              <!--Review-->
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="fas fa-star blue-text"> </i>
+                              <i class="far fa-star blue-text"> </i>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Slides-->
+                  <!--Controls-->
+                  <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
+                      <span class="icon-prev" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
+                      <span class="icon-next" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+                  <!--Controls-->
+              </div>
+              <!-- Carousel Wrapper -->
+          </div>
+
+      </section>
+  </div>
+  <!-- Section: Testimonials v.2 -->
 
  <section class="sliding-content py-5">
         <div class="container">
@@ -338,60 +485,62 @@
             <p style="color: #3A0842;">On Start.ng, you are privileged to</p>
         </div>
         <div class="row mt-5 pt-3">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
-                            class="img-fluid ml-4 pl-5">
+                    <div class="col-md-3">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png" class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">LEARN FROM THE BEST TEACHERS</p>
-                        <p>We hire Tutors with 100% knowledge on each track. Interns are provided best andappropriate advice from tutors based on their experiences.</p>
+                    <div class="col-md-9">
+                        <p style="color: #3A0842">Learn from the Best Teachers</p>
+                        <p>
+                            We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.
+                        </p>
                     </div>
                 </div>
 
 
-
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
-                            class="img-fluid ml-4 pl-5">
-                    </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">JOIN ONLINE DEVELOPER COMMUNITY</p>
-                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
-                    </div>
 
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png" class="img-fluid ml-4 pl-5">
+                    </div>
+                    <div class="col-md-9">
+                        <p style="color: #3A0842">Join Online Developer Community</p>
+                        <p>
+                            A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row mt-5 pt-3">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
-                            class="img-fluid ml-4 pl-5">
+                    <div class="col-md-3">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png" class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">GET ACADEMIC AND TECHNICAL SUPPORT</p>
-                        <p>Interns are exposed to updated usage of some technologies and effective training on their usage is provided</p>
+                    <div class="col-md-9">
+                        <p style="color: #3A0842">Get Academic and Technical Support</p>
+                        <p>
+                            Interns are exposed to updated usage of some technologies and effective training on their usage is provided.
+                        </p>
                     </div>
                 </div>
 
+
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
-                            class="img-fluid ml-4 pl-5">
+                    <div class="col-md-3">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png" class="img-fluid ml-4 pl-5">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">EARN A CERTIFICATE</p>
-                        <p>Interns are eligible for a certificate if only they get to a certain stage of the internship.</p>
+                    <div class="col-md-9">
+                        <p style="color: #3A0842">Earn a Certifcate</p>
+                        <p>
+                            Interns are eligible for a certificate if only they get to a certain stage of the internship.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -489,7 +638,7 @@
                             <a class="footer-link" href="{{route('curriculum')}}">Curriculum</a>
                         </li>
                         <li>
-                            <a class="footer-link" href="">Blog</a>
+                            <a class="footer-link" href="http://lucid.blog/startng">Blog</a>
                         </li>
 
                     </div>
