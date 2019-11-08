@@ -606,6 +606,33 @@
                             </div>
 
 
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>
+                                                The software Development process - overview
+                                            </li>
+                                            <li>
+                                                Design Pattern - definition
+                                            </li>
+                                            <li>
+                                                The scenario in a software project
+                                            </li>
+                                            <li>
+                                                The problem: understand the customer requirement
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
@@ -653,7 +680,7 @@
                 <h4 class="font-weight-bold pb-3">Begin Your Journey to Being Certified in Your Field</h4>
                 <p class="pb-3">The HNG internship is a 3-month remote <br> internship designed to find and develop the
                     <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
-<a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
+                    <a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
                     Learning</a>
                     @if(Auth::guest())
                     <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>

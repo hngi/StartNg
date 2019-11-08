@@ -14,12 +14,21 @@
     <title>Start NG | Courses</title>
 
 <style>
-    body {
-        font-family: Nunito;
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
     }
 
-    a.nav-link:hover {
-      color: #2DCE89;
+    body {
+        font-family: 'Nunito';
+    }
+
+    a {
+        text-decoration: none;
     }
     /* Style for Navbar Starts */
     .navbar-custom li a {
@@ -46,11 +55,43 @@
     cursor: pointer;
     }
 
+    :root {
+        --primary-color: #3A0842;
+        --secondary-color: #44CF6C;
+        --default-color: #7f7979;
+        --dark-color: #2A2B2A;
+        --light-color: #D3D5D4;
+    }
+
     .body-banner {
         background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961662/startng/Group_420_naoymq.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+    .footer-top {
+        background-color: #3A0842;
+        color: #fff;
+    }
+
+    .footer-top li {
+        list-style-type: none;
+    }
+
+    .footer-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    .footer-link:hover {
+        color: #2DCE89;
+        text-decoration: none;
+    }
+
+    .footer-social {
+        background-color: #2E0435;
+        color: #fff;
     }
 </style>
 </head>
@@ -126,14 +167,8 @@
 
                 </div>
             @endif
-
-
             @php $counter = $counter + 1; @endphp
-
         @endforeach
-
-
-
     </div>
 
     <div class="container-fluid phones" style="background-color: #2A2B2A;">
@@ -166,19 +201,34 @@
         </div>
     </div>
 
-    <div class="container mt-5 mb-5">
-        <div class="col-md-8 offset-md-0 col-lg-8 offset-lg-0">
-            <h4 class="font-weight-bold">Subscribe to our Newsletter</h4>
-            <p>Stay Updated with our latest news, discount and promotions</p>
-            {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'form-inline']) !!}
-            {{ csrf_field() }}
-            {{Form::email('email', '', ['class' => 'form-control col-md-8', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
-            {{Form::submit('Subscribe', ['class' => 'btn btn-custom ml-1 pl-5 pr-5'])}}
-            {!! form::close() !!}
+    <section class="bg-light">
+        <div class="container py-md-5 pt-5">
+            <div class="row d-flex">
+                <div class="col-md-6 col-sm-12 order-sm-1 order-md-2 pt-3">
+                    <div class="text-center mb-4">
+                        <img src="https://lancer-app.000webhostapp.com/startng/images/landing/email.png" class="img img-responsive " width="" height="">
+                    </div>
+                </div>
+                <div class="col-md-6 order-sm-2 order-md-1 pt-3">
+                    <h4 class="my-2 font-weight-bold">Subscribe to our Newsletter</h4>
+                    <p class="">
+                        Stay Updated with our latest news, discount and promotions.
+                    </p>
+                    {!! Form::open(['action' => 'SubscriptionsController@store', 'method' => 'POST', 'class' => 'my-4']) !!}
+                    {{ csrf_field() }}
+                    <div class="input-group input-group-lg mt-3">
+                    {{Form::email('email', '', ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'Enter your email address'])}}
+                    <div class="input-group-append">
+                    {{Form::submit('Subscribe', ['class' => 'btn btn-success'])}}
+                    </div>
+                    </div>
+                    {!! form::close() !!}
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
     <!-- Footer -->
-    <footer>
+    <footer >
         <div class="container-fluid footer-top col-lg-12">
             <div class="container col-md-12 p-5">
                 <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
