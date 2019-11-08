@@ -184,13 +184,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">First Name</label>
-                            <input type="text" name="fname" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" required>
+                        <input type="text" name="fname" pattern = "[A-Za-z]{1,32}" title = "Please input your First Name" class="form-control" id="Fname" value="{{old('fname')}}"    required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">Last Name</label>
-                            <input type="text" name="lname" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required>
+                            <input type="text" name="lname" pattern = "[A-Za-z]{1,32}" title = "Please input your Last Name" class="form-control" id="Lname" required       value="{{old('lname')}}" >
                         </div>
                     </div>
                 </div>
@@ -204,7 +204,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="usr" class="pb-1">Phone Number</label>
-                            <input type="text" name="phone" pattern = "^[0-9\)\(+-]+$" title = "Please input a correct phone number" class="form-control" id="Pnum" required>
+                            <input type="text" name="phone"       value="{{old('phone')}}"    pattern = "^[0-9\)\(+-]+$" title = "Please input a correct phone number" class="form-control" id="Pnum" required>
                         </div>
                     </div>
                 </div>
@@ -212,7 +212,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="comment" class="pb-1">Write Your Message</label>
-                            <textarea name="message" class="form-control" rows="5" id="comment" required></textarea>
+                            <textarea name="message" class="form-control" rows="5" id="comment" required>{{old('message')}}</textarea>
                         </div>
                     </div>
                 </div>

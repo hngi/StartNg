@@ -38,7 +38,6 @@ class CourseContentController extends Controller
             return view("$user_role.create-course-content")->with('courses', $courses);
         }
     }
-
     /**
      * Store a newly created resource in storage.
      *

@@ -56,7 +56,7 @@
                                         <div class="col-md-5 pr-1">
                                             <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" class="form-control" >
                                             </div>
                                         </div>
                                         <div class="col-md-2 px-1">
