@@ -244,6 +244,8 @@
 <body>
 
     @include('../inc.navbar')
+    
+  @include('inc.messages')
 
   <section class="jumbotron rounded-0 px-0 bg-dark py-5 mb-0">
       <div class="container">
