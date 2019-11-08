@@ -125,105 +125,96 @@
                 Graduate</a>
             </div>
         </div>
-        <div class="container-fluid mt-5 mb-5 pb-5 pt-5">
-            <div class="row align-items-center pb-5 pt-5">
-                <div class="col-md-6">
-                    <div class="col-md-8 offset-md-2">
-                        <h4 class="pb-3" style="font-weight: bold; font-size: 25px;">Versatile</h4>
-                        <p>Our graduates are versatile , dedicated & equipped with the right skill sets to adapt
-                            <br>to various areas of the workplace.<br> Our intensive 3 months program ensures our graduates are trained <br>with necessary skill sets needed for any workplace.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570957521/startng/Rectangle_26_jwplh1.png">
-                </div>
-            </div>
-        </div>
+        <div class="container mt-2 mb-5">
+          <div class="row align-items-center pb-5 pt-5">
+              <div class="col-md-6 col-lg-6">
+                  <div class="col-md-8 col-lg-8 offset-md-2">
+                      <h4 class="pb-3" style="font-weight: bold; font-size: 156.25%;">Versatile</h4>
+                      <p>Our graduates are versatile, dedicated,Lorem <br> ipsum dolor sit amet, consectetur adipiscing
+                          <br> elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Non diam <br> phasellus vestibulum lorem sed.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                  <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570957521/startng/Rectangle_26_jwplh1.png">
+              </div>
+          </div>
+      </div>
         <div class="col-md-6 offset-md-3 text-center">
             <h4 class="pt-5 pb-5">Our graduates have acquired the latest skills</h4>
         </div>
         <div class="col-md-10 offset-md-1">
-            <div class="row text-center pb-3">
-                <div class="col-md-4">
-                    <img class="img-fluid w-25 mb-4"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958135/startng/Group_408_stke6s.png">
-                    <p style="font-weight: bold;">Frontend Development</p>
-                    <p>HTML, CSS, JavaScript, <br> Boostrap, JQuery</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid w-25 mb-4"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_409_lho37u.png">
-                    <p style="font-weight: bold;">Backend Development</p>
-                    <p>PHP, Python, Java,</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid w-25 mb-4"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_410_tzprqb.png">
-                    <p style="font-weight: bold;">UI/UX Design</p>
-                    <p>User research, <br> Protoyping, Wireframing</p>
-                </div>
+        <div class="row text-center pb-3">
+            <div class="col-md-4">
+                <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958135/startng/Group_408_stke6s.png">
+                <p style="font-weight: bold;">Frontend Development</p>
+                <p>HTML, CSS, JavaScript, <br> Boostrap, JQuery</p>
             </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <img class="img-fluid w-25 mb-4"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_411_jlcykp.png">
-                    <p style="font-weight: bold;">Frontend Development</p>
-                    <p>HTML, CSS, JavaScript, <br> Boostrap, JQuery</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid w-25 mb-4"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_412_jrwpdt.png">
-                    <p style="font-weight: bold;">Backend Development</p>
-                    <p>PHP, Python, Java,</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid w-25 mb-4"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_413_h4wy7a.png">
-                    <p style="font-weight: bold;">UI/UX Design</p>
-                    <p>User research, <br> Protoyping, Wireframing</p>
-                </div>
+            <div class="col-md-4">
+                <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_409_lho37u.png">
+                <p style="font-weight: bold;">Backend Development</p>
+                <p>PHP, Python, Java,</p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_410_tzprqb.png">
+                <p style="font-weight: bold;">UI/UX Design</p>
+                <p>User research, <br> Protoyping, Wireframing</p>
             </div>
         </div>
-        <div class="container pb-5 pt-5">
-            <div class="row pt-5 pb-5 align-items-center">
-                <div class="col-md-6">
-                    <img class="img-fluid"
-                    src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958760/startng/Rectangle_27_icxcps.png">
-                </div>
-                <div class="col-md-6">
-                    <div class="col-md-8 offset-md-2">
-                        <h4 class="pb-4" style="font-weight: bold;">Remote Flexibility</h4>
-                        <p>Our graduates are taught how to be effective remote employees . <br> They are trained to connect & work digitally at any time with <br>employers and clients around the world. With the rise in demand for remote <br> work, we ensure our graduates are up to date <br> with the latest practices to fill in these roles suitably.</p>
-                    </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_411_jlcykp.png">
+                <p style="font-weight: bold;">Frontend Development</p>
+                <p>HTML, CSS, JavaScript, <br> Boostrap, JQuery</p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_412_jrwpdt.png">
+                <p style="font-weight: bold;">Backend Development</p>
+                <p>PHP, Python, Java,</p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_413_h4wy7a.png">
+                <p style="font-weight: bold;">UI/UX Design</p>
+                <p>User research, <br> Protoyping, Wireframing</p>
+            </div>
+        </div>
+    </div>
 
-                </div>
-            </div>
-        </div>
+          <div class="container pt-5">
+              <div class="row pt-5 pb-5 align-items-center">
+                  <div class="col-md-6">
+                      <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958760/startng/Rectangle_27_icxcps.png">
+                  </div>
+                  <div class="col-md-6">
+                      <div class="col-md-8 offset-md-2">
+                          <h4 class="pb-4 pt-4" style="font-weight: bold;">Remote Flexibility</h4>
+                          <p>Our graduates are taught how to be effective <br> remote employees. Lorem ipsum dolor sit <br> amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore
+                              <br> magna aliqua. Non diam phasellus vestibulum
+                              <br> lorem sed.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
         <div class="container pb-5 pt-5">
-            <h4 class="text-center font-weight-bold pb-5">Big companies are hiring our graduates</h4>
-            <div class="col-md-10 offset-md-1 pb-5">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img class="img-fluid"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959260/startng/Vector_qy0hzu.png">
-                    </div>
-                    <div class="col-md-3">
-                        <img class="img-fluid"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959261/startng/Rectangle_cgpe2w.png">
-                    </div>
-                    <div class="col-md-3">
-                        <img class="img-fluid"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959261/startng/Vector1_hidr5z.png">
-                    </div>
-                    <div class="col-md-3">
-                        <img class="img-fluid"
-                        src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959260/startng/flutterwave_brmhoe.png">
-                    </div>
-                </div>
-            </div>
-        </div>
+          <h4 class="text-center font-weight-bold pb-5">Big companies are hiring our graduates</h4>
+          <div class="col-md-10 offset-md-1">
+              <div class="row">
+                  <div class="col-md-3 mb-5">
+                      <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959260/startng/Vector_qy0hzu.png">
+                  </div>
+                  <div class="col-md-3 mb-5">
+                      <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959261/startng/Rectangle_cgpe2w.png">
+                  </div>
+                  <div class="col-md-3 mb-5">
+                      <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959261/startng/Vector1_hidr5z.png">
+                  </div>
+                  <div class="col-md-3 mb-5">
+                      <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570959260/startng/flutterwave_brmhoe.png">
+                  </div>
+              </div>
+          </div>
+      </div>
         <div class="container-fluid mb-5 pb-5">
             <div class="row align-items-center pb-5 pt-5">
                 <div class="col-md-6">
@@ -244,25 +235,35 @@
             <div class="col-md-10 offset-md-1 pt-5 pb-5">
                 <h4 class="text-center font-weight-bold pb-3">Learn more about hiring our grads</h4>
                 <p class="text-center font-weight-bold pb-5">Fill out the form and we will get in touch.</p>
-                <div class="row pb-4" style="margin-left: 25%">
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+
                     </div>
-                    <div class="col-md-4">
-                        <input type="email" class="form-control" placeholder="Email Address">
-                    </div>
-                </div>
-                <div class="row"  style="margin-left: 25%">
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Company Name">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Job Title">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                        </div>
                     </div>
                 </div>
-                <a class="btn btn-secondary col-md-2 offset-md-5 mt-5">Subscribe</a>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Job Title">
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-secondary col-md-2 offset-md-5 mt-3">Subscribe</a>
             </div>
-        </div>
+          </div>
+
         <!-- Footer -->
            <footer>
                <div class="container-fluid footer-top col-lg-12">
