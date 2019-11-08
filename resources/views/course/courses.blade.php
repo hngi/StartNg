@@ -19,7 +19,6 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
         font-family: 'Nunito', sans-serif;
     }
 
@@ -33,6 +32,11 @@
     /* Style for Navbar Starts */
     .navbar-custom li a {
         color: #000;
+    }
+
+    .navbar-custom li a:hover {
+      color: #2DCE89;
+      text-decoration: none;
     }
     .btn-success {
         background-color: #2DCE89;
@@ -63,6 +67,14 @@
         --light-color: #D3D5D4;
     }
 
+    .custom-toggler .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+
+      .custom-toggler.navbar-toggler {
+          border-color: #000;
+      }
+
     .body-banner {
         background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570961662/startng/Group_420_naoymq.png');
         background-size: cover;
@@ -92,6 +104,10 @@
     .footer-social {
         background-color: #2E0435;
         color: #fff;
+    }
+
+    .navbar-toggler{
+      color: #f00 !important;
     }
 </style>
 </head>
@@ -196,7 +212,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12 mt-4 mb-3">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572635161/startng/Group_227_fzkkii.png" class="img-fluid w-75" style="transform: scaleY(1.3); height: 70vh;">
+                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572635161/startng/Group_227_fzkkii.png" class="img-fluid w-75" style="height: 70vh; margin:1rem 2rem">
             </div>
         </div>
     </div>
@@ -316,7 +332,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 </body>
 
 </html>
