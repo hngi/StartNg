@@ -138,7 +138,7 @@ class AdminController extends Controller
     {
         $this->validate($request, [
             'first_name' => ['required', 'string','min:4', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
-            'last_name' => ['required', 'string', 'min:4','max:255','regex:/^[a-zA-Z]+$/u'],
+            'last_name' => ['required', 'string', 'min:4','max:255','regex:/^[a-zA- Z]+$/u'],
             'username' => ['required', 'string', 'max:255','unique:users'],
             'email' => ['required', 'email', 'max:255','unique:users'],
             'phone' => ['required', 'numeric', 'size:11', 'max:14']

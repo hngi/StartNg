@@ -15,7 +15,7 @@
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                     <label>Username</label>
-                                                    <input type="text" name="username" class="form-control">
+                                                <input type="text" name="username" class="form-control" value="{{old('username')}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 px-1">
@@ -23,7 +23,7 @@
                                             <div class="col-md-5 pl-1">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" name="email" class="form-control">
+                                                    <input type="email" name="email" class="form-control" value="{{old('email')}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -31,13 +31,13 @@
                                             <div class="col-md-6 pr-1">
                                                 <div class="form-group">
                                                     <label>First Name</label>
-                                                    <input type="text" name="first_name" class="form-control">
+                                                    <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 pl-1">
                                                 <div class="form-group">
                                                     <label>Last Name</label>
-                                                    <input type="text" name="last_name" class="form-control">
+                                                    <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -45,7 +45,7 @@
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Phone Number</label>
-                                                    <input type="tel" name="phone" class="form-control">
+                                                    <input type="tel" name="phone" class="form-control" value="{{old('phone')}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
@@ -57,7 +57,7 @@
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label>Role</label><br>
-                                                    <input type="radio" name="role" value="2" class="form-check-label">
+                                                    <input type="radio" name="role" value="2" class="form-check-label" >
                                                     <label class="form-check-label"> Admin </label><br>
                                                     <input type="radio" name="role" value="1" class="form-check-label">
                                                     <label class="form-check-label"> Tutor </label>

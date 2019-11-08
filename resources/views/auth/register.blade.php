@@ -214,13 +214,13 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">First Name:</label>
-                                <input type="text" name="first_name" class="form-control" id="firstName" placeholder="Your First Name" required>
+                            <input type="text" name="first_name" class="form-control" id="firstName" placeholder="Your First Name" value="{{old('first_name')}}"  required  >
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">Last Name:</label>
-                                <input type="text" name="last_name" class="form-control" id="lastname" placeholder="Your Last Name" required>
+                                <input type="text" name="last_name" class="form-control" id="lastname" placeholder="Your Last Name" value="{{old('last_name')}}"  required>
                             </div>
                         </div>
                     </div>
@@ -228,13 +228,13 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">Username:</label>
-                                <input type="text" name="username" class="form-control" id="username" placeholder="Your Unique Username" required>
+                                <input type="text" name="username" class="form-control" id="username" placeholder="Your Unique Username" value="{{old('username')}}" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">Email Address:</label>
-                                <input type="text" @error('email') is-invalid @enderror  name="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+                                <input type="text" @error('email') is-invalid @enderror  name="email" class="form-control" id="email" placeholder="Enter Your Email Address" value="{{old('email')}}" required>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -248,7 +248,7 @@
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">Password:</label>
                                 <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                                <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password" required onkeyup='check();'>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password" value="{{old('password')}}" onkeyup='check();' required>
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -259,7 +259,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">Confirm Password:</label>
-                                <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="Please Retype Your Password" required onkeyup='check();'><span id='message'></span>
+                                <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="Please Retype Your Password" value="{{old('password_confirmation')}}" onkeyup='check();' required><span id='message'></span>
                             </div>
                         </div>
                     </div>
@@ -267,7 +267,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="usr" style="font-weight: bold;">Mobile Number:</label>
-                                <input type="text" name="phone" class="form-control" id="mobileNumber" placeholder="Enter Phone Number" required>
+                                <input type="text" name="phone" class="form-control" id="mobileNumber" placeholder="Enter Phone Number" value="{{old('phone')}}">
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                 e.g. +2348101234567
                                 </small>

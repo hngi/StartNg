@@ -208,11 +208,11 @@
                             <div class="card-body">
                                 <div class="form-label-group">
                                     <label for="usr" style="font-weight: bold;">Email:</label>
-                                    <input type="text" name="email" class="form-control" id="usr" placeholder="Your Email Address" required autofocus>
+                                    <input type="text" name="email" class="form-control" id="usr" placeholder="Your Email Address"   value="{{old('email')}}"     required autofocus >
                                 </div><br>
                                 <div class="form-label-group">
                                     <label for="usr" style="font-weight: bold;">Password:</label>
-                                    <input type="password" name="password" id="input-pwd" class="form-control" placeholder="Your Password" minlength="8" maxlength="21" required>
+                                    <input type="password" name="password" id="input-pwd" class="form-control"   placeholder="Your Password" minlength="8" maxlength="21" required>
                                     <span toggle="#input-pwd" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
