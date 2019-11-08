@@ -519,7 +519,7 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png" class="img-fluid ml-4 pl-5">
+                        <img src="https://res.cloudinary.com/adetohun/image/upload/v1572495398/Group_300.png" class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-9">
                         <p style="color: #3A0842">Get Academic and Technical Support</p>
@@ -530,11 +530,12 @@
                 </div>
 
 
+
             </div>
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png" class="img-fluid ml-4 pl-5">
+                        <img src="https://res.cloudinary.com/adetohun/image/upload/v1572495398/Group_306.png" class="img-fluid ml-4 pl-5">
                     </div>
                     <div class="col-md-9">
                         <p style="color: #3A0842">Earn a Certifcate</p>
