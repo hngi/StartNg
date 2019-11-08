@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Assignment;
+use App\Courses;
+use App\RegisteredCourses;
+use App\CourseContent;
+use App\Submission;
+use App\User;
 
 class SubmissionController extends Controller
 {
@@ -23,6 +29,18 @@ class SubmissionController extends Controller
             $courses = Courses::where('tutor_id', auth()->user()->id)->get();
             $contents = CourseContent::all();
             $assignments = Assignment::all();
+            $submissions = Submission::all();
+            $students = User::where('role', 0)->get();
+
+            $data = array(
+                'courses' => $courses,
+                'assignments' => $assignments,
+                'contents' => $contents,
+                'submissions' => $submissions,
+                'students' => $students
+            );
+
+            return view("$user_role.submissions")->with($data);
         }
     }
 
@@ -33,7 +51,26 @@ class SubmissionController extends Controller
      */
     public function create()
     {
-        //
+        $role = auth()->user()->role;
+        if($role==0){
+            $user_role = 'user';
+            $registered_courses = RegisteredCourses::where('user_id', auth()->user()->id)->get();
+            $courses = Courses::all();
+            $contents = CourseContent::all();
+            $assignments = Assignment::where('active', 1)->get();
+
+            $data = array(
+                'registered_courses' => $registered_courses,
+                'courses' => $courses,
+                'assignments' => $assignments,
+                'contents' => $contents
+            );
+
+            return view('user.create-submission')->with($data);
+        }
+        else{
+            return back()->with('error', 'Unauthorized Permission');
+        }
     }
 
     /**
@@ -44,7 +81,23 @@ class SubmissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile('submission')){
+            $filenameWithExt = $request->file('submission')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('submission')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('submission')->storeAs('public/submisssions', $fileNameToStore);
+        } else {
+            $fileNameToStore = '';
+        }
+
+        $submission = new Submission;
+        $submission->score = 0;
+        $submission->assignment_id = $request->input('assignment');
+        $submission->user_id = auth()->user()->id;
+        $submission->file = $fileNameToStore;
+        $submission->save();
+        return back()->with('success', 'Assignment submitted');
     }
 
     /**

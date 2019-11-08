@@ -46,6 +46,12 @@
                             <p>View Assignments</p>
                         </a>
                     </li>
+                    <li class="{{ (request()->is('submission/create')) ? 'active' : '' }}">
+                        <a href="{{route('submission.create')}}">
+                            <i class="fa fa-book"></i>
+                            <p>Submissions</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

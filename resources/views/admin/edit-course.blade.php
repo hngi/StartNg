@@ -48,7 +48,7 @@
                                     <div class="row">
                                         <div class="col-md-4 pl-1">
                                             <div class="form-group">
-                                                <label>Role:</label><br>
+                                                <label>Tutor:</label><br>
                                                 @foreach($users as $user)
                                                 @if($user->role != 0)
                                                 <input type="radio" name="tutor" value="{{$user->id}}" class="form-control">
