@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -15,7 +16,7 @@
     <title>Curriculum</title>
 <style>
          body {
-            font-family: Nunito;
+            font-family: 'Poppins', sans-serif;
         }
 
         .navbar-custom li a {
@@ -343,7 +344,7 @@
               </div>
               <div class="col-md-6">
                   <h4 class="font-weight-bold" style="font-size: 1.25rem">Learn Anywhere, Anytime, With Other Creatives</h4>
-                  <p class="exp">The HNG internship is a 3-month remote <br> internship designed to find and develop the <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
+                  <p class="exp">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). </p>
                   <a href="{{route('about')}}" class="more">Learn more >></a>
               </div>
             </div>
@@ -392,11 +393,11 @@
             <div class="desc">
                 <p>The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers</p>
             </div>
-            <div  id="col" class="act-btn">
+            <div id="col" class="act-btn">
                 @if(Auth::guest())
-                <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                <a class="btn btn-custom pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
-                <a class="btn btn-custom ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                <a class="btn btn-custom pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
                 @endif
             </div>
           </div>
@@ -450,7 +451,7 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Tracking
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -476,88 +477,13 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        Here you go with the content of accordion's heading 3. You may place textual information, images etc. here.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h4 class="panel-title">
                                         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
+                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Data Visualization
                                             <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
                                         </a>
@@ -680,84 +606,7 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
 
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>
-                                                The software Development process - overview
-                                            </li>
-                                            <li>
-                                                Design Pattern - definition
-                                            </li>
-                                            <li>
-                                                The scenario in a software project
-                                            </li>
-                                            <li>
-                                                The problem: understand the customer requirement
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-<<<<<<< HEAD
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
-=======
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseThree">
-                                            <i class="short-full glyphicon glyphicon-plus" style="color:#000;"></i> Lorem Ipsum
-                                            <i class="fa fa-plus float-right" aria-hidden="true"></i>
-
->>>>>>> parent of afefcc32... Added curriculum page contents
                                         </a>
                                     </h4>
                                 </div>
@@ -832,8 +681,7 @@
                 <h4 class="font-weight-bold pb-3">Begin Your Journey to Being Certified in Your Field</h4>
                 <p class="pb-3">The HNG internship is a 3-month remote <br> internship designed to find and develop the
                     <br> most talented software developers. Everyone is <br> welcome to participate (there is no entrance <br> exam). </p>
-<a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start
-                    Learning</a>
+
                     @if(Auth::guest())
                     <a class="btn btn-success pl-5 pr-5 mb-4" href="{{route('register')}}" style="background-color:#44CF6C; color: #fff; border-color: #44CF6C;">Start Learning</a>
                     @else

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -55,7 +56,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Poppins', sans-serif;
         }
         a {
         text-decoration: none;
@@ -216,7 +217,7 @@
 
     <div class="container-fluid banner pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center pt-5 pb-5 mb-5">
-            <p class="pb-5 mb-5" style="color: #3A0842;">A platform for learning programming <br> where anyone, anywhere
+            <p class="pb-5 mb-5 lead font-weight-light" style="color: #3A0842;">A platform for learning programming <br> where anyone, anywhere
                 in the world <br> can join and become
                 <br> a better programmer
             </p>
@@ -251,28 +252,32 @@
 
     <div class="container-fluid loren-ipsum pt-5 pb-5">
         <div class="col-md-6 offset-md-3 text-center">
-            <p style="color: #fff;"> You can have access to our free courses in Web development, Machine learning,  <br> and Digital Marketing.We have also made available paid courses that would give<br> maximum and intense information about any course <br>you u will be interested in and you will have the opportunity to get <br>your hands on enough practicals and projects of which at the end of the course, certificates will be issued.<br> </p>
+            <p style="color: #fff;"> You can have access to our free courses in Web Development, Machine Learning, and Digital Marketing. We have also made available paid courses that would give maximum and intense information about any course you will be interested in and you will have the opportunity to get your hands on enough practicals and projects of which at the end of the course, certificates will be issued.</p>
         </div>
         <div class="col-md-4 offset-md-4">
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 text-center">
                     <a href="https://www.youtube.com/channel/UCTmmCTH_jUmaXIMqHZK648A" class="btn btn-success pr-5 pl-5">Free Courses</a>
                 </div>
-                <div class="col-6">
+                <div class="col-6 text-center">
                     <a href="{{route('course.index')}}" class="btn btn-success pr-5 pl-5">Paid Courses</a>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+
  <section class="sliding-content py-5">
+     <h2 class="text-center">Testimonials</h2>
         <div class="container">
             <div class="our-students my-4 py-4 mx-4">
                 <div>
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/b_rgb:ffffff,bo_7px_solid_rgb:ffffff,q_97,r_29/v1571318326/startng/icons8-user-80_espeij.png" alt='Agent picture' />
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -286,7 +291,7 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color: #44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/b_rgb:ffffff,bo_7px_solid_rgb:ffffff,q_97,r_29/v1571318326/startng/icons8-user-80_espeij.png" alt='Agent picture' />
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -303,7 +308,7 @@
                         <div class="card-header" style="height: 110px; background-color: #3A0842;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
 
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/b_rgb:ffffff,bo_7px_solid_rgb:ffffff,q_97,r_29/v1571318326/startng/icons8-user-80_espeij.png" alt='Agent picture' />
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -317,7 +322,7 @@
                     <div class="card rounded-0">
                         <div class="card-header" style="height: 110px; background-color:#44CF6C;">
                             <div class="" style="overflow:hidden; height:100px; width:100px; border-radius:50%; margin: 50px auto;">
-                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/message/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566597822/personal%20and%20school%20images/RAW_9_i7w8k2.jpg" alt='Agent picture' />
+                                <img class="img-fluid"  width="120" height="auto" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/b_rgb:ffffff,bo_7px_solid_rgb:ffffff,q_97,r_29/v1571318326/startng/icons8-user-80_espeij.png" alt='Agent picture' />
                             </div>
                         </div>
                         <div class="card-body mt-5">
@@ -337,61 +342,64 @@
         <div class="col-md-6 offset-md-3 text-center">
             <p style="color: #3A0842;">On Start.ng, you are privileged to</p>
         </div>
-        <div class="row mt-5 pt-3">
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
-                            class="img-fluid ml-4 pl-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row mt-5 pt-3">
+                    <div class="col-2">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png" class="img-fluid ml-md-2 pl-md-2">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">LEARN FROM THE BEST TEACHERS</p>
-                        <p>We hire Tutors with 100% knowledge on each track. Interns are provided best andappropriate advice from tutors based on their experiences.</p>
+                    <div class="col-9">
+                        <p style="color: #3A0842">Learn from the Best Teachers</p>
+                        <p>
+                            We hire Tutors with 100% knowledge on each track. Interns are provided best and appropriate advice from tutors based on their experiences.
+                        </p>
                     </div>
                 </div>
 
 
-
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
-                            class="img-fluid ml-4 pl-5">
-                    </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">JOIN ONLINE DEVELOPER COMMUNITY</p>
-                        <p>A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.</p>
-                    </div>
 
+            <div class="col-md-6">
+                <div class="row mt-5 pt-3">
+                    <div class="col-2">
+                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png" class="img-fluid ml-md-2 pl-md-2">
+                    </div>
+                    <div class="col-9">
+                        <p style="color: #3A0842">Join Online Developer Community</p>
+                        <p>
+                            A 24-hour functioning online community is made available for interns to learn from each other and communicate with senior developers. They also would not miss out on important information about events and meetups.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5 pt-3">
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_412_furoek.png"
-                            class="img-fluid ml-4 pl-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row mt-5 pt-3">
+                    <div class="col-2">
+                        <img src="https://res.cloudinary.com/adetohun/image/upload/v1572495398/Group_300.png" class="img-fluid ml-md-2 pl-md-2">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">GET ACADEMIC AND TECHNICAL SUPPORT</p>
-                        <p>Interns are exposed to updated usage of some technologies and effective training on their usage is provided</p>
+                    <div class="col-9">
+                        <p style="color: #3A0842">Get Academic and Technical Support</p>
+                        <p>
+                            Interns are exposed to updated usage of some technologies and effective training on their usage is provided.
+                        </p>
                     </div>
                 </div>
 
+
+
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570918022/startng/Group_414_pycdu8.png"
-                            class="img-fluid ml-4 pl-5">
+            <div class="col-md-6">
+                <div class="row mt-5 pt-3">
+                    <div class="col-2">
+                        <img src="https://res.cloudinary.com/adetohun/image/upload/v1572495398/Group_306.png" class="img-fluid ml-md-2 pl-md-2">
                     </div>
-                    <div class="col-md-8">
-                        <p style="color: #3A0842">EARN A CERTIFICATE</p>
-                        <p>Interns are eligible for a certificate if only they get to a certain stage of the internship.</p>
+                    <div class="col-9">
+                        <p style="color: #3A0842">Earn a Certifcate</p>
+                        <p>
+                            Interns are eligible for a certificate if only they get to a certain stage of the internship.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -404,10 +412,12 @@
             <p style="color: #3A0842;">Do you know you can Enrol for</p>
             <p style="color: #3A0842; font-weight: bold;">FREE COMPLETE BEGINNER SOFTWARE DEVELOPMENT TRAINING</p>
                  @if(Auth::guest())
-                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
+                 <div class="text-center">
+                 <a class="btn btn-success  pl-5 pr-5" href="{{route('register')}}">Start Learning</a>
                 @else
-                 <a class="btn btn-success ml-5 pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
+                 <a class="btn btn-success pl-5 pr-5" href="{{route('dashboard')}}">Start Learning</a>
                   @endif
+                 </div>
         </div>
     </div>
 </section>
@@ -427,11 +437,13 @@
                     </div>
                 </div>
             <div class="col-md-6 text-center pb-2">
-                <h4 style="color: #7F5A83; font-weight: bold;">How It All Started</h4>
-                <p>Start.ng was going to church and she forgot to ferdsdscsd <br> sdsdnd dffdss wesa dsea wxli sde zdxd
-                    asw fdesd <br> fdvdfvddscd sdd fvvdfvdf sds dcdsc dfvdfvdf vscscsd <br> dscsdc dvsdvsdvsdsvsdvsdsd
-                    sdvsdv vfv vfv sdcd fvfv dede <br> ws a as ff g ss ddcdd fr es waa dde saw asz cde ers ffggt <br>
-                    sdawd dfdv ddv dssdsx xsccdvdvf ss day that a woman <br> goes to church to meet with Mick Jagger</p>
+                <h4 class="mt-4" style="color: #7F5A83; font-weight: bold;">How It All Started</h4>
+                <p>
+                    Start.ng started as a leading online learning platform for programming courses nationwide and
+                across Africa and the world. Our goal is to eradicate illetracy across Africa, equipping each students
+                with knowledge and character needed to excel anywhere
+                in the world.
+                </p>
             </div>
         </div>
     </div>

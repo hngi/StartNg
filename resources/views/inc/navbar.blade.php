@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
-    <div class="container col-lg-12 pl-5 pr-3">
+    <div class="container col-lg-12 pl-5">
         <a href="/" class="navbar-brand"><img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png"></a>
-        <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000;">
+        <button class="navbar-toggler float-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar9" style="color: #000; margin-right:-0.5rem">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse" id="navbar9">
@@ -45,4 +45,3 @@
         </div>
     </div>
 </nav>
-<br><br>
