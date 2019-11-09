@@ -420,7 +420,7 @@
             left: 20%;
         }
     }
-    
+
     @media only screen and (min-width: 576px) {
         .content {
             width: 80%;
@@ -429,7 +429,7 @@
             left: 20%;
         }
     }
-    
+
     @media only screen and (min-width: 798px) {
         .content {
             width: 60%;
@@ -439,7 +439,7 @@
         }
     }
     /* for screen size lesser than 802px.... the point where courses in search list becomes clumsy */
-    
+
     @media only screen and (max-width: 802px) {
         .find i {
             left: 16%;
@@ -455,9 +455,9 @@
             padding: 4px;
         }
     }
-    
+
     @media only screen and (min-width: 992px) {}
-    
+
     @media only screen and (min-width: 1200px) {
         .content {
             width: 35%;
@@ -523,7 +523,8 @@
                         @endforeach
                         </p>
                     </div>
-
+                    </div>
+                </section>
                 <!-- Footer -->
         <footer>
             <div class="container-fluid footer-top col-lg-12">
