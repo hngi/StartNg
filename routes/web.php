@@ -39,6 +39,7 @@ Route::get('/disable/tutor/{id}', 'TutorController@disable')->name('tutors.disab
 Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('schedule', 'ScheduleController');
+Route::resource('submission', 'SubmissionController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
@@ -67,7 +68,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //this is returning the file-upload page with the files
 Route::resource('files', 'FileController');
-// //this is running a method to store the resources uploaded
-// Route::post('/upload-resource/', 'FilesController@store')->name('upload-resource'); 
-//  //this route will when the user clicks to download a file on the file-upload page
-// Route::get('/upload-resource/download/{file}', 'FilesController@download')->name('download-resource');
