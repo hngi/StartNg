@@ -74,7 +74,7 @@ class AdminController extends Controller
     $admin->role = $request->input('role');
     $admin->save();
     
-    return back()->with('success','Admin Successfully Updated');
+    return back()->with('success','Admin Successfully Created');
     }
 
     /**
