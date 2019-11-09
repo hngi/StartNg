@@ -21,14 +21,18 @@
                                             <div class="col-md-2 px-1">
                                                 <div class="form-group">
                                                     <label>Course</label>
-                                                    @foreach($courses as $course)
-                                                    <input type="radio" name="course" value="{{$course->id}}" class="form-control">{{$course->title}}
-                                                    @endforeach
+                                                    <select name="course" class="form-control" aria-describedby="basic-addon1">
+                                                     <option >Select</option>
+                                                       @foreach($courses as $course)
+                                                        <option  class="form-control" value="{{$course->id}}">
+                                                        {{$course->title}}</option>
+                                                        @endforeach
+                                                     </select>
                                                 </div>
-                                            </div>
+                                                </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-10">
                                                 <div class="form-group">
                                                     <label>Content Details</label>
                                                     <textarea class="form-control" required name="details" rows="4"></textarea>

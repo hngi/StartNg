@@ -80,11 +80,11 @@ class TutorController extends Controller
     public function store(Request $request)
     {
                $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'string', 'max:14', 'unique:users'],
+            'first_name' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'last_name' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'numeric', 'max:14', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
             'role' => 'required'
         ]);

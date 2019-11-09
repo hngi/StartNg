@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Contact;
+use App\Models\Contact;
+use App\User;
 
 class ContactController extends Controller
 {
@@ -16,7 +17,7 @@ class ContactController extends Controller
     public function index()
     {
 
-        //
+        return view('pages.contact');
     }
 
     /**
@@ -41,18 +42,23 @@ class ContactController extends Controller
         $request->validate([
             'first_name'=>'required',
             'last_name'=>'required',
+            'message'=>'required',
+            'phone'=>'required',
             'email'=>'required'
         ]);
 
-        $contact = new Contact([
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'email' => $request->get('email'),
-            'message' => $request->get('message')
-        ]);
-        $contact->save();
-        return redirect('/contacts')->with('success', 'Message Sent we will get back to you ASAP!');
-    }
+        $Contacts = new Contact;
+         $Contacts->first_name = $request->input('first_name');
+         $Contacts->last_name = $request->input('last_name');
+         $Contacts->email = $request->input('email');
+         $Contacts->phone = $request->input('phone');
+         $Contacts->message = $request->input('message');
+       
+        $Contacts->save();
+        return back()->with('success', 'Message Sent we will get back to you ASAP!');
+        
+    }   
+        
 
     /**
      * Display the specified resource.

@@ -39,13 +39,19 @@
                     <p>Create Course Content</p>
                 </a>
             </li>
-            <!--<li>
-                <a href="upload-resource.html">
+            <li class="{{ (request()->is('assignment')) ? 'active' : '' }}">
+                <a href="{{route('assignment.create')}}">
+                    <i class="fa fa-book"></i>
+                    <p>Create Assignment</p>
+                </a>
+            </li>
+            <li class="{{ (request()->is('files')) ? 'active' : '' }}">
+                <a href="{{route('files.index')}}">
                     <i class="fa fa-file"></i>
                     <p>Upload Resource</p>
                 </a>
-            </li>-->
-
+            </li>
         </ul>
     </div>
+    
 </div>

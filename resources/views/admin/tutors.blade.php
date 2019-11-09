@@ -16,6 +16,7 @@
                                                 <th>Username</th>
                                                 <th>Email Address</th>
                                                 <th>Phone Number</th>
+                                                <th>Action</th>
                                             </thead>
                                             <tbody>
                                                 @foreach($tutors as $tutor)
@@ -25,8 +26,10 @@
                                                     <td>{{$tutor->email}}</td>
                                                     <td>{{$tutor->phone}}</td>
                                                     <td class="text">
-                                                        <a href="{{route('tutor.show', $tutor->id)}}" class="btn btn-warning">VIEW DETAILS</a>
-                                                    </td>
+                                                        <a href="{{route('tutor.show', $tutor->id)}}" class="btn btn-warning">VIEW</a>
+                                                         <input data-id="{{$tutor->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Enabled" data-off="Disabled" {{ $tutor->active ? 'checked' : '' }}>
+                     
+                                                        </td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>
@@ -38,5 +41,23 @@
                         </div>
                     </div>
                 </div>
+                <script>
+  $(function() {
+    $('.toggle-class').change(function() {
+        var active = $(this).prop('checked') == true ? 1 : 0; 
+        var user_id = $(this).data('id'); 
+         
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: '#',
+            data: {'active': active, 'user_id': user_id},
+            success: function(data){
+              console.log(data.success)
+            }
+        });
+    })
+  })
+</script>
 @endsection
                 
