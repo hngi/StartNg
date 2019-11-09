@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -18,7 +19,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Nunito';
+            font-family: 'Poppins';
             }
             .navbar-custom li a {
             color: #000;
@@ -37,7 +38,7 @@
             /*... NavBar..*/
             /* ul.navbar-nav li {
             margin: auto 13px;
-            font-family: Nunito;
+            font-family: Poppins;
             font-style: normal;
             font-weight: bold;
             font-size: 15px;
@@ -118,7 +119,7 @@
             }
             .find h3 {
             color: #2A2B2A;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
             letter-spacing: 0.655606px;
             }
             input[type=text] {
@@ -174,7 +175,7 @@
             }
             .first-result {
             font-weight: bold;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 0.8rem;
             letter-spacing: 0.655606px;
             color: #000000;
@@ -267,7 +268,7 @@
             color: #fff;
             }
             .col-md-4 p[title] {
-            font-family: "Nunito";
+            font-family: "Poppins";
             font-weight: bold;
             font-size: 22px;
             display: inline-block;
@@ -292,7 +293,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
             }
             a {
             text-decoration: none;
