@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="/css/modifiedstyles.css" rel="stylesheet" />
     <title>StartNG</title>
 
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         .btn-custom {
