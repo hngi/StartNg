@@ -69,7 +69,7 @@ class AdminController extends Controller
     $admin->last_name = $request->input('last_name');
     $admin->username = $request->input('username');
     $admin->email = $request->input('email');
-    $admin->password = $request->input('password');
+    $admin->password = Hash::make($request->input('password'));
     $admin->phone = $request->input('phone');
     $admin->role = $request->input('role');
     $admin->save();
