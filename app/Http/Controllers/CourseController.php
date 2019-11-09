@@ -316,4 +316,15 @@ class CourseController extends Controller
             return back()->with('error', 'You cannot perform this operation as a Tutor');
         }
     }
+
+    public function search(){
+        $data= request()->validate([
+            'course'=>'required'
+        ]);
+
+        $query= Course::Where('course', 'like', '%' . Input::get('course') . '%')->get();
+
+        dd($query);
+
+    }
 }

@@ -498,9 +498,9 @@
                     </div>
                     @endif
                     <form method="post" action="{{route('search')}}">
+                        @csrf
                         <div class="find">
                             <h3>Search Courses</h3>
-                            @csrf
                             <input type="text" name="course">
                             <button type="submit"> </button>
                             <i class="fa fa-search"></i>

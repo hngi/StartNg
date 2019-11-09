@@ -51,6 +51,7 @@ Route::get('/find-course', 'BaseController@find_course')->name('find-course');
 Route::get('/curriculum', 'BaseController@curriculum')->name('curriculum');
 Route::post('/search-course', 'BaseController@search')->name('search');
 
+
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
 
@@ -58,6 +59,7 @@ Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('r
 Route::get('/admins/destroy/{id}', 'AdminController@disable')->name('admin.disable');
 
 Route::get('/courses/registered', 'CourseController@myCourses')->name('course.mycourses');
+
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController');

@@ -423,11 +423,21 @@
 
 
     <section class="main-field">
-      <div class="find">
-          <h3>Search Courses</h3>
-          <input type="text" name="search">
-          <i class="fa fa-search"></i>
-      </div>
+
+        @if (session('error'))
+            <div class=" alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+        <form method="post" action="{{route('search')}}">
+            @csrf
+            <div class="find">
+                <h3>Search Courses</h3>
+                <input type="text" name="course">
+                <button type="submit"> </button>
+                <i class="fa fa-search"></i>
+            </div>
+        </form>
 
       <div class="results">
           <div class="result1 active-2">

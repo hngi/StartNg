@@ -11,6 +11,9 @@ use App\CourseContent;
 use App\Submission;
 use App\User;
 
+
+use Illuminate\Support\Str;
+
 class SubmissionController extends Controller
 {
     /**
@@ -81,12 +84,16 @@ class SubmissionController extends Controller
      */
     public function store(Request $request)
     {
+
         if($request->hasFile('submission')){
             $filenameWithExt = $request->file('submission')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('submission')->getClientOriginalExtension();
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
-            $path = $request->file('submission')->storeAs('public/submisssions', $fileNameToStore);
+
+            $path = $request->file('submission')->storeAs('/submisssions', $fileNameToStore);
+
+
         } else {
             $fileNameToStore = '';
         }
