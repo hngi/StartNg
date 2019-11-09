@@ -234,6 +234,9 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
+        .journey img{
+            max-width: 340px;
+        }
     </style>
 
 
@@ -241,44 +244,52 @@
 <body>
 
     @include('../inc.navbar')
-<div class="container-fluid body-banner pt-5 pb-5">
-    <div class="col-md-6 offset-md-2">
-        <h4 class="pt-5 mt-5 pb-4"
-            style="color: #fff; font-style: normal; font-weight: 600; font-size: 35px; line-height: 27px;">Up Your
-            Tech Game Online <br> or Onsite</h4>
-        <p class="pb-3"
-           style="color: #fff; font-style: normal; font-weight: 400; font-size: 16px; line-height: 27px;">
-            The HNG internship is a 3-month remote internship designed to <br> find and develop the most talented
-            software developers
-        </p>
-        @if(Auth::guest())
-        <a href="{{route('register')}}" class="btn btn-custom pl-5 pr-5 mb-4">Start Learning</a>
-        @else
-        <a href="{{route('dashboard')}}" class="btn btn-custom pl-5 pr-5 mb-4">Start Learning</a>
-        @endif
+    
+  @include('inc.messages')
 
-    </div>
-  </div>
-    <div class="container mt-5">
-      <div class="row">
-            <div class="col-md-5 order-sm-2 order-md-1 ">
-                <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
-                <p class="my-4 text-muted">
-                    The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.
-                </p>
-                <form class="my-4" action="{{route('search')}}" method="post" >
-                    @csrf
-                    <div class="form-group w-75 mt-3">
-                        <input type="text" name="course" class="form-control" required>
+  <section class="jumbotron rounded-0 px-0 bg-dark py-5 mb-0">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 text-white py-5">
+                  <h1 class="jumbotron-heading ">Up Your Tech Game Online or Onsite</h1>
+                  <p class="lead font-weight-lighter">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.</p>
+                  <p>
+                    @if(Auth::guest())
+                    <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+                    @else
+                    <a href="{{route('dashboard')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
+                    @endif
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="journey">
+        <div class="container py-5">
+            <div class="row d-flex">
+                <div class="col-md-7 order-sm-1 order-md-2">
+                    <div class="text-center">
+                        <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
                     </div>
-                    <a class="btn btn-success py-2 px-4 mt-3" href="{{route('find-course')}}"><i class="fas fa-search"></i>Find a Course</a>
-                </form>
-            </div>
-            <div class="col-md-6 mb-3">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570926879/startng/Group_144_qgkkfx.png" class="img-fluid">
+                </div>
+                <div class="col-md-5 order-sm-2 order-md-1 ">
+                    <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
+                    <p class="my-4 text-muted">
+                        The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.
+                    </p>
+                    <form class="my-4" action="{{route('search')}}" method="post" >
+                        @csrf
+                        <div class="form-group w-75 mt-3">
+                            <input type="text" name="course" class="form-control" required>
+                        </div>
+                        <a class="btn btn-success py-2 px-4 mt-3" href="{{route('find-course')}}"> Find a Course  <i class="fas fa-search"></i></a>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
 @php
         $counter=0; @endphp
     <div class="container mt-5">
@@ -335,13 +346,11 @@
         <div class="row align-items-center">
             <div class="col-md-6 pb-3" style="color: #fff;">
                 <div class="col-md-10 col-lg-10 offset-md-1">
-                    <h4 class="pb-3" style="font-weight:bold; font-size: 24px;">The beginning of your career <br> starts here. With us.
+                    <h4 class="pb-3" style="font-weight:bold; font-size: 24px; padding-top:3rem;">The beginning of your career <br> starts here. With us.
                     </h4>
-                    <p class="" style="font-weight:bold;">- Intensive learning sessions</p>
+                    <p class="" style="font-weight:bold;">Intensive learning sessions</p>
                     <p class="">The HNG internship is a 3-month remote <br> internship designed ---to find and <br> develop the most talented software developers. </p>
-                    <p class="" style="font-weight:bold;">- Intensive learning sessions</p>
-                    <p class="">The HNG internship is a 3-month remote <br> internship designed ---to find and <br> develop the most talented software developers. </p>
-                    <a href="{{route('about')}}" class="" style="color: #fff; font-weight: bold;">Learn more >></a>
+                    <a href="{{route('about')}}" class="" style="color: #fff; font-weight: bold;text-decoration:none">Learn more >></a>
                 </div>
             </div>
 
