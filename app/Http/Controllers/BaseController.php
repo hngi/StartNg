@@ -10,7 +10,7 @@ class BaseController extends Controller
 {
     public function index()
     {
-        $courses = Courses::all();
+        $courses = Courses::where('active', 1)->orderBy('created_at','desc')->take(6)->get();
         return view('pages.index',compact('courses'));
     }
 
