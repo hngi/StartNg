@@ -69,7 +69,7 @@ class AdminController extends Controller
     $admin->last_name = $request->input('last_name');
     $admin->username = $request->input('username');
     $admin->email = $request->input('email');
-    $admin->password = $request->input('password');
+    $admin->password = Hash::make($request->input('password'));
     $admin->phone = $request->input('phone');
     $admin->role = $request->input('role');
     $admin->save();
@@ -139,9 +139,9 @@ class AdminController extends Controller
         $this->validate($request, [
             'first_name' => ['required', 'string','min:4', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
             'last_name' => ['required', 'string', 'min:4','max:255','regex:/^[a-zA-Z]+$/u'],
-            'username' => ['required', 'string', 'max:255','unique:users'],
-            'email' => ['required', 'email', 'max:255','unique:users'],
-            'phone' => ['required', 'numeric', 'size:11', 'max:14']
+            'username' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],
+            'phone' => ['required', 'numeric']
         ]);
         
         $admin = User::find($id);
@@ -150,6 +150,8 @@ class AdminController extends Controller
         $admin->username = $request->input('username');
         $admin->email = $request->input('email');
         $admin->phone = $request->input('phone');
+        $admin->status = $request->input('status');
+        $admin->about = $request->input('about');
         $admin->profile_pic = $request->input('profile_pic');
         $admin->save();
         
