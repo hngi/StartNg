@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link href="/css/modifiedstyles.css" rel="stylesheet" />
@@ -26,7 +27,7 @@
         }
 
         body {
-            font-family: Nunito;
+            font-family: 'Poppins', sans-serif;
         }
 
         /* Style for Navbar Starts */
@@ -110,7 +111,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         a {
@@ -120,11 +121,7 @@
         .jumbotron{
             background: linear-gradient(0deg, rgba(37, 108, 57, 0.39),rgba(37, 108, 57, 0.39)), url(https://lancer-app.000webhostapp.com/startng/images/landing/lead-image.png);
             background-repeat: no-repeat;
-            background-attachment: fixed;
             background-position: center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
             background-size: cover;
         }
         .journey img{
@@ -138,7 +135,6 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            min-height: 300px;
             display:flex;
             align-items:center; /* vertically aligned! */
             justify-content: center;
@@ -244,15 +240,14 @@
 <body>
 
     @include('../inc.navbar')
-    
-  @include('inc.messages')
 
-  <section class="jumbotron rounded-0 px-0 bg-dark py-5 mb-0">
+
+  <section class="jumbotron rounded-0 px-0 bg-dark mb-0">
       <div class="container">
           <div class="row">
               <div class="col-md-6 text-white py-5">
                   <h1 class="jumbotron-heading ">Up Your Tech Game Online or Onsite</h1>
-                  <p class="lead font-weight-lighter">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.</p>
+                  <p class="lead font-weight-light">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers.</p>
                   <p>
                     @if(Auth::guest())
                     <a href="{{route('register')}}" class="btn btn-success pl-5 pr-5 mb-4">Start Learning</a>
@@ -273,16 +268,14 @@
                         <img src="https://lancer-app.000webhostapp.com/startng/images/landing/journey.png" class="img img-fluid img-responsive">
                     </div>
                 </div>
-                <div class="col-md-5 order-sm-2 order-md-1 ">
+                <div class="col-md-5 order-sm-2 order-md-1 mt-4">
                     <h5 class="my-4 font-weight-bold">Begin Your Journey to Self Development</h5>
                     <p class="my-4 text-muted">
                         The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week, we give tasks.
                     </p>
                     <form class="my-4" action="{{route('search')}}" method="post" >
                         @csrf
-                        <div class="form-group w-75 mt-3">
-                            <input type="text" name="course" class="form-control" required>
-                        </div>
+
                         <a class="btn btn-success py-2 px-4 mt-3" href="{{route('find-course')}}"> Find a Course  <i class="fas fa-search"></i></a>
                     </form>
                 </div>
@@ -344,9 +337,9 @@
 
     <div class="container-fluid video col-lg-12">
         <div class="row align-items-center">
-            <div class="col-md-6 pb-3" style="color: #fff;">
-                <div class="col-md-10 col-lg-10 offset-md-1">
-                    <h4 class="pb-3" style="font-weight:bold; font-size: 24px; padding-top:3rem;">The beginning of your career <br> starts here. With us.
+            <div class="col-md-6" style="color: #fff;">
+                <div class="col-md-10 col-lg-10 offset-md-1 pt-5 pb-5">
+                    <h4 class="" style="font-weight:bold; font-size: 24px;">The beginning of your career <br> starts here. With us.
                     </h4>
                     <p class="" style="font-weight:bold;">Intensive learning sessions</p>
                     <p class="">The HNG internship is a 3-month remote <br> internship designed ---to find and <br> develop the most talented software developers. </p>
@@ -354,11 +347,11 @@
                 </div>
             </div>
 
-            <div class="col-md-6 mt-0 pt-0">
+            <div class="col-md-6 mt-0 pt-0 pb-n2 mb-n1">
                 <div class="videoWrapper">
                     <iframe
                         width="100%"
-                        height="380"
+                        height="400"
                         src="https://www.youtube.com/embed/DYaq2sWTWAA"
                         frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -512,7 +505,7 @@
   </section>
   <!--  -->
   <section class="">
-      <div class="container py-md-5">
+      <div class="container py-md-5 mb-5">
           <div class="row">
               <div class="col-md-12 text-center">
                   <h4 class="my-4 font-weight-bold">Online or Offline, We Are Here For You</h4>

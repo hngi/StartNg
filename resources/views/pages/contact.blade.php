@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -43,7 +44,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         a {
             text-decoration: none;
@@ -151,17 +152,24 @@
   <body>
 
   @include('../inc.navbar')
-  <div class="container-fluid banner" style="margin-top:-1.5rem">
-  <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570908542/startng/Group_411_d0xdb8.png" class="img-fluid contact" height="100">
+  <div class="container-fluid banner">
+ <div class="row align-items-center text-center">
+     <div class="col-12 col-md-6">
+         <h1>CONTACT US</h1>
+     </div>
+     <div class="col-0 col-sm-6 d-none d-sm-block">
+         <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1573265315/startng/contact_R3_zpnzbs.png">
+     </div>
+ </div>
 </div>
 <div class="container-fluid search pt-5 pb-5">
-  <div class="input-group col-12 col-md-10 mx-auto pt-3 pb-3">
-      <input type="text" class="form-control pt-4 pb-4" placeholder="Find answers now!" style="border: thin solid #fff; border-right-color: #44CF6C; border-radius: 4px;">
-      <div class="input-group-append">
-          <button class="btn btn-secondary w-100 px-md-5" type="button" style="background-color: #fff; color: #44CF6C !important; border-color: #fff; border-left-color: #44CF6C;">
+    <h4 class="text-center">Have Questions?</h4>
+  <div class="col-12 col-md-10 mx-auto pt-3 pb-3 text-center">
+
+          <button class="btn btn-secondary px-5" type="button" style="background-color: #fff; color: #44CF6C !important; border-color: #fff; border-left-color: #44CF6C;">
               Search FAQ
           </button>
-      </div>
+
   </div>
 </div>
 
@@ -170,8 +178,9 @@
   <div class="col-sm-6">
 
       <div class="card-body">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15856.334481934015!2d3.3627260269792587!3d6.511099574643041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.5137963!2d3.3691252!4m5!1s0x103b8c58aa4e0931%3A0x9ddabc4518c15d14!2sHotels.ng%2C%203%20Birrel%20Ave%2C%20Yaba%2C%20Lagos!3m2!1d6.509180799999999!2d3.3795045999999997!5e0!3m2!1sen!2sng!4v1571971640480!5m2!1sen!2sng" width="500" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15856.334481934015!2d3.3627260269792587!3d6.511099574643041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.5137963!2d3.3691252!4m5!1s0x103b8c58aa4e0931%3A0x9ddabc4518c15d14!2sHotels.ng%2C%203%20Birrel%20Ave%2C%20Yaba%2C%20Lagos!3m2!1d6.509180799999999!2d3.3795045999999997!5e0!3m2!1sen!2sng!4v1571971640480!5m2!1sen!2sng" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
+
     </div>
 
   <div class="col-sm-6" style="margin-top:-9rem">
@@ -219,7 +228,7 @@
 
                 <div class="col-md-12 text-center ">
                     <p>By filling out this form and clicking submit, <br> you acknowledge our <a href="" style="color: #44CF6C">privacy policy</a></p>
-                    <button type="submit" class="btn btn-success pl-3 pr-3">Submit</button>
+                    <button type="submit" class="btn btn-success pl-5 pr-5">Submit</button>
                 </div>
             </div>
         </form>

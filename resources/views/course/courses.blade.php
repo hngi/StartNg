@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -19,11 +20,11 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     body {
-        font-family: 'Nunito';
+        font-family: 'Poppins';
     }
 
     a {
@@ -117,7 +118,7 @@
 <div class="container-fluid pt-5 pb-5 body-banner">
         <div class="col-md-12 mt-5 pt-5">
             <h4 class="text-center font-weight-bold mt-5 pt-5" style="color: #fff;">Our Courses</h4>
-            <p class="text-center pb-3" style="color: #fff;">We currently offer courses for various skills level, taught by
+            <p class="text-center pb-3 lead font-weight-light" style="color: #fff;">We currently offer courses for various skills level, taught by
                 <br> seasoned experts with a curriculum that helps improve your skills <br> from beginner level to world class
             </p>
         </div>
@@ -145,7 +146,6 @@
                                     Details</a>
                             </div>
                             <div class="float-right">
-                                <a href="" style="color: #000;">Beginner</a>
                                 <a class="btn btn-success pt-1 pb-1"
                                    style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
                                 <a class="btn btn-success pt-1 pb-1"
@@ -168,7 +168,6 @@
                                     Details</a>
                             </div>
                             <div class="float-right">
-                                <a href="" style="color: #000;">Beginner</a>
                                 <a class="btn btn-success pt-1 pb-1"
                                    style="background-color: #9A75A0; color:#4B0955; border-color: #9A75A0;">REMOTE</a>
                                 <a class="btn btn-success pt-1 pb-1"
@@ -205,14 +204,14 @@
                     <li style="list-style-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572644348/startng/Vector-2_xigbuh.png');">
                         Offline Meet-ups</li>
                     @if(Auth::guest())
-                    <a href="{{route('register')}}" class="btn btn-custom mt-3 pl-5 pr-5">Start Learning</a>
+                    <a href="{{route('register')}}" class="btn btn-custom mt-3 mb-5 pl-5 pr-5" style="background-color:#2DCE89; color: #fff;">Start Learning</a>
                     @else
-                    <a href="{{route('dashboard')}}" class="btn btn-custom mt-3 pl-5 pr-5">Start Learning</a>
+                    <a href="{{route('dashboard')}}" class="btn btn-custom mt-3 mb-5 pl-5 pr-5" style="background-color:#2DCE89; color: #fff;">Start Learning</a>
                     @endif
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12 mt-4 mb-3">
-                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572635161/startng/Group_227_fzkkii.png" class="img-fluid w-75" style="height: 70vh; margin:1rem 2rem">
+            <div class="col-lg-6 col-sm-12 d-none d-sm-block">
+                <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572635161/startng/Group_227_fzkkii.png" class="img-fluid w-50" style="transform: scaleY(1.2)">
             </div>
         </div>
     </div>

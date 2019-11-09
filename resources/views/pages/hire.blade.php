@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -16,7 +17,7 @@
 
 <style>
         body {
-        font-family: Nunito;
+        font-family: 'Poppins', sans-serif;
         }
         /* Style for Navbar Starts */
         .navbar-custom li a {
@@ -57,7 +58,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Poppins', sans-serif;
         }
         a {
         text-decoration: none;
@@ -119,19 +120,19 @@
     <div class="container-fluid body-banner pt-5 pb-5">
             <div class="col-md-6 offset-md-3 text-center" style="color: #fff;">
                 <h4 class="pb-5 pt-5" style="font-weight: bold; font-size: 40px;">Hire a Grad</h4>
-                <p class="pb-4" style="font-weight: 600; font-size: 25px;">After 3 months of training and projects, <br> our
+                <p class="pb-4 lead font-weight-light" style="font-size: 25px;">After 3 months of training and projects, <br> our
                 graduates are ready to take on full-time <br> or remote jobs at your company.</p>
-                <a href="{{route('hire')}}" class="btn btn-success pl-5 pr-5 mb-3">Hire a
-                Graduate</a>
+
             </div>
         </div>
         <div class="container mt-2 mb-5">
           <div class="row align-items-center pb-5 pt-5">
-              <div class="col-md-6 col-lg-6">
-                  <div class="col-md-8 col-lg-8 offset-md-2">
+              <div class="col-md-6">
+                  <div class="col-md-8 offset-md-2">
                       <h4 class="pb-3" style="font-weight: bold; font-size: 156.25%;">Versatile</h4>
-                      <p>Our graduates are versatile, dedicated,Lorem <br> ipsum dolor sit amet, consectetur adipiscing
-                          <br> elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Non diam <br> phasellus vestibulum lorem sed.
+                      <p>Our graduates are versatile, dedicated, and effective. Let us know what you're looking for. We’ll help
+you source the ideal candidates for your next
+full-time hire, without any placement fees.
                       </p>
                   </div>
               </div>
@@ -144,30 +145,30 @@
             <h4 class="pt-5 pb-5">Our graduates have acquired the latest skills</h4>
         </div>
         <div class="col-md-10 offset-md-1">
-        <div class="row text-center pb-3">
-            <div class="col-md-4">
+        <div class="row text-center">
+            <div class="col-md-4 pb-3">
                 <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958135/startng/Group_408_stke6s.png">
                 <p style="font-weight: bold;">Frontend Development</p>
                 <p>HTML, CSS, JavaScript, <br> Boostrap, JQuery</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pb-3">
                 <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_409_lho37u.png">
                 <p style="font-weight: bold;">Backend Development</p>
                 <p>PHP, Python, Java,</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pb-3">
                 <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_410_tzprqb.png">
                 <p style="font-weight: bold;">UI/UX Design</p>
                 <p>User research, <br> Protoyping, Wireframing</p>
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-md-4">
+            <div class="col-md-4 pb-3">
                 <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_411_jlcykp.png">
                 <p style="font-weight: bold;">Frontend Development</p>
                 <p>HTML, CSS, JavaScript, <br> Boostrap, JQuery</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pb-3">
                 <img class="img-fluid w-25 mb-4" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570958136/startng/Group_412_jrwpdt.png">
                 <p style="font-weight: bold;">Backend Development</p>
                 <p>PHP, Python, Java,</p>
@@ -188,9 +189,7 @@
                   <div class="col-md-6">
                       <div class="col-md-8 offset-md-2">
                           <h4 class="pb-4 pt-4" style="font-weight: bold;">Remote Flexibility</h4>
-                          <p>Our graduates are taught how to be effective <br> remote employees. Lorem ipsum dolor sit <br> amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore
-                              <br> magna aliqua. Non diam phasellus vestibulum
-                              <br> lorem sed.</p>
+                          <p>Our graduates are taught how to be effective remote employees. They have been trained to be disciplined enough to take on a job without the structure of a workspace.
                       </div>
                   </div>
               </div>
