@@ -590,7 +590,35 @@
     <div class="container pb-5 pt-5">
         <h4 class="text-center font-weight-bold">What you will learn</h4>
         <div class="row lessons">
-            <div class="col col-12 col-lg-6 col-sm-12">
+        @php $counter=3 @endphp
+
+            @foreach($contents as $content)
+                @if($counter%2==0)
+
+                <div class="col col-12 col-lg-6 col-sm-12">
+                            <ul>
+                                <li class="p-3">
+                                    <i class="far fa-check-circle icon font-md"></i>
+                                    <span>{{$content->title}}</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                @endif
+
+                @if($counter%2!=0)
+                <div class="col col-12 col-lg-6 col-sm-12">
+                    <ul>
+                        <li class="p-3">
+                            <i class="far fa-check-circle icon font-md"></i>
+                            <span>{{$content->title}}</span>
+                        </li>
+                    </ul>
+                </div>
+                @endif
+                @php $counter = $counter + 1; @endphp
+            @endforeach
+            <!--<div class="col col-12 col-lg-6 col-sm-12">
                 <ul>
                     <li class="p-3">
                         <i class="far fa-check-circle icon font-md"></i>
@@ -635,7 +663,7 @@
                         <span>How to use Git and Github for your versioning management</span>
                     </li>
                 </ul>
-            </div>
+            </div>-->
         </div>
 
     </div>
