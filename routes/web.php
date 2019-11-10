@@ -38,6 +38,7 @@ Route::resource('tutor', 'TutorController');
 Route::get('/disable/tutor/{id}', 'TutorController@disable')->name('tutors.disable');
 Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
+Route::resource('submission', 'SubmissionController');
 Route::resource('schedule', 'ScheduleController');
 Route::resource('submission', 'SubmissionController');
 

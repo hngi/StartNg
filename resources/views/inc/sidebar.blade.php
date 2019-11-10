@@ -69,7 +69,15 @@
                     <p>Upload Resource</p>
                 </a>
             </li>
-        </ul>
+
+            <li class="{{ (request()->is('submission')) ? 'active' : '' }}">
+                <a href="{{route('submission.index')}}">
+                    <i class="fa fa-book"></i>
+                    <p>View submissions</p>
+                </a>
+            </li>
+            
+            
         </ul>
     </div>
 </div>

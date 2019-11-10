@@ -9,10 +9,10 @@
         <div class="card-body">
                     <form action="{{route('submission.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="row">
-                            <div class="col-md-6">
+                        <div class="row"><div class="col-md-6">
                                 <input type="file" name="submission" >
                                 </div><br>
+
                         </div>
                         <div class="col-md-2 px-1">
                             <div class="form-group">

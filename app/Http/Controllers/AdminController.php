@@ -69,12 +69,12 @@ class AdminController extends Controller
     $admin->last_name = $request->input('last_name');
     $admin->username = $request->input('username');
     $admin->email = $request->input('email');
-    $admin->password = $request->input('password');
+    $admin->password = Hash::make($request->input('password'));
     $admin->phone = $request->input('phone');
     $admin->role = $request->input('role');
     $admin->save();
     
-    return back()->with('success','Admin Successfully Updated');
+    return back()->with('success','Admin Successfully Created');
     }
 
     /**
@@ -136,7 +136,7 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
+             $this->validate($request, [
             'first_name' => ['required', 'string','min:4', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
             'last_name' => ['required', 'string', 'min:4','max:255','regex:/^[a-zA-Z]+$/u'],
             'username' => ['required', 'string', 'max:255'],
