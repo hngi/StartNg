@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -15,7 +16,7 @@
     <title>Terms of Service</title>
                 <style>
                 body {
-                font-family: Nunito;
+                font-family: 'Poppins', sans-serif;
                 }
                 /* Style for Navbar Starts */
                 .navbar-custom li a {
@@ -38,14 +39,14 @@
                 line-height: 55px;
                 }
                 h1 {
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 letter-spacing: 0.655606px;
                 color: #ffffff;
                 text-align: center;
                 }
                 h3 {
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 25px;
@@ -57,17 +58,17 @@
                 margin-top: 35px;
                 }
                 h5 {
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 }
                 strong {
                 font-size: 1.15rem;
                 }
                 p {
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-size: .7em;
                 }
                 .paragraph {
-                font-family: "Open Sans", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-size: 16px;
                 line-height: 22px;
                 color: black;
@@ -97,14 +98,14 @@
                 font-size: 26px;
                 }
                 .footer-links {
-                font-family: Nunito;
+                font-family: 'Poppins';
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 30px;
                 }
                 .secondheader {
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 20px;
@@ -130,7 +131,7 @@
                 .third .btn {
                 background: #3a0842;
                 border-radius: 10px;
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
@@ -155,14 +156,14 @@
                 text-align: center;
                 }
                 .lead {
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 25px;
                 line-height: 34px;
                 }
                 .sub-lead {
-                font-family: "Open Sans", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
@@ -171,7 +172,7 @@
                 .start-learning-btn {
                 background: #2dce89;
                 border-radius: 10px;
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
@@ -186,7 +187,7 @@
                 border: 1px solid #e64c4c;
                 box-sizing: border-box;
                 border-radius: 10px;
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
@@ -200,7 +201,7 @@
                 .accept-btn {
                 background: #44cf6c;
                 border-radius: 10px;
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;
@@ -220,7 +221,7 @@
                 .start-btn {
                 background: #44cf6c;
                 border-radius: 10px;
-                font-family: "Nunito", sans-serif;
+                font-family: "Poppins", sans-serif;
                 font-style: normal;
                 font-weight: bold;
                 font-size: 16px;

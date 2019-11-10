@@ -28,24 +28,6 @@
                 @endforeach
                 @endforeach
                 </ul>
-                <ul>
-                @foreach($registered_courses as $registered_course)
-                @foreach($assignments as $assignment)
-                @if($registered_course->course_id == $assignment->user_id)
-                @if($assignment->active)
-                <li>
-                    <a href="{{route('assignment.show', $assignment->id)}}">{{$assignment->title}}</a> -
-                        @foreach($courses as $course)
-                        @if($assignment->user_id == $course->id)
-                            {{$course->title}}
-                        @endif
-                        @endforeach
-                </li>
-                @endif
-                @endif
-                @endforeach
-                @endforeach
-                </ul>
                 </div>
             </div>
         </div>

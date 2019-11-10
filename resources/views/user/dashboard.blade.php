@@ -1,12 +1,12 @@
 @extends('layouts.user-dashboard')
 
 @section('content')
-<div class="content">
+<div class="content mt-n5">
     <div class="row">
         @foreach($registered_courses as $registered_course)
         @foreach($courses as $course)
         @if($registered_course->course_id == $course->id)
-        <div class="col-lg-5 col-md-5 col-sm-5">
+        <div class="col-lg-5 col-md-5 col-sm-5 mt-n5">
             <div class="card card-stats">
                 <div class="card-body ">
                     <div class="row">

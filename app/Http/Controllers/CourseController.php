@@ -150,6 +150,7 @@ class CourseController extends Controller
                 $user_role = 'course';
                 $data = array(
                     'course' => $course,
+                    'contents' => $contents
                 );
             }
         }

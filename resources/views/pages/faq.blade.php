@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -140,7 +141,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         a {
@@ -220,15 +221,7 @@
                     <div class="offset-md-2 col-md-8">
                         <div class="text-center text-white py-5">
                             <h2 class="jumbotron-heading ">How can we help you?</h2>
-                            <form class="my-4">
-                                <div class="input-group mt-3">
-                                    <input type="text" name="Search" class="form-control pt-2 pb-2 rounded-0" placeholder="Search" required aria-label="Search question" aria-describedby="button-addon2" style="border: thin solid #fff;">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-light rounded-0" type="button" id="button-addon2"><i
-                                                class="fas fa-search"></i> </button>
-                                    </div>
-                                </div>
-                            </form>
+
                         </div>
                     </div>
                 </div>
