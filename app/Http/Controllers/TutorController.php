@@ -80,11 +80,11 @@ class TutorController extends Controller
     public function store(Request $request)
     {
                $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'string', 'max:14', 'unique:users'],
+            'first_name' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'last_name' => ['required', 'string', 'max:255', 'regex:/^[a-zA-Z]+$/u'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'numeric', 'max:14', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
             'role' => 'required'
         ]);
@@ -168,9 +168,7 @@ class TutorController extends Controller
      */
       public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'profile_pic' => 'image|nullable|max:1999'
-        ]);
+        
         
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
@@ -188,6 +186,7 @@ class TutorController extends Controller
         $tutor->phone = $request->input('phone');
         $tutor->status = $request->input('status');
         $tutor->about = $request->input('about');
+        $tutor->profile_pic = $request->input('profile_pic');
         if($request->hasFile('profile_pic')){
             $tutor->profile_pic = $fileNameToStore;
         }

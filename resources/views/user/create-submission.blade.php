@@ -9,12 +9,17 @@
         <div class="card-body">
                     <form action="{{route('submission.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
+<<<<<<< HEAD
+                        <div class="row"><div class="col-md-6">
+                                <input type="file" name="submission" >
+                                </div><br>
+
+=======
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    Upload<input type="file" name="submission" class="form-control">
-                                </div>
-                            </div>
+                            <div class="col-md-6">
+                                <input type="file" name="submission" >
+                                </div><br>
+>>>>>>> e90829eb000055ab4f23d346f57e2a13c16e882f
                         </div>
                         <div class="col-md-2 px-1">
                             <div class="form-group">

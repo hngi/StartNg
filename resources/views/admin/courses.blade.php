@@ -30,7 +30,7 @@
                                             <th>
                                                 Phone Number
                                             </th>
-                                            <th class="text"> </th>
+                                            <th class="text">Action </th>
                                         </thead>
                                         @foreach($registered_courses as $registered_course)
                                         @if($registered_course->course_id == $course->id)
@@ -50,7 +50,8 @@
                                                 <td>
                                                     {{$user->phone}}
                                                 </td>
-                                            </tr>
+                                                <td></td>
+                                                   </tr>
                                             @endif
                                         @endforeach
                                         </tbody> 

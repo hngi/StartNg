@@ -23,7 +23,7 @@
                                             <th>
                                                 Price
                                             </th>
-                                            <th class="text"> </th>
+                                            <th class="text"> Action </th>
                                             <th class="text"> </th>
                                         </thead>
                                         <tbody>
@@ -36,7 +36,7 @@
                                                     {{$course->duration}}
                                                 </td>
                                                 <td>
-                                                    NGN{{$course->price}}
+                                                   <span>&#8358;</span>{{$course->price}}
                                                 </td>
                                                 
                                                 <td class="text">

@@ -111,7 +111,7 @@
                <div class="row">
                     <div class="col-md-8">
                         <div> <label for="address"><strong>Profile Picture</strong></label> </div>
-                        <input type="text" class="form-control" placeholder="Please Enter Your Image URL" name="profile_pic"><br>
+                        <input type="text" class="form-control" value="{{$tutor->profile_pic}}" placeholder="Please Enter Your Image URL" name="profile_pic"><br>
                         <em>E.g https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQro4VxpgvG-aVKdFts6R2GH3Poe07DSgYVGudL8P13aZ32lHuknQ&s</em>
                     </div>
                 </div>

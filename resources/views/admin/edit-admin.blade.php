@@ -32,7 +32,7 @@
                     </center>
                     <hr>
                     <center>
-                    <p class="text-left"><strong>Bio: </strong><br>{{$admin->about}}</p>
+                    <p class="text-left"><strong>Bio:</strong><br>{{$admin->about}}</p>
                     <br>
                     </center>
                 </div>
@@ -111,7 +111,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div> <label for="address"><strong>Profile Picture</strong></label> </div>
-                        <input type="text" class="form-control" placeholder="Please Enter Your Image URL" name="profile_pic"><br>
+                        <input type="text" value="{{$admin->profile_pic}}" class="form-control" placeholder="Please Enter Your Image URL" name="profile_pic"><br>
                         <em>E.g https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQro4VxpgvG-aVKdFts6R2GH3Poe07DSgYVGudL8P13aZ32lHuknQ&s</em>
                     </div>
                 </div>

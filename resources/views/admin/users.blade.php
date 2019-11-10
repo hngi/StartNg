@@ -24,7 +24,7 @@
                                             <th>
                                                 Phone Number
                                             </th>
-                                            <th class="text"> </th>
+                                            <th class="text"> Action</th>
                                         </thead>
                                         <tbody>
                                             @foreach($students as $student)

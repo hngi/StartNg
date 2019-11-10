@@ -40,6 +40,7 @@ Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('submission', 'SubmissionController');
 Route::resource('schedule', 'ScheduleController');
+Route::resource('submission', 'SubmissionController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
@@ -63,7 +64,8 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController');
 
 // Tutor Route
-Route::get('/tutors/upload-resource', 'AssignmentController@upload')->name('tutor.upload-resource');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//this is returning the file-upload page with the files
+Route::resource('files', 'FileController');

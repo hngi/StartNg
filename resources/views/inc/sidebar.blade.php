@@ -63,19 +63,21 @@
                     <p>Create Course Content</p>
                 </a>
             </li>
+            <li class="{{ (request()->is('files')) ? 'active' : '' }}">
+                <a href="{{route('files.index')}}">
+                    <i class="fa fa-file"></i>
+                    <p>Upload Resource</p>
+                </a>
+            </li>
+
             <li class="{{ (request()->is('submission')) ? 'active' : '' }}">
                 <a href="{{route('submission.index')}}">
                     <i class="fa fa-book"></i>
                     <p>View submissions</p>
                 </a>
             </li>
-            <!--<li>
-                <a href="upload-resource.html">
-                    <i class="fa fa-file"></i>
-                    <p>Upload Resource</p>
-                </a>
-            </li>-->
-
+            
+            
         </ul>
     </div>
 </div>
