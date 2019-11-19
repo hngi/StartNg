@@ -27,12 +27,25 @@ class UserController extends Controller
         if ($role == 0){
             return back()->with('error', 'Unauthorized Page');
         }
-        else{
-            $user_role = ($role == 1) ? 'tutor' : 'admin';
+        elseif ($role == 1){
+            $user_role = 'tutor';
+            $courses = Courses::where('tutor_id', auth()->user()->id)->paginate(5);
+            $registered_courses = RegisteredCourses::all();
             $students = User::where('role', 0)->paginate(10);
+            $data = array(
+                'courses' => $courses,
+                'students' => $students,
+                'registered_courses' => $registered_courses
+            );
         }
-
-        return view("$user_role.users")->with('students', $students);
+        else{
+            $user_role = 'admin';
+            $students = User::where('role', 0)->paginate(10);
+            $data = array(
+                'students' => $students,
+            );
+        }
+        return view("$user_role.users")->with($data);
     }
 
     public function courses()
