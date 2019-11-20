@@ -152,7 +152,7 @@ class TutorController extends Controller
         $role = auth()->user()->role;
         if ($id==auth()->user()->id){
             $tutor = User::find($id);
-            return view('tutor.edit-tutor')->with('tutor', $tutor);
+            return view('tutor.profile')->with('tutor', $tutor);
         }
         else{
             return back()->with('error', 'Access Denied');

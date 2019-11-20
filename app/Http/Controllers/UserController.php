@@ -133,7 +133,7 @@ class UserController extends Controller
         $role = auth()->user()->role;
         if ($id==auth()->user()->id){
             $user = User::find($id);
-            return view('user.edit-user')->with('user', $user);
+            return view('user.profile')->with('user', $user);
         }
         else{
             return back()->with('error', 'Access Denied');

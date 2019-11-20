@@ -1,4 +1,4 @@
-@extends('layouts.admin-dashboard')
+@extends('layouts.tutor-dashboard')
 
 @section('content')
 <div class="content">
