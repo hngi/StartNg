@@ -6,7 +6,13 @@
 <div class="container">
     <div class="span3 well">
         <center>
-        <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="{{$tutor->profile_pic}}" name="aboutme" width="140" height="140" class="img-circle"></a>
+        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+        @if($tutor->profile_pic)
+        <img src="/storage/profile_pictures/{{$tutor->profile_pic}}"  name="aboutme" width="140" height="140" class="img-circle">
+        @else
+        <img src="/storage/profile_pictures/noimage.jpg"  name="aboutme" width="140" height="140" class="img-circle">
+        @endif
+        </a>
         <h3>{{$tutor->first_name}} {{$tutor->last_name}}</h3>
         <em>click my face for more</em>
         </center>
@@ -21,7 +27,11 @@
                     </div>
                 <div class="modal-body">
                     <center>
-                    <img src="{{$tutor->profile_pic}}" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    @if($tutor->profile_pic)
+                    <img src="/storage/profile_pictures/{{$tutor->profile_pic}}" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    @else
+                    <img src="/storage/profile_pictures/noimage.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    @endif
                     <h3 class="media-heading">{{$tutor->first_name}} {{$tutor->last_name}}</h3>
                     <ul class="list-group">
                         <li class="list-group-item">Username: {{$tutor->username}}</li>

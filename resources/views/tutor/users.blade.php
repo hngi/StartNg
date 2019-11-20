@@ -30,20 +30,23 @@
                             @foreach($registered_courses as $registered_course)
                             @if($registered_course->course_id == $course->id)
                             <tbody>
-                            @foreach($students as $user)
-                                @if($user->id == $registered_course->user_id)
+                            @foreach($students as $student)
+                                @if($student->id == $registered_course->user_id)
                                 <tr>
                                     <td>
-                                        {{$user->first_name}} {{$user->last_name}}
+                                        {{$student->first_name}} {{$student->last_name}}
                                     </td>
                                     <td>
-                                        {{$user->username}}
+                                        {{$student->username}}
                                     </td>
                                     <td>
-                                        {{$user->email}}
+                                        {{$student->email}}
                                     </td>
                                     <td>
-                                        {{$user->phone}}
+                                        {{$student->phone}}
+                                    </td>
+                                    <td class="text">
+                                        <a href="{{route('user.show', $student->id)}}" class="btn btn-warning">VIEW DETAILS</a>
                                     </td>
                                 </tr>
                                 @endif

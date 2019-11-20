@@ -120,7 +120,7 @@ class AdminController extends Controller
         $role = auth()->user()->role;
         if ($id==auth()->user()->id){
             $admin = User::find($id);
-            return view('admin.edit-admin')->with('admin', $admin);
+            return view('admin.profile')->with('admin', $admin);
         }
         else{
             return back()->with('error', 'Access Denied');
@@ -143,6 +143,14 @@ class AdminController extends Controller
             'email' => ['required', 'email', 'max:255'],
             'phone' => ['required', 'numeric']
         ]);
+
+        if($request->hasFile('profile_pic')){
+            $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('profile_pic')->getClientOriginalExtension();
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('profile_pic')->storeAs('public/profile_pictures', $fileNameToStore);
+        }
         
         $admin = User::find($id);
         $admin->first_name = $request->input('first_name');
@@ -152,7 +160,9 @@ class AdminController extends Controller
         $admin->phone = $request->input('phone');
         $admin->status = $request->input('status');
         $admin->about = $request->input('about');
-        $admin->profile_pic = $request->input('profile_pic');
+        if($request->hasFile('profile_pic')){
+            $admin->profile_pic = $fileNameToStore;
+        }
         $admin->save();
         
         return back()->with('success','Admin Successfully Updated');
