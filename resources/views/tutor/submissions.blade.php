@@ -20,7 +20,7 @@
                         @if($submission->assignment_id==$assignment->id)
                         <li><img style="width:100%" src="/storage/submissions/{{$submission->file}}">
                             </a>
-                            @foreach($students as $student)
+                            @foreach($students as $student) -
                                 @if($submission->user_id==$student->id)
                                 {{$student->username}}
                                 @endif

@@ -53,7 +53,7 @@
                                                 @if($user->role != 0)
                                                 <input type="radio" name="tutor" value="{{$user->id}}" class="form-control">
                                                 {{$user->username}}
-                                                @if($course->tutor_id==$user->id)
+                                                @if($course->user_id==$user->id)
                                                 <small>Current Tutor</small>
                                                 @endif
                                                 <br>

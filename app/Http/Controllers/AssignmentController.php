@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Assignment;
+use App\User;
 use App\Courses;
 use App\RegisteredCourses;
 use App\CourseContent;
@@ -61,7 +62,7 @@ class AssignmentController extends Controller
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
             $id = auth()->user()->id;
-            $courses = Courses::where('tutor_id', $id)->get();
+            $courses = Courses::where('user_id', $id)->get();
             $contents = CourseContent::all();
             $data = array(
                 'courses' => $courses,
@@ -112,7 +113,7 @@ class AssignmentController extends Controller
         }
         else{
             $content = CourseContent::where('id', $assignment->course_content_id)->get()[0];
-            $mycourse = Courses::where(['tutor_id'=>$user_id, 'id'=>$content->course_id])->get()[0];
+            $mycourse = Courses::where(['user_id'=>$user_id, 'id'=>$content->course_id])->get()[0];
             if($content->course_id==$mycourse->id){
                 $user_role = ($role == 1) ? 'tutor' : 'admin';
             }

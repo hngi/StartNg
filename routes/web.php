@@ -40,6 +40,7 @@ Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('submission', 'SubmissionController');
 Route::resource('schedule', 'ScheduleController');
+Route::resource('resource', 'ResourcesController');
 
 Route::get('/about', 'BaseController@about')->name('about');
 Route::get('/graduates', 'BaseController@hire')->name('hire');
@@ -54,16 +55,11 @@ Route::post('/search-course', 'BaseController@search')->name('search');
 Route::get('/mycourses/{id}', 'CourseController@mycourse')->name('mycourses');
 Route::get('/register-course/{id}', 'CourseController@registerCourses')->name('register.courses');
 
-
-Route::get('/admins/destroy/{id}', 'AdminController@disable')->name('admin.disable');
-
 Route::get('/courses/registered', 'CourseController@myCourses')->name('course.mycourses');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('subscriptions', 'SubscriptionsController');
 
-// Tutor Route
-Route::get('/tutors/upload-resource', 'AssignmentController@upload')->name('tutor.upload-resource');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

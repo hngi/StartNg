@@ -38,7 +38,7 @@ class TutorController extends Controller
   
     public function view_courses()
     {
-         $id = auth()->user()->id;
+        $id = auth()->user()->id;
         
         $data = array(
             'courses' => Courses::where('user_id', $id)->get(),
@@ -79,33 +79,7 @@ class TutorController extends Controller
      */
     public function store(Request $request)
     {
-               $this->validate($request, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'string', 'max:14', 'unique:users'],
-            'password' => ['required', 'string', 'min:8'],
-            'role' => 'required'
-        ]);
-        
-        $tutor = User::find($id);
-        $tutor->first_name = $request->input('first_name');
-        $tutor->last_name = $request->input('last_name');
-        $tutor->username = $request->input('username');
-        $tutor->email = $request->input('email');
-        $tutor->phone = $request->input('phone');
-        $tutor->role = $request->input('role');
-        $tutor->image = $request->input('image');
-        $tutor->address = $request->input('address');
-        $tutor->state = $request->input('state');
-        $tutor->country = $request->input('country');
-        $tutor->aboutme = $request->input('aboutme');
-        $tutor->save();
-        
-        #return redirect("route('index')");
-        return back()->with('success','Admin Successfully Created');
-
+        //
     }
  
 
@@ -123,7 +97,7 @@ class TutorController extends Controller
             $user = User::find($id);
             if($user->role == 1){
                 $tutor = $user;
-                $courses = Courses::where('tutor_id', $id)->get();
+                $courses = Courses::where('user_id', $id)->get();
             }
             else{
                 return back()->with('error', 'User not Tutor'); 
@@ -135,7 +109,7 @@ class TutorController extends Controller
 
         $data = array(
             'tutor' => $tutor,
-            'courses' => $courses
+            'courses' => $tutor->courses
         );
 
         return view("$user_role.show-tutor")->with($data);

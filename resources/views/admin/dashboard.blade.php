@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-stats">
-                            <a href="" style="text-decoration: none;">
+                            <a href="{{route('resource.create')}}" style="text-decoration: none;">
                                 <div class="card-body">
                                     <div class="row">
 

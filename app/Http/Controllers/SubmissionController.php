@@ -26,7 +26,7 @@ class SubmissionController extends Controller
         }
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
-            $courses = Courses::where('tutor_id', auth()->user()->id)->get();
+            $courses = Courses::where('user_id', auth()->user()->id)->get();
             $contents = CourseContent::all();
             $assignments = Assignment::all();
             $submissions = Submission::all();

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Reviews extends Model
+class Review extends Model
 {
     protected $guarded = [];
 
@@ -13,6 +13,6 @@ class Reviews extends Model
     }
 
     public function course(){
-        return $this->belongsTo(Courses::class);
+        return $this->belongsTo(Course::class);
     }
 }

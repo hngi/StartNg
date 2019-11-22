@@ -29,7 +29,7 @@ class UserController extends Controller
         }
         elseif ($role == 1){
             $user_role = 'tutor';
-            $courses = Courses::where('tutor_id', auth()->user()->id)->paginate(5);
+            $courses = Courses::where('user_id', auth()->user()->id)->paginate(5);
             $registered_courses = RegisteredCourses::all();
             $students = User::where('role', 0)->paginate(10);
             $data = array(
@@ -149,7 +149,6 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         if($request->hasFile('profile_pic')){
             $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);

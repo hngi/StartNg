@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class CourseContent extends Model
 {
     protected $guarded = [];
-    public function user(){
-        return $this->belongsTo(Courses::class);
+
+    public function course(){
+        return $this->belongsTo(Course::class);
+    }
+
+    public function assignment(){
+        return $this->hasMany(Assignment::class);
     }
 }

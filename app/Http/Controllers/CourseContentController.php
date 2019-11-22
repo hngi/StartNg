@@ -34,7 +34,7 @@ class CourseContentController extends Controller
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
             $id = auth()->user()->id;
-            $courses = Courses::where('tutor_id', $id)->get();
+            $courses = Courses::where('user_id', $id)->get();
             return view("$user_role.create-course-content")->with('courses', $courses);
         }
     }
@@ -83,8 +83,8 @@ class CourseContentController extends Controller
         }
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
-            $tutor_id = auth()->user()->id;
-            $courses = Courses::where('tutor_id', $tutor_id)->get();
+            $user_id = auth()->user()->id;
+            $courses = Courses::where('user_id', $user_id)->get();
             foreach ($courses as $course){
                 if ($content->course_id==$course->id){
                     $data = array(
