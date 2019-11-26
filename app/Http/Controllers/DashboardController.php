@@ -39,7 +39,7 @@ class DashboardController extends Controller
                 'registered_courses' => RegisteredCourses::where('user_id', $id)->get(),
                 'users' => User::all(),
                 'schedules' => Schedule::all(),
-                'assignments' => Assignment::where('active', 1)->get()
+                #'assignments' => Assignment::where('active', 1)->get()
             );
         }
         else{

@@ -45,13 +45,12 @@
                     <p>View submissions</p>
                 </a>
             </li>
-            <!--<li>
-                <a href="upload-resource.html">
+            <li class="{{ (request()->is('resource')) ? 'active' : '' }}">
+                <a href="{{route('resource.index')}}">
                     <i class="fa fa-file"></i>
-                    <p>Upload Resource</p>
+                    <p>Resources</p>
                 </a>
-            </li>-->
-
+            </li>
         </ul>
     </div>
 </div>
