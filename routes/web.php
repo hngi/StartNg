@@ -39,6 +39,7 @@ Route::get('/disable/tutor/{id}', 'TutorController@disable')->name('tutors.disab
 Route::resource('review', 'ReviewController');
 Route::resource('assignment', 'AssignmentController');
 Route::resource('submission', 'SubmissionController');
+Route::post('/score', 'SubmissionController@score')->name('score');
 Route::resource('schedule', 'ScheduleController');
 Route::resource('resource', 'ResourcesController');
 

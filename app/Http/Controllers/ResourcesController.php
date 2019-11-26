@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Courses;
 use App\Resource;
+use App\RegisteredCourses;
 
 class ResourcesController extends Controller
 {
@@ -22,7 +23,7 @@ class ResourcesController extends Controller
             $user_role = 'user';
             $registered_courses = RegisteredCourses::where('user_id', $id)->get();
             $courses = Courses::all();
-            $resources = Resources::all();
+            $resources = Resource::all();
         }
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';

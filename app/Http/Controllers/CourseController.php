@@ -140,7 +140,7 @@ class CourseController extends Controller
                     $data = array(
                         'course' => $course,
                         'registered' => RegisteredCourses::where(['course_id'=>$id, 'user_id'=>$user_id])->exists(),
-                        'contents' => $contents
+                        'contents' => $course->contents
                     );
                 }
             }
@@ -148,7 +148,7 @@ class CourseController extends Controller
                 $user_role = 'course';
                 $data = array(
                     'course' => $course,
-                    'contents' => $contents
+                    'contents' => $course->contents
                 );
             }
         }

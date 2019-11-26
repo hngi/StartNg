@@ -13,14 +13,12 @@
                 <div class="card-body">
                     @foreach($courses as $course)
                     @foreach($contents as $content)
-                    @foreach($assignments as $assignment)
                     @foreach($submissions as $submission)
-                        @if($assignment->course_content_id==$content->id)
                         @if($course->id==$content->course_id)
-                        @if($submission->assignment_id==$assignment->id)
+                        @if($submission->course_content_id==$content->id)
                         <li>
-                            <a href="/storage/submissions /{{$submission->file}}" download>
-                                {{$submission->file}} - {{$assignment->title}}
+                            <a href="/storage/submissions/{{$submission->file}}" download>
+                                {{$submission->file}} - {{$content->title}}
                             @foreach($students as $student)
                                 @if($submission->user_id==$student->id)
                                 {{$student->username}}
@@ -30,8 +28,6 @@
                         </li>
                         @endif
                         @endif
-                        @endif
-                    @endforeach
                     @endforeach
                     @endforeach
                     @endforeach

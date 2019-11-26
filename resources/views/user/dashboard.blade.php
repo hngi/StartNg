@@ -19,7 +19,7 @@
                             <div class="numbers">
                                 <p class="card-category">{{$course->title}}</p>
                                 <p class="card-title">{{$registered_course->progress}}%
-                                    <p>
+                                <p>
                             </div>
                         </div>
                     </div>
@@ -43,22 +43,7 @@
                 </div>
                 <div class="card-body ">
                     <ul>
-                    @foreach($registered_courses as $registered_course)
-                    @foreach($assignments as $assignment)
-                    @if($registered_course->course_id == $assignment->user_id)
-                    @if($assignment->active)
-                    <li>
-                        <a href="{{route('assignment.show', $assignment->id)}}">{{$assignment->title}}</a> -
-                            @foreach($courses as $course)
-                            @if($assignment->user_id == $course->id)
-                                {{$course->title}}
-                            @endif
-                            @endforeach
-                    </li>
-                    @endif
-                    @endif
-                    @endforeach
-                    @endforeach
+
                     </ul>
                 </div>
                 <div class="card-footer ">

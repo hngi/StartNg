@@ -11,8 +11,4 @@ class CourseContent extends Model
     public function course(){
         return $this->belongsTo(Course::class);
     }
-
-    public function assignment(){
-        return $this->hasMany(Assignment::class);
-    }
 }

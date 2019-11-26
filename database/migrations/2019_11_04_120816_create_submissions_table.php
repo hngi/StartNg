@@ -17,10 +17,9 @@ class CreateSubmissionsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('file');
-            $table->integer('assignment_id');
+            $table->integer('course_content_id');
             $table->integer('user_id');
             $table->integer('score');
-            $table->boolean('active')->default(1);
         });
     }
 

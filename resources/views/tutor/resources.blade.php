@@ -16,6 +16,7 @@
                         Download {{$resource->file}}<br>
                     </a>
                     @endforeach
+                    <a href="{{route('resource.create')}}">Upload resource</a>
                 </div>
             </div>
         </div>

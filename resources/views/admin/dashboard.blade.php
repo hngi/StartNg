@@ -23,18 +23,16 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-stats">
-                            <a href="{{route('assignment.create')}}" style="text-decoration: none;">
+                            <a href="{{route('course-content.create')}}" style="text-decoration: none;">
                                 <div class="card-body">
                                     <div class="row">
-
                                         <div class="col-md-12 text-center">
-                                            <h4 class="text-black">CREATE <br> ASSIGNMENT</h4>
+                                            <h4 class="text-black">CREATE <br> COURSE CONTENT</h4>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                             <div class="card-footer ">
-
                             </div>
                         </div>
                     </div>
@@ -43,7 +41,6 @@
                             <a href="{{route('resource.create')}}" style="text-decoration: none;">
                                 <div class="card-body">
                                     <div class="row">
-
                                         <div class="col-md-12 text-center">
                                             <h4 class="text-black">UPLOAD <br> RESOURCES</h4>
                                         </div>

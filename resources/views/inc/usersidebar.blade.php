@@ -16,8 +16,8 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="{{ (request()->is(route('user.show', auth()->user()->id))) ? 'active' : '' }}">
-                        <a href="{{route('user.show', auth()->user()->id)}}">
+                    <li class="{{ (request()->is(route('user.edit', auth()->user()->id))) ? 'active' : '' }}">
+                        <a href="{{route('user.edit', auth()->user()->id)}}">
                             <i class="fa fa-user"></i>
                             <p>My Profile</p>
                         </a>
@@ -40,16 +40,24 @@
                             <p>View Courses</p>
                         </a>
                     </li>
+                    <!--
                     <li class="{{ (request()->is('assignment')) ? 'active' : '' }}">
                         <a href="{{route('assignment.index')}}">
                             <i class="fa fa-book"></i>
                             <p>View Assignments</p>
                         </a>
                     </li>
+                    -->
                     <li class="{{ (request()->is('submission/create')) ? 'active' : '' }}">
                         <a href="{{route('submission.create')}}">
                             <i class="fa fa-book"></i>
                             <p>Submissions</p>
+                        </a>
+                    </li>
+                    <li class="{{ (request()->is('resource')) ? 'active' : '' }}">
+                        <a href="{{route('resource.index')}}">
+                            <i class="fa fa-file"></i>
+                            <p>Resources</p>
                         </a>
                     </li>
                 </ul>

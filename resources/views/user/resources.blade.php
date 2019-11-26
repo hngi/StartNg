@@ -11,10 +11,14 @@
                     <h4 class="card-title">Resources</h4>
                 </div>
                 <div class="card-body">
+                    @foreach($registered_courses as $registered_course)
                     @foreach($resources as $resource)
-                    <a href="/storage/resources/{{$resource->file}}" download>
-                        Download {{$resource->file}}<br>
-                    </a>
+                        @if($resource->course_id == $registered_course->course_id)
+                        <a href="/storage/resources/{{$resource->file}}" download>
+                            Download {{$resource->file}}<br>
+                        </a>
+                        @endif
+                    @endforeach
                     @endforeach
                 </div>
             </div>
