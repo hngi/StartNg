@@ -163,10 +163,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-<<<<<<< HEAD
-=======
+
         Maatwebsite\Excel\ExcelServiceProvider::class,
->>>>>>> 5436044904f1a811e48c2ed69f91211ce7531fdf
         /*
          * Package Service Providers...
          */
