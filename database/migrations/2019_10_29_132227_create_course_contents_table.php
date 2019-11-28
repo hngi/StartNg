@@ -18,6 +18,7 @@ class CreateCourseContentsTable extends Migration
             $table->string('title');
             $table->string('details');
             $table->integer('course_id');
+            $table->string('assignment');
             $table->timestamps();
         });
     }

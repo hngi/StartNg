@@ -163,6 +163,10 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+<<<<<<< HEAD
+=======
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+>>>>>>> 5436044904f1a811e48c2ed69f91211ce7531fdf
         /*
          * Package Service Providers...
          */
@@ -209,6 +213,7 @@ return [
         'File' => Illuminate\Support\Facades\File::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
+        'Image' => Intervention\Image\Facades\Image::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
@@ -229,7 +234,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+<<<<<<< HEAD
         'Image' => Intervention\Image\Facades\Image::class,
+=======
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+>>>>>>> 5436044904f1a811e48c2ed69f91211ce7531fdf
 
 
     ],

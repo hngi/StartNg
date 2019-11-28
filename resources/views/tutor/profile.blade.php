@@ -118,11 +118,10 @@
                     </div>
                 </div>
             </div>
-               <div class="row">
+                <div class="row">
                     <div class="col-md-8">
                         <div> <label for="address"><strong>Profile Picture</strong></label> </div>
-                        <input type="text" class="form-control" placeholder="Please Enter Your Image URL" name="profile_pic"><br>
-                        <em>E.g https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQro4VxpgvG-aVKdFts6R2GH3Poe07DSgYVGudL8P13aZ32lHuknQ&s</em>
+                        <input type="file" class="form-control" name="profile_pic"><br>
                     </div>
                 </div>
             </div><br><br>

@@ -46,6 +46,13 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'date' => 'required',
+            'time' => 'required',
+            'course' => 'required',
+            
+        ]);
+
         $schedule = new Schedule;
         $schedule->date = $request->input('date');
         $schedule->time = $request->input('time');
@@ -99,6 +106,11 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'date' => 'required',
+            'time' => 'required',
+        ]);
+
         $schedule = Schedule::find($id);
         $schedule->date = $request->input('date');
         $schedule->time = $request->input('time');
@@ -118,7 +130,6 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        return 'device';
         $schedule = Schedule::find($id);
         $role = auth()->user()->role;
         if ($role == 2){

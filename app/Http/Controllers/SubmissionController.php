@@ -10,6 +10,7 @@ use App\RegisteredCourses;
 use App\CourseContent;
 use App\Submission;
 use App\User;
+use Excel;
 
 class SubmissionController extends Controller
 {
@@ -26,15 +27,13 @@ class SubmissionController extends Controller
         }
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
-            $courses = Courses::where('tutor_id', auth()->user()->id)->get();
+            $courses = Courses::where('user_id', auth()->user()->id)->get();
             $contents = CourseContent::all();
-            $assignments = Assignment::all();
             $submissions = Submission::all();
             $students = User::where('role', 0)->get();
 
             $data = array(
                 'courses' => $courses,
-                'assignments' => $assignments,
                 'contents' => $contents,
                 'submissions' => $submissions,
                 'students' => $students
@@ -54,22 +53,19 @@ class SubmissionController extends Controller
         $role = auth()->user()->role;
         if($role==0){
             $user_role = 'user';
-            $registered_courses = RegisteredCourses::where('user_id', auth()->user()->id)->get();
-            $courses = Courses::all();
-            $contents = CourseContent::all();
-            $assignments = Assignment::where('active', 1)->get();
+            $user_id = auth()->user()->id;
 
             $data = array(
-                'registered_courses' => $registered_courses,
-                'courses' => $courses,
-                'assignments' => $assignments,
-                'contents' => $contents
+                'registered_courses' => RegisteredCourses::where('user_id', $user_id)->get(),                
+                'contents' => CourseContent::all()
             );
 
             return view('user.create-submission')->with($data);
         }
         else{
-            return back()->with('error', 'Unauthorized Permission');
+            $user_role = ($role == 1) ? 'tutor' : 'admin';
+            $id = auth()->user()->id;
+            return view("$user_role.score");
         }
     }
 
@@ -81,6 +77,10 @@ class SubmissionController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'file' => 'required',
+            'content' => 'required',
+        ]);
         if($request->hasFile('submission')){
             $filenameWithExt = $request->file('submission')->getClientOriginalName();
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
@@ -91,7 +91,7 @@ class SubmissionController extends Controller
 
         $submission = new Submission;
         $submission->score = 0;
-        $submission->assignment_id = $request->input('assignment');
+        $submission->course_content_id = $request->input('content');
         $submission->user_id = auth()->user()->id;
         $submission->file = $fileNameToStore;
         $submission->save();
@@ -127,10 +127,34 @@ class SubmissionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function score(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+            'file'  => 'required|mimes:xls,xlsx'
+           ]);
+        
+        $path = $request->file('file')->getRealPath();
+        
+        $data = Excel::load($path)->get();
+
+        return 'here';
+
+        
+        return 'Working on it';
+        if($data->count() > 0)
+        {
+         foreach($data->toArray() as $key => $value)
+         {
+          foreach($value as $row)
+          {
+           $record = Submission::where(['assignment'=>$id, 'user_id'=>$row['user']])->get();
+           $record->score = $row['score'];
+          }
+         }
+        }
+        return 'gf';
+        return back()->with('success', 'Success');
+       }
 
     /**
      * Remove the specified resource from storage.
@@ -140,6 +164,6 @@ class SubmissionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

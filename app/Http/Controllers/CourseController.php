@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Course;
 use App\Courses;
 use App\RegisteredCourses;
 use App\User;
-use App\Reviews;
+use App\Review;
 use App\CourseContent;
 
 class CourseController extends Controller
@@ -88,7 +89,7 @@ class CourseController extends Controller
         $course->description = $request->input('description');
         $course->duration = $request->input('duration');
         $course->price = $request->input('price');     
-        $course->tutor_id = $request->input('tutor');
+        $course->user_id = $request->input('tutor');
         $course->save();
         
         return redirect('dashboard')->with('success','Course Successfully Created');
@@ -102,8 +103,7 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        $course = Courses::find($id);
-        $contents = CourseContent::where('course_id', $id)->get();
+        $course = Course::find($id);
         
         if($course){
             if(auth()->user()){
@@ -111,29 +111,27 @@ class CourseController extends Controller
                 if ($role == 2){
                     $user_role = 'admin';
                     $registered_courses = RegisteredCourses::where('course_id', $id)->get();
-                    $reviews = Reviews::where('course_id', $id)->get();
             
                     $data = array(
                         'course' => $course,
                         'number' => count($registered_courses),
                         'users' => User::all(),
-                        'reviews' => $reviews,
-                        'contents' => $contents
+                        'reviews' => $course->reviews,
+                        'contents' => $course->contents
                     );
                 }
                 elseif ($role == 1){
                     $user_role = 'tutor';
                     $registered_courses = RegisteredCourses::where('course_id', $id)->get();
-                    $mine = Courses::where(['id'=>$id, 'tutor_id'=>auth()->user()->id])->exists();
-                    $reviews = Reviews::where('course_id', $id)->get();
+                    $mine = Course::where(['id'=>$id, 'user_id'=>auth()->user()->id])->exists();
             
                     $data = array(
                         'course' => $course,
                         'number' => count($registered_courses),
                         'users' => User::all(),
                         'mine' => $mine,
-                        'reviews' => $reviews,
-                        'contents' => $contents
+                        'reviews' => $course->reviews,
+                        'contents' => $course->contents
                     );
                 }
                 elseif ($role == 0){
@@ -142,7 +140,7 @@ class CourseController extends Controller
                     $data = array(
                         'course' => $course,
                         'registered' => RegisteredCourses::where(['course_id'=>$id, 'user_id'=>$user_id])->exists(),
-                        'contents' => $contents
+                        'contents' => $course->contents
                     );
                 }
             }
@@ -150,7 +148,7 @@ class CourseController extends Controller
                 $user_role = 'course';
                 $data = array(
                     'course' => $course,
-                    'contents' => $contents
+                    'contents' => $course->contents
                 );
             }
         }
@@ -170,13 +168,13 @@ class CourseController extends Controller
     {
         $role = auth()->user()->role;
         $user_id = auth()->user()->id;
-        $course = Courses::find($id);
+        $course = Course::find($id);
 
         if ($role == 2){
             $user_role = 'admin';
         }
         elseif ($role == 1){
-            if ($user_id == $course->tutor_id){
+            if ($user_id == $course->user_id){
                 $user_role = 'tutor';
             }
             else{
@@ -217,7 +215,7 @@ class CourseController extends Controller
         $course->duration = $request->input('duration');
         $course->price = $request->input('price');
         if ($request->input('tutor')){
-            $course->tutor_id = $request->input('tutor');
+            $course->user_id = $request->input('tutor');
         }
         $course->save();
         
@@ -247,7 +245,7 @@ class CourseController extends Controller
         }
 
         elseif ($role == 1){
-            if ($course->tutor_id==$user_id){
+            if ($course->user_id==$user_id){
                 $course->active = ($course->active == 0) ? 1 : 0;
                 $action = ($course->active == 1) ? "enabled" : "disabled";
                 $course->save();

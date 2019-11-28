@@ -91,7 +91,6 @@ class AdminController extends Controller
             $user = User::find($id);
             if($user->role == 2){
                 $admin = $user;
-                $courses = Courses::where('tutor_id', $id)->get();
             }
             else{
                 return back()->with('error', 'User not Admin'); 
@@ -103,7 +102,7 @@ class AdminController extends Controller
 
         $data = array(
             'admin' => $admin,
-            'courses' => $courses
+            'courses' => $admin->courses
         );
 
         return view("$user_role.show-admin")->with($data);

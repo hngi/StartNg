@@ -14,7 +14,7 @@
             <h4 class="card-title">Course Contents:</h4>
             <ul>
             @foreach($contents as $content)
-            <li>{{$content->title}}</li>
+            <li><a href="{{route('course-content.show', $content->id)}}">{{$content->title}}</a></li>
             @endforeach
             </ul>
             @if($mine)
