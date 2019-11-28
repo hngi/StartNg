@@ -16,6 +16,7 @@
         "laravel/tinker": "^1.0",
         "intervention/image": "dev-master",
         "laravelcollective/html": "^5.8",
+        "intervention/image": "dev-master"
         "spatie/laravel-permission": "^3.2"
     },
     "require-dev": {
