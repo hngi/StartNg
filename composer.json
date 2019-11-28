@@ -16,7 +16,7 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.8",
 <<<<<<< HEAD
-        "intervention/image": "dev-master"
+        "intervention/image": "dev-master",
 =======
         "maatwebsite/excel": "^3.1",
         "spatie/laravel-newsletter": "^4.7",
