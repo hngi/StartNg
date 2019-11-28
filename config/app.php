@@ -232,11 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-<<<<<<< HEAD
         'Image' => Intervention\Image\Facades\Image::class,
-=======
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
->>>>>>> 5436044904f1a811e48c2ed69f91211ce7531fdf
 
 
     ],
