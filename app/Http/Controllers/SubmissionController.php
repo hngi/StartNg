@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Imports\ScoreImport;
+use App\Exports\ScoreExport;
 use App\Assignment;
 use App\Courses;
 use App\RegisteredCourses;
@@ -65,7 +67,12 @@ class SubmissionController extends Controller
         else{
             $user_role = ($role == 1) ? 'tutor' : 'admin';
             $id = auth()->user()->id;
-            return view("$user_role.score");
+            $data = array(
+                'courses' => auth()->user()->courses,
+                'contents' => CourseContent::all(),
+            );
+
+            return view("$user_role.score")->with($data);
         }
     }
 
@@ -78,7 +85,7 @@ class SubmissionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'file' => 'required',
+            'submission' => 'required',
             'content' => 'required',
         ]);
         if($request->hasFile('submission')){
@@ -121,6 +128,19 @@ class SubmissionController extends Controller
     }
 
     /**
+    * @return \Illuminate\Support\Collection
+    */
+    public function scoresheet(Request $request, $id) 
+    {
+        $this->validate($request, [
+            'content' => 'required',
+        ]);
+
+        $id = $request->input('content');
+        return Excel::download(new ScoreExport($request->id), 'scoresheet.xlsx');
+    }
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -129,30 +149,38 @@ class SubmissionController extends Controller
      */
     public function score(Request $request)
     {
+        
         $this->validate($request, [
-            'file'  => 'required|mimes:xls,xlsx'
+            'file'  => 'required|mimes:xls,xlsx',
+            'content' => 'required'
            ]);
+        $input = $request->input('content');
+        $content = CourseContent::find($input);
+        $data = Excel::import(new ScoreImport($content), request()->file('file')); 
         
-        $path = $request->file('file')->getRealPath();
-        
-        $data = Excel::load($path)->get();
-
-        return 'here';
-
-        
-        return 'Working on it';
-        if($data->count() > 0)
-        {
-         foreach($data->toArray() as $key => $value)
-         {
-          foreach($value as $row)
-          {
-           $record = Submission::where(['assignment'=>$id, 'user_id'=>$row['user']])->get();
-           $record->score = $row['score'];
-          }
-         }
-        }
-        return 'gf';
+        collect(head($data))->each(function ($row, $key) {
+            $input = $request->input('content');
+            $content = CourseContent::find($input);
+            $c = $content->course->id;
+            $new = Submission::where(['user_id'=>$row[0], 'course_content_id'=>$content->id])->first();
+            $new->score = $row[1];
+            $new->save();
+            $r = RegisteredCourses::where(['user_id'=>$row[0], 'course_id'=>$c])->first();
+            $contents = CourseContent::where('course_id', $c)->get();
+            $contents_count = $contents->count();
+            $sum = 0;
+            foreach($contents as $content){
+                $rcc = Submission::where(['user_id'=>$row[0], 'course_content_id'=>$content->id])->exists();
+                if($rcc){
+                    $rcc = Submission::where(['user_id'=>$row[0], 'course_content_id'=>$content->id])->first();
+                    $score = $rcc->score;
+                    $sum = $sum + $score;    
+                }
+                $progress = $sum/$contents_count;
+            }
+            $r->progress = $progress;
+            $r->save();
+        });
         return back()->with('success', 'Success');
        }
 

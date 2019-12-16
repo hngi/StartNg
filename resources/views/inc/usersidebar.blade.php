@@ -1,65 +1,46 @@
-<div class="sidebar" data-color="white" data-active-color="danger">
+<!-- Vertical navbar -->
+<div class="vertical-nav" id="sidebar" style="background-color: #3A0842;">
+    <div class="py-4 px-3 mb-4">
+        <img alt="" class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
+    </div>
 
-            <div class="logo">
-                <a href="{{route('index')}}">
-
-                    <img class="img-fluid w-50 mt-3 mb-1" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1570873250/startng/Logo_1_ib5bjh.png">
-
-                </a>
-
-            </div>
-            <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="{{ (request()->is('dashboard')) ? 'active' : '' }}">
-                        <a href="{{route('dashboard')}}">
-                            <i class="fa fa-home"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li class="{{ (request()->is(route('user.edit', auth()->user()->id))) ? 'active' : '' }}">
-                        <a href="{{route('user.edit', auth()->user()->id)}}">
-                            <i class="fa fa-user"></i>
-                            <p>My Profile</p>
-                        </a>
-                    </li>
-                    <li class="{{ (request()->is(route('tutor.edit', auth()->user()->id))) ? 'active' : '' }}">
-                        <a href="{{route('course.mycourses')}}">
-                            <i class="fa fa-book"></i>
-                            <p>View My Courses</p>
-                        </a>
-                    </li>
-                    <li class="{{ (request()->is('review/create')) ? 'active' : '' }}">
-                        <a href="{{route('review.create')}}">
-                            <i class="fa fa-book"></i>
-                            <p>Review My Courses</p>
-                        </a>
-                    </li>
-                    <li class="{{ (request()->is('course')) ? 'active' : '' }}">
-                        <a href="{{route('course.index')}}">
-                            <i class="fa fa-book"></i>
-                            <p>View Courses</p>
-                        </a>
-                    </li>
-                    <!--
-                    <li class="{{ (request()->is('assignment')) ? 'active' : '' }}">
-                        <a href="{{route('assignment.index')}}">
-                            <i class="fa fa-book"></i>
-                            <p>View Assignments</p>
-                        </a>
-                    </li>
-                    -->
-                    <li class="{{ (request()->is('submission/create')) ? 'active' : '' }}">
-                        <a href="{{route('submission.create')}}">
-                            <i class="fa fa-book"></i>
-                            <p>Submissions</p>
-                        </a>
-                    </li>
-                    <li class="{{ (request()->is('resource')) ? 'active' : '' }}">
-                        <a href="{{route('resource.index')}}">
-                            <i class="fa fa-file"></i>
-                            <p>Resources</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <ul class="nav flex-column mb-0">
+        <li class="nav-item">
+            <a href="{{route('dashboard')}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is('dashboard')) ? 'active' : '' }}">
+                <i class="fa fa-th-large mr-3 fa-fw"></i> Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{route('user.edit', auth()->user()->id)}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is(route('user.edit', auth()->user()->id))) ? 'active' : '' }}">
+                <i class="fa fa-address-card mr-3 fa-fw"></i> My Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{route('course.mycourses')}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is(route('tutor.edit', auth()->user()->id))) ? 'active' : '' }}">
+                <i class="fa fa-cubes mr-3 fa-fw"></i> View My Courses
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{route('course.index')}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is('course')) ? 'active' : '' }}">
+                <i class="fa fa-picture-o mr-3 fa-fw"></i> View Courses
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{route('review.create')}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is('review/create')) ? 'active' : '' }}">
+                <i class="fa fa-picture-o mr-3 fa-fw"></i> Review My Courses
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{route('submission.create')}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is('submission/create')) ? 'active' : '' }}">
+                <i class="fa fa-picture-o mr-3 fa-fw"></i> Submit Assignment
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{route('resource.index')}}" class="nav-link font-italic py-3 mb-1 {{ (request()->is('resource')) ? 'active' : '' }}">
+                <i class="fa fa-picture-o mr-3 fa-fw"></i> Resources
+            </a>
+        </li>
+    </ul>
+    
+</div>
+<!-- End vertical navbar -->
