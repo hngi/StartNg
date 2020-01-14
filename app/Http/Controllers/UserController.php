@@ -155,8 +155,9 @@ class UserController extends Controller
             'username' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
             'phone' => ['required', 'numeric'],
-            'status' => ['required', 'string'],
-            'about' => ['required', 'string']
+            'status' => ['string'],
+            'about' => ['string'],
+            'profile_pic' => 'image|nullable|max:1999'
         ]);
         
         if($request->hasFile('profile_pic')){

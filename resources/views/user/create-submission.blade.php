@@ -1,7 +1,7 @@
 @extends('layouts.user-dashboard')
 
 @section('content')
-<div class="content">
+<div class="container-fluid mt-5">
     <div class="card card-register">
         <div class="card-header">
             <h5 class="card-title">Submission</h5>
