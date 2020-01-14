@@ -1,7 +1,7 @@
 @extends('layouts.user-dashboard')
 
 @section('content')
-<div class="content mt-n5">
+<div class="container-fluid mt-5">
     <div class="row">
         @foreach($registered_courses as $registered_course)
         @foreach($courses as $course)

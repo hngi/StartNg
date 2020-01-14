@@ -31,6 +31,7 @@
                     @endforeach
                     @endforeach
                     @endforeach
+                    <a class="btn btn-primary" href="{{route('submission.create')}}">GRADE SUBMISSIONS</a>
                 </div>
             </div>
         </div>
