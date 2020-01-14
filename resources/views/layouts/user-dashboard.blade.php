@@ -37,12 +37,11 @@
                     <a href=""><i class="fa fa-bell"></i></a>
                 </div>
                 <div class="col-md-3 offset-md-1 mt-2">
-                    @if($user->profile_pic)
-                    <p><img width="50" height="50" class="img-fluid rounded-circle mr-3" src="/storage/profile_pictures/{{$user->profile_pic}}"> <span class="font-weight-bold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span></p>
+                    @if(Auth::user()->profile_pic)
+                    <p><img width="50" height="50" class="img-fluid rounded-circle mr-3" src="/storage/profile_pictures/{{Auth::user()->profile_pic}}"> <span class="font-weight-bold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span></p>
                     @else
                     <p><img width="50" height="50" class="img-fluid rounded-circle mr-3" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"> <span class="font-weight-bold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span></p>
                     @endif
-                    
                 </div>
             </div>
         </div>

@@ -267,7 +267,7 @@ full-time hire, without any placement fees.
            <footer>
                <div class="container-fluid footer-top col-lg-12">
                    <div class="container col-md-12 p-5">
-                       <img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png">
+                   <a href="{{route('index')}}"><img class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1572346080/startng/Logo_2_ee1iqv.png"></a>
                        <div class="row">
                        @if(Auth::guest())
                            <div class="col-md-4 mt-4">

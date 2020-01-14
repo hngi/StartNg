@@ -70,6 +70,7 @@ class SubmissionController extends Controller
             $data = array(
                 'courses' => auth()->user()->courses,
                 'contents' => CourseContent::all(),
+                'submissions' => Submission::all()
             );
 
             return view("$user_role.score")->with($data);
@@ -130,16 +131,19 @@ class SubmissionController extends Controller
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function scoresheet(Request $request, $id) 
+
+    public function scoresheet(Request $request) 
     {
         $this->validate($request, [
             'content' => 'required',
         ]);
 
-        $id = $request->input('content');
-        return Excel::download(new ScoreExport($request->id), 'scoresheet.xlsx');
-    }
+        $content = CourseContent::where('id', $request->content)->first();
+        $title = $content->title;
 
+        return Excel::download(new ScoreExport($request->content), "$title.xlsx");
+    }
+    
     /**
      * Update the specified resource in storage.
      *
@@ -147,6 +151,7 @@ class SubmissionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function score(Request $request)
     {
         
@@ -154,12 +159,10 @@ class SubmissionController extends Controller
             'file'  => 'required|mimes:xls,xlsx',
             'content' => 'required'
            ]);
+           
+        $data = Excel::toArray(new ScoreImport, request()->file('file')); 
         $input = $request->input('content');
-        $content = CourseContent::find($input);
-        $data = Excel::import(new ScoreImport($content), request()->file('file')); 
-        
-        collect(head($data))->each(function ($row, $key) {
-            $input = $request->input('content');
+        collect(head($data))->each(function ($row, $key) use($input) {
             $content = CourseContent::find($input);
             $c = $content->course->id;
             $new = Submission::where(['user_id'=>$row[0], 'course_content_id'=>$content->id])->first();
@@ -182,7 +185,7 @@ class SubmissionController extends Controller
             $r->save();
         });
         return back()->with('success', 'Success');
-       }
+    }
 
     /**
      * Remove the specified resource from storage.

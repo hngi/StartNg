@@ -1,7 +1,9 @@
 <!-- Vertical navbar -->
 <div class="vertical-nav" id="sidebar" style="background-color: #3A0842;">
     <div class="py-4 px-3 mb-4">
-        <img alt="" class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
+        <a href="{{route('index')}}">
+            <img alt="" class="img-fluid" src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1571217844/startng/Logo_1_x4nvwt.png">
+        </a>
     </div>
 
     <ul class="nav flex-column mb-0">
