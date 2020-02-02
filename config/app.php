@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        KingFlamez\Rave\RaveServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         //Cyberduck\LaravelExcel\ExcelServiceProvider::class,
         /*
@@ -218,6 +219,7 @@ return [
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
+        'Rave' => KingFlamez\Rave\Facades\Rave::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
         'Redis' => Illuminate\Support\Facades\Redis::class,
         'Request' => Illuminate\Support\Facades\Request::class,

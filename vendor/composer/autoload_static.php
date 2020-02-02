@@ -168,6 +168,10 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
         ),
+        'K' => 
+        array (
+            'KingFlamez\\Rave\\' => 16,
+        ),
         'J' => 
         array (
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
@@ -403,6 +407,10 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'KingFlamez\\Rave\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kingflamez/laravelrave/src',
+        ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
             0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
@@ -494,6 +502,13 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
     );
 
     public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
         'P' => 
         array (
             'PhpOption\\' => 
@@ -533,14 +548,13 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
     );
 
     public static $classMap = array (
-        'App\\Assignment' => __DIR__ . '/../..' . '/app/Assignment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Course' => __DIR__ . '/../..' . '/app/Course.php',
         'App\\CourseContent' => __DIR__ . '/../..' . '/app/CourseContent.php',
         'App\\Courses' => __DIR__ . '/../..' . '/app/Courses.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Exports\\ScoreExport' => __DIR__ . '/../..' . '/app/Exports/ScoreExport.php',
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
-        'App\\Http\\Controllers\\AssignmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/AssignmentController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -555,6 +569,7 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\ForgotPassController' => __DIR__ . '/../..' . '/app/Http/Controllers/ForgotPassController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\RaveController' => __DIR__ . '/../..' . '/app/Http/Controllers/RaveController.php',
         'App\\Http\\Controllers\\ResourcesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ResourcesController.php',
         'App\\Http\\Controllers\\ReviewController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReviewController.php',
         'App\\Http\\Controllers\\ScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ScheduleController.php',
@@ -570,6 +585,7 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Imports\\ScoreImport' => __DIR__ . '/../..' . '/app/Imports/ScoreImport.php',
         'App\\Mail\\TestEmail' => __DIR__ . '/../..' . '/app/Mail/TestEmail.php',
         'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Contact.php',
         'App\\Notifications\\LarashopAdminResetPassword' => __DIR__ . '/../..' . '/app/Notifications/LarashopAdminResetPassword.php',
@@ -2379,6 +2395,9 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'KingFlamez\\Rave\\Facades\\Rave' => __DIR__ . '/..' . '/kingflamez/laravelrave/src/Facades/Rave.php',
+        'KingFlamez\\Rave\\Rave' => __DIR__ . '/..' . '/kingflamez/laravelrave/src/Rave.php',
+        'KingFlamez\\Rave\\RaveServiceProvider' => __DIR__ . '/..' . '/kingflamez/laravelrave/src/RaveServiceProvider.php',
         'Laracasts\\Flash\\Flash' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/Flash.php',
         'Laracasts\\Flash\\FlashNotifier' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/FlashNotifier.php',
         'Laracasts\\Flash\\FlashServiceProvider' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/FlashServiceProvider.php',
@@ -4823,6 +4842,11 @@ class ComposerStaticInitff3a5c77ed1089282876bda2c74049d4
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'Unirest\\Exception' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Exception.php',
+        'Unirest\\Method' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Method.php',
+        'Unirest\\Request' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request.php',
+        'Unirest\\Request\\Body' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Request/Body.php',
+        'Unirest\\Response' => __DIR__ . '/..' . '/mashape/unirest-php/src/Unirest/Response.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',

@@ -65,3 +65,7 @@ Route::resource('subscriptions', 'SubscriptionsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+#FlutterWave routes
+Route::post('/pay', 'RaveController@initialize')->name('pay');
+Route::post('/rave/callback', 'RaveController@callback')->name('callback');

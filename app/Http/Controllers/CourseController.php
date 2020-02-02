@@ -280,12 +280,13 @@ class CourseController extends Controller
                     return back()->with('error', 'You Have Previously Registered for the Course');
                 }
                 else{
-                    $add_course = new RegisteredCourses;
-                    $add_course->course_id = $id;
-                    $add_course->user_id = auth()->user()->id;
-                    $add_course->progress = 0;
-                    $add_course->save();                
-                    return back()->with('success', 'Registration was Succesful');
+                    $course = Course::find($id);
+                    $user = User::find(auth()->user()->id);
+                    $data = array(
+                        'course' => $course,
+                        'user' => $user
+                    );
+                    return view("user.payment")->with($data);
                 }
             }
             else{
